@@ -42,13 +42,75 @@
         compatible = "zmk,combos";
 
         kha {
-            bindings = <&kp LBKT>;
-            key-positions = <6 7>;
+            bindings = <&kp RU_CYRILLIC_HA>;
+            key-positions = <6 16>;
+            layers = <1>;
         };
 
         hrdsgn {
-            bindings = <&kp RBKT>;
-            key-positions = <7 8>;
+            bindings = <&kp RU_CYRILLIC_HARD_SIGN>;
+            key-positions = <7 17>;
+            layers = <1>;
+        };
+
+        en {
+            bindings = <&layer_en>;
+            key-positions = <2 12>;
+            layers = <0 1>;
+        };
+
+        ru {
+            bindings = <&layer_ru>;
+            key-positions = <3 13>;
+            layers = <0 1>;
+        };
+
+        num {
+            bindings = <&mo 6>;
+            key-positions = <31 32>;
+            layers = <0 1>;
+        };
+    };
+
+    macros {
+        to_ru: to_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(CAPS)>;
+            label = "TO_RU";
+        };
+
+        to_en: to_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp CAPS>;
+            label = "TO_EN";
+        };
+
+        layer_en: layer_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 0 &to_en>;
+            label = "LAYER_EN";
+        };
+
+        layer_ru: layer_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to 1 &to_ru>;
+            label = "LAYER_RU";
+        };
+
+        en: en {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&to_en &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_wait_time 10>,
+                <&to_ru>,
+                <&macro_wait_time 10>;
+
+            label = "EN";
         };
     };
 
