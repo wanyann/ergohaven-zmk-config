@@ -141,9 +141,9 @@
 
         sym_ru {
             bindings = <
-  &none                   &en LT          &kp EQUAL         &en GT           &en GRAVE                    &en CARET  &en LBKT         &kp UNDER           &en RBKT        &none
-  &hml LGUI RU_BACKSLASH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &hmr RCTRL LBRC  &hmr RSHFT RU_SEMI  &hmr LALT RBRC  &hmr RGUI EXCL
-  &en HASH                &kp STAR        &kp RU_COLON      &kp RU_FSLH      &none                        &none      &en PIPE         &en TILDE           &en AMPS        &en DLLR
+  &none                   &en LT          &kp EQUAL         &en GT           &en GRAVE                    &en CARET  &en LBKT  &kp UNDER           &en RBKT  &none
+  &hml LGUI RU_BACKSLASH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &en LBRC  &hmr RSHFT RU_SEMI  &en RBRC  &hmr RGUI EXCL
+  &en HASH                &kp STAR        &kp RU_COLON      &kp RU_FSLH      &none                        &none      &en PIPE  &en TILDE           &en AMPS  &en DLLR
                                                             &trans           &mo 5      &trans    &trans  &none      &trans
             >;
         };
