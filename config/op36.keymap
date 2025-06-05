@@ -846,6 +846,7 @@
             tapping-term-ms = <200>;
             hold-while-undecided;
             flavor = "tap-preferred";
+            hold-while-undecided-linger;
         };
 
         mb_hrl: mb_hrl {
