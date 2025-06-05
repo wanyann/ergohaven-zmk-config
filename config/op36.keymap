@@ -855,10 +855,10 @@
 
         Mouse {
             bindings = <
-  &layer_off 8  &trans  &trans    &trans     &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans        &trans  &kp RGUI  &mkp LCLK  &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans        &trans  &trans    &trans     &trans                    &trans  &trans  &trans  &trans  &trans
-                                  &trans     &trans  &trans    &trans  &trans  &trans
+  &layer_off 8  &trans  &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans        &trans  &kp RGUI  &mkp MB1  &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans        &trans  &trans    &trans    &trans                    &trans  &trans  &trans  &trans  &trans
+                                  &trans    &trans  &trans    &trans  &trans  &trans
             >;
 
             label = "Mouse";
