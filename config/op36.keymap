@@ -767,6 +767,16 @@
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
+
+        mkp_hold: mkp_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MKP_HOLD";
+            bindings = <&kp>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -855,10 +865,10 @@
 
         Mouse {
             bindings = <
-  &layer_off 8  &trans  &trans          &trans    &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans        &trans  &kp KP_NUMLOCK  &mkp MB1  &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans        &trans  &trans          &trans    &trans                    &trans  &trans  &trans  &trans  &trans
-                                        &trans    &trans  &trans    &trans  &trans  &trans
+  &layer_off 8  &trans          &trans          &trans               &trans                                 &trans  &trans  &trans  &trans  &trans
+  &kp LCTRL     &kp KP_NUMLOCK  &kp LEFT_SHIFT  &mkp MB1             &mkp_hold LC(F) MB3                    &trans  &trans  &trans  &trans  &trans
+  &trans        &trans          &trans          &mkp_hold LC(V) MB2  &trans                                 &trans  &trans  &trans  &trans  &trans
+                                                &trans               &trans               &trans    &trans  &trans  &trans
             >;
 
             label = "Mouse";
