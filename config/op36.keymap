@@ -644,6 +644,7 @@
                 <&macro_wait_time 50>;
 
             label = "SCROLL_HOLD";
+            tap-ms = <0>;
         };
     };
 
