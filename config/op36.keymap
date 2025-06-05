@@ -657,6 +657,13 @@
 
             label = "SCROLL_TG";
         };
+
+        cancel_layeroff: cancel_msoff {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &layer_off MACRO_PLACEHOLDER &kp K_CANCEL>;
+            label = "CANCEL_MSOFF";
+        };
     };
 
     behaviors {
@@ -973,7 +980,7 @@
   &trns_msoff               &trns_msoff               &trns_msoff               &trns_msoff          &trns_msoff                                  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
   &kp LCTRL                 &scroll_hold              &kp LEFT_SHIFT            &mb_hrl LCTRL MB1    &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
   &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2  &trns_msoff_hold LG(V) 0                     &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
-                                                                                &layer_off 6         &trans                     &trans    &trans  &trans       &trans
+                                                                                &cancel_layeroff 6   &trans                     &trans    &trans  &trans       &trans
             >;
 
             label = "Mouse";
