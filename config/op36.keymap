@@ -855,10 +855,10 @@
 
         Mouse {
             bindings = <
-  &layer_off 8  &trans  &trans               &trans    &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans        &trans  &kp LC(PAUSE_BREAK)  &mkp MB1  &trans                    &trans  &trans  &trans  &trans  &trans
-  &trans        &trans  &trans               &trans    &trans                    &trans  &trans  &trans  &trans  &trans
-                                             &trans    &trans  &trans    &trans  &trans  &trans
+  &layer_off 8  &trans  &trans                  &trans    &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans        &trans  &kp LC(LS(LA(LG(F1))))  &mkp MB1  &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans        &trans  &trans                  &trans    &trans                    &trans  &trans  &trans  &trans  &trans
+                                                &trans    &trans  &trans    &trans  &trans  &trans
             >;
 
             label = "Mouse";
