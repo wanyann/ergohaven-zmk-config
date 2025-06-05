@@ -851,10 +851,10 @@
 
         Mouse {
             bindings = <
-  &layer_off 6  &trans          &trans          &trans               &trans                                 &trans  &trans  &trans  &trans  &trans
-  &kp LCTRL     &kp KP_NUMLOCK  &kp LEFT_SHIFT  &mkp MB1             &mkp_hold LC(F) MB3                    &trans  &trans  &trans  &trans  &trans
-  &trans        &trans          &trans          &mkp_hold LC(V) MB2  &trans                                 &trans  &trans  &trans  &trans  &trans
-                                                &trans               &trans               &trans    &trans  &trans  &trans
+  &trans     &trans          &trans          &trans               &trans                                 &trans  &trans  &trans  &trans  &trans
+  &kp LCTRL  &kp KP_NUMLOCK  &kp LEFT_SHIFT  &mkp MB1             &mkp_hold LC(F) MB3                    &trans  &trans  &trans  &trans  &trans
+  &trans     &trans          &trans          &mkp_hold LC(V) MB2  &trans                                 &trans  &trans  &trans  &trans  &trans
+                                             &trans               &trans               &trans    &trans  &trans  &trans
             >;
 
             label = "Mouse";
