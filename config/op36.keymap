@@ -628,6 +628,8 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "KP_MSOFF";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
