@@ -586,6 +586,14 @@
             bindings = <&kp LA(SPACE) &layer_off 6>;
             label = "ALT_SPC";
         };
+
+        mbtn1_ctrl: mbtn1_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>, <&macro_press>;
+
+            label = "MBTN1_CTRL";
+        };
     };
 
     behaviors {
@@ -784,6 +792,32 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        key_tog: key_tog {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KEY_TOG";
+            #binding-cells = <1>;
+            toggle-mode = "flip";
+        };
+
+        scroll_mode: scroll_mode {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SCROLL_MODE";
+            bindings = <&kp>, <&key_tog>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        mb_hrl: mb_hrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MB_HRL";
+            bindings = <&hrml>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -851,10 +885,10 @@
 
         Mouse {
             bindings = <
-  &trans     &trans          &trans          &trans               &trans                                 &trans  &trans  &trans  &trans  &trans
-  &kp LCTRL  &kp KP_NUMLOCK  &kp LEFT_SHIFT  &mkp MB1             &mkp_hold LC(F) MB3                    &trans  &trans  &trans  &trans  &trans
-  &trans     &trans          &trans          &mkp_hold LC(V) MB2  &trans                                 &trans  &trans  &trans  &trans  &trans
-                                             &trans               &trans               &trans    &trans  &trans  &trans
+  &trans     &trans                              &trans          &trans               &trans                                 &trans  &trans  &trans  &trans  &trans
+  &kp LCTRL  &scroll_mode KP_NUMLOCK KP_NUMLOCK  &kp LEFT_SHIFT  &mb_hrl LCTRL MB1    &mkp_hold LC(F) MB3                    &trans  &trans  &trans  &trans  &trans
+  &trans     &trans                              &trans          &mkp_hold LC(V) MB2  &trans                                 &trans  &trans  &trans  &trans  &trans
+                                                                 &trans               &trans               &trans    &trans  &trans  &trans
             >;
 
             label = "Mouse";
