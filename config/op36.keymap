@@ -641,7 +641,7 @@
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&kp KP_NUMLOCK>,
-                <&macro_wait_time 30>;
+                <&macro_wait_time 50>;
 
             label = "SCROLL_HOLD";
         };
