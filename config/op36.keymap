@@ -646,6 +646,17 @@
             label = "SCROLL_HOLD";
             tap-ms = <0>;
         };
+
+        scroll_tg: scroll_tg {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_wait_time 20>,
+                <&key_tog KP_NUMLOCK>,
+                <&macro_wait_time 20>;
+
+            label = "SCROLL_TG";
+        };
     };
 
     behaviors {
