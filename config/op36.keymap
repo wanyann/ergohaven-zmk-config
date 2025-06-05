@@ -589,13 +589,45 @@
             tap-ms = <0>;
         };
 
-        bspc_ms_off: mouse_off {
+        bspc_msoff: bspc_msoff {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&layer_off 6 &bspc_morph>;
-            label = "MOUSE_OFF";
+            label = "BSPC_MSOFF";
             tap-ms = <0>;
             wait-ms = <0>;
+        };
+
+        trns_msoff: trns_msoff {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&trans>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&trans>,
+                <&macro_tap>,
+                <&layer_off 6>;
+
+            label = "TRNS_MSOFF";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+
+        kp_msoff: kp_msoff {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap>,
+                <&layer_off 6>,
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "KP_MSOFF";
         };
     };
 
@@ -662,7 +694,7 @@
         lt_bspc: lt_bspc {
             compatible = "zmk,behavior-hold-tap";
             label = "LT with quick tap and mod morph";
-            bindings = <&mo>, <&bspc_ms_off>;
+            bindings = <&mo>, <&bspc_msoff>;
 
             #binding-cells = <2>;
             quick-tap-ms = <180>;
@@ -821,6 +853,26 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        trns_msoff_hold: trns_msoff_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TRNS_MSOFF_HOLD";
+            bindings = <&kp>, <&trns_msoff>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        mkp_hold_msoff: mkp_hold_msoff {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MKP_HOLD_MSOFF";
+            bindings = <&kp_msoff>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -888,10 +940,10 @@
 
         Mouse {
             bindings = <
-  &trans     &trans                              &trans          &trans               &trans                                 &trans  &trans  &trans  &trans  &trans
-  &kp LCTRL  &scroll_mode KP_NUMLOCK KP_NUMLOCK  &kp LEFT_SHIFT  &mb_hrl LCTRL MB1    &mkp_hold LC(F) MB3                    &trans  &trans  &trans  &trans  &trans
-  &trans     &trans                              &trans          &mkp_hold LC(V) MB2  &trans                                 &trans  &trans  &trans  &trans  &trans
-                                                                 &trans               &trans               &trans    &trans  &trans  &trans
+  &trns_msoff               &trns_msoff                         &trns_msoff               &trns_msoff          &trns_msoff                                  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
+  &kp LCTRL                 &scroll_mode KP_NUMLOCK KP_NUMLOCK  &kp LEFT_SHIFT            &mb_hrl LCTRL MB1    &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
+  &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0            &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2  &trns_msoff_hold LG(V) 0                     &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
+                                                                                          &trans               &trans                     &trans    &trans  &trans       &trans
             >;
 
             label = "Mouse";
