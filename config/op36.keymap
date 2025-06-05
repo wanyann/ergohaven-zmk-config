@@ -917,7 +917,7 @@
 
         Colemak {
             bindings = <
-  &layer_on 6           &kp W                 &kp F                    &en_com_ques   &en_dot_excl                            &kp J          &kp L          &kp Y      &kp B  &kp SEMI
+  &to 6                 &kp W                 &kp F                    &en_com_ques   &en_dot_excl                            &kp J          &kp L          &kp Y      &kp B  &kp SEMI
   &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT R  &hrml_slow LEFT_SHIFT S  &hrml LCTRL T  &mt LC(F) G                             &kp M          &hrml LCTRL N  &hrl 10 E  &kp I  &hrml_slow RALT O
   &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C              &mt LC(V) D    &mt LG(V) V                             &kp K          &kp H          &kp U      &kp P  &mt LC(SLASH) SLASH
                                                                        &kp K_CANCEL   &lt 9 SPACE   &sl 11    &sk LEFT_SHIFT  &lt_bspc 10 0  &layer_on 2
