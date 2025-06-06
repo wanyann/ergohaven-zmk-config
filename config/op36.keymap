@@ -955,7 +955,7 @@
         Mouse {
             bindings = <
   &trans                    &trns_msoff               &trns_msoff               &trns_msoff          &trns_msoff                                  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
-  &kp LCTRL                 &scroll_hold              &kp LEFT_SHIFT            &mb_hrl LCTRL MB1    &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
+  &kp LCTRL                 &kp KP_NUMLOCK            &kp LEFT_SHIFT            &mb_hrl LCTRL MB1    &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
   &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2  &trns_msoff_hold LG(V) 0                     &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
                                                                                 &cancel_layeroff 6   &trans                     &sl 11    &trans  &trans       &trans
             >;
