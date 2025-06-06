@@ -664,6 +664,8 @@
                 <&mkp MB1 &mo 7>;
 
             label = "MKP1_CTRL";
+            wait-ms = <0>;
+            tap-ms = <0>;
         };
     };
 
