@@ -891,7 +891,7 @@
         mkp_ml: mkp_ml {
             compatible = "zmk,behavior-hold-tap";
             label = "MKP_ML";
-            bindings = <&mkp>, <&ml>;
+            bindings = <&ml>, <&mkp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <180>;
@@ -965,7 +965,7 @@
         Mouse {
             bindings = <
   &trans                    &trns_msoff               &trns_msoff               &trns_msoff          &trns_msoff                                  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
-  &kp LCTRL                 &kp KP_NUMLOCK            &kp LEFT_SHIFT            &mkp_ml MB1 LCTRL    &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
+  &kp LCTRL                 &kp KP_NUMLOCK            &kp LEFT_SHIFT            &mkp_ml LCTRL MB1    &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
   &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2  &trns_msoff_hold LG(V) 0                     &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
                                                                                 &cancel_layeroff 6   &trans                     &sl 11    &trans  &trans       &trans
             >;
