@@ -652,6 +652,19 @@
             bindings = <&macro_param_1to1 &layer_off MACRO_PLACEHOLDER &kp K_CANCEL>;
             label = "CANCEL_MSOFF";
         };
+
+        mkp1_ctrl: mkp1_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mkp MB1 &mo 7>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mkp MB1 &mo 7>;
+
+            label = "MKP1_CTRL";
+        };
     };
 
     behaviors {
@@ -858,16 +871,6 @@
             toggle-mode = "flip";
         };
 
-        mb_hrl: mb_hrl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MB_HRL";
-            bindings = <&ml>, <&mkp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
         trns_msoff_hold: trns_msoff_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "TRNS_MSOFF_HOLD";
@@ -886,16 +889,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-        };
-
-        mkp_ml: mkp_ml {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MKP_ML";
-            bindings = <&ml>, <&mkp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            flavor = "balanced";
         };
     };
 
@@ -965,7 +958,7 @@
         Mouse {
             bindings = <
   &trans                    &trns_msoff               &trns_msoff               &trns_msoff          &trns_msoff                                  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
-  &kp LCTRL                 &kp KP_NUMLOCK            &kp LEFT_SHIFT            &mkp_ml LCTRL MB1    &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
+  &kp LCTRL                 &kp KP_NUMLOCK            &kp LEFT_SHIFT            &mkp1_ctrl           &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
   &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2  &trns_msoff_hold LG(V) 0                     &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
                                                                                 &cancel_layeroff 6   &trans                     &sl 12    &trans  &trans       &trans
             >;
