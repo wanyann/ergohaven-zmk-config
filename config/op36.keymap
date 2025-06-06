@@ -661,7 +661,7 @@
                 <&mkp MB1 &ml LCTRL>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mkp MB1 &kp LCTRL>;
+                <&mkp MB1 &ml LCTRL>;
 
             label = "MB1_ML";
             wait-ms = <0>;
