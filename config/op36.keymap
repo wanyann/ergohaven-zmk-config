@@ -1022,7 +1022,7 @@
   &kp LA(LC(LS(P)))  &kp LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))      &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))
   &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))  &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))      &kp LS(LA(LC(G)))                    &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))
   &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))  &kp LS(LA(LC(C)))  &kp LA(LS(LC(LG(V))))  &kp LS(LA(LC(B)))                    &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))
-                                                           &trans                 &none              &sl 11    &trans  &trans             &trans
+                                                           &layer_off 11          &none              &sl 11    &trans  &trans             &trans
             >;
 
             label = "Applications";
