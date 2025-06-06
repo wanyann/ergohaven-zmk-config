@@ -646,10 +646,10 @@
             tap-ms = <0>;
         };
 
-        cancel_layeroff: cancel_msoff {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &layer_off MACRO_PLACEHOLDER &kp K_CANCEL>;
+        kp_layeroff: cancel_msoff {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
             label = "CANCEL_MSOFF";
         };
 
@@ -892,6 +892,16 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        trans_msoff_lr_hold: trans_msoff_lr_hold {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TRANS_MSOFF_LR_HOLD";
+            bindings = <&mo>, <&trns_msoff>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -959,10 +969,10 @@
 
         Mouse {
             bindings = <
-  &trans                    &trns_msoff               &trns_msoff               &trns_msoff          &trns_msoff                                  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
-  &kp LCTRL                 &kp KP_NUMLOCK            &kp LEFT_SHIFT            &mkp1_ctrl           &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
-  &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2  &trns_msoff_hold LG(V) 0                     &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff  &trns_msoff
-                                                                                &cancel_layeroff 6   &trans                     &sl 12    &trans  &trans       &trans
+  &trans                    &trns_msoff               &trns_msoff               &trns_msoff                  &trns_msoff                                  &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
+  &kp LCTRL                 &kp KP_NUMLOCK            &kp LEFT_SHIFT            &mkp1_ctrl                   &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trns_msoff  &trans_msoff_lr_hold 11 0  &trns_msoff  &trns_msoff
+  &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2          &trns_msoff_hold LG(V) 0                     &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
+                                                                                &kp_layeroff 6 LS(K_CANCEL)  &trans                     &sl 12    &trans  &trans       &trans
             >;
 
             label = "Mouse";
