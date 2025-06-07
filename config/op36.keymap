@@ -15,11 +15,6 @@
     tapping-term-ms = <150>;
 };
 
-&caps_word {
-    continue-list = <MINUS SEMICOLON UNDERSCORE SINGLE_QUOTE LEFT_BRACKET RIGHT_BRACKET COMMA DOT GRAVE BACKSPACE DELETE>;
-    mods = <(MOD_LSFT)>;
-};
-
 &sl {
     release-after-ms = <5000>;
     ignore-modifiers;
@@ -935,7 +930,6 @@
         };
 
         En_CW {
-            label = "English CapsWord  ";
             bindings = <
   &trans                     &kp LS(W)                  &kp LS(E)                    &en_com_ques       &en_dot_excl                              &kp LS(Y)  &kp LS(U)          &kp LS(I)      &kp LS(O)  &kp LS(P)
   &hrml_slow LEFT_GUI LS(A)  &hrml_slow LEFT_ALT LS(S)  &hrml_slow LEFT_SHIFT LS(D)  &hrml LCTRL LS(F)  &mt LC(F) LS(G)                           &kp LS(H)  &hrml LCTRL LS(J)  &hrl 13 LS(K)  &kp LS(L)  &hrml_slow RALT SEMI
@@ -954,7 +948,6 @@
         };
 
         Ru_CW {
-            label = "Russian CapsWord ";
             bindings = <
   &trans                                 &kp LS(RU_CYRILLIC_SOFT_SIGN)          &kp LS(RU_CYRILLIC_YA)                    &ru_com_ques                    &ru_dot_excl                                    &kp LS(RU_CYRILLIC_ZE)  &kp LS(RU_CYRILLIC_VE)          &kp LS(RU_CYRILLIC_KA)      &kp LS(RU_CYRILLIC_DE)   &kp LS(RU_CYRILLIC_CHE)
   &hrml_slow LEFT_GUI LS(RU_CYRILLIC_U)  &hrml_slow LEFT_ALT LS(RU_CYRILLIC_I)  &hrml_slow LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)   &mt LC(F) LS(RU_CYRILLIC_A)                     &kp LS(RU_CYRILLIC_EL)  &hrml LCTRL LS(RU_CYRILLIC_EN)  &hrl 13 LS(RU_CYRILLIC_TE)  &kp LS(RU_CYRILLIC_ES)   &hrml_slow RALT LS(RU_CYRILLIC_ER)
@@ -970,8 +963,6 @@
   &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2          &trns_msoff_hold LG(V) 0                     &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
                                                                                 &kp_layeroff 6 LS(K_CANCEL)  &trans                     &sl 14    &trans  &trans       &trans
             >;
-
-            label = "Mouse";
         };
 
         Scroll {
@@ -1008,12 +999,9 @@
   &kp Z             &kp X             &kp C                   &kp V         &kp B                     &kp N   &kp M         &kp COMMA  &kp DOT  &kp SLASH
                                                               &trans        &trans  &trans    &trans  &trans  &trans
             >;
-
-            label = "Modifiers";
         };
 
         Cmk_Mods {
-            label = "Colemak_Mods";
             bindings = <
   &kp Q             &kp W             &f_morph                &kp COMMA     &kp DOT                    &kp J   &kp L         &kp Y      &kp B     &kp SEMI
   &hrm_slow LGUI A  &hrm_slow LALT R  &hrm_slow LEFT_SHIFT S  &hrm LCTRL T  &kp G                      &kp M   &hrm LCTRL N  &hrl 13 E  &i_morph  &hrm_slow RALT O
@@ -1029,8 +1017,6 @@
   &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &trans                          &trans  &kp PG_UP  &none     &kp PG_DN  &trans
                                                                                             &trans                   &trans        &trans    &trans  &trans  &trans
             >;
-
-            label = "Navigation";
         };
 
         Num {
@@ -1040,8 +1026,6 @@
   &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH                           &trans  &trans     &trans      &trans        &trans
                                             &trans        &alt_spc       &kp LA(ENTER)    &trans  &trans  &trans
             >;
-
-            label = "Numbers";
         };
 
         App {
@@ -1051,8 +1035,6 @@
   &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))  &kp LS(LA(LC(C)))  &kp LA(LS(LC(LG(V))))  &kp LS(LA(LC(B)))                    &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))
                                                            &layer_off 14          &none              &sl 14    &trans  &trans             &trans
             >;
-
-            label = "Applications";
         };
 
         En_Sym {
@@ -1062,8 +1044,6 @@
   &trans     &kp ASTRK             &kp CARET  &kp PERCENT            &en_code                    &kp AMPERSAND     &kp LESS_THAN     &kp DOLLAR     &kp GREATER_THAN   &trans
                                               &trans                 &trans    &trans    &trans  &trans            &trans
             >;
-
-            label = "English Symbols";
         };
 
         RuSym {
@@ -1073,8 +1053,6 @@
   &trans     &kp ASTERISK          &en CARET     &kp PERCENT           &ru_code                    &en AMPERSAND     &en LESS_THAN     &en DOLLAR        &en GREATER_THAN   &trans
                                                  &trans                &trans    &trans    &trans  &trans            &trans
             >;
-
-            label = "Russian Symbols";
         };
 
         Fn {
@@ -1084,8 +1062,6 @@
   &kp F10  &kp F1  &kp F2  &kp F3  &trans                     &trans  &trans     &trans          &trans    &trans
                            &trans  &trans   &trans    &trans  &trans  &trans
             >;
-
-            label = "Function";
         };
 
         OS {
@@ -1095,8 +1071,6 @@
   &bt BT_SEL 1  &trans         &sync_lg          &kp C_VOL_DN          &kp C_BRI_DN                            &trans  &trans          &trans  &trans  &trans
                                                  &trans                &trans                &trans    &trans  &trans  &trans
             >;
-
-            label = "OS";
         };
     };
 };
