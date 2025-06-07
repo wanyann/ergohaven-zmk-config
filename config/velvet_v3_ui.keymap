@@ -655,7 +655,7 @@
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_press>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>;
 
             label = "SEN_MO";
         };
@@ -898,7 +898,7 @@
         cap_sen: cap_sen {
             compatible = "zmk,behavior-hold-tap";
             label = "CAP_SEN";
-            bindings = <&mo>, <&mkp>;
+            bindings = <&sen_mo>, <&mkp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
