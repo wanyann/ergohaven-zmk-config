@@ -1093,7 +1093,7 @@
 
     scroller {
         layers = <2 7>;
-        input-processors = <&zip_xy_scaler 1 32>, <&zip_xy_to_scroll_mapper>;
+        input-processors = <&zip_xy_scaler 1 64>, <&zip_xy_to_scroll_mapper>;
     };
 
     sniper {
