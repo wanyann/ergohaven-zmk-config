@@ -911,10 +911,10 @@
 
         Colemak {
             bindings = <
-&none  &to 6                 &kp W                 &kp F                    &en_com_ques   &en_dot_excl                            &kp J          &kp L           &kp Y      &kp B     &kp SEMI             &none
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT R  &hrml_slow LEFT_SHIFT S  &hrml LCTRL T  &mt LC(F) G                             &kp M          &hrml LCTRL N   &hrl 13 E  &kp I     &hrml_slow RALT O    &none
-&none  &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C              &mt LC(V) D    &mt LG(V) V                             &kp K          &kp H           &kp U      &kp P     &mt LC(SLASH) SLASH  &none
-                             &kp GRAVE             &kp LGUI                 &kp K_CANCEL   &lt 12 SPACE  &sl 14    &sk LEFT_SHIFT  &lt_bspc 13 0  &cap_sen 6 MB1  &kp LBKT   &kp RBKT
+&none  &to 6                 &kp W                 &kp F                    &en_com_ques   &en_dot_excl                            &kp J          &kp L          &kp Y      &kp B     &kp SEMI             &none
+&none  &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT R  &hrml_slow LEFT_SHIFT S  &hrml LCTRL T  &mt LC(F) G                             &kp M          &hrml LCTRL N  &hrl 13 E  &kp I     &hrml_slow RALT O    &none
+&none  &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C              &mt LC(V) D    &mt LG(V) V                             &kp K          &kp H          &kp U      &kp P     &mt LC(SLASH) SLASH  &none
+                             &kp GRAVE             &kp LGUI                 &kp K_CANCEL   &lt 12 SPACE  &sl 14    &sk LEFT_SHIFT  &lt_bspc 13 0  &mo 6          &kp LBKT   &kp RBKT
             >;
         };
 
