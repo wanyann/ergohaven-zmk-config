@@ -923,9 +923,9 @@
 
         Nordrassil_CW {
             bindings = <
-  &trans                     &kp LS(Y)                  &kp LS(O)               &mt LC(R) LS(U)         &mt LC(T) LS(J)                           &kp LS(J)  &kp LS(L)      &kp LS(Y)               &kp LS(B)  &trans
-  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrml LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)       &mt LS(F) K_CANCEL                        &kp LS(M)  &hrl 15 LS(N)  &hrml LEFT_SHIFT LS(E)  &kp LS(I)  &hrml_slow RALT LS(O)
-  &mt LC(Z) LS(K)            &mt LC(X) LS(X)            &mt LC(C) LS(Z)         &mt LC(V) LS(K_CANCEL)  &mt LG(V) LS(K_CANCEL)                    &kp LS(K)  &kp LS(H)      &kp LS(U)               &kp LS(P)  &mt LC(SLASH) V
+  &trans                     &kp LS(Y)                  &kp LS(O)               &mt LC(R) LS(U)         &mt LC(T) LS(J)                           &kp LS(Q)  &kp LS(G)      &kp LS(N)               &kp LS(F)  &trans
+  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrml LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)       &mt LS(F) K_CANCEL                        &kp LS(P)  &hrl 15 LS(D)  &hrml LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(L)
+  &mt LC(Z) LS(K)            &mt LC(X) LS(X)            &mt LC(C) LS(Z)         &mt LC(V) LS(K_CANCEL)  &mt LG(V) LS(K_CANCEL)                    &kp LS(B)  &kp LS(C)      &kp LS(M)               &kp LS(W)  &mt LC(SLASH) V
                                                                                 &lg_en                  &en_lt_cw_off 14 SPACE  &trans    &trans  &trans     &trans
             >;
         };
