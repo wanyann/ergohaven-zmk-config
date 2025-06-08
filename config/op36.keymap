@@ -665,17 +665,6 @@
     };
 
     behaviors {
-        ad_a: adaptive_a {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "ADAPTIVE_A";
-            #binding-cells = <0>;
-            defaults = <&kp A>;
-            bindings = <&kp U>, <&kp O>, <&kp RU_CYRILLIC_EN>;
-
-            antecedents = <Q Z RU_CYRILLIC_PE>;
-            max-delay-ms = <1250>;
-        };
-
         layer_off: layer_off {
             compatible = "zmk,behavior-toggle-layer";
             label = "LAYER_OFF";
@@ -842,20 +831,20 @@
             mods = <(MOD_LSFT)>;
         };
 
-        f_morph: f_morph {
+        o_morph: o_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "F_MORPH";
-            bindings = <&kp F>, <&kp E>;
+            label = "O_MORPH";
+            bindings = <&kp O>, <&kp E>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
 
-        i_morph: i_morph {
+        s_morph: s_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "I_MORPH";
-            bindings = <&kp I>, <&kp L>;
+            label = "S_MORPH";
+            bindings = <&kp S>, <&kp L>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -908,6 +897,16 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        i_morph: i_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "I_MORPH";
+            bindings = <&kp I>, <&kp S>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
     };
 
     keymap {
@@ -915,7 +914,7 @@
 
         Nordrassil {
             bindings = <
-  &to 8                 &kp Y                 &kp O               &kp U               &kp J                                      &kp Q          &kp G      &kp N               &kp F  &none
+  &to 8                 &kp Y                 &kp O               &mt LC(R) U         &mt LC(T) J                                &kp Q          &kp G      &kp N               &kp F  &none
   &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrml LEFT_SHIFT E  &hrml LCTRL A       &mt LC(F) K_CANCEL                         &kp P          &hrl 15 D  &hrml LEFT_SHIFT R  &kp S  &hrml_slow RALT L
   &mt LC(Z) K           &mt LC(X) X           &mt LC(C) Z         &mt LC(V) K_CANCEL  &mt LG(V) K_CANCEL                         &kp B          &kp C      &kp M               &kp W  &mt LC(SLASH) V
                                                                   &kp K_CANCEL        &lt 14 SPACE        &sl 16    &bspc_msoff  &lt_bspc 15 0  &to 2
@@ -924,7 +923,7 @@
 
         Nordrassil_CW {
             bindings = <
-  &trans                     &kp LS(Y)                  &kp LS(O)               &kp LS(U)               &kp LS(J)                                 &kp LS(J)  &kp LS(L)      &kp LS(Y)               &kp LS(B)  &trans
+  &trans                     &kp LS(Y)                  &kp LS(O)               &mt LC(R) LS(U)         &mt LC(T) LS(J)                           &kp LS(J)  &kp LS(L)      &kp LS(Y)               &kp LS(B)  &trans
   &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrml LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)       &mt LS(F) K_CANCEL                        &kp LS(M)  &hrl 15 LS(N)  &hrml LEFT_SHIFT LS(E)  &kp LS(I)  &hrml_slow RALT LS(O)
   &mt LC(Z) LS(K)            &mt LC(X) LS(X)            &mt LC(C) LS(Z)         &mt LC(V) LS(K_CANCEL)  &mt LG(V) LS(K_CANCEL)                    &kp LS(K)  &kp LS(H)      &kp LS(U)               &kp LS(P)  &mt LC(SLASH) V
                                                                                 &lg_en                  &en_lt_cw_off 14 SPACE  &trans    &trans  &trans     &trans
@@ -1032,8 +1031,8 @@
 
         Cmk_Mods {
             bindings = <
-  &kp Q             &kp W             &f_morph                &kp COMMA     &kp DOT                    &kp J   &kp L         &kp Y      &kp B     &kp SEMI
-  &hrm_slow LGUI A  &hrm_slow LALT R  &hrm_slow LEFT_SHIFT S  &hrm LCTRL T  &kp G                      &kp M   &hrm LCTRL N  &hrl 15 E  &i_morph  &hrm_slow RALT O
+  &kp Q             &kp W             &o_morph                &kp COMMA     &kp DOT                    &kp J   &kp L         &kp Y      &kp B     &kp SEMI
+  &hrm_slow LGUI A  &hrm_slow LALT R  &hrm_slow LEFT_SHIFT S  &hrm LCTRL T  &kp G                      &kp M   &hrm LCTRL N  &hrl 15 E  &s_morph  &hrm_slow RALT O
   &kp Z             &kp X             &kp C                   &kp D         &kp V                      &kp K   &kp H         &kp U      &kp P     &kp SLASH
                                                               &trans        &trans   &trans    &trans  &trans  &trans
             >;
