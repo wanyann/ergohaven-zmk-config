@@ -897,16 +897,6 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
-
-        i_morph: i_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "I_MORPH";
-            bindings = <&kp I>, <&kp S>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
     };
 
     keymap {
