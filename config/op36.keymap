@@ -1032,7 +1032,7 @@
         Cmk_Mods {
             bindings = <
   &kp Q             &kp W             &o_morph                &kp COMMA     &kp DOT                    &kp J   &kp L         &kp Y      &kp B     &kp SEMI
-  &hrm_slow LGUI A  &hrm_slow LALT R  &hrm_slow LEFT_SHIFT S  &hrm LCTRL T  &kp G                      &kp M   &hrm LCTRL N  &hrl 15 E  &s_morph  &hrm_slow RALT O
+  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm_slow LEFT_SHIFT S  &hrm LCTRL T  &kp G                      &kp M   &hrm LCTRL N  &hrl 15 E  &s_morph  &hrm_slow RALT O
   &kp Z             &kp X             &kp C                   &kp D         &kp V                      &kp K   &kp H         &kp U      &kp P     &kp SLASH
                                                               &trans        &trans   &trans    &trans  &trans  &trans
             >;
