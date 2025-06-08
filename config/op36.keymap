@@ -915,10 +915,10 @@
 
         Nordrassil {
             bindings = <
-  &to 8                 &kp W                 &kp F               &en_com_ques   &en_dot_excl                         &kp J          &kp L      &kp Y               &kp B  &none
-  &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT R  &hrml LEFT_SHIFT S  &hrml LCTRL T  &mt LC(F) G                          &kp M          &hrl 15 N  &hrml LEFT_SHIFT E  &kp I  &hrml_slow RALT O
-  &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C         &mt LC(V) D    &mt LG(V) V                          &kp K          &kp H      &kp U               &kp P  &mt LC(SLASH) SLASH
-                                                                  &kp K_CANCEL   &lt 14 SPACE  &sl 16    &bspc_msoff  &lt_bspc 15 0  &ad_a
+  &to 8                 &kp W                 &kp F               &en_com_ques   &en_dot_excl                           &kp J          &kp L      &kp Y               &kp B  &none
+  &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT R  &hrml LEFT_SHIFT S  &hrml LCTRL T  &mt LC(F) G                            &kp M          &hrl 15 N  &hrml LEFT_SHIFT E  &kp I  &hrml_slow RALT O
+  &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C         &mt LC(V) D    &mt LG(V) V                            &kp K          &kp H      &kp U               &kp P  &mt LC(SLASH) SLASH
+                                                                  &kp K_CANCEL   &lt 14 SPACE  &sl 16    &kp BACKSPACE  &lt_bspc 15 0  &ad_a
             >;
         };
 
@@ -987,10 +987,10 @@
 
         Mouse {
             bindings = <
-  &trans                    &trns_msoff               &trns_msoff               &trns_msoff                  &trns_msoff                                  &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
-  &kp LCTRL                 &kp KP_EQUAL              &kp KP_NUMLOCK            &mkp1_ctrl                   &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trns_msoff  &trans_msoff_lr_hold 15 0  &trns_msoff  &trns_msoff
-  &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2          &trns_msoff_hold LG(V) 0                     &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
-                                                                                &kp_layeroff 8 LS(K_CANCEL)  &trans                     &sl 16    &trans  &trans       &trans
+  &trans                    &trns_msoff               &trns_msoff               &trns_msoff                  &trns_msoff                                       &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
+  &kp LCTRL                 &kp KP_EQUAL              &kp KP_NUMLOCK            &mkp1_ctrl                   &mkp_hold_msoff LC(F) MB3                         &trns_msoff  &trns_msoff  &trans_msoff_lr_hold 15 0  &trns_msoff  &trns_msoff
+  &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2          &trns_msoff_hold LG(V) 0                          &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
+                                                                                &kp_layeroff 8 LS(K_CANCEL)  &trans                     &sl 16    &bspc_msoff  &trans       &trans
             >;
         };
 
