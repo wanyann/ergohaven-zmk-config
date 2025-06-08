@@ -937,10 +937,10 @@
 
         Nordrassil {
             bindings = <
-  &to 8                 &kp Y                 &kp O               &mt LC(R) U         &mt LC(T) J                                &kp Q     &kp G      &kp N               &kp F  &none
-  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrml LEFT_SHIFT E  &hrml LCTRL A       &en_dot_mt LC(F) 0                         &kp P     &hrl 15 D  &hrml LEFT_SHIFT R  &kp S  &hrml_slow RALT L
-  &mt LC(Z) K           &mt LC(X) X           &mt LC(C) Z         &en_com_mt LC(V) 0  &mt LG(V) K_CANCEL                         &kp B     &kp C      &kp M               &kp W  &mt LC(SLASH) V
-                                                                  &kp K_CANCEL        &lt 14 SPACE        &sl 16    &bspc_msoff  &lt 15 T  &to 2
+  &to 8                 &kp Y                 &kp O              &mt LC(R) U         &mt LC(T) J                                &kp Q     &kp G      &kp N              &kp F  &none
+  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrm LEFT_SHIFT E  &hrml LCTRL A       &en_dot_mt LC(F) 0                         &kp P     &hrl 15 D  &hrm LEFT_SHIFT R  &kp S  &hrml_slow RALT L
+  &mt LC(Z) K           &mt LC(X) X           &mt LC(C) Z        &en_com_mt LC(V) 0  &mt LG(V) K_CANCEL                         &kp B     &kp C      &kp M              &kp W  &mt LC(SLASH) V
+                                                                 &kp K_CANCEL        &lt 14 SPACE        &sl 16    &bspc_msoff  &lt 15 T  &to 2
             >;
         };
 
