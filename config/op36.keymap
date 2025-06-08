@@ -200,6 +200,7 @@
             bindings = <&kp P>;
             key-positions = <7 6>;
             timeout-ms = <30>;
+            layers = <0>;
         };
 
         combo_q_cw {
@@ -213,6 +214,7 @@
             bindings = <&kp LS(P)>;
             key-positions = <6 7>;
             timeout-ms = <30>;
+            layers = <1>;
         };
 
         combo_tse_ru {
