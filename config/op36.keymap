@@ -890,6 +890,16 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        ru_dot_mt: ru_dot_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_DOT_MT";
+            bindings = <&kp>, <&ru_dot_excl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
