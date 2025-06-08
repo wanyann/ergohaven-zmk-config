@@ -12,7 +12,7 @@
 
 &lt {
     flavor = "balanced";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <200>;
 };
 
 &sl {
@@ -859,13 +859,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-        };
-
-        key_tog: key_tog {
-            compatible = "zmk,behavior-key-toggle";
-            label = "KEY_TOG";
-            #binding-cells = <1>;
-            toggle-mode = "flip";
         };
 
         trns_msoff_hold: trns_msoff_hold {
