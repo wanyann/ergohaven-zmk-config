@@ -915,19 +915,19 @@
 
         Nordrassil {
             bindings = <
-  &to 8                 &kp Y                 &kp O               &kp U          &kp J                                      &kp Q          &kp G      &kp N               &kp F  &none
-  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrml LEFT_SHIFT E  &hrml LCTRL A  &mt LC(F) G                                &kp P          &hrl 15 D  &hrml LEFT_SHIFT R  &kp S  &hrml_slow RALT L
-  &mt LC(Z) K           &mt LC(X) X           &mt LC(C) Z         &mt LC(V) D    &mt LG(V) K_CANCEL                         &kp B          &kp C      &kp M               &kp W  &mt LC(SLASH) V
-                                                                  &kp K_CANCEL   &lt 14 SPACE        &sl 16    &bspc_msoff  &lt_bspc 15 0  &to 2
+  &to 8                 &kp Y                 &kp O               &kp U               &kp J                                      &kp Q          &kp G      &kp N               &kp F  &none
+  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrml LEFT_SHIFT E  &hrml LCTRL A       &mt LC(F) K_CANCEL                         &kp P          &hrl 15 D  &hrml LEFT_SHIFT R  &kp S  &hrml_slow RALT L
+  &mt LC(Z) K           &mt LC(X) X           &mt LC(C) Z         &mt LC(V) K_CANCEL  &mt LG(V) K_CANCEL                         &kp B          &kp C      &kp M               &kp W  &mt LC(SLASH) V
+                                                                  &kp K_CANCEL        &lt 14 SPACE        &sl 16    &bspc_msoff  &lt_bspc 15 0  &to 2
             >;
         };
 
         Nordrassil_CW {
             bindings = <
-  &trans                     &kp LS(W)                  &kp LS(E)               &en_com_ques       &en_dot_excl                              &kp LS(J)  &kp LS(L)      &kp LS(Y)               &kp LS(B)  &trans
-  &hrml_slow LEFT_GUI LS(A)  &hrml_slow LEFT_ALT LS(R)  &hrml LEFT_SHIFT LS(S)  &hrml LCTRL LS(T)  &mt LS(F) G                               &kp LS(M)  &hrl 15 LS(N)  &hrml LEFT_SHIFT LS(E)  &kp LS(I)  &hrml_slow RALT LS(O)
-  &mt LC(Z) LS(Z)            &mt LC(X) LS(X)            &mt LC(C) LS(C)         &mt LC(V) LS(D)    &mt LG(V) LS(V)                           &kp LS(K)  &kp LS(H)      &kp LS(U)               &kp LS(P)  &mt LC(SLASH) V
-                                                                                &lg_en             &en_lt_cw_off 14 SPACE  &trans    &trans  &trans     &trans
+  &trans                     &kp LS(Y)                  &kp LS(O)               &kp LS(U)               &kp LS(J)                                 &kp LS(J)  &kp LS(L)      &kp LS(Y)               &kp LS(B)  &trans
+  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrml LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)       &mt LS(F) K_CANCEL                        &kp LS(M)  &hrl 15 LS(N)  &hrml LEFT_SHIFT LS(E)  &kp LS(I)  &hrml_slow RALT LS(O)
+  &mt LC(Z) LS(K)            &mt LC(X) LS(X)            &mt LC(C) LS(Z)         &mt LC(V) LS(K_CANCEL)  &mt LG(V) LS(K_CANCEL)                    &kp LS(K)  &kp LS(H)      &kp LS(U)               &kp LS(P)  &mt LC(SLASH) V
+                                                                                &lg_en                  &en_lt_cw_off 14 SPACE  &trans    &trans  &trans     &trans
             >;
         };
 
