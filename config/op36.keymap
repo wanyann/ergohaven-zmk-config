@@ -665,6 +665,17 @@
     };
 
     behaviors {
+        
+        ad_a: adaptive_a {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "ADAPTIVE_A";
+            #binding-cells = <0>;
+            defaults = <&kp A>;
+            bindings = <&kp U>, <&kp O>;
+            antecedents = <Q Z>;
+            max-delay-ms = <1250>;
+        };
+
         layer_off: layer_off {
             compatible = "zmk,behavior-toggle-layer";
             label = "LAYER_OFF";
@@ -907,7 +918,7 @@
   &to 6                 &kp W                 &kp F                    &en_com_ques   &en_dot_excl                            &kp J          &kp L          &kp Y      &kp B  &kp SEMI
   &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT R  &hrml_slow LEFT_SHIFT S  &hrml LCTRL T  &mt LC(F) G                             &kp M          &hrml LCTRL N  &hrl 13 E  &kp I  &hrml_slow RALT O
   &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C              &mt LC(V) D    &mt LG(V) V                             &kp K          &kp H          &kp U      &kp P  &mt LC(SLASH) SLASH
-                                                                       &kp K_CANCEL   &lt 12 SPACE  &sl 14    &sk LEFT_SHIFT  &lt_bspc 13 0  &layer_on 2
+                                                                       &kp K_CANCEL   &lt 12 SPACE  &sl 14    &sk LEFT_SHIFT  &lt_bspc 13 0  &ad_a
             >;
         };
 
@@ -925,7 +936,7 @@
   &trans                 &kp W                  &kp E                    &en_com_ques   &en_dot_excl                            &kp Y                  &kp U          &kp I      &kp O  &kp P
   &hrml_slow LEFT_GUI A  &hrml_slow LEFT_ALT S  &hrml_slow LEFT_SHIFT D  &hrml LCTRL F  &mt LC(F) G                             &kp H                  &hrml LCTRL J  &hrl 13 K  &kp L  &hrml_slow RALT SEMI
   &mt LC(Z) Z            &mt LC(X) X            &mt LC(C) C              &mt LC(V) V    &mt LG(V) B                             &kp N                  &kp M          &kp R      &kp T  &mt LC(SLASH) SLASH
-                                                                         &kp K_CANCEL   &lt 12 SPACE  &sl 14    &sk LEFT_SHIFT  &lt_bspc 13 BACKSPACE  &layer_off 2
+                                                                         &kp K_CANCEL   &lt 12 SPACE  &sl 14    &sk LEFT_SHIFT  &lt_bspc 13 BACKSPACE  &ad_a
             >;
         };
 
