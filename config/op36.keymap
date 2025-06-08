@@ -940,7 +940,7 @@
             >;
         };
 
-        Colemak-CW {
+        Colemak_CW {
             bindings = <
   &trans                     &kp LS(W)                  &kp LS(E)               &en_com_ques       &en_dot_excl                              &kp LS(J)  &kp LS(L)      &kp LS(Y)               &kp LS(B)  &trans
   &hrml_slow LEFT_GUI LS(A)  &hrml_slow LEFT_ALT LS(R)  &hrml LEFT_SHIFT LS(S)  &hrml LCTRL LS(T)  &mt LS(F) G                               &kp LS(M)  &hrl 15 LS(N)  &hrml LEFT_SHIFT LS(E)  &kp LS(I)  &hrml_slow RALT LS(O)
