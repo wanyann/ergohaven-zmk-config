@@ -915,9 +915,9 @@
 
         Nordrassil {
             bindings = <
-  &to 8                 &kp Y                 &kp O               &kp U          &kp J                                      &kp J          &kp L      &kp Y               &kp B  &none
-  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrml LEFT_SHIFT E  &hrml LCTRL A  &mt LC(F) G                                &kp M          &hrl 15 N  &hrml LEFT_SHIFT E  &kp I  &hrml_slow RALT O
-  &mt LC(Z) K           &mt LC(X) X           &mt LC(C) Z         &mt LC(V) D    &mt LG(V) K_CANCEL                         &kp K          &kp H      &kp U               &kp P  &mt LC(SLASH) SLASH
+  &to 8                 &kp Y                 &kp O               &kp U          &kp J                                      &kp Q          &kp G      &kp N               &kp F  &none
+  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrml LEFT_SHIFT E  &hrml LCTRL A  &mt LC(F) G                                &kp P          &hrl 15 D  &hrml LEFT_SHIFT R  &kp S  &hrml_slow RALT L
+  &mt LC(Z) K           &mt LC(X) X           &mt LC(C) Z         &mt LC(V) D    &mt LG(V) K_CANCEL                         &kp B          &kp C      &kp M               &kp W  &mt LC(SLASH) V
                                                                   &kp K_CANCEL   &lt 14 SPACE        &sl 16    &bspc_msoff  &lt_bspc 15 0  &to 2
             >;
         };
@@ -926,7 +926,7 @@
             bindings = <
   &trans                     &kp LS(W)                  &kp LS(E)               &en_com_ques       &en_dot_excl                              &kp LS(J)  &kp LS(L)      &kp LS(Y)               &kp LS(B)  &trans
   &hrml_slow LEFT_GUI LS(A)  &hrml_slow LEFT_ALT LS(R)  &hrml LEFT_SHIFT LS(S)  &hrml LCTRL LS(T)  &mt LS(F) G                               &kp LS(M)  &hrl 15 LS(N)  &hrml LEFT_SHIFT LS(E)  &kp LS(I)  &hrml_slow RALT LS(O)
-  &mt LC(Z) LS(Z)            &mt LC(X) LS(X)            &mt LC(C) LS(C)         &mt LC(V) LS(D)    &mt LG(V) LS(V)                           &kp LS(K)  &kp LS(H)      &kp LS(U)               &kp LS(P)  &mt LC(SLASH) LS(SLASH)
+  &mt LC(Z) LS(Z)            &mt LC(X) LS(X)            &mt LC(C) LS(C)         &mt LC(V) LS(D)    &mt LG(V) LS(V)                           &kp LS(K)  &kp LS(H)      &kp LS(U)               &kp LS(P)  &mt LC(SLASH) V
                                                                                 &lg_en             &en_lt_cw_off 14 SPACE  &trans    &trans  &trans     &trans
             >;
         };
@@ -1069,8 +1069,8 @@
         En_Sym {
             bindings = <
   &trans     &kp AT                &kp UNDER  &kp DOUBLE_QUOTES      &trans                      &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp HASH       &kp RIGHT_BRACKET  &trans
-  &kp TILDE  &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp PLUS                    &ru RU_NUMERO     &kp LEFT_BRACE    &kp SEMICOLON  &kp RIGHT_BRACE    &kp PIPE
-  &trans     &kp ASTRK             &kp CARET  &kp PERCENT            &en_code                    &kp AMPERSAND     &kp LESS_THAN     &kp DOLLAR     &kp GREATER_THAN   &trans
+  &kp TILDE  &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp PLUS                    &ru RU_NUMERO     &kp LEFT_BRACE    &kp SEMICOLON  &kp RIGHT_BRACE    &kp SLASH
+  &trans     &kp ASTRK             &kp CARET  &kp PERCENT            &en_code                    &kp AMPERSAND     &kp LESS_THAN     &kp DOLLAR     &kp GREATER_THAN   &kp PIPE
                                               &trans                 &trans    &trans    &trans  &trans            &trans
             >;
         };
@@ -1078,8 +1078,8 @@
         RuSym {
             bindings = <
   &trans     &en AT                &kp UNDER     &kp RU_DOUBLE_QUOTES  &trans                      &en SINGLE_QUOTE  &en LEFT_BRACKET  &en HASH          &en RIGHT_BRACKET  &trans
-  &en TILDE  &kp LEFT_PARENTHESIS  &kp RU_COLON  &kp RPAR              &kp PLUS                    &kp RU_NUMERO     &en LEFT_BRACE    &kp RU_SEMICOLON  &en RIGHT_BRACE    &en PIPE
-  &trans     &kp ASTERISK          &en CARET     &kp PERCENT           &ru_code                    &en AMPERSAND     &en LESS_THAN     &en DOLLAR        &en GREATER_THAN   &trans
+  &en TILDE  &kp LEFT_PARENTHESIS  &kp RU_COLON  &kp RPAR              &kp PLUS                    &kp RU_NUMERO     &en LEFT_BRACE    &kp RU_SEMICOLON  &en RIGHT_BRACE    &en SLASH
+  &trans     &kp ASTERISK          &en CARET     &kp PERCENT           &ru_code                    &en AMPERSAND     &en LESS_THAN     &en DOLLAR        &en GREATER_THAN   &en PIPE
                                                  &trans                &trans    &trans    &trans  &trans            &trans
             >;
         };
