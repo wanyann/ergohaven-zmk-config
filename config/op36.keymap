@@ -947,7 +947,7 @@
         Nordrassil_CW {
             bindings = <
   &trans                     &kp LS(Y)                  &kp LS(O)               &mt LC(R) LS(U)     &mt LC(T) LS(J)                           &kp LS(Q)     &kp LS(G)      &kp LS(N)               &kp LS(F)  &trans
-  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrml LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)   &en_dot_mt LS(F) 0                        &kp LS(P)     &hrl 15 LS(D)  &hrml LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(L)
+  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrml LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)   &en_dot_mt LC(F) 0                        &kp LS(P)     &hrl 15 LS(D)  &hrml LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(L)
   &mt LC(Z) LS(K)            &mt LC(X) LS(X)            &mt LC(C) LS(Z)         &en_com_mt LC(V) 0  &mt LG(V) LS(K_CANCEL)                    &kp LS(B)     &kp LS(C)      &kp LS(M)               &kp LS(W)  &mt LC(SLASH) V
                                                                                 &lg_en              &en_lt_cw_off 14 SPACE  &trans    &trans  &lt 15 LS(T)  &trans
             >;
