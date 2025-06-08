@@ -671,8 +671,8 @@
             label = "ADAPTIVE_A";
             #binding-cells = <0>;
             defaults = <&kp A>;
-            bindings = <&kp U>, <&kp O>;
-            antecedents = <Q Z>;
+            bindings = <&kp U>, <&kp O>, <&kp RU_CYRILLIC_A>;
+            antecedents = <Q Z RU_CYRILLIC_BE>;
             max-delay-ms = <1250>;
         };
 
