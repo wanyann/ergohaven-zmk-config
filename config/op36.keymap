@@ -915,10 +915,10 @@
 
         Nordrassil {
             bindings = <
-  &to 8                 &kp W                 &kp F               &en_com_ques   &en_dot_excl                         &kp J          &kp L      &kp Y               &kp B  &none
-  &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT R  &hrml LEFT_SHIFT S  &hrml LCTRL T  &mt LC(F) G                          &kp M          &hrl 15 N  &hrml LEFT_SHIFT E  &kp I  &hrml_slow RALT O
-  &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C         &mt LC(V) D    &mt LG(V) V                          &kp K          &kp H      &kp U               &kp P  &mt LC(SLASH) SLASH
-                                                                  &kp K_CANCEL   &lt 14 SPACE  &sl 16    &bspc_msoff  &lt_bspc 15 0  &ad_a
+  &to 8                 &kp Y                 &kp O               &kp U          &kp J                                      &kp J          &kp L      &kp Y               &kp B  &none
+  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrml LEFT_SHIFT E  &hrml LCTRL A  &mt LC(F) G                                &kp M          &hrl 15 N  &hrml LEFT_SHIFT E  &kp I  &hrml_slow RALT O
+  &mt LC(Z) K           &mt LC(X) X           &mt LC(C) Z         &mt LC(V) D    &mt LG(V) K_CANCEL                         &kp K          &kp H      &kp U               &kp P  &mt LC(SLASH) SLASH
+                                                                  &kp K_CANCEL   &lt 14 SPACE        &sl 16    &bspc_msoff  &lt_bspc 15 0  &to 2
             >;
         };
 
@@ -936,7 +936,7 @@
   &to 8                 &kp W                 &kp F               &en_com_ques   &en_dot_excl                         &kp J          &kp L      &kp Y               &kp B  &none
   &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT R  &hrml LEFT_SHIFT S  &hrml LCTRL T  &mt LC(F) G                          &kp M          &hrl 15 N  &hrml LEFT_SHIFT E  &kp I  &hrml_slow RALT O
   &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C         &mt LC(V) D    &mt LG(V) V                          &kp K          &kp H      &kp U               &kp P  &mt LC(SLASH) SLASH
-                                                                  &kp K_CANCEL   &lt 14 SPACE  &sl 16    &bspc_msoff  &lt_bspc 15 0  &ad_a
+                                                                  &kp K_CANCEL   &lt 14 SPACE  &sl 16    &bspc_msoff  &lt_bspc 15 0  &to 0
             >;
         };
 
