@@ -670,6 +670,17 @@
             max-delay-ms = <1500>;
         };
 
+        ru_magic: ru_magic {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "RU_MAGIC";
+            #binding-cells = <0>;
+            defaults = <&none>;
+            bindings = <&kp C>, <&kp O>;
+
+            antecedents = <S Z>;
+            max-delay-ms = <1500>;
+        };
+
         layer_off: layer_off {
             compatible = "zmk,behavior-toggle-layer";
             label = "LAYER_OFF";
