@@ -939,7 +939,7 @@
 
         Colemak-CW {
             bindings = <
-  &trans                     &kp LS(W)                  &kp LS(E)               &en_com_ques       &en_dot_excl                             &kp LS(J)  &kp LS(L)      &kp LS(Y)               &kp LS(B)  &trans
+  &trans                     &kp LS(W)                  &kp LS(F)               &en_com_ques       &en_dot_excl                             &kp LS(J)  &kp LS(L)      &kp LS(Y)               &kp LS(B)  &trans
   &hrml_slow LEFT_GUI LS(A)  &hrml_slow LEFT_ALT LS(R)  &hrml LEFT_SHIFT LS(S)  &hrml LCTRL LS(T)  &mt LS(F) G                              &kp LS(M)  &hrl 10 LS(N)  &hrml LEFT_SHIFT LS(E)  &kp LS(I)  &hrml_slow RALT LS(O)
   &mt LC(Z) LS(Z)            &mt LC(X) LS(X)            &mt LC(C) LS(C)         &mt LC(V) LS(D)    &mt LG(V) LS(V)                          &kp LS(K)  &kp LS(H)      &kp LS(U)               &kp LS(P)  &mt LC(SLASH) LS(SLASH)
                                                                                 &lg_en             &en_lt_cw_off 9 SPACE  &trans    &trans  &trans     &trans
