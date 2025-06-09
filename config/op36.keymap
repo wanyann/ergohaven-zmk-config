@@ -144,7 +144,7 @@
         };
 
         combo_capsword_en {
-            bindings = <&to 0>;
+            bindings = <&to 1>;
             key-positions = <11 10>;
             timeout-ms = <30>;
             layers = <0 1>;
