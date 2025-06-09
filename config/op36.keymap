@@ -663,11 +663,11 @@
             compatible = "zmk,behavior-antecedent-morph";
             label = "EN_MAGIC";
             #binding-cells = <0>;
-            defaults = <&kp A>;
-            bindings = <&kp U>, <&kp O>, <&kp RU_CYRILLIC_EN>;
+            defaults = <&none>;
+            bindings = <&kp C>, <&kp O>;
 
-            antecedents = <Q Z RU_CYRILLIC_PE>;
-            max-delay-ms = <1250>;
+            antecedents = <S Z>;
+            max-delay-ms = <1500>;
         };
 
         layer_off: layer_off {
