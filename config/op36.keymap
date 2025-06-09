@@ -659,9 +659,9 @@
     };
 
     behaviors {
-        ad_a: adaptive_a {
+        en_magic: en_magic {
             compatible = "zmk,behavior-antecedent-morph";
-            label = "ADAPTIVE_A";
+            label = "EN_MAGIC";
             #binding-cells = <0>;
             defaults = <&kp A>;
             bindings = <&kp U>, <&kp O>, <&kp RU_CYRILLIC_EN>;
@@ -902,6 +902,16 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        v_morph: v_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_MORPH";
+            bindings = <&kp V>, <&kp B>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
     };
 
     keymap {
@@ -909,10 +919,10 @@
 
         Colemak {
             bindings = <
-  &to 4                 &kp W                 &kp F              &en_com_ques   &en_dot_excl                   &kp J          &kp L      &kp Y              &kp B  &none
-  &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT R  &hrm LEFT_SHIFT S  &hrml LCTRL T  &mt LC(F) G                    &kp M          &hrl 10 N  &hrm LEFT_SHIFT E  &kp I  &hrml_slow RALT O
-  &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C        &mt LC(V) D    &mt LG(V) V                    &kp K          &kp H      &kp U              &kp P  &mt LC(SLASH) SLASH
-                                                                 &kp K_CANCEL   &lt 9 SPACE   &sl 11    &none  &lt_bspc 10 0  &ad_a
+  &to 4                 &kp W                 &kp F              &en_com_ques   &en_dot_excl                       &kp J          &kp L      &kp Y              &kp B  &none
+  &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT R  &hrm LEFT_SHIFT S  &hrml LCTRL T  &mt LC(F) G                        &kp M          &hrl 10 N  &hrm LEFT_SHIFT E  &kp I  &hrml_slow RALT O
+  &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C        &mt LC(V) D    &mt LG(V) V                        &kp K          &kp H      &kp U              &kp P  &mt LC(SLASH) SLASH
+                                                                 &kp K_CANCEL   &lt 9 SPACE   &sl 11    &en_magic  &lt_bspc 10 0  &en_magic
             >;
         };
 
@@ -981,10 +991,10 @@
 
         Cmk_Mods {
             bindings = <
-  &kp Q             &kp W             &f_morph                &kp COMMA     &kp DOT                    &kp J   &kp L         &kp Y      &kp B     &kp SEMI
-  &hrm_slow LGUI A  &hrm_slow LALT R  &hrm_slow LEFT_SHIFT S  &hrm LCTRL T  &kp G                      &kp M   &hrm LCTRL N  &hrl 10 E  &i_morph  &hrm_slow RALT O
-  &kp Z             &kp X             &kp C                   &kp D         &kp V                      &kp K   &kp H         &kp U      &kp P     &kp SLASH
-                                                              &trans        &trans   &trans    &trans  &trans  &trans
+  &kp Q             &kp W             &f_morph                &kp COMMA     &kp DOT                     &kp J   &kp L         &kp Y      &kp B     &kp SEMI
+  &hrm_slow LGUI A  &hrm_slow LALT R  &hrm_slow LEFT_SHIFT S  &hrm LCTRL T  &kp G                       &kp M   &hrm LCTRL N  &hrl 10 E  &i_morph  &hrm_slow RALT O
+  &kp Z             &kp X             &kp C                   &kp D         &v_morph                    &kp K   &kp H         &kp U      &kp P     &kp SLASH
+                                                              &trans        &trans    &trans    &trans  &trans  &trans
             >;
         };
 
