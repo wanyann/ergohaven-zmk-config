@@ -922,7 +922,7 @@
   &to 4                 &kp W                 &kp F              &en_com_ques   &en_dot_excl                       &kp J          &kp L      &kp Y              &kp B  &none
   &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT R  &hrm LEFT_SHIFT S  &hrml LCTRL T  &mt LC(F) G                        &kp M          &hrl 10 N  &hrm LEFT_SHIFT E  &kp I  &hrml_slow RALT O
   &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C        &mt LC(V) D    &mt LG(V) V                        &kp K          &kp H      &kp U              &kp P  &mt LC(SLASH) SLASH
-                                                                 &kp K_CANCEL   &lt 9 SPACE   &sl 11    &en_magic  &lt_bspc 10 0  &en_magic
+                                                                 &kp K_CANCEL   &lt 9 SPACE   &sl 11    &en_magic  &lt_bspc 10 0  &none
             >;
         };
 
