@@ -318,12 +318,6 @@
             layers = <2 3 13>;
         };
 
-        combo_capsword_colemak {
-            bindings = <&to 1>;
-            key-positions = <10 11>;
-            layers = <0 1>;
-        };
-
         combo_ru_hash {
             bindings = <&en HASH>;
             key-positions = <25 26>;
