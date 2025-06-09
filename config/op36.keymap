@@ -147,6 +147,7 @@
             bindings = <&to 0>;
             key-positions = <11 10>;
             timeout-ms = <30>;
+            layers = <0 1>;
         };
 
         combo_osl_fn {
