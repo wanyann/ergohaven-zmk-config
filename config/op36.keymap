@@ -249,7 +249,6 @@
         combo_osm_ctrl_shift {
             bindings = <&osm_ctrl_shift>;
             key-positions = <13 14>;
-            require-prior-idle-ms = <70>;
             timeout-ms = <25>;
             layers = <2 3 0 1 4>;
         };
@@ -257,14 +256,12 @@
         parentheses {
             bindings = <&parentheses>;
             key-positions = <11 13>;
-            require-prior-idle-ms = <70>;
             timeout-ms = <25>;
         };
 
         combo_braces_ru {
             bindings = <&braces_ru>;
             key-positions = <16 18>;
-            require-prior-idle-ms = <70>;
             timeout-ms = <25>;
             layers = <2 3 13>;
         };
