@@ -353,37 +353,30 @@
         os_ru: os_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_wait_time 15>,
-                <&kp LC(LS(N8))>,
-                <&macro_wait_time 15>;
-
+            bindings = <&kp LC(LS(N8))>;
             label = "OS_RU";
             tap-ms = <30>;
+            wait-ms = <0>;
         };
 
         os_en: os_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_wait_time 15>,
-                <&kp LC(LS(N9))>,
-                <&macro_wait_time 15>;
-
+            bindings = <&kp LC(LS(N9))>;
             label = "OS_EN";
             tap-ms = <30>;
+            wait-ms = <0>;
         };
 
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_wait_time 30>,
                 <&macro_press>,
                 <&kp LEFT_ALT>,
-                <&macro_wait_time 50>,
                 <&macro_tap>,
                 <&kp TAB>,
-                <&macro_wait_time 30>,
                 <&macro_release>,
                 <&kp LEFT_ALT>;
 
@@ -402,13 +395,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp GRAVE &kp GRAVE &kp GRAVE>,
                 <&macro_wait_time 10>,
-                <&kp RETURN &kp RET>,
-                <&macro_wait_time 10>,
-                <&kp GRAVE &kp GRAVE &kp GRAVE>,
-                <&macro_wait_time 10>,
-                <&kp UP_ARROW>;
+                <&kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW>;
 
             label = "EN_CODE_BLOCK";
         };
@@ -417,13 +405,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&os_en &kp GRAVE &kp GRAVE &kp GRAVE>,
                 <&macro_wait_time 10>,
-                <&kp RETURN &kp RET>,
-                <&macro_wait_time 10>,
-                <&kp GRAVE &kp GRAVE &kp GRAVE>,
-                <&macro_wait_time 10>,
-                <&kp UP_ARROW &os_ru>;
+                <&os_en &kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW &os_ru>;
 
             label = "RU_CODE";
         };
@@ -451,7 +434,7 @@
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N0 &kp N0 &kp N0 &kp N0 &kp N0>;
             label = "ZEROS_MACRO";
-            tap-ms = <350>;
+            tap-ms = <200>;
         };
 
         osm_ctrl_shift: osm_ctrl_shift {
@@ -544,6 +527,7 @@
             #binding-cells = <1>;
             bindings = <&os_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &os_ru>;
             label = "EN";
+            wait-ms = <0>;
         };
 
         ru: ru {
