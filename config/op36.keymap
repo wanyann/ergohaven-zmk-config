@@ -57,13 +57,11 @@
         combo_ru {
             bindings = <&lg_ru>;
             key-positions = <22 23>;
-            require-prior-idle-ms = <50>;
         };
 
         combo_en {
             bindings = <&lg_en>;
             key-positions = <26 27>;
-            require-prior-idle-ms = <50>;
         };
 
         combo_osl_sym_en {
