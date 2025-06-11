@@ -38,20 +38,22 @@
         combo_enter {
             bindings = <&kp ENTER>;
             key-positions = <2 1>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_tab {
             bindings = <&kp TAB>;
             key-positions = <11 12>;
-            require-prior-idle-ms = <70>;
-            timeout-ms = <25>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <21 22>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_ru {
@@ -104,6 +106,7 @@
             timeout-ms = <30>;
             key-positions = <17 18>;
             layers = <2>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_she_ru {
@@ -111,6 +114,7 @@
             timeout-ms = <30>;
             key-positions = <27 28>;
             layers = <2>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_scha_ru {
@@ -118,6 +122,7 @@
             timeout-ms = <30>;
             key-positions = <7 8>;
             layers = <2>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_yi_cw {
