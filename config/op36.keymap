@@ -149,48 +149,41 @@
         combo_capsword_en {
             bindings = <&to 1>;
             key-positions = <11 10>;
-            timeout-ms = <30>;
             layers = <0 1>;
         };
 
         combo_osl_fn {
             bindings = <&sl 14>;
             key-positions = <21 23>;
-            require-prior-idle-ms = <50>;
         };
 
         combo_osl_os {
             bindings = <&sl 15>;
             key-positions = <20 21>;
-            require-prior-idle-ms = <50>;
         };
 
         combo_capsword_ru {
             bindings = <&to 3>;
             key-positions = <11 10>;
             layers = <3 2>;
-            timeout-ms = <30>;
         };
 
         combo_yo_ru {
             bindings = <&kp RU_CYRILLIC_IO>;
             key-positions = <18 19>;
             layers = <2>;
-            timeout-ms = <30>;
         };
 
         combo_yo_cw_ru {
             bindings = <&kp LS(RU_CYRILLIC_IO)>;
             key-positions = <18 19>;
             layers = <3>;
-            timeout-ms = <30>;
         };
 
         combo_yo_en {
             bindings = <&ru RU_CYRILLIC_IO>;
             key-positions = <18 19>;
             layers = <0>;
-            timeout-ms = <30>;
         };
 
         combo_q_en {
@@ -252,7 +245,7 @@
         combo_osm_ctrl_shift {
             bindings = <&osm_ctrl_shift>;
             key-positions = <13 14>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <2 3 0 1 4>;
         };
 
