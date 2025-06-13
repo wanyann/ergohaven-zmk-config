@@ -12,7 +12,7 @@
 
 &lt {
     flavor = "balanced";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <150>;
 };
 
 &sl {
@@ -32,161 +32,158 @@
         combo_ctrl_ent {
             bindings = <&kp LC(ENTER)>;
             key-positions = <1 3>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_enter {
             bindings = <&kp ENTER>;
             key-positions = <2 1>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_tab {
             bindings = <&kp TAB>;
             key-positions = <11 12>;
-            require-prior-idle-ms = <70>;
-            timeout-ms = <25>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
             key-positions = <21 22>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_ru {
             bindings = <&lg_ru>;
             key-positions = <22 23>;
-            require-prior-idle-ms = <50>;
         };
 
         combo_en {
             bindings = <&lg_en>;
             key-positions = <26 27>;
-            require-prior-idle-ms = <50>;
         };
 
         combo_osl_sym_en {
-            bindings = <&sl 14>;
+            bindings = <&sl 12>;
             key-positions = <16 17>;
             require-prior-idle-ms = <50>;
-            layers = <14 2 3 0 1>;
+            layers = <12 0 1>;
         };
 
         combo_quotes_en {
             bindings = <&quotes_en>;
             require-prior-idle-ms = <50>;
             key-positions = <26 28>;
-            layers = <2 3 0 1>;
+            layers = <0 1>;
         };
 
         combo_osl_sym_ru {
-            bindings = <&sl 15>;
+            bindings = <&sl 13>;
             key-positions = <16 17>;
             require-prior-idle-ms = <50>;
-            layers = <5 15 4>;
+            layers = <3 13 2>;
         };
 
         combo_quotes_ru {
             bindings = <&quotes_ru>;
             key-positions = <26 28>;
             require-prior-idle-ms = <50>;
-            layers = <5 4 15>;
+            layers = <3 2 13>;
         };
 
         combo_braces_en {
             bindings = <&braces_en>;
             key-positions = <16 18>;
             require-prior-idle-ms = <50>;
-            layers = <2 3 14>;
+            layers = <0 1 12>;
         };
 
         combo_yi_ru {
             bindings = <&kp RU_CYRILLIC_SHORT_I>;
             timeout-ms = <30>;
             key-positions = <17 18>;
-            layers = <4>;
+            layers = <2>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_she_ru {
             bindings = <&kp RU_CYRILLIC_SHA>;
             timeout-ms = <30>;
             key-positions = <27 28>;
-            layers = <4>;
+            layers = <2>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_scha_ru {
             bindings = <&kp RU_CYRILLIC_SHCHA>;
             timeout-ms = <30>;
             key-positions = <7 8>;
-            layers = <4>;
+            layers = <2>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_yi_cw {
             bindings = <&kp LS(RU_CYRILLIC_SHORT_I)>;
             timeout-ms = <30>;
             key-positions = <17 18>;
-            layers = <5>;
+            layers = <3>;
         };
 
         combo_she_cw {
             bindings = <&kp LS(RU_CYRILLIC_SHA)>;
             timeout-ms = <30>;
             key-positions = <27 28>;
-            layers = <5>;
+            layers = <3>;
         };
 
         combo_scha_cw {
             bindings = <&kp LS(RU_CYRILLIC_SHCHA)>;
             timeout-ms = <30>;
             key-positions = <7 8>;
-            layers = <5>;
+            layers = <3>;
         };
 
         combo_capsword_en {
             bindings = <&to 1>;
             key-positions = <11 10>;
-            timeout-ms = <30>;
+            layers = <0 1>;
         };
 
         combo_osl_fn {
-            bindings = <&sl 16>;
+            bindings = <&sl 14>;
             key-positions = <21 23>;
-            require-prior-idle-ms = <50>;
         };
 
         combo_osl_os {
-            bindings = <&sl 17>;
+            bindings = <&sl 15>;
             key-positions = <20 21>;
-            require-prior-idle-ms = <50>;
         };
 
         combo_capsword_ru {
-            bindings = <&to 5>;
+            bindings = <&to 3>;
             key-positions = <11 10>;
-            layers = <5 4>;
-            timeout-ms = <30>;
+            layers = <3 2>;
         };
 
         combo_yo_ru {
             bindings = <&kp RU_CYRILLIC_IO>;
             key-positions = <18 19>;
-            layers = <4>;
-            timeout-ms = <30>;
+            layers = <2>;
         };
 
         combo_yo_cw_ru {
             bindings = <&kp LS(RU_CYRILLIC_IO)>;
             key-positions = <18 19>;
-            layers = <5>;
-            timeout-ms = <30>;
+            layers = <3>;
         };
 
         combo_yo_en {
             bindings = <&ru RU_CYRILLIC_IO>;
             key-positions = <18 19>;
-            layers = <2 0 1>;
-            timeout-ms = <30>;
+            layers = <0>;
         };
 
         combo_q_en {
@@ -218,72 +215,69 @@
         combo_tse_ru {
             bindings = <&kp RU_CYRILLIC_TSE>;
             key-positions = <2 3>;
-            layers = <4>;
-            timeout-ms = <30>;
+            layers = <2>;
+            timeout-ms = <50>;
         };
 
         combo_tse_cw {
             bindings = <&kp LS(RU_CYRILLIC_TSE)>;
             key-positions = <2 3>;
-            layers = <5>;
-            timeout-ms = <30>;
+            layers = <3>;
+            timeout-ms = <50>;
         };
 
         combo_che_ru {
             bindings = <&kp RU_CYRILLIC_CHE>;
             key-positions = <6 7>;
-            layers = <4>;
-            timeout-ms = <30>;
+            layers = <2>;
+            timeout-ms = <50>;
         };
 
         combo_che_cw {
             bindings = <&kp LS(RU_CYRILLIC_CHE)>;
             key-positions = <6 7>;
-            layers = <5>;
-            timeout-ms = <30>;
+            layers = <3>;
+            timeout-ms = <50>;
         };
 
         combo_osm_ctrl_shift {
             bindings = <&osm_ctrl_shift>;
             key-positions = <13 14>;
-            require-prior-idle-ms = <70>;
-            timeout-ms = <25>;
-            layers = <4 5 2 3 6 0 1>;
+            timeout-ms = <30>;
+            layers = <2 3 0 1 4>;
         };
 
         parentheses {
             bindings = <&parentheses>;
             key-positions = <11 13>;
-            require-prior-idle-ms = <70>;
             timeout-ms = <25>;
         };
 
         combo_braces_ru {
             bindings = <&braces_ru>;
             key-positions = <16 18>;
-            require-prior-idle-ms = <70>;
             timeout-ms = <25>;
-            layers = <4 5 15>;
+            layers = <2 3 13>;
         };
 
         combo_brackets_en {
             bindings = <&brackets_en>;
             key-positions = <6 8>;
-            layers = <2 3 14 0 1>;
+            layers = <0 1 12>;
             timeout-ms = <30>;
         };
 
         combo_brackets_ru {
             bindings = <&brackets_ru>;
             key-positions = <6 8>;
-            layers = <4 5 15>;
+            layers = <2 3 13>;
             timeout-ms = <30>;
         };
 
         combo_osm_ctrl {
             bindings = <&osm_ctrl>;
             key-positions = <12 13>;
-            layers = <2 3 4 5 6 0 1>;
+            layers = <0 1 2 3 4>;
         };
 
         combo_minus {
@@ -294,43 +288,37 @@
         combo_grave_ru {
             bindings = <&en GRAVE>;
             key-positions = <15 16>;
-            layers = <4 5 15>;
+            layers = <2 3 13>;
         };
 
         combo_grave_en {
             bindings = <&kp GRAVE>;
             key-positions = <15 16>;
-            layers = <2 3 14>;
+            layers = <0 1 12>;
         };
 
         combo_under_en {
             bindings = <&kp UNDER>;
             key-positions = <6 5>;
-            layers = <2 3 14 0 1>;
+            layers = <0 1 12>;
         };
 
         combo_under_ru {
             bindings = <&kp UNDER>;
             key-positions = <5 6>;
-            layers = <4 5 15>;
-        };
-
-        combo_en_cw {
-            bindings = <&to 1>;
-            key-positions = <10 11>;
-            layers = <2 3 0 1>;
+            layers = <2 3 13>;
         };
 
         combo_ru_hash {
             bindings = <&en HASH>;
             key-positions = <25 26>;
-            layers = <4 5 15>;
+            layers = <2 3 13>;
         };
 
         combo_en_hash {
             bindings = <&kp HASH>;
             key-positions = <25 26>;
-            layers = <2 3 14 0 1>;
+            layers = <0 1 12>;
         };
     };
 
@@ -338,7 +326,7 @@
         lg_ru: lg_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 4 &os_ru>;
+            bindings = <&to 2 &os_ru>;
             label = "LG_RU";
             tap-ms = <0>;
             wait-ms = <0>;
@@ -356,37 +344,30 @@
         os_ru: os_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_wait_time 15>,
-                <&kp LC(LS(N8))>,
-                <&macro_wait_time 15>;
-
+            bindings = <&kp LC(LS(N8))>;
             label = "OS_RU";
             tap-ms = <30>;
+            wait-ms = <0>;
         };
 
         os_en: os_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_wait_time 15>,
-                <&kp LC(LS(N9))>,
-                <&macro_wait_time 15>;
-
+            bindings = <&kp LC(LS(N9))>;
             label = "OS_EN";
             tap-ms = <30>;
+            wait-ms = <0>;
         };
 
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_wait_time 30>,
                 <&macro_press>,
                 <&kp LEFT_ALT>,
-                <&macro_wait_time 50>,
                 <&macro_tap>,
                 <&kp TAB>,
-                <&macro_wait_time 30>,
                 <&macro_release>,
                 <&kp LEFT_ALT>;
 
@@ -405,13 +386,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp GRAVE &kp GRAVE &kp GRAVE>,
                 <&macro_wait_time 10>,
-                <&kp RETURN &kp RET>,
-                <&macro_wait_time 10>,
-                <&kp GRAVE &kp GRAVE &kp GRAVE>,
-                <&macro_wait_time 10>,
-                <&kp UP_ARROW>;
+                <&kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW>;
 
             label = "EN_CODE_BLOCK";
         };
@@ -420,13 +396,8 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&os_en &kp GRAVE &kp GRAVE &kp GRAVE>,
                 <&macro_wait_time 10>,
-                <&kp RETURN &kp RET>,
-                <&macro_wait_time 10>,
-                <&kp GRAVE &kp GRAVE &kp GRAVE>,
-                <&macro_wait_time 10>,
-                <&kp UP_ARROW &os_ru>;
+                <&os_en &kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW &os_ru>;
 
             label = "RU_CODE";
         };
@@ -434,7 +405,7 @@
         ru_cw_off: ru_cw_off {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 4>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 2>;
             label = "RU_CW_OFF";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -454,13 +425,13 @@
             #binding-cells = <0>;
             bindings = <&kp N0 &kp N0 &kp N0 &kp N0 &kp N0 &kp N0>;
             label = "ZEROS_MACRO";
-            tap-ms = <350>;
+            tap-ms = <200>;
         };
 
         osm_ctrl_shift: osm_ctrl_shift {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LS(LCTRL) &sl 10>;
+            bindings = <&sk LS(LCTRL) &sl 8>;
             label = "OSM_CTRL_SHIFT";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -470,9 +441,9 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 10>,
+                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 8>,
                 <&macro_pause_for_release>,
-                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 10>;
+                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 8>;
 
             label = "Mod Layer";
             wait-ms = <0>;
@@ -547,6 +518,7 @@
             #binding-cells = <1>;
             bindings = <&os_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &os_ru>;
             label = "EN";
+            wait-ms = <0>;
         };
 
         ru: ru {
@@ -559,7 +531,7 @@
         osm_ctrl: osm_ctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LCTRL &sl 10>;
+            bindings = <&sk LCTRL &sl 8>;
             label = "OSM_CTRL";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -568,14 +540,14 @@
         sync_lg: sync_lg {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 4>;
+            bindings = <&tog 2>;
             label = "SYNC_LG";
         };
 
         alt_spc: alt_spc {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &layer_off 6>;
+            bindings = <&kp LA(SPACE) &layer_off 4>;
             label = "ALT_SPC";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -584,7 +556,7 @@
         bspc_msoff: bspc_msoff {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&layer_off 6 &bspc_morph>;
+            bindings = <&layer_off 4 &bspc_morph>;
             label = "BSPC_MSOFF";
             tap-ms = <0>;
             wait-ms = <0>;
@@ -600,7 +572,7 @@
                 <&macro_release>,
                 <&trans>,
                 <&macro_tap>,
-                <&layer_off 6>;
+                <&layer_off 4>;
 
             label = "TRNS_MSOFF";
             wait-ms = <0>;
@@ -612,7 +584,7 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_tap>,
-                <&layer_off 6>,
+                <&layer_off 4>,
                 <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
@@ -650,10 +622,10 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&mkp MB1 &mo 9>,
+                <&mkp MB1 &mo 7>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mkp MB1 &mo 9>;
+                <&mkp MB1 &mo 7>;
 
             label = "MKP1_CTRL";
             wait-ms = <0>;
@@ -662,6 +634,28 @@
     };
 
     behaviors {
+        en_magic: en_magic {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "EN_MAGIC";
+            #binding-cells = <0>;
+            defaults = <&none>;
+            bindings = <&kp C>, <&kp B>, <&kp O>, <&kp E>, <&kp E>, <&kp I>;
+
+            antecedents = <S I Z Y U P>;
+            max-delay-ms = <2000>;
+        };
+
+        ru_magic: ru_magic {
+            compatible = "zmk,behavior-antecedent-morph";
+            label = "RU_MAGIC";
+            #binding-cells = <0>;
+            defaults = <&none>;
+            bindings = <&kp C>, <&kp O>;
+
+            antecedents = <S Z>;
+            max-delay-ms = <1500>;
+        };
+
         layer_off: layer_off {
             compatible = "zmk,behavior-toggle-layer";
             label = "LAYER_OFF";
@@ -828,20 +822,20 @@
             mods = <(MOD_LSFT)>;
         };
 
-        o_morph: o_morph {
+        f_morph: f_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "O_MORPH";
-            bindings = <&kp O>, <&kp E>;
+            label = "F_MORPH";
+            bindings = <&kp F>, <&kp E>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
 
-        s_morph: s_morph {
+        i_morph: i_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "S_MORPH";
-            bindings = <&kp S>, <&kp L>;
+            label = "I_MORPH";
+            bindings = <&kp I>, <&kp L>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -856,6 +850,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+        };
+
+        key_tog: key_tog {
+            compatible = "zmk,behavior-key-toggle";
+            label = "KEY_TOG";
+            #binding-cells = <1>;
+            toggle-mode = "flip";
         };
 
         trns_msoff_hold: trns_msoff_hold {
@@ -888,44 +889,14 @@
             flavor = "balanced";
         };
 
-        ru_dot_mt: ru_dot_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_DOT_MT";
-            bindings = <&kp>, <&ru_dot_excl>;
+        v_morph: v_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "V_MORPH";
+            bindings = <&kp V>, <&kp B>;
 
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        ru_com_mt: ru_com_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_COM_MT";
-            bindings = <&kp>, <&ru_com_ques>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        en_com_mt: en_com_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "EN_COM_MT";
-            bindings = <&kp>, <&en_com_ques>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
-        en_dot_mt: en_dot_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "EN_DOT_MT";
-            bindings = <&kp>, <&en_dot_excl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
     };
 
