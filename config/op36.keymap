@@ -822,21 +822,21 @@
             mods = <(MOD_LSFT)>;
         };
 
-        f_morph: f_morph {
+ o_morph: o_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "F_MORPH";
-            bindings = <&kp F>, <&kp E>;
+            label = "O_MORPH";
+            bindings = <&kp O>, <&kp E>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
         };
 
-        i_morph: i_morph {
+        s_morph: s_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "I_MORPH";
-            bindings = <&kp I>, <&kp L>;
-
+            label = "S_MORPH";
+            bindings = <&kp S>, <&kp L>;
+            
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
@@ -897,6 +897,46 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
+        };
+
+        ru_dot_mt: ru_dot_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_DOT_MT";
+            bindings = <&kp>, <&ru_dot_excl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        ru_com_mt: ru_com_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "RU_COM_MT";
+            bindings = <&kp>, <&ru_com_ques>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        en_com_mt: en_com_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "EN_COM_MT";
+            bindings = <&kp>, <&en_com_ques>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
+        en_dot_mt: en_dot_mt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "EN_DOT_MT";
+            bindings = <&kp>, <&en_dot_excl>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
         };
     };
 
