@@ -171,11 +171,13 @@
         combo_yo_ru {
             bindings = <&kp RU_CYRILLIC_IO>;
             key-positions = <18 19>;
+            layers = <2>;
         };
 
         combo_yo_cw_ru {
             bindings = <&kp LS(RU_CYRILLIC_IO)>;
             key-positions = <18 19>;
+            layers = <3>;
         };
 
         combo_yo_en {
@@ -188,55 +190,63 @@
             bindings = <&kp Q>;
             key-positions = <3 2>;
             timeout-ms = <30>;
+            layers = <0>;
         };
 
         combo_p_en {
             bindings = <&kp P>;
             key-positions = <7 6>;
             timeout-ms = <30>;
+            layers = <0>;
         };
 
         combo_q_cw {
             bindings = <&kp LS(Q)>;
             key-positions = <3 2>;
             timeout-ms = <30>;
+            layers = <1>;
         };
 
         combo_p_cw {
             bindings = <&kp LS(P)>;
             key-positions = <6 7>;
             timeout-ms = <30>;
+            layers = <1>;
         };
 
         combo_tse_ru {
             bindings = <&kp RU_CYRILLIC_TSE>;
             key-positions = <2 3>;
             timeout-ms = <50>;
+            layers = <2>;
         };
 
         combo_tse_cw {
             bindings = <&kp LS(RU_CYRILLIC_TSE)>;
             key-positions = <2 3>;
             timeout-ms = <50>;
+            layers = <3>;
         };
 
         combo_che_ru {
             bindings = <&kp RU_CYRILLIC_CHE>;
             key-positions = <6 7>;
             timeout-ms = <50>;
+            layers = <2>;
         };
 
         combo_che_cw {
             bindings = <&kp LS(RU_CYRILLIC_CHE)>;
             key-positions = <6 7>;
             timeout-ms = <50>;
+            layers = <3>;
         };
 
         combo_osm_ctrl_shift {
             bindings = <&osm_ctrl_shift>;
             key-positions = <13 14>;
             timeout-ms = <30>;
-            layers = <0 1 2>;
+            layers = <0 1 2 3 4 8>;
         };
 
         parentheses {
@@ -249,27 +259,27 @@
             bindings = <&braces_ru>;
             key-positions = <16 18>;
             timeout-ms = <25>;
-            layers = <11>;
+            layers = <2 3 13>;
         };
 
         combo_brackets_en {
             bindings = <&brackets_en>;
             key-positions = <6 8>;
-            layers = <0 1 10>;
+            layers = <0 1 12>;
             timeout-ms = <30>;
         };
 
         combo_brackets_ru {
             bindings = <&brackets_ru>;
             key-positions = <6 8>;
-            layers = <11>;
+            layers = <2 3 13>;
             timeout-ms = <30>;
         };
 
         combo_osm_ctrl {
             bindings = <&osm_ctrl>;
             key-positions = <12 13>;
-            layers = <0 1 2>;
+            layers = <1 2 0 3 8 4>;
         };
 
         combo_minus {
@@ -280,37 +290,37 @@
         combo_grave_ru {
             bindings = <&en GRAVE>;
             key-positions = <15 16>;
-            layers = <11>;
+            layers = <2 3 13>;
         };
 
         combo_grave_en {
             bindings = <&kp GRAVE>;
             key-positions = <15 16>;
-            layers = <0 1 10>;
+            layers = <0 1 12>;
         };
 
         combo_under_en {
             bindings = <&kp UNDER>;
             key-positions = <6 5>;
-            layers = <0 1 10>;
+            layers = <0 1 12>;
         };
 
         combo_under_ru {
             bindings = <&kp UNDER>;
             key-positions = <5 6>;
-            layers = <11>;
+            layers = <2 3 13>;
         };
 
         combo_ru_hash {
             bindings = <&en HASH>;
             key-positions = <25 26>;
-            layers = <11>;
+            layers = <2 3 13>;
         };
 
         combo_en_hash {
             bindings = <&kp HASH>;
             key-positions = <25 26>;
-            layers = <0 1 10>;
+            layers = <0 1 12>;
         };
     };
 
