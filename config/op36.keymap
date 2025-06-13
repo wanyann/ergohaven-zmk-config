@@ -949,10 +949,10 @@
 
         Nordrassil_CW {
             bindings = <
-  &trans                     &kp LS(Y)                  &kp LS(O)              &en_com_mt LC(R) 0  &en_dot_mt LC(T) 0                        &kp LS(Q)     &kp LS(G)      &kp LS(N)              &kp LS(F)  &trans
-  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrm LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)   &mt LC(F) LS(J)                           &kp LS(P)     &hrl 10 LS(D)  &hrm LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(L)
-  &mt LC(Z) LS(K)            &mt LC(X) LS(X)            &mt LC(C) LS(Z)        &mt LC(V) LS(U)     &mt LG(V) LS(K_CANCEL)                    &kp LS(B)     &kp LS(C)      &kp LS(M)              &kp LS(W)  &mt LC(SLASH) V
-                                                                               &lg_en              &en_lt_cw_off 9 SPACE   &trans    &trans  &lt 10 LS(T)  &trans
+  &trans                     &kp LS(Y)                  &kp LS(O)              &en_com_mt LC(R) 0  &en_dot_mt LC(T) 0                       &kp LS(Q)     &kp LS(G)      &kp LS(N)              &kp LS(F)  &trans
+  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrm LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)   &mt LC(F) LS(J)                          &kp LS(P)     &hrl 10 LS(D)  &hrm LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(L)
+  &mt LC(Z) LS(K)            &mt LC(X) LS(X)            &mt LC(C) LS(Z)        &mt LC(V) LS(U)     &mt LG(V) K_CANCEL                       &kp LS(B)     &kp LS(C)      &kp LS(M)              &kp LS(W)  &mt LC(SLASH) V
+                                                                               &lg_en              &en_lt_cw_off 9 SPACE  &trans    &trans  &lt 10 LS(T)  &trans
             >;
         };
 
