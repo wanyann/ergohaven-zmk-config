@@ -67,38 +67,38 @@
         };
 
         combo_osl_sym_en {
-            bindings = <&sl 10>;
+            bindings = <&sl 12>;
             key-positions = <16 17>;
             require-prior-idle-ms = <50>;
-            layers = <10 0 1>;
+            layers = <0 1 12>;
         };
 
         combo_quotes_en {
             bindings = <&quotes_en>;
             require-prior-idle-ms = <50>;
             key-positions = <26 28>;
-            layers = <0 1>;
+            layers = <0 1 12>;
         };
 
         combo_osl_sym_ru {
-            bindings = <&sl 11>;
+            bindings = <&sl 13>;
             key-positions = <16 17>;
             require-prior-idle-ms = <50>;
-            layers = <11>;
+            layers = <2 3 13>;
         };
 
         combo_quotes_ru {
             bindings = <&quotes_ru>;
             key-positions = <26 28>;
             require-prior-idle-ms = <50>;
-            layers = <11>;
+            layers = <2 3>;
         };
 
         combo_braces_en {
             bindings = <&braces_en>;
             key-positions = <16 18>;
             require-prior-idle-ms = <50>;
-            layers = <0 1 10>;
+            layers = <0 1 12>;
         };
 
         combo_yi_ru {
@@ -106,6 +106,7 @@
             timeout-ms = <30>;
             key-positions = <17 18>;
             require-prior-idle-ms = <30>;
+            layers = <2>;
         };
 
         combo_she_ru {
@@ -113,6 +114,7 @@
             timeout-ms = <30>;
             key-positions = <27 28>;
             require-prior-idle-ms = <30>;
+            layers = <2>;
         };
 
         combo_scha_ru {
@@ -120,24 +122,28 @@
             timeout-ms = <30>;
             key-positions = <7 8>;
             require-prior-idle-ms = <30>;
+            layers = <2>;
         };
 
         combo_yi_cw {
             bindings = <&kp LS(RU_CYRILLIC_SHORT_I)>;
             timeout-ms = <30>;
             key-positions = <17 18>;
+            layers = <3>;
         };
 
         combo_she_cw {
             bindings = <&kp LS(RU_CYRILLIC_SHA)>;
             timeout-ms = <30>;
             key-positions = <27 28>;
+            layers = <3>;
         };
 
         combo_scha_cw {
             bindings = <&kp LS(RU_CYRILLIC_SHCHA)>;
             timeout-ms = <30>;
             key-positions = <7 8>;
+            layers = <3>;
         };
 
         combo_capsword_en {
@@ -147,18 +153,19 @@
         };
 
         combo_osl_fn {
-            bindings = <&sl 12>;
+            bindings = <&sl 14>;
             key-positions = <21 23>;
         };
 
         combo_osl_os {
-            bindings = <&sl 13>;
+            bindings = <&sl 15>;
             key-positions = <20 21>;
         };
 
         combo_capsword_ru {
-            bindings = <&to 0>;
+            bindings = <&to 3>;
             key-positions = <11 10>;
+            layers = <2 3>;
         };
 
         combo_yo_ru {
