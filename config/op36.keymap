@@ -837,13 +837,6 @@
             flavor = "tap-preferred";
         };
 
-        key_tog: key_tog {
-            compatible = "zmk,behavior-key-toggle";
-            label = "KEY_TOG";
-            #binding-cells = <1>;
-            toggle-mode = "flip";
-        };
-
         trns_msoff_hold: trns_msoff_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "TRNS_MSOFF_HOLD";
