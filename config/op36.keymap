@@ -958,10 +958,10 @@
 
         Ru {
             bindings = <
-  &trans                             &soft_sign                         &kp RU_CYRILLIC_YA              &mt LC(R) RU_CYRILLIC_A    &mt LC(T) RU_CYRILLIC_YU                      &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_KA      &kp RU_CYRILLIC_DE              &kp RU_CYRILLIC_CHE  &trans
-  &hrml_slow LEFT_GUI RU_CYRILLIC_U  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrm LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O  &ru_dot_mt LC(F) 0                            &kp RU_CYRILLIC_EL     &hrl 10 RU_CYRILLIC_EN  &hrm LEFT_SHIFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_ER   &hrml_slow RALT RU_CYRILLIC_VE
-  &mt LC(Z) RU_CYRILLIC_EF           &mt LC(X) RU_CYRILLIC_E            &mt LC(C) RU_CYRILLIC_HA        &ru_com_mt LC(V) 0         &mt LG(V) RU_CYRILLIC_YERU                    &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM      &kp RU_CYRILLIC_PE              &kp RU_CYRILLIC_ZHE  &mt LC(SLASH) RU_CYRILLIC_GHE
-                                                                                                        &trans                     &trans                      &trans    &trans  &lt 10 RU_CYRILLIC_ES  &trans
+  &trans                             &soft_sign                         &kp RU_CYRILLIC_YA              &ru_com_mt LC(R) 0          &ru_dot_mt LC(T) 0                          &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_KA      &kp RU_CYRILLIC_DE              &kp RU_CYRILLIC_CHE  &trans
+  &hrml_slow LEFT_GUI RU_CYRILLIC_U  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrm LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &mt LC(F) RU_CYRILLIC_A                     &kp RU_CYRILLIC_EL     &hrl 10 RU_CYRILLIC_EN  &hrm LEFT_SHIFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_ER   &hrml_slow RALT RU_CYRILLIC_VE
+  &mt LC(Z) RU_CYRILLIC_EF           &mt LC(X) RU_CYRILLIC_E            &mt LC(C) RU_CYRILLIC_HA        &mt LC(V) RU_CYRILLIC_YERU  &mt LG(V) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM      &kp RU_CYRILLIC_PE              &kp RU_CYRILLIC_ZHE  &mt LC(SLASH) RU_CYRILLIC_GHE
+                                                                                                        &trans                      &trans                    &trans    &trans  &lt 10 RU_CYRILLIC_ES  &trans
             >;
         };
 
