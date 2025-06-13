@@ -1045,7 +1045,7 @@
             >;
         };
 
-        RuSym {
+        Ru_Sym {
             bindings = <
   &trans     &en AT                &kp UNDER     &kp RU_DOUBLE_QUOTES  &trans                      &en SINGLE_QUOTE  &en LEFT_BRACKET  &en HASH          &en RIGHT_BRACKET  &trans
   &en TILDE  &kp LEFT_PARENTHESIS  &kp RU_COLON  &kp RPAR              &kp PLUS                    &kp RU_NUMERO     &en LEFT_BRACE    &kp RU_SEMICOLON  &en RIGHT_BRACE    &en SLASH
