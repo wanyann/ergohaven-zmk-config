@@ -641,9 +641,9 @@
             label = "EN_MAGIC";
             #binding-cells = <0>;
             defaults = <&none>;
-            bindings = <&kp C>, <&kp B>, <&kp O>, <&kp E>, <&kp E>;
+            bindings = <&kp C>, <&kp B>, <&kp O>, <&kp E>, <&kp E>, <&kp I>;
 
-            antecedents = <S I Z Y U>;
+            antecedents = <S I Z Y U P>;
             max-delay-ms = <2000>;
         };
 
