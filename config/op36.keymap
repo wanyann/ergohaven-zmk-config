@@ -32,7 +32,7 @@
         combo_ctrl_ent {
             bindings = <&kp LC(ENTER)>;
             key-positions = <1 3>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_enter {
