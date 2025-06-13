@@ -967,10 +967,10 @@
 
         Ru_CW {
             bindings = <
-  &trans                                 &kp LS(RU_CYRILLIC_SOFT_SIGN)          &kp LS(RU_CYRILLIC_YA)              &mt LC(R) LS(RU_CYRILLIC_A)    &mt LC(T) LS(RU_CYRILLIC_YU)                      &kp LS(RU_CYRILLIC_ZE)     &kp LS(RU_CYRILLIC_KA)      &kp LS(RU_CYRILLIC_DE)              &kp LS(RU_CYRILLIC_CHE)  &trans
-  &hrml_slow LEFT_GUI LS(RU_CYRILLIC_U)  &hrml_slow LEFT_ALT LS(RU_CYRILLIC_I)  &hrm LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)  &ru_dot_mt LC(F) 0                                &kp LS(RU_CYRILLIC_EL)     &hrl 10 LS(RU_CYRILLIC_EN)  &hrm LEFT_SHIFT LS(RU_CYRILLIC_TE)  &kp LS(RU_CYRILLIC_ER)   &hrml_slow RALT LS(RU_CYRILLIC_VE)
-  &mt LC(Z) LS(RU_CYRILLIC_EF)           &mt LC(X) LS(RU_CYRILLIC_E)            &mt LC(C) LS(RU_CYRILLIC_HA)        &ru_com_mt LC(V) 0             &mt LG(V) LS(RU_CYRILLIC_YERU)                    &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)      &kp LS(RU_CYRILLIC_PE)              &kp LS(RU_CYRILLIC_ZHE)  &mt LC(SLASH) LS(RU_CYRILLIC_GHE)
-                                                                                                                    &lg_ru                         &ru_lt_cw_off 9 SPACE           &trans    &trans  &lt 10 LS(RU_CYRILLIC_ES)  &trans
+  &trans                                 &kp LS(RU_CYRILLIC_SOFT_SIGN)          &kp LS(RU_CYRILLIC_YA)              &ru_com_mt LC(R) 0              &ru_dot_mt LC(T) 0                              &kp LS(RU_CYRILLIC_ZE)     &kp LS(RU_CYRILLIC_KA)      &kp LS(RU_CYRILLIC_DE)              &kp LS(RU_CYRILLIC_CHE)  &trans
+  &hrml_slow LEFT_GUI LS(RU_CYRILLIC_U)  &hrml_slow LEFT_ALT LS(RU_CYRILLIC_I)  &hrm LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)   &mt LC(F) LS(RU_CYRILLIC_A)                     &kp LS(RU_CYRILLIC_EL)     &hrl 10 LS(RU_CYRILLIC_EN)  &hrm LEFT_SHIFT LS(RU_CYRILLIC_TE)  &kp LS(RU_CYRILLIC_ER)   &hrml_slow RALT LS(RU_CYRILLIC_VE)
+  &mt LC(Z) LS(RU_CYRILLIC_EF)           &mt LC(X) LS(RU_CYRILLIC_E)            &mt LC(C) LS(RU_CYRILLIC_HA)        &mt LC(V) LS(RU_CYRILLIC_YERU)  &mt LG(V) LS(RU_CYRILLIC_YU)                    &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)      &kp LS(RU_CYRILLIC_PE)              &kp LS(RU_CYRILLIC_ZHE)  &mt LC(SLASH) LS(RU_CYRILLIC_GHE)
+                                                                                                                    &lg_ru                          &ru_lt_cw_off 9 SPACE         &trans    &trans  &lt 10 LS(RU_CYRILLIC_ES)  &trans
             >;
         };
 
