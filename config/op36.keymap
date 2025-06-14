@@ -106,7 +106,7 @@
             timeout-ms = <30>;
             key-positions = <17 18>;
             require-prior-idle-ms = <30>;
-            layers = <2>;
+            layers = <13>;
         };
 
         combo_she_ru {
@@ -129,7 +129,7 @@
             bindings = <&kp LS(RU_CYRILLIC_SHORT_I)>;
             timeout-ms = <30>;
             key-positions = <17 18>;
-            layers = <3>;
+            layers = <13>;
         };
 
         combo_she_cw {
