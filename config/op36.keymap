@@ -7,7 +7,7 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <200>;
+    tapping-term-ms = <150>;
 };
 
 &lt {
@@ -197,49 +197,49 @@
             bindings = <&kp P>;
             key-positions = <7 6>;
             timeout-ms = <30>;
-            layers = <0>;
+            layers = <12>;
         };
 
         combo_q_cw {
             bindings = <&kp LS(Q)>;
             key-positions = <3 2>;
             timeout-ms = <30>;
-            layers = <1>;
+            layers = <12>;
         };
 
         combo_p_cw {
             bindings = <&kp LS(P)>;
             key-positions = <6 7>;
             timeout-ms = <30>;
-            layers = <1>;
+            layers = <12>;
         };
 
         combo_tse_ru {
             bindings = <&kp RU_CYRILLIC_TSE>;
             key-positions = <2 3>;
             timeout-ms = <50>;
-            layers = <2>;
+            layers = <13>;
         };
 
         combo_tse_cw {
             bindings = <&kp LS(RU_CYRILLIC_TSE)>;
             key-positions = <2 3>;
             timeout-ms = <50>;
-            layers = <3>;
+            layers = <13>;
         };
 
         combo_che_ru {
             bindings = <&kp RU_CYRILLIC_CHE>;
             key-positions = <6 7>;
             timeout-ms = <50>;
-            layers = <2>;
+            layers = <13>;
         };
 
         combo_che_cw {
             bindings = <&kp LS(RU_CYRILLIC_CHE)>;
             key-positions = <6 7>;
             timeout-ms = <50>;
-            layers = <3>;
+            layers = <13>;
         };
 
         combo_osm_ctrl_shift {
@@ -683,7 +683,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <150>;
             require-prior-idle-ms = <20>;
         };
 
@@ -774,7 +774,7 @@
             bindings = <&ml>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <160>;
+            tapping-term-ms = <150>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <20>;
         };
