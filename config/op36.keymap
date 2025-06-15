@@ -1010,7 +1010,7 @@
             >;
         };
 
-        Cmk_Mods {
+        Mods {
             bindings = <
   &kp Q             &kp W             &kp E              &kp R         &kp T                     &kp Y  &kp U      &kp I              &kp O    &kp P
   &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                     &kp H  &hrl 10 J  &hrm LEFT_SHIFT K  &kp L    &hrm_slow RALT SEMI
