@@ -1111,19 +1111,3 @@
     };
 };
 
-&trackball_listener {
-    input-processors = <&zip_xy_scaler 9 20>;
-
-    scroller {
-        layers = <5>;
-        input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
-            <&zip_xy_scaler 1 32>,
-            <&zip_xy_to_scroll_mapper>;
-    };
-
-    sniper {
-        layers = <6>;
-        input-processors = <&zip_xy_scaler 1 4>;
-    };
-};
