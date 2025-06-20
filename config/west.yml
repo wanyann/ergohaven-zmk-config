@@ -3,7 +3,7 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: ergohaven
-      url-base: https://github.com/wanyann
+      url-base: https://github.com/ergohaven
     - name: badjeff
       url-base: https://github.com/badjeff
     - name: ssbb
