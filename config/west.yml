@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/ergohaven
     - name: badjeff
       url-base: https://github.com/badjeff
-    - name: ssbb
-      url-base: https://github.com/ssbb
+    # - name: ssbb
+    #   url-base: https://github.com/ssbb
   projects:
     - name: zmk
       remote: zmkfirmware
@@ -19,8 +19,8 @@ manifest:
     - name: zmk-pmw3610-driver
       remote: badjeff
       revision: main
-    - name: zmk-antecedent-morph
-      remote: ssbb
-      revision: v1
+    # - name: zmk-antecedent-morph
+    #   remote: ssbb
+    #   revision: v1
   self:
     path: config
