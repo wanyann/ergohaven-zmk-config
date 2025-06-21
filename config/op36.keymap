@@ -252,13 +252,13 @@
         parentheses {
             bindings = <&parentheses>;
             key-positions = <11 13>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
         };
 
         combo_braces_ru {
             bindings = <&braces_ru>;
             key-positions = <16 18>;
-            timeout-ms = <25>;
+            timeout-ms = <30>;
             layers = <2 3 13>;
         };
 
