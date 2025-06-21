@@ -70,24 +70,24 @@
         };
 
         combo_osl_sym_en {
-            bindings = <&sl 12>;
+            bindings = <&sl 13>;
             key-positions = <19 20>;
             require-prior-idle-ms = <50>;
-            layers = <0 1 12>;
+            layers = <0 1 13>;
         };
 
         combo_quotes_en {
             bindings = <&quotes_en>;
             require-prior-idle-ms = <50>;
             key-positions = <31 33>;
-            layers = <0 1 12>;
+            layers = <0 1 13>;
         };
 
         combo_osl_sym_ru {
-            bindings = <&sl 13>;
+            bindings = <&sl 14>;
             key-positions = <19 20>;
             require-prior-idle-ms = <50>;
-            layers = <2 3 13>;
+            layers = <2 3 14>;
         };
 
         combo_quotes_ru {
@@ -101,7 +101,7 @@
             bindings = <&braces_en>;
             key-positions = <19 21>;
             require-prior-idle-ms = <50>;
-            layers = <0 1 12>;
+            layers = <0 1 13>;
         };
 
         combo_yi_ru {
@@ -109,7 +109,7 @@
             timeout-ms = <30>;
             key-positions = <20 21>;
             require-prior-idle-ms = <30>;
-            layers = <13>;
+            layers = <14>;
         };
 
         combo_she_ru {
@@ -132,7 +132,7 @@
             bindings = <&kp LS(RU_CYRILLIC_SHORT_I)>;
             timeout-ms = <30>;
             key-positions = <20 21>;
-            layers = <13>;
+            layers = <14>;
         };
 
         combo_she_cw {
@@ -156,12 +156,12 @@
         };
 
         combo_osl_fn {
-            bindings = <&sl 14>;
+            bindings = <&sl 15>;
             key-positions = <26 28>;
         };
 
         combo_osl_os {
-            bindings = <&sl 15>;
+            bindings = <&sl 16>;
             key-positions = <25 26>;
         };
 
@@ -200,49 +200,49 @@
             bindings = <&kp P>;
             key-positions = <8 7>;
             timeout-ms = <30>;
-            layers = <12>;
+            layers = <13>;
         };
 
         combo_q_cw {
             bindings = <&kp LS(Q)>;
             key-positions = <4 3>;
             timeout-ms = <30>;
-            layers = <12>;
+            layers = <13>;
         };
 
         combo_p_cw {
             bindings = <&kp LS(P)>;
             key-positions = <7 8>;
             timeout-ms = <30>;
-            layers = <12>;
+            layers = <13>;
         };
 
         combo_tse_ru {
             bindings = <&kp RU_CYRILLIC_TSE>;
             key-positions = <3 4>;
             timeout-ms = <50>;
-            layers = <13>;
+            layers = <14>;
         };
 
         combo_tse_cw {
             bindings = <&kp LS(RU_CYRILLIC_TSE)>;
             key-positions = <3 4>;
             timeout-ms = <50>;
-            layers = <13>;
+            layers = <14>;
         };
 
         combo_che_ru {
             bindings = <&kp RU_CYRILLIC_CHE>;
             key-positions = <7 8>;
             timeout-ms = <50>;
-            layers = <13>;
+            layers = <14>;
         };
 
         combo_che_cw {
             bindings = <&kp LS(RU_CYRILLIC_CHE)>;
             key-positions = <7 8>;
             timeout-ms = <50>;
-            layers = <13>;
+            layers = <14>;
         };
 
         combo_osm_ctrl_shift {
@@ -262,20 +262,20 @@
             bindings = <&braces_ru>;
             key-positions = <19 21>;
             timeout-ms = <25>;
-            layers = <2 3 13>;
+            layers = <2 3 14>;
         };
 
         combo_brackets_en {
             bindings = <&brackets_en>;
             key-positions = <7 9>;
-            layers = <0 1 12>;
+            layers = <0 1 13>;
             timeout-ms = <30>;
         };
 
         combo_brackets_ru {
             bindings = <&brackets_ru>;
             key-positions = <7 9>;
-            layers = <2 3 13>;
+            layers = <2 3 14>;
             timeout-ms = <30>;
         };
 
@@ -293,37 +293,37 @@
         combo_grave_ru {
             bindings = <&en GRAVE>;
             key-positions = <18 19>;
-            layers = <2 3 13>;
+            layers = <2 3 14>;
         };
 
         combo_grave_en {
             bindings = <&kp GRAVE>;
             key-positions = <18 19>;
-            layers = <0 1 12>;
+            layers = <0 1 13>;
         };
 
         combo_under_en {
             bindings = <&kp UNDER>;
             key-positions = <7 6>;
-            layers = <0 1 12>;
+            layers = <0 1 13>;
         };
 
         combo_under_ru {
             bindings = <&kp UNDER>;
             key-positions = <6 7>;
-            layers = <2 3 13>;
+            layers = <2 3 14>;
         };
 
         combo_ru_hash {
             bindings = <&en HASH>;
             key-positions = <30 31>;
-            layers = <2 3 13>;
+            layers = <2 3 14>;
         };
 
         combo_en_hash {
             bindings = <&kp HASH>;
             key-positions = <30 31>;
-            layers = <0 1 12>;
+            layers = <0 1 13>;
         };
     };
 
@@ -948,7 +948,7 @@
 &none  &none                 &kp X                 &kp Z              &en_com_mt LC(R) 0  &en_dot_mt LC(T) 0                           &kp Q     &kp G      &kp N              &kp F     &none              &none
 &none  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrm LEFT_SHIFT E  &hrml LCTRL A       &mt LC(F) J                                  &kp P     &hrl 10 D  &hrm LEFT_SHIFT R  &kp S     &hrml_slow RALT L  &none
 &none  &mt LC(Z) K           &mt LC(X) Y           &mt LC(C) O        &mt LC(V) U         &mt LG(V) K_CANCEL                           &kp B     &kp C      &kp M              &kp W     &mt LC(SLASH) V    &none
-                             &kp GRAVE             &kp LGUI           &kp K_CANCEL        &lt 9 SPACE         &sl 11    &kp BACKSPACE  &lt 10 T  &sen_mo 4  &kp LBKT           &kp RBKT
+                             &kp GRAVE             &kp LGUI           &kp K_CANCEL        &lt 9 SPACE         &sl 12    &kp BACKSPACE  &lt 10 T  &sen_mo 4  &kp LBKT           &kp RBKT
             >;
         };
 
@@ -964,18 +964,18 @@
         Ru {
             bindings = <
 &trans  &kp RU_CYRILLIC_TSE                &soft_sign                         &kp RU_CYRILLIC_YA              &ru_com_mt LC(R) 0          &ru_dot_mt LC(T) 0                          &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_KA      &kp RU_CYRILLIC_DE              &kp RU_CYRILLIC_CHE  &kp RU_CYRILLIC_SHORT_I         &trans
-&trans  &hrml_slow LEFT_GUI RU_CYRILLIC_U  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrm LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &mt LC(F) RU_CYRILLIC_A                     &kp RU_CYRILLIC_EL     &hrl 10 RU_CYRILLIC_EN  &hrm LEFT_SHIFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_ER   &hrml_slow RALT RU_CYRILLIC_VE  &trans
+&trans  &hrml_slow LEFT_GUI RU_CYRILLIC_U  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrm LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &mt LC(F) RU_CYRILLIC_A                     &kp RU_CYRILLIC_EL     &hrl 11 RU_CYRILLIC_EN  &hrm LEFT_SHIFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_ER   &hrml_slow RALT RU_CYRILLIC_VE  &trans
 &trans  &mt LC(Z) RU_CYRILLIC_EF           &mt LC(X) RU_CYRILLIC_E            &mt LC(C) RU_CYRILLIC_HA        &mt LC(V) RU_CYRILLIC_YERU  &mt LG(V) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM      &kp RU_CYRILLIC_PE              &kp RU_CYRILLIC_ZHE  &mt LC(SLASH) RU_CYRILLIC_GHE   &trans
-                                           &trans                             &trans                          &trans                      &trans                    &trans    &trans  &lt 10 RU_CYRILLIC_ES  &trans                  &trans                          &trans
+                                           &trans                             &trans                          &trans                      &trans                    &trans    &trans  &lt 11 RU_CYRILLIC_ES  &trans                  &trans                          &trans
             >;
         };
 
         Ru_CW {
             bindings = <
 &trans  &kp LS(RU_CYRILLIC_TSE)                &kp LS(RU_CYRILLIC_SOFT_SIGN)          &kp LS(RU_CYRILLIC_YA)              &ru_com_mt LC(R) 0              &ru_dot_mt LC(T) 0                              &kp LS(RU_CYRILLIC_ZE)     &kp LS(RU_CYRILLIC_KA)      &kp LS(RU_CYRILLIC_DE)              &kp LS(RU_CYRILLIC_CHE)  &kp LS(RU_CYRILLIC_SHORT_I)         &trans
-&trans  &hrml_slow LEFT_GUI LS(RU_CYRILLIC_U)  &hrml_slow LEFT_ALT LS(RU_CYRILLIC_I)  &hrm LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)   &mt LC(F) LS(RU_CYRILLIC_A)                     &kp LS(RU_CYRILLIC_EL)     &hrl 10 LS(RU_CYRILLIC_EN)  &hrm LEFT_SHIFT LS(RU_CYRILLIC_TE)  &kp LS(RU_CYRILLIC_ER)   &hrml_slow RALT LS(RU_CYRILLIC_VE)  &trans
+&trans  &hrml_slow LEFT_GUI LS(RU_CYRILLIC_U)  &hrml_slow LEFT_ALT LS(RU_CYRILLIC_I)  &hrm LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)   &mt LC(F) LS(RU_CYRILLIC_A)                     &kp LS(RU_CYRILLIC_EL)     &hrl 11 LS(RU_CYRILLIC_EN)  &hrm LEFT_SHIFT LS(RU_CYRILLIC_TE)  &kp LS(RU_CYRILLIC_ER)   &hrml_slow RALT LS(RU_CYRILLIC_VE)  &trans
 &trans  &mt LC(Z) LS(RU_CYRILLIC_EF)           &mt LC(X) LS(RU_CYRILLIC_E)            &mt LC(C) LS(RU_CYRILLIC_HA)        &mt LC(V) LS(RU_CYRILLIC_YERU)  &mt LG(V) LS(RU_CYRILLIC_YU)                    &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)      &kp LS(RU_CYRILLIC_PE)              &kp LS(RU_CYRILLIC_ZHE)  &mt LC(SLASH) LS(RU_CYRILLIC_GHE)   &trans
-                                               &trans                                 &trans                              &lg_ru                          &ru_lt_cw_off 9 SPACE         &trans    &trans  &lt 10 LS(RU_CYRILLIC_ES)  &trans                      &trans                              &trans
+                                               &trans                                 &trans                              &lg_ru                          &ru_lt_cw_off 9 SPACE         &trans    &trans  &lt 11 LS(RU_CYRILLIC_ES)  &trans                      &trans                              &trans
             >;
         };
 
@@ -984,7 +984,7 @@
 &trans  &trans                    &trns_msoff               &trns_msoff               &trns_msoff                  &trns_msoff                                  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff  &trns_msoff  &trans
 &trans  &kp LCTRL                 &mo 6                     &mo 5                     &mkp1_ctrl                   &mkp_hold_msoff LC(F) MB3                    &trns_msoff  &trans_msoff_lr_hold 10 0  &trns_msoff  &trns_msoff  &trns_msoff  &trans
 &trans  &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2          &trns_msoff_hold LG(V) 0                     &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff  &trns_msoff  &trans
-                                  &trans                    &trans                    &kp_layeroff 4 LS(K_CANCEL)  &trans                     &sl 11    &trans  &trans       &trans                     &trans       &trans
+                                  &trans                    &trans                    &kp_layeroff 4 LS(K_CANCEL)  &trans                     &sl 12    &trans  &trans       &trans                     &trans       &trans
             >;
         };
 
@@ -1033,11 +1033,20 @@
             >;
         };
 
-        Num {
+        Num_En {
             bindings = <
-&trans  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &trans                                  &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH                               &trans  &trans     &trans      &trans        &trans        &trans
 &trans  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL                               &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
 &trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH                           &trans  &trans     &trans      &trans        &trans        &trans
+                      &trans        &trans        &trans        &alt_spc       &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
+            >;
+        };
+
+        Num_Ru {
+            bindings = <
+&trans  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &en SLASH                               &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL                               &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &en BACKSLASH                           &trans  &trans     &trans      &trans        &trans        &trans
                       &trans        &trans        &trans        &alt_spc       &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
             >;
         };
@@ -1047,11 +1056,11 @@
 &trans  &kp LA(LC(LS(P)))  &kp LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))      &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
 &trans  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))  &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))      &kp LS(LA(LC(G)))                    &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &trans
 &trans  &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))  &kp LS(LA(LC(C)))  &kp LA(LS(LC(LG(V))))  &kp LS(LA(LC(B)))                    &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
-                           &trans             &trans             &layer_off 11          &none              &sl 11    &trans  &trans             &trans             &trans                 &trans
+                           &trans             &trans             &layer_off 12          &none              &sl 12    &trans  &trans             &trans             &trans                 &trans
             >;
         };
 
-        En_Sym {
+        Sym_En {
             bindings = <
 &trans  &trans     &kp AT                &kp UNDER  &kp DOUBLE_QUOTES      &trans                      &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp HASH       &kp RIGHT_BRACKET  &trans     &trans
 &trans  &kp TILDE  &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp PLUS                    &ru RU_NUMERO     &kp LEFT_BRACE    &kp SEMICOLON  &kp RIGHT_BRACE    &kp SLASH  &trans
@@ -1060,7 +1069,7 @@
             >;
         };
 
-        Ru_Sym {
+        Sym_Ru {
             bindings = <
 &trans  &trans     &en AT                &kp UNDER     &kp RU_DOUBLE_QUOTES  &trans                      &en SINGLE_QUOTE  &en LEFT_BRACKET  &en HASH          &en RIGHT_BRACKET  &trans     &trans
 &trans  &en TILDE  &kp LEFT_PARENTHESIS  &kp RU_COLON  &kp RPAR              &kp PLUS                    &kp RU_NUMERO     &en LEFT_BRACE    &kp RU_SEMICOLON  &en RIGHT_BRACE    &en SLASH  &trans
