@@ -653,28 +653,6 @@
     };
 
     behaviors {
-        en_magic: en_magic {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "EN_MAGIC";
-            #binding-cells = <0>;
-            defaults = <&none>;
-            bindings = <&kp C>, <&kp B>, <&kp O>, <&kp E>, <&kp E>, <&kp I>;
-
-            antecedents = <S I Z Y U P>;
-            max-delay-ms = <2000>;
-        };
-
-        ru_magic: ru_magic {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "RU_MAGIC";
-            #binding-cells = <0>;
-            defaults = <&none>;
-            bindings = <&kp C>, <&kp O>;
-
-            antecedents = <S Z>;
-            max-delay-ms = <1500>;
-        };
-
         layer_off: layer_off {
             compatible = "zmk,behavior-toggle-layer";
             label = "LAYER_OFF";
@@ -976,10 +954,10 @@
 
         Nordrassil_CW {
             bindings = <
-&trans  &trans                     &kp LS(X)                  &kp LS(Z)              &en_com_mt LC(R) 0     &en_dot_mt LC(T) 0                          &kp LS(Q)  &kp LS(G)      &kp LS(N)              &kp LS(F)  &trans                 &trans
-&trans  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrm LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)      &mt LC(F) LS(J)                             &kp LS(P)  &hrl 10 LS(D)  &hrm LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(L)  &trans
-&trans  &mt LC(Z) LS(K)            &mt LC(X) LS(Y)            &mt LC(C) LS(O)        &mt LC(V) LS(U)        &mt LG(V) K_CANCEL                          &kp LS(B)  &kp LS(C)      &kp LS(M)              &kp LS(W)  &mt LC(SLASH) LS(V)    &trans
-                                   &trans &trans                     &trans                 &en_lt_cw_off 9 SPACE  &trans              &trans    &lt 10 LS(T)  &trans     &trans         &trans
+&trans  &trans                     &kp LS(X)                  &kp LS(Z)              &en_com_mt LC(R) 0  &en_dot_mt LC(T) 0                       &kp LS(Q)     &kp LS(G)      &kp LS(N)              &kp LS(F)  &trans                 &trans
+&trans  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrm LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)   &mt LC(F) LS(J)                          &kp LS(P)     &hrl 10 LS(D)  &hrm LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(L)  &trans
+&trans  &mt LC(Z) LS(K)            &mt LC(X) LS(Y)            &mt LC(C) LS(O)        &mt LC(V) LS(U)     &mt LG(V) K_CANCEL                       &kp LS(B)     &kp LS(C)      &kp LS(M)              &kp LS(W)  &mt LC(SLASH) LS(V)    &trans
+                                   &trans                     &trans                 &trans              &en_lt_cw_off 9 SPACE  &trans    &trans  &lt 10 LS(T)  &trans         &trans                 &trans
             >;
         };
 
