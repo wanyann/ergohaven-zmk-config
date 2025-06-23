@@ -658,7 +658,7 @@
             bindings =
                 <&macro_release>,
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
-                <&macro_press>,
+                <&macro_tap>,
                 <&macro_param_1to1 &tog MACRO_PLACEHOLDER>;
 
             label = "MODE_TOG";
