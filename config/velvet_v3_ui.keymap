@@ -946,7 +946,6 @@
             bindings = <&mo>, <&tog>;
 
             #binding-cells = <2>;
-            hold-while-undecided;
             flavor = "tap-preferred";
             tapping-term-ms = <180>;
         };
