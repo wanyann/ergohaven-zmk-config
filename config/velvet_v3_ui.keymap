@@ -1113,7 +1113,7 @@
 
 &trackball_listener {
     scroller {
-        layers = <5 6>;
+        layers = <5>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_X_INVERT>,
             <&zip_xy_scaler 1 16>,
@@ -1121,7 +1121,7 @@
     };
 
     sniper {
-        layers = <7>;
+        layers = <6>;
         input-processors = <&zip_xy_scaler 1 4>;
     };
 };
