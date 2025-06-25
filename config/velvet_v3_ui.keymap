@@ -667,7 +667,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             flavor = "balanced";
             require-prior-idle-ms = <20>;
         };
@@ -679,7 +679,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             require-prior-idle-ms = <20>;
         };
 
@@ -709,7 +709,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             flavor = "balanced";
         };
 
@@ -752,7 +752,7 @@
             bindings = <&ml>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             flavor = "balanced";
             require-prior-idle-ms = <20>;
         };
@@ -770,7 +770,7 @@
             bindings = <&ml>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <180>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <20>;
         };
