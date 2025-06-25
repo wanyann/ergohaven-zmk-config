@@ -1110,7 +1110,7 @@
     };
 };
 
-&trackball { cpi = <800>; };
+&trackball { cpi = <1000>; };
 
 &trackball_listener {
     scroller {
