@@ -649,8 +649,8 @@
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>;
 
             label = "SEN_MO";
-            wait-ms = <5>;
-            tap-ms = <5>;
+            wait-ms = <1>;
+            tap-ms = <1>;
         };
     };
 
