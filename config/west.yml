@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: zmkfirmware
-      url-base: https://github.com/nmunnich
+      url-base: https://github.com/zmkfirmware
     - name: ergohaven
       url-base: https://github.com/ergohaven
     - name: badjeff
@@ -13,7 +13,7 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: layer-locking
+      revision: main
       import: app/west.yml
     - name: ergohaven-zmk
       remote: ergohaven
