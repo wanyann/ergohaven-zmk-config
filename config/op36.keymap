@@ -933,6 +933,16 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        space_mrph: space_mrph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_MRPH";
+            bindings = <&kp SPACE>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LSFT|MOD_RCTL|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -1012,10 +1022,10 @@
 
         Mods {
             bindings = <
-  &kp Q             &kp W             &kp E              &kp R         &kp T                     &kp Y  &kp U      &kp I              &kp O    &kp P
-  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                     &kp H  &hrl 10 J  &hrm LEFT_SHIFT K  &kp L    &hrm_slow RALT SEMI
-  &kp Z             &kp X             &kp C              &kp V         &kp B                     &kp N  &kp M      &kp COMMA          &kp DOT  &kp SLASH
-                                                         &trans        &trans  &trans    &trans  &none  &trans
+  &kp Q             &kp W             &kp E              &kp R         &kp T                          &kp Y  &kp U      &kp I              &kp O    &kp P
+  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                          &kp H  &hrl 10 J  &hrm LEFT_SHIFT K  &kp L    &hrm_slow RALT SEMI
+  &kp Z             &kp X             &kp C              &kp V         &kp B                          &kp N  &kp M      &kp COMMA          &kp DOT  &kp SLASH
+                                                         &trans        &space_mrph  &trans    &trans  &none  &trans
             >;
         };
 
