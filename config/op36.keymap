@@ -942,8 +942,8 @@
             bindings = <&kp SPACE>, <&kp TAB>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RALT)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_RALT|MOD_LALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
         };
     };
 
@@ -1033,7 +1033,7 @@
 
         Nav {
             bindings = <
-  &none                           &kp LA(LG(TAB))                  &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &key_repeat                     &none   &kp HOME   &kp UP    &kp END    &kp DELETE
+  &none                           &kp LA(LC(TAB))                  &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &key_repeat                     &none   &kp HOME   &kp UP    &kp END    &kp DELETE
   &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &zeros_macro                    &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row
   &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &trans                          &trans  &kp PG_UP  &none     &kp PG_DN  &trans
                                                                                             &trans                   &trans        &trans    &trans  &trans  &trans
