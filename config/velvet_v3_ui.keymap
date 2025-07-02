@@ -973,7 +973,7 @@
 &none  &none                 &kp X                 &kp Z              &en_com_mt LC(R) 0  &en_dot_mt LC(T) 0                           &kp Q     &kp G      &kp N              &kp F     &none              &none
 &none  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrm LEFT_SHIFT E  &hrml LCTRL A       &mt LC(F) J                                  &kp P     &hrl 10 D  &hrm LEFT_SHIFT R  &kp S     &hrml_slow RALT L  &none
 &none  &mt LC(Z) K           &mt LC(X) Y           &mt LC(C) O        &mt LC(V) U         &mt LG(V) K_CANCEL                           &kp B     &kp C      &kp M              &kp W     &mt LC(SLASH) V    &none
-                             &kp GRAVE             &kp LGUI           &kp K_CANCEL        &lt 9 SPACE         &sl 12    &kp BACKSPACE  &lt 10 T  &sen_mo 4  &kp LBKT           &kp RBKT
+                             &kp GRAVE             &kp LGUI           &kp K_CANCEL        &lt 9 SPACE         &sl 12    &kp BACKSPACE  &lt 10 T  &mo 4      &kp LBKT           &kp RBKT
             >;
         };
 
