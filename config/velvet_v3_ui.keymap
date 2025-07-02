@@ -1114,10 +1114,10 @@
 
         OS {
             bindings = <
-&trans  &bt BT_SEL 2  &trans              &kp LA(LC(N2))      &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans  &studio_unlock  &trans        &trans  &bt BT_CLR  &trans
-&trans  &bt BT_SEL 0  &kp LC(RIGHT)       &kp K_PLAY_PAUSE    &kp C_VOLUME_UP       &kp C_BRI_UP                            &trans  &out OUT_USB    &out OUT_BLE  &trans  &soft_off   &trans
-&trans  &bt BT_SEL 1  &kp LC(LA(INSERT))  &kp LA(LG(INSERT))  &kp C_VOL_DN          &kp C_BRI_DN                            &trans  &trans          &trans        &trans  &trans      &trans
-                      &trans              &trans              &trans                &trans                &trans    &trans  &trans  &trans          &trans        &trans
+&trans  &bt BT_SEL 2  &trans         &kp LA(LC(N2))      &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans  &studio_unlock  &trans        &trans  &bt BT_CLR  &trans
+&trans  &bt BT_SEL 0  &kp LC(RIGHT)  &kp K_PLAY_PAUSE    &kp C_VOLUME_UP       &kp C_BRI_UP                            &trans  &out OUT_USB    &out OUT_BLE  &trans  &soft_off   &trans
+&trans  &bt BT_SEL 1  &none          &kp LA(LG(INSERT))  &kp C_VOL_DN          &kp C_BRI_DN                            &trans  &trans          &trans        &trans  &trans      &trans
+                      &trans         &trans              &trans                &trans                &trans    &trans  &trans  &trans          &trans        &trans
             >;
         };
     };
