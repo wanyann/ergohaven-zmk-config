@@ -63,11 +63,13 @@
         combo_ru {
             bindings = <&lg_ru>;
             key-positions = <27 28>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_en {
             bindings = <&lg_en>;
             key-positions = <31 32>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_osl_sym_en {
@@ -951,6 +953,16 @@
             tapping-term-ms = <180>;
             hold-while-undecided;
         };
+
+        space_tab: space_tab {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_TAB";
+            bindings = <&kp SPACE>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_RCTL|MOD_RSFT)>;
+            keep-mods = <(MOD_LSFT|MOD_LCTL|MOD_RCTL|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -1030,16 +1042,16 @@
 
         Mods {
             bindings = <
-&trans  &kp Q             &kp W             &kp E              &kp R         &kp T                     &kp Y   &kp U      &kp I              &kp O    &kp P                &trans
-&trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                     &kp H   &hrl 10 J  &hrm LEFT_SHIFT K  &kp L    &hrm_slow RALT SEMI  &trans
-&trans  &kp Z             &kp X             &kp C              &kp V         &kp B                     &kp N   &kp M      &kp COMMA          &kp DOT  &kp SLASH            &trans
-                          &trans            &trans             &trans        &trans  &trans    &trans  &trans  &trans     &trans             &trans
+&trans  &kp Q             &kp W             &kp E              &kp R         &kp T                         &kp Y   &kp U      &kp I              &kp O    &kp P                &trans
+&trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                         &kp H   &hrl 10 J  &hrm LEFT_SHIFT K  &kp L    &hrm_slow RALT SEMI  &trans
+&trans  &kp Z             &kp X             &kp C              &kp V         &kp B                         &kp N   &kp M      &kp COMMA          &kp DOT  &kp SLASH            &trans
+                          &trans            &trans             &trans        &space_tab  &trans    &trans  &trans  &trans     &trans             &trans
             >;
         };
 
         Nav {
             bindings = <
-&trans  &none                           &kp LA(TAB)                      &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &key_repeat                     &none   &kp HOME   &kp UP    &kp END    &kp DELETE   &trans
+&trans  &none                           &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &key_repeat                     &none   &kp HOME   &kp UP    &kp END    &kp DELETE   &trans
 &trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &zeros_macro                    &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row  &trans
 &trans  &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &trans                          &trans  &kp PG_UP  &none     &kp PG_DN  &trans       &trans
                                         &trans                           &trans                   &trans                   &trans        &trans    &trans  &trans  &trans     &trans    &trans
