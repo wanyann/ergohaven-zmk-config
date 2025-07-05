@@ -11,7 +11,7 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <170>;
 };
 
 &lt {
@@ -670,7 +670,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <170>;
             flavor = "balanced";
             require-prior-idle-ms = <20>;
         };
@@ -682,7 +682,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <180>;
+            tapping-term-ms = <170>;
             require-prior-idle-ms = <20>;
         };
 
@@ -692,7 +692,7 @@
             bindings = <&mo>, <&ru_cw_off>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <170>;
             flavor = "balanced";
         };
 
@@ -702,7 +702,7 @@
             bindings = <&mo>, <&en_cw_off>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <170>;
             flavor = "balanced";
         };
 
@@ -712,7 +712,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <170>;
             flavor = "balanced";
         };
 
@@ -755,7 +755,7 @@
             bindings = <&ml>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <170>;
             flavor = "balanced";
             require-prior-idle-ms = <20>;
         };
@@ -773,7 +773,7 @@
             bindings = <&ml>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <170>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <20>;
         };
@@ -1127,6 +1127,7 @@
 
 &trackball_listener {
     input-processors = <&zip_xy_scaler 9 20>;
+
     scroller {
         layers = <5>;
         input-processors =
