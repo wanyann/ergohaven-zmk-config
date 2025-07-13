@@ -384,7 +384,7 @@
                 <&os_en &macro_param_1to1>,
                 <&macro_tap_time 40>,
                 <&kp MACRO_PLACEHOLDER>,
-                <&macro_wait_time 0>,
+                <&macro_tap_time 0>,
                 <&os_ru>;
 
             label = "EN";
@@ -395,7 +395,13 @@
         ru: ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&os_ru &macro_param_1to1 &kp MACRO_PLACEHOLDER &os_en>;
+            bindings =
+                <&os_ru &macro_param_1to1>,
+                <&macro_tap_time 40>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 0>,
+                <&os_en>;
+
             label = "RU";
             wait-ms = <0>;
         };
