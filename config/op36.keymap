@@ -611,6 +611,7 @@
 
             label = "SCROLL_HOLD";
             tap-ms = <0>;
+            wait-ms = <0>;
         };
 
         kp_layeroff: cancel_msoff {
@@ -944,6 +945,16 @@
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
         };
+
+        trns_hold_msoff: trns_hold_msoff {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TRNS_HOLD_MSOFF";
+            bindings = <&kp_msoff>, <&trns_msoff>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -987,7 +998,7 @@
 
         Mouse {
             bindings = <
-  &trns_msoff               &trns_msoff               &trns_msoff               &trns_msoff                  &trns_msoff                                       &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
+  &trns_msoff               &trns_msoff               &trns_msoff               &trns_hold_msoff LC(R) 0     &trns_hold_msoff LC(T) 0                          &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
   &kp LCTRL                 &kp KP_EQUAL              &kp KP_NUMLOCK            &mkp1_ctrl                   &mkp_hold_msoff LC(F) MB3                         &trns_msoff  &trns_msoff  &trans_msoff_lr_hold 10 0  &trns_msoff  &trns_msoff
   &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2          &trns_msoff_hold LG(V) 0                          &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
                                                                                 &kp_layeroff 4 LS(K_CANCEL)  &trans                     &sl 12    &bspc_msoff  &trns_msoff  &trans
