@@ -382,7 +382,7 @@
             #binding-cells = <1>;
             bindings =
                 <&os_en &macro_param_1to1>,
-                <&macro_tap_time 100>,
+                <&macro_tap_time 40>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_wait_time 0>,
                 <&os_ru>;
