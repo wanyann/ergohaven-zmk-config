@@ -349,7 +349,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N8))>;
             label = "OS_RU";
-            tap-ms = <30>;
+            tap-ms = <0>;
             wait-ms = <0>;
         };
 
@@ -358,7 +358,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N9))>;
             label = "OS_EN";
-            tap-ms = <30>;
+            tap-ms = <0>;
             wait-ms = <0>;
         };
 
@@ -383,6 +383,7 @@
             #binding-cells = <0>;
             bindings = <&kp END &kp LS(HOME)>;
             label = "SELECT_ROW";
+            wait-ms = <0>;
         };
 
         en_code: en_code_block {
@@ -458,6 +459,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(NUMBER_2) &kp LS(NUMBER_2) &kp LEFT_ARROW>;
             label = "DBL_QUOTE";
+            wait-ms = <0>;
         };
 
         quotes_en: quotes_en {
@@ -465,6 +467,7 @@
             #binding-cells = <0>;
             bindings = <&kp DOUBLE_QUOTES &kp DOUBLE_QUOTES &kp LEFT_ARROW>;
             label = "QUOTES_EN";
+            wait-ms = <0>;
         };
 
         braces_en: braces_en {
@@ -472,6 +475,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACE &kp RIGHT_BRACE &kp LEFT>;
             label = "BRACES_EN";
+            wait-ms = <0>;
         };
 
         braces_ru: braces_ru {
@@ -479,6 +483,7 @@
             #binding-cells = <0>;
             bindings = <&os_en &braces_en &os_ru>;
             label = "BRACES_RU";
+            wait-ms = <0>;
         };
 
         brackets_en: brackets_en {
@@ -486,6 +491,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_BRACKET &kp RIGHT_BRACKET &kp LEFT_ARROW>;
             label = "BRACKETS_EN";
+            wait-ms = <0>;
         };
 
         brackets_ru: brackets_ru {
@@ -493,6 +499,7 @@
             #binding-cells = <0>;
             bindings = <&os_en &brackets_en &os_ru>;
             label = "BRACKETS_RU";
+            wait-ms = <0>;
         };
 
         parentheses: parentheses {
@@ -500,6 +507,7 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_PARENTHESIS &kp RIGHT_PARENTHESIS &kp LEFT_ARROW>;
             label = "PARENTHESES";
+            wait-ms = <0>;
         };
 
         less_greater_en: less_greater_en {
@@ -507,6 +515,7 @@
             #binding-cells = <0>;
             bindings = <&kp LESS_THAN &kp GREATER_THAN &kp LEFT>;
             label = "LESS_GREATER_EN";
+            wait-ms = <0>;
         };
 
         less_greater_ru: less_greater_ru {
@@ -514,6 +523,7 @@
             #binding-cells = <0>;
             bindings = <&os_en &less_greater_en &os_ru>;
             label = "LESS_GREATER_RU";
+            wait-ms = <0>;
         };
 
         en: en {
@@ -522,6 +532,7 @@
             bindings = <&os_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &os_ru>;
             label = "EN";
             wait-ms = <0>;
+            tap-ms = <0>;
         };
 
         ru: ru {
@@ -529,6 +540,7 @@
             #binding-cells = <1>;
             bindings = <&os_ru &macro_param_1to1 &kp MACRO_PLACEHOLDER &os_en>;
             label = "RU";
+            wait-ms = <0>;
         };
 
         osm_ctrl: osm_ctrl {
