@@ -364,7 +364,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N8))>;
             label = "OS_RU";
-            tap-ms = <10>;
+            tap-ms = <15>;
             wait-ms = <0>;
         };
 
@@ -373,7 +373,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N9))>;
             label = "OS_EN";
-            tap-ms = <10>;
+            tap-ms = <15>;
             wait-ms = <0>;
         };
 
@@ -547,7 +547,7 @@
             bindings = <&os_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &os_ru>;
             label = "EN";
             wait-ms = <0>;
-            tap-ms = <10>;
+            tap-ms = <15>;
         };
 
         ru: ru {
