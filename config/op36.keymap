@@ -544,10 +544,16 @@
         en: en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&os_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &os_ru>;
+            bindings =
+                <&os_en &macro_param_1to1>,
+                <&macro_tap_time 20>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_wait_time 0>,
+                <&os_ru>;
+
             label = "EN";
             wait-ms = <0>;
-            tap-ms = <30>;
+            tap-ms = <0>;
         };
 
         ru: ru {
