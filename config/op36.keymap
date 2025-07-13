@@ -381,11 +381,9 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&kp LC(LS(N9)) &macro_param_1to1>,
                 <&macro_tap_time 40>,
-                <&kp MACRO_PLACEHOLDER>,
-                <&macro_tap_time 0>,
-                <&kp LS(LC(RU_N8))>;
+                <&kp LC(LS(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(RU_N8))>,
+                <&macro_tap_time 0>;
 
             label = "EN";
             wait-ms = <0>;
