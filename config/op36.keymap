@@ -364,7 +364,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N8))>;
             label = "OS_RU";
-            tap-ms = <30>;
+            tap-ms = <20>;
             wait-ms = <0>;
         };
 
@@ -374,7 +374,7 @@
             bindings = <&kp LC(LS(N9))>;
             label = "OS_EN";
             wait-ms = <0>;
-            tap-ms = <30>;
+            tap-ms = <20>;
         };
 
         en: en {
@@ -382,7 +382,7 @@
             #binding-cells = <1>;
             bindings =
                 <&os_en &macro_param_1to1>,
-                <&macro_tap_time 30>,
+                <&macro_tap_time 40>,
                 <&kp MACRO_PLACEHOLDER>,
                 <&macro_wait_time 0>,
                 <&os_ru>;
