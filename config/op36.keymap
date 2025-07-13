@@ -244,11 +244,10 @@
             layers = <14>;
         };
 
-        combo_osm_ctrl_shift {
-            bindings = <&osm_ctrl_shift>;
+        combo_to_mouse {
+            bindings = <&to 4>;
             key-positions = <13 14>;
             timeout-ms = <30>;
-            layers = <0 1 2 3 4 8>;
         };
 
         parentheses {
