@@ -245,12 +245,6 @@
             layers = <14>;
         };
 
-        combo_to_mouse {
-            bindings = <&to 4>;
-            key-positions = <13 14>;
-            timeout-ms = <30>;
-        };
-
         parentheses {
             bindings = <&parentheses>;
             key-positions = <11 13>;
@@ -1067,10 +1061,10 @@
 
         Nav {
             bindings = <
-  &none                           &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &key_repeat                     &none   &kp HOME   &kp UP    &kp END    &kp DELETE
-  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &zeros_macro                    &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row
-  &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &trans                          &trans  &kp PG_UP  &none     &kp PG_DN  &trans
-                                                                                            &trans                   &trans        &trans    &trans  &trans  &trans
+  &none                           &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &key_repeat                    &none   &kp HOME   &kp UP    &kp END    &kp DELETE
+  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &to 4                          &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row
+  &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &trans                         &trans  &kp PG_UP  &none     &kp PG_DN  &trans
+                                                                                            &trans                   &trans       &trans    &trans  &trans  &trans
             >;
         };
 
