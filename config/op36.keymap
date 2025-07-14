@@ -274,7 +274,7 @@
 
         combo_osm_ctrl {
             bindings = <&osm_ctrl>;
-            key-positions = <12 13>;
+            key-positions = <13 3>;
             layers = <1 2 0 3 8 4>;
         };
 
@@ -332,6 +332,18 @@
         combo_res_r {
             bindings = <&sys_reset>;
             key-positions = <9 19 29>;
+        };
+
+        combo_os_shift {
+            bindings = <&osm_shift>;
+            key-positions = <2 12>;
+            layers = <1 2 0 3 8 4>;
+        };
+
+        combo_osm_cs {
+            bindings = <&osm_ctrl_shift>;
+            key-positions = <2 12 3 13>;
+            layers = <1 2 0 3 8 4>;
         };
     };
 
@@ -650,6 +662,15 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &kp MACRO_PLACEHOLDER>;
 
             label = "DKP";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+
+        osm_shift: osm_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&sk LEFT_SHIFT &sl 8>;
+            label = "OSM_SHIFT";
             wait-ms = <0>;
             tap-ms = <0>;
         };
