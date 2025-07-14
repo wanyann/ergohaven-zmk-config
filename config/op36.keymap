@@ -380,7 +380,7 @@
         en: en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LC(LS(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N8))>;
+            bindings = <&os_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &os_ru>;
             label = "EN";
             wait-ms = <16>;
             tap-ms = <15>;
