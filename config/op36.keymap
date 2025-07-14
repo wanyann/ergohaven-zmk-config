@@ -364,7 +364,7 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N8))>;
             label = "OS_RU";
-            tap-ms = <5000>;
+            tap-ms = <30>;
             wait-ms = <0>;
         };
 
@@ -374,16 +374,16 @@
             bindings = <&kp LC(LS(N9))>;
             label = "OS_EN";
             wait-ms = <0>;
-            tap-ms = <5000>;
+            tap-ms = <30>;
         };
 
         en: en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&os_en &macro_param_1to1 &kp MACRO_PLACEHOLDER &os_ru>;
+            bindings = <&kp LS(LC(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N9))>;
             label = "EN";
             wait-ms = <0>;
-            tap-ms = <5000>;
+            tap-ms = <30>;
         };
 
         ru: ru {
