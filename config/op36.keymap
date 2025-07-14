@@ -383,8 +383,8 @@
             #binding-cells = <1>;
             bindings = <&kp LS(LC(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N8))>;
             label = "EN";
-            wait-ms = <500>;
-            tap-ms = <500>;
+            wait-ms = <50>;
+            tap-ms = <50>;
         };
 
         ru: ru {
