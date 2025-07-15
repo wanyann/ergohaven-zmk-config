@@ -1091,19 +1091,19 @@
 
         Num_En {
             bindings = <
-  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH                               &trans  &trans     &trans      &trans        &trans
-  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL                               &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
-  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp BACKSLASH                           &trans  &trans     &trans      &trans        &trans
-                                            &trans        &alt_spc       &kp LA(ENTER)    &trans  &trans  &trans
+  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp SLASH                           &trans  &trans     &trans      &trans        &trans
+  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL                           &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
+  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                           &trans  &trans     &trans      &trans        &trans
+                                            &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans
             >;
         };
 
         Num_Ru {
             bindings = <
-  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &en SLASH                               &trans  &trans     &trans      &trans        &trans
-  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL                               &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
-  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &en BACKSLASH                           &trans  &trans     &trans      &trans        &trans
-                                            &trans        &alt_spc       &kp LA(ENTER)    &trans  &trans  &trans
+  &trans        &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &en SLASH                           &trans  &trans     &trans      &trans        &trans
+  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp EQUAL                           &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
+  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                           &trans  &trans     &trans      &trans        &trans
+                                            &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans
             >;
         };
 
@@ -1118,19 +1118,19 @@
 
         Sym_En {
             bindings = <
-  &trans     &kp AT                &kp UNDER  &kp DOUBLE_QUOTES      &kp GRAVE                    &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp HASH       &kp RIGHT_BRACKET  &trans
-  &kp TILDE  &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp PLUS                     &ru RU_NUMERO     &kp LEFT_BRACE    &kp SEMICOLON  &kp RIGHT_BRACE    &kp SLASH
-  &trans     &kp ASTRK             &kp CARET  &kp PERCENT            &en_code                     &kp AMPERSAND     &kp LESS_THAN     &kp DOLLAR     &kp GREATER_THAN   &kp PIPE
-                                              &trans                 &trans     &trans    &trans  &trans            &trans
+  &trans     &kp AT                &kp UNDER  &kp DOUBLE_QUOTES      &kp BACKSLASH                    &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp HASH       &kp RIGHT_BRACKET  &trans
+  &kp TILDE  &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp PLUS                         &ru RU_NUMERO     &kp LEFT_BRACE    &kp SEMICOLON  &kp RIGHT_BRACE    &kp SLASH
+  &trans     &kp ASTRK             &kp CARET  &kp PERCENT            &en_code                         &kp AMPERSAND     &kp LESS_THAN     &kp DOLLAR     &kp GREATER_THAN   &kp PIPE
+                                              &trans                 &trans         &trans    &trans  &trans            &trans
             >;
         };
 
         Sym_Ru {
             bindings = <
-  &trans     &en AT                &kp UNDER     &kp RU_DOUBLE_QUOTES  &en GRAVE                    &en SINGLE_QUOTE  &en LEFT_BRACKET  &en HASH          &en RIGHT_BRACKET  &trans
-  &en TILDE  &kp LEFT_PARENTHESIS  &kp RU_COLON  &kp RPAR              &kp PLUS                     &kp RU_NUMERO     &en LEFT_BRACE    &kp RU_SEMICOLON  &en RIGHT_BRACE    &en SLASH
-  &trans     &kp ASTERISK          &en CARET     &kp PERCENT           &ru_code                     &en AMPERSAND     &en LESS_THAN     &en DOLLAR        &en GREATER_THAN   &en PIPE
-                                                 &trans                &trans     &trans    &trans  &trans            &trans
+  &trans     &en AT                &kp UNDER     &kp RU_DOUBLE_QUOTES  &en BACKSLASH                    &en SINGLE_QUOTE  &en LEFT_BRACKET  &en HASH          &en RIGHT_BRACKET  &trans
+  &en TILDE  &kp LEFT_PARENTHESIS  &kp RU_COLON  &kp RPAR              &kp PLUS                         &kp RU_NUMERO     &en LEFT_BRACE    &kp RU_SEMICOLON  &en RIGHT_BRACE    &en SLASH
+  &trans     &kp ASTERISK          &en CARET     &kp PERCENT           &ru_code                         &en AMPERSAND     &en LESS_THAN     &en DOLLAR        &en GREATER_THAN   &en PIPE
+                                                 &trans                &trans         &trans    &trans  &trans            &trans
             >;
         };
 
