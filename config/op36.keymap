@@ -271,6 +271,18 @@
             bindings = <&sys_reset>;
             key-positions = <9 19 29>;
         };
+
+        combo_en_slash {
+            bindings = <&kp SLASH>;
+            key-positions = <13 14>;
+            layers = <0 1 10 13>;
+        };
+
+        combo_ru_slash {
+            bindings = <&en SLASH>;
+            key-positions = <13 14>;
+            layers = <2 3 14 11>;
+        };
     };
 
     macros {
