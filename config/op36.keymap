@@ -284,8 +284,8 @@
             layers = <2 3 14 11>;
         };
 
-        combo_en_bslsh {
-            bindings = <&kp BSLH>;
+        combo_en_amp {
+            bindings = <&kp AMPS>;
             key-positions = <23 24>;
             layers = <0 1 10 13>;
         };
@@ -302,20 +302,20 @@
             layers = <2 3 11 14>;
         };
 
-        combo_ru_bslsh {
-            bindings = <&en BSLH>;
+        combo_ru_amp {
+            bindings = <&en AMPS>;
             key-positions = <23 24>;
             layers = <2 3 11 14>;
         };
 
-        combo_en_pipe {
-            bindings = <&kp AMPERSAND>;
+        combo_en_colon {
+            bindings = <&kp COLON>;
             key-positions = <5 6>;
             layers = <0 1 10 13>;
         };
 
-        combo_ru_pipe {
-            bindings = <&en AMPERSAND>;
+        combo_ru_colon {
+            bindings = <&kp RU_COLON>;
             key-positions = <5 6>;
             layers = <2 3 10 13>;
         };
@@ -1109,19 +1109,19 @@
 
         Sym_En {
             bindings = <
-  &trans     &kp AT                &trans     &kp DOUBLE_QUOTES      &kp BACKSLASH                    &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &trans         &kp RIGHT_BRACKET  &trans
-  &kp TILDE  &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp PLUS                         &ru RU_NUMERO     &kp LEFT_BRACE    &kp SEMICOLON  &kp RIGHT_BRACE    &kp SLASH
-  &trans     &kp ASTRK             &kp CARET  &kp PERCENT            &en_code                         &kp AMPERSAND     &kp LESS_THAN     &kp DOLLAR     &kp GREATER_THAN   &kp PIPE
-                                              &trans                 &trans         &trans    &trans  &trans            &trans
+  &trans     &kp AT                &kp PIPE   &kp DOUBLE_QUOTES      &trans                      &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp BACKSLASH  &kp RIGHT_BRACKET  &trans
+  &kp TILDE  &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp PLUS                    &ru RU_NUMERO     &kp LEFT_BRACE    &kp SEMICOLON  &kp RIGHT_BRACE    &trans
+  &trans     &kp ASTRK             &kp CARET  &kp PERCENT            &en_code                    &kp AMPERSAND     &kp LESS_THAN     &kp DOLLAR     &kp GREATER_THAN   &trans
+                                              &trans                 &trans    &trans    &trans  &trans            &trans
             >;
         };
 
         Sym_Ru {
             bindings = <
-  &trans     &en AT                &kp UNDER     &kp RU_DOUBLE_QUOTES  &en BACKSLASH                    &en SINGLE_QUOTE  &en LEFT_BRACKET  &en HASH          &en RIGHT_BRACKET  &trans
-  &en TILDE  &kp LEFT_PARENTHESIS  &kp RU_COLON  &kp RPAR              &kp PLUS                         &kp RU_NUMERO     &en LEFT_BRACE    &kp RU_SEMICOLON  &en RIGHT_BRACE    &en SLASH
-  &trans     &kp ASTERISK          &en CARET     &kp PERCENT           &ru_code                         &en AMPERSAND     &en LESS_THAN     &en DOLLAR        &en GREATER_THAN   &en PIPE
-                                                 &trans                &trans         &trans    &trans  &trans            &trans
+  &trans     &en AT                &en PIPE      &kp RU_DOUBLE_QUOTES  &trans                      &en SINGLE_QUOTE  &en LEFT_BRACKET  &en BACKSLASH     &en RIGHT_BRACKET  &trans
+  &en TILDE  &kp LEFT_PARENTHESIS  &kp RU_COLON  &kp RPAR              &kp PLUS                    &kp RU_NUMERO     &en LEFT_BRACE    &kp RU_SEMICOLON  &en RIGHT_BRACE    &trans
+  &trans     &kp ASTERISK          &en CARET     &kp PERCENT           &ru_code                    &en AMPERSAND     &en LESS_THAN     &en DOLLAR        &en GREATER_THAN   &trans
+                                                 &trans                &trans    &trans    &trans  &trans            &trans
             >;
         };
 
