@@ -657,6 +657,13 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "DBL_TAP";
         };
+
+        select_word: select_word {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LEFT) &kp LC(LS(RIGHT))>;
+            label = "SELECT_WORD";
+        };
     };
 
     behaviors {
@@ -1066,10 +1073,10 @@
 
         Nav {
             bindings = <
-  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &trans                               &trans  &kp HOME   &kp UP    &kp END    &kp DELETE
-  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &zeros_macro                         &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row
-  &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &dbl_tap LEFT_GUI                    &trans  &kp PG_UP  &none     &kp PG_DN  &trans
-                                                                                            &trans                   &trans             &trans    &trans  &trans  &trans
+  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &trans                               &trans        &kp HOME   &kp UP    &kp END    &kp DELETE
+  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &zeros_macro                         &select_word  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row
+  &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &dbl_tap LEFT_GUI                    &trans        &kp PG_UP  &none     &kp PG_DN  &trans
+                                                                                            &trans                   &trans             &trans    &trans  &trans        &trans
             >;
         };
 
