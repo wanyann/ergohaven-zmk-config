@@ -1066,8 +1066,8 @@
 
         Nav {
             bindings = <
-  &none                           &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &zeros_macro                         &none   &kp HOME   &kp UP    &kp END    &kp DELETE
-  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &to 4                                &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row
+  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &trans                               &trans  &kp HOME   &kp UP    &kp END    &kp DELETE
+  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &zeros_macro                         &trans  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row
   &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &dbl_tap LEFT_GUI                    &trans  &kp PG_UP  &none     &kp PG_DN  &trans
                                                                                             &trans                   &trans             &trans    &trans  &trans  &trans
             >;
@@ -1102,7 +1102,7 @@
 
         Sym_En {
             bindings = <
-  &trans     &kp AT                &none      &kp DOUBLE_QUOTES      &kp BACKSLASH                    &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &kp HASH       &kp RIGHT_BRACKET  &trans
+  &trans     &kp AT                &trans     &kp DOUBLE_QUOTES      &kp BACKSLASH                    &kp SINGLE_QUOTE  &kp LEFT_BRACKET  &trans         &kp RIGHT_BRACKET  &trans
   &kp TILDE  &kp LEFT_PARENTHESIS  &kp COLON  &kp RIGHT_PARENTHESIS  &kp PLUS                         &ru RU_NUMERO     &kp LEFT_BRACE    &kp SEMICOLON  &kp RIGHT_BRACE    &kp SLASH
   &trans     &kp ASTRK             &kp CARET  &kp PERCENT            &en_code                         &kp AMPERSAND     &kp LESS_THAN     &kp DOLLAR     &kp GREATER_THAN   &kp PIPE
                                               &trans                 &trans         &trans    &trans  &trans            &trans
