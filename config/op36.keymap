@@ -9,6 +9,7 @@
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <150>;
+    bindings = <&kp_>, <&kp>;
 };
 
 &lt {
@@ -663,6 +664,17 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LEFT) &kp LC(LS(RIGHT))>;
             label = "SELECT_WORD";
+        };
+
+        kp_: kp_ {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_tap_time 50>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>;
+
+            label = "KP_";
         };
     };
 
