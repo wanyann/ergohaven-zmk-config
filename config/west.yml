@@ -24,5 +24,11 @@ manifest:
     - name: zmk-antecedent-morph
       remote: ssbb
       revision: v1
+    - name: prospector-zmk-module
+      remote: carrefinho
+      revision: main
+    - name: zmk-dongle-screen
+      remote: janpfischer
+      revision: main
   self:
     path: config
