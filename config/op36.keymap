@@ -1009,6 +1009,8 @@
   &mt LC(Z) K           &mt LC(X) Y           &mt LC(C) O        &mt LC(V) U         &mt LG(V) K_CANCEL                           &kp B     &kp C          &kp M              &kp W  &mt LC(SLASH) V
                                                                  &kp K_CANCEL        &lt 9 SPACE         &sl 12    &kp BACKSPACE  &lt 10 T  &kp BACKSPACE
             >;
+
+            display-name = "En";
         };
 
         Nordrassil_CW {
@@ -1018,6 +1020,8 @@
   &mt LC(Z) LS(K)            &mt LC(X) LS(Y)            &mt LC(C) LS(O)        &mt LC(V) LS(U)     &mt LG(V) K_CANCEL                       &kp LS(B)     &kp LS(C)      &kp LS(M)              &kp LS(W)  &mt LC(SLASH) LS(V)
                                                                                &lg_en              &en_lt_cw_off 9 SPACE  &trans    &trans  &lt 10 LS(T)  &trans
             >;
+
+            display-name = "En_CW";
         };
 
         Ru {
@@ -1027,6 +1031,8 @@
   &mt LC(Z) RU_CYRILLIC_EF           &mt LC(X) RU_CYRILLIC_E            &mt LC(C) RU_CYRILLIC_HA        &mt LC(V) RU_CYRILLIC_YERU  &mt LG(V) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM      &kp RU_CYRILLIC_PE              &kp RU_CYRILLIC_GHE  &mt LC(SLASH) RU_CYRILLIC_ZHE
                                                                                                         &trans                      &trans                    &trans    &trans  &lt 11 RU_CYRILLIC_ER  &trans
             >;
+
+            display-name = "Ru";
         };
 
         Ru_CW {
@@ -1036,6 +1042,8 @@
   &mt LC(Z) LS(RU_CYRILLIC_EF)           &mt LC(X) LS(RU_CYRILLIC_E)            &mt LC(C) LS(RU_CYRILLIC_HA)        &mt LC(V) LS(RU_CYRILLIC_YERU)  &mt LG(V) LS(RU_CYRILLIC_YU)                    &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)      &kp LS(RU_CYRILLIC_PE)              &kp LS(RU_CYRILLIC_GHE)  &mt LC(SLASH) LS(RU_CYRILLIC_ZHE)
                                                                                                                     &lg_ru                          &ru_lt_cw_off 9 SPACE         &trans    &trans  &lt 11 LS(RU_CYRILLIC_ER)  &trans
             >;
+
+            display-name = "Ru_CW";
         };
 
         Mouse {
@@ -1045,6 +1053,8 @@
   &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2          &trns_msoff_hold LG(V) 0                          &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
                                                                                 &kp_layeroff 4 LS(K_CANCEL)  &trans                     &sl 12    &bspc_msoff  &trns_msoff  &bspc_msoff
             >;
+
+            display-name = "Mouse";
         };
 
         Scroll {
@@ -1054,6 +1064,8 @@
   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            display-name = "Scroll";
         };
 
         Sniper {
@@ -1063,6 +1075,8 @@
   &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
                           &trans  &trans  &trans    &trans  &trans  &trans
             >;
+
+            display-name = "Sniper";
         };
 
         Mouse_Ctrl {
@@ -1072,6 +1086,8 @@
   &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(D)      &kp LC(V)                      &kp LC(K)  &kp LC(H)  &kp LC(U)  &kp LC(P)  &kp LC(SLASH)
                                    &trans         &space_mrph  &trans    &trans  &trans     &trans
             >;
+
+            display-name = "Mouse_Ctrl";
         };
 
         Mods {
@@ -1081,6 +1097,8 @@
   &kp Z             &kp X             &kp C              &kp V         &kp B                          &kp N  &kp M      &kp COMMA          &kp DOT  &kp SLASH
                                                          &trans        &space_mrph  &trans    &trans  &none  &trans
             >;
+
+            display-name = "Mods";
         };
 
         Nav {
@@ -1090,6 +1108,8 @@
   &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &dbl_tap LEFT_GUI                    &trans        &kp PG_UP  &none     &kp PG_DN  &trans
                                                                                             &trans                   &trans             &trans    &trans  &trans        &trans
             >;
+
+            display-name = "Navigation";
         };
 
         Num_En {
@@ -1099,6 +1119,8 @@
   &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                           &trans  &trans     &kp COMMA   &kp DOT       &trans
                                             &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans
             >;
+
+            display-name = "Numbers_En";
         };
 
         Num_Ru {
@@ -1108,6 +1130,8 @@
   &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                           &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans
                                             &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans
             >;
+
+            display-name = "Numbers_Ru";
         };
 
         App {
@@ -1117,6 +1141,8 @@
   &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))  &kp LS(LA(LC(C)))  &kp LA(LS(LC(LG(V))))  &kp LS(LA(LC(B)))                    &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))
                                                            &layer_off 12          &none              &sl 12    &trans  &trans             &trans
             >;
+
+            display-name = "Application";
         };
 
         Sym_En {
@@ -1126,6 +1152,8 @@
   &trans  &kp TILDE             &kp CARET  &kp PERCENT            &en_code                        &kp AMPERSAND     &kp LESS_THAN     &kp DOLLAR     &kp GREATER_THAN   &trans
                                            &trans                 &trans        &trans    &trans  &trans            &trans
             >;
+
+            display-name = "Symbols_En";
         };
 
         Sym_Ru {
@@ -1135,6 +1163,8 @@
   &trans  &en TILDE             &en CARET     &kp PERCENT           &ru_code                        &en AMPERSAND     &en LESS_THAN     &en DOLLAR        &en GREATER_THAN   &trans
                                               &trans                &trans        &trans    &trans  &trans            &trans
             >;
+
+            display-name = "Symbols_Ru";
         };
 
         Fn {
@@ -1144,6 +1174,8 @@
   &kp F10  &kp F1  &kp F2  &kp F3  &trans                     &trans  &trans     &trans          &trans    &trans
                            &trans  &trans   &trans    &trans  &trans  &trans
             >;
+
+            display-name = "Function";
         };
 
         OS {
@@ -1153,6 +1185,8 @@
   &bt BT_SEL 1  &none          &kp LC(LS(T))     &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &trans          &trans  &trans  &trans
                                                  &trans                &trans                &trans    &trans  &trans        &trans
             >;
+
+            display-name = "OS";
         };
     };
 };
