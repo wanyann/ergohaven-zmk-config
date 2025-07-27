@@ -8,8 +8,10 @@ manifest:
       url-base: https://github.com/badjeff
     - name: ssbb
       url-base: https://github.com/ssbb
-    - name: nmunnich
-      url-base: https://github.com/nmunnich
+    - name: carrefinho
+      url-base: https://github.com/carrefinho
+    - name: janpfischer
+      url-base: https://github.com/janpfischer
   projects:
     - name: zmk
       remote: zmkfirmware
