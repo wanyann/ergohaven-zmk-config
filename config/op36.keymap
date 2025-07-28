@@ -1004,10 +1004,10 @@
 
         En {
             bindings = <
-  &none                 &kp X                 &kp Z              &en_com_mt LC(R) 0  &en_dot_mt LC(T) 0                           &kp Q     &kp G          &kp N              &kp F  &none
-  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrm LEFT_SHIFT E  &hrml LCTRL A       &mt LC(F) J                                  &kp P     &hrl 10 D      &hrm LEFT_SHIFT R  &kp S  &hrml_slow RALT L
-  &mt LC(Z) K           &mt LC(X) Y           &mt LC(C) O        &mt LC(V) U         &mt LG(V) K_CANCEL                           &kp B     &kp C          &kp M              &kp W  &mt LC(SLASH) V
-                                                                 &kp K_CANCEL        &lt 9 SPACE         &sl 12    &kp BACKSPACE  &lt 10 T  &kp BACKSPACE
+  &none                 &kp X                 &kp Z              &en_com_mt LC(R) 0  &en_dot_mt LC(T) 0                           &kp Q     &kp G        &kp N              &kp F  &none
+  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrm LEFT_SHIFT E  &hrml LCTRL A       &mt LC(F) J                                  &kp P     &hrl 10 D    &hrm LEFT_SHIFT R  &kp S  &hrml_slow RALT L
+  &mt LC(Z) K           &mt LC(X) Y           &mt LC(C) O        &mt LC(V) U         &mt LG(V) K_CANCEL                           &kp B     &kp C        &kp M              &kp W  &mt LC(SLASH) V
+                                                                 &kp K_CANCEL        &lt 9 SPACE         &sl 12    &kp BACKSPACE  &lt 10 T  &key_repeat
             >;
 
             display-name = "En";
@@ -1087,7 +1087,7 @@
                                    &trans         &space_mrph  &trans    &trans  &trans     &trans
             >;
 
-            display-name = "Mouse_Ctrl";
+            display-name = "Mouse_Ctr";
         };
 
         Mods {
@@ -1109,7 +1109,7 @@
                                                                                             &trans                   &trans             &trans    &trans  &trans        &trans
             >;
 
-            display-name = "Navigation";
+            display-name = "Nav";
         };
 
         Num_En {
@@ -1120,7 +1120,7 @@
                                             &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans
             >;
 
-            display-name = "Numbers_En";
+            display-name = "Num_En";
         };
 
         Num_Ru {
@@ -1131,7 +1131,7 @@
                                             &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans
             >;
 
-            display-name = "Numbers_Ru";
+            display-name = "Num_Ru";
         };
 
         App {
@@ -1142,7 +1142,7 @@
                                                            &layer_off 12          &none              &sl 12    &trans  &trans             &trans
             >;
 
-            display-name = "Application";
+            display-name = "App";
         };
 
         Sym_En {
@@ -1153,7 +1153,7 @@
                                            &trans                 &trans        &trans    &trans  &trans            &trans
             >;
 
-            display-name = "Symbols_En";
+            display-name = "Sym_En";
         };
 
         Sym_Ru {
@@ -1164,7 +1164,7 @@
                                               &trans                &trans        &trans    &trans  &trans            &trans
             >;
 
-            display-name = "Symbols_Ru";
+            display-name = "Sym_Ru";
         };
 
         Fn {
