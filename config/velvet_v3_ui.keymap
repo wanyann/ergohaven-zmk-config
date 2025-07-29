@@ -1,4 +1,4 @@
-я#include <dt-bindings/zmk/input_transform.h>
+#include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include "keys_ru.h"
