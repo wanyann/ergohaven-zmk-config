@@ -999,6 +999,24 @@
             tapping-term-ms = <180>;
             flavor = "tap-preferred";
         };
+
+        minus_morph: minus_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MINUS_MORPH";
+            bindings = <&kp MINUS>, <&kp LS(LC(T))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        nine_morph: nine_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NINE_MORPH";
+            bindings = <&kp N9>, <&kp LS(LC(R))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -1116,10 +1134,10 @@
 
         Num_En {
             bindings = <
-  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                           &trans  &trans     &trans      &trans        &trans
-  &kp EQUAL     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                            &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
-  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                           &trans  &trans     &kp COMMA   &kp DOT       &trans
-                                            &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans
+  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph   &minus_morph                           &trans  &trans     &trans      &trans        &trans
+  &kp EQUAL     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
+  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                              &trans  &trans     &kp COMMA   &kp DOT       &trans
+                                            &trans        &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans
             >;
 
             display-name = "Num_En";
@@ -1127,10 +1145,10 @@
 
         Num_Ru {
             bindings = <
-  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp MINUS                           &trans  &trans     &trans        &trans        &trans
-  &kp EQUAL     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                            &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI
-  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                           &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans
-                                            &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans
+  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph   &minus_morph                           &trans  &trans     &trans        &trans        &trans
+  &kp EQUAL     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI
+  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                              &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans
+                                            &trans        &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans
             >;
 
             display-name = "Num_Ru";
