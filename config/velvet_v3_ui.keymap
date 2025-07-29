@@ -1,4 +1,4 @@
-#include <dt-bindings/zmk/input_transform.h>
+я#include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include "keys_ru.h"
@@ -1210,7 +1210,7 @@
 &trackball { cpi = <1600>; };
 
 &trackball_listener {
-    input-processors = <&zip_xy_scaler 14 20>;
+    input-processors = <&zip_xy_scaler 18 20>;
 
     scroller {
         layers = <5>;
