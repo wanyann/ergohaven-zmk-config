@@ -49,12 +49,12 @@ include:
   - board: ergohaven
     shield: op36_right
   - board: ergohaven
-    shield: op36_dongle dongle dongle_screen # or prospector_adapter
+    shield: op36_qube qube qube_screen # or prospector_adapter
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: op36_dongle-ergohaven-zmk
+    artifact-name: op36_qube-ergohaven-zmk
   - board: ergohaven
-    shield: op36_left_dongle
+    shield: op36_left_qube
 
   # - board: ergohaven
   #   shield: k03_left
