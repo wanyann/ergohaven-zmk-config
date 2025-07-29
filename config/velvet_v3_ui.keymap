@@ -679,11 +679,11 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_wait_time 5000>,
                 <&macro_press>,
                 <&mo 4>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_wait_time 50>,
                 <&mo 4>;
 
             label = "MO_DELAY";
