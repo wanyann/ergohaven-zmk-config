@@ -1240,7 +1240,6 @@
 
 &trackball_listener {
     input-processors = <&zip_xy_scaler 3 4>;
-    4 = >;
 
     scroller {
         layers = <5>;
