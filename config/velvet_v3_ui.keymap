@@ -1188,9 +1188,9 @@
 
         Sym_Ru {
             bindings = <
-&trans        &en AT         &en PIPE       &kp RU_DOUBLE_QUOTES  &kp RU_RUBLE      &en SINGLE_QUOTE        &en LEFT_BRACKET  &en BACKSLASH  &en RIGHT_BRACKET  &trans     &trans     &kp LEFT_PARENTHESIS
-&kp RU_COLON  &kp RPAR       &kp PLUS       &kp RU_NUMERO         &en LEFT_BRACE    &kp RU_SEMICOLON        &en RIGHT_BRACE   &trans         &trans             &en TILDE  &en CARET  &kp PERCENT
-&ru_code      &en AMPERSAND  &en LESS_THAN  &en DOLLAR            &en GREATER_THAN  &trans                  &trans            &trans         &trans             &trans     &trans     &trans
+&trans    &trans  &en AT                &en PIPE      &kp RU_DOUBLE_QUOTES  &kp RU_RUBLE                    &en SINGLE_QUOTE  &en LEFT_BRACKET  &en BACKSLASH     &en RIGHT_BRACKET  &trans    &trans
+&trans      &trans  &kp LEFT_PARENTHESIS  &kp RU_COLON  &kp RPAR              &kp PLUS                        &kp RU_NUMERO     &en LEFT_BRACE    &kp RU_SEMICOLON  &en RIGHT_BRACE    &trans     &trans
+&trans      &trans  &en TILDE             &en CARET     &kp PERCENT           &ru_code                        &en AMPERSAND     &en LESS_THAN     &en DOLLAR        &en GREATER_THAN   &trans     &trans
                              &trans         &trans                &trans            &trans
             >;
 
