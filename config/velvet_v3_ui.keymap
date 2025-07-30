@@ -1093,8 +1093,8 @@
 
         Mouse {
             bindings = <
-&trans  &trns_msoff               &trns_msoff               &mo 5                     &trns_msoff_hold LC(R) 0     &trns_hold_msoff LC(T) 0                    &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff  &trns_msoff  &trans
-&trans  &kp_snip LCTRL            &mkp_hold LEFT_ALT MB3    &mkp_hold LSHFT MB2       &mkp1_ctrl                   &trns_hold_msoff LC(F) 0                    &trns_msoff  &trans_msoff_lr_hold 10 0  &trns_msoff  &trns_msoff  &trns_msoff  &trans
+&trans  &trns_msoff               &mo 6                     &mo 5                     &trns_msoff_hold LC(R) 0     &trns_hold_msoff LC(T) 0                    &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff  &trns_msoff  &trans
+&trans  &kp LCTRL                 &mkp_hold LEFT_ALT MB3    &mkp_hold LSHFT MB2       &mkp1_ctrl                   &trns_hold_msoff LC(F) 0                    &trns_msoff  &trans_msoff_lr_hold 10 0  &trns_msoff  &trns_msoff  &trns_msoff  &trans
 &trans  &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &trans                       &trns_msoff_hold LG(V) 0                    &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff  &trns_msoff  &trans
                                   &trans                    &trans                    &kp_layeroff 4 LS(K_CANCEL)  &trans                    &sl 12    &trans  &trans       &trans                     &trans       &trans
             >;
@@ -1240,7 +1240,6 @@
 
 &trackball_listener {
     input-processors = <&zip_xy_scaler 3 4>;
-
     4 = >;
 
     scroller {
