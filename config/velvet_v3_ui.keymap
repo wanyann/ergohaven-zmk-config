@@ -688,6 +688,21 @@
 
             label = "MO_DELAY";
         };
+
+        kp_snip: kp_snip {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &mo 6>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 6 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+
+            label = "KP_SNIP";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
     };
 
     behaviors {
@@ -1079,7 +1094,7 @@
         Mouse {
             bindings = <
 &trans  &trns_msoff               &trns_msoff               &mo 5                     &trns_msoff_hold LC(R) 0     &trns_hold_msoff LC(T) 0                    &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff  &trns_msoff  &trans
-&trans  &kp LCTRL                 &mkp_hold LEFT_ALT MB3    &mkp_hold LSHFT MB2       &mkp1_ctrl                   &trns_hold_msoff LC(F) 0                    &trns_msoff  &trans_msoff_lr_hold 10 0  &trns_msoff  &trns_msoff  &trns_msoff  &trans
+&trans  &kp_snip LCTRL            &mkp_hold LEFT_ALT MB3    &mkp_hold LSHFT MB2       &mkp1_ctrl                   &trns_hold_msoff LC(F) 0                    &trns_msoff  &trans_msoff_lr_hold 10 0  &trns_msoff  &trns_msoff  &trns_msoff  &trans
 &trans  &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &trans                       &trns_msoff_hold LG(V) 0                    &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff  &trns_msoff  &trans
                                   &trans                    &trans                    &kp_layeroff 4 LS(K_CANCEL)  &trans                    &sl 12    &trans  &trans       &trans                     &trans       &trans
             >;
@@ -1188,10 +1203,10 @@
 
         Sym_Ru {
             bindings = <
-&trans    &trans  &en AT                &en PIPE      &kp RU_DOUBLE_QUOTES  &kp RU_RUBLE                    &en SINGLE_QUOTE  &en LEFT_BRACKET  &en BACKSLASH     &en RIGHT_BRACKET  &trans    &trans
-&trans      &trans  &kp LEFT_PARENTHESIS  &kp RU_COLON  &kp RPAR              &kp PLUS                        &kp RU_NUMERO     &en LEFT_BRACE    &kp RU_SEMICOLON  &en RIGHT_BRACE    &trans     &trans
-&trans      &trans  &en TILDE             &en CARET     &kp PERCENT           &ru_code                        &en AMPERSAND     &en LESS_THAN     &en DOLLAR        &en GREATER_THAN   &trans     &trans
-                             &trans         &trans                &trans            &trans
+&trans  &trans  &en AT                &en PIPE      &kp RU_DOUBLE_QUOTES  &kp RU_RUBLE        &en SINGLE_QUOTE  &en LEFT_BRACKET  &en BACKSLASH     &en RIGHT_BRACKET  &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &kp RU_COLON  &kp RPAR              &kp PLUS            &kp RU_NUMERO     &en LEFT_BRACE    &kp RU_SEMICOLON  &en RIGHT_BRACE    &trans  &trans
+&trans  &trans  &en TILDE             &en CARET     &kp PERCENT           &ru_code            &en AMPERSAND     &en LESS_THAN     &en DOLLAR        &en GREATER_THAN   &trans  &trans
+                &trans                &trans        &trans                &trans
             >;
 
             display-name = "Sym_Ru";
