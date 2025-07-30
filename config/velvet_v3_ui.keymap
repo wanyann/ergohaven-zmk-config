@@ -679,7 +679,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 100>,
+                <&macro_wait_time 150>,
                 <&macro_press>,
                 <&mo 4>,
                 <&macro_pause_for_release>,
@@ -1239,7 +1239,10 @@
 &trackball { cpi = <800>; };
 
 &trackball_listener {
-    <&zip_xy_scaler 3 4>;
+    <&zip_xy_scaler 3
+
+    4 = >;
+
     scroller {
         layers = <5>;
         input-processors =
