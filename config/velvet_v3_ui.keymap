@@ -609,8 +609,11 @@
                 <&mkp MB1 &mo 7>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_wait_time 300>,
-                <&mkp MB1 &mo 7 &kp LCTRL>;
+                <&mkp MB1>,
+                <&macro_wait_time 150>,
+                <&mo 7>,
+                <&macro_tap>,
+                <&kp LCTRL>;
 
             label = "MKP1_CTRL";
             wait-ms = <0>;
@@ -668,12 +671,7 @@
         ms_alt_tab: space_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL &kp TAB>,
-                <&macro_pause_for_release>,
-                <&macro_release>,
-                <&kp TAB>;
+            bindings = <&macro_press>, <&kp LCTRL>, <&macro_tap>, <&kp TAB>;
 
             label = "SPACE_TAB";
         };
@@ -1155,7 +1153,7 @@
 &trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &trans                               &trans        &kp HOME   &kp UP    &kp END    &kp DELETE   &trans
 &trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &zeros_macro                         &select_word  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row  &trans
 &trans  &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &dbl_tap LEFT_GUI                    &trans        &kp PG_UP  &none     &kp PG_DN  &trans       &trans
-                                        &trans                           &trans                   &trans                   &trans             &trans    &trans  &trans        &trans     &trans    &trans
+                                        &trans                           &trans                   &trans                   &space_mrph        &trans    &trans  &trans        &trans     &trans    &trans
             >;
 
             display-name = "Nav";
