@@ -609,11 +609,7 @@
                 <&mkp MB1 &mo 7>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mkp MB1>,
-                <&macro_wait_time 150>,
-                <&mo 7>,
-                <&macro_tap>,
-                <&kp LCTRL>;
+                <&mkp MB1 &mo 7 &kp LCTRL &kp LCTRL &kp LCTRL &kp LCTRL>;
 
             label = "MKP1_CTRL";
             wait-ms = <0>;
@@ -671,12 +667,7 @@
         ms_alt_tab: space_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&macro_wait_time 75>,
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp TAB>;
+            bindings = <&macro_press>, <&kp LCTRL>, <&macro_tap>, <&kp TAB>;
 
             label = "SPACE_TAB";
         };
@@ -690,8 +681,7 @@
                 <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_wait_time 0>,
-                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &kp LCTRL>;
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>;
 
             label = "MO_DELAY";
         };
