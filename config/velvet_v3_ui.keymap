@@ -669,7 +669,12 @@
         ms_alt_tab: space_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&macro_press>, <&kp LCTRL>, <&macro_tap>, <&kp TAB>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp TAB>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp TAB>;
 
             label = "SPACE_TAB";
         };
