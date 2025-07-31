@@ -609,9 +609,8 @@
                 <&mkp MB1 &mo 7>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mkp MB1>,
-                <&macro_wait_time 150>,
-                <&mo 7 &kp LCTRL>;
+                <&macro_wait_time 300>,
+                <&mkp MB1 &mo 7 &kp LCTRL>;
 
             label = "MKP1_CTRL";
             wait-ms = <0>;
