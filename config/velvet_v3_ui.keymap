@@ -680,14 +680,16 @@
         };
 
         mo_delay: mo_delay {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings =
+                <&macro_wait_time 200>,
                 <&macro_press>,
-                <&mo 4>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mo 4 &kp LCTRL>;
+                <&macro_wait_time 0>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &kp LCTRL>;
 
             label = "MO_DELAY";
         };
@@ -1052,10 +1054,10 @@
 
         En {
             bindings = <
-&none  &none                 &kp X                 &kp Z              &en_com_mt LC(R) 0  &en_dot_mt LC(T) 0                           &kp Q     &kp G      &kp N              &kp F  &none              &none
-&none  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrm LEFT_SHIFT E  &hrml LCTRL A       &mt LC(F) J                                  &kp P     &hrl 10 D  &hrm LEFT_SHIFT R  &kp S  &hrml_slow RALT L  &none
-&none  &mt LC(Z) K           &mt LC(X) Y           &mt LC(C) O        &mt LC(V) U         &mt LG(V) K_CANCEL                           &kp B     &kp C      &kp M              &kp W  &mt LC(SLASH) V    &none
-                             &kp LS(F7)            &kp F7             &kp K_CANCEL        &lt 9 SPACE         &sl 12    &kp BACKSPACE  &lt 10 T  &mo 4      &kp LS(LC(I))      &mo 4
+&none  &none                 &kp X                 &kp Z              &en_com_mt LC(R) 0  &en_dot_mt LC(T) 0                           &kp Q     &kp G        &kp N              &kp F  &none              &none
+&none  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrm LEFT_SHIFT E  &hrml LCTRL A       &mt LC(F) J                                  &kp P     &hrl 10 D    &hrm LEFT_SHIFT R  &kp S  &hrml_slow RALT L  &none
+&none  &mt LC(Z) K           &mt LC(X) Y           &mt LC(C) O        &mt LC(V) U         &mt LG(V) K_CANCEL                           &kp B     &kp C        &kp M              &kp W  &mt LC(SLASH) V    &none
+                             &kp LS(F7)            &kp F7             &kp K_CANCEL        &lt 9 SPACE         &sl 12    &kp BACKSPACE  &lt 10 T  &mo_delay 4  &kp LS(LC(I))      &mo 4
             >;
 
             display-name = "En";
