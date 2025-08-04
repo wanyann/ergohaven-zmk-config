@@ -328,7 +328,7 @@
         lg_ru: lg_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &os_ru>;
+            bindings = <&to 2 &to_ru>;
             label = "LG_RU";
             tap-ms = <0>;
             wait-ms = <0>;
@@ -337,26 +337,26 @@
         lg_en: lg_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &os_en>;
+            bindings = <&to 0 &to_en>;
             label = "LG_EN";
             tap-ms = <0>;
             wait-ms = <0>;
         };
 
-        os_ru: os_ru {
+        to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N8))>;
-            label = "OS_RU";
+            label = "TO_RU";
             tap-ms = <30>;
             wait-ms = <0>;
         };
 
-        os_en: os_en {
+        to_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N9))>;
-            label = "OS_EN";
+            label = "TO_EN";
             wait-ms = <0>;
             tap-ms = <30>;
         };
@@ -365,14 +365,14 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&os_en>,
+                <&to_en>,
                 <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&os_ru>;
+                <&to_ru>;
 
             label = "EN";
             wait-ms = <0>;
@@ -383,14 +383,14 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&os_ru>,
+                <&to_ru>,
                 <&macro_press>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap>,
-                <&os_en>;
+                <&to_en>;
 
             label = "RU";
             wait-ms = <15>;
@@ -434,7 +434,7 @@
         ru_code: ru_code {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&os_en &kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW &os_ru>;
+            bindings = <&to_en &kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW &to_ru>;
             label = "RU_CODE";
             tap-ms = <30>;
         };
@@ -514,7 +514,7 @@
         braces_ru: braces_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&os_en &braces_en &os_ru>;
+            bindings = <&to_en &braces_en &to_ru>;
             label = "BRACES_RU";
         };
 
@@ -529,7 +529,7 @@
         brackets_ru: brackets_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&os_en &brackets_en &os_ru>;
+            bindings = <&to_en &brackets_en &to_ru>;
             label = "BRACKETS_RU";
         };
 
@@ -552,7 +552,7 @@
         less_greater_ru: less_greater_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&os_en &less_greater_en &os_ru>;
+            bindings = <&to_en &less_greater_en &to_ru>;
             label = "LESS_GREATER_RU";
         };
 
