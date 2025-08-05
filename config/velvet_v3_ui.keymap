@@ -141,7 +141,7 @@
         };
 
         combo_capsword_en {
-            bindings = <&caps_word>;
+            bindings = <&to 1>;
             key-positions = <13 14>;
             layers = <0 1>;
         };
@@ -157,7 +157,7 @@
         };
 
         combo_capsword_ru {
-            bindings = <&caps_word_ru>;
+            bindings = <&to 3>;
             key-positions = <13 14>;
             layers = <2 3>;
         };
