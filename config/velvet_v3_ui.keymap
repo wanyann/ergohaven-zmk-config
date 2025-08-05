@@ -1065,6 +1065,7 @@
             label = "CAPS_WORD_RU";
             #binding-cells = <0>;
             continue-list = <DOT COMMA SINGLE_QUOTE GRAVE LEFT_BRACE RIGHT_BRACE SEMICOLON>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
