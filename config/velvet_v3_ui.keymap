@@ -141,7 +141,7 @@
         };
 
         combo_capsword_en {
-            bindings = <&to 1>;
+            bindings = <&caps_word>;
             key-positions = <13 14>;
             layers = <0 1>;
         };
@@ -157,7 +157,7 @@
         };
 
         combo_capsword_ru {
-            bindings = <&to 3>;
+            bindings = <&caps_word_ru>;
             key-positions = <13 14>;
             layers = <2 3>;
         };
@@ -1058,6 +1058,13 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
+        };
+
+        caps_word_ru: caps_word_ru {
+            compatible = "zmk,behavior-caps-word";
+            label = "CAPS_WORD_RU";
+            #binding-cells = <0>;
+            continue-list = <DOT COMMA SINGLE_QUOTE GRAVE LEFT_BRACE RIGHT_BRACE SEMICOLON>;
         };
     };
 
