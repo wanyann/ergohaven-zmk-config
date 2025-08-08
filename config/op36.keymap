@@ -697,6 +697,22 @@
 
             label = "KP_";
         };
+
+        alt_enter: alt_enter {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp LS(ENTER)>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "ALT_ENTER";
+            tap-ms = <30>;
+            wait-ms = <30>;
+        };
     };
 
     behaviors {
@@ -1160,10 +1176,10 @@
 
         Num_En {
             bindings = <
-  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph   &minus_morph                            &trans  &trans     &trans      &trans        &trans
-  &kp EQUAL     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                                &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
-  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                               &trans  &trans     &kp COMMA   &kp DOT       &trans
-                                            &trans        &alt_spc      &kp_ LA(ENTER)    &trans  &trans  &trans
+  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph   &minus_morph                        &trans  &trans     &trans      &trans        &trans
+  &kp EQUAL     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                            &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
+  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                           &trans  &trans     &kp COMMA   &kp DOT       &trans
+                                            &trans        &alt_spc      &alt_enter    &trans  &trans  &trans
             >;
 
             display-name = "Num_En";
@@ -1171,10 +1187,10 @@
 
         Num_Ru {
             bindings = <
-  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph   &minus_morph                           &trans  &trans     &trans        &trans        &trans
-  &kp EQUAL     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI
-  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                              &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans
-                                            &trans        &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans
+  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph   &minus_morph                        &trans  &trans     &trans        &trans        &trans
+  &kp EQUAL     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                            &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI
+  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                           &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans
+                                            &trans        &alt_spc      &alt_enter    &trans  &trans  &trans
             >;
 
             display-name = "Num_Ru";
