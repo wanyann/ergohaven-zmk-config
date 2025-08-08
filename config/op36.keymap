@@ -712,7 +712,7 @@
                 <&kp LCTRL>;
 
             label = "CTRL_TAP";
-            wait-ms = <300>;
+            wait-ms = <150>;
             tap-ms = <70>;
         };
     };
