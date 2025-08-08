@@ -1044,16 +1044,6 @@
             #binding-cells = <0>;
             continue-list = <DOT COMMA SINGLE_QUOTE LEFT_BRACE RIGHT_BRACE GRAVE>;
         };
-
-        c_tap: c_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "C_TAP";
-            bindings = <&ctrl_tap>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <150>;
-            flavor = "tap-preferred";
-        };
     };
 
     keymap {
