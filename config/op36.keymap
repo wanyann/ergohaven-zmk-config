@@ -703,7 +703,7 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MULTI_KP";
-            tap-ms = <150>;
+            tap-ms = <200>;
         };
     };
 
