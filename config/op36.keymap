@@ -696,7 +696,7 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "KP_";
-            wait-ms = <150>;
+            wait-ms = <5000>;
         };
     };
 
