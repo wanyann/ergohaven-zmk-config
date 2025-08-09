@@ -54,25 +54,28 @@
         kha {
             bindings = <&kp RU_CYRILLIC_HA>;
             key-positions = <6 7>;
-            layers = <1>;
         };
 
         hrdsgn {
             bindings = <&kp RU_CYRILLIC_HARD_SIGN>;
             key-positions = <7 8>;
-            layers = <1>;
         };
 
         cmben {
             bindings = <&layer_en>;
             key-positions = <2 3>;
-            layers = <1>;
         };
 
         cmbru {
             bindings = <&layer_ru>;
             key-positions = <2 3>;
             layers = <0>;
+        };
+
+        combo_cw_ru {
+            bindings = <&tog 2>;
+            key-positions = <22 23>;
+            layers = <1 2>;
         };
     };
 
@@ -101,7 +104,7 @@
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 1 &to_ru>;
+            bindings = <&to 0 &to_ru>;
             label = "LAYER_RU";
         };
 
@@ -120,8 +123,22 @@
         lg_tog: lg_tog {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE) &tog 1>;
+            bindings = <&kp LG(SPACE) &tog 0>;
             label = "LG_TOG";
+        };
+
+        cw_off: cw_off {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "CW_OFF";
+        };
+
+        cw_off_en: cw_off_en {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            label = "CW_OFF_EN";
         };
     };
 
@@ -133,16 +150,7 @@
   &kp Q        &kp W        &kp E         &kp R          &kp T                          &kp Y  &kp U         &kp I         &kp O        &kp P
   &hml LGUI A  &hml LALT S  &hml LSHFT D  &hml LCTRL F   &kp G                          &kp H  &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L  &hmr RGUI SEMICOLON
   &kp Z        &kp X        &kp C         &kp V          &kp B                          &kp N  &kp M         &kp COMMA     &kp DOT      &kp SQT
-                                          &kp BACKSPACE  &mo 6  &lg_space    &kp ENTER  &mo 4  &kp TAB
-            >;
-        };
-
-        en_cw {
-            bindings = <
-  &kp Q        &kp W        &kp E         &kp R          &kp T                          &kp Y  &kp U         &kp I         &kp O        &kp P
-  &hml LGUI A  &hml LALT S  &hml LSHFT D  &hml LCTRL F   &kp G                          &kp H  &hmr RCTRL J  &hmr RSHFT K  &hmr LALT L  &hmr RGUI SEMICOLON
-  &kp Z        &kp X        &kp C         &kp V          &kp B                          &kp N  &kp M         &kp COMMA     &kp DOT      &kp SQT
-                                          &kp BACKSPACE  &mo 4  &lg_space    &kp ENTER  &mo 2  &kp TAB
+                                          &kp BACKSPACE  &mo 5  &lg_space    &kp ENTER  &mo 3  &kp TAB
             >;
         };
 
@@ -151,16 +159,16 @@
   &kp LS(RU_CYRILLIC_SHORT_I)   &kp LS(RU_CYRILLIC_TSE)         &kp LS(RU_CYRILLIC_U)          &kp LS(RU_CYRILLIC_KA)        &kp LS(RU_CYRILLIC_IE)                          &kp LS(RU_CYRILLIC_EN)  &kp LS(RU_CYRILLIC_GHE)        &kp LS(RU_CYRILLIC_SHA)        &kp LS(RU_CYRILLIC_SHCHA)     &kp LS(RU_CYRILLIC_ZE)
   &hml LGUI LS(RU_CYRILLIC_EF)  &hml LALT LS(RU_CYRILLIC_YERU)  &hml LSHFT LS(RU_CYRILLIC_VE)  &hml LCTRL LS(RU_CYRILLIC_A)  &kp LS(RU_CYRILLIC_PE)                          &kp LS(RU_CYRILLIC_ER)  &hmr RCTRL LS(RU_CYRILLIC_O)   &hmr RSHFT LS(RU_CYRILLIC_EL)  &hmr LALT LS(RU_CYRILLIC_DE)  &hmr RGUI LS(RU_CYRILLIC_ZHE)
   &kp LS(RU_CYRILLIC_YA)        &kp LS(RU_CYRILLIC_CHE)         &kp LS(RU_CYRILLIC_ES)         &kp LS(RU_CYRILLIC_EM)        &kp LS(RU_CYRILLIC_I)                           &kp LS(RU_CYRILLIC_TE)  &kp LS(RU_CYRILLIC_SOFT_SIGN)  &kp LS(RU_CYRILLIC_BE)         &kp LS(RU_CYRILLIC_YU)        &kp LS(RU_CYRILLIC_E)
-                                                                                               &kp BACKSPACE                 &mo 4                   &lg_space    &kp ENTER  &mo 3                   &kp TAB
+                                                                                               &kp BACKSPACE                 &mo 3                   &kp SPACE    &kp ENTER  &mo 2                   &kp TAB
             >;
         };
 
-        ru_cw {
+        cw_ru {
             bindings = <
   &kp RU_CYRILLIC_SHORT_I   &kp RU_CYRILLIC_TSE         &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_KA        &kp RU_CYRILLIC_IE                          &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE        &kp RU_CYRILLIC_SHA        &kp RU_CYRILLIC_SHCHA     &kp RU_CYRILLIC_ZE
   &hml LGUI RU_CYRILLIC_EF  &hml LALT RU_CYRILLIC_YERU  &hml LSHFT RU_CYRILLIC_VE  &hml LCTRL RU_CYRILLIC_A  &kp RU_CYRILLIC_PE                          &kp RU_CYRILLIC_ER  &hmr RCTRL RU_CYRILLIC_O   &hmr RSHFT RU_CYRILLIC_EL  &hmr LALT RU_CYRILLIC_DE  &hmr RGUI RU_CYRILLIC_ZHE
   &kp RU_CYRILLIC_YA        &kp RU_CYRILLIC_CHE         &kp RU_CYRILLIC_ES         &kp RU_CYRILLIC_EM        &kp RU_CYRILLIC_I                           &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_BE         &kp RU_CYRILLIC_YU        &kp RU_CYRILLIC_E
-                                                                                   &kp BACKSPACE             &mo 4               &lg_space    &kp ENTER  &mo 3               &kp TAB
+                                                                                   &kp BACKSPACE             &mo 3               &lg_space    &kp ENTER  &mo 2               &kp TAB
             >;
         };
 
@@ -169,7 +177,7 @@
   &kp TILDE       &kp LT          &kp EQUAL         &kp GT           &kp GRAVE                    &kp CARET  &kp LBKT         &kp UNDER        &kp RBKT        &kp DLLR
   &hml LGUI BSLH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &hmr RCTRL LBRC  &hmr RSHFT SEMI  &hmr LALT RBRC  &hmr RGUI EXCL
   &kp HASH        &kp STAR        &kp COLON         &kp FSLH         &kp AMPS                     &kp AT     &kp PIPE         &kp COMMA        &kp DOT         &kp QMARK
-                                                    &trans           &mo 7      &trans    &trans  &none      &trans
+                                                    &trans           &mo 6      &trans    &trans  &none      &trans
             >;
         };
 
@@ -178,7 +186,7 @@
   &en TILDE               &en LT          &kp EQUAL         &en GT           &en GRAVE                    &en CARET  &en LBKT  &kp UNDER           &en RBKT    &en DLLR
   &hml LGUI RU_BACKSLASH  &hml LALT LPAR  &hml LSHFT MINUS  &hml LCTRL RPAR  &kp PLUS                     &kp PRCNT  &en LBRC  &hmr RSHFT RU_SEMI  &en RBRC    &hmr RGUI EXCL
   &en HASH                &kp STAR        &kp RU_COLON      &kp RU_FSLH      &en AMPS                     &en AT     &en PIPE  &kp RU_COMMA        &kp RU_DOT  &kp RU_QMARK
-                                                            &trans           &mo 7      &trans    &trans  &none      &trans
+                                                            &trans           &mo 6      &trans    &trans  &none      &trans
             >;
         };
 
@@ -187,7 +195,7 @@
   &kp N1         &kp N2    &kp N3     &kp N4     &kp N5                        &kp N6           &kp N7           &kp N8           &kp N9        &kp N0
   &hml LGUI ESC  &kp LALT  &kp LSHFT  &kp LCTRL  &kp ENTER                     &kp PRINTSCREEN  &hmr RCTRL LEFT  &hmr RSHFT DOWN  &hmr LALT UP  &hmr RGUI RIGHT
   &layer_en      &kp HOME  &kp INS    &kp END    &kp DELETE                    &kp CAPS         &none            &kp PG_DN        &kp PG_UP     &layer_ru
-                                      &trans     &none       &trans    &trans  &mo 7            &trans
+                                      &trans     &none       &trans    &trans  &mo 6            &trans
             >;
         };
 
@@ -197,6 +205,15 @@
   &kp LGUI     &hml LALT F5  &hml LSHFT F6  &hml LCTRL F7  &kp F8                     &out OUT_BLE  &hmr RCTRL C_VOL_DN  &hmr RSHFT C_MUTE  &hmr LALT C_VOL_UP  &kp RGUI
   &none        &kp F9        &kp F10        &kp F11        &kp F12                    &out OUT_USB  &kp C_PREV           &kp C_PP           &kp C_NEXT          &studio_unlock
                                             &trans         &trans   &trans    &trans  &trans        &trans
+            >;
+        };
+
+        layer_8 {
+            bindings = <
+  &kp LS(RU_CYRILLIC_SHORT_I)   &kp LS(RU_CYRILLIC_TSE)         &kp LS(RU_CYRILLIC_U)          &kp LS(RU_CYRILLIC_KA)        &kp LS(RU_CYRILLIC_IE)                          &kp LS(RU_CYRILLIC_EN)  &kp LS(RU_CYRILLIC_GHE)        &kp LS(RU_CYRILLIC_SHA)        &kp LS(RU_CYRILLIC_SHCHA)     &kp LS(RU_CYRILLIC_ZE)
+  &hml LGUI LS(RU_CYRILLIC_EF)  &hml LALT LS(RU_CYRILLIC_YERU)  &hml LSHFT LS(RU_CYRILLIC_VE)  &hml LCTRL LS(RU_CYRILLIC_A)  &kp LS(RU_CYRILLIC_PE)                          &kp LS(RU_CYRILLIC_ER)  &hmr RCTRL LS(RU_CYRILLIC_O)   &hmr RSHFT LS(RU_CYRILLIC_EL)  &hmr LALT LS(RU_CYRILLIC_DE)  &hmr RGUI LS(RU_CYRILLIC_ZHE)
+  &kp LS(RU_CYRILLIC_YA)        &kp LS(RU_CYRILLIC_CHE)         &kp LS(RU_CYRILLIC_ES)         &kp LS(RU_CYRILLIC_EM)        &kp LS(RU_CYRILLIC_I)                           &kp LS(RU_CYRILLIC_TE)  &kp LS(RU_CYRILLIC_SOFT_SIGN)  &kp LS(RU_CYRILLIC_BE)         &kp LS(RU_CYRILLIC_YU)        &kp LS(RU_CYRILLIC_E)
+                                                                                               &kp BACKSPACE                 &mo 3                   &kp SPACE    &kp ENTER  &mo 2                   &kp TAB
             >;
         };
     };
