@@ -8,13 +8,13 @@
 
 &mt {
     flavor = "tap-preferred";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <200>;
     bindings = <&kp_>, <&kp>;
 };
 
 &lt {
     flavor = "balanced";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <200>;
 };
 
 &sl {
@@ -743,7 +743,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             require-prior-idle-ms = <50>;
         };
@@ -755,7 +755,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             require-prior-idle-ms = <50>;
         };
 
@@ -785,7 +785,7 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             require-prior-idle-ms = <50>;
         };
@@ -829,7 +829,7 @@
             bindings = <&ml>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             require-prior-idle-ms = <50>;
         };
@@ -847,7 +847,7 @@
             bindings = <&ml>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
             require-prior-idle-ms = <50>;
         };
@@ -1023,7 +1023,7 @@
             bindings = <&kp_msoff>, <&trns_msoff>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
