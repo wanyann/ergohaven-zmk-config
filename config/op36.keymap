@@ -745,7 +745,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
         };
 
         hrm_slow: hrm_slow {
@@ -756,7 +756,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
         };
 
         ru_lt_cw_off: ru_lt_cw_off {
@@ -787,7 +787,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
         };
 
         lt_bspc: lt_bspc {
@@ -831,7 +831,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
         };
 
         layer_on: layer_on {
@@ -849,7 +849,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
         };
 
         soft_sign: soft_sign {
