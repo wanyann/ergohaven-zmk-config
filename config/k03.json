@@ -72,5 +72,48 @@
         ]
       }
     },
-    "sensors": []
+    "sensors": [
+      {
+        "ref": "encoder_L1",
+        "name": "encoder_L1",
+        "identifier": "encoder_L1",
+        "compatible": "alps,ec11",
+        "label": "ENCODER_L1"
+      },
+      {
+        "ref": "encoder_R1",
+        "name": "encoder_R1",
+        "identifier": "encoder_R1",
+        "compatible": "alps,ec11",
+        "label": "ENCODER_R1"
+      },
+      {
+        "ref": "encoder_L2",
+        "name": "encoder_L2",
+        "identifier": "encoder_L2",
+        "compatible": "alps,ec11",
+        "label": "ENCODER_L2"
+      },
+      {
+        "ref": "encoder_R2",
+        "name": "encoder_R2",
+        "identifier": "encoder_R2",
+        "compatible": "alps,ec11",
+        "label": "ENCODER_R2"
+      },
+      {
+        "ref": "encoder_L3",
+        "name": "encoder_L3",
+        "identifier": "encoder_L3",
+        "compatible": "alps,ec11",
+        "label": "ENCODER_L3"
+      },
+      {
+        "ref": "encoder_R3",
+        "name": "encoder_R3",
+        "identifier": "encoder_R3",
+        "compatible": "alps,ec11",
+        "label": "ENCODER_R3"
+      }
+    ]
   }

@@ -1,3 +1,4 @@
+#include "keys_ru.h"
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
@@ -1116,7 +1117,7 @@
             display-name = "Ru_CW";
         };
 
-        Mouse {
+        mouse {
             bindings = <
 &trans  &trns_msoff               &mo 6                     &mo 5                     &trns_msoff_hold LC(R) 0     &trns_hold_msoff LC(T) 0                    &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff  &trns_msoff  &trans
 &trans  &kp LEFT_ALT              &mkp_hold LCTRL MB3       &mkp_hold LSHFT MB2       &mkp1_ctrl                   &trns_hold_msoff LC(F) 0                    &trns_msoff  &trans_msoff_lr_hold 10 0  &trns_msoff  &trns_msoff  &trns_msoff  &trans
@@ -1138,7 +1139,7 @@
             display-name = "Scroll";
         };
 
-        Sniper {
+        sniper {
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &mkp MB1  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -1269,6 +1270,7 @@
     scroller {
         layers = <5>;
         input-processors =
+
             <&zip_xy_transform (INPUT_TRANSFORM_Y_INVERT)>,
             <&zip_xy_scaler 1 48>,
             <&zip_xy_to_scroll_mapper>;
