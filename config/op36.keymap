@@ -1196,10 +1196,10 @@
 
         Num_En {
             bindings = <
-  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph   &minus_morph                           &trans  &trans     &trans      &trans        &trans
-  &kp EQUAL     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
-  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                              &trans  &trans     &kp COMMA   &kp DOT       &trans
-                                            &trans        &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans
+  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &minus_morph                           &trans  &trans     &trans      &trans        &trans
+  &kp N0        &kp N1        &kp N2        &kp N3       &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
+  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                              &trans  &trans     &kp COMMA   &kp DOT       &trans
+                                            &trans       &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans
             >;
 
             display-name = "Num_En";
@@ -1207,10 +1207,10 @@
 
         Num_Ru {
             bindings = <
-  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph   &minus_morph                           &trans  &trans     &trans        &trans        &trans
-  &kp EQUAL     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI
-  &kp N0        &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LC(B)                              &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans
-                                            &trans        &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans
+  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &minus_morph                           &trans  &trans     &trans        &trans        &trans
+  &kp N0        &kp N1        &kp N2        &kp N3       &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI
+  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                              &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans
+                                            &trans       &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans
             >;
 
             display-name = "Num_Ru";
@@ -1252,8 +1252,8 @@
         Fn {
             bindings = <
   &trans   &kp F7  &kp F8  &kp F9  &trans                     &trans  &trans     &trans          &trans    &trans
-  &kp F11  &kp F4  &kp F5  &kp F6  &kp F12                    &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LALT  &kp LEFT_GUI
-  &kp F10  &kp F1  &kp F2  &kp F3  &trans                     &trans  &trans     &trans          &trans    &trans
+  &kp F10  &kp F1  &kp F2  &kp F3  &kp F12                    &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LALT  &kp LEFT_GUI
+  &kp F11  &kp F4  &kp F5  &kp F6  &trans                     &trans  &trans     &trans          &trans    &trans
                            &trans  &trans   &trans    &trans  &trans  &trans
             >;
 
