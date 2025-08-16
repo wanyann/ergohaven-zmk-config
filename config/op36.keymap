@@ -196,6 +196,7 @@
             bindings = <&parentheses>;
             key-positions = <11 13>;
             timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
         };
 
         combo_braces_ru {
@@ -203,6 +204,7 @@
             key-positions = <16 18>;
             timeout-ms = <25>;
             layers = <2 3 14>;
+            require-prior-idle-ms = <50>;
         };
 
         combo_brackets_en {
@@ -210,6 +212,7 @@
             key-positions = <6 8>;
             layers = <0 1 13>;
             timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_brackets_ru {
