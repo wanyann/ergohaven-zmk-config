@@ -81,7 +81,7 @@
 
         combo_quotes_en {
             bindings = <&quotes_en>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
             key-positions = <26 28>;
             layers = <0 1 13>;
         };
@@ -96,7 +96,7 @@
         combo_quotes_ru {
             bindings = <&quotes_ru>;
             key-positions = <26 28>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
             layers = <2 3>;
         };
 
