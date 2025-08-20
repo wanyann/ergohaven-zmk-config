@@ -233,13 +233,13 @@
         };
 
         combo_grave_ru {
-            bindings = <&en GRAVE>;
+            bindings = <&ru_grave>;
             key-positions = <15 16>;
             layers = <2 3 14>;
         };
 
         combo_grave_en {
-            bindings = <&kp GRAVE>;
+            bindings = <&en_grave>;
             key-positions = <15 16>;
             layers = <0 1 13>;
         };
@@ -713,6 +713,24 @@
             label = "MULTI_KP";
             tap-ms = <200>;
         };
+
+        dbl_grave_ru: dbl_grave_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &kp GRAVE &kp GRAVE &kp LEFT_ARROW &to_ru>;
+            label = "DBL_GRAVE_RU";
+            wait-ms = <0>;
+            tap-ms = <30>;
+        };
+
+        dbl_grave_en: dbl_grave_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE &kp GRAVE &kp LEFT_ARROW>;
+            label = "DBL_GRAVE_EN";
+            wait-ms = <0>;
+            tap-ms = <30>;
+        };
     };
 
     behaviors {
@@ -1096,6 +1114,24 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
+        };
+
+        ru_grave: ru_grave {
+            compatible = "zmk,behavior-tap-dance";
+            label = "RU_GRAVE";
+            #binding-cells = <0>;
+            bindings = <&en GRAVE>, <&dbl_grave_ru>;
+
+            tapping-term-ms = <180>;
+        };
+
+        en_grave: en_grave {
+            compatible = "zmk,behavior-tap-dance";
+            label = "EN_GRAVE";
+            #binding-cells = <0>;
+            bindings = <&kp GRAVE>, <&dbl_grave_en>;
+
+            tapping-term-ms = <180>;
         };
     };
 
