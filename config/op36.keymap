@@ -158,7 +158,7 @@
         };
 
         combo_capsword_en {
-            bindings = <&key_on RSHFT>;
+            bindings = <&to 1>;
             key-positions = <11 10>;
             layers = <0 1>;
         };
@@ -174,7 +174,7 @@
         };
 
         combo_capsword_ru {
-            bindings = <&key_on RSHFT>;
+            bindings = <&to 3>;
             key-positions = <11 10>;
             layers = <2 3>;
         };
