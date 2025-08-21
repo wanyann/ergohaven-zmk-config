@@ -449,11 +449,7 @@
         ru_cw_off: ru_cw_off {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap_time 0>,
-                <&key_off RSHFT>;
-
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &key_off RSHFT>;
             label = "RU_CW_OFF";
             wait-ms = <0>;
         };
@@ -461,11 +457,7 @@
         en_cw_off: en_cw_off {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap_time 0>,
-                <&key_off RSHFT>;
-
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &key_off RSHFT>;
             label = "EN_CW_OFF";
             wait-ms = <0>;
         };
