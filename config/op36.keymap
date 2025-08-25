@@ -126,7 +126,7 @@
         };
 
         combo_scha_ru {
-            bindings = <&kp RU_CYRILLIC_KA>;
+            bindings = <&kp RU_CYRILLIC_HA>;
             timeout-ms = <30>;
             key-positions = <7 8>;
             require-prior-idle-ms = <15>;
