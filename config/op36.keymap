@@ -1121,6 +1121,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        three_mrph: three_mrph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "THREE_MRPH";
+            bindings = <&kp NUMBER_3>, <&kp LS(LC(F))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -1239,7 +1248,7 @@
         Num_En {
             bindings = <
   &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &minus_morph                           &trans  &trans     &trans      &trans        &trans
-  &kp N0        &kp N1        &kp N2        &kp N3       &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
+  &kp N0        &kp N1        &kp N2        &three_mrph  &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
   &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                              &trans  &trans     &kp COMMA   &kp DOT       &trans
                                             &trans       &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans
             >;
@@ -1250,7 +1259,7 @@
         Num_Ru {
             bindings = <
   &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &minus_morph                           &trans  &trans     &trans        &trans        &trans
-  &kp N0        &kp N1        &kp N2        &kp N3       &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI
+  &kp N0        &kp N1        &kp N2        &three_mrph  &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI
   &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                              &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans
                                             &trans       &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans
             >;
