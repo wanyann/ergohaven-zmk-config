@@ -1137,9 +1137,9 @@
 
         En {
             bindings = <
-  &none                 &kp X                 &kp Z              &en_com_mt LC(R) 0   &en_dot_mt LC(T) 0                               &kp Q     &kp G        &kp N              &kp F  &none
-  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrs LEFT_SHIFT E  &hrml LCTRL A        &mt LC(F) J                                      &kp P     &hrl 10 D    &hrs LEFT_SHIFT R  &kp S  &hrml_slow RALT L
-  &mt LC(Z) K           &mt LC(X) Y           &mt LC(C) O        &mt LC(V) U          &mt LG(V) SINGLE_QUOTE                           &kp B     &kp C        &kp M              &kp W  &mt LC(SLASH) V
+  &none                 &kp Y                 &kp O              &mt LC(R) U          &mt LC(T) J                                      &kp Q     &kp G        &kp N              &kp F  &none
+  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrs LEFT_SHIFT E  &hrml LCTRL A        &en_dot_mt LC(F) 0                               &kp P     &hrl 10 D    &hrs LEFT_SHIFT R  &kp S  &hrml_slow RALT L
+  &mt LC(Z) K           &mt LC(X) X           &mt LC(C) Z        &en_com_mt LC(V) 0   &mt LG(V) SINGLE_QUOTE                           &kp B     &kp C        &kp M              &kp W  &mt LC(SLASH) V
                                                                  &en_cw_off K_CANCEL  &lt 9 SPACE             &sl 12    &kp BACKSPACE  &lt 10 T  &key_repeat
             >;
 
@@ -1148,10 +1148,10 @@
 
         En_CW {
             bindings = <
-  &trans                     &kp LS(X)                  &kp LS(Z)              &en_com_mt LC(R) 0   &en_dot_mt LC(T) 0                       &kp LS(Q)     &kp LS(G)      &kp LS(N)              &kp LS(F)  &trans
-  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrs LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)    &mt LC(F) LS(J)                          &kp LS(P)     &hrl 10 LS(D)  &hrs LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(L)
-  &mt LC(Z) LS(K)            &mt LC(X) LS(Y)            &mt LC(C) LS(O)        &mt LC(V) LS(U)      &mt LG(V) K_CANCEL                       &kp LS(B)     &kp LS(C)      &kp LS(M)              &kp LS(W)  &mt LC(SLASH) LS(V)
-                                                                               &en_cw_off K_CANCEL  &en_lt_cw_off 9 SPACE  &trans    &trans  &lt 10 LS(T)  &trans
+  &trans                     &kp LS(Y)                  &kp LS(O)              &mt LC(R) U          &mt LC(T) J                               &kp LS(Q)     &kp LS(G)      &kp LS(N)              &kp LS(F)  &trans
+  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrs LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)    &en_dot_mt LC(F) 0                        &kp LS(P)     &hrl 10 LS(D)  &hrs LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(L)
+  &mt LC(Z) LS(K)            &mt LC(X) LS(X)            &mt LC(C) LS(Z)        &en_com_mt LC(V) 0   &mt LG(V) SINGLE_QUOTE                    &kp LS(B)     &kp LS(C)      &kp LS(M)              &kp LS(W)  &mt LC(SLASH) LS(V)
+                                                                               &en_cw_off K_CANCEL  &en_lt_cw_off 9 SPACE   &trans    &trans  &lt 10 LS(T)  &trans
             >;
 
             display-name = "En_CW";
