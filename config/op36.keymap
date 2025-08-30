@@ -1157,10 +1157,10 @@
 
         En {
             bindings = <
-  &none                 &kp Y                 &kp O              &mt LC(R) U          &mt LC(T) J                                      &kp Q     &kp G        &kp N              &kp F  &none
-  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrs LEFT_SHIFT E  &hrml LCTRL A        &en_dot_mt LC(F) 0                               &kp P     &hrl 10 D    &hrs LEFT_SHIFT R  &kp S  &hrml_slow RALT L
-  &mt LC(Z) K           &mt LC(X) X           &mt LC(C) Z        &en_com_mt LC(V) 0   &mt LG(V) SINGLE_QUOTE                           &kp B     &kp C        &kp M              &kp W  &mt LC(SLASH) V
-                                                                 &en_cw_off K_CANCEL  &lt 9 SPACE             &sl 12    &kp BACKSPACE  &lt 10 T  &key_repeat
+  &kp Q                 &kp W                 &kp E              &mt LC(R) R          &mt LC(T) T                           &kp Q     &kp G        &kp N              &kp F  &none
+  &hrm_slow LEFT_GUI A  &hrm_slow LEFT_ALT S  &hrs LEFT_SHIFT D  &hrml LCTRL F        &mt LC(F) G                           &kp P     &hrl 10 D    &hrs LEFT_SHIFT R  &kp S  &hrml_slow RALT L
+  &mt LC(Z) Z           &mt LC(X) X           &mt LC(C) C        &mt LC(V) V          &mt LG(V) B                           &kp B     &kp C        &kp M              &kp W  &mt LC(SLASH) V
+                                                                 &en_cw_off K_CANCEL  &lt 9 SPACE  &sl 12    &kp BACKSPACE  &lt 10 T  &key_repeat
             >;
 
             display-name = "En";
