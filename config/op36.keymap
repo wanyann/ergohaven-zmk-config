@@ -356,7 +356,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LEFT_ALT)>;
             label = "TO_RU";
-            tap-ms = <100>;
+            tap-ms = <150>;
             wait-ms = <0>;
         };
 
@@ -366,7 +366,7 @@
             bindings = <&kp LA(LEFT_SHIFT)>;
             label = "TO_EN";
             wait-ms = <0>;
-            tap-ms = <100>;
+            tap-ms = <150>;
         };
 
         en: en {
