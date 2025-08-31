@@ -589,7 +589,7 @@
         bspc_msoff: bspc_msoff {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&layer_off 4 &bspc_morph>;
+            bindings = <&layer_off 4 &none>;
             label = "BSPC_MSOFF";
             tap-ms = <0>;
             wait-ms = <0>;
@@ -828,26 +828,6 @@
             require-prior-idle-ms = <30>;
         };
 
-        lt_bspc: lt_bspc {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT with quick tap and mod morph";
-            bindings = <&mo>, <&bspc_msoff>;
-
-            #binding-cells = <2>;
-            quick-tap-ms = <180>;
-            tapping-term-ms = <180>;
-            flavor = "balanced";
-        };
-
-        bspc_morph: bspc_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "BSPC_MORPH";
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
-        };
-
         key_on: key_on {
             compatible = "zmk,behavior-key-toggle";
             label = "KEY_ON";
@@ -1051,8 +1031,8 @@
             bindings = <&kp SPACE>, <&kp TAB>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
+            mods = <(MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL|MOD_LSFT|MOD_RSFT)>;
         };
 
         trns_hold_msoff: trns_hold_msoff {
@@ -1150,6 +1130,25 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        space_bs: space_bs {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SPACE_BS";
+            bindings = <&kp SPACE>, <&kp BACKSPACE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        lt_space: lt_space {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_SPACE";
+            bindings = <&mo>, <&space_bs>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -1160,7 +1159,7 @@
   &none                 &kp Y                 &kp O              &mt LC(R) U          &mt LC(T) J                                      &kp Q     &kp G        &kp N              &kp F  &none
   &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrs LEFT_SHIFT E  &hrml LCTRL A        &en_dot_mt LC(F) 0                               &kp P     &hrl 10 D    &hrs LEFT_SHIFT R  &kp S  &hrml_slow RALT L
   &mt LC(Z) K           &mt LC(X) X           &mt LC(C) Z        &en_com_mt LC(V) 0   &mt LG(V) SINGLE_QUOTE                           &kp B     &kp C        &kp M              &kp W  &mt LC(SLASH) V
-                                                                 &en_cw_off K_CANCEL  &lt 9 SPACE             &sl 12    &kp BACKSPACE  &lt 10 T  &key_repeat
+                                                                 &en_cw_off K_CANCEL  &lt_space 9 0           &sl 12    &kp BACKSPACE  &lt 10 T  &key_repeat
             >;
 
             display-name = "En";
