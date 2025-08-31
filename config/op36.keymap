@@ -924,26 +924,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        o_morph: o_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "O_MORPH";
-            bindings = <&kp O>, <&kp E>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-
-        s_morph: s_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "S_MORPH";
-            bindings = <&kp S>, <&kp L>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-
         mkp_hold: mkp_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "MKP_HOLD";
@@ -982,16 +962,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-        };
-
-        v_morph: v_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "V_MORPH";
-            bindings = <&kp V>, <&kp B>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
         };
 
         ru_dot_mt: ru_dot_mt {
