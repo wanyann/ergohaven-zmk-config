@@ -328,7 +328,7 @@
         layer_ru: lg_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &to_ru>;
+            bindings = <&to 2 &kp LS(LC(N8))>;
             label = "LG_RU";
             tap-ms = <40>;
             wait-ms = <0>;
@@ -337,7 +337,7 @@
         layer_en: lg_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &to_en>;
+            bindings = <&to 0 &kp LS(LC(N9))>;
             label = "LG_EN";
             tap-ms = <40>;
             wait-ms = <0>;
