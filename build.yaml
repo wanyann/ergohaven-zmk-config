@@ -1,16 +1,17 @@
 ---
 include:
-  # - board: ergohaven
-  #   shield: velvet_v3_left
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  # - board: ergohaven
-  #   shield: velvet_v3_right
-  # - board: ergohaven
-  #   shield: velvet_v3_dongle dongle dongle_screen # or prospector_adapter
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: velvet_v3_dongle-ergohaven-zmk
+  - board: ergohaven
+    shield: velvet_v3_left
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  - board: ergohaven
+    shield: velvet_v3_right
+  - board: ergohaven
+    shield: velvet_v3_dongle dongle dongle_screen # or prospector_adapter
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: velvet_v3_dongle-ergohaven-zmk
+    
   - board: ergohaven
     shield: velvet_v3_ui_left
   # - board: ergohaven
