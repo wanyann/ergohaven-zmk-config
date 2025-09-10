@@ -1206,6 +1206,17 @@
             display-name = "Mods";
         };
 
+                Nav {
+            bindings = <
+&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &trans                               &trans        &kp HOME   &kp UP    &kp END    &kp DELETE  &trans
+&trans   &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &zeros_macro                         &select_word  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row  &trans
+&trans   &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &dbl_tap LEFT_GUI                    &trans        &kp PG_UP  &none     &kp PG_DN  &trans  &trans
+                &trans  &trans  &trans       &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            display-name = "Nav";
+        };
+
                 Num_En {
             bindings = <
 &trans  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &minus_morph                           &trans  &trans     &trans      &trans        &trans  &trans
