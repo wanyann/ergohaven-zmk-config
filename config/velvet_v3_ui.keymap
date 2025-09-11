@@ -195,7 +195,7 @@
 
         parentheses {
             bindings = <&parentheses>;
-            key-positions = <14 15>;
+            key-positions = <14 16>;
             timeout-ms = <30>;
             require-prior-idle-ms = <50>;
         };
