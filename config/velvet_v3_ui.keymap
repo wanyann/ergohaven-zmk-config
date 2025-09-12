@@ -502,8 +502,8 @@
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N9)) &braces_en &kp LC(LS(N8))>;
             label = "BRACES_RU";
-            wait-ms = <0>;
-            tap-ms = <40>;
+            wait-ms = <40>;
+            tap-ms = <20>;
         };
 
         brackets_en: brackets_en {
@@ -519,7 +519,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N9)) &brackets_en &kp LS(LC(N8))>;
             label = "BRACKETS_RU";
-            wait-ms = <0>;
+            wait-ms = <20>;
             tap-ms = <40>;
         };
 
