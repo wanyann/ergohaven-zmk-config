@@ -830,7 +830,7 @@
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         key_on: key_on {
@@ -1102,10 +1102,10 @@
 
         En {
             bindings = <
-&none  &none                  &kp X                  &kp Z              &en_com_mt LC(R) 0   &en_dot_mt LC(T) 0                          &kp Q     &kp G      &kp N              &kp F   &none              &none
-&none  &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs LEFT_SHIFT E  &hrml LCTRL A        &mt LC(F) J                                 &kp P     &hrl 10 D  &hrs LEFT_SHIFT R  &kp S   &hrml_slow RALT L  &none
-&none  &mt LC(Z) K            &mt LC(X) Y            &mt LC(C) O        &mt LC(V) U          &mt LG(V) SINGLE_QUOTE                      &kp B     &kp C      &kp M              &kp W   &mt LC(SLASH) V    &none
-                              &trans                 &trans             &en_cw_off K_CANCEL  &lt 9 SPACE             &sl 12    &kp BSPC  &lt 10 T  &none      &trans             &trans
+&none  &none                  &kp X                  &kp Z              &en_com_mt LC(R) 0   &en_dot_mt LC(T) 0                             &kp Q     &kp G      &kp N              &kp F   &none              &none
+&none  &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs LEFT_SHIFT E  &hrml LCTRL A        &mt LC(F) J                                    &kp P     &hrl 10 D  &hrs LEFT_SHIFT R  &kp S   &hrml_slow RALT L  &none
+&none  &mt LC(Z) K            &mt LC(X) Y            &mt LC(C) O        &mt LC(V) U          &mt LG(V) SINGLE_QUOTE                         &kp B     &kp C      &kp M              &kp W   &mt LC(SLASH) V    &none
+                              &trans                 &trans             &en_cw_off K_CANCEL  &lt 9 SPACE             &sl 12    &bspc_morph  &lt 10 T  &none      &trans             &trans
             >;
 
             display-name = "En";
