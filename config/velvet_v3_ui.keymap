@@ -1101,8 +1101,6 @@
             label = "EN_CAPS";
             #binding-cells = <0>;
             bindings = <&to 1>, <&kp CAPSLOCK>;
-
-            tapping-term-ms = <170>;
         };
 
         ru_caps: ru_caps {
@@ -1110,8 +1108,6 @@
             label = "RU_CAPS";
             #binding-cells = <0>;
             bindings = <&to 3>, <&kp CAPSLOCK>;
-
-            tapping-term-ms = <150>;
         };
     };
 
