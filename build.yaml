@@ -1,24 +1,7 @@
 ---
 include:
-  # - board: ergohaven
-  #   shield: velvet_v3_left
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  # - board: ergohaven
-  #   shield: velvet_v3_right
-  # - board: ergohaven
-  #   shield: velvet_v3_dongle dongle dongle_screen # or prospector_adapter
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: velvet_v3_dongle-ergohaven-zmk
   - board: ergohaven
     shield: velvet_v3_ui_left
-  # - board: ergohaven
-  #   shield: velvet_v3_ui_right
-  #   keymap: velvet_v3_ui_ruen
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: velvet_v3_ui_right_ruen-ergohaven-zmk
   - board: ergohaven
     shield: velvet_v3_ui_right
     keymap: velvet_v3_ui_ruen
@@ -29,27 +12,17 @@ include:
     shield: velvet_v3_ui_right
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
-  # - board: ergohaven
-  #   shield: velvet_v3_ui_qube qube dongle_screen
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: velvet_v3_ui_qube-ergohaven-zmk
-  - board: ergohaven
-    shield: velvet_v3_ui_qube qube dongle_screen
-    keymap: velvet_v3_ui_ruen
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: ergohaven
     shield: velvet_v3_ui_qube qube dongle_screen
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: velvet_v3_ui_qube-ergohaven-zmk
-  # - board: ergohaven
-  #   shield: velvet_v3_ui_qube qube dongle_screen
-  #   keymap: velvet_v3_ui_ruen
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: velvet_v3_ui_qube_ruen-ergohaven-zmk
+  - board: ergohaven
+    shield: velvet_v3_ui_qube qube dongle_screen
+    keymap: velvet_v3_ui_ruen
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    artifact-name: velvet_v3_ui_qube_ruen-ergohaven-zmk
   - board: ergohaven
     shield: velvet_v3_ui_right_qube
 
