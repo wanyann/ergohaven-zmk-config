@@ -1124,7 +1124,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CTRL_TD";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&multi_kp LEFT_GUI>;
+            bindings = <&kp LCTRL>, <&dbl_tap LEFT_GUI>;
         };
     };
 
