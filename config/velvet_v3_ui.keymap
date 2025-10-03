@@ -667,6 +667,8 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "DBL_TAP";
+            tap-ms = <50>;
+            wait-ms = <20>;
         };
 
         select_word: select_word {
