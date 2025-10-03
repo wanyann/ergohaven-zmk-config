@@ -1109,6 +1109,23 @@
             #binding-cells = <0>;
             bindings = <&to 3>, <&kp CAPSLOCK>;
         };
+
+        ctrl: ctrl {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CTRL";
+            bindings = <&kp>, <&ctrl_td>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
+        ctrl_td: ctrl_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CTRL_TD";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL>, <&multi_kp LEFT_GUI>;
+        };
     };
 
     keymap {
@@ -1216,7 +1233,7 @@
         Nav {
             bindings = <
 &trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &kp CAPSLOCK                                &trans        &kp HOME   &kp UP    &kp END    &kp DELETE   &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &zeros_macro                                &select_word  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row  &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &ctrl LCTRL 0            &zeros_macro                                &select_word  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row  &trans
 &trans  &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &dbl_tap LEFT_GUI                           &kp CAPS      &kp PG_UP  &none     &kp PG_DN  &trans       &trans
                                         &trans                           &trans                   &trans                   &alt_spc           &kp LA(ENTER)    &trans  &trans        &trans     &trans    &trans
             >;
