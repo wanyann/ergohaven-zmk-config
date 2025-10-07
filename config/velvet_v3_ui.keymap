@@ -16,10 +16,7 @@
     bindings = <&kp_>, <&kp>;
 };
 
-&lt {
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-};
+&lt { flavor = "balanced"; };
 
 &sl {
     release-after-ms = <5000>;
