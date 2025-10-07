@@ -58,7 +58,7 @@
         };
 
         combo_esc {
-            bindings = <&kp ESC>;
+            bindings = <&td_esc>;
             key-positions = <26 27>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
@@ -1127,6 +1127,13 @@
             label = "CTRL_TD";
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&dbl_tap LEFT_GUI>;
+        };
+
+        td_esc: td_esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp ESC>, <&kp LS(ESC)>;
         };
 
         zip_temp_layer1: zip_temp_layer1 {
