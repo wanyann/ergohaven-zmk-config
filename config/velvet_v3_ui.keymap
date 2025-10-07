@@ -58,7 +58,7 @@
         };
 
         combo_esc {
-            bindings = <&td_esc>;
+            bindings = <&kp ESC>;
             key-positions = <26 27>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
