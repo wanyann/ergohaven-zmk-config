@@ -1128,6 +1128,15 @@
             #binding-cells = <0>;
             bindings = <&kp LCTRL>, <&dbl_tap LEFT_GUI>;
         };
+
+        
+        /omit-if-no-ref/
+
+        zip_temp_layer: zip_temp_layer {
+            compatible = "zmk,input-processor-temp-layer";
+            #input-processor-cells = <2>;
+            require-prior-idle-ms = <1000>;
+        };
     };
 
     keymap {
@@ -1322,4 +1331,22 @@
     };
 };
 
-&trackball { cpi = <0>; };
+
+&trackball { cpi = <1000>; };
+
+&trackball_listener {
+    input-processors = <&zip_temp_layer 4 500>, <&zip_xy_scaler 9 20>;
+
+    scroller {
+        layers = <5>;
+        input-processors =
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_xy_scaler 1 32>,
+            <&zip_xy_to_scroll_mapper>;
+    };
+
+    sniper {
+        layers = <6>;
+        input-processors = <&zip_xy_scaler 1 4>;
+    };
+};
