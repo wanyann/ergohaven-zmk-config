@@ -1160,7 +1160,7 @@
 &trans  &kp RU_CYRILLIC_TSE                &soft_sign                         &kp RU_CYRILLIC_YA              &ru_com_mt LC(R) 0          &ru_dot_mt LC(T) 0                          &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_VE      &kp RU_CYRILLIC_KA              &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_CHE                  &trans
 &trans  &hrml_slow LEFT_GUI RU_CYRILLIC_U  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrs LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &mt LC(F) RU_CYRILLIC_A                     &kp RU_CYRILLIC_EL     &hrl 11 RU_CYRILLIC_EN  &hrs LEFT_SHIFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &hrml_slow RALT RU_CYRILLIC_SHORT_I  &trans
 &trans  &mt LC(Z) RU_CYRILLIC_EF           &mt LC(X) RU_CYRILLIC_E            &mt LC(C) RU_CYRILLIC_HA        &mt LC(V) RU_CYRILLIC_YERU  &mt LG(V) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM      &kp RU_CYRILLIC_PE              &kp RU_CYRILLIC_GHE  &mt LC(SLASH) RU_CYRILLIC_ZHE        &trans
-                                           &trans                             &trans                          &ru_cw_off K_CANCEL         &trans                    &trans    &trans  &lt 11 RU_CYRILLIC_ER  &trans                  &trans                          &trans
+                                           &trans                             &trans                          &ru_cw_off K_CANCEL         &trans                    &trans    &trans  &lt 11 RU_CYRILLIC_ER  &none                   &trans                          &trans
             >;
 
             display-name = "Ru";
