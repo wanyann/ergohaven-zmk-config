@@ -724,6 +724,14 @@
     };
 
     behaviors {
+        
+        zip_auto_mouse: zip_auto_mouse {
+            compatible = "zmk,input-processor-temp-layer";
+            #input-processor-cells = <2>;
+            require-prior-idle-ms = <800>;
+            excluded-positions = <>;
+        };
+
         en_magic: en_magic {
             compatible = "zmk,behavior-antecedent-morph";
             label = "EN_MAGIC";
