@@ -38,6 +38,7 @@
             hold-while-undecided;
             tapping-term-ms = <199>;
             hold-while-undecided-linger;
+            flavor = "tap-preferred";
         };
     };
 
