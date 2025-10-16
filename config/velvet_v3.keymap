@@ -723,7 +723,6 @@
     };
 
     behaviors {
-        
         en_magic: en_magic {
             compatible = "zmk,behavior-antecedent-morph";
             label = "EN_MAGIC";
@@ -1251,10 +1250,10 @@
 
         OS {
             bindings = <
-&trans  &bt BT_SEL 2  &trans         &kp LA(LC(N2))    &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
-&trans  &bt BT_SEL 1  &kp LC(RIGHT)  &kp K_PLAY_PAUSE  &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
-&trans  &bt BT_SEL 0  &none          &kp LC(LS(T))     &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans      &trans
-                      &trans         &trans            &trans                &trans                &trans    &trans  &trans        &trans          &trans  &trans
+&trans  &bt BT_SEL 2  &trans         &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
+&trans  &bt BT_SEL 1  &kp LC(RIGHT)  &kp K_PLAY_PAUSE          &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
+&trans  &bt BT_SEL 0  &none          &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans      &trans
+                      &trans         &trans                    &trans                &trans                &trans    &trans  &trans        &trans          &trans  &trans
             >;
 
             display-name = "OS";
