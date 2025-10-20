@@ -62,14 +62,14 @@
 
         combo_ru {
             bindings = <&layer_ru>;
-            key-positions = <22 23>;
+            key-positions = <2 3>;
             require-prior-idle-ms = <50>;
             timeout-ms = <30>;
         };
 
         combo_en {
             bindings = <&layer_en>;
-            key-positions = <26 27>;
+            key-positions = <6 7>;
             require-prior-idle-ms = <50>;
             timeout-ms = <30>;
         };
@@ -221,7 +221,9 @@
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <3 2>;
+            key-positions = <22 23>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_grave_ru {
@@ -238,14 +240,18 @@
 
         combo_under_en {
             bindings = <&kp UNDER>;
-            key-positions = <6 7>;
+            key-positions = <26 27>;
             layers = <0 1 13>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_under_ru {
             bindings = <&kp UNDER>;
-            key-positions = <6 7>;
+            key-positions = <26 27>;
             layers = <2 3 14>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <30>;
         };
 
         combo_ru_hash {
