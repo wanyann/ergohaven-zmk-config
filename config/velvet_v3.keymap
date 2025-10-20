@@ -220,6 +220,7 @@
             bindings = <&kp MINUS>;
             key-positions = <27 28>;
             require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_grave_ru {
@@ -239,6 +240,7 @@
             key-positions = <31 32>;
             layers = <0 1 13>;
             require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_under_ru {
@@ -246,6 +248,7 @@
             key-positions = <31 32>;
             layers = <2 3 14>;
             require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_ru_hash {
