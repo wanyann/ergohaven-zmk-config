@@ -718,6 +718,7 @@
             bindings = <&kp LS(LC(LG(F7))) &kp LS(LC(LG(F8)))>;
             label = "TESTOPS";
             wait-ms = <500>;
+            tap-ms = <150>;
         };
     };
 
