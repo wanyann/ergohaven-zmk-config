@@ -771,7 +771,7 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            require-prior-idle-ms = <30>;
+            require-prior-idle-ms = <20>;
         };
 
         ru_lt_cw_off: ru_lt_cw_off {
