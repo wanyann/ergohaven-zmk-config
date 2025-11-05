@@ -59,14 +59,14 @@
 
         combo_ru {
             bindings = <&layer_ru>;
-            key-positions = <3 4>;
+            key-positions = <27 28>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
 
         combo_en {
             bindings = <&layer_en>;
-            key-positions = <7 8>;
+            key-positions = <31 32>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
@@ -218,7 +218,7 @@
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <27 28>;
+            key-positions = <3 4>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
@@ -237,7 +237,7 @@
 
         combo_under_en {
             bindings = <&kp UNDER>;
-            key-positions = <31 32>;
+            key-positions = <7 8>;
             layers = <0 1 13>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
