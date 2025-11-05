@@ -846,7 +846,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            require-prior-idle-ms = <30>;
+            require-prior-idle-ms = <20>;
         };
 
         layer_on: layer_on {
@@ -864,7 +864,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <30>;
+            require-prior-idle-ms = <20>;
         };
 
         soft_sign: soft_sign {
