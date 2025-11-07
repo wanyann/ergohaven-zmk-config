@@ -238,15 +238,6 @@
         combo_under_en {
             bindings = <&kp UNDER>;
             key-positions = <7 8>;
-            layers = <0 1 13>;
-            require-prior-idle-ms = <30>;
-            timeout-ms = <30>;
-        };
-
-        combo_under_ru {
-            bindings = <&kp UNDER>;
-            key-positions = <31 32>;
-            layers = <2 3 14>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
