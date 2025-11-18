@@ -741,6 +741,13 @@
             bindings = <&kp N9 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N8))>;
             label = "TRIPLE_PRESS_EN";
         };
+
+        testops: testops {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(LG(F7))) &kp LS(LC(LG(F8)))>;
+            label = "TESTOPS";
+        };
     };
 
     behaviors {
@@ -1223,7 +1230,7 @@
 
         Nav {
             bindings = <
-  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &trans                                &trans        &kp HOME   &kp UP    &kp END    &kp DELETE
+  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &testops                              &trans        &kp HOME   &kp UP    &kp END    &kp DELETE
   &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &zeros_macro                          &select_word  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row
   &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &kp LS(LC(LG(F9)))                    &trans        &kp PG_UP  &none     &kp PG_DN  &trans
                                                                                             &trans                   &trans              &trans    &trans  &trans        &trans
