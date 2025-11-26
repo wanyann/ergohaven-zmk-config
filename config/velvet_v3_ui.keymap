@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/input_transform.h>
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
-#include "keys_ru.h"
 #include <dt-bindings/zmk/behaviors.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -64,15 +63,15 @@
         combo_ru {
             bindings = <&layer_ru>;
             key-positions = <27 28>;
-            require-prior-idle-ms = <30>;
             timeout-ms = <30>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         combo_en {
             bindings = <&layer_en>;
             key-positions = <31 32>;
-            require-prior-idle-ms = <30>;
             timeout-ms = <30>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         combo_osl_sym_en {
@@ -222,7 +221,9 @@
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <4 3>;
+            key-positions = <3 4>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_grave_ru {
@@ -240,13 +241,8 @@
         combo_under_en {
             bindings = <&kp UNDER>;
             key-positions = <7 8>;
-            layers = <0 1 13>;
-        };
-
-        combo_under_ru {
-            bindings = <&kp UNDER>;
-            key-positions = <7 8>;
-            layers = <2 3 14>;
+            require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_ru_hash {
@@ -709,6 +705,15 @@
             bindings = <&kp N9 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N8))>;
             label = "TRIPLE_PRESS_EN";
         };
+
+        testops: testops {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LC(LG(F7))) &kp LS(LC(LG(F8)))>;
+            label = "TESTOPS";
+            wait-ms = <500>;
+            tap-ms = <150>;
+        };
     };
 
     behaviors {
@@ -749,7 +754,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            require-prior-idle-ms = <30>;
         };
 
         hrm_slow: hrm_slow {
@@ -760,7 +764,6 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
-            require-prior-idle-ms = <30>;
         };
 
         ru_lt_cw_off: ru_lt_cw_off {
@@ -791,7 +794,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            require-prior-idle-ms = <30>;
         };
 
         lt_bspc: lt_bspc {
@@ -835,7 +837,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            require-prior-idle-ms = <30>;
         };
 
         layer_on: layer_on {
@@ -853,7 +854,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            require-prior-idle-ms = <30>;
         };
 
         soft_sign: soft_sign {
@@ -991,25 +991,6 @@
             keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
         };
 
-        trns_hold_msoff: trns_hold_msoff {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TRNS_HOLD_MSOFF";
-            bindings = <&kp_msoff>, <&trns_msoff>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        minus_morph: minus_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MINUS_MORPH";
-            bindings = <&kp MINUS>, <&kp LS(LC(T))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         nine_morph: nine_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "NINE_MORPH";
@@ -1025,8 +1006,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <170>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
+            require-prior-idle-ms = <(-1)>;
         };
 
         ru_grave: ru_grave {
@@ -1115,10 +1097,33 @@
             bindings = <&kp ESC>, <&kp LS(ESC)>;
         };
 
-        zip_temp_layer1: zip_temp_layer1 {
-            compatible = "zmk,input-processor-temp-layer";
-            #input-processor-cells = <2>;
-            require-prior-idle-ms = <1000>;
+        mod_dtap: mod_dtap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOD_DTAP";
+            bindings = <&kp>, <&dbl_tap>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
+        tops_cmd_x: tops_cmd_x {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TOPS_CMD_X";
+            bindings = <&kp>, <&testops>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        zero_morph: zero_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ZERO_MORPH";
+            bindings = <&kp N0>, <&kp LS(LC(A))>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT)>;
         };
     };
 
@@ -1127,10 +1132,10 @@
 
         En {
             bindings = <
-&none  &none                  &kp X                  &kp Z              &en_com_mt LC(R) 0   &en_dot_mt LC(T) 0                             &kp Q     &kp G      &kp N              &kp F   &none              &none
-&none  &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs LEFT_SHIFT E  &hrml LCTRL A        &mt LC(F) J                                    &kp P     &hrl 10 D  &hrs LEFT_SHIFT R  &kp S   &hrml_slow RALT L  &none
-&none  &mt LC(Z) K            &mt LC(X) Y            &mt LC(C) O        &mt LC(V) U          &mt LG(V) SINGLE_QUOTE                         &kp B     &kp C      &kp M              &kp W   &mt LC(SLASH) V    &none
-                              &kp LS(F7)             &kp F7             &en_cw_off K_CANCEL  &lt 9 SPACE             &sl 12    &bspc_morph  &lt 10 T  &none      &trans             &trans
+&none  &none                  &kp X                  &kp Z              &mt LC(R) J          &mt LC(T) APOS                             &kp Q     &kp G          &kp N              &kp F       &none              &none
+&none  &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs LEFT_SHIFT E  &hrml LCTRL A        &en_com_mt LC(F) 0                         &kp P     &hrl 10 D      &hrs LEFT_SHIFT R  &kp S       &hrml_slow RALT L  &none
+&none  &mt LC(Z) K            &mt LC(X) Y            &mt LC(C) O        &mt LC(V) U          &en_dot_mt LG(V) 0                         &kp B     &kp C          &kp M              &kp W       &mt LC(SLASH) V    &none
+                              &kp LS(F7)             &kp F7             &en_cw_off K_CANCEL  &lt 9 SPACE         &sl 12    &bspc_morph  &lt 10 T  &kp LS(LC(I))  &kp F2             &kp LS(F2)
             >;
 
             display-name = "En";
@@ -1138,9 +1143,9 @@
 
         En_CW {
             bindings = <
-&trans  &trans                     &kp LS(X)                  &kp LS(Z)              &en_com_mt LC(R) 0   &en_dot_mt LC(T) 0                       &kp LS(Q)     &kp LS(G)      &kp LS(N)              &kp LS(F)  &trans                 &trans
-&trans  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrs LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)    &mt LC(F) LS(J)                          &kp LS(P)     &hrl 10 LS(D)  &hrs LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(L)  &trans
-&trans  &mt LC(Z) LS(K)            &mt LC(X) LS(Y)            &mt LC(C) LS(O)        &mt LC(V) LS(U)      &mt LG(V) K_CANCEL                       &kp LS(B)     &kp LS(C)      &kp LS(M)              &kp LS(W)  &mt LC(SLASH) LS(V)    &trans
+&trans  &trans                     &kp LS(X)                  &kp LS(Z)              &mt LC(R) LS(J)      &mt LC(T) APOS                           &kp LS(Q)     &kp LS(G)      &kp LS(N)              &kp LS(F)  &trans                 &trans
+&trans  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrs LEFT_SHIFT LS(E)  &hrml LCTRL LS(A)    &en_com_mt LC(F) 0                       &kp LS(P)     &hrl 10 LS(D)  &hrs LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(L)  &trans
+&trans  &mt LC(Z) LS(K)            &mt LC(X) LS(Y)            &mt LC(C) LS(O)        &mt LC(V) LS(U)      &en_dot_mt LG(V) 0                       &kp LS(B)     &kp LS(C)      &kp LS(M)              &kp LS(W)  &mt LC(SLASH) LS(V)    &trans
                                    &trans                     &trans                 &en_cw_off K_CANCEL  &en_lt_cw_off 9 SPACE  &trans    &trans  &lt 10 LS(T)  &trans         &trans                 &trans
             >;
 
@@ -1149,9 +1154,9 @@
 
         Ru {
             bindings = <
-&trans  &kp RU_CYRILLIC_TSE                &soft_sign                         &kp RU_CYRILLIC_YA              &ru_com_mt LC(R) 0          &ru_dot_mt LC(T) 0                          &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_VE      &kp RU_CYRILLIC_KA              &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_CHE                  &trans
-&trans  &hrml_slow LEFT_GUI RU_CYRILLIC_U  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrs LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &mt LC(F) RU_CYRILLIC_A                     &kp RU_CYRILLIC_EL     &hrl 11 RU_CYRILLIC_EN  &hrs LEFT_SHIFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &hrml_slow RALT RU_CYRILLIC_SHORT_I  &trans
-&trans  &mt LC(Z) RU_CYRILLIC_EF           &mt LC(X) RU_CYRILLIC_E            &mt LC(C) RU_CYRILLIC_HA        &mt LC(V) RU_CYRILLIC_YERU  &mt LG(V) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM      &kp RU_CYRILLIC_PE              &kp RU_CYRILLIC_GHE  &mt LC(SLASH) RU_CYRILLIC_ZHE        &trans
+&trans  &kp RU_CYRILLIC_TSE                &soft_sign                         &kp RU_CYRILLIC_YA              &mt LC(R) RU_CYRILLIC_A     &mt LC(T) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_VE      &kp RU_CYRILLIC_KA              &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_CHE                  &trans
+&trans  &hrml_slow LEFT_GUI RU_CYRILLIC_U  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrs LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &ru_com_mt LC(F) 0                          &kp RU_CYRILLIC_EL     &hrl 11 RU_CYRILLIC_EN  &hrs LEFT_SHIFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &hrml_slow RALT RU_CYRILLIC_SHORT_I  &trans
+&trans  &mt LC(Z) RU_CYRILLIC_EF           &mt LC(X) RU_CYRILLIC_E            &mt LC(C) RU_CYRILLIC_HA        &mt LC(V) RU_CYRILLIC_YERU  &ru_dot_mt LG(V) 0                          &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM      &kp RU_CYRILLIC_PE              &kp RU_CYRILLIC_GHE  &mt LC(SLASH) RU_CYRILLIC_ZHE        &trans
                                            &trans                             &trans                          &ru_cw_off K_CANCEL         &trans                    &trans    &trans  &lt 11 RU_CYRILLIC_ER  &none                   &trans                          &trans
             >;
 
@@ -1160,9 +1165,9 @@
 
         Ru_CW {
             bindings = <
-&trans  &kp LS(RU_CYRILLIC_TSE)                &caps_soft_sign                        &kp LS(RU_CYRILLIC_YA)              &ru_com_mt LC(R) 0              &ru_dot_mt LC(T) 0                              &kp LS(RU_CYRILLIC_ZE)     &kp LS(RU_CYRILLIC_VE)      &kp LS(RU_CYRILLIC_KA)              &kp LS(RU_CYRILLIC_DE)   &kp LS(RU_CYRILLIC_CHE)                  &trans
-&trans  &hrml_slow LEFT_GUI LS(RU_CYRILLIC_U)  &hrml_slow LEFT_ALT LS(RU_CYRILLIC_I)  &hrs LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)   &mt LC(F) LS(RU_CYRILLIC_A)                     &kp LS(RU_CYRILLIC_EL)     &hrl 10 LS(RU_CYRILLIC_EN)  &hrs LEFT_SHIFT LS(RU_CYRILLIC_TE)  &kp LS(RU_CYRILLIC_ES)   &hrml_slow RALT LS(RU_CYRILLIC_SHORT_I)  &trans
-&trans  &mt LC(Z) LS(RU_CYRILLIC_EF)           &mt LC(X) LS(RU_CYRILLIC_E)            &mt LC(C) LS(RU_CYRILLIC_HA)        &mt LC(V) LS(RU_CYRILLIC_YERU)  &mt LG(V) LS(RU_CYRILLIC_YU)                    &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)      &kp LS(RU_CYRILLIC_PE)              &kp LS(RU_CYRILLIC_GHE)  &mt LC(SLASH) LS(RU_CYRILLIC_ZHE)        &trans
+&trans  &kp LS(RU_CYRILLIC_TSE)                &caps_soft_sign                        &kp LS(RU_CYRILLIC_YA)              &mt LC(R) LS(RU_CYRILLIC_A)     &mt LC(T) LS(RU_CYRILLIC_YU)                    &kp LS(RU_CYRILLIC_ZE)     &kp LS(RU_CYRILLIC_VE)      &kp LS(RU_CYRILLIC_KA)              &kp LS(RU_CYRILLIC_DE)   &kp LS(RU_CYRILLIC_CHE)                  &trans
+&trans  &hrml_slow LEFT_GUI LS(RU_CYRILLIC_U)  &hrml_slow LEFT_ALT LS(RU_CYRILLIC_I)  &hrs LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)   &ru_com_mt LC(F) 0                              &kp LS(RU_CYRILLIC_EL)     &hrl 10 LS(RU_CYRILLIC_EN)  &hrs LEFT_SHIFT LS(RU_CYRILLIC_TE)  &kp LS(RU_CYRILLIC_ES)   &hrml_slow RALT LS(RU_CYRILLIC_SHORT_I)  &trans
+&trans  &mt LC(Z) LS(RU_CYRILLIC_EF)           &mt LC(X) LS(RU_CYRILLIC_E)            &mt LC(C) LS(RU_CYRILLIC_HA)        &mt LC(V) LS(RU_CYRILLIC_YERU)  &ru_dot_mt LG(V) 0                              &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)      &kp LS(RU_CYRILLIC_PE)              &kp LS(RU_CYRILLIC_GHE)  &mt LC(SLASH) LS(RU_CYRILLIC_ZHE)        &trans
                                                &trans                                 &trans                              &ru_cw_off K_CANCEL             &ru_lt_cw_off 9 SPACE         &trans    &trans  &lt 11 LS(RU_CYRILLIC_ER)  &trans                      &trans                              &trans
             >;
 
@@ -1226,10 +1231,10 @@
 
         Nav {
             bindings = <
-&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &kp CAPSLOCK                                &trans        &kp HOME   &kp UP    &kp END    &kp DELETE   &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &ctrl LCTRL 0            &zeros_macro                                &select_word  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row  &trans
-&trans  &mt LC(Z) LS(LG(LEFT_BRACKET))  &mt LC(X) LS(LG(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &dbl_tap LEFT_GUI                           &kp CAPS      &kp PG_UP  &none     &kp PG_DN  &trans       &trans
-                                        &trans                           &trans                   &trans                   &alt_spc           &kp LA(ENTER)    &trans  &trans        &trans     &trans    &trans
+&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                     &trans        &kp HOME   &kp UP    &kp END    &kp DELETE   &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                 &select_word  &kp LEFT   &kp DOWN  &kp RIGHT  &select_row  &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                           &kp CAPS      &kp PG_UP  &none     &kp PG_DN  &trans       &trans
+                                        &trans                           &trans                   &trans                    &alt_spc            &kp LA(ENTER)    &trans  &trans        &trans     &trans    &trans
             >;
 
             display-name = "Nav";
@@ -1237,10 +1242,10 @@
 
         Num_En {
             bindings = <
-&trans  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &minus_morph                           &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &kp N0        &kp N1        &kp N2        &three_mrph  &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                              &trans  &trans     &kp COMMA   &kp DOT       &trans        &trans
-                      &trans        &trans        &trans       &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
+&trans  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &kp MINUS                           &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &zero_morph   &kp N1        &kp N2        &three_mrph  &kp PLUS                            &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                           &trans  &trans     &kp COMMA   &kp DOT       &trans        &trans
+                      &trans        &trans        &trans       &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
             >;
 
             display-name = "Num_En";
@@ -1248,10 +1253,10 @@
 
         Num_Ru {
             bindings = <
-&trans  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &minus_morph                           &trans  &trans     &trans        &trans        &trans        &trans
-&trans  &kp N0        &kp N1        &kp N2        &three_mrph  &kp PLUS                               &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                              &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans        &trans
-                      &trans        &trans        &trans       &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans     &trans        &trans
+&trans  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &kp MINUS                           &trans  &trans     &trans        &trans        &trans        &trans
+&trans  &zero_morph   &kp N1        &kp N2        &three_mrph  &kp PLUS                            &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                           &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans        &trans
+                      &trans        &trans        &trans       &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans     &trans        &trans
             >;
 
             display-name = "Num_Ru";
@@ -1304,7 +1309,7 @@
         OS {
             bindings = <
 &trans  &bt BT_SEL 2  &trans         &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
-&trans  &bt BT_SEL 1  &kp LC(RIGHT)  &kp K_PLAY_PAUSE          &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
+&trans  &bt BT_SEL 1  &kp LC(RIGHT)  &kp C_PLAY_PAUSE          &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
 &trans  &bt BT_SEL 0  &none          &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans      &trans
                       &trans         &trans                    &trans                &trans                &trans    &trans  &trans        &trans          &trans  &trans
             >;
