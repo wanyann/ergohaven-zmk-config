@@ -704,7 +704,7 @@
         hrm: hrm {
             compatible = "zmk,behavior-hold-tap";
             label = "Home Row Mod";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&long_kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -714,7 +714,7 @@
         hrm_slow: hrm_slow {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM for slow fingers";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&long_kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -744,7 +744,7 @@
         hrl: hrl {
             compatible = "zmk,behavior-hold-tap";
             label = "Home Row Layer";
-            bindings = <&mo>, <&kp>;
+            bindings = <&mo>, <&long_kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -765,7 +765,7 @@
         bspc_morph: bspc_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "BSPC_MORPH";
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            bindings = <&long_kp BACKSPACE>, <&long_kp DELETE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -787,7 +787,7 @@
         hrml: hrml {
             compatible = "zmk,behavior-hold-tap";
             label = "Home Row Mod Layer";
-            bindings = <&ml>, <&kp>;
+            bindings = <&ml>, <&long_kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -804,7 +804,7 @@
         hrml_slow: hrml_slow {
             compatible = "zmk,behavior-hold-tap";
             label = "HRML for slow fingers";
-            bindings = <&ml>, <&kp>;
+            bindings = <&ml>, <&long_kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -814,7 +814,9 @@
         soft_sign: soft_sign {
             compatible = "zmk,behavior-mod-morph";
             label = "SOFT_SIGN";
-            bindings = <&kp M>, <&kp RIGHT_BRACKET>;
+            bindings =
+                <&long_kp RU_CYRILLIC_SOFT_SIGN>,
+                <&long_kp RU_CYRILLIC_HARD_SIGN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
