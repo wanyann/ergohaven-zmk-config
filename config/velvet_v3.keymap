@@ -12,7 +12,10 @@
     bindings = <&kp_>, <&kp>;
 };
 
-&lt { flavor = "balanced"; };
+&lt {
+    flavor = "balanced";
+    bindings = <&mo>, <&long_kp>;
+};
 
 &sl {
     release-after-ms = <5000>;
@@ -1147,10 +1150,10 @@
 
         En {
             bindings = <
-&none  &none                  &kp X                  &kp Z              &mt LC(R) J          &mt LC(T) APOS                             &kp Q      &kp G          &kp N              &kp F       &none              &none
-&none  &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs LEFT_SHIFT E  &hrml LCTRL A        &en_com_mt LC(F) 0                         &kp P      &hrl 10 D      &hrs LEFT_SHIFT R  &kp S       &hrml_slow RALT L  &none
-&none  &mt LC(Z) K            &mt LC(X) Y            &mt LC(C) O        &mt LC(V) U          &en_dot_mt LG(V) 0                         &kp B      &kp C          &kp M              &kp W       &mt LC(SLASH) V    &none
-                              &kp LS(F7)             &kp F7             &en_cw_off K_CANCEL  &llt 9 SPACE        &sl 12    &bspc_morph  &llt 10 T  &kp LS(LC(I))  &kp F2             &kp LS(F2)
+&none  &none                  &kp X                  &kp Z              &mt LC(R) J          &mt LC(T) APOS                             &kp Q     &kp G          &kp N              &kp F       &none              &none
+&none  &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs LEFT_SHIFT E  &hrml LCTRL A        &en_com_mt LC(F) 0                         &kp P     &hrl 10 D      &hrs LEFT_SHIFT R  &kp S       &hrml_slow RALT L  &none
+&none  &mt LC(Z) K            &mt LC(X) Y            &mt LC(C) O        &mt LC(V) U          &en_dot_mt LG(V) 0                         &kp B     &kp C          &kp M              &kp W       &mt LC(SLASH) V    &none
+                              &kp LS(F7)             &kp F7             &en_cw_off K_CANCEL  &lt 9 SPACE         &sl 12    &bspc_morph  &lt 10 T  &kp LS(LC(I))  &kp F2             &kp LS(F2)
             >;
 
             display-name = "En";
