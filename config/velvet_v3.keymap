@@ -858,16 +858,6 @@
             flavor = "tap-preferred";
         };
 
-        mkp_hold_msoff: mkp_hold_msoff {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MKP_HOLD_MSOFF";
-            bindings = <&long_kpmsoff>, <&mkp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
         ru_dot_mt: ru_dot_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "RU_DOT_MT";
@@ -1056,8 +1046,8 @@
         Mouse {
             bindings = <
 &trans  &trans     &trans        &long_kp KP_NUMLOCK  &trans                       &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &long_kp LCTRL  &long_kp LEFT_ALT  &long_kp LSHFT       &mkp_hold LCTRL LCLK         &mkp_hold_msoff LC(F) MB3                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans        &trans          &mkp_hold LC(V) MB2          &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &long_kp LCTRL  &long_kp LEFT_ALT  &long_kp LSHFT       &trans LCTRL LCLK         &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans        &trans          &trans          &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
                    &trans        &trans          &long_kplayeroff 4 LS(K_CANCEL)  &trans                     &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
