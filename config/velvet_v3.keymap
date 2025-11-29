@@ -1046,7 +1046,7 @@
         Mouse {
             bindings = <
 &trans  &trans     &trans        &long_kp KP_NUMLOCK  &trans                       &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &long_kp LCTRL  &long_kp LEFT_ALT  &long_kp LSHFT       &trans LCTRL LCLK         &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &long_kp LCTRL  &long_kp LEFT_ALT  &long_kp LSHFT       &trans         &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans        &trans          &trans          &trans                                       &trans  &trans  &trans  &trans  &trans  &trans
                    &trans        &trans          &kp_layeroff 4 LS(K_CANCEL)  &trans                     &trans    &trans  &trans  &trans  &trans  &trans
             >;
