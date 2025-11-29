@@ -9,7 +9,7 @@
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
-    bindings = <&kp_>, <&kp>;
+    bindings = <&kp_>, <&long_kp>;
 };
 
 &lt {
@@ -941,7 +941,7 @@
         space_mrph: space_mrph {
             compatible = "zmk,behavior-mod-morph";
             label = "SPACE_MRPH";
-            bindings = <&kp SPACE>, <&kp TAB>;
+            bindings = <&long_kp SPACE>, <&long_kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
@@ -951,7 +951,7 @@
         nine_morph: nine_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "NINE_MORPH";
-            bindings = <&kp N9>, <&kp LS(LC(R))>;
+            bindings = <&long_kp N9>, <&long_kp LS(LC(R))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -960,7 +960,7 @@
         hrs: hrs {
             compatible = "zmk,behavior-hold-tap";
             label = "HRS";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&long_kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -990,8 +990,8 @@
             compatible = "zmk,behavior-mod-morph";
             label = "CAPS_SOFT_SIGN";
             bindings =
-                <&kp LS(RU_CYRILLIC_SOFT_SIGN)>,
-                <&kp LS(RU_CYRILLIC_HARD_SIGN)>;
+                <&long_kp LS(RU_CYRILLIC_SOFT_SIGN)>,
+                <&long_kp LS(RU_CYRILLIC_HARD_SIGN)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1000,7 +1000,7 @@
         three_mrph: three_mrph {
             compatible = "zmk,behavior-mod-morph";
             label = "THREE_MRPH";
-            bindings = <&kp NUMBER_3>, <&kp LS(LC(F))>;
+            bindings = <&long_kp NUMBER_3>, <&long_kp LS(LC(F))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1016,44 +1016,6 @@
             flavor = "balanced";
         };
 
-        en_caps: en_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "EN_CAPS";
-            #binding-cells = <0>;
-            bindings = <&to 1>, <&kp CAPSLOCK>;
-        };
-
-        ru_caps: ru_caps {
-            compatible = "zmk,behavior-tap-dance";
-            label = "RU_CAPS";
-            #binding-cells = <0>;
-            bindings = <&to 3>, <&kp CAPSLOCK>;
-        };
-
-        ctrl: ctrl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CTRL";
-            bindings = <&kp>, <&ctrl_td>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
-        ctrl_td: ctrl_td {
-            compatible = "zmk,behavior-tap-dance";
-            label = "CTRL_TD";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>, <&dbl_tap LEFT_GUI>;
-        };
-
-        td_esc: td_esc {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TD_ESC";
-            #binding-cells = <0>;
-            bindings = <&kp ESC>, <&kp LS(ESC)>;
-        };
-
         mod_dtap: mod_dtap {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_DTAP";
@@ -1064,33 +1026,13 @@
             flavor = "balanced";
         };
 
-        tops_cmd_x: tops_cmd_x {
-            compatible = "zmk,behavior-hold-tap";
-            label = "TOPS_CMD_X";
-            bindings = <&kp>, <&testops>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
         zero_morph: zero_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "ZERO_MORPH";
-            bindings = <&kp N0>, <&kp LS(LC(A))>;
+            bindings = <&long_kp N0>, <&long_kp LS(LC(A))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT)>;
-        };
-
-        llt: llt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LLT";
-            bindings = <&mo>, <&long_kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
         };
     };
 
