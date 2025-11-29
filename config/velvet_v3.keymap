@@ -667,7 +667,7 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "LLT";
-            wait-ms = <100>;
+            wait-ms = <50>;
         };
     };
 
