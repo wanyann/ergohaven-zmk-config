@@ -751,16 +751,6 @@
             flavor = "balanced";
         };
 
-        lt_bspc: lt_bspc {
-            compatible = "zmk,behavior-hold-tap";
-            label = "LT with quick tap and mod morph";
-            bindings = <&mo>, <&bspc_msoff>;
-
-            #binding-cells = <2>;
-            quick-tap-ms = <180>;
-            tapping-term-ms = <180>;
-            flavor = "balanced";
-        };
 
         bspc_morph: bspc_morph {
             compatible = "zmk,behavior-mod-morph";
