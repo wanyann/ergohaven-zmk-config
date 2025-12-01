@@ -421,7 +421,6 @@
             #binding-cells = <0>;
             bindings = <&long_kp N0 &long_kp N0 &long_kp N0 &long_kp N0 &long_kp N0 &long_kp N0>;
             label = "ZEROS_MACRO";
-            tap-ms = <200>;
         };
 
         osm_ctrl_shift: osm_ctrl_shift {
