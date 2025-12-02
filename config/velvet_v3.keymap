@@ -467,7 +467,6 @@
             bindings = <&long_kp LEFT_BRACE &long_kp RIGHT_BRACE &long_kp LEFT>;
             label = "BRACES_EN";
             wait-ms = <0>;
-            tap-ms = <50>;
         };
 
         braces_ru: braces_ru {
@@ -476,7 +475,6 @@
             bindings = <&to_en &braces_en &to_ru>;
             label = "BRACES_RU";
             wait-ms = <0>;
-            tap-ms = <50>;
         };
 
         brackets_en: brackets_en {
@@ -485,7 +483,6 @@
             bindings = <&long_kp LEFT_BRACKET &long_kp RIGHT_BRACKET &long_kp LEFT_ARROW>;
             label = "BRACKETS_EN";
             wait-ms = <0>;
-            tap-ms = <50>;
         };
 
         brackets_ru: brackets_ru {
@@ -494,7 +491,6 @@
             bindings = <&to_en &brackets_en &to_ru>;
             label = "BRACKETS_RU";
             wait-ms = <0>;
-            tap-ms = <50>;
         };
 
         parentheses: parentheses {
@@ -503,7 +499,6 @@
             bindings = <&long_kp LEFT_PARENTHESIS &long_kp RIGHT_PARENTHESIS &long_kp LEFT_ARROW>;
             label = "PARENTHESES";
             wait-ms = <0>;
-            tap-ms = <50>;
         };
 
         less_greater_en: less_greater_en {
@@ -620,7 +615,6 @@
             bindings = <&long_kp LS(LC(N9)) &long_kp GRAVE &long_kp GRAVE &long_kp LEFT_ARROW &long_kp LS(LC(N8))>;
             label = "DBL_GRAVE_RU";
             wait-ms = <0>;
-            tap-ms = <30>;
         };
 
         dbl_grave_en: dbl_grave_en {
@@ -629,7 +623,6 @@
             bindings = <&long_kp GRAVE &long_kp GRAVE &long_kp LEFT_ARROW>;
             label = "DBL_GRAVE_EN";
             wait-ms = <0>;
-            tap-ms = <30>;
         };
 
         triple_press: triple_press {
