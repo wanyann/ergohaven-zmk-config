@@ -664,34 +664,6 @@
     };
 
     behaviors {
-        en_magic: en_magic {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "EN_MAGIC";
-            #binding-cells = <0>;
-            defaults = <&none>;
-            bindings =
-                <&long_kp C>,
-                <&long_kp B>,
-                <&long_kp O>,
-                <&long_kp E>,
-                <&long_kp E>,
-                <&long_kp I>;
-
-            antecedents = <S I Z Y U P>;
-            max-delay-ms = <2000>;
-        };
-
-        ru_magic: ru_magic {
-            compatible = "zmk,behavior-antecedent-morph";
-            label = "RU_MAGIC";
-            #binding-cells = <0>;
-            defaults = <&none>;
-            bindings = <&long_kp C>, <&long_kp O>;
-
-            antecedents = <S Z>;
-            max-delay-ms = <1500>;
-        };
-
         layer_off: layer_off {
             compatible = "zmk,behavior-toggle-layer";
             label = "LAYER_OFF";
