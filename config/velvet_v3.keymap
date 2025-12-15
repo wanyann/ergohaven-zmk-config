@@ -227,13 +227,13 @@
         };
 
         combo_grave_ru {
-            bindings = <&ru_grave>;
+            bindings = <&en GRAVE>;
             key-positions = <19 18>;
             layers = <2 3 14>;
         };
 
         combo_grave_en {
-            bindings = <&en_grave>;
+            bindings = <&kp GRAVE>;
             key-positions = <19 18>;
             layers = <0 1 13>;
         };
