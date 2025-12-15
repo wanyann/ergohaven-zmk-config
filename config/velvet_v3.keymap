@@ -1146,7 +1146,7 @@
 
         OS {
             bindings = <
-&trans  &bt BT_SEL 2  &trans              &long_kp LA(LC(N2))            &long_kp LC(LA(NUMBER_3))  &long_kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
+&trans  &bt BT_SEL 2  &kp LA(LC(N1))      &long_kp LA(LC(N2))            &long_kp LC(LA(NUMBER_3))  &long_kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
 &trans  &bt BT_SEL 1  &long_kp LC(RIGHT)  &long_kp C_PLAY_PAUSE          &long_kp C_VOLUME_UP       &long_kp C_BRI_UP                            &out OUT_BLE  &long_kp F24    &trans  &trans  &soft_off   &trans
 &trans  &bt BT_SEL 0  &none               &long_kp LC(LS(LEFT_BRACKET))  &long_kp C_VOL_DN          &long_kp C_BRI_DN                            &out OUT_USB  &long_kp F23    &trans  &trans  &trans      &trans
                       &trans              &trans                         &trans                     &trans                     &trans    &trans  &trans        &trans          &trans  &trans
