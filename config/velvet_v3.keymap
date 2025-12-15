@@ -257,14 +257,14 @@
             layers = <0 1 13>;
         };
 
-        combo_en_slash {
-            bindings = <&long_kp SLASH>;
+        combo_en_quotes {
+            bindings = <&long_kp DOUBLE_QUOTES>;
             key-positions = <16 17>;
             layers = <0 1 10 13>;
         };
 
-        combo_ru_slash {
-            bindings = <&en SLASH>;
+        combo_ru_quotes {
+            bindings = <&long_kp RU_DOUBLE_QUOTES>;
             key-positions = <16 17>;
             layers = <2 3 14 11>;
         };
