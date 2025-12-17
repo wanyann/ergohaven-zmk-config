@@ -967,7 +967,7 @@
         plus_morph: plus_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "PLUS_MORPH";
-            bindings = <&kp PLUS>, <&kp LS(LC(G))>;
+            bindings = <&long_kp PLUS>, <&long_kp LS(LC(G))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
