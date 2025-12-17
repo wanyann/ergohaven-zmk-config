@@ -1090,7 +1090,7 @@
         Num_En {
             bindings = <
 &trans  &long_kp ASTERISK  &long_kp NUMBER_7  &long_kp NUMBER_8  &nine_morph  &long_kp MINUS                                &trans  &trans          &trans           &trans             &trans             &trans
-&trans  &zero_morph        &long_kp N1        &long_kp N2        &three_mrph  &long_kp PLUS                                 &trans  &long_kp LCTRL  &long_kp LSHIFT  &long_kp LEFT_ALT  &long_kp LEFT_GUI  &trans
+&trans  &zero_morph        &long_kp N1        &long_kp N2        &three_mrph  &plus_morph                                   &trans  &long_kp LCTRL  &long_kp LSHIFT  &long_kp LEFT_ALT  &long_kp LEFT_GUI  &trans
 &trans  &long_kp EQUAL     &long_kp N4        &long_kp N5        &long_kp N6  &long_kp LC(B)                                &trans  &trans          &long_kp COMMA   &long_kp DOT       &trans             &trans
                            &trans             &trans             &trans       &alt_spc        &long_kp LA(ENTER)    &trans  &trans  &trans          &trans           &trans
             >;
@@ -1101,7 +1101,7 @@
         Num_Ru {
             bindings = <
 &trans  &long_kp RU_ASTRK  &long_kp NUMBER_7  &long_kp NUMBER_8  &nine_morph  &long_kp MINUS                                &trans  &trans          &trans             &trans             &trans             &trans
-&trans  &zero_morph        &long_kp N1        &long_kp N2        &three_mrph  &long_kp PLUS                                 &trans  &long_kp LCTRL  &long_kp LSHIFT    &long_kp LEFT_ALT  &long_kp LEFT_GUI  &trans
+&trans  &zero_morph        &long_kp N1        &long_kp N2        &three_mrph  &plus_morph                                   &trans  &long_kp LCTRL  &long_kp LSHIFT    &long_kp LEFT_ALT  &long_kp LEFT_GUI  &trans
 &trans  &long_kp EQUAL     &long_kp N4        &long_kp N5        &long_kp N6  &long_kp LC(B)                                &trans  &trans          &long_kp RU_COMMA  &long_kp RU_DOT    &trans             &trans
                            &trans             &trans             &trans       &alt_spc        &long_kp LA(ENTER)    &trans  &trans  &trans          &trans             &trans
             >;
