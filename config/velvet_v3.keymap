@@ -971,7 +971,7 @@
         hrs_l: hrs_l {
             compatible = "zmk,behavior-hold-tap";
             label = "HRS_L";
-            bindings = <&kp>, <&long_kp>;
+            bindings = <&sticky_shift>, <&long_kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
@@ -990,6 +990,16 @@
             flavor = "balanced";
             hold-trigger-on-release;
             hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29>;
+        };
+
+        sticky_shift: sticky_shift {
+            compatible = "zmk,behavior-sticky-key";
+            label = "STICKY_SHIFT";
+            bindings = <&kp>;
+            #binding-cells = <1>;
+            release-after-ms = <15>;
+            quick-release;
+            ignore-modifiers;
         };
     };
 
