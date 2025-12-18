@@ -979,7 +979,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <280>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
             hold-trigger-key-positions = <5 13 6 18 30 31 42 19 7 8 20 9 10 21 22 33 34 32 17>;
             hold-trigger-on-release;
         };
