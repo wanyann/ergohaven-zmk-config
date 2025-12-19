@@ -26,7 +26,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "ADJ_TD";
             #binding-cells = <0>;
-            bindings = <&hold_mo_tap_mkp 1 MB3>, <&to 3>;
+            bindings = <&mkp MB3>, <&to 3>, <&tog 1>;
         };
 
         hold_mo_tap_mkp: hold_mo_tap_mkp {
@@ -36,8 +36,9 @@
 
             #binding-cells = <2>;
             hold-while-undecided;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <199>;
             hold-while-undecided-linger;
+            flavor = "tap-preferred";
         };
     };
 
@@ -62,7 +63,7 @@
 
         base {
             bindings = <
-&mkp MB1  &hold_mo_tap_mkp 2 MB2
+&mkp MB1  &hold_mo_tap_mkp 1 MB2
             >;
 
             display-name = "Base";
@@ -97,13 +98,13 @@
 &trackball { cpi = <1000>; };
 
 &trackball_listener {
-    input-processors = <&zip_xy_scaler 9 20>;
+    input-processors = <&zip_xy_scaler 12 20>;
 
     scroller {
         layers = <1>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
-            <&zip_xy_scaler 1 32>,
+            <&zip_xy_scaler 1 40>,
             <&zip_xy_to_scroll_mapper>;
     };
 
