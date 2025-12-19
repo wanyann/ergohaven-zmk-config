@@ -680,7 +680,7 @@
         hrm_slow: hrm_slow {
             compatible = "zmk,behavior-hold-tap";
             label = "HRM for slow fingers";
-            bindings = <&long_kp>, <&long_kp>;
+            bindings = <&kp>, <&long_kp>;
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
