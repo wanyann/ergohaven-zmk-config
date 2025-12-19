@@ -5,7 +5,7 @@ manifest:
   projects:
     - name: ergohaven-zmk
       remote: ergohaven
-      revision: main
+      revision: v0.3.0
       import: config/west.yml
   self:
     path: config
