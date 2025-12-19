@@ -45,7 +45,7 @@
                 &trans        &trans    &trans         &trans   &trans    &trans  &mo 3            &trans  &kp N0  &trans
             >;
 
-            display-name = "Navigation";
+            display-name = "Nav";
         };
 
         sym {

@@ -1125,6 +1125,21 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL|MOD_LSFT)>;
         };
+
+        mouse_layer: mouse_layer {
+            compatible = "zmk,behavior-sticky-key";
+            label = "MOUSE_LAYER";
+            bindings = <&mo>;
+            #binding-cells = <1>;
+            release-after-ms = <200>;
+        };
+
+        zip_auto_mouse: zip_auto_mouse {
+            compatible = "zmk,input-processor-temp-layer";
+            #input-processor-cells = <2>;
+            require-prior-idle-ms = <800>;
+            excluded-positions = <>;
+        };
     };
 
     keymap {
@@ -1187,10 +1202,10 @@
 
         Scroll {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
+&trans  &trans  &mkp MB3  &mkp MB2  &mkp MB1  &trans                    &trans  &mkp MB1  &mkp MB2  &mkp MB3  &trans  &trans
+&trans  &trans  &trans    &trans    &trans    &trans                    &trans  &trans    &trans    &trans    &trans  &trans
+                &trans    &trans    &trans    &trans  &trans    &trans  &trans  &trans    &trans    &trans
             >;
 
             display-name = "Scroll";
