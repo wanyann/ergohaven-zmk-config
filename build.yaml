@@ -26,66 +26,66 @@ include:
   - board: ergohaven
     shield: velvet_v3_left_qube
     
-  - board: ergohaven
-    shield: velvet_v3_ui_left
+  # - board: ergohaven
+  #   shield: velvet_v3_ui_left
+  # # - board: ergohaven
+  # #   shield: velvet_v3_ui_right
+  # #   keymap: velvet_v3_ui_ruen
+  # #   snippet: studio-rpc-usb-uart
+  # #   cmake-args: -DCONFIG_ZMK_STUDIO=y
+  # #   artifact-name: velvet_v3_ui_right_ruen-ergohaven-zmk
+  # # - board: ergohaven
+  # #   shield: velvet_v3_ui_right
+  # #   keymap: velvet_v3_ui_ruen
+  # #   snippet: studio-rpc-usb-uart
+  # #   cmake-args: -DCONFIG_ZMK_STUDIO=y
+  # #   artifact-name: velvet_v3_ui_right_ruen-ergohaven-zmk
   # - board: ergohaven
   #   shield: velvet_v3_ui_right
-  #   keymap: velvet_v3_ui_ruen
   #   snippet: studio-rpc-usb-uart
   #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: velvet_v3_ui_right_ruen-ergohaven-zmk
-  # - board: ergohaven
-  #   shield: velvet_v3_ui_right
-  #   keymap: velvet_v3_ui_ruen
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: velvet_v3_ui_right_ruen-ergohaven-zmk
-  - board: ergohaven
-    shield: velvet_v3_ui_right
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  # # - board: ergohaven
+  # #   shield: velvet_v3_ui_qube qube dongle_screen
+  # #   snippet: studio-rpc-usb-uart
+  # #   cmake-args: -DCONFIG_ZMK_STUDIO=y
+  # #   artifact-name: velvet_v3_ui_qube-ergohaven-zmk
+  # # - board: ergohaven
+  # #   shield: velvet_v3_ui_qube qube dongle_screen
+  # #   keymap: velvet_v3_ui_ruen
+  # #   snippet: studio-rpc-usb-uart
+  # #   cmake-args: -DCONFIG_ZMK_STUDIO=y
   # - board: ergohaven
   #   shield: velvet_v3_ui_qube qube dongle_screen
   #   snippet: studio-rpc-usb-uart
   #   cmake-args: -DCONFIG_ZMK_STUDIO=y
   #   artifact-name: velvet_v3_ui_qube-ergohaven-zmk
+  # # - board: ergohaven
+  # #   shield: velvet_v3_ui_qube qube dongle_screen
+  # #   keymap: velvet_v3_ui_ruen
+  # #   snippet: studio-rpc-usb-uart
+  # #   cmake-args: -DCONFIG_ZMK_STUDIO=y
+  # #   artifact-name: velvet_v3_ui_qube_ruen-ergohaven-zmk
   # - board: ergohaven
-  #   shield: velvet_v3_ui_qube qube dongle_screen
-  #   keymap: velvet_v3_ui_ruen
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  - board: ergohaven
-    shield: velvet_v3_ui_qube qube dongle_screen
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: velvet_v3_ui_qube-ergohaven-zmk
-  # - board: ergohaven
-  #   shield: velvet_v3_ui_qube qube dongle_screen
-  #   keymap: velvet_v3_ui_ruen
-  #   snippet: studio-rpc-usb-uart
-  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: velvet_v3_ui_qube_ruen-ergohaven-zmk
-  - board: ergohaven
-    shield: velvet_v3_ui_right_qube
+  #   shield: velvet_v3_ui_right_qube
 
-  - board: ergohaven
-    shield: op36_left
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
   # - board: ergohaven
-  #   shield: op36_ruen op36_left
+  #   shield: op36_left
   #   snippet: studio-rpc-usb-uart
   #   cmake-args: -DCONFIG_ZMK_STUDIO=y
-  #   artifact-name: op36_left_ruen-ergohaven-zmk
-  - board: ergohaven
-    shield: op36_right
-  - board: ergohaven
-    shield: op36_qube qube dongle_screen # or prospector_adapter
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
-    artifact-name: op36_qube-ergohaven-zmk
-  - board: ergohaven
-    shield: op36_left_qube
+  # # - board: ergohaven
+  # #   shield: op36_ruen op36_left
+  # #   snippet: studio-rpc-usb-uart
+  # #   cmake-args: -DCONFIG_ZMK_STUDIO=y
+  # #   artifact-name: op36_left_ruen-ergohaven-zmk
+  # - board: ergohaven
+  #   shield: op36_right
+  # - board: ergohaven
+  #   shield: op36_qube qube dongle_screen # or prospector_adapter
+  #   snippet: studio-rpc-usb-uart
+  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
+  #   artifact-name: op36_qube-ergohaven-zmk
+  # - board: ergohaven
+  #   shield: op36_left_qube
 
 
     
@@ -137,10 +137,10 @@ include:
   # - board: ergohaven
   #   shield: imperial44_left_qube
 
-  - board: ergohaven
-    shield: trackball
-    snippet: studio-rpc-usb-uart
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  # - board: ergohaven
+  #   shield: trackball
+  #   snippet: studio-rpc-usb-uart
+  #   cmake-args: -DCONFIG_ZMK_STUDIO=y
 
   - board: ergohaven
     shield: settings_reset
