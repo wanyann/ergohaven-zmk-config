@@ -391,7 +391,7 @@
         ru_code: ru_code {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N9)) &long_kp GRAVE &long_kp GRAVE &long_kp GRAVE &long_kp RETURN &long_kp RET &long_kp GRAVE &long_kp GRAVE &long_kp GRAVE &long_kp UP_ARROW &kp LC(LS(N8))>;
+            bindings = <&long_kp LS(LC(N9)) &long_kp GRAVE &long_kp GRAVE &long_kp GRAVE &long_kp RETURN &long_kp RET &long_kp GRAVE &long_kp GRAVE &long_kp GRAVE &long_kp UP_ARROW &long_kp LC(LS(N8))>;
             label = "RU_CODE";
             tap-ms = <50>;
         };
@@ -655,7 +655,7 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "LLT";
-            wait-ms = <50>;
+            wait-ms = <40>;
         };
     };
 
