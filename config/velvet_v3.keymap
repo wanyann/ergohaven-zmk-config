@@ -121,28 +121,28 @@
             bindings = <&long_kp RU_CYRILLIC_SHA>;
             timeout-ms = <30>;
             key-positions = <32 33>;
-            layers = <2>;
+            layers = <16>;
         };
 
         combo_scha_ru {
             bindings = <&long_kp RU_CYRILLIC_SHCHA>;
             timeout-ms = <30>;
             key-positions = <8 9>;
-            layers = <2>;
+            layers = <16>;
         };
 
         combo_she_cw {
             bindings = <&long_kp LS(RU_CYRILLIC_SHA)>;
             timeout-ms = <30>;
             key-positions = <32 33>;
-            layers = <3>;
+            layers = <16>;
         };
 
         combo_scha_cw {
             bindings = <&long_kp LS(RU_CYRILLIC_SHCHA)>;
             timeout-ms = <30>;
             key-positions = <8 9>;
-            layers = <3>;
+            layers = <16>;
         };
 
         combo_capsword_en {
