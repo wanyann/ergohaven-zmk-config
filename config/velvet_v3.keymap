@@ -324,7 +324,7 @@
         to_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&long_kp LC(LS(N8))>;
+            bindings = <&kp LC(LS(N8))>;
             label = "TO_RU";
             tap-ms = <40>;
             wait-ms = <0>;
@@ -333,7 +333,7 @@
         to_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&long_kp LC(LS(N9))>;
+            bindings = <&kp LC(LS(N9))>;
             label = "TO_EN";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -342,7 +342,7 @@
         en: en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&long_kp LC(LS(N9)) &macro_param_1to1 &long_kp MACRO_PLACEHOLDER &long_kp LC(LS(N8))>;
+            bindings = <&kp LC(LS(N9)) &macro_param_1to1 &long_kp MACRO_PLACEHOLDER &kp LC(LS(N8))>;
             label = "EN";
             wait-ms = <10>;
             tap-ms = <40>;
@@ -351,7 +351,7 @@
         ru: ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&long_kp LC(LS(N8)) &macro_param_1to1 &long_kp MACRO_PLACEHOLDER &long_kp LS(LC(N9))>;
+            bindings = <&kp LC(LS(N8)) &macro_param_1to1 &long_kp MACRO_PLACEHOLDER &kp LS(LC(N9))>;
             label = "RU";
             tap-ms = <40>;
         };
@@ -391,7 +391,7 @@
         ru_code: ru_code {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&long_kp LS(LC(N9)) &long_kp GRAVE &long_kp GRAVE &long_kp GRAVE &long_kp RETURN &long_kp RET &long_kp GRAVE &long_kp GRAVE &long_kp GRAVE &long_kp UP_ARROW &long_kp LC(LS(N8))>;
+            bindings = <&kp LS(LC(N9)) &long_kp GRAVE &long_kp GRAVE &long_kp GRAVE &long_kp RETURN &long_kp RET &long_kp GRAVE &long_kp GRAVE &long_kp GRAVE &long_kp UP_ARROW &kp LC(LS(N8))>;
             label = "RU_CODE";
             tap-ms = <50>;
         };
@@ -1098,10 +1098,10 @@
 
         Nav {
             bindings = <
-&trans  &trans                          &long_kp LA(LC(GRAVE))           &long_kp LC(LS(LA(LG(TAB))))  &long_kp LS(LC(LA(LG(F1))))  &testops                                               &trans         &long_kp HOME   &long_kp UP    &long_kp END    &long_kp DELETE  &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &long_kp LSHFT                &mod_dtap LCTRL LEFT_GUI     &zeros_macro                                           &select_word   &long_kp LEFT   &long_kp DOWN  &long_kp RIGHT  &select_row      &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)              &mt LC(V) LS(LC(LA(V)))      &long_kp LS(LG(LC(F9)))                                &long_kp CAPS  &long_kp PG_UP  &none          &long_kp PG_DN  &trans           &trans
-                                        &trans                           &trans                        &trans                       &alt_spc                 &long_kp LA(ENTER)    &trans  &trans         &trans          &trans         &trans
+&trans  &trans                          &long_kp LA(LC(GRAVE))           &long_kp LC(LS(LA(LG(TAB))))  &long_kp LS(LC(LA(LG(F1))))  &testops                                               &long_kp PG_UP  &long_kp HOME      &long_kp UP    &long_kp END    &long_kp DELETE  &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &long_kp LSHFT                &mod_dtap LCTRL LEFT_GUI     &zeros_macro                                           &select_word    &long_kp LEFT      &long_kp DOWN  &long_kp RIGHT  &select_row      &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)              &mt LC(V) LS(LC(LA(V)))      &long_kp LS(LG(LC(F9)))                                &long_kp PG_DN  &long_kp CAPSLOCK  &none          &trans          &trans           &trans
+                                        &trans                           &trans                        &trans                       &alt_spc                 &long_kp LA(ENTER)    &trans  &trans          &trans             &trans         &trans
             >;
 
             display-name = "Nav";
