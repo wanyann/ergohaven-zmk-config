@@ -117,11 +117,11 @@
             layers = <16>;
         };
 
-        combo_she_ru {
-            bindings = <&long_kp RU_CYRILLIC_SHA>;
+        combo_less_ru {
+            bindings = <&en LESS_THAN>;
             timeout-ms = <30>;
             key-positions = <32 33>;
-            layers = <16>;
+            layers = <2 3 14 11>;
         };
 
         combo_scha_ru {
@@ -131,11 +131,11 @@
             layers = <16>;
         };
 
-        combo_she_cw {
-            bindings = <&long_kp LS(RU_CYRILLIC_SHA)>;
+        combo_less_en {
+            bindings = <&long_kp LESS_THAN>;
             timeout-ms = <30>;
             key-positions = <32 33>;
-            layers = <16>;
+            layers = <0 1 10 13>;
         };
 
         combo_scha_cw {
@@ -299,6 +299,18 @@
             bindings = <&long_kp RU_COLON>;
             key-positions = <6 7>;
             layers = <2 3 10 13>;
+        };
+
+        combo_arrow_ru {
+            bindings = <&arrow_ru>;
+            key-positions = <31 32 33>;
+            layers = <2 3 11 14>;
+        };
+
+        combo_arrow_en {
+            bindings = <&arrow_en>;
+            key-positions = <31 32 33>;
+            layers = <0 1 10 13>;
         };
     };
 
@@ -664,6 +676,20 @@
             #binding-cells = <1>;
             bindings = <&out OUT_BLE &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
             label = "BT_SET";
+        };
+
+        arrow_en: arrow_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS &kp GREATER_THAN>;
+            label = "ARROW_EN";
+        };
+
+        arrow_ru: arrow_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&to_en &arrow_en &to_ru>;
+            label = "ARROW_RU";
         };
     };
 
