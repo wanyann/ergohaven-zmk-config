@@ -109,39 +109,31 @@
             layers = <0 1 13>;
         };
 
-        cmb_bcsp {
-            bindings = <&none>;
-            timeout-ms = <30>;
-            key-positions = <20 21>;
-            require-prior-idle-ms = <15>;
-            layers = <16>;
-        };
-
         combo_less_ru {
             bindings = <&en LESS_THAN>;
             timeout-ms = <30>;
-            key-positions = <32 33>;
+            key-positions = <8 9>;
             layers = <2 3 14 11>;
         };
 
         combo_scha_ru {
             bindings = <&long_kp RU_CYRILLIC_SHCHA>;
             timeout-ms = <30>;
-            key-positions = <8 9>;
+            key-positions = <32 33>;
             layers = <16>;
         };
 
         combo_less_en {
             bindings = <&long_kp LESS_THAN>;
             timeout-ms = <30>;
-            key-positions = <32 33>;
+            key-positions = <8 9>;
             layers = <0 1 10 13>;
         };
 
         combo_scha_cw {
             bindings = <&long_kp LS(RU_CYRILLIC_SHCHA)>;
             timeout-ms = <30>;
-            key-positions = <8 9>;
+            key-positions = <32 33>;
             layers = <16>;
         };
 
@@ -217,7 +209,7 @@
 
         combo_minus {
             bindings = <&long_kp MINUS>;
-            key-positions = <3 4>;
+            key-positions = <7 8>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
@@ -234,9 +226,9 @@
             layers = <0 1 13>;
         };
 
-        combo_under_en {
+        combo_under {
             bindings = <&long_kp UNDER>;
-            key-positions = <7 8>;
+            key-positions = <3 4>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
