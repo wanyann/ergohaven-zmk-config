@@ -116,11 +116,11 @@
             layers = <2 3 14 11>;
         };
 
-        combo_scha_ru {
-            bindings = <&long_kp RU_CYRILLIC_SHCHA>;
+        combo_slash_ru {
+            bindings = <&long_kp RU_SLASH>;
             timeout-ms = <30>;
             key-positions = <32 33>;
-            layers = <16>;
+            layers = <2 3 14 11>;
         };
 
         combo_less_en {
@@ -130,11 +130,11 @@
             layers = <0 1 10 13>;
         };
 
-        combo_scha_cw {
-            bindings = <&long_kp LS(RU_CYRILLIC_SHCHA)>;
+        combo_slash_en {
+            bindings = <&long_kp SLASH>;
             timeout-ms = <30>;
             key-positions = <32 33>;
-            layers = <16>;
+            layers = <0 1 10 13>;
         };
 
         combo_capsword_en {
@@ -302,6 +302,18 @@
         combo_arrow_en {
             bindings = <&arrow_en>;
             key-positions = <31 32 33>;
+            layers = <0 1 10 13>;
+        };
+
+        combo_backslash_ru {
+            bindings = <&long_kp RU_BACKSLASH>;
+            key-positions = <33 34>;
+            layers = <2 3 11 14>;
+        };
+
+        combo_backslash_en {
+            bindings = <&long_kp BACKSLASH>;
+            key-positions = <33 34>;
             layers = <0 1 10 13>;
         };
     };
