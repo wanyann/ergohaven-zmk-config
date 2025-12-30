@@ -209,7 +209,7 @@
 
         combo_minus {
             bindings = <&long_kp MINUS>;
-            key-positions = <4 3>;
+            key-positions = <3 4>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
