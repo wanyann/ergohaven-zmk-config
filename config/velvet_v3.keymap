@@ -328,6 +328,18 @@
             key-positions = <1 2>;
             layers = <0 1 10 13>;
         };
+
+        combo_pipe_ru {
+            bindings = <&en PIPE>;
+            key-positions = <32 33 34>;
+            layers = <2 3 11 14>;
+        };
+
+        combo_pipe_en {
+            bindings = <&kp PIPE>;
+            key-positions = <32 33 34>;
+            layers = <0 1 10 13>;
+        };
     };
 
     macros {
