@@ -316,6 +316,18 @@
             key-positions = <33 34>;
             layers = <0 1 10 13>;
         };
+
+        combo_at_ru {
+            bindings = <&en AT_SIGN>;
+            key-positions = <1 2>;
+            layers = <2 3 11 14>;
+        };
+
+        combo_at_en {
+            bindings = <&kp AT_SIGN>;
+            key-positions = <1 2>;
+            layers = <0 1 10 13>;
+        };
     };
 
     macros {
