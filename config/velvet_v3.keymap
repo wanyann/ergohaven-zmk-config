@@ -235,13 +235,13 @@
 
         combo_ru_at {
             bindings = <&en AT>;
-            key-positions = <30 31>;
+            key-positions = <19 20 21>;
             layers = <2 3 14>;
         };
 
         combo_en_at {
             bindings = <&long_kp AT>;
-            key-positions = <30 31>;
+            key-positions = <19 20 21>;
             layers = <0 1 13>;
         };
 
@@ -318,14 +318,14 @@
         };
 
         combo_at_ru {
-            bindings = <&en AT_SIGN>;
-            key-positions = <21 22>;
+            bindings = <&en APOS>;
+            key-positions = <31 32 33>;
             layers = <2 3 11 14>;
         };
 
         combo_at_en {
-            bindings = <&kp AT_SIGN>;
-            key-positions = <22 21>;
+            bindings = <&kp APOS>;
+            key-positions = <31 33 32>;
             layers = <0 1 10 13>;
         };
 
@@ -338,6 +338,30 @@
         combo_pipe_en {
             bindings = <&kp PIPE>;
             key-positions = <28 27 26>;
+            layers = <0 1 10 13>;
+        };
+
+        combo_dollar_ru {
+            bindings = <&en DOLLAR>;
+            key-positions = <14 15 16>;
+            layers = <2 3 11 14>;
+        };
+
+        combo_dollar_en {
+            bindings = <&kp DOLLAR>;
+            key-positions = <16 15 14>;
+            layers = <0 1 10 13>;
+        };
+
+        combo_hash_ru {
+            bindings = <&en HASH>;
+            key-positions = <30 31>;
+            layers = <2 3 11 14>;
+        };
+
+        combo_hash_en {
+            bindings = <&kp HASH>;
+            key-positions = <30 31>;
             layers = <0 1 10 13>;
         };
     };
