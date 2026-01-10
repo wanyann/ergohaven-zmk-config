@@ -1227,10 +1227,10 @@
 
         Sym_En {
             bindings = <
-&trans  &trans  &none                      &long_kp PIPE    &long_kp BACKSLASH          &trans                           &trans         &long_kp LEFT_BRACKET  &ru RU_RUBLE           &long_kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &long_kp LEFT_PARENTHESIS  &long_kp HASH    &long_kp RIGHT_PARENTHESIS  &long_kp PLUS                    &ru RU_NUMERO  &long_kp LEFT_BRACE    &long_kp SINGLE_QUOTE  &long_kp RIGHT_BRACE    &trans  &trans
-&trans  &trans  &long_kp TILDE             &long_kp DOLLAR  &long_kp PERCENT            &en_code                         &trans         &long_kp LESS_THAN     &long_kp CARET         &long_kp GREATER_THAN   &trans  &trans
-                &trans                     &trans           &trans                      &trans         &trans    &trans  &trans         &trans                 &trans                 &trans
+&trans  &trans  &none                      &none               &none                       &trans                           &trans         &long_kp LEFT_BRACKET  &ru RU_RUBLE           &long_kp RIGHT_BRACKET  &trans  &trans
+&trans  &trans  &long_kp LEFT_PARENTHESIS  &long_kp BACKSLASH  &long_kp RIGHT_PARENTHESIS  &long_kp PLUS                    &ru RU_NUMERO  &long_kp LEFT_BRACE    &long_kp SINGLE_QUOTE  &long_kp RIGHT_BRACE    &trans  &trans
+&trans  &trans  &long_kp TILDE             &long_kp DOLLAR     &long_kp PERCENT            &en_code                         &trans         &long_kp LESS_THAN     &long_kp CARET         &long_kp GREATER_THAN   &trans  &trans
+                &trans                     &trans              &trans                      &trans         &trans    &trans  &trans         &trans                 &trans                 &trans
             >;
 
             display-name = "Sym_En";
