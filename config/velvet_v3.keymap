@@ -406,7 +406,7 @@
         en: en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&long_kp LC(LS(N9)) &macro_param_1to1 &long_kp MACRO_PLACEHOLDER &long_kp LC(LS(N8))>;
+            bindings = <&long_kp LC(LS(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &long_kp LC(LS(N8))>;
             label = "EN";
             wait-ms = <10>;
             tap-ms = <40>;
@@ -415,7 +415,7 @@
         ru: ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&long_kp LC(LS(N8)) &macro_param_1to1 &long_kp MACRO_PLACEHOLDER &long_kp LS(LC(N9))>;
+            bindings = <&long_kp LC(LS(N8)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &long_kp LS(LC(N9))>;
             label = "RU";
             tap-ms = <40>;
         };
