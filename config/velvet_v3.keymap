@@ -161,19 +161,19 @@
 
         combo_yo_ru {
             bindings = <&long_kp RU_CYRILLIC_IO>;
-            key-positions = <1 2>;
+            key-positions = <2 3 4>;
             layers = <2>;
         };
 
         combo_yo_cw_ru {
             bindings = <&long_kp LS(RU_CYRILLIC_IO)>;
-            key-positions = <1 2>;
+            key-positions = <2 3 4>;
             layers = <3>;
         };
 
         combo_yo_en {
             bindings = <&ru RU_CYRILLIC_IO>;
-            key-positions = <1 2>;
+            key-positions = <2 3 4>;
             layers = <0>;
         };
 
@@ -325,19 +325,19 @@
 
         combo_at_en {
             bindings = <&kp AT_SIGN>;
-            key-positions = <21 22>;
+            key-positions = <22 21>;
             layers = <0 1 10 13>;
         };
 
         combo_pipe_ru {
             bindings = <&en PIPE>;
-            key-positions = <32 33 34>;
+            key-positions = <26 27 28>;
             layers = <2 3 11 14>;
         };
 
         combo_pipe_en {
             bindings = <&kp PIPE>;
-            key-positions = <32 33 34>;
+            key-positions = <28 27 26>;
             layers = <0 1 10 13>;
         };
     };
