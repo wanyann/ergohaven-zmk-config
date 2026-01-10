@@ -235,13 +235,13 @@
 
         combo_ru_at {
             bindings = <&en AT>;
-            key-positions = <19 20 21>;
+            key-positions = <14 15 16>;
             layers = <2 3 14>;
         };
 
         combo_en_at {
             bindings = <&long_kp AT>;
-            key-positions = <19 20 21>;
+            key-positions = <16 15 14>;
             layers = <0 1 13>;
         };
 
@@ -343,13 +343,13 @@
 
         combo_dollar_ru {
             bindings = <&en DOLLAR>;
-            key-positions = <14 15 16>;
+            key-positions = <19 20 21>;
             layers = <2 3 11 14>;
         };
 
         combo_dollar_en {
             bindings = <&kp DOLLAR>;
-            key-positions = <16 15 14>;
+            key-positions = <19 20 21>;
             layers = <0 1 10 13>;
         };
 
