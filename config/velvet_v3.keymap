@@ -1063,7 +1063,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <5 13 6 18 30 31 42 19 7 8 20 9 10 21 22 33 34 32 17 11 23 35 16>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
         };
 
         hrs_r: hrs_r {
@@ -1075,7 +1075,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <1 2 3 4 5 13 14 15 16 17 25 26 27 28 29 0 12 24 19>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
         };
     };
 
