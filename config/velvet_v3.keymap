@@ -720,7 +720,7 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "LLT";
-            wait-ms = <30>;
+            wait-ms = <50>;
         };
 
         bt_set: bt_set {
