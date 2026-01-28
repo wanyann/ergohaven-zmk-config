@@ -1081,10 +1081,10 @@
 
         En {
             bindings = <
-&none  &none                  &long_kp X             &long_kp Z           &mt LC(R) J          &mt LC(T) APOS                             &long_kp Q  &long_kp G   &long_kp N           &long_kp F       &none              &none
-&none  &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs_l LEFT_SHIFT E  &hrml LCTRL A        &en_com_mt LC(F) 0                         &long_kp P  &hrl 10 D    &hrs_r LEFT_SHIFT R  &long_kp S       &hrml_slow RALT L  &none
-&none  &mt LC(Z) K            &mt LC(X) Y            &mt LC(C) O          &mt LC(V) U          &en_dot_mt LG(V) 0                         &long_kp B  &long_kp C   &long_kp M           &long_kp W       &mt LC(SLASH) V    &none
-                              &long_kp LS(F7)        &long_kp F7          &en_cw_off K_CANCEL  &lt 9 SPACE         &sl 12    &bspc_morph  &lt 10 T    &bspc_morph  &long_kp F2          &long_kp LS(F2)
+&none  &none                  &long_kp X             &long_kp Z           &mt LC(R) J          &mt LC(T) APOS                           &long_kp Q  &long_kp G   &long_kp N           &long_kp F       &none              &none
+&none  &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs_l LEFT_SHIFT E  &hrml LCTRL A        &en_com_mt LC(F) 0                       &long_kp P  &hrl 10 D    &hrs_r LEFT_SHIFT R  &long_kp S       &hrml_slow RALT L  &none
+&none  &mt LC(Z) K            &mt LC(X) Y            &mt LC(C) O          &mt LC(V) U          &en_dot_mt LG(V) 0                       &long_kp B  &long_kp C   &long_kp M           &long_kp W       &mt LC(SLASH) V    &none
+                              &long_kp LS(F7)        &long_kp F7          &en_cw_off K_CANCEL  &lt 9 SPACE         &sl 12    &sk LSHFT  &lt 10 T    &bspc_morph  &long_kp F2          &long_kp LS(F2)
             >;
 
             display-name = "En";
