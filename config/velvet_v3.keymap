@@ -740,6 +740,13 @@
             bindings = <&to_en &arrow_en &to_ru>;
             label = "ARROW_RU";
         };
+
+        bt_set_c: bt_set_c {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_off 16>;
+            label = "BT_SET_C";
+        };
     };
 
     behaviors {
@@ -1257,10 +1264,10 @@
 
         OS {
             bindings = <
-&trans  &bt_set 2  &kp LA(LC(N1))      &long_kp LA(LC(N2))            &long_kp LC(LA(NUMBER_3))  &long_kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
-&trans  &bt_set 1  &long_kp LC(RIGHT)  &long_kp LA(LC(N1))            &long_kp C_VOLUME_UP       &long_kp C_BRI_UP                            &out OUT_BLE  &long_kp F24    &trans  &trans  &soft_off   &trans
-&trans  &bt_set 0  &none               &long_kp LC(LS(LEFT_BRACKET))  &long_kp C_VOL_DN          &long_kp C_BRI_DN                            &out OUT_USB  &long_kp F23    &trans  &trans  &trans      &trans
-                   &trans              &trans                         &trans                     &trans                     &trans    &trans  &trans        &trans          &trans  &trans
+&trans  &bt_set_c 2  &kp LA(LC(N1))      &long_kp LA(LC(N2))            &long_kp LC(LA(NUMBER_3))  &long_kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
+&trans  &bt_set_c 1  &long_kp LC(RIGHT)  &long_kp LA(LC(N1))            &long_kp C_VOLUME_UP       &long_kp C_BRI_UP                            &out OUT_BLE  &long_kp F24    &trans  &trans  &soft_off   &trans
+&trans  &bt_set_c 0  &none               &long_kp LC(LS(LEFT_BRACKET))  &long_kp C_VOL_DN          &long_kp C_BRI_DN                            &out OUT_USB  &long_kp F23    &trans  &trans  &trans      &trans
+                     &trans              &trans                         &trans                     &trans                     &trans    &trans  &trans        &trans          &trans  &trans
             >;
 
             display-name = "OS";
