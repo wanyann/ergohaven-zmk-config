@@ -1220,10 +1220,10 @@
 
         App {
             bindings = <
-&trans  &long_kp LA(LC(LS(P)))  &long_kp LS(LA(LC(W)))  &long_kp LS(LA(LC(E)))  &long_kp LS(LA(LC(R)))  &long_kp LS(LA(LC(T)))                    &long_kp LS(LA(LC(Y)))  &long_kp LS(LA(LC(U)))  &long_kp LS(LA(LC(I)))      &long_kp LS(LA(LC(O)))    &long_kp LS(LA(LC(P)))          &trans
-&trans  &long_kp LS(LA(LC(A)))  &long_kp LS(LA(LC(S)))  &long_kp LS(LA(LC(D)))  &long_kp LS(LA(LC(F)))  &long_kp LS(LA(LC(G)))                    &long_kp LS(LA(LC(H)))  &long_kp LS(LA(LC(J)))  &long_kp LS(LA(LC(K)))      &long_kp LS(LA(LC(L)))    &long_kp LS(LA(LC(SEMICOLON)))  &trans
-&trans  &long_kp LS(LC(LA(Z)))  &long_kp LS(LA(LC(X)))  &long_kp LS(LA(LC(C)))  &long_kp LS(LC(LG(V)))  &long_kp LS(LA(LC(B)))                    &long_kp LS(LA(LC(N)))  &long_kp LS(LC(LA(M)))  &long_kp LS(LA(LC(COMMA)))  &long_kp LS(LA(LC(DOT)))  &long_kp LS(LC(LA(SLASH)))      &trans
-                                &trans                  &trans                  &layer_off 12           &none                   &sl 12    &trans  &trans                  &trans                  &trans                      &trans
+&trans                             &long_kp LA(LC(LS(P)))  &long_kp LS(LA(LC(W)))  &long_kp LS(LA(LC(E)))  &long_kp LS(LA(LC(R)))  &long_kp LS(LA(LC(T)))                    &long_kp LS(LA(LC(Y)))  &long_kp LS(LA(LC(U)))  &long_kp LS(LA(LC(I)))      &long_kp LS(LA(LC(O)))    &long_kp LS(LA(LC(P)))          &trans
+&long_kp LS(LA(LC(LEFT_BRACKET)))  &long_kp LS(LA(LC(A)))  &long_kp LS(LA(LC(S)))  &long_kp LS(LA(LC(D)))  &long_kp LS(LA(LC(F)))  &long_kp LS(LA(LC(G)))                    &long_kp LS(LA(LC(H)))  &long_kp LS(LA(LC(J)))  &long_kp LS(LA(LC(K)))      &long_kp LS(LA(LC(L)))    &long_kp LS(LA(LC(SEMICOLON)))  &long_kp LS(LA(LC(RIGHT_BRACKET)))
+&trans                             &long_kp LS(LC(LA(Z)))  &long_kp LS(LA(LC(X)))  &long_kp LS(LA(LC(C)))  &long_kp LS(LC(LG(V)))  &long_kp LS(LA(LC(B)))                    &long_kp LS(LA(LC(N)))  &long_kp LS(LC(LA(M)))  &long_kp LS(LA(LC(COMMA)))  &long_kp LS(LA(LC(DOT)))  &long_kp LS(LC(LA(SLASH)))      &trans
+                                                           &trans                  &trans                  &layer_off 12           &none                   &sl 12    &trans  &trans                  &trans                  &trans                      &trans
             >;
 
             display-name = "App";
