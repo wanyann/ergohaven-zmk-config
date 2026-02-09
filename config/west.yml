@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: ergohaven
-      url-base: https://github.com/wanyann
+      url-base: https://github.com/ergohaven
   projects:
     - name: ergohaven-zmk
       remote: ergohaven
