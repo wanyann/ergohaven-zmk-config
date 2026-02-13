@@ -1084,7 +1084,7 @@
 
         En {
             bindings = <
-&none  &none                  &none                  &kp Z                &mt LC(R) A        &mt LC(T) APOS                                &kp Q     &kp G        &kp N                &kp W       &kp Z              &none
+&none  &none                  &kp Y                  &kp U                &mt LC(R) A        &mt LC(T) APOS                                &kp Q     &kp G        &kp N                &kp W       &kp Z              &none
 &kp J  &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs_l LEFT_SHIFT E  &hrml LCTRL O        &en_com_mt LC(F) 0                            &kp M     &hrl 10 D    &hrs_r LEFT_SHIFT R  &kp S       &hrml_slow RALT P  &kp K
 &none  &mt LC(Z) X            &mt LC(X) Y            &mt LC(C) U          &mt LC(V) SQT          &en_dot_mt LG(V) 0                            &kp V     &kp C        &kp L                &kp F       &mt LC(SLASH) B    &none
                               &kp LS(F7)             &kp F7               &en_cw_off K_CANCEL  &lt 9 SPACE         &sl 12    &sk LEFT_SHIFT  &lt 10 T  &bspc_morph  &kp F2               &kp LS(F2)
@@ -1095,7 +1095,7 @@
 
         En_CW {
             bindings = <
-&trans     &none                      &none                      &kp LS(Z)                &mt LC(R) LS(A)        &mt LC(T) APOS                           &kp LS(Q)     &kp LS(G)      &kp LS(N)                &kp LS(W)  &kp LS(Z)              &trans
+&trans     &none                      &kp LS(Y)                     &kp LS(U)                &mt LC(R) LS(A)        &mt LC(T) APOS                           &kp LS(Q)     &kp LS(G)      &kp LS(N)                &kp LS(W)  &kp LS(Z)              &trans
 &kp LS(J)  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrs_l LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)    &en_com_mt LC(F) 0                       &kp LS(M)     &hrl 10 LS(D)  &hrs_r LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(P)  &kp LS(K)
 &trans     &mt LC(Z) LS(X)            &mt LC(X) LS(Y)            &mt LC(C) LS(U)          &mt LC(V) SQT      &en_dot_mt LG(V) 0                       &kp LS(V)     &kp LS(C)      &kp LS(L)                &kp LS(F)  &mt LC(SLASH) LS(B)    &trans
                                       &trans                     &trans                   &en_cw_off K_CANCEL  &en_lt_cw_off 9 SPACE  &trans    &trans  &lt 10 LS(T)  &trans         &trans                   &trans
