@@ -1035,7 +1035,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
+            flavor = "hold-preferred";
         };
 
         zero_morph: zero_morph {
