@@ -1084,9 +1084,9 @@
 
         En {
             bindings = <
-&none  &none                  &kp Y                  &kp U                &mt LC(R) A        &mt LC(T) APOS                                &kp Q     &kp G        &kp N                &kp W       &kp Z              &none
+&none  &none                  &kp Y                  &kp U                &mt LC(R) A          &mt LC(T) APOS                                &kp Q     &kp G        &kp N                &kp W       &kp Z              &none
 &kp J  &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs_l LEFT_SHIFT E  &hrml LCTRL O        &en_com_mt LC(F) 0                            &kp M     &hrl 10 D    &hrs_r LEFT_SHIFT R  &kp S       &hrml_slow RALT P  &kp K
-&none  &mt LC(Z) X            &mt LC(X) K_CANCEL            &mt LC(C) K_CANCEL          &mt LC(V) SQT          &en_dot_mt LG(V) 0                            &kp V     &kp C        &kp L                &kp F       &mt LC(SLASH) B    &none
+&none  &mt LC(Z) X            &mt LC(X) K_CANCEL     &mt LC(C) K_CANCEL   &mt LC(V) SQT        &en_dot_mt LG(V) 0                            &kp V     &kp C        &kp L                &kp F       &mt LC(SLASH) B    &none
                               &kp LS(F7)             &kp F7               &en_cw_off K_CANCEL  &lt 9 SPACE         &sl 12    &sk LEFT_SHIFT  &lt 10 T  &bspc_morph  &kp F2               &kp LS(F2)
             >;
 
@@ -1095,9 +1095,9 @@
 
         En_CW {
             bindings = <
-&trans     &none                      &kp LS(Y)                     &kp LS(U)                &mt LC(R) LS(A)        &mt LC(T) APOS                           &kp LS(Q)     &kp LS(G)      &kp LS(N)                &kp LS(W)  &kp LS(Z)              &trans
+&trans     &none                      &kp LS(Y)                  &kp LS(U)                &mt LC(R) LS(A)      &mt LC(T) APOS                           &kp LS(Q)     &kp LS(G)      &kp LS(N)                &kp LS(W)  &kp LS(Z)              &trans
 &kp LS(J)  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrs_l LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)    &en_com_mt LC(F) 0                       &kp LS(M)     &hrl 10 LS(D)  &hrs_r LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(P)  &kp LS(K)
-&trans     &mt LC(Z) LS(X)            &mt LC(X) K_CANCEL            &mt LC(C) K_CANCEL          &mt LC(V) SQT      &en_dot_mt LG(V) 0                       &kp LS(V)     &kp LS(C)      &kp LS(L)                &kp LS(F)  &mt LC(SLASH) LS(B)    &trans
+&trans     &mt LC(Z) LS(X)            &mt LC(X) K_CANCEL         &mt LC(C) K_CANCEL       &mt LC(V) SQT        &en_dot_mt LG(V) 0                       &kp LS(V)     &kp LS(C)      &kp LS(L)                &kp LS(F)  &mt LC(SLASH) LS(B)    &trans
                                       &trans                     &trans                   &en_cw_off K_CANCEL  &en_lt_cw_off 9 SPACE  &trans    &trans  &lt 10 LS(T)  &trans         &trans                   &trans
             >;
 
@@ -1183,10 +1183,10 @@
 
         Nav {
             bindings = <
-&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))   &testops                                     &kp PG_UP     &kp HOME      &kp UP    &kp END    &kp DELETE   &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &kp LCTRL                &zeros_macro                                 &select_word  &kp LEFT      &kp DOWN  &kp RIGHT  &select_row  &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))  &kp LS(LG(LC(F9)))                           &kp PG_DN     &kp CAPSLOCK  &none     &trans     &trans       &trans
-                                        &trans                           &trans                   &trans                   &alt_spc            &kp LA(ENTER)    &trans  &trans        &trans        &trans    &trans
+&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                     &kp PG_UP     &kp HOME      &kp UP    &kp END    &kp DELETE   &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                 &select_word  &kp LEFT      &kp DOWN  &kp RIGHT  &select_row  &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                           &kp PG_DN     &kp CAPSLOCK  &none     &trans     &trans       &trans
+                                        &trans                           &trans                   &trans                    &alt_spc            &kp LA(ENTER)    &trans  &trans        &trans        &trans    &trans
             >;
 
             display-name = "Nav";
