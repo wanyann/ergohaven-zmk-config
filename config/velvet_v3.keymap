@@ -1032,7 +1032,7 @@
         mod_dtap: mod_dtap {
             compatible = "zmk,behavior-hold-tap";
             label = "MOD_DTAP";
-            bindings = <&kp>, <&dbl_tap>;
+            bindings = <&kp>, <&cmd_dtap>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1077,6 +1077,13 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             require-prior-idle-ms = <30>;
+        };
+
+        cmd_dtap: cmd_dtap {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CMD_DTAP";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_CONTROL>, <&dbl_tap LEFT_GUI>;
         };
     };
 
