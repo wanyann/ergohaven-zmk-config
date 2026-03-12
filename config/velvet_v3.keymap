@@ -1083,7 +1083,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CMD_DTAP";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_CONTROL>, <&dbl_tap LEFT_GUI>;
+            bindings = <&kp LEFT_CONTROL>, <&dbl_tap LEFT_CONTROL>;
         };
     };
 
