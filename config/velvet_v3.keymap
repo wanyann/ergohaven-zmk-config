@@ -158,7 +158,7 @@
 
         combo_yo_ru {
             bindings = <&kp RU_CYRILLIC_IO>;
-            key-positions = <4 3 2>;
+            key-positions = <26 27 28>;
             layers = <2>;
         };
 
@@ -170,7 +170,7 @@
 
         combo_yo_en {
             bindings = <&ru RU_CYRILLIC_IO>;
-            key-positions = <2 3 4>;
+            key-positions = <26 27 28>;
             layers = <0>;
         };
 
@@ -348,6 +348,16 @@
             bindings = <&kp HASH>;
             key-positions = <30 31>;
             layers = <0 1 10 13>;
+        };
+
+        combo_asterisk_ru {
+            bindings = <&kp RU_ASTERISK>;
+            key-positions = <2 3 4>;
+        };
+
+        combo_asterisk_en {
+            bindings = <&kp ASTERISK>;
+            key-positions = <2 3 4>;
         };
     };
 
