@@ -242,13 +242,13 @@
             layers = <0 1 13>;
         };
 
-        combo_en_quotes {
+        combo_quotes_en {
             bindings = <&td_quotes_en>;
             key-positions = <7 8>;
             layers = <0 1 10 13>;
         };
 
-        combo_ru_quotes {
+        combo_quotes_ru {
             bindings = <&td_quotes_ru>;
             key-positions = <7 8>;
             layers = <2 3 14 11>;
