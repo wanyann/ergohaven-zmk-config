@@ -158,7 +158,7 @@
 
         combo_yo_ru {
             bindings = <&kp RU_CYRILLIC_IO>;
-            key-positions = <26 27 28>;
+            key-positions = <4 3 2>;
             layers = <2>;
         };
 
@@ -170,7 +170,7 @@
 
         combo_yo_en {
             bindings = <&ru RU_CYRILLIC_IO>;
-            key-positions = <26 27 28>;
+            key-positions = <2 3 4>;
             layers = <0>;
         };
 
