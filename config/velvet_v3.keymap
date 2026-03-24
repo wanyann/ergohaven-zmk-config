@@ -1225,10 +1225,10 @@
 
         Sym_En {
             bindings = <
-&trans  &trans  &none                 &none          &none                  &trans                      &trans         &kp LEFT_BRACKET  &ru RU_RUBLE      &kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp BACKSLASH  &kp RIGHT_PARENTHESIS  &kp PLUS                    &ru RU_NUMERO  &kp LEFT_BRACE    &kp SINGLE_QUOTE  &kp RIGHT_BRACE    &trans  &trans
-&trans  &trans  &kp TILDE             &kp DOLLAR     &kp PERCENT            &en_code                    &trans         &kp LESS_THAN     &kp CARET         &kp GREATER_THAN   &trans  &trans
-                &trans                &trans         &trans                 &trans    &trans    &trans  &trans         &trans            &trans            &trans
+&trans  &trans  &none                 &none   &none                  &trans                      &trans         &kp LEFT_BRACKET  &ru RU_RUBLE  &kp RIGHT_BRACKET  &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &none   &kp RIGHT_PARENTHESIS  &kp PLUS                    &ru RU_NUMERO  &kp LEFT_BRACE    &none         &kp RIGHT_BRACE    &trans  &trans
+&trans  &trans  &kp TILDE             &none   &kp PERCENT            &en_code                    &trans         &kp LESS_THAN     &kp CARET     &kp GREATER_THAN   &trans  &trans
+                &trans                &trans  &trans                 &trans    &trans    &trans  &trans         &trans            &trans        &trans
             >;
 
             display-name = "Sym_En";
@@ -1236,10 +1236,10 @@
 
         Sym_Ru {
             bindings = <
-&trans  &trans  &none                 &en PIPE    &en BACKSLASH  &trans                      &trans         &en LEFT_BRACKET  &kp RU_RUBLE      &en RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &en HASH    &kp RPAR       &kp PLUS                    &kp RU_NUMERO  &en LEFT_BRACE    &en SINGLE_QUOTE  &en RIGHT_BRACE    &trans  &trans
-&trans  &trans  &en TILDE             &en DOLLAR  &kp PERCENT    &ru_code                    &trans         &en LESS_THAN     &en CARET         &en GREATER_THAN   &trans  &trans
-                &trans                &trans      &trans         &trans    &trans    &trans  &trans         &trans            &trans            &trans
+&trans  &trans  &none                 &none   &none        &trans                      &trans         &en LEFT_BRACKET  &kp RU_RUBLE  &en RIGHT_BRACKET  &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &none   &kp RPAR     &kp PLUS                    &kp RU_NUMERO  &en LEFT_BRACE    &none         &en RIGHT_BRACE    &trans  &trans
+&trans  &trans  &en TILDE             &none   &kp PERCENT  &ru_code                    &trans         &en LESS_THAN     &en CARET     &en GREATER_THAN   &trans  &trans
+                &trans                &trans  &trans       &trans    &trans    &trans  &trans         &trans            &trans        &trans
             >;
 
             display-name = "Sym_Ru";
