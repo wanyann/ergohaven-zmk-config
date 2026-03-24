@@ -290,18 +290,6 @@
             layers = <2 3 10 13>;
         };
 
-        combo_arrow_ru {
-            bindings = <&arrow_ru>;
-            key-positions = <7 8 9>;
-            layers = <2 3 11 14>;
-        };
-
-        combo_arrow_en {
-            bindings = <&arrow_en>;
-            key-positions = <7 8 9>;
-            layers = <0 1 10 13>;
-        };
-
         combo_backslash_ru {
             bindings = <&kp RU_BACKSLASH>;
             key-positions = <33 34>;
