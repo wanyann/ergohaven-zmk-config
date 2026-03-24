@@ -109,7 +109,7 @@
         combo_singlequote_ru {
             bindings = <&en SINGLE_QUOTE>;
             timeout-ms = <30>;
-            key-positions = <8 7>;
+            key-positions = <7 6>;
             layers = <2 3 14 11>;
         };
 
@@ -123,7 +123,7 @@
         combo_singequote_en {
             bindings = <&kp SINGLE_QUOTE>;
             timeout-ms = <30>;
-            key-positions = <8 7>;
+            key-positions = <7 6>;
             layers = <0 1 10 13>;
         };
 
@@ -213,13 +213,13 @@
 
         combo_grave_ru {
             bindings = <&en GRAVE>;
-            key-positions = <6 7>;
+            key-positions = <19 18>;
             layers = <2 3 14>;
         };
 
         combo_grave_en {
             bindings = <&kp GRAVE>;
-            key-positions = <6 7>;
+            key-positions = <18 19>;
             layers = <0 1 13>;
         };
 
@@ -244,13 +244,13 @@
 
         combo_en_quotes {
             bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <18 19>;
+            key-positions = <7 8>;
             layers = <0 1 10 13>;
         };
 
         combo_ru_quotes {
             bindings = <&kp RU_DOUBLE_QUOTES>;
-            key-positions = <18 19>;
+            key-positions = <7 8>;
             layers = <2 3 14 11>;
         };
 
