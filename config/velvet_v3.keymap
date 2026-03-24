@@ -243,13 +243,13 @@
         };
 
         combo_en_quotes {
-            bindings = <&kp DOUBLE_QUOTES>;
+            bindings = <&td_quotes_en>;
             key-positions = <7 8>;
             layers = <0 1 10 13>;
         };
 
         combo_ru_quotes {
-            bindings = <&kp RU_DOUBLE_QUOTES>;
+            bindings = <&td_quotes_ru>;
             key-positions = <7 8>;
             layers = <2 3 14 11>;
         };
@@ -1079,6 +1079,24 @@
             bindings = <&kp LEFT_CONTROL>, <&dbl_tap LEFT_COMMAND>;
 
             tapping-term-ms = <250>;
+        };
+
+        td_quotes_ru: td_quotes_ru {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QUOTES_RU";
+            #binding-cells = <0>;
+            bindings = <&kp RU_DOUBLE_QUOTES>, <&quotes_ru>;
+
+            tapping-term-ms = <150>;
+        };
+
+        td_quotes_en: td_quotes_en {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_QUOTES_EN";
+            #binding-cells = <0>;
+            bindings = <&kp DOUBLE_QUOTES>, <&quotes_en>;
+
+            tapping-term-ms = <150>;
         };
     };
 
