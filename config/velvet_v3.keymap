@@ -350,13 +350,8 @@
             layers = <0 1 10 13>;
         };
 
-        combo_asterisk_ru {
+        combo_asterisk {
             bindings = <&kp RU_ASTERISK>;
-            key-positions = <2 3 4>;
-        };
-
-        combo_asterisk_en {
-            bindings = <&kp ASTERISK>;
             key-positions = <2 3 4>;
         };
     };
