@@ -354,6 +354,54 @@
             bindings = <&kp RU_ASTERISK>;
             key-positions = <1 2 3>;
         };
+
+        cmb_j {
+            bindings = <&kp J>;
+            key-positions = <0 1>;
+            layers = <0 10 13>;
+        };
+
+        cmb_j_cw {
+            bindings = <&kp LS(J)>;
+            key-positions = <0 1>;
+            layers = <1>;
+        };
+
+        cmb_k {
+            bindings = <&kp K>;
+            key-positions = <8 9>;
+            layers = <0>;
+        };
+
+        combo_k_cw {
+            bindings = <&kp LS(K)>;
+            key-positions = <8 9>;
+            layers = <1>;
+        };
+
+        cmb_e {
+            bindings = <&kp RU_CYRILLIC_E>;
+            key-positions = <0 1>;
+            layers = <2>;
+        };
+
+        cmb_e_cw {
+            bindings = <&kp LS(RU_CYRILLIC_E)>;
+            key-positions = <0 1>;
+            layers = <3>;
+        };
+
+        combo_she {
+            bindings = <&kp RU_CYRILLIC_SHA>;
+            key-positions = <8 9>;
+            layers = <2>;
+        };
+
+        cmb_she_cw {
+            bindings = <&kp LS(RU_CYRILLIC_SHA)>;
+            key-positions = <8 9>;
+            layers = <3>;
+        };
     };
 
     macros {
@@ -1105,10 +1153,10 @@
 
         En {
             bindings = <
-&none                  &kp Y                  &kp U                &mt LC(R) A          &mt LC(T) APOS                                &kp Q     &kp G        &kp N                &kp W       &kp Z              
-&hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs_l LEFT_SHIFT E  &hrml LCTRL O        &en_com_mt LC(F) 0                            &kp M     &hrl 10 D    &hrs_r LEFT_SHIFT R  &kp S       &hrml_slow RALT P  
-&mt LC(Z) X            &mt LC(X) K_CANCEL     &mt LC(C) K_CANCEL   &mt LC(V) SQT        &en_dot_mt LG(V) 0                            &kp V     &kp C        &kp L                &kp F       &mt LC(SLASH) B    
-                                                                   &en_cw_off K_CANCEL  &lt 9 SPACE         &sl 12    &sk LEFT_SHIFT  &lt 10 T  &bspc_morph
+  &none                  &kp Y                  &kp U                &mt LC(R) A          &mt LC(T) APOS                                &kp Q     &kp G        &kp N                &kp W  &kp Z
+  &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs_l LEFT_SHIFT E  &hrml LCTRL O        &en_com_mt LC(F) 0                            &kp M     &hrl 10 D    &hrs_r LEFT_SHIFT R  &kp S  &hrml_slow RALT P
+  &mt LC(Z) X            &mt LC(X) K_CANCEL     &mt LC(C) K_CANCEL   &mt LC(V) SQT        &en_dot_mt LG(V) 0                            &kp V     &kp C        &kp L                &kp F  &mt LC(SLASH) B
+                                                                     &en_cw_off K_CANCEL  &lt 9 SPACE         &sl 12    &sk LEFT_SHIFT  &lt 10 T  &bspc_morph
             >;
 
             display-name = "En";
@@ -1116,10 +1164,10 @@
 
         En_CW {
             bindings = <
-&none                      &kp LS(Y)                  &kp LS(U)                &mt LC(R) LS(A)      &mt LC(T) APOS                           &kp LS(Q)     &kp LS(G)      &kp LS(N)                &kp LS(W)  &kp LS(Z)            
-&hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrs_l LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)    &en_com_mt LC(F) 0                       &kp LS(M)     &hrl 10 LS(D)  &hrs_r LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(P)
-&mt LC(Z) LS(X)            &mt LC(X) K_CANCEL         &mt LC(C) K_CANCEL       &mt LC(V) SQT        &en_dot_mt LG(V) 0                       &kp LS(V)     &kp LS(C)      &kp LS(L)                &kp LS(F)  &mt LC(SLASH) LS(B)  
-                                                                               &en_cw_off K_CANCEL  &en_lt_cw_off 9 SPACE  &trans    &trans  &lt 10 LS(T)  &trans 
+  &none                      &kp LS(Y)                  &kp LS(U)                &mt LC(R) LS(A)      &mt LC(T) APOS                           &kp LS(Q)     &kp LS(G)      &kp LS(N)                &kp LS(W)  &kp LS(Z)
+  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrs_l LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)    &en_com_mt LC(F) 0                       &kp LS(M)     &hrl 10 LS(D)  &hrs_r LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(P)
+  &mt LC(Z) LS(X)            &mt LC(X) K_CANCEL         &mt LC(C) K_CANCEL       &mt LC(V) SQT        &en_dot_mt LG(V) 0                       &kp LS(V)     &kp LS(C)      &kp LS(L)                &kp LS(F)  &mt LC(SLASH) LS(B)
+                                                                                 &en_cw_off K_CANCEL  &en_lt_cw_off 9 SPACE  &trans    &trans  &lt 10 LS(T)  &trans
             >;
 
             display-name = "En_CW";
@@ -1127,10 +1175,10 @@
 
         Ru {
             bindings = <
-&kp RU_CYRILLIC_TSE                      &soft_sign                         &kp RU_CYRILLIC_YA                &mt LC(R) RU_CYRILLIC_A     &mt LC(T) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_VE      &kp RU_CYRILLIC_KA                &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA          
-&hrml_slow LEFT_GUI RU_CYRILLIC_SHORT_I  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrs_l LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &ru_com_mt LC(F) 0                          &kp RU_CYRILLIC_EL     &hrl 11 RU_CYRILLIC_EN  &hrs_r LEFT_SHIFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &hrml_slow RALT RU_CYRILLIC_CHE
-&mt LC(Z) RU_CYRILLIC_EF                 &mt LC(X) RU_CYRILLIC_U            &mt LC(C) RU_CYRILLIC_HA          &mt LC(V) RU_CYRILLIC_YERU  &ru_dot_mt LG(V) 0                          &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM      &kp RU_CYRILLIC_PE                &kp RU_CYRILLIC_GHE  &mt LC(SLASH) RU_CYRILLIC_ZHE  
-                                                                                                       &ru_cw_off K_CANCEL         &trans                    &trans    &trans  &lt 11 RU_CYRILLIC_ER  &trans
+  &kp RU_CYRILLIC_TSE                      &soft_sign                         &kp RU_CYRILLIC_YA                &mt LC(R) RU_CYRILLIC_A     &mt LC(T) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_VE      &kp RU_CYRILLIC_KA                &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA
+  &hrml_slow LEFT_GUI RU_CYRILLIC_SHORT_I  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrs_l LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &ru_com_mt LC(F) 0                          &kp RU_CYRILLIC_EL     &hrl 11 RU_CYRILLIC_EN  &hrs_r LEFT_SHIFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &hrml_slow RALT RU_CYRILLIC_CHE
+  &mt LC(Z) RU_CYRILLIC_EF                 &mt LC(X) RU_CYRILLIC_U            &mt LC(C) RU_CYRILLIC_HA          &mt LC(V) RU_CYRILLIC_YERU  &ru_dot_mt LG(V) 0                          &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM      &kp RU_CYRILLIC_PE                &kp RU_CYRILLIC_GHE  &mt LC(SLASH) RU_CYRILLIC_ZHE
+                                                                                                                &ru_cw_off K_CANCEL         &trans                    &trans    &trans  &lt 11 RU_CYRILLIC_ER  &trans
             >;
 
             display-name = "Ru";
@@ -1138,10 +1186,10 @@
 
         Ru_CW {
             bindings = <
-&kp LS(RU_CYRILLIC_TSE)                      &caps_soft_sign                        &kp LS(RU_CYRILLIC_YA)                &mt LC(R) LS(RU_CYRILLIC_A)     &mt LC(T) LS(RU_CYRILLIC_YU)                    &kp LS(RU_CYRILLIC_ZE)     &kp LS(RU_CYRILLIC_VE)      &kp LS(RU_CYRILLIC_KA)                &kp LS(RU_CYRILLIC_DE)   &kp LS(RU_CYRILLIC_SHCHA)          
-&hrml_slow LEFT_GUI LS(RU_CYRILLIC_SHORT_I)  &hrml_slow LEFT_ALT LS(RU_CYRILLIC_I)  &hrs_l LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)   &ru_com_mt LC(F) 0                              &kp LS(RU_CYRILLIC_EL)     &hrl 10 LS(RU_CYRILLIC_EN)  &hrs_r LEFT_SHIFT LS(RU_CYRILLIC_TE)  &kp LS(RU_CYRILLIC_ES)   &hrml_slow RALT LS(RU_CYRILLIC_CHE)
-&mt LC(Z) LS(RU_CYRILLIC_EF)                 &mt LC(X) LS(RU_CYRILLIC_U)            &mt LC(C) LS(RU_CYRILLIC_HA)          &mt LC(V) LS(RU_CYRILLIC_YERU)  &ru_dot_mt LG(V) 0                              &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)      &kp LS(RU_CYRILLIC_PE)                &kp LS(RU_CYRILLIC_GHE)  &mt LC(SLASH) LS(RU_CYRILLIC_ZHE)  
-                                                                                                                    &ru_cw_off K_CANCEL             &ru_lt_cw_off 9 SPACE         &trans    &trans  &lt 11 LS(RU_CYRILLIC_ER)  &trans
+  &kp LS(RU_CYRILLIC_TSE)                      &caps_soft_sign                        &kp LS(RU_CYRILLIC_YA)                &mt LC(R) LS(RU_CYRILLIC_A)     &mt LC(T) LS(RU_CYRILLIC_YU)                    &kp LS(RU_CYRILLIC_ZE)     &kp LS(RU_CYRILLIC_VE)      &kp LS(RU_CYRILLIC_KA)                &kp LS(RU_CYRILLIC_DE)   &kp LS(RU_CYRILLIC_SHCHA)
+  &hrml_slow LEFT_GUI LS(RU_CYRILLIC_SHORT_I)  &hrml_slow LEFT_ALT LS(RU_CYRILLIC_I)  &hrs_l LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)   &ru_com_mt LC(F) 0                              &kp LS(RU_CYRILLIC_EL)     &hrl 10 LS(RU_CYRILLIC_EN)  &hrs_r LEFT_SHIFT LS(RU_CYRILLIC_TE)  &kp LS(RU_CYRILLIC_ES)   &hrml_slow RALT LS(RU_CYRILLIC_CHE)
+  &mt LC(Z) LS(RU_CYRILLIC_EF)                 &mt LC(X) LS(RU_CYRILLIC_U)            &mt LC(C) LS(RU_CYRILLIC_HA)          &mt LC(V) LS(RU_CYRILLIC_YERU)  &ru_dot_mt LG(V) 0                              &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)      &kp LS(RU_CYRILLIC_PE)                &kp LS(RU_CYRILLIC_GHE)  &mt LC(SLASH) LS(RU_CYRILLIC_ZHE)
+                                                                                                                            &ru_cw_off K_CANCEL             &ru_lt_cw_off 9 SPACE         &trans    &trans  &lt 11 LS(RU_CYRILLIC_ER)  &trans
             >;
 
             display-name = "Ru_CW";
@@ -1193,9 +1241,9 @@
 
         Mods {
             bindings = <
-&kp Q             &kp W             &kp E              &kp R         &kp T                            &kp Y  &kp U      &kp I              &kp O    &kp P              
-&hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                            &kp H  &hrl 10 J  &hrm LEFT_SHIFT K  &kp L    &hrm_slow RALT SEMI
-&kp Z             &kp X             &kp C              &kp V         &kp B                            &kp N  &kp M      &kp COMMA          &kp DOT  &kp SLASH          
+  &kp Q             &kp W             &kp E              &kp R         &kp T                            &kp Y  &kp U      &kp I              &kp O    &kp P
+  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                            &kp H  &hrl 10 J  &hrm LEFT_SHIFT K  &kp L    &hrm_slow RALT SEMI
+  &kp Z             &kp X             &kp C              &kp V         &kp B                            &kp N  &kp M      &kp COMMA          &kp DOT  &kp SLASH
                                                          &trans        &space_lt 9 0  &trans    &trans  &none  &trans
             >;
 
@@ -1204,9 +1252,9 @@
 
         Nav {
             bindings = <
-&trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                     &kp PG_UP     &kp HOME      &kp UP    &kp END    &kp DELETE 
-&hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                 &select_word  &kp LEFT      &kp DOWN  &kp RIGHT  &select_row
-&mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                           &kp PG_DN     &kp CAPSLOCK  &none     &trans     &trans     
+  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                     &kp PG_UP     &kp HOME      &kp UP    &kp END    &kp DELETE
+  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                 &select_word  &kp LEFT      &kp DOWN  &kp RIGHT  &select_row
+  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                           &kp PG_DN     &kp CAPSLOCK  &none     &trans     &trans
                                                                                             &trans                    &alt_spc            &kp LA(ENTER)    &trans  &trans        &trans
             >;
 
@@ -1215,10 +1263,10 @@
 
         Num_En {
             bindings = <
-&kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &kp MINUS                             &trans  &trans     &trans      &trans        &trans       
-&zero_morph   &kp N1        &kp N2        &three_mrph  &plus_morph                           &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI 
-&kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                             &trans  &trans     &kp COMMA   &kp DOT       &trans       
-                                            &trans       &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans
+  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &kp MINUS                             &trans  &trans     &trans      &trans        &trans
+  &zero_morph   &kp N1        &kp N2        &three_mrph  &plus_morph                           &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI
+  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                             &trans  &trans     &kp COMMA   &kp DOT       &trans
+                                            &trans       &alt_spc     &kp LA(ENTER)    &trans  &trans  &trans
             >;
 
             display-name = "Num_En";
@@ -1226,10 +1274,10 @@
 
         Num_Ru {
             bindings = <
-&kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &kp MINUS                             &trans  &trans     &trans        &trans        &trans      
-&zero_morph   &kp N1        &kp N2        &three_mrph  &plus_morph                           &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI
-&kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                             &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans      
-                                            &trans       &alt_spc      &kp LA(ENTER)    &trans  &trans  &trans
+  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &kp MINUS                             &trans  &trans     &trans        &trans        &trans
+  &zero_morph   &kp N1        &kp N2        &three_mrph  &plus_morph                           &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI
+  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                             &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans
+                                            &trans       &alt_spc     &kp LA(ENTER)    &trans  &trans  &trans
             >;
 
             display-name = "Num_Ru";
@@ -1237,9 +1285,9 @@
 
         App {
             bindings = <
-&kp LA(LC(LS(P)))  &kp LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))        
-&kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))  &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                    &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))
-&kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))  &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                    &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))    
+  &kp LA(LC(LS(P)))  &kp LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))
+  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))  &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                    &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))
+  &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))  &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                    &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))
                                                            &layer_off 12      &none              &sl 12    &trans  &trans             &trans
             >;
 
@@ -1248,10 +1296,10 @@
 
         Sym_En {
             bindings = <
-&trans  &none                 &none   &none                  &trans                      &trans         &kp LEFT_BRACKET  &ru RU_RUBLE  &kp RIGHT_BRACKET  &trans
-&trans  &kp LEFT_PARENTHESIS  &none   &kp RIGHT_PARENTHESIS  &kp PLUS                    &ru RU_NUMERO  &kp LEFT_BRACE    &none         &kp RIGHT_BRACE    &trans
-&trans  &kp TILDE             &none   &kp PERCENT            &en_code                    &trans         &kp LESS_THAN     &kp CARET     &kp GREATER_THAN   &trans
-                                                   &trans                 &trans    &trans    &trans  &trans         &trans
+  &trans  &none                 &none  &none                  &trans                      &trans         &kp LEFT_BRACKET  &ru RU_RUBLE  &kp RIGHT_BRACKET  &trans
+  &trans  &kp LEFT_PARENTHESIS  &none  &kp RIGHT_PARENTHESIS  &kp PLUS                    &ru RU_NUMERO  &kp LEFT_BRACE    &none         &kp RIGHT_BRACE    &trans
+  &trans  &kp TILDE             &none  &kp PERCENT            &en_code                    &trans         &kp LESS_THAN     &kp CARET     &kp GREATER_THAN   &trans
+                                       &trans                 &trans    &trans    &trans  &trans         &trans
             >;
 
             display-name = "Sym_En";
@@ -1259,10 +1307,10 @@
 
         Sym_Ru {
             bindings = <
-&trans  &none                 &none   &none        &trans                      &trans         &en LEFT_BRACKET  &kp RU_RUBLE  &en RIGHT_BRACKET  &trans
-&trans  &kp LEFT_PARENTHESIS  &none   &kp RPAR     &kp PLUS                    &kp RU_NUMERO  &en LEFT_BRACE    &none         &en RIGHT_BRACE    &trans
-&trans  &en TILDE             &none   &kp PERCENT  &ru_code                    &trans         &en LESS_THAN     &en CARET     &en GREATER_THAN   &trans
-                                                      &trans        &trans    &trans    &trans  &trans         &trans
+  &trans  &none                 &none  &none        &trans                      &trans         &en LEFT_BRACKET  &kp RU_RUBLE  &en RIGHT_BRACKET  &trans
+  &trans  &kp LEFT_PARENTHESIS  &none  &kp RPAR     &kp PLUS                    &kp RU_NUMERO  &en LEFT_BRACE    &none         &en RIGHT_BRACE    &trans
+  &trans  &en TILDE             &none  &kp PERCENT  &ru_code                    &trans         &en LESS_THAN     &en CARET     &en GREATER_THAN   &trans
+                                       &trans       &trans    &trans    &trans  &trans         &trans
             >;
 
             display-name = "Sym_Ru";
@@ -1270,9 +1318,9 @@
 
         Fn {
             bindings = <
-&trans   &kp F7  &kp F8  &kp F9  &trans                     &trans  &trans     &trans          &trans    &trans      
-&kp F10  &kp F1  &kp F2  &kp F3  &kp F12                    &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LALT  &kp LEFT_GUI
-&kp F11  &kp F4  &kp F5  &kp F6  &trans                     &trans  &trans     &trans          &trans    &trans      
+  &trans   &kp F7  &kp F8  &kp F9  &trans                     &trans  &trans     &trans          &trans    &trans
+  &kp F10  &kp F1  &kp F2  &kp F3  &kp F12                    &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LALT  &kp LEFT_GUI
+  &kp F11  &kp F4  &kp F5  &kp F6  &trans                     &trans  &trans     &trans          &trans    &trans
                            &trans  &trans   &trans    &trans  &trans  &trans
             >;
 
@@ -1281,9 +1329,9 @@
 
         OS {
             bindings = <
-&bt_set_c 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR
-&bt_set_c 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off 
-&bt_set_c 0  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans    
+  &bt_set_c 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR
+  &bt_set_c 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off
+  &bt_set_c 0  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans
                                                          &trans                &trans                &trans    &trans  &trans        &trans
             >;
 
