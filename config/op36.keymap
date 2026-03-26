@@ -1197,10 +1197,10 @@
 
         Mouse {
             bindings = <
-  &trns_msoff               &trns_msoff               &kp KP_NUMLOCK            &trns_msoff_hold LC(R) 0     &trns_hold_msoff LC(T) 0                          &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
-  &kp LCTRL                 &kp LEFT_ALT              &kp LSHFT                 &mkp1_ctrl                   &mkp_hold_msoff LC(F) MB3                         &trns_msoff  &trns_msoff  &trans_msoff_lr_hold 10 0  &trns_msoff  &trns_msoff
-  &trns_msoff_hold LC(Z) 0  &trns_msoff_hold LC(X) 0  &trns_msoff_hold LC(C) 0  &mkp_hold LC(V) MB2          &trns_msoff_hold LG(V) 0                          &trns_msoff  &trns_msoff  &trns_msoff                &trns_msoff  &trns_msoff
-                                                                                &kp_layeroff 4 LS(K_CANCEL)  &trans                     &sl 12    &bspc_msoff  &trns_msoff  &bspc_msoff
+&trans     &trans        &kp KP_NUMLOCK  &trans                       &trans                    &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &kp LEFT_ALT  &kp LSHFT       &trans                       &trans                    &trans  &trans  &trans  &trans  &trans
+&trans     &trans        &trans          &trans                       &trans                    &trans  &trans  &trans  &trans  &trans
+                                                                                &kp_layeroff 4 LS(K_CANCEL)  &trans  &trans    &trans  &trans  &trans
             >;
 
             display-name = "Mouse";
