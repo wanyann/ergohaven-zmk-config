@@ -59,14 +59,14 @@
 
         combo_ru {
             bindings = <&layer_ru>;
-            key-positions = <24 25>;
+            key-positions = <23 22>;
             timeout-ms = <30>;
             require-prior-idle-ms = <(-1)>;
         };
 
         combo_en {
             bindings = <&layer_en>;
-            key-positions = <28 29>;
+            key-positions = <26 27>;
             timeout-ms = <30>;
             require-prior-idle-ms = <(-1)>;
         };
@@ -176,14 +176,14 @@
 
         parentheses {
             bindings = <&parentheses>;
-            key-positions = <12 14>;
+            key-positions = <11 13>;
             timeout-ms = <30>;
             require-prior-idle-ms = <50>;
         };
 
         combo_braces_ru {
             bindings = <&braces_ru>;
-            key-positions = <17 19>;
+            key-positions = <16 18>;
             timeout-ms = <25>;
             layers = <2 3 14>;
             require-prior-idle-ms = <50>;
@@ -1197,10 +1197,10 @@
 
         Mouse {
             bindings = <
-&trans     &trans        &kp KP_NUMLOCK  &trans                       &trans                    &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &kp LEFT_ALT  &kp LSHFT       &trans                       &trans                    &trans  &trans  &trans  &trans  &trans
-&trans     &trans        &trans          &trans                       &trans                    &trans  &trans  &trans  &trans  &trans
-                                                                                &kp_layeroff 4 LS(K_CANCEL)  &trans  &trans    &trans  &trans  &trans
+  &trans     &trans        &kp KP_NUMLOCK  &trans                       &trans                    &trans  &trans  &trans  &trans  &trans
+  &kp LCTRL  &kp LEFT_ALT  &kp LSHFT       &trans                       &trans                    &trans  &trans  &trans  &trans  &trans
+  &trans     &trans        &trans          &trans                       &trans                    &trans  &trans  &trans  &trans  &trans
+                                           &kp_layeroff 4 LS(K_CANCEL)  &trans  &trans    &trans  &trans  &trans
             >;
 
             display-name = "Mouse";
