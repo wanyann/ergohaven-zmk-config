@@ -32,48 +32,48 @@
 
         combo_ctrl_ent {
             bindings = <&kp LC(ENTER)>;
-            key-positions = <2 4>;
+            key-positions = <1 3>;
             require-prior-idle-ms = <30>;
         };
 
         combo_enter {
             bindings = <&kp ENTER>;
-            key-positions = <3 2>;
+            key-positions = <2 1>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
 
         combo_tab {
             bindings = <&kp TAB>;
-            key-positions = <14 15>;
+            key-positions = <11 12>;
             require-prior-idle-ms = <50>;
             timeout-ms = <30>;
         };
 
         combo_esc {
             bindings = <&kp ESC>;
-            key-positions = <26 27>;
+            key-positions = <21 22>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
 
         combo_ru {
             bindings = <&layer_ru>;
-            key-positions = <27 28>;
+            key-positions = <24 25>;
             timeout-ms = <30>;
             require-prior-idle-ms = <(-1)>;
         };
 
         combo_en {
             bindings = <&layer_en>;
-            key-positions = <31 32>;
+            key-positions = <28 29>;
             timeout-ms = <30>;
             require-prior-idle-ms = <(-1)>;
         };
 
         combo_osl_sym_en {
             bindings = <&sl 13>;
-            key-positions = <19 20>;
+            key-positions = <16 17>;
             require-prior-idle-ms = <50>;
             layers = <0 1 13>;
         };
@@ -81,27 +81,27 @@
         combo_lessgreater_en {
             bindings = <&less_greater_en>;
             require-prior-idle-ms = <30>;
-            key-positions = <31 33>;
+            key-positions = <26 28>;
             layers = <0 1 13>;
         };
 
         combo_osl_sym_ru {
             bindings = <&sl 14>;
-            key-positions = <19 20>;
+            key-positions = <16 17>;
             require-prior-idle-ms = <50>;
             layers = <2 3 14>;
         };
 
         combo_lessgreater_ru {
             bindings = <&less_greater_ru>;
-            key-positions = <31 33>;
+            key-positions = <26 28>;
             require-prior-idle-ms = <30>;
             layers = <2 3>;
         };
 
         combo_braces_en {
             bindings = <&braces_en>;
-            key-positions = <19 21>;
+            key-positions = <16 18>;
             require-prior-idle-ms = <50>;
             layers = <0 1 13>;
         };
@@ -109,81 +109,81 @@
         combo_singlequote_ru {
             bindings = <&en SINGLE_QUOTE>;
             timeout-ms = <30>;
-            key-positions = <7 6>;
+            key-positions = <6 5>;
             layers = <2 3 14 11>;
         };
 
         combo_slash_ru {
             bindings = <&kp RU_SLASH>;
             timeout-ms = <30>;
-            key-positions = <32 33>;
+            key-positions = <27 28>;
             layers = <2 3 14 11>;
         };
 
         combo_singequote_en {
             bindings = <&kp SINGLE_QUOTE>;
             timeout-ms = <30>;
-            key-positions = <7 6>;
+            key-positions = <6 5>;
             layers = <0 1 10 13>;
         };
 
         combo_slash_en {
             bindings = <&kp SLASH>;
             timeout-ms = <30>;
-            key-positions = <32 33>;
+            key-positions = <27 28>;
             layers = <0 1 10 13>;
         };
 
         combo_capsword_en {
             bindings = <&to 1>;
-            key-positions = <14 13>;
+            key-positions = <11 10>;
             layers = <0 1>;
         };
 
         combo_osl_fn {
             bindings = <&sl 15>;
-            key-positions = <26 28>;
+            key-positions = <21 23>;
         };
 
         combo_osl_os {
             bindings = <&sl 16>;
-            key-positions = <25 26>;
+            key-positions = <20 21>;
         };
 
         combo_capsword_ru {
             bindings = <&to 3>;
-            key-positions = <14 13>;
+            key-positions = <11 10>;
             layers = <2 3>;
         };
 
         combo_yo_ru {
             bindings = <&kp RU_CYRILLIC_IO>;
-            key-positions = <26 27 28>;
+            key-positions = <21 22 23>;
             layers = <2>;
         };
 
         combo_yo_cw_ru {
             bindings = <&kp LS(RU_CYRILLIC_IO)>;
-            key-positions = <26 27 28>;
+            key-positions = <21 22 23>;
             layers = <3>;
         };
 
         combo_yo_en {
             bindings = <&ru RU_CYRILLIC_IO>;
-            key-positions = <26 27 28>;
+            key-positions = <21 22 23>;
             layers = <0>;
         };
 
         parentheses {
             bindings = <&parentheses>;
-            key-positions = <14 16>;
+            key-positions = <12 14>;
             timeout-ms = <30>;
             require-prior-idle-ms = <50>;
         };
 
         combo_braces_ru {
             bindings = <&braces_ru>;
-            key-positions = <19 21>;
+            key-positions = <17 19>;
             timeout-ms = <25>;
             layers = <2 3 14>;
             require-prior-idle-ms = <50>;
@@ -191,7 +191,7 @@
 
         combo_brackets_en {
             bindings = <&brackets_en>;
-            key-positions = <7 9>;
+            key-positions = <6 8>;
             layers = <0 1 13>;
             timeout-ms = <30>;
             require-prior-idle-ms = <30>;
@@ -199,160 +199,160 @@
 
         combo_brackets_ru {
             bindings = <&brackets_ru>;
-            key-positions = <7 9>;
+            key-positions = <6 8>;
             layers = <2 3 14>;
             timeout-ms = <30>;
         };
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <3 4>;
+            key-positions = <2 3>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
 
         combo_grave_ru {
             bindings = <&en GRAVE>;
-            key-positions = <19 18>;
+            key-positions = <16 15>;
             layers = <2 3 14>;
         };
 
         combo_grave_en {
             bindings = <&kp GRAVE>;
-            key-positions = <18 19>;
+            key-positions = <16 15>;
             layers = <0 1 13>;
         };
 
         combo_under {
             bindings = <&kp UNDER>;
-            key-positions = <4 5>;
+            key-positions = <3 4>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
 
         combo_ru_at {
             bindings = <&en AT>;
-            key-positions = <14 15 16>;
+            key-positions = <11 12 13>;
             layers = <2 3 14>;
         };
 
         combo_en_at {
             bindings = <&kp AT>;
-            key-positions = <16 15 14>;
+            key-positions = <11 12 13>;
             layers = <0 1 13>;
         };
 
         combo_quotes_en {
             bindings = <&td_quotes_en>;
-            key-positions = <7 8>;
+            key-positions = <6 7>;
             layers = <0 1 10 13>;
         };
 
         combo_quotes_ru {
             bindings = <&td_quotes_ru>;
-            key-positions = <7 8>;
+            key-positions = <6 7>;
             layers = <2 3 14 11>;
         };
 
         combo_en_amp {
             bindings = <&kp AMPS>;
-            key-positions = <8 9>;
+            key-positions = <7 8>;
             layers = <0 1 10 13>;
         };
 
         combo_en_semi {
             bindings = <&kp SEMI>;
-            key-positions = <16 17>;
+            key-positions = <13 14>;
             layers = <0 1 10 13>;
         };
 
         combo_ru_semi {
             bindings = <&kp RU_SEMI>;
-            key-positions = <17 16>;
+            key-positions = <13 14>;
             layers = <2 3 11 14>;
         };
 
         combo_amp_ru {
             bindings = <&en AMPS>;
-            key-positions = <8 9>;
+            key-positions = <7 8>;
             layers = <2 3 11 14>;
         };
 
         combo_en_colon {
             bindings = <&kp COLON>;
-            key-positions = <28 29>;
+            key-positions = <23 24>;
             layers = <0 1 10 13>;
         };
 
         combo_ru_colon {
             bindings = <&kp RU_COLON>;
-            key-positions = <28 29>;
+            key-positions = <23 24>;
             layers = <2 3 10 13>;
         };
 
         combo_backslash_ru {
             bindings = <&kp RU_BACKSLASH>;
-            key-positions = <33 34>;
+            key-positions = <28 29>;
             layers = <2 3 11 14>;
         };
 
         combo_backslash_en {
             bindings = <&kp BACKSLASH>;
-            key-positions = <33 34>;
+            key-positions = <28 29>;
             layers = <0 1 10 13>;
         };
 
         combo_arrow_ru {
             bindings = <&arrow_ru>;
-            key-positions = <31 32 33>;
+            key-positions = <26 27 28>;
             layers = <2 3 11 14>;
         };
 
         combo_arrow_en {
             bindings = <&arrow_en>;
-            key-positions = <31 33 32>;
+            key-positions = <26 27 28>;
             layers = <0 1 10 13>;
         };
 
         combo_pipe_ru {
             bindings = <&en PIPE>;
-            key-positions = <8 9 7>;
+            key-positions = <7 8 6>;
             layers = <2 3 11 14>;
         };
 
         combo_pipe_en {
             bindings = <&kp PIPE>;
-            key-positions = <7 8 9>;
+            key-positions = <6 7 8>;
             layers = <0 1 10 13>;
         };
 
         combo_dollar_ru {
             bindings = <&en DOLLAR>;
-            key-positions = <19 20 21>;
+            key-positions = <16 17 18>;
             layers = <2 3 11 14>;
         };
 
         combo_dollar_en {
             bindings = <&kp DOLLAR>;
-            key-positions = <19 20 21>;
+            key-positions = <16 17 18>;
             layers = <0 1 10 13>;
         };
 
         combo_hash_ru {
             bindings = <&en HASH>;
-            key-positions = <30 31>;
+            key-positions = <25 26>;
             layers = <2 3 11 14>;
         };
 
         combo_hash_en {
             bindings = <&kp HASH>;
-            key-positions = <30 31>;
+            key-positions = <25 26>;
             layers = <0 1 10 13>;
         };
 
         combo_asterisk {
             bindings = <&kp RU_ASTERISK>;
-            key-positions = <2 3 4>;
+            key-positions = <1 2 3>;
         };
     };
 
