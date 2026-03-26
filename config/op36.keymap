@@ -369,13 +369,13 @@
 
         cmb_k {
             bindings = <&kp K>;
-            key-positions = <8 9>;
+            key-positions = <18 19>;
             layers = <0>;
         };
 
         combo_k_cw {
             bindings = <&kp LS(K)>;
-            key-positions = <8 9>;
+            key-positions = <18 19>;
             layers = <1>;
         };
 
@@ -393,13 +393,13 @@
 
         combo_she {
             bindings = <&kp RU_CYRILLIC_SHA>;
-            key-positions = <8 9>;
+            key-positions = <18 19>;
             layers = <2>;
         };
 
         cmb_she_cw {
             bindings = <&kp LS(RU_CYRILLIC_SHA)>;
-            key-positions = <8 9>;
+            key-positions = <18 19>;
             layers = <3>;
         };
     };
