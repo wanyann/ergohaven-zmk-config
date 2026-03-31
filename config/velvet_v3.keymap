@@ -1099,7 +1099,7 @@
             #binding-cells = <0>;
             bindings = <&kp RU_DOUBLE_QUOTES>, <&quotes_ru>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
         };
 
         td_quotes_en: td_quotes_en {
@@ -1108,7 +1108,7 @@
             #binding-cells = <0>;
             bindings = <&kp DOUBLE_QUOTES>, <&quotes_en>;
 
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
         };
     };
 
