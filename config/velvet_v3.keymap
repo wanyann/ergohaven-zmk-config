@@ -693,7 +693,7 @@
         testops: testops {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(LG(F7))) &kp LS(LC(LG(F8)))>;
+            bindings = <&kp LS(LC(LG(F7))) &kp LEFT_ARROW &kp LS(LC(LG(F8)))>;
             label = "TESTOPS";
             wait-ms = <500>;
             tap-ms = <150>;
