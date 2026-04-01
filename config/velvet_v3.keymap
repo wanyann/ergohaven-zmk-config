@@ -696,7 +696,7 @@
             bindings =
                 <&kp LS(LC(LG(F7)))>,
                 <&macro_wait_time 100>,
-                <&kp LEFT_ARROW &kp LS(LC(LG(F8)))>;
+                <&kp LS(LC(LG(F8)))>;
 
             label = "TESTOPS";
             wait-ms = <500>;
