@@ -695,7 +695,7 @@
             #binding-cells = <0>;
             bindings =
                 <&kp LS(LC(LG(F7)))>,
-                <&macro_wait_time 10>,
+                <&macro_wait_time 100>,
                 <&kp LEFT_ARROW &kp LS(LC(LG(F8)))>;
 
             label = "TESTOPS";
