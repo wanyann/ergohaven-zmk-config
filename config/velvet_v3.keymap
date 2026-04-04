@@ -748,7 +748,7 @@
         bt_set_en: bt_set_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &lg_en>;
+            bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &lg_en &lg_en>;
             label = "BT_SET_en";
             wait-ms = <100>;
         };
@@ -768,7 +768,7 @@
         bt_set_ru: bt_set_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &lg_ru>;
+            bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &lg_ru &lg_ru>;
             label = "BT_SET_RU";
             wait-ms = <100>;
         };
