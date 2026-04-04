@@ -146,7 +146,7 @@
         };
 
         combo_osl_os_en {
-            bindings = <&sl 16>;
+            bindings = <&sl 17>;
             key-positions = <25 26>;
             layers = <0 1 10 13 17>;
         };
