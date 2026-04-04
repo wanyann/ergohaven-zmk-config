@@ -145,9 +145,10 @@
             key-positions = <26 28>;
         };
 
-        combo_osl_os {
+        combo_osl_os_en {
             bindings = <&sl 16>;
             key-positions = <25 26>;
+            layers = <0 1 10 13 17>;
         };
 
         combo_capsword_ru {
@@ -353,6 +354,12 @@
         combo_asterisk {
             bindings = <&kp RU_ASTERISK>;
             key-positions = <2 3 4>;
+        };
+
+        cmb_osl_os_ru {
+            bindings = <&sl 16>;
+            key-positions = <25 26>;
+            layers = <2 3 11 14 16>;
         };
     };
 
@@ -738,10 +745,10 @@
             label = "ARROW_RU";
         };
 
-        bt_set_c: bt_set_c {
+        bt_set_en: bt_set_c {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_off 16 &layer_en>;
+            bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_en>;
             label = "BT_SET_C";
         };
 
@@ -755,6 +762,13 @@
             label = "ONE_SHOT_KEY";
             tap-ms = <1>;
             wait-ms = <0>;
+        };
+
+        bt_set_ru: bt_set_ru {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_ru>;
+            label = "BT_SET_RU";
         };
     };
 
@@ -1295,15 +1309,25 @@
             display-name = "Fn";
         };
 
-        OS {
+        OS_ru {
             bindings = <
-&trans  &bt_set_c 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
-&trans  &bt_set_c 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
-&trans  &bt_set_c 0  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans      &trans
-                     &trans          &trans                    &trans                &trans                &trans    &trans  &trans        &trans          &trans  &trans
+&trans  &bt_set_en 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
+&trans  &bt_set_ru 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
+&trans  &bt_set_ru 0  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans      &trans
+                      &trans          &trans                    &trans                &trans                &trans    &trans  &trans        &trans          &trans  &trans
             >;
 
-            display-name = "OS";
+            display-name = "OS_ru";
+        };
+
+        OS_en {
+            display-name = "OS_en";
+            bindings = <
+&trans  &bt_set_en 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
+&trans  &bt_set_en 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
+&trans  &bt_set_en 0  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans      &trans
+                      &trans          &trans                    &trans                &trans                &trans    &trans  &trans        &trans          &trans  &trans
+            >;
         };
     };
 };
