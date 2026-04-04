@@ -107,7 +107,7 @@
         };
 
         combo_singlequote_ru {
-            bindings = <&en SINGLE_QUOTE>;
+            bindings = <&en_kp SINGLE_QUOTE>;
             timeout-ms = <30>;
             key-positions = <7 6>;
             layers = <2 3 14 11>;
@@ -213,7 +213,7 @@
         };
 
         combo_grave_ru {
-            bindings = <&en GRAVE>;
+            bindings = <&en_kp GRAVE>;
             key-positions = <19 18>;
             layers = <2 3 14>;
         };
@@ -232,7 +232,7 @@
         };
 
         combo_ru_at {
-            bindings = <&en AT>;
+            bindings = <&en_kp AT>;
             key-positions = <14 15 16>;
             layers = <2 3 14>;
         };
@@ -274,7 +274,7 @@
         };
 
         combo_amp_ru {
-            bindings = <&en AMPS>;
+            bindings = <&en_kp AMPS>;
             key-positions = <8 9>;
             layers = <2 3 11 14>;
         };
@@ -316,7 +316,7 @@
         };
 
         combo_pipe_ru {
-            bindings = <&en PIPE>;
+            bindings = <&en_kp PIPE>;
             key-positions = <8 9 7>;
             layers = <2 3 11 14>;
         };
@@ -328,7 +328,7 @@
         };
 
         combo_dollar_ru {
-            bindings = <&en DOLLAR>;
+            bindings = <&en_kp DOLLAR>;
             key-positions = <19 20 21>;
             layers = <2 3 11 14>;
         };
@@ -340,7 +340,7 @@
         };
 
         combo_hash_ru {
-            bindings = <&en HASH>;
+            bindings = <&en_kp HASH>;
             key-positions = <30 31>;
             layers = <2 3 11 14>;
         };
@@ -382,7 +382,7 @@
             wait-ms = <0>;
         };
 
-        to_ru: to_ru {
+        lg_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N8))>;
@@ -391,7 +391,7 @@
             wait-ms = <0>;
         };
 
-        to_en: to_en {
+        lg_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LS(N9))>;
@@ -400,7 +400,7 @@
             tap-ms = <40>;
         };
 
-        en: en {
+        en_kp: en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp LC(LS(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LC(LS(N8))>;
@@ -530,7 +530,7 @@
         braces_ru: braces_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &braces_en &to_ru>;
+            bindings = <&lg_en &braces_en &lg_ru>;
             label = "BRACES_RU";
             wait-ms = <0>;
         };
@@ -546,7 +546,7 @@
         brackets_ru: brackets_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &brackets_en &to_ru>;
+            bindings = <&lg_en &brackets_en &lg_ru>;
             label = "BRACKETS_RU";
             wait-ms = <0>;
         };
@@ -741,14 +741,14 @@
         arrow_ru: arrow_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to_en &arrow_en &to_ru>;
+            bindings = <&lg_en &arrow_en &lg_ru>;
             label = "ARROW_RU";
         };
 
         bt_set_en: bt_set_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_en>;
+            bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &lg_en>;
             label = "BT_SET_en";
             wait-ms = <100>;
         };
@@ -768,7 +768,7 @@
         bt_set_ru: bt_set_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_ru>;
+            bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &lg_ru>;
             label = "BT_SET_RU";
             wait-ms = <100>;
         };
@@ -1010,7 +1010,10 @@
             compatible = "zmk,behavior-tap-dance";
             label = "RU_GRAVE";
             #binding-cells = <0>;
-            bindings = <&en GRAVE>, <&dbl_grave_ru>, <&triple_press_en GRAVE>;
+            bindings =
+                <&en_kp GRAVE>,
+                <&dbl_grave_ru>,
+                <&triple_press_en GRAVE>;
 
             tapping-term-ms = <180>;
         };
@@ -1291,10 +1294,10 @@
 
         Sym_Ru {
             bindings = <
-&trans  &trans  &none                 &none   &none        &trans                      &trans         &en LEFT_BRACKET  &kp RU_RUBLE  &en RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &none   &kp RPAR     &kp PLUS                    &kp RU_NUMERO  &en LEFT_BRACE    &none         &en RIGHT_BRACE    &trans  &trans
-&trans  &trans  &en TILDE             &none   &kp PERCENT  &ru_code                    &trans         &en LESS_THAN     &en CARET     &en GREATER_THAN   &trans  &trans
-                &trans                &trans  &trans       &trans    &trans    &trans  &trans         &trans            &trans        &trans
+&trans  &trans  &none                 &none   &none        &trans                      &trans         &en_kp LEFT_BRACKET  &kp RU_RUBLE  &en_kp RIGHT_BRACKET  &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &none   &kp RPAR     &kp PLUS                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &none         &en_kp RIGHT_BRACE    &trans  &trans
+&trans  &trans  &en_kp TILDE          &none   &kp PERCENT  &ru_code                    &trans         &en_kp LESS_THAN     &en_kp CARET  &en_kp GREATER_THAN   &trans  &trans
+                &trans                &trans  &trans       &trans    &trans    &trans  &trans         &trans               &trans        &trans
             >;
 
             display-name = "Sym_Ru";
