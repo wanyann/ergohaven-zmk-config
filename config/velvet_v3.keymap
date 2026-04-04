@@ -750,6 +750,7 @@
             #binding-cells = <1>;
             bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_en>;
             label = "BT_SET_C";
+            wait-ms = <150>;
         };
 
         one_shot: one_shot {
@@ -769,6 +770,7 @@
             #binding-cells = <1>;
             bindings = <&layer_off 16 &macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_ru>;
             label = "BT_SET_RU";
+            wait-ms = <150>;
         };
     };
 
