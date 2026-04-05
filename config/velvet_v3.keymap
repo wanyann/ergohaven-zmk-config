@@ -750,11 +750,12 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER>,
-                <&macro_wait_time 30>,
+                <&macro_wait_time 45>,
                 <&layer_off 16 &lg_en &lg_en>;
 
             label = "BT_SET_en";
             wait-ms = <150>;
+            tap-ms = <40>;
         };
 
         one_shot: one_shot {
@@ -774,11 +775,12 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER>,
-                <&macro_wait_time 30>,
+                <&macro_wait_time 45>,
                 <&layer_off 16 &lg_ru &lg_ru>;
 
             label = "BT_SET_RU";
             wait-ms = <150>;
+            tap-ms = <40>;
         };
     };
 
