@@ -1242,7 +1242,7 @@
                           &trans            &trans             &trans        &space_lt 9 0  &trans    &trans  &none  &trans     &trans             &trans
             >;
 
-            display-name = "Modifiers";
+            display-name = "Mod";
         };
 
         Nav {
@@ -1253,7 +1253,7 @@
                                         &trans                           &trans                   &trans                    &alt_spc            &kp LA(ENTER)    &trans  &trans        &trans        &trans    &trans
             >;
 
-            display-name = "Naviagition";
+            display-name = "Nav";
         };
 
         Num_En {
@@ -1264,7 +1264,7 @@
                       &trans        &trans        &trans       &alt_spc     &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
             >;
 
-            display-name = "Numbers";
+            display-name = "Num";
         };
 
         Num_Ru {
@@ -1275,7 +1275,7 @@
                       &trans        &trans        &trans       &alt_spc     &kp LA(ENTER)    &trans  &trans  &trans     &trans        &trans
             >;
 
-            display-name = "Numbers";
+            display-name = "Num";
         };
 
         App {
@@ -1286,7 +1286,7 @@
                                                  &trans             &trans             &layer_off 12      &none              &sl 12    &trans  &trans             &trans             &trans                 &trans
             >;
 
-            display-name = "Application";
+            display-name = "App";
         };
 
         Sym_En {
@@ -1297,7 +1297,7 @@
                 &trans                &trans  &trans                 &trans    &trans    &trans  &trans         &trans            &trans        &trans
             >;
 
-            display-name = "Symbols";
+            display-name = "Sym";
         };
 
         Sym_Ru {
@@ -1308,7 +1308,7 @@
                 &trans                &trans  &trans       &trans    &trans    &trans  &trans         &trans               &trans        &trans
             >;
 
-            display-name = "Symbols";
+            display-name = "Sym";
         };
 
         Fn {
@@ -1319,7 +1319,7 @@
                  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans     &trans          &trans
             >;
 
-            display-name = "Function";
+            display-name = "Fn";
         };
 
         OS_ru {
