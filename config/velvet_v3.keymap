@@ -1154,7 +1154,7 @@
                                       &kp LS(F7)             &kp F7               &en_cw_off K_CANCEL  &lt 9 SPACE         &sl 12    &one_shot LEFT_SHIFT  &lt 10 T  &bspc_morph  &kp F2               &kp LS(F2)
             >;
 
-            display-name = "En";
+            display-name = "English";
         };
 
         En_CW {
@@ -1165,7 +1165,7 @@
                                       &trans                     &trans                   &en_cw_off K_CANCEL  &en_lt_cw_off 9 SPACE  &trans    &trans  &lt 10 LS(T)  &trans         &trans                   &trans
             >;
 
-            display-name = "En_CW";
+            display-name = "CapsWord";
         };
 
         Ru {
@@ -1176,7 +1176,7 @@
                                                             &trans                             &trans                            &ru_cw_off K_CANCEL         &trans                    &trans    &trans  &lt 11 RU_CYRILLIC_ER  &trans                  &trans                            &trans
             >;
 
-            display-name = "Ru";
+            display-name = "Russian";
         };
 
         Ru_CW {
@@ -1187,7 +1187,7 @@
                                                                     &trans                                 &trans                                &ru_cw_off K_CANCEL             &ru_lt_cw_off 9 SPACE         &trans    &trans  &lt 11 LS(RU_CYRILLIC_ER)  &trans                      &trans                                &trans
             >;
 
-            display-name = "Ru_CW";
+            display-name = "CapsWord";
         };
 
         Mouse {
@@ -1242,7 +1242,7 @@
                           &trans            &trans             &trans        &space_lt 9 0  &trans    &trans  &none  &trans     &trans             &trans
             >;
 
-            display-name = "Mods";
+            display-name = "Modifiers";
         };
 
         Nav {
@@ -1253,7 +1253,7 @@
                                         &trans                           &trans                   &trans                    &alt_spc            &kp LA(ENTER)    &trans  &trans        &trans        &trans    &trans
             >;
 
-            display-name = "Nav";
+            display-name = "Naviagition";
         };
 
         Num_En {
@@ -1264,7 +1264,7 @@
                       &trans        &trans        &trans       &alt_spc     &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
             >;
 
-            display-name = "Num_En";
+            display-name = "Numbers";
         };
 
         Num_Ru {
@@ -1275,7 +1275,7 @@
                       &trans        &trans        &trans       &alt_spc     &kp LA(ENTER)    &trans  &trans  &trans     &trans        &trans
             >;
 
-            display-name = "Num_Ru";
+            display-name = "Numbers";
         };
 
         App {
@@ -1286,7 +1286,7 @@
                                                  &trans             &trans             &layer_off 12      &none              &sl 12    &trans  &trans             &trans             &trans                 &trans
             >;
 
-            display-name = "App";
+            display-name = "Application";
         };
 
         Sym_En {
@@ -1297,7 +1297,7 @@
                 &trans                &trans  &trans                 &trans    &trans    &trans  &trans         &trans            &trans        &trans
             >;
 
-            display-name = "Sym_En";
+            display-name = "Symbols";
         };
 
         Sym_Ru {
@@ -1308,7 +1308,7 @@
                 &trans                &trans  &trans       &trans    &trans    &trans  &trans         &trans               &trans        &trans
             >;
 
-            display-name = "Sym_Ru";
+            display-name = "Symbols";
         };
 
         Fn {
@@ -1319,7 +1319,7 @@
                  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans     &trans          &trans
             >;
 
-            display-name = "Fn";
+            display-name = "Function";
         };
 
         OS_ru {
@@ -1330,11 +1330,11 @@
                       &trans          &trans                    &trans                &trans                &trans    &trans  &trans        &trans          &trans  &trans
             >;
 
-            display-name = "OS_ru";
+            display-name = "OS";
         };
 
         OS_en {
-            display-name = "OS_en";
+            display-name = "OS";
             bindings = <
 &trans  &bt_set_en 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
 &trans  &bt_set_en 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
