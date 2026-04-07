@@ -754,7 +754,7 @@
                 <&layer_off 16 &lg_en &lg_en>;
 
             label = "BT_SET_en";
-            wait-ms = <150>;
+            wait-ms = <45>;
             tap-ms = <40>;
         };
 
@@ -779,7 +779,7 @@
                 <&layer_off 16 &lg_ru &lg_ru>;
 
             label = "BT_SET_RU";
-            wait-ms = <150>;
+            wait-ms = <45>;
             tap-ms = <40>;
         };
     };
