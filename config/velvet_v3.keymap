@@ -1334,11 +1334,11 @@
             >;
 
             display-name = "App_Ru";
-            label = "App_En";
+            label = "App_Eng";
         };
 
         App_Ru {
-            label = "App_Ru";
+            label = "App_Rus";
             display-name = "App_Ru";
             bindings = <
 &trans                        &kp LA(LC(LS(P)))  &vm_ru LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
