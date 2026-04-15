@@ -795,8 +795,8 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &lg_ru &lg_ru>;
             label = "VM_LANG";
-            wait-ms = <45>;
-            tap-ms = <70>;
+            wait-ms = <100>;
+            tap-ms = <100>;
         };
 
         vm_lang_en: vm_lang_en {
@@ -804,8 +804,8 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &lg_en &lg_en>;
             label = "VM_LANG_EN";
-            wait-ms = <45>;
-            tap-ms = <70>;
+            wait-ms = <100>;
+            tap-ms = <100>;
         };
     };
 
@@ -1337,7 +1337,6 @@
         };
 
         App_Ru {
-
             display-name = "App_Ru";
             bindings = <
 &trans                        &kp LA(LC(LS(P)))  &vm_ru LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
