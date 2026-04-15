@@ -72,24 +72,24 @@
         };
 
         combo_osl_sym_en {
-            bindings = <&sl 13>;
+            bindings = <&sl 14>;
             key-positions = <19 20>;
             require-prior-idle-ms = <50>;
-            layers = <0 1 13>;
+            layers = <0 1 14>;
         };
 
         combo_lessgreater_en {
             bindings = <&less_greater_en>;
             require-prior-idle-ms = <30>;
             key-positions = <31 33>;
-            layers = <0 1 13>;
+            layers = <0 1 14>;
         };
 
         combo_osl_sym_ru {
-            bindings = <&sl 14>;
+            bindings = <&sl 15>;
             key-positions = <19 20>;
             require-prior-idle-ms = <50>;
-            layers = <2 3 14>;
+            layers = <2 3 15>;
         };
 
         combo_lessgreater_ru {
@@ -103,35 +103,35 @@
             bindings = <&braces_en>;
             key-positions = <19 21>;
             require-prior-idle-ms = <50>;
-            layers = <0 1 13>;
+            layers = <0 1 14>;
         };
 
         combo_singlequote_ru {
             bindings = <&en_kp SINGLE_QUOTE>;
             timeout-ms = <30>;
             key-positions = <7 6>;
-            layers = <2 3 14 11>;
+            layers = <2 3 15 11>;
         };
 
         combo_slash_ru {
             bindings = <&kp RU_SLASH>;
             timeout-ms = <30>;
             key-positions = <32 33>;
-            layers = <2 3 14 11>;
+            layers = <2 3 15 11>;
         };
 
         combo_singequote_en {
             bindings = <&kp SINGLE_QUOTE>;
             timeout-ms = <30>;
             key-positions = <7 6>;
-            layers = <0 1 10 13>;
+            layers = <0 1 10 14>;
         };
 
         combo_slash_en {
             bindings = <&kp SLASH>;
             timeout-ms = <30>;
             key-positions = <32 33>;
-            layers = <0 1 10 13>;
+            layers = <0 1 10 14>;
         };
 
         combo_capsword_en {
@@ -141,14 +141,14 @@
         };
 
         combo_osl_fn {
-            bindings = <&sl 15>;
+            bindings = <&sl 16>;
             key-positions = <26 28>;
         };
 
         combo_osl_os_en {
-            bindings = <&sl 17>;
+            bindings = <&sl 18>;
             key-positions = <25 26>;
-            layers = <0 1 10 13 17>;
+            layers = <0 1 10 14 18>;
         };
 
         combo_capsword_ru {
@@ -186,14 +186,14 @@
             bindings = <&braces_ru>;
             key-positions = <19 21>;
             timeout-ms = <25>;
-            layers = <2 3 14>;
+            layers = <2 3 15>;
             require-prior-idle-ms = <50>;
         };
 
         combo_brackets_en {
             bindings = <&brackets_en>;
             key-positions = <7 9>;
-            layers = <0 1 13>;
+            layers = <0 1 14>;
             timeout-ms = <30>;
             require-prior-idle-ms = <30>;
         };
@@ -201,7 +201,7 @@
         combo_brackets_ru {
             bindings = <&brackets_ru>;
             key-positions = <7 9>;
-            layers = <2 3 14>;
+            layers = <2 3 15>;
             timeout-ms = <30>;
         };
 
@@ -215,13 +215,13 @@
         combo_grave_ru {
             bindings = <&en_kp GRAVE>;
             key-positions = <19 18>;
-            layers = <2 3 14>;
+            layers = <2 3 15>;
         };
 
         combo_grave_en {
             bindings = <&kp GRAVE>;
             key-positions = <18 19>;
-            layers = <0 1 13>;
+            layers = <0 1 14>;
         };
 
         combo_under {
@@ -234,121 +234,121 @@
         combo_ru_at {
             bindings = <&en_kp AT>;
             key-positions = <14 15 16>;
-            layers = <2 3 14>;
+            layers = <2 3 15>;
         };
 
         combo_en_at {
             bindings = <&kp AT>;
             key-positions = <16 15 14>;
-            layers = <0 1 13>;
+            layers = <0 1 14>;
         };
 
         combo_quotes_en {
             bindings = <&kp DOUBLE_QUOTES>;
             key-positions = <7 8>;
-            layers = <0 1 10 13>;
+            layers = <0 1 10 14>;
         };
 
         combo_quotes_ru {
             bindings = <&kp RU_DOUBLE_QUOTES>;
             key-positions = <7 8>;
-            layers = <2 3 14 11>;
+            layers = <2 3 15 11>;
         };
 
         combo_en_amp {
             bindings = <&kp AMPS>;
             key-positions = <8 9>;
-            layers = <0 1 10 13>;
+            layers = <0 1 10 14>;
         };
 
         combo_en_semi {
             bindings = <&kp SEMI>;
             key-positions = <16 17>;
-            layers = <0 1 10 13>;
+            layers = <0 1 10 14>;
         };
 
         combo_ru_semi {
             bindings = <&kp RU_SEMI>;
             key-positions = <17 16>;
-            layers = <2 3 11 14>;
+            layers = <2 3 11 15>;
         };
 
         combo_amp_ru {
             bindings = <&en_kp AMPS>;
             key-positions = <8 9>;
-            layers = <2 3 11 14>;
+            layers = <2 3 11 15>;
         };
 
         combo_en_colon {
             bindings = <&kp COLON>;
             key-positions = <28 29>;
-            layers = <0 1 10 13>;
+            layers = <0 1 10 14>;
         };
 
         combo_ru_colon {
             bindings = <&kp RU_COLON>;
             key-positions = <28 29>;
-            layers = <2 3 10 13>;
+            layers = <2 3 10 14>;
         };
 
         combo_backslash_ru {
             bindings = <&kp RU_BACKSLASH>;
             key-positions = <33 34>;
-            layers = <2 3 11 14>;
+            layers = <2 3 11 15>;
         };
 
         combo_backslash_en {
             bindings = <&kp BACKSLASH>;
             key-positions = <33 34>;
-            layers = <0 1 10 13>;
+            layers = <0 1 10 14>;
         };
 
         combo_arrow_ru {
             bindings = <&arrow_ru>;
             key-positions = <31 32 33>;
-            layers = <2 3 11 14>;
+            layers = <2 3 11 15>;
         };
 
         combo_arrow_en {
             bindings = <&arrow_en>;
             key-positions = <31 33 32>;
-            layers = <0 1 10 13>;
+            layers = <0 1 10 14>;
         };
 
         combo_pipe_ru {
             bindings = <&en_kp PIPE>;
             key-positions = <8 9 7>;
-            layers = <2 3 11 14>;
+            layers = <2 3 11 15>;
         };
 
         combo_pipe_en {
             bindings = <&kp PIPE>;
             key-positions = <7 8 9>;
-            layers = <0 1 10 13>;
+            layers = <0 1 10 14>;
         };
 
         combo_dollar_ru {
             bindings = <&en_kp DOLLAR>;
             key-positions = <19 20 21>;
-            layers = <2 3 11 14>;
+            layers = <2 3 11 15>;
         };
 
         combo_dollar_en {
             bindings = <&kp DOLLAR>;
             key-positions = <19 20 21>;
-            layers = <0 1 10 13>;
+            layers = <0 1 10 14>;
         };
 
         combo_hash_ru {
             bindings = <&en_kp HASH>;
             key-positions = <30 31>;
-            layers = <2 3 11 14>;
+            layers = <2 3 11 15>;
         };
 
         combo_hash_en {
             bindings = <&kp HASH>;
             key-positions = <30 31>;
-            layers = <0 1 10 13>;
+            layers = <0 1 10 14>;
         };
 
         combo_asterisk {
@@ -357,9 +357,9 @@
         };
 
         cmb_osl_os_ru {
-            bindings = <&sl 16>;
+            bindings = <&sl 17>;
             key-positions = <25 26>;
-            layers = <2 3 11 14 16>;
+            layers = <2 3 11 15 17>;
         };
     };
 
@@ -751,7 +751,7 @@
             bindings =
                 <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER>,
                 <&macro_wait_time 45>,
-                <&layer_off 16 &lg_en &lg_en>;
+                <&layer_off 17 &lg_en &lg_en>;
 
             label = "BT_SET_en";
             wait-ms = <45>;
@@ -776,7 +776,7 @@
             bindings =
                 <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER>,
                 <&macro_wait_time 45>,
-                <&layer_off 16 &lg_ru &lg_ru>;
+                <&layer_off 17 &lg_ru &lg_ru>;
 
             label = "BT_SET_RU";
             wait-ms = <45>;
@@ -1296,15 +1296,27 @@
             display-name = "Num";
         };
 
-        App {
+        App_Ru {
             bindings = <
-&trans                        &kp LA(LC(LS(P)))  &vm_morph          &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                              &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
+&trans                        &kp LA(LC(LS(P)))  &kp LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                              &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
 &kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))  &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                              &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
 &trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))  &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                              &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
                                                  &trans             &trans             &layer_off 12      &none              &sl 12    &macro_app_shift  &trans             &trans             &trans                 &trans
             >;
 
-            display-name = "App";
+            display-name = "App_Ru";
+            label = "App_Ru";
+        };
+
+        App_En {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+
+            label = "App_En";
         };
 
         Sym_En {
