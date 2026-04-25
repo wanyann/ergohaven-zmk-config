@@ -806,19 +806,6 @@
             wait-ms = <100>;
             tap-ms = <100>;
         };
-
-        macro_mouseless: macro_mouseless {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&to 0>,
-                <&macro_tap_time 70>,
-                <&kp LS(LC(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "MACRO_mouseless";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
     };
 
     behaviors {
@@ -904,7 +891,7 @@
         hrml: hrml {
             compatible = "zmk,behavior-hold-tap";
             label = "Home Row Mod Layer";
-            bindings = <&mouseless>, <&kp>;
+            bindings = <&none>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1131,17 +1118,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-        };
-
-        mouseless: mouseless {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOUSELESS";
-            bindings = <&ml>, <&macro_mouseless>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <1 2 3 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29 30 31 32 33 34 42 43 39>;
         };
     };
 
