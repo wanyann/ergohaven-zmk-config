@@ -882,10 +882,10 @@
         bspc_morph: bspc_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "BSPC_MORPH";
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            bindings = <&kp BACKSPACE>, <&kp LA(BACKSPACE)>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT)>;
+            mods = <(MOD_LCTL)>;
         };
 
         key_on: key_on {
