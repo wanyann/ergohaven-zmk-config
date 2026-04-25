@@ -807,20 +807,15 @@
             tap-ms = <100>;
         };
 
-        macro_mouseless_ru: macro_hrml {
+        macro_mouseless: macro_mouseless {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N9)) &layer_on 6>;
-            label = "MACRO_HRML";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
+            bindings =
+                <&to 0>,
+                <&macro_tap_time 70>,
+                <&kp LS(LC(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
-        macro_mouseles_en: macro_mouseles_en {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &layer_on 6>;
-            label = "MACRO_MOUSELES_EN";
+            label = "MACRO_mouseless";
             wait-ms = <0>;
             tap-ms = <0>;
         };
@@ -909,7 +904,7 @@
         hrml: hrml {
             compatible = "zmk,behavior-hold-tap";
             label = "Home Row Mod Layer";
-            bindings = <&ml>, <&kp>;
+            bindings = <&mouseless>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1138,32 +1133,10 @@
             flavor = "tap-preferred";
         };
 
-        hrml_ru: hrml_ru {
+        mouseless: mouseless {
             compatible = "zmk,behavior-hold-tap";
-            label = "HRML_RU";
-            bindings = <&ml>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <1 2 3 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29 30 31 32 33 34 42 43 39>;
-        };
-
-        hrml_en: hrml_en {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRML_EN";
-            bindings = <&ml>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <1 2 3 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29 30 31 32 33 34 42 43 39>;
-        };
-
-        mouseless_ru: mouseless_ru {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOUSELESS_RU";
-            bindings = <&ml>, <&kp>;
+            label = "MOUSELESS";
+            bindings = <&ml>, <&macro_mouseless>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
