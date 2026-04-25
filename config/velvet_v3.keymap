@@ -1017,7 +1017,7 @@
 &kp BACKSPACE  &kp Q                  &kp W                  &kp E                &mt LC(R) R          &mt LC(T) T                                  &kp Y        &kp U               &kp I                &kp O              &kp P                      &none
 &none          &hrml_slow LEFT_GUI A  &hrml_slow LEFT_ALT S  &hrs_l LEFT_SHIFT D  &hrml LCTRL F        &mt LC(F) G                                  &kp H        &hrml_slow RCTRL J  &hrs_r LEFT_SHIFT K  &hrml_slow RALT L  &hrml_slow RIGHT_GUI SEMI  &kp SQT
 &kp DELETE     &mt LC(Z) Z            &mt LC(X) X            &mt LC(C) C          &mt LC(V) V          &mt LG(V) B                                  &kp N        &kp M               &kp COMMA            &kp DOT            &mt LC(SLASH) SLASH        &none
-                                      &kp LS(F7)             &kp F7               &en_cw_off K_CANCEL  &lt 7 SPACE  &sl 10    &one_shot LEFT_SHIFT  &lt 8 LCTRL  &bspc_morph         &kp F2               &kp LS(F2)
+                                      &kp LS(F7)             &kp F7               &en_cw_off K_CANCEL  &lt 7 SPACE  &sl 10    &one_shot LEFT_SHIFT  &lt 8 RCTRL  &bspc_morph         &kp F2               &kp LS(F2)
             >;
 
             display-name = "English";
