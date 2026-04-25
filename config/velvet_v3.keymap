@@ -1238,10 +1238,10 @@
 
         Num_En {
             bindings = <
-&trans  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &kp MINUS                             &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &zero_morph   &kp N1        &kp N2        &three_mrph  &plus_morph                           &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                             &trans  &trans     &kp COMMA   &kp DOT       &trans        &trans
-                      &trans        &trans        &trans       &alt_spc     &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
+&trans  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp MINUS                           &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp N0        &kp N1        &kp N2        &kp NUMBER_3  &kp PLUS                            &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &none                               &trans  &trans     &kp COMMA   &kp DOT       &trans        &trans
+                      &trans        &trans        &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
             >;
 
             display-name = "Num";
@@ -1249,10 +1249,10 @@
 
         Num_Ru {
             bindings = <
-&trans  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &kp MINUS                             &trans  &trans     &trans        &trans        &trans        &trans
-&trans  &zero_morph   &kp N1        &kp N2        &three_mrph  &plus_morph                           &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                             &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans        &trans
-                      &trans        &trans        &trans       &alt_spc     &kp LA(ENTER)    &trans  &trans  &trans     &trans        &trans
+&trans  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp N9  &kp MINUS                           &trans  &trans     &trans        &trans        &trans        &trans
+&trans  &kp N0        &kp N1        &kp N2        &kp N3  &kp PLUS                            &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6  &none                               &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans        &trans
+                      &trans        &trans        &trans  &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans     &trans        &trans
             >;
 
             display-name = "Num";
