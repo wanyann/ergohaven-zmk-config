@@ -806,19 +806,6 @@
             wait-ms = <100>;
             tap-ms = <100>;
         };
-
-        macro_mouseless: macro_mouseless {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&to 0>,
-                <&macro_tap_time 70>,
-                <&kp LS(LC(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-
-            label = "MACRO_mouseless";
-            wait-ms = <0>;
-            tap-ms = <0>;
-        };
     };
 
     behaviors {
@@ -938,82 +925,6 @@
             mods = <(MOD_LSFT)>;
         };
 
-        en_dot_excl: en_dot_excl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EN_DOT_EXCL";
-            bindings = <&en_cw_off DOT>, <&en_cw_off EXCL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        en_com_ques: en_com_ques {
-            compatible = "zmk,behavior-mod-morph";
-            label = "EN_COM_QUES";
-            bindings = <&en_cw_off COMMA>, <&en_cw_off QUESTION>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        ru_dot_excl: ru_dot_excl {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RU_DOT_EXCL";
-            bindings = <&ru_cw_off RU_DOT>, <&ru_cw_off EXCL>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        ru_com_ques: ru_com_ques {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RU_COM_QUES";
-            bindings = <&ru_cw_off RU_COMMA>, <&ru_cw_off RU_QUESTION>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        ru_dot_mt: ru_dot_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_DOT_MT";
-            bindings = <&kp>, <&ru_dot_excl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        ru_com_mt: ru_com_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "RU_COM_MT";
-            bindings = <&kp>, <&ru_com_ques>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        en_com_mt: en_com_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "EN_COM_MT";
-            bindings = <&kp>, <&en_com_ques>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
-        en_dot_mt: en_dot_mt {
-            compatible = "zmk,behavior-hold-tap";
-            label = "EN_DOT_MT";
-            bindings = <&kp>, <&en_dot_excl>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
         space_mrph: space_mrph {
             compatible = "zmk,behavior-mod-morph";
             label = "SPACE_MRPH";
@@ -1024,30 +935,12 @@
             keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
         };
 
-        nine_morph: nine_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NINE_MORPH";
-            bindings = <&kp N9>, <&kp LS(LC(R))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         caps_soft_sign: caps_soft_sign {
             compatible = "zmk,behavior-mod-morph";
             label = "CAPS_SOFT_SIGN";
             bindings =
                 <&kp LS(RU_CYRILLIC_SOFT_SIGN)>,
                 <&kp LS(RU_CYRILLIC_HARD_SIGN)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        three_mrph: three_mrph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "THREE_MRPH";
-            bindings = <&kp NUMBER_3>, <&kp LS(LC(F))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1071,24 +964,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "hold-preferred";
-        };
-
-        zero_morph: zero_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ZERO_MORPH";
-            bindings = <&kp N0>, <&kp LS(LC(A))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT)>;
-        };
-
-        plus_morph: plus_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PLUS_MORPH";
-            bindings = <&kp PLUS>, <&kp LS(LC(G))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
         };
 
         hrs_l: hrs_l {
@@ -1131,17 +1006,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-        };
-
-        mouseless: mouseless {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOUSELESS";
-            bindings = <&ml>, <&macro_mouseless>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <1 2 3 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29 30 31 32 33 34 42 43 39>;
         };
     };
 
