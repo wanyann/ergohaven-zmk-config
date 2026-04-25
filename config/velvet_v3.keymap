@@ -1161,10 +1161,10 @@
 
         En_CW {
             bindings = <
-&trans     &none                      &kp LS(Y)                  &kp LS(U)                &mt LC(R) LS(A)      &mt LC(T) APOS                           &kp LS(Q)    &kp LS(G)     &kp LS(N)                &kp LS(W)  &kp LS(Z)              &trans
-&kp LS(J)  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrs_l LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)    &en_com_mt LC(F) 0                       &kp LS(M)    &hrl 8 LS(D)  &hrs_r LEFT_SHIFT LS(R)  &kp LS(S)  &hrml_slow RALT LS(P)  &kp LS(K)
-&trans     &mt LC(Z) LS(X)            &mt LC(X) K_CANCEL         &mt LC(C) K_CANCEL       &mt LC(V) SQT        &en_dot_mt LG(V) 0                       &kp LS(V)    &kp LS(C)     &kp LS(L)                &kp LS(F)  &mt LC(SLASH) LS(B)    &trans
-                                      &trans                     &trans                   &en_cw_off K_CANCEL  &en_lt_cw_off 7 SPACE  &trans    &trans  &lt 8 LS(T)  &trans        &trans                   &trans
+&trans  &kp LS(Q)                  &kp LS(W)                  &kp LS(E)                &mt LC(R) LS(R)      &mt LC(T) LS(T)                          &kp LS(Y)    &kp LS(U)               &kp LS(I)                &kp LS(O)              &kp LS(P)                 &trans
+&none   &hrml_slow LEFT_GUI LS(A)  &hrml_slow LEFT_ALT LS(S)  &hrs_l LEFT_SHIFT LS(D)  &hrml LCTRL LS(F)    &mt LC(F) G                              &kp LS(H)    &hrml_slow RCTRL LS(J)  &hrs_r LEFT_SHIFT LS(K)  &hrml_slow RALT LS(L)  &hrml_slow LEFT_GUI SEMI  &kp SQT
+&trans  &mt LC(Z) LS(Z)            &mt LC(X) X                &mt LC(C) C              &mt LC(V) LS(V)      &mt LG(V) LS(B)                          &kp LS(N)    &kp LS(M)               &kp LS(L)                &kp LS(F)              &mt LC(SLASH) LS(B)       &trans
+                                   &trans                     &trans                   &en_cw_off K_CANCEL  &en_lt_cw_off 7 SPACE  &trans    &trans  &lt 8 LS(T)  &trans                  &trans                   &trans
             >;
 
             display-name = "CapsWord";
