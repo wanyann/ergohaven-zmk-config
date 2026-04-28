@@ -826,6 +826,13 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0>;
             label = "KP_SUB";
         };
+
+        kp_to: kp_to {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
+            label = "KP_TO";
+        };
     };
 
     behaviors {
@@ -1362,20 +1369,20 @@
         Ms_2 {
             display-name = "Ms_2";
             bindings = <
-&none     &none     &kp_m2 Y  &kp_m2 U  &kp_m2 A                        &none                           &kp_m2 Q  &kp_m2 G  &kp_m2 N  &kp_m2 W  &kp_m2 Z  &trans
-&kp_m2 J  &kp_m2 H  &kp_m2 I  &kp_m2 E  &kp_m2 O                        &kp_m2 COMMA                    &kp_m2 M  &kp_m2 D  &kp_m2 R  &kp_m2 S  &kp_m2 P  &kp_m2 K
-&none     &kp_m2 X  &none     &none     &kp_m2 SQT                      &kp_m2 DOT                      &kp_m2 V  &kp_m2 C  &kp_m2 L  &kp_m2 F  &kp_m2 B  &trans
-                    &trans    &trans    &en_cw_off LS(LA(LC(LG(F12))))  &trans        &trans    &trans  &kp T     &trans    &trans    &trans
+&none     &none     &kp_m2 Y  &kp_m2 U  &kp_m2 A                        &none                           &kp_m2 Q  &kp_m2 G             &kp_m2 N  &kp_m2 W  &kp_m2 Z  &trans
+&kp_m2 J  &kp_m2 H  &kp_m2 I  &kp_m2 E  &kp_m2 O                        &kp_m2 COMMA                    &kp_m2 M  &kp_m2 D             &kp_m2 R  &kp_m2 S  &kp_m2 P  &kp_m2 K
+&none     &kp_m2 X  &none     &none     &kp_m2 SQT                      &kp_m2 DOT                      &kp_m2 V  &kp_m2 C             &kp_m2 L  &kp_m2 F  &kp_m2 B  &trans
+                    &trans    &trans    &en_cw_off LS(LA(LC(LG(F12))))  &trans        &trans    &trans  &kp T     &kp_to BACKSPACE 16  &trans    &trans
             >;
         };
 
         Ms_Sub {
             display-name = "Ms_Sub";
             bindings = <
-&none      &none      &kp_sub Y  &kp_sub U  &kp_sub A                       &none                            &kp_sub Q  &kp_sub G  &kp_sub N  &kp_sub W  &kp_sub Z  &trans
-&kp_sub J  &kp_sub H  &kp_sub I  &kp_sub E  &kp_sub O                       &kp_sub COMMA                    &kp_sub M  &kp_sub D  &kp_sub R  &kp_sub S  &kp_sub P  &kp_sub K
-&none      &kp_sub X  &none      &none      &kp_sub SQT                     &kp_sub DOT                      &kp_sub V  &kp_sub C  &kp_sub L  &kp_sub F  &kp_sub B  &trans
-                      &trans     &trans     &en_cw_off LS(LA(LC(LG(F12))))  &trans         &trans    &trans  &kp T      &trans     &trans     &trans
+&none      &none      &kp_sub Y  &kp_sub U  &kp_sub A                       &none                            &kp_sub Q  &kp_sub G            &kp_sub N  &kp_sub W  &kp_sub Z  &trans
+&kp_sub J  &kp_sub H  &kp_sub I  &kp_sub E  &kp_sub O                       &kp_sub COMMA                    &kp_sub M  &kp_sub D            &kp_sub R  &kp_sub S  &kp_sub P  &kp_sub K
+&none      &kp_sub X  &none      &none      &kp_sub SQT                     &kp_sub DOT                      &kp_sub V  &kp_sub C            &kp_sub L  &kp_sub F  &kp_sub B  &trans
+                      &trans     &trans     &en_cw_off LS(LA(LC(LG(F12))))  &trans         &trans    &trans  &kp T      &kp_to BACKSPACE 17  &trans     &trans
             >;
         };
     };
