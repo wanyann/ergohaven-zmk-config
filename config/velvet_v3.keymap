@@ -806,24 +806,17 @@
             label = "MACRO_MLESS_OVER";
         };
 
-        kp_m1_1: kp_m1 {
+        kp_m1: kp_m1 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 17>;
             label = "KP_M1";
         };
 
-        kp_m1_2: kp_m1_2 {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 18>;
-            label = "kp_m1_2";
-        };
-
         kp_m2: kp_m2 {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 19>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 18>;
             label = "kp_m2";
         };
 
@@ -1345,7 +1338,7 @@
             >;
         };
 
-        Mouse_Free {
+        Ms_Free {
             bindings = <
 &none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P      &trans
 &none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                     &kp H   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
@@ -1353,31 +1346,21 @@
                              &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
 
-            display-name = "Mouse_Free";
+            display-name = "Ms_Free";
         };
 
-        Mouse_Over1_1 {
-            display-name = "Mouse_Over1_1";
+        Ms_1 {
+            display-name = "Ms_1";
             bindings = <
-&none       &none       &kp_m1_1 Y  &kp_m1_1 U  &kp_m1_1 A                      &none                             &kp_m1_1 Q  &kp_m1_1 G  &kp_m1_1 N  &kp_m1_1 W  &kp_m1_1 Z  &trans
-&kp_m1_1 J  &kp_m1_1 H  &kp_m1_1 I  &kp_m1_1 E  &kp_m1_1 O                      &kp_m1_1 COMMA                    &kp_m1_1 M  &kp_m1_1 D  &kp_m1_1 R  &kp_m1_1 S  &kp_m1_1 P  &kp_m1_1 K
-&none       &kp_m1_1 X  &none       &none       &kp_m1_1 SQT                    &kp_m1_1 DOT                      &kp_m1_1 V  &kp_m1_1 C  &kp_m1_1 L  &kp_m1_1 F  &kp_m1_1 B  &trans
-                        &trans      &trans      &en_cw_off LS(LA(LC(LG(F12))))  &trans          &trans    &trans  &kp T       &trans      &trans      &trans
+&none     &none     &kp_m1 Y  &kp_m1 U  &kp_m1 A                        &none                           &kp_m1 Q  &kp_m1 G  &kp_m1 N  &kp_m1 W  &kp_m1 Z  &trans
+&kp_m1 J  &kp_m1 H  &kp_m1 I  &kp_m1 E  &kp_m1 O                        &kp_m1 COMMA                    &kp_m1 M  &kp_m1 D  &kp_m1 R  &kp_m1 S  &kp_m1 P  &kp_m1 K
+&none     &kp_m1 X  &none     &none     &kp_m1 SQT                      &kp_m1 DOT                      &kp_m1 V  &kp_m1 C  &kp_m1 L  &kp_m1 F  &kp_m1 B  &trans
+                    &trans    &trans    &en_cw_off LS(LA(LC(LG(F12))))  &trans        &trans    &trans  &kp T     &none     &trans    &trans
             >;
         };
 
-        Mouse_Over1_2 {
-            display-name = "Mouse_Over1_2";
-            bindings = <
-&none       &none       &kp_m1_2 Y  &kp_m1_2 U  &kp_m1_2 A                      &none                             &kp_m1_2 Q  &kp_m1_2 G  &kp_m1_2 N  &kp_m1_2 W  &kp_m1_2 Z  &trans
-&kp_m1_2 J  &kp_m1_2 H  &kp_m1_2 I  &kp_m1_2 E  &kp_m1_2 O                      &kp_m1_2 COMMA                    &kp_m1_2 M  &kp_m1_2 D  &kp_m1_2 R  &kp_m1_2 S  &kp_m1_2 P  &kp_m1_2 K
-&none       &kp_m1_2 X  &none       &none       &kp_m1_2 SQT                    &kp_m1_2 DOT                      &kp_m1_2 V  &kp_m1_2 C  &kp_m1_2 L  &kp_m1_2 F  &kp_m1_2 B  &trans
-                        &trans      &trans      &en_cw_off LS(LA(LC(LG(F12))))  &trans          &trans    &trans  &kp T       &trans      &trans      &trans
-            >;
-        };
-
-        Mouse_Over2 {
-            display-name = "Mouse_Over2";
+        Ms_2 {
+            display-name = "Ms_2";
             bindings = <
 &none     &none     &kp_m2 Y  &kp_m2 U  &kp_m2 A                        &none                           &kp_m2 Q  &kp_m2 G  &kp_m2 N  &kp_m2 W  &kp_m2 Z  &trans
 &kp_m2 J  &kp_m2 H  &kp_m2 I  &kp_m2 E  &kp_m2 O                        &kp_m2 COMMA                    &kp_m2 M  &kp_m2 D  &kp_m2 R  &kp_m2 S  &kp_m2 P  &kp_m2 K
@@ -1386,8 +1369,8 @@
             >;
         };
 
-        Mouse_Sub {
-            display-name = "Mouse_Sub";
+        Ms_Sub {
+            display-name = "Ms_Sub";
             bindings = <
 &none      &none      &kp_sub Y  &kp_sub U  &kp_sub A                       &none                            &kp_sub Q  &kp_sub G  &kp_sub N  &kp_sub W  &kp_sub Z  &trans
 &kp_sub J  &kp_sub H  &kp_sub I  &kp_sub E  &kp_sub O                       &kp_sub COMMA                    &kp_sub M  &kp_sub D  &kp_sub R  &kp_sub S  &kp_sub P  &kp_sub K
