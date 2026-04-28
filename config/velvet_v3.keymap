@@ -112,24 +112,16 @@
             layers = <2 3 14 10>;
         };
 
-        combo_slash_ru {
-            bindings = <&kp RU_SLASH>;
+        combo_mless_free {
+            bindings = <&macro_mless_free>;
             timeout-ms = <30>;
             key-positions = <32 33>;
-            layers = <2 3 14 10>;
         };
 
         combo_singequote_en {
             bindings = <&kp SINGLE_QUOTE>;
             timeout-ms = <30>;
             key-positions = <7 6>;
-            layers = <0 1 9 13>;
-        };
-
-        combo_slash_en {
-            bindings = <&kp SLASH>;
-            timeout-ms = <30>;
-            key-positions = <32 33>;
             layers = <0 1 9 13>;
         };
 
@@ -254,10 +246,9 @@
             layers = <2 3 14 10>;
         };
 
-        combo_en_amp {
-            bindings = <&kp AMPS>;
+        combo_mless_over {
+            bindings = <&macro_mless_over>;
             key-positions = <8 9>;
-            layers = <0 1 9 13>;
         };
 
         combo_en_semi {
@@ -269,12 +260,6 @@
         combo_ru_semi {
             bindings = <&kp RU_SEMI>;
             key-positions = <17 16>;
-            layers = <2 3 10 14>;
-        };
-
-        combo_amp_ru {
-            bindings = <&en_kp AMPS>;
-            key-positions = <8 9>;
             layers = <2 3 10 14>;
         };
 
@@ -810,8 +795,15 @@
         macro_mless_free: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LALT &layer_on 4>;
+            bindings = <&kp LALT &kp LS(LC(N9)) &layer_on 4>;
             label = "MACRO_MLESS_FREE";
+        };
+
+        macro_mless_over: macro_mless_over {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp LS(LC(N9)) &layer_on 4>;
+            label = "MACRO_MLESS_OVER";
         };
     };
 
@@ -1262,10 +1254,10 @@
 
         Num_En {
             bindings = <
-&trans  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &kp MINUS                             &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &zero_morph   &kp N1        &kp N2        &three_mrph  &plus_morph                           &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                             &trans  &trans     &kp COMMA   &kp DOT       &trans        &trans
-                      &trans        &trans        &trans       &alt_spc     &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
+&trans  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp MINUS                           &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp N0        &kp N1        &kp N2        &kp NUMBER_3  &kp PLUS                            &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &none                               &trans  &trans     &kp COMMA   &kp DOT       &trans        &trans
+                      &trans        &trans        &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
             >;
 
             display-name = "Num";
@@ -1273,10 +1265,10 @@
 
         Num_Ru {
             bindings = <
-&trans  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &nine_morph  &kp MINUS                             &trans  &trans     &trans        &trans        &trans        &trans
-&trans  &zero_morph   &kp N1        &kp N2        &three_mrph  &plus_morph                           &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6       &kp LC(B)                             &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans        &trans
-                      &trans        &trans        &trans       &alt_spc     &kp LA(ENTER)    &trans  &trans  &trans     &trans        &trans
+&trans  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp MINUS                           &trans  &trans     &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &kp PLUS                            &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &none                               &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans        &trans
+                      &trans        &trans        &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans     &trans        &trans
             >;
 
             display-name = "Num";
