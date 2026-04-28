@@ -1182,10 +1182,10 @@
         Mless_Overlay1 {
             display-name = "Mless_Overlay1";
             bindings = <
-&none  &none  &kp Y   &kp U   &kp A                        &none                        &kp Q  &kp G   &kp N   &kp W   &kp Z  &trans
-&kp J  &kp H  &kp I   &kp E   &kp O                        &kp COMMA                    &kp M  &kp D   &kp R   &kp S   &kp P  &kp K
-&none  &kp X  &none   &none   &kp SQT                      &kp DOT                      &kp V  &kp C   &kp L   &kp F   &kp B  &trans
-              &trans  &trans  &kp_layeroff 4 LS(K_CANCEL)  &trans     &trans    &trans  &kp T  &trans  &trans  &trans
+&none  &none                 &kp Y                 &kp U         &kp A                        &none                        &kp Q  &kp G         &kp N               &kp W             &kp Z             &trans
+&kp J  &hrm_slow LEFT_GUI H  &hrm_slow LEFT_ALT I  &hrm LSHFT E  &hrm LCTRL O                 &kp COMMA                    &kp M  &hrm RCTRL D  &hrm RIGHT_SHIFT R  &hrm_slow RALT S  &hrm_slow RGUI P  &kp K
+&none  &kp X                 &none                 &none         &kp SQT                      &kp DOT                      &kp V  &kp C         &kp L               &kp F             &kp B             &trans
+                             &trans                &trans        &kp_layeroff 4 LS(K_CANCEL)  &trans     &trans    &trans  &kp T  &trans        &trans              &trans
             >;
         };
 
