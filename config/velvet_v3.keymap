@@ -810,7 +810,7 @@
         macro_mless_free: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&layer_on 4 &kp LALT>;
+            bindings = <&kp LALT &layer_on 4>;
             label = "MACRO_MLESS_FREE";
         };
     };
@@ -1134,7 +1134,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
-            flavor = "balanced";
+            flavor = "tap-preferred";
         };
 
         hrml_free: hrml_free {
