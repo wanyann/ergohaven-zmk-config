@@ -1168,15 +1168,15 @@
             display-name = "CapsWord";
         };
 
-        Mouseless {
+        Mless_Overlay1 {
             bindings = <
-&trans  &kp Y  &kp Y   &kp U   &kp A                        &trans                       &kp Q   &kp G   &kp N   &kp W   &kp Z  &trans
-&kp J   &kp H  &kp I   &kp E   &kp O                        &kp COMMA                    &kp M   &kp D   &kp R   &kp S   &kp P  &kp K
-&trans  &kp X  &none   &none   &kp APOS                     &kp DOT                      &kp V   &kp C   &kp L   &kp F   &kp B  &trans
-               &trans  &trans  &kp_layeroff 4 LS(K_CANCEL)  &trans     &trans    &trans  &trans  &trans  &trans  &trans
+&none  &kp Q  &kp W   &kp E   &kp R                        &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P      &trans
+&none  &kp A  &kp S   &kp D   &kp F                        &kp G                     &kp H   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
+&none  &kp Z  &kp X   &kp C   &kp V                        &kp B                     &kp N   &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+              &trans  &trans  &kp_layeroff 4 LS(K_CANCEL)  &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
 
-            display-name = "Mouseless";
+            display-name = "Mless_Overlay1";
         };
 
         Mouse_Ctrl {
