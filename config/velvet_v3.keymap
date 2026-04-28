@@ -830,7 +830,7 @@
         kp_sub: kp_sub {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 17>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0>;
             label = "KP_SUB";
         };
     };
@@ -1379,20 +1379,20 @@
         Mouse_Over2 {
             display-name = "Mouse_Over2";
             bindings = <
-&none       &none       &kp_m1_2 Y  &kp_m1_2 U  &kp_m1_2 A                           &none                             &kp_m1_2 Q  &kp_m1_2 G  &kp_m1_2 N  &kp_m1_2 W  &kp_m1_2 Z  &trans
-&kp_m1_2 J  &kp_m1_2 H  &kp_m1_2 I  &kp_m1_2 E  &kp_m1_2 O                           &kp_m1_2 COMMA                    &kp_m1_2 M  &kp_m1_2 D  &kp_m1_2 R  &kp_m1_2 S  &kp_m1_2 P  &kp_m1_2 K
-&none       &kp_m1_2 X  &none       &none       &kp_m1_2 SQT                         &kp_m1_2 DOT                      &kp_m1_2 V  &kp_m1_2 C  &kp_m1_2 L  &kp_m1_2 F  &kp_m1_2 B  &trans
-                        &trans      &trans      &kp_layeroff 15 LS(LA(LC(LG(F12))))  &trans          &trans    &trans  &kp T       &trans      &trans      &trans
+&none     &none     &kp_m2 Y  &kp_m2 U  &kp_m2 A                             &none                           &kp_m2 Q  &kp_m2 G  &kp_m2 N  &kp_m2 W  &kp_m2 Z  &trans
+&kp_m2 J  &kp_m2 H  &kp_m2 I  &kp_m2 E  &kp_m2 O                             &kp_m2 COMMA                    &kp_m2 M  &kp_m2 D  &kp_m2 R  &kp_m2 S  &kp_m2 P  &kp_m2 K
+&none     &kp_m2 X  &none     &none     &kp_m2 SQT                           &kp_m2 DOT                      &kp_m2 V  &kp_m2 C  &kp_m2 L  &kp_m2 F  &kp_m2 B  &trans
+                    &trans    &trans    &kp_layeroff 15 LS(LA(LC(LG(F12))))  &trans        &trans    &trans  &kp T     &trans    &trans    &trans
             >;
         };
 
         Mouse_Sub {
             display-name = "Mouse_Sub";
             bindings = <
-&none       &none       &kp_m1_2 Y  &kp_m1_2 U  &kp_m1_2 A                           &none                             &kp_m1_2 Q  &kp_m1_2 G  &kp_m1_2 N  &kp_m1_2 W  &kp_m1_2 Z  &trans
-&kp_m1_2 J  &kp_m1_2 H  &kp_m1_2 I  &kp_m1_2 E  &kp_m1_2 O                           &kp_m1_2 COMMA                    &kp_m1_2 M  &kp_m1_2 D  &kp_m1_2 R  &kp_m1_2 S  &kp_m1_2 P  &kp_m1_2 K
-&none       &kp_m1_2 X  &none       &none       &kp_m1_2 SQT                         &kp_m1_2 DOT                      &kp_m1_2 V  &kp_m1_2 C  &kp_m1_2 L  &kp_m1_2 F  &kp_m1_2 B  &trans
-                        &trans      &trans      &kp_layeroff 15 LS(LA(LC(LG(F12))))  &trans          &trans    &trans  &kp T       &trans      &trans      &trans
+&none      &none      &kp_sub Y  &kp_sub U  &kp_sub A                            &none                            &kp_sub Q  &kp_sub G  &kp_sub N  &kp_sub W  &kp_sub Z  &trans
+&kp_sub J  &kp_sub H  &kp_sub I  &kp_sub E  &kp_sub O                            &kp_sub COMMA                    &kp_sub M  &kp_sub D  &kp_sub R  &kp_sub S  &kp_sub P  &kp_sub K
+&none      &kp_sub X  &none      &none      &kp_sub SQT                          &kp_sub DOT                      &kp_sub V  &kp_sub C  &kp_sub L  &kp_sub F  &kp_sub B  &trans
+                      &trans     &trans     &kp_layeroff 15 LS(LA(LC(LG(F12))))  &trans         &trans    &trans  &kp T      &trans     &trans     &trans
             >;
         };
     };
