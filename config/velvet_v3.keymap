@@ -112,10 +112,11 @@
             layers = <2 3 11 7>;
         };
 
-        combo_mless_free {
+        combo_ms_free_ru {
             bindings = <&ms_free_ru>;
             timeout-ms = <30>;
             key-positions = <32 33>;
+            layers = <2 3 9>;
         };
 
         combo_singequote_en {
@@ -246,9 +247,10 @@
             layers = <2 3 11 7>;
         };
 
-        combo_mless_over {
+        combo_ms_over_ru {
             bindings = <&ms_over_ru>;
             key-positions = <8 9>;
+            layers = <2 3>;
         };
 
         combo_en_semi {
@@ -344,6 +346,19 @@
             bindings = <&sl 13>;
             key-positions = <25 26>;
             layers = <2 3 7 11 13>;
+        };
+
+        combo_ms_free_en {
+            bindings = <&ms_free_en>;
+            key-positions = <32 33>;
+            timeout-ms = <30>;
+            layers = <0 1>;
+        };
+
+        combo_ms_over_en {
+            bindings = <&ms_over_en>;
+            key-positions = <8 9>;
+            layers = <0 1>;
         };
     };
 
