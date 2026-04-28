@@ -1345,7 +1345,7 @@
             >;
         };
 
-        Ms_Free {
+        Ms_Free_Ru {
             bindings = <
 &none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P      &trans
 &none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                     &kp H   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
@@ -1353,11 +1353,11 @@
                              &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
 
-            display-name = "Ms_Free";
+            display-name = "Ms_Free_Ru";
         };
 
-        Ms_1 {
-            display-name = "Ms_1";
+        Ms_1_Ru {
+            display-name = "Ms_1_Ru";
             bindings = <
 &none     &none     &kp_m1 Y  &kp_m1 U  &kp_m1 A                        &none                           &kp_m1 Q  &kp_m1 G  &kp_m1 N  &kp_m1 W  &kp_m1 Z  &trans
 &kp_m1 J  &kp_m1 H  &kp_m1 I  &kp_m1 E  &kp_m1 O                        &kp_m1 COMMA                    &kp_m1 M  &kp_m1 D  &kp_m1 R  &kp_m1 S  &kp_m1 P  &kp_m1 K
@@ -1366,8 +1366,8 @@
             >;
         };
 
-        Ms_2 {
-            display-name = "Ms_2";
+        Ms_2_Ru {
+            display-name = "Ms_2_Ru";
             bindings = <
 &none     &none     &kp_m2 Y  &kp_m2 U  &kp_m2 A                        &none                           &kp_m2 Q  &kp_m2 G             &kp_m2 N  &kp_m2 W  &kp_m2 Z  &trans
 &kp_m2 J  &kp_m2 H  &kp_m2 I  &kp_m2 E  &kp_m2 O                        &kp_m2 COMMA                    &kp_m2 M  &kp_m2 D             &kp_m2 R  &kp_m2 S  &kp_m2 P  &kp_m2 K
@@ -1376,8 +1376,8 @@
             >;
         };
 
-        Ms_Sub {
-            display-name = "Ms_Sub";
+        Ms_Sub_Ru {
+            display-name = "Ms_Sub_Ru";
             bindings = <
 &none      &none      &kp_sub Y  &kp_sub U  &kp_sub A                       &none                            &kp_sub Q  &kp_sub G            &kp_sub N  &kp_sub W  &kp_sub Z  &trans
 &kp_sub J  &kp_sub H  &kp_sub I  &kp_sub E  &kp_sub O                       &kp_sub COMMA                    &kp_sub M  &kp_sub D            &kp_sub R  &kp_sub S  &kp_sub P  &kp_sub K
