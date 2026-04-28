@@ -802,7 +802,7 @@
         macro_mless_over: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LS(LC(N9)) &to 4>;
+            bindings = <&kp LCTRL &kp LS(LC(N9)) &to 5>;
             label = "MACRO_MLESS_OVER";
         };
     };
