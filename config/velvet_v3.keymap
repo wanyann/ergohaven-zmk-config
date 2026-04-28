@@ -113,7 +113,7 @@
         };
 
         combo_mless_free {
-            bindings = <&macro_mless_free>;
+            bindings = <&ms_free_ru>;
             timeout-ms = <30>;
             key-positions = <32 33>;
         };
@@ -247,7 +247,7 @@
         };
 
         combo_mless_over {
-            bindings = <&macro_mless_over>;
+            bindings = <&ms_over_ru>;
             key-positions = <8 9>;
         };
 
@@ -792,39 +792,39 @@
             tap-ms = <100>;
         };
 
-        macro_mless_free: macro_mless_free {
+        ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LALT &kp LS(LC(N9)) &to 15>;
             label = "MACRO_MLESS_FREE";
         };
 
-        macro_mless_over: macro_mless_over {
+        ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp RCTRL &kp LS(LC(N9)) &to 16>;
             label = "MACRO_MLESS_OVER";
         };
 
-        kp_m1: kp_m1 {
+        kp_m1_ru: kp_m1_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 17>;
-            label = "KP_M1";
+            label = "KP_M1_RU";
         };
 
-        kp_m2: kp_m2 {
+        kp_m2_ru: kp_m2_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 18>;
-            label = "kp_m2";
+            label = "kp_m2_ru";
         };
 
-        kp_sub: kp_sub {
+        kp_sub_ru: kp_sub_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0>;
-            label = "KP_SUB";
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 2>;
+            label = "kp_sub_ru";
         };
 
         kp_to: kp_to {
@@ -832,6 +832,41 @@
             #binding-cells = <2>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
             label = "KP_TO";
+        };
+
+        ms_free_en: ms_free_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp LS(LC(N9)) &to 19>;
+            label = "ms_free_en";
+        };
+
+        ms_over_en: ms_over_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RCTRL &kp LS(LC(N9)) &to 20>;
+            label = "ms_over_en";
+        };
+
+        kp_m1_en: kp_m1_en {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 21>;
+            label = "KP_M1_EN";
+        };
+
+        kp_m2_en: kp_m2_en {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 22>;
+            label = "KP_M2_EN";
+        };
+
+        kp_sub_en: kp_sub_en {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0>;
+            label = "KP_SUB_EN";
         };
     };
 
@@ -1150,7 +1185,7 @@
         mless_free: mless_free {
             compatible = "zmk,behavior-hold-tap";
             label = "MLESS_FREE";
-            bindings = <&ml>, <&macro_mless_free>;
+            bindings = <&ml>, <&ms_free_ru>;
 
             #binding-cells = <2>;
             tapping-term-ms = <250>;
@@ -1350,7 +1385,7 @@
 &none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P      &trans
 &none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                     &kp H   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
 &none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                     &kp N   &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
-                             &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &trans  &trans    &trans  &trans  &trans  &trans     &trans
+                             &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
 
             display-name = "Ms_Free_Ru";
@@ -1359,30 +1394,30 @@
         Ms_1_Ru {
             display-name = "Ms_1_Ru";
             bindings = <
-&none     &none     &kp_m1 Y  &kp_m1 U  &kp_m1 A                        &none                           &kp_m1 Q  &kp_m1 G  &kp_m1 N  &kp_m1 W  &kp_m1 Z  &trans
-&kp_m1 J  &kp_m1 H  &kp_m1 I  &kp_m1 E  &kp_m1 O                        &kp_m1 COMMA                    &kp_m1 M  &kp_m1 D  &kp_m1 R  &kp_m1 S  &kp_m1 P  &kp_m1 K
-&none     &kp_m1 X  &none     &none     &kp_m1 SQT                      &kp_m1 DOT                      &kp_m1 V  &kp_m1 C  &kp_m1 L  &kp_m1 F  &kp_m1 B  &trans
-                    &trans    &trans    &en_cw_off LS(LA(LC(LG(F12))))  &trans        &trans    &trans  &kp T     &none     &trans    &trans
+&none        &none        &kp_m1_ru Y  &kp_m1_ru U  &kp_m1_ru A                     &none                              &kp_m1_ru Q  &kp_m1_ru G  &kp_m1_ru N  &kp_m1_ru W  &kp_m1_ru Z  &trans
+&kp_m1_ru J  &kp_m1_ru H  &kp_m1_ru I  &kp_m1_ru E  &kp_m1_ru O                     &kp_m1_ru COMMA                    &kp_m1_ru M  &kp_m1_ru D  &kp_m1_ru R  &kp_m1_ru S  &kp_m1_ru P  &kp_m1_ru K
+&none        &kp_m1_ru X  &none        &none        &kp_m1_ru SQT                   &kp_m1_ru DOT                      &kp_m1_ru V  &kp_m1_ru C  &kp_m1_ru L  &kp_m1_ru F  &kp_m1_ru B  &trans
+                          &trans       &trans       &ru_cw_off LS(LA(LC(LG(F12))))  &trans           &trans    &trans  &kp T        &none        &trans       &trans
             >;
         };
 
         Ms_2_Ru {
             display-name = "Ms_2_Ru";
             bindings = <
-&none     &none     &kp_m2 Y  &kp_m2 U  &kp_m2 A                        &none                           &kp_m2 Q  &kp_m2 G             &kp_m2 N  &kp_m2 W  &kp_m2 Z  &trans
-&kp_m2 J  &kp_m2 H  &kp_m2 I  &kp_m2 E  &kp_m2 O                        &kp_m2 COMMA                    &kp_m2 M  &kp_m2 D             &kp_m2 R  &kp_m2 S  &kp_m2 P  &kp_m2 K
-&none     &kp_m2 X  &none     &none     &kp_m2 SQT                      &kp_m2 DOT                      &kp_m2 V  &kp_m2 C             &kp_m2 L  &kp_m2 F  &kp_m2 B  &trans
-                    &trans    &trans    &en_cw_off LS(LA(LC(LG(F12))))  &trans        &trans    &trans  &kp T     &kp_to BACKSPACE 16  &trans    &trans
+&none        &none        &kp_m2_ru Y  &kp_m2_ru U  &kp_m2_ru A                     &none                              &kp_m2_ru Q  &kp_m2_ru G          &kp_m2_ru N  &kp_m2_ru W  &kp_m2_ru Z  &trans
+&kp_m2_ru J  &kp_m2_ru H  &kp_m2_ru I  &kp_m2_ru E  &kp_m2_ru O                     &kp_m2_ru COMMA                    &kp_m2_ru M  &kp_m2_ru D          &kp_m2_ru R  &kp_m2_ru S  &kp_m2_ru P  &kp_m2_ru K
+&none        &kp_m2_ru X  &none        &none        &kp_m2_ru SQT                   &kp_m2_ru DOT                      &kp_m2_ru V  &kp_m2_ru C          &kp_m2_ru L  &kp_m2_ru F  &kp_m2_ru B  &trans
+                          &trans       &trans       &ru_cw_off LS(LA(LC(LG(F12))))  &trans           &trans    &trans  &kp T        &kp_to BACKSPACE 16  &trans       &trans
             >;
         };
 
         Ms_Sub_Ru {
             display-name = "Ms_Sub_Ru";
             bindings = <
-&none      &none      &kp_sub Y  &kp_sub U  &kp_sub A                       &none                            &kp_sub Q  &kp_sub G            &kp_sub N  &kp_sub W  &kp_sub Z  &trans
-&kp_sub J  &kp_sub H  &kp_sub I  &kp_sub E  &kp_sub O                       &kp_sub COMMA                    &kp_sub M  &kp_sub D            &kp_sub R  &kp_sub S  &kp_sub P  &kp_sub K
-&none      &kp_sub X  &none      &none      &kp_sub SQT                     &kp_sub DOT                      &kp_sub V  &kp_sub C            &kp_sub L  &kp_sub F  &kp_sub B  &trans
-                      &trans     &trans     &en_cw_off LS(LA(LC(LG(F12))))  &trans         &trans    &trans  &kp T      &kp_to BACKSPACE 17  &trans     &trans
+&none         &none         &kp_sub_ru Y  &kp_sub_ru U  &kp_sub_ru A                    &none                               &kp_sub_ru Q  &kp_sub_ru G         &kp_sub_ru N  &kp_sub_ru W  &kp_sub_ru Z  &trans
+&kp_sub_ru J  &kp_sub_ru H  &kp_sub_ru I  &kp_sub_ru E  &kp_sub_ru O                    &kp_sub_ru COMMA                    &kp_sub_ru M  &kp_sub_ru D         &kp_sub_ru R  &kp_sub_ru S  &kp_sub_ru P  &kp_sub_ru K
+&none         &kp_sub_ru X  &none         &none         &kp_sub_ru SQT                  &kp_sub_ru DOT                      &kp_sub_ru V  &kp_sub_ru C         &kp_sub_ru L  &kp_sub_ru F  &kp_sub_ru B  &trans
+                            &trans        &trans        &ru_cw_off LS(LA(LC(LG(F12))))  &trans            &trans    &trans  &kp T         &kp_to BACKSPACE 17  &trans        &trans
             >;
         };
 
@@ -1399,30 +1434,30 @@
         Ms_1_En {
             display-name = "Ms_1_En";
             bindings = <
-&none     &none     &kp_m1 Y  &kp_m1 U  &kp_m1 A                        &none                           &kp_m1 Q  &kp_m1 G  &kp_m1 N  &kp_m1 W  &kp_m1 Z  &trans
-&kp_m1 J  &kp_m1 H  &kp_m1 I  &kp_m1 E  &kp_m1 O                        &kp_m1 COMMA                    &kp_m1 M  &kp_m1 D  &kp_m1 R  &kp_m1 S  &kp_m1 P  &kp_m1 K
-&none     &kp_m1 X  &none     &none     &kp_m1 SQT                      &kp_m1 DOT                      &kp_m1 V  &kp_m1 C  &kp_m1 L  &kp_m1 F  &kp_m1 B  &trans
-                    &trans    &trans    &en_cw_off LS(LA(LC(LG(F12))))  &trans        &trans    &trans  &kp T     &none     &trans    &trans
+&none        &none        &kp_m1_ru Y  &kp_m1_ru U  &kp_m1_ru A                     &none                              &kp_m1_ru Q  &kp_m1_ru G  &kp_m1_ru N  &kp_m1_ru W  &kp_m1_ru Z  &trans
+&kp_m1_ru J  &kp_m1_ru H  &kp_m1_ru I  &kp_m1_ru E  &kp_m1_ru O                     &kp_m1_ru COMMA                    &kp_m1_ru M  &kp_m1_ru D  &kp_m1_ru R  &kp_m1_ru S  &kp_m1_ru P  &kp_m1_ru K
+&none        &kp_m1_ru X  &none        &none        &kp_m1_ru SQT                   &kp_m1_ru DOT                      &kp_m1_ru V  &kp_m1_ru C  &kp_m1_ru L  &kp_m1_ru F  &kp_m1_ru B  &trans
+                          &trans       &trans       &en_cw_off LS(LA(LC(LG(F12))))  &trans           &trans    &trans  &kp T        &none        &trans       &trans
             >;
         };
 
         Ms_2_En {
             display-name = "Ms_2_En";
             bindings = <
-&none     &none     &kp_m2 Y  &kp_m2 U  &kp_m2 A                        &none                           &kp_m2 Q  &kp_m2 G             &kp_m2 N  &kp_m2 W  &kp_m2 Z  &trans
-&kp_m2 J  &kp_m2 H  &kp_m2 I  &kp_m2 E  &kp_m2 O                        &kp_m2 COMMA                    &kp_m2 M  &kp_m2 D             &kp_m2 R  &kp_m2 S  &kp_m2 P  &kp_m2 K
-&none     &kp_m2 X  &none     &none     &kp_m2 SQT                      &kp_m2 DOT                      &kp_m2 V  &kp_m2 C             &kp_m2 L  &kp_m2 F  &kp_m2 B  &trans
-                    &trans    &trans    &en_cw_off LS(LA(LC(LG(F12))))  &trans        &trans    &trans  &kp T     &kp_to BACKSPACE 16  &trans    &trans
+&none        &none        &kp_m2_ru Y  &kp_m2_ru U  &kp_m2_ru A                     &none                              &kp_m2_ru Q  &kp_m2_ru G          &kp_m2_ru N  &kp_m2_ru W  &kp_m2_ru Z  &trans
+&kp_m2_ru J  &kp_m2_ru H  &kp_m2_ru I  &kp_m2_ru E  &kp_m2_ru O                     &kp_m2_ru COMMA                    &kp_m2_ru M  &kp_m2_ru D          &kp_m2_ru R  &kp_m2_ru S  &kp_m2_ru P  &kp_m2_ru K
+&none        &kp_m2_ru X  &none        &none        &kp_m2_ru SQT                   &kp_m2_ru DOT                      &kp_m2_ru V  &kp_m2_ru C          &kp_m2_ru L  &kp_m2_ru F  &kp_m2_ru B  &trans
+                          &trans       &trans       &en_cw_off LS(LA(LC(LG(F12))))  &trans           &trans    &trans  &kp T        &kp_to BACKSPACE 16  &trans       &trans
             >;
         };
 
         Ms_Sub_En {
             display-name = "Ms_Sub_En";
             bindings = <
-&none      &none      &kp_sub Y  &kp_sub U  &kp_sub A                       &none                            &kp_sub Q  &kp_sub G            &kp_sub N  &kp_sub W  &kp_sub Z  &trans
-&kp_sub J  &kp_sub H  &kp_sub I  &kp_sub E  &kp_sub O                       &kp_sub COMMA                    &kp_sub M  &kp_sub D            &kp_sub R  &kp_sub S  &kp_sub P  &kp_sub K
-&none      &kp_sub X  &none      &none      &kp_sub SQT                     &kp_sub DOT                      &kp_sub V  &kp_sub C            &kp_sub L  &kp_sub F  &kp_sub B  &trans
-                      &trans     &trans     &en_cw_off LS(LA(LC(LG(F12))))  &trans         &trans    &trans  &kp T      &kp_to BACKSPACE 17  &trans     &trans
+&none         &none         &kp_sub_ru Y  &kp_sub_ru U  &kp_sub_ru A                    &none                               &kp_sub_ru Q  &kp_sub_ru G         &kp_sub_ru N  &kp_sub_ru W  &kp_sub_ru Z  &trans
+&kp_sub_ru J  &kp_sub_ru H  &kp_sub_ru I  &kp_sub_ru E  &kp_sub_ru O                    &kp_sub_ru COMMA                    &kp_sub_ru M  &kp_sub_ru D         &kp_sub_ru R  &kp_sub_ru S  &kp_sub_ru P  &kp_sub_ru K
+&none         &kp_sub_ru X  &none         &none         &kp_sub_ru SQT                  &kp_sub_ru DOT                      &kp_sub_ru V  &kp_sub_ru C         &kp_sub_ru L  &kp_sub_ru F  &kp_sub_ru B  &trans
+                            &trans        &trans        &en_cw_off LS(LA(LC(LG(F12))))  &trans            &trans    &trans  &kp T         &kp_to BACKSPACE 17  &trans        &trans
             >;
         };
     };
