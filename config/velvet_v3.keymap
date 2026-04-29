@@ -1251,7 +1251,7 @@
                                       &trans                     &trans                   &en_cw_off LS(LA(LC(LG(F12))))  &en_lt_cw_off 5 SPACE  &trans    &trans  &lt 6 LS(T)  &trans                  &trans                   &trans
             >;
 
-            display-name = "CapsWord";
+            display-name = "CapsWord_en";
         };
 
         Ru {
@@ -1273,7 +1273,7 @@
                                                                     &trans                                 &trans                                &ru_cw_off LS(LA(LC(LG(F12))))  &ru_lt_cw_off 5 SPACE         &trans    &trans  &lt 7 LS(RU_CYRILLIC_ER)  &trans                               &trans                                &trans
             >;
 
-            display-name = "CapsWord";
+            display-name = "CapsWord_ru";
         };
 
         Mods {
@@ -1306,7 +1306,7 @@
                       &trans        &trans        &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
             >;
 
-            display-name = "Num";
+            display-name = "Num_en";
         };
 
         Num_Ru {
@@ -1317,7 +1317,7 @@
                       &trans        &trans        &trans        &alt_spc   &kp LA(ENTER)    &trans  &trans  &trans     &trans        &trans
             >;
 
-            display-name = "Num";
+            display-name = "Num_ru";
         };
 
         App_En {
@@ -1328,11 +1328,11 @@
                                                  &trans                                  &trans             &layer_off 8       &none              &sl 8    &trans  &trans             &trans             &trans                 &trans
             >;
 
-            display-name = "App_En";
+            display-name = "App_en";
         };
 
         App_Ru {
-            display-name = "App_Ru";
+            display-name = "App_ru";
             bindings = <
 &trans                        &kp LA(LC(LS(P)))  &vm_ru LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                   &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
 &kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                   &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
@@ -1349,7 +1349,7 @@
                 &trans                &trans         &trans                 &trans    &trans    &trans  &trans         &trans            &trans         &trans
             >;
 
-            display-name = "Sym";
+            display-name = "Sym_en";
         };
 
         Sym_Ru {
@@ -1360,7 +1360,7 @@
                 &trans                &trans            &trans       &trans    &trans    &trans  &trans         &trans               &trans            &trans
             >;
 
-            display-name = "Sym";
+            display-name = "Sym_ru";
         };
 
         Fn {
@@ -1382,11 +1382,11 @@
                       &trans          &trans                    &trans                &trans                &trans    &trans  &trans        &trans          &trans  &trans
             >;
 
-            display-name = "OS";
+            display-name = "OS_ru";
         };
 
         OS_en {
-            display-name = "OS";
+            display-name = "OS_en";
             bindings = <
 &trans  &bt_set_en 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
 &trans  &bt_set_en 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
@@ -1395,7 +1395,7 @@
             >;
         };
 
-        Ms_Free_Ru {
+        MS_FREE_ru {
             bindings = <
 &none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P      &trans
 &none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                     &kp H   &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
@@ -1403,11 +1403,11 @@
                              &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
 
-            display-name = "Ms_Free_Ru";
+            display-name = "MS_FREE_ru";
         };
 
-        Ms_1_Ru {
-            display-name = "Ms_1_Ru";
+        MS_1_ru {
+            display-name = "MS_1_ru";
             bindings = <
 &none        &none        &kp_m1_ru Y  &kp_m1_ru U  &kp_m1_ru A                     &none                              &kp_m1_ru Q  &kp_m1_ru G  &kp_m1_ru N  &kp_m1_ru W  &kp_m1_ru Z  &trans
 &kp_m1_ru J  &kp_m1_ru H  &kp_m1_ru I  &kp_m1_ru E  &kp_m1_ru O                     &kp_m1_ru COMMA                    &kp_m1_ru M  &kp_m1_ru D  &kp_m1_ru R  &kp_m1_ru S  &kp_m1_ru P  &kp_m1_ru K
