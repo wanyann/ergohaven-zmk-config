@@ -118,7 +118,7 @@
             bindings = <&ms_free_ru>;
             timeout-ms = <30>;
             key-positions = <32 33>;
-            layers = <2 3 17>;
+            layers = <2 3 17 5>;
         };
 
         combo_singequote_en {
@@ -252,7 +252,7 @@
         combo_ms_over_ru {
             bindings = <&ms_over_ru>;
             key-positions = <8 9>;
-            layers = <2 3>;
+            layers = <2 3 4>;
         };
 
         combo_en_semi {
@@ -354,13 +354,13 @@
             bindings = <&ms_free_en>;
             key-positions = <32 33>;
             timeout-ms = <30>;
-            layers = <0 1>;
+            layers = <0 1 9>;
         };
 
         combo_ms_over_en {
             bindings = <&ms_over_en>;
             key-positions = <8 9>;
-            layers = <0 1>;
+            layers = <0 1 8>;
         };
     };
 
