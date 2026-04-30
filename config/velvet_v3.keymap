@@ -826,28 +826,28 @@
         kp_m1_ru: kp_m1_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 6>;
+            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &to 6>;
             label = "KP_M1_RU";
         };
 
         kp_m2_ru: kp_m2_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 7>;
+            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &to 7>;
             label = "kp_m2_ru";
         };
 
         kp_sub_ru: kp_sub_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &layer_ru>;
+            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &layer_ru>;
             label = "kp_sub_ru";
         };
 
         kp_to: kp_to {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
+            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
             label = "KP_TO";
         };
 
@@ -868,21 +868,21 @@
         kp_m1_en: kp_m1_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 10>;
+            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &to 10>;
             label = "KP_M1_EN";
         };
 
         kp_m2_en: kp_m2_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 11>;
+            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &to 11>;
             label = "KP_M2_EN";
         };
 
         kp_sub_en: kp_sub_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &layer_en>;
+            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &layer_en>;
             label = "KP_SUB_EN";
         };
 
