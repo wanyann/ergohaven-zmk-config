@@ -1326,30 +1326,30 @@
         M1_ru {
             display-name = "M1_ru";
             bindings = <
-&none        &none        &kp_m1_ru Y  &kp_m1_ru U  &kp_m1_ru A                     &none                                          &kp_m1_ru Q  &kp_m1_ru G  &kp_m1_ru N  &kp_m1_ru W  &kp_m1_ru Z  &trans
-&kp_m1_ru J  &kp_m1_ru H  &kp_m1_ru I  &kp_m1_ru E  &kp_m1_ru O                     &kp_m1_ru COMMA                                &kp_m1_ru M  &kp_m1_ru D  &kp_m1_ru R  &kp_m1_ru S  &kp_m1_ru P  &kp_m1_ru K
-&none        &kp_m1_ru X  &none        &none        &kp_m1_ru SQT                   &kp_m1_ru DOT                                  &kp_m1_ru V  &kp_m1_ru C  &kp_m1_ru L  &kp_m1_ru F  &kp_m1_ru B  &trans
-                          &trans       &trans       &ru_cw_off LS(LA(LC(LG(F12))))  &ru_cw_off SPACE  &kp_to MINUS 4    &kp EQUAL  &kp_m1_ru T  &none        &trans       &trans
+&none        &none        &kp_m1_ru Y  &kp_m1_ru U  &kp_m1_ru A                     &none                                            &kp_m1_ru Q  &kp_m1_ru G  &kp_m1_ru N  &kp_m1_ru W  &kp_m1_ru Z  &trans
+&kp_m1_ru J  &kp_m1_ru H  &kp_m1_ru I  &kp_m1_ru E  &kp_m1_ru O                     &kp_m1_ru COMMA                                  &kp_m1_ru M  &kp_m1_ru D  &kp_m1_ru R  &kp_m1_ru S  &kp_m1_ru P  &kp_m1_ru K
+&none        &kp_m1_ru X  &none        &none        &kp_m1_ru SQT                   &kp_m1_ru DOT                                    &kp_m1_ru V  &kp_m1_ru C  &kp_m1_ru L  &kp_m1_ru F  &kp_m1_ru B  &trans
+                          &trans       &trans       &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 12 6  &kp_to MINUS 4    &kp EQUAL  &kp_m1_ru T  &none        &trans       &trans
             >;
         };
 
         M2_ru {
             display-name = "M2_ru";
             bindings = <
-&none        &none        &kp_m2_ru Y  &kp_m2_ru U  &kp_m2_ru A                     &none                                          &kp_m2_ru Q  &kp_m2_ru G         &kp_m2_ru N  &kp_m2_ru W  &kp_m2_ru Z  &trans
-&kp_m2_ru J  &kp_m2_ru H  &kp_m2_ru I  &kp_m2_ru E  &kp_m2_ru O                     &kp_m2_ru COMMA                                &kp_m2_ru M  &kp_m2_ru D         &kp_m2_ru R  &kp_m2_ru S  &kp_m2_ru P  &kp_m2_ru K
-&none        &kp_m2_ru X  &none        &none        &kp_m2_ru SQT                   &kp_m2_ru DOT                                  &kp_m2_ru V  &kp_m2_ru C         &kp_m2_ru L  &kp_m2_ru F  &kp_m2_ru B  &trans
-                          &trans       &trans       &ru_cw_off LS(LA(LC(LG(F12))))  &ru_cw_off SPACE  &kp_to MINUS 4    &kp EQUAL  &kp_m2_ru T  &kp_to BACKSPACE 5  &trans       &trans
+&none        &none        &kp_m2_ru Y  &kp_m2_ru U  &kp_m2_ru A                     &none                                            &kp_m2_ru Q     &kp_m2_ru G         &kp_m2_ru N  &kp_m2_ru W  &kp_m2_ru Z  &trans
+&kp_m2_ru J  &kp_m2_ru H  &kp_m2_ru I  &kp_m2_ru E  &kp_m2_ru O                     &kp_m2_ru COMMA                                  &kp_m2_ru M     &kp_m2_ru D         &kp_m2_ru R  &kp_m2_ru S  &kp_m2_ru P  &kp_m2_ru K
+&none        &kp_m2_ru X  &none        &none        &kp_m2_ru SQT                   &kp_m2_ru DOT                                    &kp_m2_ru V     &kp_m2_ru C         &kp_m2_ru L  &kp_m2_ru F  &kp_m2_ru B  &trans
+                          &trans       &trans       &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 12 7  &kp_to MINUS 4    &kp EQUAL  &t_num_to 15 7  &kp_to BACKSPACE 5  &trans       &trans
             >;
         };
 
         MSub_ru {
             display-name = "MSub_ru";
             bindings = <
-&none         &none         &kp_sub_ru Y  &kp_sub_ru U  &kp_sub_ru A                    &none                                          &kp_sub_ru Q  &kp_sub_ru G        &kp_sub_ru N  &kp_sub_ru W  &kp_sub_ru Z  &trans
-&kp_sub_ru J  &kp_sub_ru H  &kp_sub_ru I  &kp_sub_ru E  &kp_sub_ru O                    &kp_sub_ru COMMA                               &kp_sub_ru M  &kp_sub_ru D        &kp_sub_ru R  &kp_sub_ru S  &kp_sub_ru P  &kp_sub_ru K
-&none         &kp_sub_ru X  &none         &none         &kp_sub_ru SQT                  &kp_sub_ru DOT                                 &kp_sub_ru V  &kp_sub_ru C        &kp_sub_ru L  &kp_sub_ru F  &kp_sub_ru B  &trans
-                            &trans        &trans        &ru_cw_off LS(LA(LC(LG(F12))))  &ru_cw_off SPACE  &kp_to MINUS 4    &kp EQUAL  &kp_sub_ru T  &kp_to BACKSPACE 6  &trans        &trans
+&none         &none         &kp_sub_ru Y  &kp_sub_ru U  &kp_sub_ru A                    &none                                            &kp_sub_ru Q    &kp_sub_ru G        &kp_sub_ru N  &kp_sub_ru W  &kp_sub_ru Z  &trans
+&kp_sub_ru J  &kp_sub_ru H  &kp_sub_ru I  &kp_sub_ru E  &kp_sub_ru O                    &kp_sub_ru COMMA                                 &kp_sub_ru M    &kp_sub_ru D        &kp_sub_ru R  &kp_sub_ru S  &kp_sub_ru P  &kp_sub_ru K
+&none         &kp_sub_ru X  &none         &none         &kp_sub_ru SQT                  &kp_sub_ru DOT                                   &kp_sub_ru V    &kp_sub_ru C        &kp_sub_ru L  &kp_sub_ru F  &kp_sub_ru B  &trans
+                            &trans        &trans        &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 12 2  &kp_to MINUS 4    &kp EQUAL  &t_num_to 15 2  &kp_to BACKSPACE 6  &trans        &trans
             >;
         };
 
