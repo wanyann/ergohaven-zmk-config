@@ -8,7 +8,7 @@
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
-    bindings = <&kp>, <&kp>;
+    bindings = <&kp>, <&long_kp>;
 };
 
 &lt {
@@ -885,6 +885,20 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &layer_en>;
             label = "KP_SUB_EN";
         };
+
+        t_to: t_nav_ru {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp T &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            label = "T_NAV_RU";
+        };
+
+        space_to: space_to {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp SPACE &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            label = "SPACE_TO";
+        };
     };
 
     behaviors {
@@ -1228,6 +1242,26 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <1 2 3 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29 30 31 32 33 34 42 43 39>;
+        };
+
+        t_num_to: t_num_to {
+            compatible = "zmk,behavior-hold-tap";
+            label = "T_NUM_TO";
+            bindings = <&mo>, <&t_to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
+
+        space_nav_to: space_nav_to {
+            compatible = "zmk,behavior-hold-tap";
+            label = "SPACE_NAV_TO";
+            bindings = <&mo>, <&space_to>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
         };
     };
 
