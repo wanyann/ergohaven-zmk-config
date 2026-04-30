@@ -1315,7 +1315,7 @@
 &none         &none         &kp_sub_ru Y  &kp_sub_ru U  &kp_sub_ru A                    &none                                          &kp_sub_ru Q  &kp_sub_ru G        &kp_sub_ru N  &kp_sub_ru W  &kp_sub_ru Z  &trans
 &kp_sub_ru J  &kp_sub_ru H  &kp_sub_ru I  &kp_sub_ru E  &kp_sub_ru O                    &kp_sub_ru COMMA                               &kp_sub_ru M  &kp_sub_ru D        &kp_sub_ru R  &kp_sub_ru S  &kp_sub_ru P  &kp_sub_ru K
 &none         &kp_sub_ru X  &none         &none         &kp_sub_ru SQT                  &kp_sub_ru DOT                                 &kp_sub_ru V  &kp_sub_ru C        &kp_sub_ru L  &kp_sub_ru F  &kp_sub_ru B  &trans
-                            &trans        &trans        &ru_cw_off LS(LA(LC(LG(F12))))  &kp_sub_ru SPACE  &kp_to MINUS 4    &kp EQUAL  &kp_sub_ru T  &kp_to BACKSPACE 6  &trans        &trans
+                            &trans        &trans        &ru_cw_off LS(LA(LC(LG(F12))))  &ru_cw_off SPACE  &kp_to MINUS 4    &kp EQUAL  &kp_sub_ru T  &kp_to BACKSPACE 6  &trans        &trans
             >;
         };
 
