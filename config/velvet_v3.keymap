@@ -812,7 +812,7 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp &kp LALT &kp LS(LC(N9)) &to 4>;
+            bindings = <&kp LS(LA(LC(LG(F12)))) &kp LALT &kp LS(LC(N9)) &to 4>;
             label = "MACRO_MLESS_FREE";
         };
 
