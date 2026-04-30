@@ -899,13 +899,6 @@
             bindings = <&kp SPACE &macro_param_1to1 &to MACRO_PLACEHOLDER>;
             label = "SPACE_TO";
         };
-
-        alt_spc_: alt_spc_ {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(SPACE)>;
-            label = "ALT_SPC_";
-        };
     };
 
     behaviors {
@@ -1405,7 +1398,7 @@
 &trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                     &none      &kp HOME      &kp UP    &kp END    &kp DELETE   &trans
 &trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                 &kp PG_UP  &kp LEFT      &kp DOWN  &kp RIGHT  &select_row  &trans
 &trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                           &kp PG_DN  &kp CAPSLOCK  &none     &trans     &trans       &trans
-                                        &trans                           &trans                   &trans                    &alt_spc_           &kp LA(ENTER)    &trans  &trans     &trans        &trans    &trans
+                                        &trans                           &trans                   &trans                    &alt_spc            &kp LA(ENTER)    &trans  &trans     &trans        &trans    &trans
             >;
 
             display-name = "Nav";
