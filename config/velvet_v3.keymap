@@ -812,14 +812,14 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LALT &kp LS(LC(N9)) &to 4>;
+            bindings = <&kp &kp LALT &kp LS(LC(N9)) &to 4>;
             label = "MACRO_MLESS_FREE";
         };
 
         ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RCTRL &kp LS(LC(N9)) &to 5>;
+            bindings = <&kp LS(LA(LC(LG(F12)))) &kp RCTRL &kp LS(LC(N9)) &to 5>;
             label = "MACRO_MLESS_OVER";
         };
 
@@ -854,14 +854,14 @@
         ms_free_en: ms_free_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LALT &kp LS(LC(N9)) &to 8>;
+            bindings = <&kp LS(LA(LC(LG(F12)))) &kp LALT &kp LS(LC(N9)) &to 8>;
             label = "ms_free_en";
         };
 
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp RCTRL &kp LS(LC(N9)) &to 9>;
+            bindings = <&kp LS(LA(LC(LG(F12)))) &kp RCTRL &kp LS(LC(N9)) &to 9>;
             label = "ms_over_en";
         };
 
@@ -1322,10 +1322,10 @@
         MFree_en {
             display-name = "MFree_en";
             bindings = <
-&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                     &kp Y  &kp U   &kp I      &kp O    &kp P      &trans
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                     &kp H  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                     &kp N  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
-                             &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &trans  &trans    &trans  &none  &trans  &trans     &trans
+&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                             &kp Y  &kp U   &kp I      &kp O    &kp P      &trans
+&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                             &kp H  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
+&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                             &kp N  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+                             &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &trans  &trans    &kp LEFT_SHIFT  &none  &trans  &trans     &trans
             >;
         };
 
@@ -1361,8 +1361,8 @@
 
         Nav {
             bindings = <
-&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                     &kp PG_UP  &kp HOME      &kp UP    &kp END    &kp DELETE   &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                 &none      &kp LEFT      &kp DOWN  &kp RIGHT  &select_row  &trans
+&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                     &none      &kp HOME      &kp UP    &kp END    &kp DELETE   &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                 &kp PG_UP  &kp LEFT      &kp DOWN  &kp RIGHT  &select_row  &trans
 &trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                           &kp PG_DN  &kp CAPSLOCK  &none     &trans     &trans       &trans
                                         &trans                           &trans                   &trans                    &alt_spc            &kp LA(ENTER)    &trans  &trans     &trans        &trans    &trans
             >;
