@@ -594,7 +594,7 @@
         alt_spc: alt_spc {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LS(LA(LC(LG(F12)))) &kp LA(SPACE) &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            bindings = <&mouse_off &kp LA(SPACE) &macro_param_1to1 &to MACRO_PLACEHOLDER>;
             label = "ALT_SPC";
             wait-ms = <0>;
             tap-ms = <0>;
@@ -812,14 +812,14 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LG(EQUAL)))) &kp LALT &kp LS(LC(N9)) &to 4>;
+            bindings = <&mouse_off &kp LALT &kp LS(LC(N9)) &to 4>;
             label = "MACRO_MLESS_FREE";
         };
 
         ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LG(EQUAL)))) &kp RCTRL &kp LS(LC(N9)) &to 5>;
+            bindings = <&mouse_off &kp RCTRL &kp LS(LC(N9)) &to 5>;
             label = "MACRO_MLESS_OVER";
         };
 
@@ -854,14 +854,14 @@
         ms_free_en: ms_free_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LG(EQUAL)))) &kp LALT &kp LS(LC(N9)) &to 8>;
+            bindings = <&mouse_off &kp LALT &kp LS(LC(N9)) &to 8>;
             label = "ms_free_en";
         };
 
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LG(EQUAL)))) &kp RCTRL &kp LS(LC(N9)) &to 9>;
+            bindings = <&mouse_off &kp RCTRL &kp LS(LC(N9)) &to 9>;
             label = "ms_over_en";
         };
 
@@ -905,6 +905,13 @@
             #binding-cells = <0>;
             bindings = <&kp LA(SPACE)>;
             label = "ALT_SPC_";
+        };
+
+        mouse_off: mouse_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(LA(LC(LG(EQUAL))))>;
+            label = "MOUSE_OFF";
         };
     };
 
