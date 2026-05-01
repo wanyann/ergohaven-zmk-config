@@ -1326,10 +1326,10 @@
         M1_ru {
             display-name = "M1_ru";
             bindings = <
-&none        &none        &kp_m1_ru Y  &kp_m1_ru U  &kp_m1_ru A                     &none                                            &kp_m1_ru Q  &kp_m1_ru G  &kp_m1_ru N  &kp_m1_ru W  &kp_m1_ru Z  &trans
-&kp_m1_ru J  &kp_m1_ru H  &kp_m1_ru I  &kp_m1_ru E  &kp_m1_ru O                     &kp_m1_ru COMMA                                  &kp_m1_ru M  &kp_m1_ru D  &kp_m1_ru R  &kp_m1_ru S  &kp_m1_ru P  &kp_m1_ru K
-&none        &kp_m1_ru X  &none        &none        &kp_m1_ru SQT                   &kp_m1_ru DOT                                    &kp_m1_ru V  &kp_m1_ru C  &kp_m1_ru L  &kp_m1_ru F  &kp_m1_ru B  &trans
-                          &trans       &trans       &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 12 6  &kp_to MINUS 4    &kp EQUAL  &kp_m1_ru T  &none        &trans       &trans
+&none        &none        &kp_m1_ru Y  &kp_m1_ru U  &kp_m1_ru A                     &none                                            &kp_m1_ru Q     &kp_m1_ru G  &kp_m1_ru N  &kp_m1_ru W  &kp_m1_ru Z  &trans
+&kp_m1_ru J  &kp_m1_ru H  &kp_m1_ru I  &kp_m1_ru E  &kp_m1_ru O                     &kp_m1_ru COMMA                                  &kp_m1_ru M     &kp_m1_ru D  &kp_m1_ru R  &kp_m1_ru S  &kp_m1_ru P  &kp_m1_ru K
+&none        &kp_m1_ru X  &none        &none        &kp_m1_ru SQT                   &kp_m1_ru DOT                                    &kp_m1_ru V     &kp_m1_ru C  &kp_m1_ru L  &kp_m1_ru F  &kp_m1_ru B  &trans
+                          &trans       &trans       &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 12 6  &kp_to MINUS 4    &kp EQUAL  &t_num_to 15 6  &none        &trans       &trans
             >;
         };
 
