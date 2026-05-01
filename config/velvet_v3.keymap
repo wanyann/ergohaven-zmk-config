@@ -5,8 +5,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define MS_OFF LG(LC(LA(LS(F12))))
-
 &mt {
     flavor = "tap-preferred";
     tapping-term-ms = <200>;
@@ -905,7 +903,7 @@
         mouse_off: mouse_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp MS_OFF>;
+            bindings = <&kp LS(LA(LC(LG(F12))))>;
             label = "MOUSE_OFF";
         };
     };
@@ -1282,7 +1280,7 @@
 &kp BACKSPACE  &none                  &kp Y                  &kp U                &mt LC(R) A                     &mt LC(T) APOS                                      &kp Q     &kp G               &kp N                &kp W       &kp Z              &none
 &kp J          &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrs_l LEFT_SHIFT E  &hrml LCTRL O                   &en_com_mt LC(F) 0                                  &kp M     &hrml_slow RCTRL D  &hrs_r LEFT_SHIFT R  &kp S       &hrml_slow RALT P  &kp K
 &kp DELETE     &mt LC(Z) X            &mt LC(X) K_CANCEL     &mt LC(C) K_CANCEL   &mt LC(V) SQT                   &en_dot_mt LG(V) 0                                  &kp V     &kp C               &kp L                &kp F       &mt LC(SLASH) B    &none
-                                      &kp LS(F7)             &kp F7               &en_cw_off MS_OFF  &lt 12 SPACE        &sl 16    &one_shot LEFT_SHIFT  &lt 14 T  &bspc_morph         &kp F2               &kp LS(F2)
+                                      &kp LS(F7)             &kp F7               &en_cw_off LS(LA(LC(LG(F12))))  &lt 12 SPACE        &sl 16    &one_shot LEFT_SHIFT  &lt 14 T  &bspc_morph         &kp F2               &kp LS(F2)
             >;
 
             display-name = "English";
@@ -1304,7 +1302,7 @@
 &trans             &kp RU_CYRILLIC_TSE                      &soft_sign                         &kp RU_CYRILLIC_YA                &mt LC(R) RU_CYRILLIC_A         &mt LC(T) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_VE               &kp RU_CYRILLIC_KA                &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA            &trans
 &kp RU_CYRILLIC_E  &hrml_slow LEFT_GUI RU_CYRILLIC_SHORT_I  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrs_l LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O       &ru_com_mt LC(F) 0                          &kp RU_CYRILLIC_EL     &hrml_slow RCTRL RU_CYRILLIC_EN  &hrs_r LEFT_SHIFT RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &hrml_slow RALT RU_CYRILLIC_CHE  &kp RU_CYRILLIC_SHA
 &trans             &mt LC(Z) RU_CYRILLIC_EF                 &mt LC(X) RU_CYRILLIC_U            &mt LC(C) RU_CYRILLIC_HA          &mt LC(V) RU_CYRILLIC_YERU      &ru_dot_mt LG(V) 0                          &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM               &kp RU_CYRILLIC_PE                &kp RU_CYRILLIC_GHE  &mt LC(SLASH) RU_CYRILLIC_ZHE    &trans
-                                                            &trans                             &trans                            &ru_cw_off MS_OFF  &trans                    &sl 17    &trans  &lt 15 RU_CYRILLIC_ER  &trans                           &trans                            &trans
+                                                            &trans                             &trans                            &ru_cw_off LS(LA(LC(LG(F12))))  &trans                    &sl 17    &trans  &lt 15 RU_CYRILLIC_ER  &trans                           &trans                            &trans
             >;
 
             display-name = "Russian";
