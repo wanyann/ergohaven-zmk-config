@@ -1336,19 +1336,19 @@
 &none                    &kp_m1_ru RU_CYRILLIC_TSE      &kp_m1_ru RU_CYRILLIC_SOFT_SIGN  &kp_m1_ru RU_CYRILLIC_YA  &kp_m1_ru RU_CYRILLIC_A     &kp_m1_ru RU_CYRILLIC_YU                               &kp_m1_ru RU_CYRILLIC_ZE  &kp_m1_ru RU_CYRILLIC_VE  &kp_m1_ru RU_CYRILLIC_KA  &kp_m1_ru RU_CYRILLIC_DE   &kp_m1_ru RU_CYRILLIC_SHCHA  &trans
 &kp_m1_ru RU_CYRILLIC_E  &kp_m1_ru RU_CYRILLIC_SHORT_I  &kp_m1_ru RU_CYRILLIC_I          &kp_m1_ru RU_CYRILLIC_IE  &kp_m1_ru RU_CYRILLIC_O     &kp_m1_ru RU_COMMA                                     &kp_m1_ru RU_CYRILLIC_EL  &kp_m1_ru RU_CYRILLIC_EN  &kp_m1_ru RU_CYRILLIC_TE  &kp_m1_ru RU_CYRILLIC_ES   &kp_m1_ru RU_CYRILLIC_CHE    &kp_m1_ru RU_CYRILLIC_SHA
 &none                    &kp_m1_ru RU_CYRILLIC_EF       &kp_m1_ru RU_CYRILLIC_U          &kp_m1_ru RU_CYRILLIC_HA  &kp_m1_ru RU_CYRILLIC_YERU  &kp_m1_ru RU_DOT                                       &kp_m1_ru RU_CYRILLIC_BE  &kp_m1_ru RU_CYRILLIC_EM  &kp_m1_ru RU_CYRILLIC_PE  &kp_m1_ru RU_CYRILLIC_GHE  &kp_m1_ru RU_CYRILLIC_ZHE    &trans
-                                                        &trans                           &trans                    &space_nav_to 12 6          &kp_to MINUS 4            &kp EQUAL    &t_num_to 15 6  &none                     &trans                    &trans
+                                                        &trans                           &trans                    &none   &space_nav_to 12 6          &kp_to MINUS 4            &kp EQUAL    &t_num_to 15 6  &none                     &trans                    &trans
             >;
         };
 
-        M2_ru {
-            display-name = "M2_ru";
-            bindings = <
-&none        &none        &kp_m2_ru Y  &kp_m2_ru U  &kp_m2_ru A    &none                                            &kp_m2_ru Q     &kp_m2_ru G         &kp_m2_ru N  &kp_m2_ru W  &kp_m2_ru Z  &trans
-&kp_m2_ru J  &kp_m2_ru H  &kp_m2_ru I  &kp_m2_ru E  &kp_m2_ru O    &kp_m2_ru COMMA                                  &kp_m2_ru M     &kp_m2_ru D         &kp_m2_ru R  &kp_m2_ru S  &kp_m2_ru P  &kp_m2_ru K
-&none        &kp_m2_ru X  &none        &none        &kp_m2_ru SQT  &kp_m2_ru DOT                                    &kp_m2_ru V     &kp_m2_ru C         &kp_m2_ru L  &kp_m2_ru F  &kp_m2_ru B  &trans
-                          &trans       &trans       &trans         &space_nav_to 12 7  &kp_to MINUS 4    &kp EQUAL  &t_num_to 15 7  &kp_to BACKSPACE 5  &trans       &trans
-            >;
-        };
+            M2_ru {
+        display-name = "M2_ru";
+        bindings = <
+    &none              &kp_m2_ru RU_CYRILLIC_TSE      &kp_m2_ru RU_CYRILLIC_SOFT_SIGN  &kp_m2_ru RU_CYRILLIC_YA         &kp_m2_ru RU_CYRILLIC_A       &kp_m2_ru RU_CYRILLIC_YU                &kp_m2_ru RU_CYRILLIC_ZE     &kp_m2_ru RU_CYRILLIC_VE       &kp_m2_ru RU_CYRILLIC_KA      &kp_m2_ru RU_CYRILLIC_DE   &kp_m2_ru RU_CYRILLIC_SHCHA    &trans
+    &kp_m2_ru RU_CYRILLIC_E  &kp_m2_ru RU_CYRILLIC_SHORT_I  &kp_m2_ru RU_CYRILLIC_I          &kp_m2_ru RU_CYRILLIC_IE        &kp_m2_ru RU_CYRILLIC_O     &kp_m2_ru RU_COMMA                      &kp_m2_ru RU_CYRILLIC_EL     &kp_m2_ru RU_CYRILLIC_EN       &kp_m2_ru RU_CYRILLIC_TE      &kp_m2_ru RU_CYRILLIC_ES   &kp_m2_ru RU_CYRILLIC_CHE      &kp_m2_ru RU_CYRILLIC_SHA
+    &none                &kp_m2_ru RU_CYRILLIC_EF       &kp_m2_ru RU_CYRILLIC_U          &kp_m2_ru RU_CYRILLIC_HA        &kp_m2_ru RU_CYRILLIC_YERU  &kp_m2_ru RU_DOT                        &kp_m2_ru RU_CYRILLIC_BE     &kp_m2_ru RU_CYRILLIC_EM       &kp_m2_ru RU_CYRILLIC_PE      &kp_m2_ru RU_CYRILLIC_GHE  &kp_m2_ru RU_CYRILLIC_ZHE      &trans
+                          &trans                           &trans                           &trans                           &space_nav_to 12 7          &kp_to MINUS 4              &kp EQUAL                             &t_num_to 15 7               &kp_to BACKSPACE 5             &trans                        &trans
+        >;
+    };
 
         MSub_ru {
             display-name = "MSub_ru";
