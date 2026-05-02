@@ -1330,15 +1330,15 @@
             display-name = "MS_FREE_ru";
         };
 
-        M1_ru {
-            display-name = "M1_ru";
-            bindings = <
-&none        &none        &kp_m1_ru Y  &kp_m1_ru U  &kp_m1_ru A    &none                                            &kp_m1_ru Q     &kp_m1_ru G  &kp_m1_ru N  &kp_m1_ru W  &kp_m1_ru Z  &trans
-&kp_m1_ru J  &kp_m1_ru H  &kp_m1_ru I  &kp_m1_ru E  &kp_m1_ru O    &kp_m1_ru COMMA                                  &kp_m1_ru M     &kp_m1_ru D  &kp_m1_ru R  &kp_m1_ru S  &kp_m1_ru P  &kp_m1_ru K
-&none        &kp_m1_ru X  &none        &none        &kp_m1_ru SQT  &kp_m1_ru DOT                                    &kp_m1_ru V     &kp_m1_ru C  &kp_m1_ru L  &kp_m1_ru F  &kp_m1_ru B  &trans
-                          &trans       &trans       &trans         &space_nav_to 12 6  &kp_to MINUS 4    &kp EQUAL  &t_num_to 15 6  &none        &trans       &trans
-            >;
-        };
+            M1_ru {
+        display-name = "M1_ru";
+        bindings = <
+    &none              &kp_m1_ru RU_CYRILLIC_TSE      &kp_m1_ru RU_CYRILLIC_SOFT_SIGN  &kp_m1_ru RU_CYRILLIC_YA         &kp_m1_ru RU_CYRILLIC_A       &kp_m1_ru RU_CYRILLIC_YU                &kp_m1_ru RU_CYRILLIC_ZE     &kp_m1_ru RU_CYRILLIC_VE       &kp_m1_ru RU_CYRILLIC_KA      &kp_m1_ru RU_CYRILLIC_DE   &kp_m1_ru RU_CYRILLIC_SHCHA    &trans
+    &kp_m1_ru RU_CYRILLIC_E  &kp_m1_ru RU_CYRILLIC_SHORT_I  &kp_m1_ru RU_CYRILLIC_I          &kp_m1_ru RU_CYRILLIC_IE        &kp_m1_ru RU_CYRILLIC_O     &kp_m1_ru COMMA                       &kp_m1_ru RU_CYRILLIC_EL     &kp_m1_ru RU_CYRILLIC_EN       &kp_m1_ru RU_CYRILLIC_TE      &kp_m1_ru RU_CYRILLIC_ES   &kp_m1_ru RU_CYRILLIC_CHE      &kp_m1_ru RU_CYRILLIC_SHA
+    &none                &kp_m1_ru RU_CYRILLIC_EF       &kp_m1_ru RU_CYRILLIC_U          &kp_m1_ru RU_CYRILLIC_HA        &kp_m1_ru SQT               &kp_m1_ru DOT                         &kp_m1_ru RU_CYRILLIC_BE     &kp_m1_ru RU_CYRILLIC_EM       &kp_m1_ru RU_CYRILLIC_PE      &kp_m1_ru RU_CYRILLIC_GHE  &kp_m1_ru RU_CYRILLIC_ZHE      &trans
+                          &trans                           &trans                           &space_nav_to 12 6              &kp_to MINUS 4              &kp EQUAL                             &t_num_to 15 6               &none                            &trans                        &trans
+        >;
+    };
 
         M2_ru {
             display-name = "M2_ru";
