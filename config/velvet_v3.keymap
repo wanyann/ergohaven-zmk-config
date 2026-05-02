@@ -812,14 +812,14 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp LALT &kp LS(LC(N9)) &to 4>;
+            bindings = <&mouse_off &kp LALT &kp LS(LC(N8)) &to 4>;
             label = "MACRO_MLESS_FREE";
         };
 
         ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp RCTRL &kp LS(LC(N9)) &to 5>;
+            bindings = <&mouse_off &kp RCTRL &kp LS(LC(N8)) &to 5>;
             label = "MACRO_MLESS_OVER";
         };
 
@@ -854,14 +854,14 @@
         ms_free_en: ms_free_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp LALT &kp LS(LC(N9)) &to 8>;
+            bindings = <&mouse_off &kp LALT &kp LS(LC(N8)) &to 8>;
             label = "ms_free_en";
         };
 
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp RCTRL &kp LS(LC(N9)) &to 9>;
+            bindings = <&mouse_off &kp RCTRL &kp LS(LC(N8)) &to 9>;
             label = "ms_over_en";
         };
 
@@ -889,7 +889,7 @@
         t_to: t_nav_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp T &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            bindings = <&kp RU_CYRILLIC_ER &macro_param_1to1 &to MACRO_PLACEHOLDER>;
             label = "T_NAV_RU";
         };
 
