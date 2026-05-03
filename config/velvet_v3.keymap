@@ -1485,10 +1485,10 @@
 
         Sym_Ru {
             bindings = <
-&trans  &trans  &none                 &none             &none        &trans                      &trans         &en_kp LEFT_BRACKET  &kp RU_RUBLE      &en_kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp RU_SLASH      &kp RPAR     &kp PLUS                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp AMPERSAND  &en_kp RIGHT_BRACE    &trans  &trans
-&trans  &trans  &en_kp TILDE          &en_kp BACKSLASH  &kp PERCENT  &ru_code                    &trans         &en_kp LESS_THAN     &en_kp CARET      &en_kp GREATER_THAN   &trans  &trans
-                &trans                &trans            &trans       &trans    &trans    &trans  &trans         &trans               &trans            &trans
+&trans  &trans  &none                 &none                 &none        &trans                      &trans         &en_kp LEFT_BRACKET  &kp RU_RUBLE      &en_kp RIGHT_BRACKET  &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &kp RU_SLASH          &kp RPAR     &kp PLUS                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp AMPERSAND  &en_kp RIGHT_BRACE    &trans  &trans
+&trans  &trans  &en_kp TILDE          &kp LA(RU_BACKSLASH)  &kp PERCENT  &ru_code                    &trans         &en_kp LESS_THAN     &en_kp CARET      &en_kp GREATER_THAN   &trans  &trans
+                &trans                &trans                &trans       &trans    &trans    &trans  &trans         &trans               &trans            &trans
             >;
 
             display-name = "Sym_ru";
