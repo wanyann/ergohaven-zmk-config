@@ -929,6 +929,13 @@
             bindings = <&macro_param_1to1 &layer_off MACRO_PLACEHOLDER &key_off RU_CYRILLIC_ER>;
             label = "DRAG_OFF";
         };
+
+        back_drag_off: back_drag_off {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp BACKSPACE &macro_param_1to1 &drag_off MACRO_PLACEHOLDER>;
+            label = "BACK_DRAG_OFF";
+        };
     };
 
     behaviors {
@@ -1365,7 +1372,7 @@
 &none              &kp RU_CYRILLIC_TSE      &kp_to RU_CYRILLIC_SOFT_SIGN 5  &kp_to RU_CYRILLIC_YA 5  &kp_to RU_CYRILLIC_A 5          &kp RU_CYRILLIC_YU                            &kp RU_CYRILLIC_ZE  &kp_to RU_CYRILLIC_VE 5  &kp_to RU_CYRILLIC_KA 5  &kp_to RU_CYRILLIC_DE 5   &kp RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp_to RU_CYRILLIC_I 5          &kp_to RU_CYRILLIC_IE 5  &kp_to RU_CYRILLIC_O 5          &kp RU_BACKSLASH                              &kp RU_CYRILLIC_EL  &kp_to RU_CYRILLIC_EN 5  &kp_to RU_CYRILLIC_TE 5  &kp_to RU_CYRILLIC_ES 5   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp RU_CYRILLIC_EF       &kp_to RU_CYRILLIC_U 5          &kp_to RU_CYRILLIC_HA 5  &kp_to RU_CYRILLIC_YERU 5       &kp RU_DOT                                    &kp RU_CYRILLIC_BE  &kp_to RU_CYRILLIC_EM 5  &kp_to RU_CYRILLIC_PE 5  &kp_to RU_CYRILLIC_GHE 5  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                          &trans                   &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 5  &drag_off 8    &kp EQUAL  &move_nav 17 8      &kp_to BACKSPACE 6       &trans                   &trans
+                                            &trans                          &trans                   &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 5  &drag_off 8    &kp EQUAL  &move_nav 17 8      &back_drag_off 8         &trans                   &trans
             >;
         };
 
@@ -1415,7 +1422,7 @@
 &none              &kp RU_CYRILLIC_TSE      &kp_to RU_CYRILLIC_SOFT_SIGN 10  &kp_to RU_CYRILLIC_YA 10  &kp_to RU_CYRILLIC_A 10         &kp RU_CYRILLIC_YU                              &kp RU_CYRILLIC_ZE  &kp_to RU_CYRILLIC_VE 10  &kp_to RU_CYRILLIC_KA 10  &kp_to RU_CYRILLIC_DE 10   &kp RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp_to RU_CYRILLIC_I 10          &kp_to RU_CYRILLIC_IE 10  &kp_to RU_CYRILLIC_O 10         &kp RU_BACKSLASH                                &kp RU_CYRILLIC_EL  &kp_to RU_CYRILLIC_EN 10  &kp_to RU_CYRILLIC_TE 10  &kp_to RU_CYRILLIC_ES 10   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp RU_CYRILLIC_EF       &kp_to RU_CYRILLIC_U 10          &kp_to RU_CYRILLIC_HA 10  &kp_to RU_CYRILLIC_YERU 10      &kp RU_DOT                                      &kp RU_CYRILLIC_BE  &kp_to RU_CYRILLIC_EM 10  &kp_to RU_CYRILLIC_PE 10  &kp_to RU_CYRILLIC_GHE 10  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                           &trans                    &en_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 10  &drag_off 13    &kp EQUAL  &move_nav 16 9      &kp_to BACKSPACE 11       &trans                    &trans
+                                            &trans                           &trans                    &en_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 10  &drag_off 13    &kp EQUAL  &move_nav 16 9      &back_drag_off 13         &trans                    &trans
             >;
         };
 
