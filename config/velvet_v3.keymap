@@ -884,7 +884,7 @@
         kp_sub_en: kp_sub_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &layer_en>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &layer_en>;
             label = "KP_SUB_EN";
         };
 
