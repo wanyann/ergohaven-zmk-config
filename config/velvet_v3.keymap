@@ -253,6 +253,7 @@
             bindings = <&ms_over_ru>;
             key-positions = <8 9>;
             layers = <2 3 4>;
+            require-prior-idle-ms = <(-1)>;
         };
 
         combo_en_semi {
@@ -361,6 +362,7 @@
             bindings = <&ms_over_en>;
             key-positions = <8 9>;
             layers = <0 1 8>;
+            require-prior-idle-ms = <(-1)>;
         };
     };
 
