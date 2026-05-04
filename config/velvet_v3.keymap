@@ -919,14 +919,14 @@
         drag_on: drag_layer {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &layer_on MACRO_PLACEHOLDER &key_on RU_CYRILLIC_ER>;
+            bindings = <&macro_param_1to1 &layer_on MACRO_PLACEHOLDER &key_on N0>;
             label = "DRAG_LAYER";
         };
 
         drag_off: drag_off {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &layer_off MACRO_PLACEHOLDER &key_off RU_CYRILLIC_ER>;
+            bindings = <&macro_param_1to1 &layer_off MACRO_PLACEHOLDER &key_off N0>;
             label = "DRAG_OFF";
         };
 
@@ -1327,10 +1327,10 @@
 
         MFREE_ru {
             bindings = <
-&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                             &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                             &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                             &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
-                             &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE  &none    &kp EQUAL  &lt 17 RU_CYRILLIC_ER  &trans  &trans     &trans
+&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                              &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
+&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                              &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
+&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                              &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+                             &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE  &kp N0    &kp EQUAL  &lt 17 RU_CYRILLIC_ER  &trans  &trans     &trans
             >;
 
             display-name = "MS_FREE_ru";
@@ -1342,7 +1342,7 @@
 &none                    &kp_m1_ru RU_CYRILLIC_TSE      &kp_m1_ru RU_CYRILLIC_SOFT_SIGN  &kp_m1_ru RU_CYRILLIC_YA  &kp_m1_ru RU_CYRILLIC_A         &kp_m1_ru RU_CYRILLIC_YU                      &kp_m1_ru RU_CYRILLIC_ZE  &kp_m1_ru RU_CYRILLIC_VE  &kp_m1_ru RU_CYRILLIC_KA  &kp_m1_ru RU_CYRILLIC_DE   &kp_m1_ru RU_CYRILLIC_SHCHA  &trans
 &kp_m1_ru RU_CYRILLIC_E  &kp_m1_ru RU_CYRILLIC_SHORT_I  &kp_m1_ru RU_CYRILLIC_I          &kp_m1_ru RU_CYRILLIC_IE  &kp_m1_ru RU_CYRILLIC_O         &kp_m1_ru RU_BACKSLASH                        &kp_m1_ru RU_CYRILLIC_EL  &kp_m1_ru RU_CYRILLIC_EN  &kp_m1_ru RU_CYRILLIC_TE  &kp_m1_ru RU_CYRILLIC_ES   &kp_m1_ru RU_CYRILLIC_CHE    &kp_m1_ru RU_CYRILLIC_SHA
 &none                    &kp_m1_ru RU_CYRILLIC_EF       &kp_m1_ru RU_CYRILLIC_U          &kp_m1_ru RU_CYRILLIC_HA  &kp_m1_ru RU_CYRILLIC_YERU      &kp_m1_ru RU_DOT                              &kp_m1_ru RU_CYRILLIC_BE  &kp_m1_ru RU_CYRILLIC_EM  &kp_m1_ru RU_CYRILLIC_PE  &kp_m1_ru RU_CYRILLIC_GHE  &kp_m1_ru RU_CYRILLIC_ZHE    &trans
-                                                        &trans                           &trans                    &ru_cw_off LS(LC(LG(LA(F12))))  &space_nav_to 14 6        &none    &kp EQUAL  &r_num_to 17 6            &none                     &trans                    &trans
+                                                        &trans                           &trans                    &ru_cw_off LS(LC(LG(LA(F12))))  &space_nav_to 14 6        &none    &kp EQUAL  &move_nav 17 4            &none                     &trans                    &trans
             >;
         };
 
@@ -1379,10 +1379,10 @@
         MFree_en {
             display-name = "MFree_en";
             bindings = <
-&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                             &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                             &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                             &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
-                             &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE  &none    &kp EQUAL  &lt 16 RU_CYRILLIC_ER  &trans  &trans     &trans
+&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                              &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
+&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                              &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
+&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                              &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+                             &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE  &kp N0    &kp EQUAL  &lt 16 RU_CYRILLIC_ER  &trans  &trans     &trans
             >;
         };
 
@@ -1392,7 +1392,7 @@
 &none                    &kp_m1_en RU_CYRILLIC_TSE      &kp_m1_en RU_CYRILLIC_SOFT_SIGN  &kp_m1_en RU_CYRILLIC_YA  &kp_m1_en RU_CYRILLIC_A         &kp_m1_en RU_CYRILLIC_YU                      &kp_m1_en RU_CYRILLIC_ZE  &kp_m1_en RU_CYRILLIC_VE  &kp_m1_en RU_CYRILLIC_KA  &kp_m1_en RU_CYRILLIC_DE   &kp_m1_en RU_CYRILLIC_SHCHA  &trans
 &kp_m1_en RU_CYRILLIC_E  &kp_m1_en RU_CYRILLIC_SHORT_I  &kp_m1_en RU_CYRILLIC_I          &kp_m1_en RU_CYRILLIC_IE  &kp_m1_en RU_CYRILLIC_O         &kp_m1_en RU_BACKSLASH                        &kp_m1_en RU_CYRILLIC_EL  &kp_m1_en RU_CYRILLIC_EN  &kp_m1_en RU_CYRILLIC_TE  &kp_m1_en RU_CYRILLIC_ES   &kp_m1_en RU_CYRILLIC_CHE    &kp_m1_en RU_CYRILLIC_SHA
 &none                    &kp_m1_en RU_CYRILLIC_EF       &kp_m1_en RU_CYRILLIC_U          &kp_m1_en RU_CYRILLIC_HA  &kp_m1_en RU_CYRILLIC_YERU      &kp_m1_en RU_DOT                              &kp_m1_en RU_CYRILLIC_BE  &kp_m1_en RU_CYRILLIC_EM  &kp_m1_en RU_CYRILLIC_PE  &kp_m1_en RU_CYRILLIC_GHE  &kp_m1_en RU_CYRILLIC_ZHE    &trans
-                                                        &trans                           &trans                    &en_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 11       &none    &kp EQUAL  &r_num_to 16 11           &none                     &trans                    &trans
+                                                        &trans                           &trans                    &en_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 11       &none    &kp EQUAL  &move_nav 16 9            &none                     &trans                    &trans
             >;
         };
 
