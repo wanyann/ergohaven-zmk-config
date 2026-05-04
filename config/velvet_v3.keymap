@@ -828,14 +828,14 @@
         kp_m1_ru: kp_m1_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &to 6>;
+            bindings = <&to 6 &macro_param_1to1 &long_kp MACRO_PLACEHOLDER>;
             label = "KP_M1_RU";
         };
 
         kp_m2_ru: kp_m2_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &to 7>;
+            bindings = <&to 7 &macro_param_1to1 &long_kp MACRO_PLACEHOLDER>;
             label = "kp_m2_ru";
         };
 
@@ -870,14 +870,14 @@
         kp_m1_en: kp_m1_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &to 10>;
+            bindings = <&to 10 &macro_param_1to1 &long_kp MACRO_PLACEHOLDER>;
             label = "KP_M1_EN";
         };
 
         kp_m2_en: kp_m2_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &long_kp MACRO_PLACEHOLDER &to 11>;
+            bindings = <&to 11 &macro_param_1to1 &long_kp MACRO_PLACEHOLDER>;
             label = "KP_M2_EN";
         };
 
