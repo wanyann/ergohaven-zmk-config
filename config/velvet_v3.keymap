@@ -978,16 +978,6 @@
             flavor = "balanced";
         };
 
-        hrl: hrl {
-            compatible = "zmk,behavior-hold-tap";
-            label = "Home Row Layer";
-            bindings = <&mo>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
         bspc_morph: bspc_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "BSPC_MORPH";
@@ -1133,30 +1123,12 @@
             keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
         };
 
-        nine_morph: nine_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "NINE_MORPH";
-            bindings = <&kp N9>, <&kp LS(LC(R))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
         caps_soft_sign: caps_soft_sign {
             compatible = "zmk,behavior-mod-morph";
             label = "CAPS_SOFT_SIGN";
             bindings =
                 <&kp LS(RU_CYRILLIC_SOFT_SIGN)>,
                 <&kp LS(RU_CYRILLIC_HARD_SIGN)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-        };
-
-        three_mrph: three_mrph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "THREE_MRPH";
-            bindings = <&kp NUMBER_3>, <&kp LS(LC(F))>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1180,24 +1152,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "hold-preferred";
-        };
-
-        zero_morph: zero_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "ZERO_MORPH";
-            bindings = <&kp N0>, <&kp LS(LC(A))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL|MOD_LSFT)>;
-        };
-
-        plus_morph: plus_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "PLUS_MORPH";
-            bindings = <&kp PLUS>, <&kp LS(LC(G))>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
         };
 
         hrm_l: hrm_l {
@@ -1302,9 +1256,19 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
-            flavor = "balanced";
-            hold-while-undecided;
-            hold-trigger-key-positions = <6 18 30 31 32 33 19 7 8 9 20 21 10 22 34 23>;
+            flavor = "hold-preferred";
+            hold-trigger-key-positions = <31 32 33 19 7 8 9 20 21>;
+        };
+
+        kp_drag: kp_drag {
+            compatible = "zmk,behavior-hold-tap";
+            label = "KP_DRAG";
+            bindings = <&drag_layer>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "hold-preferred";
+            hold-trigger-key-positions = <4 16 28 27 26 14 15 3 2 39>;
         };
     };
 
@@ -1389,10 +1353,10 @@
         MSub_ru {
             display-name = "MSub_ru";
             bindings = <
-&none              &kp RU_CYRILLIC_TSE      &kp_sub_ru RU_CYRILLIC_SOFT_SIGN  &kp_sub_ru RU_CYRILLIC_YA  &kp_sub_ru RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                                      &kp RU_CYRILLIC_ZE     &kp_sub_ru RU_CYRILLIC_VE  &kp_sub_ru RU_CYRILLIC_KA  &kp_sub_ru RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
-&kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp_sub_ru RU_CYRILLIC_I          &kp_sub_ru RU_CYRILLIC_IE  &kp_sub_ru RU_CYRILLIC_O        &kp RU_BACKSLASH                                        &kp RU_CYRILLIC_EL     &kp_sub_ru RU_CYRILLIC_EN  &kp_sub_ru RU_CYRILLIC_TE  &kp_sub_ru RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
-&none              &kp RU_CYRILLIC_EF       &kp_sub_ru RU_CYRILLIC_U          &kp_sub_ru RU_CYRILLIC_HA  &kp_sub_ru RU_CYRILLIC_YERU     &kp RU_DOT                                              &kp RU_CYRILLIC_BE     &kp_sub_ru RU_CYRILLIC_EM  &kp_sub_ru RU_CYRILLIC_PE  &kp_sub_ru RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                            &trans                     &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 2  &free_mod 8 4    &hrm_r RGUI EQUAL  &lt 17 RU_CYRILLIC_ER  &kp_to BACKSPACE 6         &trans                     &trans
+&none              &kp RU_CYRILLIC_TSE      &kp_sub_ru RU_CYRILLIC_SOFT_SIGN  &kp_sub_ru RU_CYRILLIC_YA  &kp_sub_ru RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                                     &kp RU_CYRILLIC_ZE     &kp_sub_ru RU_CYRILLIC_VE  &kp_sub_ru RU_CYRILLIC_KA  &kp_sub_ru RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
+&kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp_sub_ru RU_CYRILLIC_I          &kp_sub_ru RU_CYRILLIC_IE  &kp_sub_ru RU_CYRILLIC_O        &kp RU_BACKSLASH                                       &kp RU_CYRILLIC_EL     &kp_sub_ru RU_CYRILLIC_EN  &kp_sub_ru RU_CYRILLIC_TE  &kp_sub_ru RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
+&none              &kp RU_CYRILLIC_EF       &kp_sub_ru RU_CYRILLIC_U          &kp_sub_ru RU_CYRILLIC_HA  &kp_sub_ru RU_CYRILLIC_YERU     &kp RU_DOT                                             &kp RU_CYRILLIC_BE     &kp_sub_ru RU_CYRILLIC_EM  &kp_sub_ru RU_CYRILLIC_PE  &kp_sub_ru RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
+                                            &trans                            &trans                     &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 2  &free_mod 8 4    &kp_drag 8 EQUAL  &lt 17 RU_CYRILLIC_ER  &kp_to BACKSPACE 6         &trans                     &trans
             >;
         };
 
@@ -1439,10 +1403,10 @@
         MSub_en {
             display-name = "MSub_en";
             bindings = <
-&none              &kp RU_CYRILLIC_TSE      &kp_sub_en RU_CYRILLIC_SOFT_SIGN  &kp_sub_en RU_CYRILLIC_YA  &kp_sub_en RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                                      &kp RU_CYRILLIC_ZE     &kp_sub_en RU_CYRILLIC_VE  &kp_sub_en RU_CYRILLIC_KA  &kp_sub_en RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
-&kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp_sub_en RU_CYRILLIC_I          &kp_sub_en RU_CYRILLIC_IE  &kp_sub_en RU_CYRILLIC_O        &kp RU_BACKSLASH                                        &kp RU_CYRILLIC_EL     &kp_sub_en RU_CYRILLIC_EN  &kp_sub_en RU_CYRILLIC_TE  &kp_sub_en RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
-&none              &kp RU_CYRILLIC_EF       &kp_sub_en RU_CYRILLIC_U          &kp_sub_en RU_CYRILLIC_HA  &kp_sub_en RU_CYRILLIC_YERU     &kp RU_DOT                                              &kp RU_CYRILLIC_BE     &kp_sub_en RU_CYRILLIC_EM  &kp_sub_en RU_CYRILLIC_PE  &kp_sub_en RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                            &trans                     &en_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 0  &free_mod 0 9    &hrm_r RGUI EQUAL  &lt 16 RU_CYRILLIC_ER  &kp_to BACKSPACE 11        &trans                     &trans
+&none              &kp RU_CYRILLIC_TSE      &kp_sub_en RU_CYRILLIC_SOFT_SIGN  &kp_sub_en RU_CYRILLIC_YA  &kp_sub_en RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                                       &kp RU_CYRILLIC_ZE     &kp_sub_en RU_CYRILLIC_VE  &kp_sub_en RU_CYRILLIC_KA  &kp_sub_en RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
+&kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp_sub_en RU_CYRILLIC_I          &kp_sub_en RU_CYRILLIC_IE  &kp_sub_en RU_CYRILLIC_O        &kp RU_BACKSLASH                                         &kp RU_CYRILLIC_EL     &kp_sub_en RU_CYRILLIC_EN  &kp_sub_en RU_CYRILLIC_TE  &kp_sub_en RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
+&none              &kp RU_CYRILLIC_EF       &kp_sub_en RU_CYRILLIC_U          &kp_sub_en RU_CYRILLIC_HA  &kp_sub_en RU_CYRILLIC_YERU     &kp RU_DOT                                               &kp RU_CYRILLIC_BE     &kp_sub_en RU_CYRILLIC_EM  &kp_sub_en RU_CYRILLIC_PE  &kp_sub_en RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
+                                            &trans                            &trans                     &en_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 0  &free_mod 13 9    &kp_drag 13 EQUAL  &lt 16 RU_CYRILLIC_ER  &kp_to BACKSPACE 11        &trans                     &trans
             >;
         };
 
