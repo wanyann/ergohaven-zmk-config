@@ -1371,7 +1371,7 @@
 &none              &kp RU_CYRILLIC_TSE      &kp_sub_ru RU_CYRILLIC_SOFT_SIGN  &kp_sub_ru RU_CYRILLIC_YA  &kp_sub_ru RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                           &kp RU_CYRILLIC_ZE  &kp_sub_ru RU_CYRILLIC_VE  &kp_sub_ru RU_CYRILLIC_KA  &kp_sub_ru RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp_sub_ru RU_CYRILLIC_I          &kp_sub_ru RU_CYRILLIC_IE  &kp_sub_ru RU_CYRILLIC_O        &kp RU_BACKSLASH                             &kp RU_CYRILLIC_EL  &kp_sub_ru RU_CYRILLIC_EN  &kp_sub_ru RU_CYRILLIC_TE  &kp_sub_ru RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp RU_CYRILLIC_EF       &kp_sub_ru RU_CYRILLIC_U          &kp_sub_ru RU_CYRILLIC_HA  &kp_sub_ru RU_CYRILLIC_YERU     &kp RU_DOT                                   &kp RU_CYRILLIC_BE  &kp_sub_ru RU_CYRILLIC_EM  &kp_sub_ru RU_CYRILLIC_PE  &kp_sub_ru RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                            &trans                     &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 2  &drag_on 8    &kp EQUAL  &move_nav 17 8      &kp_to BACKSPACE 6         &trans                     &trans
+                                            &trans                            &trans                     &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 2  &drag_on 8    &kp EQUAL  &move_nav 17 4      &kp_to BACKSPACE 6         &trans                     &trans
             >;
         };
 
@@ -1381,7 +1381,7 @@
 &none              &kp RU_CYRILLIC_TSE      &kp_to RU_CYRILLIC_SOFT_SIGN 5  &kp_to RU_CYRILLIC_YA 5  &kp_to RU_CYRILLIC_A 5          &kp RU_CYRILLIC_YU                            &kp RU_CYRILLIC_ZE  &kp_to RU_CYRILLIC_VE 5  &kp_to RU_CYRILLIC_KA 5  &kp_to RU_CYRILLIC_DE 5   &kp RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp_to RU_CYRILLIC_I 5          &kp_to RU_CYRILLIC_IE 5  &kp_to RU_CYRILLIC_O 5          &kp RU_BACKSLASH                              &kp RU_CYRILLIC_EL  &kp_to RU_CYRILLIC_EN 5  &kp_to RU_CYRILLIC_TE 5  &kp_to RU_CYRILLIC_ES 5   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp RU_CYRILLIC_EF       &kp_to RU_CYRILLIC_U 5          &kp_to RU_CYRILLIC_HA 5  &kp_to RU_CYRILLIC_YERU 5       &kp RU_DOT                                    &kp RU_CYRILLIC_BE  &kp_to RU_CYRILLIC_EM 5  &kp_to RU_CYRILLIC_PE 5  &kp_to RU_CYRILLIC_GHE 5  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                          &trans                   &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 5  &drag_off 8    &kp EQUAL  &move_nav 17 8      &back_drag_off 8         &trans                   &trans
+                                            &trans                          &trans                   &ru_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 5  &drag_off 8    &kp EQUAL  &move_nav 17 4      &back_drag_off 8         &trans                   &trans
             >;
         };
 
@@ -1421,7 +1421,7 @@
 &none              &kp RU_CYRILLIC_TSE      &kp_sub_en RU_CYRILLIC_SOFT_SIGN  &kp_sub_en RU_CYRILLIC_YA  &kp_sub_en RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                            &kp RU_CYRILLIC_ZE  &kp_sub_en RU_CYRILLIC_VE  &kp_sub_en RU_CYRILLIC_KA  &kp_sub_en RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp_sub_en RU_CYRILLIC_I          &kp_sub_en RU_CYRILLIC_IE  &kp_sub_en RU_CYRILLIC_O        &kp RU_BACKSLASH                              &kp RU_CYRILLIC_EL  &kp_sub_en RU_CYRILLIC_EN  &kp_sub_en RU_CYRILLIC_TE  &kp_sub_en RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp RU_CYRILLIC_EF       &kp_sub_en RU_CYRILLIC_U          &kp_sub_en RU_CYRILLIC_HA  &kp_sub_en RU_CYRILLIC_YERU     &kp RU_DOT                                    &kp RU_CYRILLIC_BE  &kp_sub_en RU_CYRILLIC_EM  &kp_sub_en RU_CYRILLIC_PE  &kp_sub_en RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                            &trans                     &en_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 0  &drag_on 13    &kp EQUAL  &move_nav 16 13     &kp_to BACKSPACE 11        &trans                     &trans
+                                            &trans                            &trans                     &en_cw_off LS(LA(LC(LG(F12))))  &space_nav_to 14 0  &drag_on 13    &kp EQUAL  &move_nav 16 9      &kp_to BACKSPACE 11        &trans                     &trans
             >;
         };
 
