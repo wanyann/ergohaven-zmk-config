@@ -370,7 +370,7 @@
         layer_ru: lg_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &kp LS(LC(N8))>;
+            bindings = <&to 2 &kp LS(LG(N8))>;
             label = "LG_RU";
             tap-ms = <40>;
             wait-ms = <0>;
@@ -379,7 +379,7 @@
         layer_en: lg_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &kp LS(LC(N9))>;
+            bindings = <&to 0 &kp LS(LG(N9))>;
             label = "LG_EN";
             tap-ms = <40>;
             wait-ms = <0>;
@@ -388,7 +388,7 @@
         lg_ru: to_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N8))>;
+            bindings = <&kp LS(LG(N8))>;
             label = "TO_RU";
             tap-ms = <40>;
             wait-ms = <0>;
@@ -397,7 +397,7 @@
         lg_en: to_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LC(LS(N9))>;
+            bindings = <&kp LS(LG(N9))>;
             label = "TO_EN";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -406,7 +406,7 @@
         en_kp: en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LC(LS(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LC(LS(N8))>;
+            bindings = <&kp LS(LG(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LG(N8))>;
             label = "EN";
             wait-ms = <10>;
             tap-ms = <40>;
@@ -415,7 +415,7 @@
         ru: ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LC(LS(N8)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N9))>;
+            bindings = <&kp LS(LG(N8)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LG(N9))>;
             label = "RU";
             tap-ms = <40>;
         };
@@ -455,7 +455,7 @@
         ru_code: ru_code {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N9)) &kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW &kp LC(LS(N8))>;
+            bindings = <&lg_en &kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW &lg_ru>;
             label = "RU_CODE";
             tap-ms = <50>;
             wait-ms = <10>;
@@ -573,7 +573,7 @@
         less_greater_ru: less_greater_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N9)) &less_greater_en &kp LS(LC(N8))>;
+            bindings = <&lg_en &less_greater_en &lg_ru>;
             label = "LESS_GREATER_RU";
         };
 
@@ -676,28 +676,6 @@
             bindings = <&kp LS(LC(N9)) &kp GRAVE &kp GRAVE &kp LEFT_ARROW &kp LS(LC(N8))>;
             label = "DBL_GRAVE_RU";
             wait-ms = <0>;
-        };
-
-        dbl_grave_en: dbl_grave_en {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp GRAVE &kp LEFT_ARROW>;
-            label = "DBL_GRAVE_EN";
-            wait-ms = <0>;
-        };
-
-        triple_press: triple_press {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "TRIPLE_PRESS";
-        };
-
-        triple_press_en: triple_press_en {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kp N9 &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N8))>;
-            label = "TRIPLE_PRESS_EN";
         };
 
         testops: testops {
@@ -814,14 +792,14 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp LALT &kp LS(LC(N8)) &to 4>;
+            bindings = <&mouse_off &kp LALT &lg_en &to 4>;
             label = "MACRO_MLESS_FREE";
         };
 
         ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp RCTRL &kp LS(LC(N8)) &to 5>;
+            bindings = <&mouse_off &kp RCTRL &lg_ru &to 5>;
             label = "MACRO_MLESS_OVER";
         };
 
@@ -856,14 +834,14 @@
         ms_free_en: ms_free_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp LALT &kp LS(LC(N8)) &to 9>;
+            bindings = <&mouse_off &kp LALT &lg_en &to 9>;
             label = "ms_free_en";
         };
 
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp RCTRL &kp LS(LC(N8)) &to 10>;
+            bindings = <&mouse_off &kp RCTRL &lg_en &to 10>;
             label = "ms_over_en";
         };
 
