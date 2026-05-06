@@ -946,9 +946,9 @@
         };
 
         mouseoff_sl: mouseoff_sl {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&mouse_off &macro_param_1to1 &sl MACRO_PLACEHOLDER>;
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings = <&mouse_off &macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_SL";
         };
     };
@@ -1351,10 +1351,10 @@
 
         MFREE_ru {
             bindings = <
-&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                                       &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                                       &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                                       &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
-                             &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE  &mouseoff_sl 19    &kp EQUAL  &lt 17 RU_CYRILLIC_ER  &trans  &trans     &trans
+&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                                         &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
+&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                                         &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
+&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                                         &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+                             &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE  &mouseoff_sl 4 19    &kp EQUAL  &lt 17 RU_CYRILLIC_ER  &trans  &trans     &trans
             >;
 
             display-name = "MS_FREE_ru";
@@ -1403,10 +1403,10 @@
         MFree_en {
             display-name = "MFree_en";
             bindings = <
-&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                                       &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                                       &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                                       &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
-                             &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE  &mouseoff_sl 18    &kp EQUAL  &lt 16 RU_CYRILLIC_ER  &trans  &trans     &trans
+&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                                         &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
+&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                                         &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
+&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                                         &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+                             &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE  &mouseoff_sl 9 18    &kp EQUAL  &lt 16 RU_CYRILLIC_ER  &trans  &trans     &trans
             >;
         };
 
