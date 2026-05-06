@@ -73,10 +73,10 @@
         };
 
         combo_osl_sym_en {
-            bindings = <&sl 20>;
+            bindings = <&mouseoff_sl 9 20>;
             key-positions = <19 20>;
             require-prior-idle-ms = <50>;
-            layers = <0 1 20>;
+            layers = <0 1 20 9>;
         };
 
         combo_lessgreater_en {
@@ -87,7 +87,7 @@
         };
 
         combo_osl_sym_ru {
-            bindings = <&sl 21>;
+            bindings = <&mouseoff_sl 4 21>;
             key-positions = <19 20>;
             require-prior-idle-ms = <50>;
             layers = <2 3 21>;
@@ -1385,7 +1385,7 @@
             display-name = "CapsWord_ru";
         };
 
-        MFREE_ru {
+        MFree_ru {
             bindings = <
 &none  &kp Q                 &kp W             &kp E              &mt_free LC(R) R                &mt_mouseoff_ru LC(T) T                                  &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
 &none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &mt_mouseoff_ru LC(F) G                                  &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
@@ -1393,7 +1393,7 @@
                              &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE             &mouseoff_sl 4 19    &kp EQUAL  &lt 17 RU_CYRILLIC_ER  &trans  &trans     &trans
             >;
 
-            display-name = "MS_FREE_ru";
+            display-name = "MFree_ru";
         };
 
         M1_ru {
