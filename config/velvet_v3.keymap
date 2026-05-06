@@ -370,7 +370,7 @@
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(N8)) &to 2>;
+            bindings = <&kp LS(LC(N8)) &to 2>;
             label = "LAYER_RU";
             tap-ms = <100>;
             wait-ms = <0>;
@@ -379,7 +379,7 @@
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(N9)) &to 0>;
+            bindings = <&kp LS(LC(N9)) &to 0>;
             label = "LAYER_EN";
             tap-ms = <100>;
             wait-ms = <0>;
@@ -388,7 +388,7 @@
         lg_ru: lg_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(N8))>;
+            bindings = <&kp LS(LC(N8))>;
             label = "LG_RU";
             tap-ms = <60>;
             wait-ms = <0>;
@@ -397,7 +397,7 @@
         lg_en: lg_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(N9))>;
+            bindings = <&kp LS(LC(N9))>;
             label = "LG_EN";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -406,7 +406,7 @@
         en_kp: en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LS(LG(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LG(N8))>;
+            bindings = <&kp LS(LC(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N8))>;
             label = "EN";
             wait-ms = <10>;
             tap-ms = <40>;
@@ -415,7 +415,7 @@
         ru: ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp LS(LG(N8)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LG(N9))>;
+            bindings = <&kp LS(LC(N8)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N9))>;
             label = "RU";
             tap-ms = <40>;
         };
