@@ -969,6 +969,14 @@
             bindings = <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &lg_en>;
             label = "MOUSEOFF_KP_EN";
         };
+
+        free_kp: free_kp {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &free>;
+            label = "FREE_KP";
+            wait-ms = <0>;
+        };
     };
 
     behaviors {
@@ -1318,6 +1326,16 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        mt_free: mt_free {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_FREE";
+            bindings = <&free_kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -1371,7 +1389,7 @@
             bindings = <
 &none  &kp Q                 &kp W             &kp E              &kp R                           &mt_mouseoff_ru LC(T) T                                  &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
 &none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &mt_mouseoff_ru LC(F) G                                  &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&none  &mt Z LC(Z)           &mt X LC(X)       &mt C LC(C)        &mt V LC(V)                     &mt B LG(V)                                              &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+&none  &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V                &mt_free LG(V) B                                         &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
                              &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE             &mouseoff_sl 4 19    &kp EQUAL  &lt 17 RU_CYRILLIC_ER  &trans  &trans     &trans
             >;
 
@@ -1423,7 +1441,7 @@
             bindings = <
 &none  &kp Q                 &kp W             &kp E              &kp R                           &mt_mouseoff_en LC(T) T                                  &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
 &none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &mt_mouseoff_en LC(F) G                                  &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&none  &mt Z LC(Z)           &mt X LC(X)       &mt C LC(C)        &mt V LC(V)                     &mt B LG(V)                                              &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+&none  &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V                &mt_free LC(V) B                                         &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
                              &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE             &mouseoff_sl 9 18    &kp EQUAL  &lt 16 RU_CYRILLIC_ER  &trans  &trans     &trans
             >;
         };
