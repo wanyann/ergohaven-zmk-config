@@ -370,7 +370,7 @@
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N8)) &to 2>;
+            bindings = <&kp LS(LC(N8)) &to 2 &mouse_off>;
             label = "LAYER_RU";
             tap-ms = <40>;
             wait-ms = <0>;
@@ -379,7 +379,7 @@
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N9)) &to 0>;
+            bindings = <&kp LS(LC(N9)) &to 0 &mouse_off>;
             label = "LAYER_EN";
             tap-ms = <40>;
             wait-ms = <0>;
@@ -951,6 +951,20 @@
             bindings = <&mouse_off &macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_SL";
         };
+
+        mouseoff_kp_ru: mouseoff_kp_ru {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &lg_ru>;
+            label = "MOUSEOFF_KP_RU";
+        };
+
+        mouseoff_kp_en: mouseoff_kp_en {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &lg_en>;
+            label = "MOUSEOFF_KP_EN";
+        };
     };
 
     behaviors {
@@ -1300,6 +1314,26 @@
             release-after-ms = <10000>;
             ignore-modifiers;
         };
+
+        mt_mouseoff_ru: mt_mouseoff_ru {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_MOUSEOFF_RU";
+            bindings = <&mouseoff_kp_ru>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        mt_mouseoff_en: mt_mouseoff_en {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_MOUSEOFF_EN";
+            bindings = <&mouseoff_kp_en>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -1351,10 +1385,10 @@
 
         MFREE_ru {
             bindings = <
-&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                                         &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                                         &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                                         &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
-                             &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE  &mouseoff_sl 4 19    &kp EQUAL  &lt 17 RU_CYRILLIC_ER  &trans  &trans     &trans
+&none  &kp Q                 &kp W             &kp E              &kp R                           &mt_mouseoff_ru LC(T) T                                  &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
+&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &mt_mouseoff_ru LC(F) G                                  &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
+&none  &mt Z LC(Z)           &mt X LC(X)       &mt C LC(C)        &mt V LC(V)                     &mt B LG(V)                                              &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+                             &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE             &mouseoff_sl 4 19    &kp EQUAL  &lt 17 RU_CYRILLIC_ER  &trans  &trans     &trans
             >;
 
             display-name = "MS_FREE_ru";
@@ -1403,10 +1437,10 @@
         MFree_en {
             display-name = "MFree_en";
             bindings = <
-&none  &kp Q                 &kp W             &kp E              &kp R                           &kp T                                         &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &kp G                                         &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&none  &kp Z                 &kp X             &kp C              &kp V                           &kp B                                         &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
-                             &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE  &mouseoff_sl 9 18    &kp EQUAL  &lt 16 RU_CYRILLIC_ER  &trans  &trans     &trans
+&none  &kp Q                 &kp W             &kp E              &kp R                           &mt_mouseoff_en LC(T) T                                  &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
+&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &mt_mouseoff_en LC(F) G                                  &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
+&none  &mt Z LC(Z)           &mt X LC(X)       &mt C LC(C)        &mt V LC(V)                     &mt B LG(V)                                              &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+                             &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE             &mouseoff_sl 9 18    &kp EQUAL  &lt 16 RU_CYRILLIC_ER  &trans  &trans     &trans
             >;
         };
 
