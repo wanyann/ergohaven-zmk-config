@@ -1472,7 +1472,7 @@
             display-name = "Mod";
         };
 
-        Num_En {
+        Num_en {
             bindings = <
 &trans  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp MINUS                             &trans  &trans     &trans      &trans        &trans        &trans
 &trans  &kp N0        &kp N1        &kp N2        &kp NUMBER_3  &kp PLUS                              &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
@@ -1483,7 +1483,7 @@
             display-name = "Num_en";
         };
 
-        Num_Ru {
+        Num_ru {
             bindings = <
 &trans  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp MINUS                             &trans  &trans     &trans        &trans        &trans        &trans
 &trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &kp PLUS                              &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &trans
@@ -1494,7 +1494,7 @@
             display-name = "Num_ru";
         };
 
-        App_En {
+        App_en {
             bindings = <
 &trans                        &kp LA(LC(LS(P)))  &vm_en LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
 &kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                    &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
@@ -1505,7 +1505,7 @@
             display-name = "App_en";
         };
 
-        App_Ru {
+        App_ru {
             display-name = "App_ru";
             bindings = <
 &trans                        &kp LA(LC(LS(P)))  &vm_ru LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
@@ -1515,7 +1515,7 @@
             >;
         };
 
-        Sym_En {
+        Sym_en {
             bindings = <
 &trans  &trans  &none                 &none          &none                  &trans                      &trans         &kp LEFT_BRACKET  &ru RU_RUBLE   &kp RIGHT_BRACKET  &trans  &trans
 &trans  &trans  &kp LEFT_PARENTHESIS  &kp SLASH      &kp RIGHT_PARENTHESIS  &kp PLUS                    &ru RU_NUMERO  &kp LEFT_BRACE    &kp AMPERSAND  &kp RIGHT_BRACE    &trans  &trans
@@ -1526,7 +1526,7 @@
             display-name = "Sym_en";
         };
 
-        Sym_Ru {
+        Sym_ru {
             bindings = <
 &trans  &trans  &none                 &none                 &none        &trans                      &trans         &en_kp LEFT_BRACKET  &kp RU_RUBLE      &en_kp RIGHT_BRACKET  &trans  &trans
 &trans  &trans  &kp LEFT_PARENTHESIS  &kp RU_SLASH          &kp RPAR     &kp PLUS                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp AMPERSAND  &en_kp RIGHT_BRACE    &trans  &trans
