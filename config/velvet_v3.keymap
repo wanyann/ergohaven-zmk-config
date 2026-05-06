@@ -1168,8 +1168,8 @@
             bindings = <&kp SPACE>, <&kp TAB>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
-            keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LCTL|MOD_RCTL)>;
+            mods = <(MOD_RSFT|MOD_LALT|MOD_LSFT|MOD_RALT)>;
+            keep-mods = <(MOD_LSFT|MOD_RSFT|MOD_LALT|MOD_RALT)>;
         };
 
         caps_soft_sign: caps_soft_sign {
