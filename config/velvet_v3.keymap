@@ -73,10 +73,10 @@
         };
 
         combo_osl_sym_en {
-            bindings = <&mouseoff_sl 9 20>;
+            bindings = <&sl 20>;
             key-positions = <19 20>;
             require-prior-idle-ms = <50>;
-            layers = <0 1 20 9>;
+            layers = <0 1 20>;
         };
 
         combo_lessgreater_en {
@@ -87,10 +87,10 @@
         };
 
         combo_osl_sym_ru {
-            bindings = <&mouseoff_sl 4 21>;
+            bindings = <&sl 21>;
             key-positions = <19 20>;
             require-prior-idle-ms = <50>;
-            layers = <2 3 21 4>;
+            layers = <2 3 21>;
         };
 
         combo_lessgreater_ru {
