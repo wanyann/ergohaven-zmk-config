@@ -794,6 +794,7 @@
             #binding-cells = <0>;
             bindings = <&mouse_off &free &lg_en &to 4>;
             label = "MACRO_MLESS_FREE";
+            wait-ms = <0>;
         };
 
         ms_over_ru: macro_mless_over {
@@ -801,6 +802,7 @@
             #binding-cells = <0>;
             bindings = <&mouse_off &overlay &lg_ru &to 5>;
             label = "MACRO_MLESS_OVER";
+            wait-ms = <0>;
         };
 
         kp_m1_ru: kp_m1_ru {
@@ -836,6 +838,7 @@
             #binding-cells = <0>;
             bindings = <&mouse_off &free &lg_en &to 9>;
             label = "ms_free_en";
+            wait-ms = <0>;
         };
 
         ms_over_en: ms_over_en {
@@ -843,6 +846,7 @@
             #binding-cells = <0>;
             bindings = <&mouse_off &overlay &lg_en &to 10>;
             label = "ms_over_en";
+            wait-ms = <0>;
         };
 
         kp_m1_en: kp_m1_en {
