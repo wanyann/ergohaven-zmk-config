@@ -370,7 +370,7 @@
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N8)) &to 2 &mouse_off>;
+            bindings = <&mouse_off &kp LS(LC(N8)) &to 2>;
             label = "LAYER_RU";
             tap-ms = <40>;
             wait-ms = <0>;
@@ -379,7 +379,7 @@
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N9)) &to 0 &mouse_off>;
+            bindings = <&mouse_off &kp LS(LC(N9)) &to 0>;
             label = "LAYER_EN";
             tap-ms = <40>;
             wait-ms = <0>;
