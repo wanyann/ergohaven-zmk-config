@@ -372,7 +372,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N8)) &to 2>;
             label = "LAYER_RU";
-            tap-ms = <100>;
+            tap-ms = <40>;
             wait-ms = <0>;
         };
 
@@ -381,7 +381,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N9)) &to 0>;
             label = "LAYER_EN";
-            tap-ms = <100>;
+            tap-ms = <40>;
             wait-ms = <0>;
         };
 
@@ -390,7 +390,7 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N8))>;
             label = "LG_RU";
-            tap-ms = <60>;
+            tap-ms = <40>;
             wait-ms = <0>;
         };
 
@@ -1478,9 +1478,9 @@
 
         Num_Ru {
             bindings = <
-&trans  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp MINUS                               &trans  &trans     &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &kp PLUS                                &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &none                                   &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans        &trans
+&trans  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp MINUS                             &trans  &trans     &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &kp PLUS                              &trans  &kp LCTRL  &kp LSHIFT    &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &none                                 &trans  &trans     &kp RU_COMMA  &kp RU_DOT    &trans        &trans
                       &trans        &trans        &trans        &alt_spc_ru  &kp LA(ENTER)    &trans  &trans  &trans     &trans        &trans
             >;
 
