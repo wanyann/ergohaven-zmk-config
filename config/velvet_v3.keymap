@@ -1266,30 +1266,10 @@
             hold-trigger-key-positions = <1 2 3 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29 30 31 32 33 34 42 43 39>;
         };
 
-        r_num_to: r_num_to {
-            compatible = "zmk,behavior-hold-tap";
-            label = "R_NUM_TO";
-            bindings = <&mo>, <&r_to>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
         space_nav_to: space_nav_to {
             compatible = "zmk,behavior-hold-tap";
             label = "SPACE_NAV_TO";
             bindings = <&mo>, <&space_to>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
-        drag_nav_off: drag_nav_off {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DRAG_NAV_OFF";
-            bindings = <&drag_off>, <&free_move_to>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
