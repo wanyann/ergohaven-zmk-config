@@ -1336,6 +1336,42 @@
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
+
+        l_morph_ru: l_morph_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "L_MORPH_RU";
+            bindings = <&kp L>, <&mouseoff_kp_ru LC(L)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        l_morph_en: l_morph_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "L_MORPH_EN";
+            bindings = <&kp L>, <&mouseoff_kp_en LC(L)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        e_morph_ru: e_morph_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_MORPH_RU";
+            bindings = <&kp E>, <&mouseoff_kp_ru LC(E)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        e_morph_en: e_morph_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "E_MORPH_EN";
+            bindings = <&kp E>, <&mouseoff_kp_en LC(E)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
     };
 
     keymap {
@@ -1387,9 +1423,9 @@
 
         MFree_ru {
             bindings = <
-&none  &kp Q                 &kp W             &kp E              &mt_free LC(R) R                &mt_mouseoff_ru LC(T) T                                  &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &mt_mouseoff_ru LC(F) G                                  &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&none  &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V                &mt_free LG(V) B                                         &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+&none  &kp Q                 &kp W             &e_morph_ru        &mt_free LC(R) R                &mt_mouseoff_ru LC(T) T                                  &kp Y                  &kp U   &kp I      &kp O        &kp P      &trans
+&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &mt_mouseoff_ru LC(F) G                                  &kp H                  &kp J   &kp K      &l_morph_ru  &kp SEMI   &kp SQT
+&none  &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V                &mt_free LG(V) B                                         &kp N                  &kp M   &kp COMMA  &kp DOT      &kp SLASH  &trans
                              &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE             &mouseoff_sl 4 19    &kp EQUAL  &lt 17 RU_CYRILLIC_ER  &trans  &trans     &trans
             >;
 
@@ -1439,9 +1475,9 @@
         MFree_en {
             display-name = "MFree_en";
             bindings = <
-&none  &kp Q                 &kp W             &kp E              &mt_free LC(R) R                &mt_mouseoff_en LC(T) T                                  &kp Y                  &kp U   &kp I      &kp O    &kp P      &trans
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &mt_mouseoff_en LC(F) G                                  &kp H                  &kp J   &kp K      &kp L    &kp SEMI   &kp SQT
-&none  &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V                &mt_free LC(V) B                                         &kp N                  &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+&none  &kp Q                 &kp W             &e_morph_en        &mt_free LC(R) R                &mt_mouseoff_en LC(T) T                                  &kp Y                  &kp U   &kp I      &kp O        &kp P      &trans
+&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm_slow LCTRL F               &mt_mouseoff_en LC(F) G                                  &kp H                  &kp J   &kp K      &l_morph_en  &kp SEMI   &kp SQT
+&none  &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V                &mt_free LC(V) B                                         &kp N                  &kp M   &kp COMMA  &kp DOT      &kp SLASH  &trans
                              &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE             &mouseoff_sl 9 18    &kp EQUAL  &lt 16 RU_CYRILLIC_ER  &trans  &trans     &trans
             >;
         };
