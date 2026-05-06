@@ -61,7 +61,7 @@
             key-positions = <27 28>;
             timeout-ms = <30>;
             require-prior-idle-ms = <(-1)>;
-            layers = <0 1 2 3 18 19 20 21 23 24 22>;
+            layers = <0 1 2 3 18 19 20 21 23 24 22 4 9>;
         };
 
         combo_en {
@@ -69,7 +69,7 @@
             key-positions = <31 32>;
             timeout-ms = <30>;
             require-prior-idle-ms = <(-1)>;
-            layers = <0 1 2 3 18 19 23 20 21 24 22>;
+            layers = <0 1 2 3 18 19 23 20 21 24 22 4 9>;
         };
 
         combo_osl_sym_en {
@@ -370,7 +370,7 @@
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp LS(LC(N8)) &to 2>;
+            bindings = <&kp LS(LC(N8)) &to 2 &mouse_off>;
             label = "LAYER_RU";
             tap-ms = <40>;
             wait-ms = <0>;
@@ -379,7 +379,7 @@
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp LS(LC(N9)) &to 0>;
+            bindings = <&kp LS(LC(N9)) &to 0 &mouse_off>;
             label = "LAYER_EN";
             tap-ms = <40>;
             wait-ms = <0>;
