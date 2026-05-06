@@ -90,7 +90,7 @@
             bindings = <&mouseoff_sl 4 21>;
             key-positions = <19 20>;
             require-prior-idle-ms = <50>;
-            layers = <2 3 21>;
+            layers = <2 3 21 4>;
         };
 
         combo_lessgreater_ru {
