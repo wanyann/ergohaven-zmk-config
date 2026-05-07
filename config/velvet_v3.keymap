@@ -77,6 +77,7 @@
             key-positions = <19 20>;
             require-prior-idle-ms = <50>;
             layers = <0 1 20>;
+            timeout-ms = <30>;
         };
 
         combo_lessgreater_en {
@@ -91,6 +92,7 @@
             key-positions = <19 20>;
             require-prior-idle-ms = <50>;
             layers = <2 3 21>;
+            timeout-ms = <30>;
         };
 
         combo_lessgreater_ru {
