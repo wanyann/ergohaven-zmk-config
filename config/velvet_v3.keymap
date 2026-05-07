@@ -119,8 +119,9 @@
         combo_ms_free_ru {
             bindings = <&ms_free_ru>;
             timeout-ms = <30>;
-            key-positions = <32 33>;
+            key-positions = <20 21>;
             layers = <2 3 19 5>;
+            require-prior-idle-ms = <50>;
         };
 
         combo_singequote_en {
@@ -253,7 +254,7 @@
 
         combo_ms_over_ru {
             bindings = <&ms_over_ru>;
-            key-positions = <8 9>;
+            key-positions = <32 33>;
             layers = <2 3 4>;
             require-prior-idle-ms = <(-1)>;
         };
@@ -308,13 +309,13 @@
 
         combo_and_ru {
             bindings = <&en_kp AMPERSAND>;
-            key-positions = <8 9 7>;
+            key-positions = <8 9>;
             layers = <2 3 17 21>;
         };
 
         combo_and_en {
             bindings = <&kp AMPERSAND>;
-            key-positions = <7 8 9>;
+            key-positions = <8 9>;
             layers = <0 1 16 20>;
         };
 
@@ -356,14 +357,15 @@
 
         combo_ms_free_en {
             bindings = <&ms_free_en>;
-            key-positions = <32 33>;
+            key-positions = <20 21>;
             timeout-ms = <30>;
             layers = <0 1 10>;
+            require-prior-idle-ms = <50>;
         };
 
         combo_ms_over_en {
             bindings = <&ms_over_en>;
-            key-positions = <8 9>;
+            key-positions = <32 33>;
             layers = <0 1 9>;
             require-prior-idle-ms = <(-1)>;
         };
@@ -372,6 +374,18 @@
             bindings = <&kp FSLH>;
             key-positions = <2 3 4>;
             layers = <0 1 20>;
+        };
+
+        combo_pipe_ru {
+            bindings = <&en_kp PIPE>;
+            key-positions = <8 9 7>;
+            layers = <2 3 17 21>;
+        };
+
+        combo_pipe_en {
+            bindings = <&kp PIPE>;
+            key-positions = <7 8 9>;
+            layers = <0 1 16 20>;
         };
     };
 
