@@ -1599,7 +1599,7 @@
         Sym_en {
             bindings = <
 &trans  &trans  &none                 &none          &none                  &trans                      &trans         &kp LEFT_BRACKET  &ru RU_RUBLE   &kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp SLASH      &kp RIGHT_PARENTHESIS  &kp PLUS                    &ru RU_NUMERO  &kp LEFT_BRACE    &kp AMPERSAND  &kp RIGHT_BRACE    &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &kp PIPE       &kp RIGHT_PARENTHESIS  &kp PLUS                    &ru RU_NUMERO  &kp LEFT_BRACE    &kp AMPERSAND  &kp RIGHT_BRACE    &trans  &trans
 &trans  &trans  &kp TILDE             &kp BACKSLASH  &kp PERCENT            &en_code                    &trans         &kp LESS_THAN     &kp CARET      &kp GREATER_THAN   &trans  &trans
                 &trans                &trans         &trans                 &trans    &trans    &trans  &trans         &trans            &trans         &trans
             >;
@@ -1610,7 +1610,7 @@
         Sym_ru {
             bindings = <
 &trans  &trans  &none                 &none                 &none        &trans                      &trans         &en_kp LEFT_BRACKET  &kp RU_RUBLE      &en_kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp RU_SLASH          &kp RPAR     &kp PLUS                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp AMPERSAND  &en_kp RIGHT_BRACE    &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &en_kp PIPE           &kp RPAR     &kp PLUS                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp AMPERSAND  &en_kp RIGHT_BRACE    &trans  &trans
 &trans  &trans  &en_kp TILDE          &kp LA(RU_BACKSLASH)  &kp PERCENT  &ru_code                    &trans         &en_kp LESS_THAN     &en_kp CARET      &en_kp GREATER_THAN   &trans  &trans
                 &trans                &trans                &trans       &trans    &trans    &trans  &trans         &trans               &trans            &trans
             >;
