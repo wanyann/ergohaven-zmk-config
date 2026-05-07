@@ -306,14 +306,14 @@
             layers = <0 1 16 20>;
         };
 
-        combo_pipe_ru {
-            bindings = <&en_kp PIPE>;
+        combo_and_ru {
+            bindings = <&en_kp AMPERSAND>;
             key-positions = <8 9 7>;
             layers = <2 3 17 21>;
         };
 
-        combo_pipe_en {
-            bindings = <&kp PIPE>;
+        combo_and_en {
+            bindings = <&kp AMPERSAND>;
             key-positions = <7 8 9>;
             layers = <0 1 16 20>;
         };
@@ -342,9 +342,10 @@
             layers = <0 1 16 20>;
         };
 
-        combo_asterisk {
-            bindings = <&kp RU_ASTERISK>;
+        combo_slash_ru {
+            bindings = <&kp RU_FSLH>;
             key-positions = <2 3 4>;
+            layers = <2 3 21>;
         };
 
         cmb_osl_os_ru {
@@ -365,6 +366,12 @@
             key-positions = <8 9>;
             layers = <0 1 9>;
             require-prior-idle-ms = <(-1)>;
+        };
+
+        combo_slash_en {
+            bindings = <&kp FSLH>;
+            key-positions = <2 3 4>;
+            layers = <0 1 20>;
         };
     };
 
