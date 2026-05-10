@@ -1567,10 +1567,10 @@
 
         Num_en {
             bindings = <
-&trans  &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                               &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &kp N0        &kp N1        &kp N2        &kp NUMBER_3  &en_com_ques                           &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &en_dot_excl                           &trans  &trans     &none       &none         &trans        &trans
-                      &trans        &trans        &trans        &alt_spc_en   &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
+&trans  &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                               &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &en_com_ques                           &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL  &kp N4        &kp N5        &kp N6        &en_dot_excl                           &trans  &trans     &none       &none         &trans        &trans
+                   &trans        &trans        &trans        &alt_spc_en   &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
             >;
 
             display-name = "Num_en";
@@ -1578,7 +1578,7 @@
 
         Num_ru {
             bindings = <
-&trans  &kp RU_ASTRK  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                               &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                               &trans  &trans     &trans      &trans        &trans        &trans
 &trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &ru_com_ques                           &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
 &trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &ru_dot_excl                           &trans  &trans     &none       &none         &trans        &trans
                       &trans        &trans        &trans        &alt_spc_ru   &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
