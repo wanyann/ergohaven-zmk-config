@@ -960,14 +960,14 @@
         mouseoff_kp_ru: mouseoff_kp_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&layer_ru &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&mouse_off &to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_RU";
         };
 
         mouseoff_kp_en: mouseoff_kp_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&layer_en &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&mouse_off &to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_EN";
         };
 
