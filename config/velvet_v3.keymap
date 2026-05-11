@@ -1543,10 +1543,10 @@
 
         Nav_ru {
             bindings = <
-&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                     &none        &kp HOME      &kp UP         &kp END      &kp DELETE   &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                 &none        &kp LEFT      &kp DOWN       &kp RIGHT    &select_row  &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                           &none        &kp CAPSLOCK  &kp PAGE_DOWN  &kp PAGE_UP  &trans       &trans
-                                        &trans                           &trans                   &trans                    &none               &kp LA(ENTER)    &trans  &alt_spc_ru  &trans        &trans         &trans
+&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                    &none        &kp HOME      &kp UP         &kp END      &kp DELETE   &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                &none        &kp LEFT      &kp DOWN       &kp RIGHT    &select_row  &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                          &none        &kp CAPSLOCK  &kp PAGE_DOWN  &kp PAGE_UP  &trans       &trans
+                                        &trans                           &trans                   &trans                    &none               &none    &kp LA(SPACE)  &alt_spc_ru  &trans        &trans         &trans
             >;
 
             display-name = "Nav_ru";
@@ -1555,10 +1555,10 @@
         Nav_en {
             display-name = "Nav_en";
             bindings = <
-&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                     &none        &kp HOME      &kp UP         &kp END      &kp DELETE   &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                 &none        &kp LEFT      &kp DOWN       &kp RIGHT    &select_row  &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                           &none        &kp CAPSLOCK  &kp PAGE_DOWN  &kp PAGE_UP  &trans       &trans
-                                        &trans                           &trans                   &trans                    &none               &kp LA(ENTER)    &trans  &alt_spc_en  &trans        &trans         &trans
+&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                    &none        &kp HOME      &kp UP         &kp END      &kp DELETE   &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                &none        &kp LEFT      &kp DOWN       &kp RIGHT    &select_row  &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                          &none        &kp CAPSLOCK  &kp PAGE_DOWN  &kp PAGE_UP  &trans       &trans
+                                        &trans                           &trans                   &trans                    &none               &none    &kp LA(SPACE)  &alt_spc_en  &trans        &trans         &trans
             >;
         };
 
@@ -1575,10 +1575,10 @@
 
         Num_en {
             bindings = <
-&trans  &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                               &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &en_com_ques                           &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL  &kp N4        &kp N5        &kp N6        &en_dot_excl                           &trans  &trans     &none       &none         &trans        &trans
-                   &trans        &trans        &trans        &kp SPACE     &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
+&trans  &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                       &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &en_com_ques                   &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL  &kp N4        &kp N5        &kp N6        &en_dot_excl                   &trans  &trans     &none       &none         &trans        &trans
+                   &trans        &trans        &trans        &kp SPACE     &none    &trans  &trans  &trans     &trans      &trans
             >;
 
             display-name = "Num_en";
@@ -1586,10 +1586,10 @@
 
         Num_ru {
             bindings = <
-&trans  &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                               &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &ru_com_ques                           &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &ru_dot_excl                           &trans  &trans     &none       &none         &trans        &trans
-                      &trans        &trans        &trans        &kp SPACE     &kp LA(ENTER)    &trans  &trans  &trans     &trans      &trans
+&trans  &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                       &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &ru_com_ques                   &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &ru_dot_excl                   &trans  &trans     &none       &none         &trans        &trans
+                      &trans        &trans        &trans        &kp SPACE     &none    &trans  &trans  &trans     &trans      &trans
             >;
 
             display-name = "Num_ru";
