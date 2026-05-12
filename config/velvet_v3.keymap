@@ -1555,10 +1555,10 @@
         Nav_en {
             display-name = "Nav_en";
             bindings = <
-&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                    &none        &kp HOME      &kp UP         &kp END      &kp DELETE   &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                &none        &kp LEFT      &kp DOWN       &kp RIGHT    &select_row  &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                          &none        &kp CAPSLOCK  &kp PAGE_DOWN  &kp PAGE_UP  &trans       &trans
-                                        &trans                           &trans                   &trans                    &none               &none    &kp LA(SPACE)  &alt_spc_en  &trans        &trans         &trans
+&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                    &none               &kp HOME      &kp UP         &kp END      &kp DELETE   &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                &kp K_CONTEXT_MENU  &kp LEFT      &kp DOWN       &kp RIGHT    &select_row  &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                          &none               &kp CAPSLOCK  &kp PAGE_DOWN  &kp PAGE_UP  &trans       &trans
+                                        &trans                           &trans                   &trans                    &none               &none    &kp LA(SPACE)  &alt_spc_en         &trans        &trans         &trans
             >;
         };
 
