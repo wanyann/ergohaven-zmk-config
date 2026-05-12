@@ -1445,7 +1445,7 @@
 &none  &kp Q                 &kp W             &e_morph_ru        &mt_free LC(R) R                &mt_mouseoff_ru LC(T) T                                  &kp Y                  &kp U   &kp I        &kp O        &kp P      &trans
 &none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm LCTRL F                    &mt_mouseoff_ru LC(F) G                                  &kp H                  &kp J   &k_morph_ru  &l_morph_ru  &kp SEMI   &kp SQT
 &none  &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V                &mt_mouseoff_ru LG(V) B                                  &kp N                  &kp M   &kp COMMA    &kp DOT      &kp SLASH  &trans
-                             &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &lt 14 SPACE             &mouseoff_sl 4 20    &kp EQUAL  &lt 18 RU_CYRILLIC_ER  &trans  &trans       &trans
+                             &trans            &trans             &ru_cw_off LS(LA(LC(LG(F12))))  &space_lt 14 0           &mouseoff_sl 4 20    &kp EQUAL  &lt 18 RU_CYRILLIC_ER  &trans  &trans       &trans
             >;
 
             display-name = "MFree_ru";
@@ -1497,7 +1497,7 @@
 &none  &kp Q                 &kp W             &e_morph_en        &mt_free LC(R) R                &mt_mouseoff_en LC(T) T                                  &kp Y                  &kp U   &kp I        &kp O        &kp P      &trans
 &none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm LCTRL F                    &mt_mouseoff_en LC(F) G                                  &kp H                  &kp J   &k_morph_en  &l_morph_en  &kp SEMI   &kp SQT
 &none  &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V                &mt_mouseoff_en LC(V) B                                  &kp N                  &kp M   &kp COMMA    &kp DOT      &kp SLASH  &trans
-                             &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &lt 15 SPACE             &mouseoff_sl 9 19    &kp EQUAL  &lt 17 RU_CYRILLIC_ER  &trans  &trans       &trans
+                             &trans            &trans             &en_cw_off LS(LA(LC(LG(F12))))  &space_lt 15 0           &mouseoff_sl 9 19    &kp EQUAL  &lt 17 RU_CYRILLIC_ER  &trans  &trans       &trans
             >;
         };
 
