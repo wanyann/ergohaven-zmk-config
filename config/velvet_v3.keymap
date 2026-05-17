@@ -157,7 +157,7 @@
 
         combo_plus {
             bindings = <&kp PLUS>;
-            key-positions = <2 3 4>;
+            key-positions = <30 31>;
         };
 
         parentheses {
@@ -199,13 +199,13 @@
 
         combo_grave_ru {
             bindings = <&en_kp GRAVE>;
-            key-positions = <19 18>;
+            key-positions = <7 8 9>;
             layers = <2 3 22>;
         };
 
         combo_grave_en {
             bindings = <&kp GRAVE>;
-            key-positions = <18 19>;
+            key-positions = <7 8 9>;
             layers = <0 1 21>;
         };
 
@@ -322,13 +322,13 @@
 
         combo_hash_ru {
             bindings = <&en_kp HASH>;
-            key-positions = <30 31>;
+            key-positions = <26 27 28>;
             layers = <2 3 18 22>;
         };
 
         combo_hash_en {
             bindings = <&kp HASH>;
-            key-positions = <30 31>;
+            key-positions = <26 27 28>;
             layers = <0 1 17 21>;
         };
 
@@ -354,18 +354,18 @@
 
         combo_equal {
             bindings = <&kp EQUAL>;
-            key-positions = <26 27 28>;
+            key-positions = <18 19>;
         };
 
         combo_pipe_ru {
             bindings = <&en_kp PIPE>;
-            key-positions = <8 9 7>;
+            key-positions = <2 3 4>;
             layers = <2 3 18 22>;
         };
 
         combo_pipe_en {
             bindings = <&kp PIPE>;
-            key-positions = <7 8 9>;
+            key-positions = <2 3 4>;
             layers = <0 1 17 21>;
         };
     };
