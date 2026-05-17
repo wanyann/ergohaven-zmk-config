@@ -112,10 +112,10 @@
             layers = <0 1 21>;
         };
 
-        combo_singlequote_ru {
-            bindings = <&en_kp SINGLE_QUOTE>;
+        combo_asterisk_ru {
+            bindings = <&kp RU_ASTERISK>;
             timeout-ms = <30>;
-            key-positions = <7 6>;
+            key-positions = <30 31>;
             layers = <2 3 22 18>;
         };
 
@@ -125,10 +125,10 @@
             layers = <2 3 20 5>;
         };
 
-        combo_singequote_en {
-            bindings = <&kp SINGLE_QUOTE>;
+        combo_asterisk_en {
+            bindings = <&kp ASTERISK>;
             timeout-ms = <30>;
-            key-positions = <7 6>;
+            key-positions = <30 31>;
             layers = <0 1 17 21>;
         };
 
@@ -157,7 +157,7 @@
 
         combo_plus {
             bindings = <&kp PLUS>;
-            key-positions = <30 31>;
+            key-positions = <7 8>;
         };
 
         parentheses {
@@ -229,14 +229,14 @@
         };
 
         combo_quotes_en {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <7 8>;
+            bindings = <&quote_morph_en>;
+            key-positions = <7 6>;
             layers = <0 1 17 21>;
         };
 
         combo_quotes_ru {
-            bindings = <&kp RU_DOUBLE_QUOTES>;
-            key-positions = <7 8>;
+            bindings = <&quote_morph_ru>;
+            key-positions = <6 7>;
             layers = <2 3 22 18>;
         };
 
@@ -272,15 +272,15 @@
             layers = <2 3 17 21>;
         };
 
-        combo_backslash_ru {
-            bindings = <&kp RU_BACKSLASH>;
-            key-positions = <33 34>;
+        combo_slash_ru {
+            bindings = <&slash_morph_ru>;
+            key-positions = <21 22>;
             layers = <2 3 18 22>;
         };
 
-        combo_backslash_en {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <33 34>;
+        combo_slash_en {
+            bindings = <&slash_morph_en>;
+            key-positions = <22 21>;
             layers = <0 1 17 21>;
         };
 
@@ -1393,6 +1393,42 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
+        };
+
+        slash_morph_ru: slash_morph_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_MORPH_RU";
+            bindings = <&kp RU_SLASH>, <&kp RU_BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        slash_morph_en: slash_morph_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_MORPH_EN";
+            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        quote_morph_ru: quote_morph_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUOTE_MORPH_RU";
+            bindings = <&kp RU_DOUBLE_QUOTES>, <&en_kp SINGLE_QUOTE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        quote_morph_en: quote_morph_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUOTE_MORPH_EN";
+            bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
