@@ -115,7 +115,7 @@
         combo_asterisk_ru {
             bindings = <&kp RU_ASTERISK>;
             timeout-ms = <30>;
-            key-positions = <30 31>;
+            key-positions = <6 7>;
             layers = <2 3 22 18>;
         };
 
@@ -128,7 +128,7 @@
         combo_asterisk_en {
             bindings = <&kp ASTERISK>;
             timeout-ms = <30>;
-            key-positions = <30 31>;
+            key-positions = <6 7>;
             layers = <0 1 17 21>;
         };
 
@@ -230,13 +230,13 @@
 
         combo_quotes_en {
             bindings = <&quote_morph_en>;
-            key-positions = <7 6>;
+            key-positions = <30 31>;
             layers = <0 1 17 21>;
         };
 
         combo_quotes_ru {
             bindings = <&quote_morph_ru>;
-            key-positions = <6 7>;
+            key-positions = <30 31>;
             layers = <2 3 22 18>;
         };
 
