@@ -891,7 +891,7 @@
         mouse_off: mouse_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LG(F12))))>;
+            bindings = <&kp LA(F12)>;
             label = "MOUSE_OFF";
         };
 
@@ -942,14 +942,14 @@
         free: free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LA(LC(LG(F10))))>;
+            bindings = <&kp LA(F10)>;
             label = "FREE";
         };
 
         overlay: overlay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LG(LC(LA(F11))))>;
+            bindings = <&kp LA(F11)>;
             label = "OVERLAY";
         };
 
