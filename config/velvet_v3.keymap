@@ -959,14 +959,14 @@
         free: free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LS(F10))>;
+            bindings = <&kp LA(LS(F10)) &kp LA(F8)>;
             label = "FREE";
         };
 
         overlay: overlay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LS(F11))>;
+            bindings = <&kp LA(LS(F11)) &kp LA(F8)>;
             label = "OVERLAY";
         };
 
