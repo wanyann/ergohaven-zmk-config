@@ -380,8 +380,6 @@
                 <&to 2>;
 
             label = "LAYER_RU";
-            tap-ms = <40>;
-            wait-ms = <0>;
         };
 
         layer_en: layer_en {
@@ -393,8 +391,6 @@
                 <&to 0>;
 
             label = "LAYER_EN";
-            tap-ms = <40>;
-            wait-ms = <0>;
         };
 
         lg_ru: lg_ru {
@@ -402,8 +398,6 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N8))>;
             label = "LG_RU";
-            tap-ms = <40>;
-            wait-ms = <0>;
         };
 
         lg_en: lg_en {
@@ -411,17 +405,13 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N9))>;
             label = "LG_EN";
-            wait-ms = <0>;
-            tap-ms = <40>;
         };
 
-        en_kp: en {
+        en_kp: en_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&kp LS(LC(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N8))>;
-            label = "EN";
-            wait-ms = <10>;
-            tap-ms = <40>;
+            label = "EN_KP";
         };
 
         ru: ru {
@@ -429,14 +419,12 @@
             #binding-cells = <1>;
             bindings = <&kp LS(LC(N8)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N9))>;
             label = "RU";
-            tap-ms = <40>;
         };
 
         alt_tab: alt_tab {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&macro_wait_time 30>,
                 <&macro_press>,
                 <&kp LEFT_ALT>,
                 <&macro_tap>,
@@ -445,7 +433,6 @@
                 <&kp LEFT_ALT>;
 
             label = "ALT_TAB";
-            tap-ms = <30>;
         };
 
         select_row: select_row {
@@ -453,7 +440,6 @@
             #binding-cells = <0>;
             bindings = <&kp END &kp LS(HOME)>;
             label = "SELECT_ROW";
-            wait-ms = <0>;
         };
 
         en_code: en_code_block {
@@ -461,7 +447,6 @@
             #binding-cells = <0>;
             bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW>;
             label = "EN_CODE_BLOCK";
-            tap-ms = <50>;
         };
 
         ru_code: ru_code {
@@ -469,8 +454,6 @@
             #binding-cells = <0>;
             bindings = <&lg_en &kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW &lg_ru>;
             label = "RU_CODE";
-            tap-ms = <50>;
-            wait-ms = <10>;
         };
 
         ru_cw_off: ru_cw_off {
@@ -478,7 +461,6 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 2 &mouse_off>;
             label = "RU_CW_OFF";
-            wait-ms = <0>;
         };
 
         en_cw_off: en_cw_off {
@@ -486,7 +468,6 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0 &mouse_off>;
             label = "EN_CW_OFF";
-            wait-ms = <0>;
         };
 
         zeros_macro: zeros_macro {
