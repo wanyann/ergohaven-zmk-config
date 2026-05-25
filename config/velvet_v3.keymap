@@ -891,7 +891,7 @@
         mouse_off: mouse_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LS(F12))>;
+            bindings = <&kp LA(F12)>;
             label = "MOUSE_OFF";
         };
 
