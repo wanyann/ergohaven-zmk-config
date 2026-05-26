@@ -538,7 +538,6 @@
             label = "LESS_GREATER_RU";
         };
 
-
         kp_layeroff: cancel_msoff {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
@@ -1026,9 +1025,9 @@
             flavor = "balanced";
         };
 
-        space_mrph: space_mrph {
+        space_morph: space_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "SPACE_MRPH";
+            label = "SPACE_MORPH";
             bindings = <&kp SPACE>, <&kp TAB>;
 
             #binding-cells = <0>;
@@ -1050,7 +1049,7 @@
         space_lt: space_lt {
             compatible = "zmk,behavior-hold-tap";
             label = "SPACE_LT";
-            bindings = <&mo>, <&space_mrph>;
+            bindings = <&mo>, <&space_morph>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
