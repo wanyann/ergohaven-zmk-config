@@ -869,21 +869,33 @@
         mouseoff_sl: mouseoff_sl {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER &mouse_off>;
+            bindings =
+                <&mouse_off>,
+                <&macro_tap_time 1>,
+                <&macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
+
             label = "MOUSEOFF_SL";
         };
 
         mouseoff_kp_ru: mouseoff_kp_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&mouse_off &to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 1>,
+                <&to 2>;
+
             label = "MOUSEOFF_KP_RU";
         };
 
         mouseoff_kp_en: mouseoff_kp_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&mouse_off &to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 1>,
+                <&to 0>;
+
             label = "MOUSEOFF_KP_EN";
         };
 
