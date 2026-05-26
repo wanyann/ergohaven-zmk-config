@@ -633,6 +633,7 @@
             #binding-cells = <1>;
             bindings = <&out OUT_BLE &macro_param_1to2 &bt BT_SEL MACRO_PLACEHOLDER>;
             label = "BT_SET";
+            tap-ms = <20>;
         };
 
         arrow_en: arrow_en {
@@ -652,11 +653,7 @@
         bt_set_en: bt_set_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER>,
-                <&macro_wait_time 45>,
-                <&layer_off 24 &lg_en &lg_en>;
-
+            bindings = <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_off 24 &lg_en &lg_en>;
             label = "BT_SET_en";
             wait-ms = <45>;
             tap-ms = <40>;
@@ -677,11 +674,7 @@
         bt_set_ru: bt_set_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER>,
-                <&macro_wait_time 45>,
-                <&layer_off 24 &lg_ru &lg_ru>;
-
+            bindings = <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_off 24 &lg_ru &lg_ru>;
             label = "BT_SET_RU";
             wait-ms = <45>;
             tap-ms = <40>;
@@ -728,28 +721,44 @@
         kp_m1_ru: kp_m1_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 6>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 1>,
+                <&to 6>;
+
             label = "KP_M1_RU";
         };
 
         kp_m2_ru: kp_m2_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 7>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 1>,
+                <&to 7>;
+
             label = "kp_m2_ru";
         };
 
         kp_sub_ru: kp_sub_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 2>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 1>,
+                <&to 2>;
+
             label = "kp_sub_ru";
         };
 
         kp_to: kp_to {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &macro_param_2to1 &to MACRO_PLACEHOLDER>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 1>,
+                <&macro_param_2to1 &to MACRO_PLACEHOLDER>;
+
             label = "KP_TO";
         };
 
@@ -776,35 +785,55 @@
         kp_m1_en: kp_m1_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 11>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 1>,
+                <&to 11>;
+
             label = "KP_M1_EN";
         };
 
         kp_m2_en: kp_m2_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 12>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 1>,
+                <&to 12>;
+
             label = "KP_M2_EN";
         };
 
         kp_sub_en: kp_sub_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 1>,
+                <&to 0>;
+
             label = "KP_SUB_EN";
         };
 
         r_to: r_to {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&long_kp RU_CYRILLIC_ER &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            bindings =
+                <&long_kp RU_CYRILLIC_ER>,
+                <&macro_tap_time 1>,
+                <&macro_param_1to1 &to MACRO_PLACEHOLDER>;
+
             label = "R_TO";
         };
 
         space_to: space_to {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&long_kp SPACE &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            bindings =
+                <&long_kp SPACE>,
+                <&macro_tap_time 1>,
+                <&macro_param_1to1 &to MACRO_PLACEHOLDER>;
+
             label = "SPACE_TO";
         };
 
@@ -819,28 +848,43 @@
         free_move_to: free_move_to {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp MINUS &macro_param_1to1 &to MACRO_PLACEHOLDER &free>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &to MACRO_PLACEHOLDER>,
+                <&macro_tap_time 40>,
+                <&kp MINUS &free>;
+
             label = "FREE_MOVE_TO";
+            tap-ms = <1>;
         };
 
         drag_on: drag_layer {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &layer_on MACRO_PLACEHOLDER &sticky_drag N0>;
+            bindings =
+                <&sticky_drag N0>,
+                <&macro_tap_time 1>,
+                <&macro_param_1to1 &layer_on MACRO_PLACEHOLDER>;
+
             label = "DRAG_LAYER";
         };
 
         drag_off: drag_off {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &layer_off MACRO_PLACEHOLDER &kp K_CANCEL>;
+            bindings = <&kp K_CANCEL &macro_param_1to1 &layer_off MACRO_PLACEHOLDER>;
             label = "DRAG_OFF";
+            tap-ms = <1>;
         };
 
         back_drag_off: back_drag_off {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp BACKSPACE &macro_param_1to1 &drag_off MACRO_PLACEHOLDER>;
+            bindings =
+                <&kp BACKSPACE>,
+                <&macro_tap_time 1>,
+                <&macro_param_1to1 &drag_off MACRO_PLACEHOLDER>;
+
             label = "BACK_DRAG_OFF";
         };
 
