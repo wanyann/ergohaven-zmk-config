@@ -723,7 +723,7 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &free>, <&macro_tap_time 1>, <&to 4>;
+            bindings = <&free>, <&macro_tap_time 1>, <&to 4>;
 
             label = "MACRO_MLESS_FREE";
             wait-ms = <0>;
@@ -733,7 +733,7 @@
         ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &overlay>, <&macro_tap_time 1>, <&to 5>;
+            bindings = <&overlay>, <&macro_tap_time 1>, <&to 5>;
 
             label = "MACRO_MLESS_OVER";
             wait-ms = <0>;
@@ -787,7 +787,7 @@
         ms_free_en: ms_free_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &free>, <&macro_tap_time 1>, <&to 9>;
+            bindings = <&free>, <&macro_tap_time 1>, <&to 9>;
 
             label = "ms_free_en";
             wait-ms = <0>;
@@ -797,7 +797,7 @@
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &overlay>, <&macro_tap_time 1>, <&to 10>;
+            bindings = <&overlay>, <&macro_tap_time 1>, <&to 10>;
 
             label = "ms_over_en";
             wait-ms = <0>;
@@ -859,8 +859,6 @@
             label = "SPACE_TO";
         };
 
-
-
         free_move_to: free_move_to {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -919,7 +917,6 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &free>;
             label = "KP_FREE";
         };
-
 
         mouseoff_sl: mouseoff_sl {
             compatible = "zmk,behavior-macro-two-param";
