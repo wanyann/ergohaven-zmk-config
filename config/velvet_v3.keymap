@@ -432,6 +432,28 @@
             tap-ms = <40>;
         };
 
+        mouse_off: mouse_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&modkp LEFT_ALT F12>;
+            label = "MOUSE_OFF";
+            tap-ms = <40>;
+        };
+
+        free: free {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&modkp LEFT_ALT F10>;
+            label = "FREE";
+        };
+
+        overlay: overlay {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&modkp LEFT_ALT F11>;
+            label = "OVERLAY";
+        };
+
         select_row: select_row {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -837,13 +859,7 @@
             label = "SPACE_TO";
         };
 
-        mouse_off: mouse_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&modkp LEFT_ALT F12>;
-            label = "MOUSE_OFF";
-            tap-ms = <40>;
-        };
+
 
         free_move_to: free_move_to {
             compatible = "zmk,behavior-macro-one-param";
@@ -904,19 +920,6 @@
             label = "KP_FREE";
         };
 
-        free: free {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&modkp LEFT_ALT F10>;
-            label = "FREE";
-        };
-
-        overlay: overlay {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&modkp LEFT_ALT F11>;
-            label = "OVERLAY";
-        };
 
         mouseoff_sl: mouseoff_sl {
             compatible = "zmk,behavior-macro-two-param";
