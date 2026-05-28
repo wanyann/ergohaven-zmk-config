@@ -437,6 +437,7 @@
             #binding-cells = <0>;
             bindings = <&kp LA(F12)>;
             label = "MOUSE_OFF";
+            tap-ms = <15>;
         };
 
         free: free {
@@ -444,6 +445,7 @@
             #binding-cells = <0>;
             bindings = <&kp LA(F10)>;
             label = "FREE";
+            tap-ms = <15>;
         };
 
         overlay: overlay {
@@ -451,6 +453,7 @@
             #binding-cells = <0>;
             bindings = <&kp LA(F11)>;
             label = "OVERLAY";
+            tap-ms = <15>;
         };
 
         select_row: select_row {
@@ -722,7 +725,7 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &free>, <&macro_tap_time 1>, <&to 4>;
+            bindings = <&free>, <&macro_tap_time 1>, <&to 4>;
 
             label = "MACRO_MLESS_FREE";
         };
@@ -730,7 +733,7 @@
         ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &overlay>, <&macro_tap_time 1>, <&to 5>;
+            bindings = <&overlay>, <&macro_tap_time 1>, <&to 5>;
 
             label = "MACRO_MLESS_OVER";
         };
@@ -738,7 +741,7 @@
         ms_free_en: ms_free_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &free>, <&macro_tap_time 1>, <&to 9>;
+            bindings = <&free>, <&macro_tap_time 1>, <&to 9>;
 
             label = "ms_free_en";
         };
@@ -746,7 +749,7 @@
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &overlay>, <&macro_tap_time 1>, <&to 10>;
+            bindings = <&overlay>, <&macro_tap_time 1>, <&to 10>;
 
             label = "ms_over_en";
         };
