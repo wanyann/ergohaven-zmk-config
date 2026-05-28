@@ -122,7 +122,7 @@
         combo_ms_free_ru {
             bindings = <&ms_free_ru>;
             key-positions = <32 33>;
-            layers = <2 3 20 5>;
+            layers = <2 3 20 5 6 7 8 24 22 23>;
         };
 
         combo_asterisk_en {
@@ -243,7 +243,7 @@
         combo_ms_over_ru {
             bindings = <&ms_over_ru>;
             key-positions = <20 21>;
-            layers = <2 3 4>;
+            layers = <2 3 4 24 22 20 23>;
             require-prior-idle-ms = <50>;
             timeout-ms = <30>;
         };
@@ -341,13 +341,13 @@
         combo_ms_free_en {
             bindings = <&ms_free_en>;
             key-positions = <32 33>;
-            layers = <0 1 10>;
+            layers = <0 1 10 11 12 13 19 21 25 23>;
         };
 
         combo_ms_over_en {
             bindings = <&ms_over_en>;
             key-positions = <20 21>;
-            layers = <0 1 9>;
+            layers = <0 1 9 25 21 19 23>;
             require-prior-idle-ms = <50>;
             timeout-ms = <30>;
         };
