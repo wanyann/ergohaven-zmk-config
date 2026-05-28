@@ -443,7 +443,7 @@
         free: free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F10) &kp LA(F10)>;
+            bindings = <&kp LA(F10)>;
             label = "FREE";
             wait-ms = <10>;
         };
@@ -451,7 +451,7 @@
         overlay: overlay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F11) &kp LA(F11)>;
+            bindings = <&kp LA(F11)>;
             label = "OVERLAY";
             wait-ms = <10>;
         };
