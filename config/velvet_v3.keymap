@@ -725,8 +725,6 @@
             bindings = <&mouse_off &free>, <&macro_tap_time 1>, <&to 4>;
 
             label = "MACRO_MLESS_FREE";
-            wait-ms = <0>;
-            tap-ms = <100>;
         };
 
         ms_over_ru: macro_mless_over {
@@ -735,8 +733,6 @@
             bindings = <&mouse_off &overlay>, <&macro_tap_time 1>, <&to 5>;
 
             label = "MACRO_MLESS_OVER";
-            wait-ms = <0>;
-            tap-ms = <100>;
         };
 
         ms_free_en: ms_free_en {
@@ -745,8 +741,6 @@
             bindings = <&mouse_off &free>, <&macro_tap_time 1>, <&to 9>;
 
             label = "ms_free_en";
-            wait-ms = <0>;
-            tap-ms = <100>;
         };
 
         ms_over_en: ms_over_en {
@@ -755,8 +749,6 @@
             bindings = <&mouse_off &overlay>, <&macro_tap_time 1>, <&to 10>;
 
             label = "ms_over_en";
-            wait-ms = <0>;
-            tap-ms = <100>;
         };
 
         kp_m1_ru: kp_m1_ru {
