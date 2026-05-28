@@ -435,7 +435,7 @@
         mouse_off: mouse_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&modkp LEFT_ALT F12>;
+            bindings = <&kp LA(F12)>;
             label = "MOUSE_OFF";
             tap-ms = <40>;
         };
@@ -443,14 +443,14 @@
         free: free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&modkp LEFT_ALT F10 &modkp LEFT_ALT F10>;
+            bindings = <&kp LA(F10) &kp LA(F10)>;
             label = "FREE";
         };
 
         overlay: overlay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&modkp LEFT_ALT F11 &modkp LEFT_ALT F11>;
+            bindings = <&kp LA(F11) &kp LA(F11)>;
             label = "OVERLAY";
         };
 
