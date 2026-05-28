@@ -33,27 +33,27 @@
         compatible = "zmk,combos";
 
         combo_ctrl_ent {
-            bindings = <&kp LC(ENTER)>;
+            bindings = <&long_kp LC(ENTER)>;
             key-positions = <2 4>;
             require-prior-idle-ms = <30>;
         };
 
         combo_enter {
-            bindings = <&kp ENTER>;
+            bindings = <&long_kp ENTER>;
             key-positions = <3 2>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
 
         combo_tab {
-            bindings = <&kp TAB>;
+            bindings = <&long_kp TAB>;
             key-positions = <14 15>;
             require-prior-idle-ms = <50>;
             timeout-ms = <30>;
         };
 
         combo_esc {
-            bindings = <&kp ESC>;
+            bindings = <&long_kp ESC>;
             key-positions = <26 27>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
