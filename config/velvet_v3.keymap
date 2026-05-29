@@ -376,8 +376,6 @@
                 <&to 2>;
 
             label = "LAYER_RU";
-            tap-ms = <40>;
-            wait-ms = <0>;
         };
 
         layer_en: layer_en {
@@ -389,8 +387,6 @@
                 <&to 0>;
 
             label = "LAYER_EN";
-            tap-ms = <40>;
-            wait-ms = <0>;
         };
 
         lg_ru: lg_ru {
@@ -398,8 +394,6 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N8))>;
             label = "LG_RU";
-            tap-ms = <40>;
-            wait-ms = <0>;
         };
 
         lg_en: lg_en {
@@ -407,8 +401,6 @@
             #binding-cells = <0>;
             bindings = <&kp LS(LC(N9))>;
             label = "LG_EN";
-            wait-ms = <0>;
-            tap-ms = <40>;
         };
 
         en_kp: en_kp {
@@ -416,8 +408,6 @@
             #binding-cells = <1>;
             bindings = <&kp LS(LC(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N8))>;
             label = "EN_KP";
-            wait-ms = <10>;
-            tap-ms = <40>;
         };
 
         ru_kp: ru_kp {
@@ -425,7 +415,6 @@
             #binding-cells = <1>;
             bindings = <&kp LS(LC(N8)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N9))>;
             label = "RU_KP";
-            tap-ms = <40>;
         };
 
         mouse_off: mouse_off {
@@ -433,7 +422,6 @@
             #binding-cells = <0>;
             bindings = <&kp LA(F12)>;
             label = "MOUSE_OFF";
-            tap-ms = <40>;
         };
 
         free: free {
@@ -441,7 +429,6 @@
             #binding-cells = <0>;
             bindings = <&kp LA(F10)>;
             label = "FREE";
-            tap-ms = <15>;
         };
 
         overlay: overlay {
@@ -449,7 +436,6 @@
             #binding-cells = <0>;
             bindings = <&kp LA(F11)>;
             label = "OVERLAY";
-            tap-ms = <15>;
         };
 
         select_row: select_row {
