@@ -1050,7 +1050,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            hold-trigger-key-positions = <1 2 3 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29 30 31 32 33 34 42 43 39>;
+            hold-trigger-key-positions = <1 2 3 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29 30 31 32 33 34 42 39 41>;
         };
 
         layer_on: layer_on {
@@ -1610,10 +1610,10 @@
 
         Mods {
             bindings = <
-&trans  &kp Q             &kp W             &kp E              &kp R         &kp T                             &kp Y  &kp U              &kp I              &kp O             &kp P                &trans
-&trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                             &kp H  &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
-&trans  &kp Z             &kp X             &kp C              &kp V         &kp B                             &kp N  &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
-                          &trans            &trans             &trans        &space_lt 14 0  &trans    &trans  &none  &trans             &trans             &trans
+&trans  &kp Q             &kp W             &kp E              &kp R         &kp T                                  &kp Y  &kp U              &kp I              &kp O             &kp P                &trans
+&trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                                  &kp H  &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
+&trans  &kp Z             &kp X             &kp C              &kp V         &kp B                                  &kp N  &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
+                          &trans            &trans             &trans        &space_lt 14 0  &trans    &bspc_morph  &none  &trans             &trans             &trans
             >;
 
             display-name = "Mod";
