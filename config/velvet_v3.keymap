@@ -433,7 +433,7 @@
             #binding-cells = <0>;
             bindings = <&kp LA(F12)>;
             label = "MOUSE_OFF";
-            tap-ms = <15>;
+            tap-ms = <40>;
         };
 
         free: free {
