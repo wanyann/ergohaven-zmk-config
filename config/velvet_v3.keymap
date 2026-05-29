@@ -939,22 +939,24 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&sticky_drag N0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&sk N0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 5>,
                 <&to 5>;
 
             label = "DRAG_SUB_RU";
+            wait-ms = <15>;
         };
 
         drag_sub_en: drag_sub_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&sticky_drag N0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&sk N0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 5>,
                 <&to 10>;
 
             label = "DRAG_SUB_EN";
+            wait-ms = <15>;
         };
     };
 
@@ -1282,6 +1284,7 @@
             #binding-cells = <1>;
             release-after-ms = <10000>;
             ignore-modifiers;
+            quick-release;
         };
 
         mt_mouseoff_ru: mt_mouseoff_ru {
