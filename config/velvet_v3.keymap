@@ -948,6 +948,36 @@
             label = "FREE_KP";
             wait-ms = <0>;
         };
+
+        drag_sub_ru: drag_sub_ru {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp N0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp N0>,
+                <&macro_tap>,
+                <&macro_tap_time 1>,
+                <&to 2>;
+
+            label = "DRAG_SUB_RU";
+        };
+
+        drag_sub_en: drag_sub_en {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp N0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp N0>,
+                <&macro_tap>,
+                <&macro_tap_time 1>,
+                <&to 0>;
+
+            label = "DRAG_SUB_EN";
+        };
     };
 
     behaviors {
@@ -1395,6 +1425,26 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        mt_sub_ru: mt_sub_ru {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_SUB_RU";
+            bindings = <&drag_sub_ru>, <&kp_sub_ru>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        mt_sub_en: mt_sub_en {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MT_SUB_EN";
+            bindings = <&drag_sub_en>, <&kp_sub_en>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -1478,10 +1528,10 @@
         MSub_ru {
             display-name = "MSub_ru";
             bindings = <
-&none              &kp RU_CYRILLIC_TSE      &kp_sub_ru RU_CYRILLIC_SOFT_SIGN  &kp_sub_ru RU_CYRILLIC_YA  &kp_sub_ru RU_CYRILLIC_A     &kp RU_CYRILLIC_YU                               &kp RU_CYRILLIC_ZE  &kp_sub_ru RU_CYRILLIC_VE  &kp_sub_ru RU_CYRILLIC_KA  &kp_sub_ru RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
-&kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp_sub_ru RU_CYRILLIC_I          &kp_sub_ru RU_CYRILLIC_IE  &kp_sub_ru RU_CYRILLIC_O     &kp RU_BACKSLASH                                 &kp RU_CYRILLIC_EL  &kp_sub_ru RU_CYRILLIC_EN  &kp_sub_ru RU_CYRILLIC_TE  &kp_sub_ru RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
-&none              &kp RU_CYRILLIC_EF       &kp_sub_ru RU_CYRILLIC_U          &kp_sub_ru RU_CYRILLIC_HA  &kp_sub_ru RU_CYRILLIC_YERU  &kp RU_DOT                                       &kp RU_CYRILLIC_BE  &kp_sub_ru RU_CYRILLIC_EM  &kp_sub_ru RU_CYRILLIC_PE  &kp_sub_ru RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                            &trans                     &none                        &space_nav_to 14 2  &drag_on 8    &kp_to BSPC 6  &move_nav 18 4      &trans                     &trans                     &trans
+&none              &kp RU_CYRILLIC_TSE      &mt_sub_ru RU_CYRILLIC_SOFT_SIGN RU_CYRILLIC_SOFT_SIGN  &mt_sub_ru RU_CYRILLIC_YA RU_CYRILLIC_YA  &mt_sub_ru RU_CYRILLIC_A RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                          &kp RU_CYRILLIC_ZE  &mt_sub_ru RU_CYRILLIC_VE RU_CYRILLIC_VE  &mt_sub_ru RU_CYRILLIC_KA RU_CYRILLIC_KA  &mt_sub_ru RU_CYRILLIC_DE RU_CYRILLIC_DE    &kp RU_CYRILLIC_SHCHA  &trans
+&kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &mt_sub_ru RU_CYRILLIC_I RU_CYRILLIC_I                  &mt_sub_ru RU_CYRILLIC_IE RU_CYRILLIC_IE  &mt_sub_ru RU_CYRILLIC_O RU_CYRILLIC_O        &kp RU_BACKSLASH                            &kp RU_CYRILLIC_EL  &mt_sub_ru RU_CYRILLIC_EN RU_CYRILLIC_EN  &mt_sub_ru RU_CYRILLIC_TE RU_CYRILLIC_TE  &mt_sub_ru RU_CYRILLIC_ES RU_CYRILLIC_ES    &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
+&none              &kp RU_CYRILLIC_EF       &mt_sub_ru RU_CYRILLIC_U RU_CYRILLIC_U                  &mt_sub_ru RU_CYRILLIC_HA RU_CYRILLIC_HA  &mt_sub_ru RU_CYRILLIC_YERU RU_CYRILLIC_YERU  &kp RU_DOT                                  &kp RU_CYRILLIC_BE  &mt_sub_ru RU_CYRILLIC_EM RU_CYRILLIC_EM  &mt_sub_ru RU_CYRILLIC_PE RU_CYRILLIC_PE  &mt_sub_en RU_CYRILLIC_GHE RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
+                                            &trans                                                  &trans                                    &none                                         &space_nav_to 14 2  &none    &kp_to BSPC 6  &move_nav 18 4      &trans                                    &trans                                    &trans
             >;
         };
 
