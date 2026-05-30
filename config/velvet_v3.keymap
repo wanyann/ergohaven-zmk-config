@@ -22,7 +22,7 @@
 };
 
 &sk {
-    release-after-ms = <1000>;
+    release-after-ms = <30000>;
     quick-release;
 };
 
@@ -671,7 +671,8 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_param_1to1 &sk MACRO_PLACEHOLDER>,
-                <&macro_pause_for_release>;
+                <&macro_pause_for_release>,
+                <&kp K_CANCEL>;
 
             label = "ONE_SHOT_KEY";
             tap-ms = <1>;
@@ -958,6 +959,13 @@
 
             label = "DRAG_SUB_EN";
         };
+
+        tab_shift: tab_shift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &sk LEFT_SHIFT>;
+            label = "TAB_SHIFT";
+        };
     };
 
     behaviors {
@@ -1146,7 +1154,7 @@
         space_morph: space_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "SPACE_MORPH";
-            bindings = <&kp SPACE>, <&kp TAB>;
+            bindings = <&kp SPACE>, <&tab_morph>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LALT|MOD_LSFT|MOD_RALT|MOD_LCTL|MOD_RGUI|MOD_RCTL|MOD_LGUI)>;
@@ -1393,6 +1401,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+        };
+
+        tab_morph: tab_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "TAB_MORPH";
+            bindings = <&kp TAB>, <&tab_shift>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
         };
     };
 
