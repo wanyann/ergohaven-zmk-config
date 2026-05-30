@@ -1416,6 +1416,66 @@
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
         };
+
+        up_morph: up_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "UP_MORPH";
+            bindings = <&kp UP>, <&kp_shift UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
+        };
+
+        down_morph: down_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DOWN_MORPH";
+            bindings = <&kp DOWN>, <&kp_shift DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
+        };
+
+        right_morph: right_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "RIGHT_MORPH";
+            bindings = <&kp RIGHT>, <&kp_shift RIGHT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
+        };
+
+        left_morph: left_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "LEFT_MORPH";
+            bindings = <&kp LEFT_ARROW>, <&kp_shift LEFT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
+        };
+
+        home_morph: home_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "HOME_MORPH";
+            bindings = <&kp HOME>, <&kp_shift HOME>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
+        };
+
+        end_morph: end_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "END_MORPH";
+            bindings = <&kp END>, <&kp_shift END>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -1568,7 +1628,7 @@
 
         Nav_ru {
             bindings = <
-&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                    &none               &kp HOME      &kp UP         &kp END      &kp DELETE   &trans
+&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                    &none               &kp HOME      &up_morph      &kp END      &kp DELETE   &trans
 &trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                &kp K_CONTEXT_MENU  &kp LEFT      &kp DOWN       &kp RIGHT    &select_row  &trans
 &trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                          &kp LC(F8)          &kp CAPSLOCK  &kp PAGE_DOWN  &kp PAGE_UP  &trans       &trans
                                         &trans                           &trans                   &trans                    &none               &none    &kp LA(ENTER)  &alt_spc_ru         &trans        &trans         &trans
