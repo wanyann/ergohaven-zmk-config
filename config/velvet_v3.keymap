@@ -1187,7 +1187,7 @@
         hrs_l: hrs_l {
             compatible = "zmk,behavior-hold-tap";
             label = "HRS_L";
-            bindings = <&one_shot>, <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
@@ -1198,7 +1198,7 @@
         hrs_r: hrs_r {
             compatible = "zmk,behavior-hold-tap";
             label = "HRS_R";
-            bindings = <&one_shot>, <&kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <170>;
