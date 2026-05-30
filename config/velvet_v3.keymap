@@ -1226,37 +1226,6 @@
             flavor = "tap-preferred";
         };
 
-        mless_free: mless_free {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MLESS_FREE";
-            bindings = <&ml>, <&ms_free_ru>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-        };
-
-        hrml_free: hrml_free {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRML_FREE";
-            bindings = <&mless_free>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        hrml_over: hrml_over {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HRML_OVER";
-            bindings = <&ml>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-            hold-trigger-key-positions = <1 2 3 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29 30 31 32 33 34 42 43 39>;
-        };
-
         space_nav_to: space_nav_to {
             compatible = "zmk,behavior-hold-tap";
             label = "SPACE_NAV_TO";
