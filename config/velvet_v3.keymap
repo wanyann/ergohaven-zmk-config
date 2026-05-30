@@ -960,11 +960,15 @@
             label = "DRAG_SUB_EN";
         };
 
-        tab_shift: tab_shift {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp TAB &sk LEFT_SHIFT>;
-            label = "TAB_SHIFT";
+        kp_shift: kp_shift {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 5>,
+                <&sk LEFT_SHIFT>;
+
+            label = "KP_SHIFT";
         };
     };
 
@@ -1406,7 +1410,7 @@
         tab_morph: tab_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "TAB_MORPH";
-            bindings = <&kp TAB>, <&tab_shift>;
+            bindings = <&kp TAB>, <&kp_shift TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
