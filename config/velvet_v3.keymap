@@ -22,7 +22,7 @@
 };
 
 &sk {
-    release-after-ms = <1>;
+    release-after-ms = <10>;
     quick-release;
 };
 
