@@ -659,8 +659,8 @@
                 <&macro_pause_for_release>,
                 <&kp K_CANCEL>;
 
-            label = "ONE_SHOT_KEY";
-            tap-ms = <5>;
+            label = "ONE_SHOT";
+            tap-ms = <1>;
             wait-ms = <0>;
         };
 
