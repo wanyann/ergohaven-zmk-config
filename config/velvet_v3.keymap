@@ -1158,7 +1158,7 @@
         space_morph: space_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "SPACE_MORPH";
-            bindings = <&kp SPACE>, <&kp TAB>;
+            bindings = <&kp SPACE>, <&tab_morph>;
 
             #binding-cells = <0>;
             mods = <(MOD_RSFT|MOD_LALT|MOD_LSFT|MOD_RALT|MOD_LCTL|MOD_RGUI|MOD_RCTL|MOD_LGUI)>;
@@ -1410,71 +1410,11 @@
         tab_morph: tab_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "TAB_MORPH";
-            bindings = <&kp TAB>, <&kp_shift TAB>;
+            bindings = <&kp TAB>, <&kp LS(TAB)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
-        };
-
-        up_morph: up_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "UP_MORPH";
-            bindings = <&kp UP>, <&kp_shift UP>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
-        };
-
-        down_morph: down_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOWN_MORPH";
-            bindings = <&kp DOWN>, <&kp_shift DOWN>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
-        };
-
-        right_morph: right_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "RIGHT_MORPH";
-            bindings = <&kp RIGHT>, <&kp_shift RIGHT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
-        };
-
-        left_morph: left_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "LEFT_MORPH";
-            bindings = <&kp LEFT_ARROW>, <&kp_shift LEFT>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
-        };
-
-        home_morph: home_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "HOME_MORPH";
-            bindings = <&kp HOME>, <&kp_shift HOME>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
-        };
-
-        end_morph: end_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "END_MORPH";
-            bindings = <&kp END>, <&kp_shift END>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
     };
 
