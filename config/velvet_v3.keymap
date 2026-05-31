@@ -959,17 +959,6 @@
 
             label = "DRAG_SUB_EN";
         };
-
-        kp_shift: kp_shift {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings =
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap_time 5>,
-                <&sk LEFT_SHIFT>;
-
-            label = "KP_SHIFT";
-        };
     };
 
     behaviors {
