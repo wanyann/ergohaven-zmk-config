@@ -226,13 +226,13 @@
 
         combo_quotes_en {
             bindings = <&quote_morph_en>;
-            key-positions = <30 31>;
+            key-positions = <31 32>;
             layers = <0 1 15 19>;
         };
 
         combo_quotes_ru {
             bindings = <&quote_morph_ru>;
-            key-positions = <30 31>;
+            key-positions = <31 32>;
             layers = <2 3 20 16>;
         };
 
@@ -245,13 +245,13 @@
         };
 
         combo_en_semi {
-            bindings = <&kp SEMI>;
+            bindings = <&semi_morph_en>;
             key-positions = <27 28>;
             layers = <0 1 15 19>;
         };
 
         combo_ru_semi {
-            bindings = <&kp RU_SEMI>;
+            bindings = <&semi_morph_ru>;
             key-positions = <27 28>;
             layers = <2 3 16 20>;
         };
@@ -312,7 +312,7 @@
 
         combo_dollar_en {
             bindings = <&kp DOLLAR>;
-            key-positions = <19 20 21>;
+            key-positions = <19 20 21 40 41>;
             layers = <0 1 15 19>;
         };
 
@@ -1280,6 +1280,24 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+        };
+
+        semi_morph_ru: semi_morph_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMI_MORPH_RU";
+            bindings = <&kp RU_SEMI>, <&kp RU_COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        semi_morph_en: semi_morph_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMI_MORPH_EN";
+            bindings = <&kp SEMI>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
         };
     };
 
