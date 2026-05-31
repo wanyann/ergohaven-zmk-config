@@ -63,12 +63,14 @@
             bindings = <&layer_ru>;
             key-positions = <15 16>;
             timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
         };
 
         combo_en {
             bindings = <&layer_en>;
             key-positions = <19 20>;
             timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
         };
 
         combo_osl_sym_en {
