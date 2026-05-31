@@ -312,7 +312,7 @@
 
         combo_dollar_en {
             bindings = <&kp DOLLAR>;
-            key-positions = <19 20 21 40 41>;
+            key-positions = <19 20 21>;
             layers = <0 1 15 19>;
         };
 
@@ -336,7 +336,7 @@
 
         combo_ms_free_en {
             bindings = <&none>;
-            key-positions = <32 33>;
+            key-positions = <>;
             layers = <0 1 9 10 11 17 19 23 21>;
         };
 
