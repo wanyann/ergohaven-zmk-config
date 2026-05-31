@@ -190,7 +190,7 @@
 
         combo_minus {
             bindings = <&kp MINUS>;
-            key-positions = <3 4>;
+            key-positions = <31 32>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
@@ -228,13 +228,13 @@
 
         combo_quotes_en {
             bindings = <&quote_morph_en>;
-            key-positions = <31 32>;
+            key-positions = <7 8>;
             layers = <0 1 15 19>;
         };
 
         combo_quotes_ru {
             bindings = <&quote_morph_ru>;
-            key-positions = <31 32>;
+            key-positions = <7 8>;
             layers = <2 3 20 16>;
         };
 
@@ -352,7 +352,7 @@
 
         combo_equal {
             bindings = <&kp EQUAL>;
-            key-positions = <7 8>;
+            key-positions = <3 4>;
         };
 
         combo_pipe_ru {
