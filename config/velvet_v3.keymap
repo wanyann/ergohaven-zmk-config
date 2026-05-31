@@ -675,7 +675,7 @@
                 <&kp K_CANCEL>;
 
             label = "ONE_SHOT_KEY";
-            tap-ms = <1>;
+            tap-ms = <5>;
             wait-ms = <0>;
         };
 
