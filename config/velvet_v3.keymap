@@ -959,41 +959,37 @@
         en_dot_excl: en_dot_excl {
             compatible = "zmk,behavior-mod-morph";
             label = "EN_DOT_EXCL";
-            bindings = <&en_cw_off DOT>, <&en_excl_col>;
+            bindings = <&en_dot_col>, <&en_cw_off EXCL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RALT)>;
-            keep-mods = <(MOD_RALT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         en_com_ques: en_com_ques {
             compatible = "zmk,behavior-mod-morph";
             label = "EN_COM_QUES";
-            bindings = <&en_cw_off COMMA>, <&en_ques_semi>;
+            bindings = <&en_com_semi>, <&en_cw_off QUESTION>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RALT)>;
-            keep-mods = <(MOD_RALT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         ru_dot_excl: ru_dot_excl {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_DOT_EXCL";
-            bindings = <&ru_cw_off RU_DOT>, <&ru_excl_col>;
+            bindings = <&ru_dot_col>, <&ru_cw_off RU_EXCL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RALT)>;
-            keep-mods = <(MOD_RALT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         ru_com_ques: ru_com_ques {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_COM_QUES";
-            bindings = <&ru_cw_off RU_COMMA>, <&ru_ques_semi>;
+            bindings = <&ru_com_semi>, <&ru_cw_off RU_QUESTION>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT|MOD_RALT)>;
-            keep-mods = <(MOD_RALT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         ru_dot_mt: ru_dot_mt {
@@ -1306,37 +1302,37 @@
             mods = <(MOD_LSFT)>;
         };
 
-        en_excl_col: en_excl_col {
+        en_dot_col: en_dot_col {
             compatible = "zmk,behavior-mod-morph";
-            label = "EN_EXCL_COL";
-            bindings = <&en_cw_off EXCL>, <&en_cw_off COLON>;
+            label = "EN_DOT_COL";
+            bindings = <&en_cw_off DOT>, <&en_cw_off COLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
         };
 
-        en_ques_semi: en_ques_semi {
+        en_com_semi: en_com_semi {
             compatible = "zmk,behavior-mod-morph";
-            label = "EN_QUES_SEMI";
-            bindings = <&en_cw_off QUESTION>, <&en_cw_off SEMI>;
+            label = "EN_COM_SEMI";
+            bindings = <&en_cw_off COMMA>, <&en_cw_off SEMI>;
 
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
         };
 
-        ru_excl_col: ru_excl_col {
+        ru_dot_col: ru_dot_col {
             compatible = "zmk,behavior-mod-morph";
-            label = "RU_EXCL_COL";
-            bindings = <&ru_cw_off RU_EXCL>, <&ru_cw_off RU_COLON>;
+            label = "RU_DOT_COL";
+            bindings = <&ru_cw_off RU_DOT>, <&ru_cw_off RU_COLON>;
 
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
         };
 
-        ru_ques_semi: ru_ques_semi {
+        ru_com_semi: ru_com_semi {
             compatible = "zmk,behavior-mod-morph";
-            label = "RU_QUES_SEMI";
-            bindings = <&ru_cw_off RU_QUESTION>, <&ru_cw_off RU_SEMI>;
+            label = "RU_COM_SEMI";
+            bindings = <&ru_cw_off RU_COMMA>, <&ru_cw_off RU_SEMI>;
 
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
