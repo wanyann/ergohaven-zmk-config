@@ -1410,11 +1410,11 @@
         tab_morph: tab_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "TAB_MORPH";
-            bindings = <&kp TAB>, <&kp LS(TAB)>;
+            bindings = <&kp TAB>, <&kp TAB>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+            keep-mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT)>;
         };
     };
 
