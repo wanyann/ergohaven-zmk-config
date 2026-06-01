@@ -113,20 +113,14 @@
         combo_asterisk_ru {
             bindings = <&kp RU_ASTERISK>;
             timeout-ms = <30>;
-            key-positions = <32 33>;
+            key-positions = <7 9 8>;
             layers = <2 3 20 16>;
-        };
-
-        combo_ms_free_ru {
-            bindings = <&none>;
-            key-positions = <>;
-            layers = <2 3 18 5 6 7 22 20 21>;
         };
 
         combo_asterisk_en {
             bindings = <&kp ASTERISK>;
             timeout-ms = <30>;
-            key-positions = <32 33>;
+            key-positions = <7 8 9>;
             layers = <0 1 15 19>;
         };
 
@@ -155,7 +149,7 @@
 
         combo_plus {
             bindings = <&kp PLUS>;
-            key-positions = <3 4>;
+            key-positions = <32 33>;
         };
 
         parentheses {
@@ -195,25 +189,6 @@
             timeout-ms = <30>;
         };
 
-        combo_grave_ru {
-            bindings = <&en_kp GRAVE>;
-            key-positions = <>;
-            layers = <2 3 20>;
-        };
-
-        combo_grave_en {
-            bindings = <&kp GRAVE>;
-            key-positions = <>;
-            layers = <0 1 19>;
-        };
-
-        combo_under {
-            bindings = <&kp UNDER>;
-            key-positions = <>;
-            require-prior-idle-ms = <30>;
-            timeout-ms = <30>;
-        };
-
         combo_ru_at {
             bindings = <&en_kp AT>;
             key-positions = <14 15 16>;
@@ -238,47 +213,15 @@
             layers = <2 3 20 16>;
         };
 
-        combo_ms_over_ru {
-            bindings = <&none>;
-            key-positions = <>;
-            layers = <2 3 4 22 20 18 21>;
-            require-prior-idle-ms = <50>;
-            timeout-ms = <30>;
-        };
-
-        combo_en_semi {
-            bindings = <&semi_morph_en>;
-            key-positions = <>;
-            layers = <0 1 15 19>;
-        };
-
-        combo_ru_semi {
-            bindings = <&semi_morph_ru>;
-            key-positions = <>;
-            layers = <2 3 16 20>;
-        };
-
-        combo_en_colon {
-            bindings = <&kp COLON>;
-            key-positions = <>;
-            layers = <0 1 15 19>;
-        };
-
-        combo_ru_colon {
-            bindings = <&kp RU_COLON>;
-            key-positions = <>;
-            layers = <2 3 15 19>;
-        };
-
         combo_slash_ru {
             bindings = <&slash_morph_ru>;
-            key-positions = <7 8 9>;
+            key-positions = <3 4>;
             layers = <2 3 16 20>;
         };
 
         combo_slash_en {
             bindings = <&slash_morph_en>;
-            key-positions = <7 9 8>;
+            key-positions = <3 4>;
             layers = <0 1 15 19>;
         };
 
@@ -336,35 +279,9 @@
             layers = <2 3 16 20 22 4 5 6 7 18>;
         };
 
-        combo_ms_free_en {
-            bindings = <&none>;
-            key-positions = <>;
-            layers = <0 1 9 10 11 17 19 23 21>;
-        };
-
-        combo_ms_over_en {
-            bindings = <&none>;
-            key-positions = <>;
-            layers = <0 1 8 23 19 17 21>;
-            require-prior-idle-ms = <50>;
-            timeout-ms = <30>;
-        };
-
         combo_equal {
             bindings = <&kp EQUAL>;
             key-positions = <7 8>;
-        };
-
-        combo_pipe_ru {
-            bindings = <&en_kp PIPE>;
-            key-positions = <2 3 4>;
-            layers = <2 3 16 20>;
-        };
-
-        combo_pipe_en {
-            bindings = <&kp PIPE>;
-            key-positions = <2 3 4>;
-            layers = <0 1 15 19>;
         };
     };
 
@@ -1230,7 +1147,7 @@
         slash_morph_ru: slash_morph_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASH_MORPH_RU";
-            bindings = <&kp RU_SLASH>, <&kp RU_BACKSLASH>;
+            bindings = <&morph_pipe_ru>, <&kp RU_BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1239,7 +1156,7 @@
         slash_morph_en: slash_morph_en {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASH_MORPH_EN";
-            bindings = <&kp SLASH>, <&kp BACKSLASH>;
+            bindings = <&morph_pipe_en>, <&kp BACKSLASH>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1350,6 +1267,24 @@
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_QUOTES_EN";
             bindings = <&kp DQT>, <&kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RALT)>;
+        };
+
+        morph_pipe_ru: morph_pipe_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_PIPE_RU";
+            bindings = <&kp RU_SLASH>, <&en_kp PIPE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RALT)>;
+        };
+
+        morph_pipe_en: morph_pipe_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_PIPE_EN";
+            bindings = <&kp SLASH>, <&kp PIPE>;
 
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
