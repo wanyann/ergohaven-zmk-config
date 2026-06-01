@@ -155,7 +155,7 @@
 
         combo_plus {
             bindings = <&kp PLUS>;
-            key-positions = <>;
+            key-positions = <27 28>;
         };
 
         parentheses {
@@ -248,13 +248,13 @@
 
         combo_en_semi {
             bindings = <&semi_morph_en>;
-            key-positions = <27 28>;
+            key-positions = <>;
             layers = <0 1 15 19>;
         };
 
         combo_ru_semi {
             bindings = <&semi_morph_ru>;
-            key-positions = <27 28>;
+            key-positions = <>;
             layers = <2 3 16 20>;
         };
 
