@@ -2,7 +2,6 @@
 include:
   - board: ergohaven
     shield: velvet_v3_left
-    snippet: studio-rpc-usb-uart
   # - board: ergohaven
   #   shield: velvet_v3_left
   #   keymap: velvet_v3_ruen
@@ -12,7 +11,6 @@ include:
     shield: velvet_v3_right
   - board: ergohaven
     shield: velvet_v3_qube qube dongle_screen
-    snippet: studio-rpc-usb-uart
     artifact-name: velvet_v3_qube-ergohaven-zmk
   # - board: ergohaven
   #   shield: velvet_v3_qube qube dongle_screen
@@ -59,7 +57,6 @@ include:
 
   - board: ergohaven
     shield: op36_left
-    snippet: studio-rpc-usb-uart
   # - board: ergohaven
   #   shield: op36_ruen op36_left
   #   snippet: studio-rpc-usb-uart
