@@ -197,13 +197,13 @@
 
         combo_grave_ru {
             bindings = <&en_kp GRAVE>;
-            key-positions = <7 8 9>;
+            key-positions = <>;
             layers = <2 3 20>;
         };
 
         combo_grave_en {
             bindings = <&kp GRAVE>;
-            key-positions = <7 8 9>;
+            key-positions = <>;
             layers = <0 1 19>;
         };
 
@@ -228,13 +228,13 @@
 
         combo_quotes_en {
             bindings = <&quote_morph_en>;
-            key-positions = <7 8>;
+            key-positions = <4 3>;
             layers = <0 1 15 19>;
         };
 
         combo_quotes_ru {
             bindings = <&quote_morph_ru>;
-            key-positions = <7 8>;
+            key-positions = <4 3>;
             layers = <2 3 20 16>;
         };
 
@@ -272,13 +272,13 @@
 
         combo_slash_ru {
             bindings = <&slash_morph_ru>;
-            key-positions = <21 22>;
+            key-positions = <7 8 9>;
             layers = <2 3 16 20>;
         };
 
         combo_slash_en {
             bindings = <&slash_morph_en>;
-            key-positions = <22 21>;
+            key-positions = <7 9 8>;
             layers = <0 1 15 19>;
         };
 
@@ -352,7 +352,7 @@
 
         combo_equal {
             bindings = <&kp EQUAL>;
-            key-positions = <3 4>;
+            key-positions = <7 8>;
         };
 
         combo_pipe_ru {
@@ -1249,7 +1249,7 @@
         quote_morph_ru: quote_morph_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTE_MORPH_RU";
-            bindings = <&kp RU_DOUBLE_QUOTES>, <&en_kp SINGLE_QUOTE>;
+            bindings = <&morph_quotes_ru>, <&en_kp SINGLE_QUOTE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1258,7 +1258,7 @@
         quote_morph_en: quote_morph_en {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTE_MORPH_EN";
-            bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
+            bindings = <&morph_quotes_en>, <&kp SINGLE_QUOTE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1333,6 +1333,24 @@
             compatible = "zmk,behavior-mod-morph";
             label = "RU_COM_SEMI";
             bindings = <&ru_cw_off RU_COMMA>, <&ru_cw_off RU_SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RALT)>;
+        };
+
+        morph_quotes_ru: morph_quotes_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_QUOTES_RU";
+            bindings = <&kp RU_DQT>, <&en_kp GRAVE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RALT)>;
+        };
+
+        morph_quotes_en: morph_quotes_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MORPH_QUOTES_EN";
+            bindings = <&kp DQT>, <&kp GRAVE>;
 
             #binding-cells = <0>;
             mods = <(MOD_RALT)>;
