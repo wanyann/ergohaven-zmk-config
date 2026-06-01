@@ -968,28 +968,28 @@
         en_com_ques: en_com_ques {
             compatible = "zmk,behavior-mod-morph";
             label = "EN_COM_QUES";
-            bindings = <&morph_en_com>, <&en_cw_off QUESTION>;
+            bindings = <&morph_en_com>, <&en_cw_off SEMI>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RALT)>;
         };
 
         ru_dot_excl: ru_dot_excl {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_DOT_EXCL";
-            bindings = <&morph_ru_dot>, <&ru_cw_off RU_EXCL>;
+            bindings = <&morph_ru_dot>, <&ru_cw_off RU_COLON>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RALT)>;
         };
 
         ru_com_ques: ru_com_ques {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_COM_QUES";
-            bindings = <&morph_ru_com>, <&ru_cw_off RU_QUESTION>;
+            bindings = <&morph_ru_com>, <&ru_cw_off RU_SEMI>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RALT)>;
         };
 
         ru_dot_mt: ru_dot_mt {
