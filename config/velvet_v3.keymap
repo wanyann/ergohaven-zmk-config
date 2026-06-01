@@ -959,16 +959,16 @@
         en_dot_excl: en_dot_excl {
             compatible = "zmk,behavior-mod-morph";
             label = "EN_DOT_EXCL";
-            bindings = <&en_dot_col>, <&en_cw_off EXCL>;
+            bindings = <&morph_en_dot>, <&en_cw_off COLON>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_RALT)>;
         };
 
         en_com_ques: en_com_ques {
             compatible = "zmk,behavior-mod-morph";
             label = "EN_COM_QUES";
-            bindings = <&en_com_semi>, <&en_cw_off QUESTION>;
+            bindings = <&morph_en_com>, <&en_cw_off QUESTION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -977,7 +977,7 @@
         ru_dot_excl: ru_dot_excl {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_DOT_EXCL";
-            bindings = <&ru_dot_col>, <&ru_cw_off RU_EXCL>;
+            bindings = <&morph_ru_dot>, <&ru_cw_off RU_EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -986,7 +986,7 @@
         ru_com_ques: ru_com_ques {
             compatible = "zmk,behavior-mod-morph";
             label = "RU_COM_QUES";
-            bindings = <&ru_com_semi>, <&ru_cw_off RU_QUESTION>;
+            bindings = <&morph_ru_com>, <&ru_cw_off RU_QUESTION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1302,40 +1302,40 @@
             mods = <(MOD_LSFT)>;
         };
 
-        en_dot_col: en_dot_col {
+        morph_en_dot: morph_en_dot {
             compatible = "zmk,behavior-mod-morph";
-            label = "EN_DOT_COL";
-            bindings = <&en_cw_off DOT>, <&en_cw_off COLON>;
+            label = "MORPH_EN_DOT";
+            bindings = <&en_cw_off DOT>, <&en_cw_off EXCL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LSFT)>;
         };
 
-        en_com_semi: en_com_semi {
+        morph_en_com: morph_en_com {
             compatible = "zmk,behavior-mod-morph";
-            label = "EN_COM_SEMI";
-            bindings = <&en_cw_off COMMA>, <&en_cw_off SEMI>;
+            label = "MORPH_EN_COM";
+            bindings = <&en_cw_off COMMA>, <&en_cw_off QUESTION>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LSFT)>;
         };
 
-        ru_dot_col: ru_dot_col {
+        morph_ru_dot: morph_ru_dot {
             compatible = "zmk,behavior-mod-morph";
-            label = "RU_DOT_COL";
-            bindings = <&ru_cw_off RU_DOT>, <&ru_cw_off RU_COLON>;
+            label = "MORPH_RU_DOT";
+            bindings = <&ru_cw_off RU_DOT>, <&ru_cw_off EXCL>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LSFT)>;
         };
 
-        ru_com_semi: ru_com_semi {
+        morph_ru_com: morph_ru_com {
             compatible = "zmk,behavior-mod-morph";
-            label = "RU_COM_SEMI";
-            bindings = <&ru_cw_off RU_COMMA>, <&ru_cw_off RU_SEMI>;
+            label = "MORPH_RU_COM";
+            bindings = <&ru_cw_off RU_COMMA>, <&ru_cw_off QUESTION>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_LSFT)>;
         };
 
         morph_quotes_ru: morph_quotes_ru {
@@ -1519,10 +1519,10 @@
 
         Num_en {
             bindings = <
-&trans  &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                       &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &en_com_ques                   &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL  &kp N4        &kp N5        &kp N6        &en_dot_excl                   &trans  &trans     &none       &none         &trans        &trans
-                   &trans        &trans        &trans        &kp SPACE     &none    &trans  &trans  &trans     &trans      &trans
+&trans  &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                        &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &morph_en_com                   &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL  &kp N4        &kp N5        &kp N6        &morph_en_dot                   &trans  &trans     &none       &none         &trans        &trans
+                   &trans        &trans        &trans        &kp SPACE      &none    &trans  &trans  &trans     &trans      &trans
             >;
 
             display-name = "Num_en";
@@ -1530,10 +1530,10 @@
 
         Num_ru {
             bindings = <
-&trans  &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                       &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &ru_com_ques                   &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &ru_dot_excl                   &trans  &trans     &none       &none         &trans        &trans
-                      &trans        &trans        &trans        &kp SPACE     &none    &trans  &trans  &trans     &trans      &trans
+&trans  &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                        &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &morph_ru_com                   &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &morph_ru_dot                   &trans  &trans     &none       &none         &trans        &trans
+                      &trans        &trans        &trans        &kp SPACE      &none    &trans  &trans  &trans     &trans      &trans
             >;
 
             display-name = "Num_ru";
