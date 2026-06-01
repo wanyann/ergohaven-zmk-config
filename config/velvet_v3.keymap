@@ -1322,7 +1322,7 @@
         morph_ru_dot: morph_ru_dot {
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_RU_DOT";
-            bindings = <&ru_cw_off RU_DOT>, <&ru_cw_off EXCL>;
+            bindings = <&ru_cw_off RU_DOT>, <&ru_cw_off RU_EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1331,7 +1331,7 @@
         morph_ru_com: morph_ru_com {
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_RU_COM";
-            bindings = <&ru_cw_off RU_COMMA>, <&ru_cw_off QUESTION>;
+            bindings = <&ru_cw_off RU_COMMA>, <&ru_cw_off RU_QUESTION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
