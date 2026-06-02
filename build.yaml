@@ -1,5 +1,7 @@
 ---
 include:
+  - board: rpi_pico
+    shield: ergohaven_hpd_v2
   - board: ergohaven
     shield: velvet_v3_left
   # - board: ergohaven
