@@ -1,6 +1,0 @@
-if SHIELD_ERGOHAVEN_HPD_V2_RIGHT
-
-config ZMK_KEYBOARD_NAME
-    default "Ergohaven HPD v2"
-
-endif
