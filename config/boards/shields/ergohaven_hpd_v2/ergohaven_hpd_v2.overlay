@@ -11,7 +11,7 @@
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         
-        // Строки: GP6, GP5, GP4, GP3, GP2 (из вашего config.h)
+        // Строки: GP6, GP5, GP4, GP3, GP2
         row-gpios 
             = <&gpio0 6 GPIO_ACTIVE_HIGH>
             , <&gpio0 5 GPIO_ACTIVE_HIGH>
@@ -20,7 +20,7 @@
             , <&gpio0 2 GPIO_ACTIVE_HIGH>
             ;
             
-        // Колонки: GP7, GP12, GP13, GP14, GP15, GP28 (из вашего config.h)
+        // Колонки: GP7, GP12, GP13, GP14, GP15, GP28
         col-gpios 
             = <&gpio0 7 GPIO_ACTIVE_HIGH>
             , <&gpio0 12 GPIO_ACTIVE_HIGH>
@@ -31,16 +31,14 @@
             ;
     };
 
-    // === 2. Явное объявление проводного сплита (требование документации ZMK) ===
+    // === 2. Явное объявление проводного сплита ===
     wired_split: wired_split {
         compatible = "zmk,wired-split";
-        uart = <&uart0>;
+        device = <&uart0>; // <-- ИСПРАВЛЕНО: свойство должно называться 'device'
     };
 };
 
-// === 3. Настройка UART0 для связи ===
-// Плата rpi_pico уже знает, что uart0 использует GP0 (TX) и GP1 (RX).
-// Нам нужно только включить его и задать скорость.
+// === 3. Настройка UART0 для связи (GP0=TX, GP1=RX) ===
 &uart0 {
     status = "okay";
     current-speed = <1000000>; // 1 Mbps (стандарт для ZMK wired split)
