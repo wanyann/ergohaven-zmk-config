@@ -38,23 +38,10 @@
     };
 };
 
-// === 3. Настройка UART0 для связи (GP0=TX, GP1=RX) ===
+// === 3. Настройка UART0 для связи ===
+// Плата rpi_pico уже знает, что uart0 использует GP0 (TX) и GP1 (RX).
+// Нам нужно только включить его и задать скорость.
 &uart0 {
     status = "okay";
-    current-speed = <1000000>; // 1 Mbps (стандартная скорость для ZMK split)
-    
-    // Явно задаем пины для RP2040, чтобы соответствовать вашему config.h
-    // GP0 - это UART0 TX, GP1 - это UART0 RX
-    pinctrl-0 = <&uart0_default>;
-    pinctrl-names = "default";
-};
-
-// Описываем пины для UART0 (стандартная нода для RP2040 в Zephyr)
-&pinctrl {
-    uart0_default: uart0_default {
-        group1 {
-            pinmux = <PINMUX_FUNC(GP0, UART0_TX)>,
-                     <PINMUX_FUNC(GP1, UART0_RX)>;
-        };
-    };
+    current-speed = <1000000>; // 1 Mbps (стандарт для ZMK wired split)
 };
