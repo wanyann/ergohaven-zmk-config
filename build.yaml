@@ -2,6 +2,11 @@
 include:
   - board: rpi_pico
     shield: ergohaven_hpd_v2
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+    artifact-name: ergohaven_hpd_v2_left
+  - board: rpi_pico
+    shield: ergohaven_hpd_v2
+    artifact-name: ergohaven_hpd_v2_right
   - board: ergohaven
     shield: velvet_v3_left
   # - board: ergohaven
