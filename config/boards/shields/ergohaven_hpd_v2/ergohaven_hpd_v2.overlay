@@ -11,16 +11,18 @@
         compatible = "zmk,kscan-gpio-matrix";
         diode-direction = "col2row";
         
-        // Строки: GP6, GP5, GP4, GP3, GP2
+        // Строки (ВХОДЫ): GP6, GP5, GP4, GP3, GP2
+        // Добавляем GPIO_PULL_DOWN, чтобы убрать "фантомные" нажатия на плавающих пинах
         row-gpios 
-            = <&gpio0 6 GPIO_ACTIVE_HIGH>
-            , <&gpio0 5 GPIO_ACTIVE_HIGH>
-            , <&gpio0 4 GPIO_ACTIVE_HIGH>
-            , <&gpio0 3 GPIO_ACTIVE_HIGH>
-            , <&gpio0 2 GPIO_ACTIVE_HIGH>
+            = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
             
-        // Колонки: GP7, GP12, GP13, GP14, GP15, GP28
+        // Колонки (ВЫХОДЫ): GP7, GP12, GP13, GP14, GP15, GP28
+        // Оставляем просто GPIO_ACTIVE_HIGH, так как это пины-выходы
         col-gpios 
             = <&gpio0 7 GPIO_ACTIVE_HIGH>
             , <&gpio0 12 GPIO_ACTIVE_HIGH>
@@ -34,12 +36,12 @@
     // === 2. Явное объявление проводного сплита ===
     wired_split: wired_split {
         compatible = "zmk,wired-split";
-        device = <&uart0>; // <-- ИСПРАВЛЕНО: свойство должно называться 'device'
+        device = <&uart0>; 
     };
 };
 
-// === 3. Настройка UART0 для связи (GP0=TX, GP1=RX) ===
+// === 3. Настройка UART0 для связи ===
 &uart0 {
     status = "okay";
-    current-speed = <1000000>; // 1 Mbps (стандарт для ZMK wired split)
+    current-speed = <1000000>; 
 };
