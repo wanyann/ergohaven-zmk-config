@@ -643,21 +643,21 @@
         kp_m1_ru: kp_m1_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 6>;
+            bindings = <&to 6 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "KP_M1_RU";
         };
 
         kp_m2_ru: kp_m2_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 7>;
+            bindings = <&to 7 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "kp_m2_ru";
         };
 
         kp_sub_ru: kp_sub_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 2>;
+            bindings = <&to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "kp_sub_ru";
         };
 
@@ -671,21 +671,21 @@
         kp_m1_en: kp_m1_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 10>;
+            bindings = <&to 10 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "KP_M1_EN";
         };
 
         kp_m2_en: kp_m2_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 11>;
+            bindings = <&to 11 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "KP_M2_EN";
         };
 
         kp_sub_en: kp_sub_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "KP_SUB_EN";
         };
 
@@ -736,14 +736,14 @@
         mouseoff_kp_ru: mouseoff_kp_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &to 2>;
+            bindings = <&to 2 &mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_RU";
         };
 
         mouseoff_kp_en: mouseoff_kp_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0>;
+            bindings = <&to 0 &mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_EN";
         };
 
@@ -758,14 +758,14 @@
         drag_sub_ru: drag_sub_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&sticky_drag N0 &macro_param_1to1 &kp MACRO_PLACEHOLDER &to 5>;
+            bindings = <&to 5 &sticky_drag N0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "DRAG_SUB_RU";
         };
 
         drag_sub_en: drag_sub_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&sticky_drag N0 &macro_param_1to1 &kp MACRO_PLACEHOLDER &to 9>;
+            bindings = <&to 9 &sticky_drag N0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "DRAG_SUB_EN";
         };
     };
