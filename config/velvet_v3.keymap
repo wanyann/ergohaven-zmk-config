@@ -617,28 +617,28 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&free &to 4>;
+            bindings = <&free &free &to 4>;
             label = "MACRO_MLESS_FREE";
         };
 
         ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&overlay &to 5>;
+            bindings = <&overlay &overlay &to 5>;
             label = "MACRO_MLESS_OVER";
         };
 
         ms_free_en: ms_free_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&free &to 8>;
+            bindings = <&free &free &to 8>;
             label = "ms_free_en";
         };
 
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&overlay &to 9>;
+            bindings = <&overlay &overlay &to 9>;
             label = "ms_over_en";
         };
 
