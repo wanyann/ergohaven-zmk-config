@@ -615,28 +615,28 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F8) &free &to 4>;
+            bindings = <&overlay_off &free &to 4>;
             label = "MACRO_MLESS_FREE";
         };
 
         ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F9) &overlay &to 5>;
+            bindings = <&free_off &overlay &to 5>;
             label = "MACRO_MLESS_OVER";
         };
 
         ms_free_en: ms_free_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F8) &free &to 8>;
+            bindings = <&overlay_off &free &to 8>;
             label = "ms_free_en";
         };
 
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F9) &overlay &to 9>;
+            bindings = <&free_off &overlay &to 9>;
             label = "ms_over_en";
         };
 
@@ -736,14 +736,14 @@
         mouseoff_kp_ru: mouseoff_kp_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 2 &free_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&free_off &to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_RU";
         };
 
         mouseoff_kp_en: mouseoff_kp_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &free_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&free_off &to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_EN";
         };
 
