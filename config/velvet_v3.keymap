@@ -294,14 +294,14 @@
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N8)) &mouse_off &to 2>;
+            bindings = <&to 2 &kp LS(LC(N8)) &free_off &overlay_off>;
             label = "LAYER_RU";
         };
 
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N9)) &mouse_off &to 0>;
+            bindings = <&to 0 &kp LS(LC(N9)) &free_off &overlay_off>;
             label = "LAYER_EN";
         };
 
@@ -333,13 +333,11 @@
             label = "RU_KP";
         };
 
-        mouse_off: mouse_off {
+        free_off: free_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F9) &kp LA(F8)>;
-            label = "MOUSE_OFF";
-            wait-ms = <5>;
-            tap-ms = <20>;
+            bindings = <&kp LA(F9)>;
+            label = "FREE_OFF";
         };
 
         free: free {
@@ -491,7 +489,7 @@
         alt_spc_ru: alt_spc_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp LA(SPACE) &to 2>;
+            bindings = <&kp LA(SPACE) &to 2 &free_off &overlay_off>;
             label = "ALT_SPC_RU";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -715,7 +713,7 @@
         alt_spc_en: alt_spc_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &kp LA(SPACE) &to 0>;
+            bindings = <&kp LA(SPACE) &to 0 &free_off &overlay_off>;
             label = "ALT_SPC_EN";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -731,28 +729,28 @@
         mouseoff_sl: mouseoff_sl {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&mouse_off &macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
+            bindings = <&free_off &macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_SL";
         };
 
         mouseoff_kp_ru: mouseoff_kp_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 2 &mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 2 &free_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_RU";
         };
 
         mouseoff_kp_en: mouseoff_kp_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 0 &free_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_EN";
         };
 
         free_kp: free_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &free>;
+            bindings = <&free_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &free>;
             label = "FREE_KP";
             wait-ms = <0>;
         };
@@ -769,6 +767,13 @@
             #binding-cells = <1>;
             bindings = <&to 9 &sticky_drag N0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "DRAG_SUB_EN";
+        };
+
+        overlay_off: overlay_off {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(F8)>;
+            label = "OVERLAY_OFF";
         };
     };
 
