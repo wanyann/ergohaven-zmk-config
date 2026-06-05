@@ -1502,7 +1502,7 @@
         Sym_ru {
             bindings = <
 &trans  &trans  &none                 &none           &none     &trans                            &trans         &en_kp LEFT_BRACKET  &kp RU_RUBLE   &en_kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp TILDE       &kp RPAR  &kp RU_PERCENT                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp CARET   &en_kp RIGHT_BRACE    &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &en_kp TILDE    &kp RPAR  &kp RU_PERCENT                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp CARET   &en_kp RIGHT_BRACE    &trans  &trans
 &trans  &trans  &none                 &kp RU_PERCENT  &ru_code  &none                             &trans         &en_kp LESS_THAN     &kp RU_NUMERO  &en_kp GREATER_THAN   &trans  &trans
                 &trans                &trans          &trans    &trans          &trans    &trans  &trans         &trans               &trans         &trans
             >;
