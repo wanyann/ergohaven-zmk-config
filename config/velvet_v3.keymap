@@ -92,7 +92,7 @@
             bindings = <&sl 20>;
             key-positions = <20 21>;
             require-prior-idle-ms = <50>;
-            layers = <2 3 20>;
+            layers = <2 3 20 4 8>;
             timeout-ms = <30>;
         };
 
@@ -100,7 +100,7 @@
             bindings = <&less_greater_ru>;
             key-positions = <31 33>;
             require-prior-idle-ms = <30>;
-            layers = <2 3>;
+            layers = <2 3 4 8 20>;
         };
 
         combo_braces_en {
@@ -114,7 +114,7 @@
             bindings = <&kp RU_ASTERISK>;
             timeout-ms = <30>;
             key-positions = <7 9 8>;
-            layers = <2 3 20 16>;
+            layers = <2 3 20 16 4 8>;
         };
 
         combo_asterisk_en {
@@ -163,7 +163,7 @@
             bindings = <&braces_ru>;
             key-positions = <19 21>;
             timeout-ms = <25>;
-            layers = <2 3 20>;
+            layers = <2 3 20 4 8>;
             require-prior-idle-ms = <50>;
         };
 
@@ -178,7 +178,7 @@
         combo_brackets_ru {
             bindings = <&brackets_ru>;
             key-positions = <7 9>;
-            layers = <2 3 20>;
+            layers = <2 3 20 4 8>;
             timeout-ms = <30>;
         };
 
@@ -192,7 +192,7 @@
         combo_ru_at {
             bindings = <&en_kp AT>;
             key-positions = <14 15 16>;
-            layers = <2 3 20>;
+            layers = <2 3 20 4 8>;
         };
 
         combo_en_at {
@@ -210,13 +210,13 @@
         combo_quotes_ru {
             bindings = <&quote_morph_ru>;
             key-positions = <27 28>;
-            layers = <2 3 20 16>;
+            layers = <2 3 20 16 4 8>;
         };
 
         combo_slash_ru {
             bindings = <&slash_morph_ru>;
             key-positions = <3 4>;
-            layers = <2 3 16 20>;
+            layers = <2 3 16 20 4 8>;
         };
 
         combo_slash_en {
@@ -228,7 +228,7 @@
         combo_arrow_ru {
             bindings = <&arrow_ru>;
             key-positions = <31 32 33>;
-            layers = <2 3 16 20>;
+            layers = <2 3 16 20 4 8>;
         };
 
         combo_arrow_en {
@@ -240,7 +240,7 @@
         combo_and_ru {
             bindings = <&en_kp AMPERSAND>;
             key-positions = <2 3 4>;
-            layers = <2 3 16 20>;
+            layers = <2 3 16 20 4 8>;
         };
 
         combo_and_en {
@@ -252,7 +252,7 @@
         combo_dollar_ru {
             bindings = <&en_kp DOLLAR>;
             key-positions = <19 20 21>;
-            layers = <2 3 16 20>;
+            layers = <2 3 16 20 4 8>;
         };
 
         combo_dollar_en {
@@ -264,7 +264,7 @@
         combo_hash_ru {
             bindings = <&en_kp HASH>;
             key-positions = <26 27 28>;
-            layers = <2 3 16 20>;
+            layers = <2 3 16 20 4 8>;
         };
 
         combo_hash_en {
