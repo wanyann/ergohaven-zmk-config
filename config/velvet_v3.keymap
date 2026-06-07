@@ -336,21 +336,21 @@
         free_off: free_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F9)>;
+            bindings = <&kp LA(LC(F9))>;
             label = "FREE_OFF";
         };
 
         free: free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F10)>;
+            bindings = <&kp LA(LC(F10))>;
             label = "FREE";
         };
 
         overlay: overlay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F11)>;
+            bindings = <&kp LA(LC(F11))>;
             label = "OVERLAY";
         };
 
