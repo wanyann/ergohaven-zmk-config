@@ -772,7 +772,7 @@
         overlay_off: overlay_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(F8)>;
+            bindings = <&kp LA(LC(F8))>;
             label = "OVERLAY_OFF";
         };
     };
