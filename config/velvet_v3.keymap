@@ -1377,7 +1377,7 @@
             bindings = <
 &none  &kp Q             &kp W             &e_morph_en       &mt_free LC(R) R  &mt_mouseoff_en LC(T) T                                    &kp Y                  &kp U  &kp I        &kp O        &kp P      &trans
 &none  &kp LEFT_GUI      &kp LALT          &kp LSHFT         &kp LCTRL         &mt_mouseoff_en LC(F) G                                    &kp H                  &kp J  &k_morph_en  &l_morph_en  &kp SEMI   &kp SQT
-&none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_en LC(V) B                                    &kp N                  &kp M  &kp COMMA    &kp DOT      &kp SLASH  &trans
+&none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_en LG(V) B                                    &kp N                  &kp M  &kp COMMA    &kp DOT      &kp SLASH  &trans
                          &trans            &trans            &trans            &space_lt 13 0           &mouseoff_sl 8 17    &bspc_morph  &lt 15 RU_CYRILLIC_ER  &none  &trans       &trans
             >;
         };
