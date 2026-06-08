@@ -752,7 +752,6 @@
             #binding-cells = <1>;
             bindings = <&free_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &free>;
             label = "FREE_KP";
-            wait-ms = <0>;
         };
 
         drag_sub_ru: drag_sub_ru {
