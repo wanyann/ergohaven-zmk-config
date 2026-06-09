@@ -336,21 +336,21 @@
         free_off: free_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F9))>;
+            bindings = <&kp LC(LS(F9))>;
             label = "FREE_OFF";
         };
 
         free: free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F10))>;
+            bindings = <&kp LC(LS(F10))>;
             label = "FREE";
         };
 
         overlay: overlay {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F11))>;
+            bindings = <&kp LC(LS(F11))>;
             label = "OVERLAY";
         };
 
@@ -771,7 +771,7 @@
         overlay_off: overlay_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(LC(F8))>;
+            bindings = <&kp LC(LS(F8))>;
             label = "OVERLAY_OFF";
         };
 
