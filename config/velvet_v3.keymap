@@ -783,9 +783,9 @@
         };
 
         ms_set: ms_set {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp SPACE &kp RU_CYRILLIC_O &kp MINUS>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings = <&kp SPACE &kp RU_CYRILLIC_O &kp MINUS &macro_param_1to1 &to MACRO_PLACEHOLDER>;
             label = "MS_SET";
         };
     };
