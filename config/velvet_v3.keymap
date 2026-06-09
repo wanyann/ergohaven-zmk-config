@@ -785,7 +785,7 @@
         ms_set: ms_set {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp SPACE &kp RU_CYRILLIC_O &kp MINUS &overlay_off &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            bindings = <&kp SPACE &kp RU_CYRILLIC_EN &kp MINUS &overlay_off &macro_param_1to1 &to MACRO_PLACEHOLDER>;
             label = "MS_SET";
         };
     };
