@@ -1345,10 +1345,10 @@
         M1_ru {
             display-name = "M1_ru";
             bindings = <
-&none                    &kp_m1_ru RU_CYRILLIC_TSE      &drag_sub_ru RU_CYRILLIC_SOFT_SIGN  &drag_sub_ru RU_CYRILLIC_YA  &drag_sub_ru RU_CYRILLIC_A     &kp_m1_ru RU_CYRILLIC_YU                     &kp_m1_ru RU_CYRILLIC_ZE  &drag_sub_ru RU_CYRILLIC_VE  &drag_sub_ru RU_CYRILLIC_KA  &drag_sub_ru RU_CYRILLIC_DE   &kp_m1_ru RU_CYRILLIC_SHCHA  &trans
-&kp_m1_ru RU_CYRILLIC_E  &kp_m1_ru RU_CYRILLIC_SHORT_I  &drag_sub_ru RU_CYRILLIC_I          &kp_m1_ru RU_CYRILLIC_IE     &drag_sub_ru RU_CYRILLIC_O     &kp_m1_ru RU_COMMA                           &kp_m1_ru RU_CYRILLIC_EL  &drag_sub_ru RU_CYRILLIC_EN  &drag_sub_ru RU_CYRILLIC_TE  &drag_sub_ru RU_CYRILLIC_ES   &kp_m1_ru RU_CYRILLIC_CHE    &kp_m1_ru RU_CYRILLIC_SHA
-&none                    &kp_m1_ru RU_CYRILLIC_EF       &drag_sub_ru RU_CYRILLIC_U          &drag_sub_ru RU_CYRILLIC_HA  &drag_sub_ru RU_CYRILLIC_YERU  &kp_m1_ru RU_DOT                             &kp_m1_ru RU_CYRILLIC_BE  &drag_sub_ru RU_CYRILLIC_EM  &drag_sub_ru RU_CYRILLIC_PE  &drag_sub_ru RU_CYRILLIC_GHE  &kp_m1_ru RU_CYRILLIC_ZHE    &trans
-                                                        &trans                              &trans                       &none                          &space_nav_to 12 2        &none    &kp BSPC  &move_nav 16 4            &trans                       &trans                       &trans
+&none              &drag_sub_ru RU_CYRILLIC_TSE      &drag_sub_ru RU_CYRILLIC_SOFT_SIGN  &drag_sub_ru RU_CYRILLIC_YA  &drag_sub_ru RU_CYRILLIC_A     &drag_sub_ru RU_CYRILLIC_YU                     &drag_sub_ru RU_CYRILLIC_ZE  &drag_sub_ru RU_CYRILLIC_VE  &drag_sub_ru RU_CYRILLIC_KA  &drag_sub_ru RU_CYRILLIC_DE   &drag_sub_ru RU_CYRILLIC_SHCHA  &trans
+&kp RU_CYRILLIC_E  &drag_sub_ru RU_CYRILLIC_SHORT_I  &drag_sub_ru RU_CYRILLIC_I          &kp_m1_ru RU_CYRILLIC_IE     &drag_sub_ru RU_CYRILLIC_O     &drag_sub_ru RU_COMMA                           &drag_sub_ru RU_CYRILLIC_EL  &drag_sub_ru RU_CYRILLIC_EN  &drag_sub_ru RU_CYRILLIC_TE  &drag_sub_ru RU_CYRILLIC_ES   &drag_sub_ru RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
+&none              &drag_sub_ru RU_CYRILLIC_EF       &drag_sub_ru RU_CYRILLIC_U          &drag_sub_ru RU_CYRILLIC_HA  &drag_sub_ru RU_CYRILLIC_YERU  &drag_sub_ru RU_DOT                             &drag_sub_ru RU_CYRILLIC_BE  &drag_sub_ru RU_CYRILLIC_EM  &drag_sub_ru RU_CYRILLIC_PE  &drag_sub_ru RU_CYRILLIC_GHE  &drag_sub_ru RU_CYRILLIC_ZHE    &trans
+                                                     &trans                              &trans                       &none                          &lt 12 SPACE                 &none    &kp BSPC  &lt 16 T                     &trans                       &trans                       &trans
             >;
         };
 
@@ -1385,10 +1385,10 @@
         M1_en {
             display-name = "M1_en";
             bindings = <
-&none                    &kp_m1_en RU_CYRILLIC_TSE      &drag_sub_en RU_CYRILLIC_SOFT_SIGN  &drag_sub_en RU_CYRILLIC_YA  &drag_sub_en RU_CYRILLIC_A     &kp_m1_en RU_CYRILLIC_YU                     &kp_m1_en RU_CYRILLIC_ZE  &drag_sub_en RU_CYRILLIC_VE  &drag_sub_en RU_CYRILLIC_KA  &drag_sub_en RU_CYRILLIC_DE   &kp_m1_en RU_CYRILLIC_SHCHA  &trans
-&kp_m1_en RU_CYRILLIC_E  &kp_m1_en RU_CYRILLIC_SHORT_I  &drag_sub_en RU_CYRILLIC_I          &drag_sub_en RU_CYRILLIC_IE  &drag_sub_en RU_CYRILLIC_O     &kp_m1_en RU_COMMA                           &kp_m1_en RU_CYRILLIC_EL  &drag_sub_en RU_CYRILLIC_EN  &drag_sub_en RU_CYRILLIC_TE  &drag_sub_en RU_CYRILLIC_ES   &kp_m1_en RU_CYRILLIC_CHE    &kp_m1_en RU_CYRILLIC_SHA
-&none                    &kp_m1_en RU_CYRILLIC_EF       &drag_sub_en RU_CYRILLIC_U          &drag_sub_en RU_CYRILLIC_HA  &drag_sub_en RU_CYRILLIC_YERU  &kp_m1_en RU_DOT                             &kp_m1_en RU_CYRILLIC_BE  &drag_sub_en RU_CYRILLIC_EM  &drag_sub_en RU_CYRILLIC_PE  &drag_sub_en RU_CYRILLIC_GHE  &kp_m1_en RU_CYRILLIC_ZHE    &trans
-                                                        &trans                              &trans                       &none                          &space_nav_to 13 0        &none    &kp BSPC  &move_nav 15 8            &trans                       &trans                       &trans
+&none              &kp_m1_en RU_CYRILLIC_TSE         &drag_sub_en RU_CYRILLIC_SOFT_SIGN  &drag_sub_en RU_CYRILLIC_YA  &drag_sub_en RU_CYRILLIC_A     &drag_sub_en RU_CYRILLIC_YU                     &drag_sub_en RU_CYRILLIC_ZE  &drag_sub_en RU_CYRILLIC_VE  &drag_sub_en RU_CYRILLIC_KA  &drag_sub_en RU_CYRILLIC_DE   &drag_sub_en RU_CYRILLIC_SHCHA  &trans
+&kp RU_CYRILLIC_E  &drag_sub_en RU_CYRILLIC_SHORT_I  &drag_sub_en RU_CYRILLIC_I          &drag_sub_en RU_CYRILLIC_IE  &drag_sub_en RU_CYRILLIC_O     &drag_sub_en RU_COMMA                           &drag_sub_en RU_CYRILLIC_EL  &drag_sub_en RU_CYRILLIC_EN  &drag_sub_en RU_CYRILLIC_TE  &drag_sub_en RU_CYRILLIC_ES   &drag_sub_en RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
+&none              &drag_sub_en RU_CYRILLIC_EF       &drag_sub_en RU_CYRILLIC_U          &drag_sub_en RU_CYRILLIC_HA  &drag_sub_en RU_CYRILLIC_YERU  &drag_sub_en RU_DOT                             &drag_sub_en RU_CYRILLIC_BE  &drag_sub_en RU_CYRILLIC_EM  &drag_sub_en RU_CYRILLIC_PE  &drag_sub_en RU_CYRILLIC_GHE  &drag_sub_en RU_CYRILLIC_ZHE    &trans
+                                                     &trans                              &trans                       &none                          &lt 13 SPACE                 &none    &kp BSPC  &lt 15 T                     &trans                       &trans                       &trans
             >;
         };
 
