@@ -781,6 +781,13 @@
             bindings = <&overlay_off &macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
             label = "OVEROFF_SL";
         };
+
+        ms_set: ms_set {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE &kp RU_CYRILLIC_O &kp MINUS>;
+            label = "MS_SET";
+        };
     };
 
     behaviors {
