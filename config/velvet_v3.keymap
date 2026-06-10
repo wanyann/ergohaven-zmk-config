@@ -294,14 +294,14 @@
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &kp LS(LC(N8)) &free_off &overlay_off>;
+            bindings = <&kp LS(LC(N8)) &free_off &to 2 &overlay_off>;
             label = "LAYER_RU";
         };
 
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &kp LS(LC(N9)) &free_off &overlay_off>;
+            bindings = <&kp LS(LC(N9)) &free_off &to 0 &overlay_off>;
             label = "LAYER_EN";
         };
 
@@ -489,7 +489,7 @@
         alt_spc_ru: alt_spc_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &to 2 &free_off &overlay_off>;
+            bindings = <&kp LA(SPACE) &free_off &to 2 &overlay_off>;
             label = "ALT_SPC_RU";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -615,28 +615,28 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&overlay_off &free &to 4>;
+            bindings = <&overlay_off &to 4 &free>;
             label = "MACRO_MLESS_FREE";
         };
 
         ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&free_off &overlay &to 5>;
+            bindings = <&free_off &to 5 &overlay>;
             label = "MACRO_MLESS_OVER";
         };
 
         ms_free_en: ms_free_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&overlay_off &free &to 8>;
+            bindings = <&overlay_off &to 8 &free>;
             label = "ms_free_en";
         };
 
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&free_off &overlay &to 9>;
+            bindings = <&free_off &to 9 &overlay>;
             label = "ms_over_en";
         };
 
@@ -706,14 +706,14 @@
         free_move_to: free_move_to {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp MINUS &free &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            bindings = <&kp MINUS &free &macro_param_1to1 &to MACRO_PLACEHOLDER &overlay_off>;
             label = "FREE_MOVE_TO";
         };
 
         alt_spc_en: alt_spc_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &to 0 &free_off &overlay_off>;
+            bindings = <&kp LA(SPACE) &free_off &to 0 &overlay_off>;
             label = "ALT_SPC_EN";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -785,7 +785,7 @@
         ms_set: ms_set {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp SPACE &kp RU_CYRILLIC_EN &kp MINUS &overlay_off &free &macro_param_1to1 &to MACRO_PLACEHOLDER>;
+            bindings = <&kp SPACE &kp RU_CYRILLIC_EN &kp MINUS &overlay_off &macro_param_1to1 &to MACRO_PLACEHOLDER &free>;
             label = "MS_SET";
         };
     };
