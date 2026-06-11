@@ -1273,11 +1273,11 @@
 
         En {
             bindings = <
-&bootloader    &none                  &none                  &none                  &none          &none                   &none  &none               &none                  &none            &none              &bootloader
-&kp BACKSPACE  &none                  &kp Y                  &kp U                  &mt LC(R) A    &mt LC(T) APOS          &kp Q  &kp G               &kp N                  &kp W            &kp Z              &none
-&kp J          &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O  &en_com_mt LC(F) 0      &kp M  &hrml_slow RCTRL D  &hrosm_r LEFT_SHIFT R  &hrosm_r RALT S  &hrml_slow RGUI P  &kp K
-&kp DELETE     &mt LC(Z) X            &mt LC(X) K_CANCEL     &mt LC(C) K_CANCEL     &mt LC(V) SQT  &en_dot_mt LG(V) 0      &kp V  &kp C               &kp L                  &kp F            &mt LC(SLASH) B    &none
-&kp LS(F7)     &kp F7                 &ms_over_en            &lt 13 SPACE           &sl 17         &none                   &none  &bspc_morph         &lt 15 T               &ms_free_en      &kp F2             &kp LS(F2)
+&bootloader  &none                  &none                  &none                  &none          &none                   &none  &none               &none                  &none            &none              &bootloader
+&bootloader  &none                  &kp Y                  &kp U                  &mt LC(R) A    &mt LC(T) APOS          &kp Q  &kp G               &kp N                  &kp W            &kp Z              &bootloader
+&kp J        &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O  &en_com_mt LC(F) 0      &kp M  &hrml_slow RCTRL D  &hrosm_r LEFT_SHIFT R  &hrosm_r RALT S  &hrml_slow RGUI P  &kp K
+&kp DELETE   &mt LC(Z) X            &mt LC(X) K_CANCEL     &mt LC(C) K_CANCEL     &mt LC(V) SQT  &en_dot_mt LG(V) 0      &kp V  &kp C               &kp L                  &kp F            &mt LC(SLASH) B    &none
+&kp LS(F7)   &kp F7                 &ms_over_en            &lt 13 SPACE           &sl 17         &none                   &none  &bspc_morph         &lt 15 T               &ms_free_en      &kp F2             &kp LS(F2)
             >;
 
             display-name = "English";
