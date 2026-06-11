@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/behaviors.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 &mt {
     flavor = "tap-preferred";
@@ -541,7 +540,6 @@
             wait-ms = <50>;
         };
 
-
         arrow_en: arrow_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -556,7 +554,6 @@
             label = "ARROW_RU";
         };
 
-
         one_shot: one_shot {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
@@ -568,7 +565,6 @@
             label = "ONE_SHOT";
             tap-ms = <10>;
         };
-
 
         vm_lang_ru: vm_lang {
             compatible = "zmk,behavior-macro-one-param";
@@ -1277,11 +1273,11 @@
 
         En {
             bindings = <
-&none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&kp BACKSPACE  &none                  &kp Y                  &kp U                  &mt LC(R) A    &mt LC(T) APOS                             &kp Q     &kp G               &kp N                  &kp W            &kp Z              &none
-&kp J          &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O  &en_com_mt LC(F) 0                         &kp M     &hrml_slow RCTRL D  &hrosm_r LEFT_SHIFT R  &hrosm_r RALT S  &hrml_slow RGUI P  &kp K
-&kp DELETE     &mt LC(Z) X            &mt LC(X) K_CANCEL     &mt LC(C) K_CANCEL     &mt LC(V) SQT  &en_dot_mt LG(V) 0                         &kp V     &kp C               &kp L                  &kp F            &mt LC(SLASH) B    &none
-                                      &kp LS(F7)             &kp F7                 &ms_over_en    &lt 13 SPACE        &sl 17  &none       &none   &bspc_morph  &lt 15 T  &ms_free_en         &kp F2                 &kp LS(F2)
+&bootloader    &none                  &none                  &none                  &none          &none                   &none  &none               &none                  &none            &none              &bootloader
+&kp BACKSPACE  &none                  &kp Y                  &kp U                  &mt LC(R) A    &mt LC(T) APOS          &kp Q  &kp G               &kp N                  &kp W            &kp Z              &none
+&kp J          &hrml_slow LEFT_GUI H  &hrml_slow LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O  &en_com_mt LC(F) 0      &kp M  &hrml_slow RCTRL D  &hrosm_r LEFT_SHIFT R  &hrosm_r RALT S  &hrml_slow RGUI P  &kp K
+&kp DELETE     &mt LC(Z) X            &mt LC(X) K_CANCEL     &mt LC(C) K_CANCEL     &mt LC(V) SQT  &en_dot_mt LG(V) 0      &kp V  &kp C               &kp L                  &kp F            &mt LC(SLASH) B    &none
+&kp LS(F7)     &kp F7                 &ms_over_en            &lt 13 SPACE           &sl 17         &none                   &none  &bspc_morph         &lt 15 T               &ms_free_en      &kp F2             &kp LS(F2)
             >;
 
             display-name = "English";
@@ -1289,11 +1285,11 @@
 
         En_CW {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans     &none                      &kp LS(Y)                  &kp LS(U)                  &mt LC(R) LS(A)    &mt LC(T) APOS                            &kp LS(Q)     &kp LS(G)               &kp LS(N)                  &kp LS(W)            &kp LS(Z)              &trans
-&kp LS(J)  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrosm_l LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)  &en_com_mt LC(F) 0                        &kp LS(M)     &hrml_slow RCTRL LS(D)  &hrosm_r LEFT_SHIFT LS(R)  &hrosm_r RALT LS(S)  &hrml_slow RGUI LS(P)  &kp LS(K)
-&trans     &mt LC(Z) LS(X)            &mt LC(X) K_CANCEL         &mt LC(C) K_CANCEL         &mt LC(V) SQT      &en_dot_mt LG(V) 0                        &kp LS(V)     &kp LS(C)               &kp LS(L)                  &kp LS(F)            &mt LC(SLASH) LS(B)    &trans
-                                      &trans                     &trans                     &trans             &en_lt_cw_off 13 SPACE  &trans  &none       &none  &trans  &lt 15 LS(T)  &trans                  &trans                     &trans
+&none      &none                      &none                      &none                      &none              &none                   &none      &none                   &none                      &none                &none                  &none
+&trans     &none                      &kp LS(Y)                  &kp LS(U)                  &mt LC(R) LS(A)    &mt LC(T) APOS          &kp LS(Q)  &kp LS(G)               &kp LS(N)                  &kp LS(W)            &kp LS(Z)              &trans
+&kp LS(J)  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrosm_l LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)  &en_com_mt LC(F) 0      &kp LS(M)  &hrml_slow RCTRL LS(D)  &hrosm_r LEFT_SHIFT LS(R)  &hrosm_r RALT LS(S)  &hrml_slow RGUI LS(P)  &kp LS(K)
+&trans     &mt LC(Z) LS(X)            &mt LC(X) K_CANCEL         &mt LC(C) K_CANCEL         &mt LC(V) SQT      &en_dot_mt LG(V) 0      &kp LS(V)  &kp LS(C)               &kp LS(L)                  &kp LS(F)            &mt LC(SLASH) LS(B)    &trans
+&trans     &trans                     &trans                     &en_lt_cw_off 13 SPACE     &trans             &none                   &none      &trans                  &lt 15 LS(T)               &trans               &trans                 &trans
             >;
 
             display-name = "CapsWord_en";
@@ -1301,11 +1297,11 @@
 
         Ru {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans             &kp RU_CYRILLIC_TSE                      &soft_sign                         &kp RU_CYRILLIC_YA                  &mt LC(R) RU_CYRILLIC_A     &mt LC(T) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_VE               &kp RU_CYRILLIC_KA                  &kp RU_CYRILLIC_DE            &kp RU_CYRILLIC_SHCHA            &trans
-&kp RU_CYRILLIC_E  &hrml_slow LEFT_GUI RU_CYRILLIC_SHORT_I  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrosm_l LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &ru_com_mt LC(F) 0                          &kp RU_CYRILLIC_EL     &hrml_slow RCTRL RU_CYRILLIC_EN  &hrosm_r LEFT_SHIFT RU_CYRILLIC_TE  &hrosm_r RALT RU_CYRILLIC_ES  &hrml_slow RGUI RU_CYRILLIC_CHE  &kp RU_CYRILLIC_SHA
-&trans             &mt LC(Z) RU_CYRILLIC_EF                 &mt LC(X) RU_CYRILLIC_U            &mt LC(C) RU_CYRILLIC_HA            &mt LC(V) RU_CYRILLIC_YERU  &ru_dot_mt LG(V) 0                          &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM               &kp RU_CYRILLIC_PE                  &kp RU_CYRILLIC_GHE           &mt LC(SLASH) RU_CYRILLIC_ZHE    &trans
-                                                            &trans                             &trans                              &ms_over_ru                 &lt 12 SPACE              &sl 18  &none       &none  &trans  &lt 16 RU_CYRILLIC_ER  &ms_free_ru                      &trans                              &trans
+&none              &none                                    &none                              &none                               &none                       &none                         &none               &none                            &none                               &none                         &none                            &none
+&trans             &kp RU_CYRILLIC_TSE                      &soft_sign                         &kp RU_CYRILLIC_YA                  &mt LC(R) RU_CYRILLIC_A     &mt LC(T) RU_CYRILLIC_YU      &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_VE               &kp RU_CYRILLIC_KA                  &kp RU_CYRILLIC_DE            &kp RU_CYRILLIC_SHCHA            &trans
+&kp RU_CYRILLIC_E  &hrml_slow LEFT_GUI RU_CYRILLIC_SHORT_I  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrosm_l LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &ru_com_mt LC(F) 0            &kp RU_CYRILLIC_EL  &hrml_slow RCTRL RU_CYRILLIC_EN  &hrosm_r LEFT_SHIFT RU_CYRILLIC_TE  &hrosm_r RALT RU_CYRILLIC_ES  &hrml_slow RGUI RU_CYRILLIC_CHE  &kp RU_CYRILLIC_SHA
+&trans             &mt LC(Z) RU_CYRILLIC_EF                 &mt LC(X) RU_CYRILLIC_U            &mt LC(C) RU_CYRILLIC_HA            &mt LC(V) RU_CYRILLIC_YERU  &ru_dot_mt LG(V) 0            &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_EM               &kp RU_CYRILLIC_PE                  &kp RU_CYRILLIC_GHE           &mt LC(SLASH) RU_CYRILLIC_ZHE    &trans
+&trans             &trans                                   &ms_over_ru                        &lt 12 SPACE                        &sl 18                      &none                         &none               &trans                           &lt 16 RU_CYRILLIC_ER               &ms_free_ru                   &trans                           &trans
             >;
 
             display-name = "Russian";
@@ -1313,11 +1309,11 @@
 
         Ru_CW {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans                 &kp LS(RU_CYRILLIC_TSE)                      &caps_soft_sign                        &kp LS(RU_CYRILLIC_YA)                  &mt LC(R) LS(RU_CYRILLIC_A)     &mt LC(T) LS(RU_CYRILLIC_YU)                    &kp LS(RU_CYRILLIC_ZE)     &kp LS(RU_CYRILLIC_VE)               &kp LS(RU_CYRILLIC_KA)                  &kp LS(RU_CYRILLIC_DE)            &kp LS(RU_CYRILLIC_SHCHA)            &trans
-&kp LS(RU_CYRILLIC_E)  &hrml_slow LEFT_GUI LS(RU_CYRILLIC_SHORT_I)  &hrml_slow LEFT_ALT LS(RU_CYRILLIC_I)  &hrosm_l LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)   &ru_com_mt LC(F) 0                              &kp LS(RU_CYRILLIC_EL)     &hrml_slow RCTRL LS(RU_CYRILLIC_EN)  &hrosm_r LEFT_SHIFT LS(RU_CYRILLIC_TE)  &hrosm_r RALT LS(RU_CYRILLIC_ES)  &hrml_slow RGUI LS(RU_CYRILLIC_CHE)  &kp LS(RU_CYRILLIC_SHA)
-&trans                 &mt LC(Z) LS(RU_CYRILLIC_EF)                 &mt LC(X) LS(RU_CYRILLIC_U)            &mt LC(C) LS(RU_CYRILLIC_HA)            &mt LC(V) LS(RU_CYRILLIC_YERU)  &ru_dot_mt LG(V) 0                              &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)               &kp LS(RU_CYRILLIC_PE)                  &kp LS(RU_CYRILLIC_GHE)           &mt LC(SLASH) LS(RU_CYRILLIC_ZHE)    &trans
-                                                                    &trans                                 &trans                                  &trans                          &ru_lt_cw_off 12 SPACE        &trans  &none       &none  &trans  &lt 16 LS(RU_CYRILLIC_ER)  &trans                               &trans                                  &trans
+&none                  &none                                        &none                                  &none                                   &none                           &none                             &none                   &none                                &none                                   &none                             &none                                &none
+&trans                 &kp LS(RU_CYRILLIC_TSE)                      &caps_soft_sign                        &kp LS(RU_CYRILLIC_YA)                  &mt LC(R) LS(RU_CYRILLIC_A)     &mt LC(T) LS(RU_CYRILLIC_YU)      &kp LS(RU_CYRILLIC_ZE)  &kp LS(RU_CYRILLIC_VE)               &kp LS(RU_CYRILLIC_KA)                  &kp LS(RU_CYRILLIC_DE)            &kp LS(RU_CYRILLIC_SHCHA)            &trans
+&kp LS(RU_CYRILLIC_E)  &hrml_slow LEFT_GUI LS(RU_CYRILLIC_SHORT_I)  &hrml_slow LEFT_ALT LS(RU_CYRILLIC_I)  &hrosm_l LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)   &ru_com_mt LC(F) 0                &kp LS(RU_CYRILLIC_EL)  &hrml_slow RCTRL LS(RU_CYRILLIC_EN)  &hrosm_r LEFT_SHIFT LS(RU_CYRILLIC_TE)  &hrosm_r RALT LS(RU_CYRILLIC_ES)  &hrml_slow RGUI LS(RU_CYRILLIC_CHE)  &kp LS(RU_CYRILLIC_SHA)
+&trans                 &mt LC(Z) LS(RU_CYRILLIC_EF)                 &mt LC(X) LS(RU_CYRILLIC_U)            &mt LC(C) LS(RU_CYRILLIC_HA)            &mt LC(V) LS(RU_CYRILLIC_YERU)  &ru_dot_mt LG(V) 0                &kp LS(RU_CYRILLIC_BE)  &kp LS(RU_CYRILLIC_EM)               &kp LS(RU_CYRILLIC_PE)                  &kp LS(RU_CYRILLIC_GHE)           &mt LC(SLASH) LS(RU_CYRILLIC_ZHE)    &trans
+&trans                 &trans                                       &trans                                 &ru_lt_cw_off 12 SPACE                  &trans                          &none                             &none                   &trans                               &lt 16 LS(RU_CYRILLIC_ER)               &trans                            &trans                               &trans
             >;
 
             display-name = "CapsWord_ru";
@@ -1325,11 +1321,11 @@
 
         MFree_ru {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&none  &kp Q                 &kp W             &e_morph_ru        &mt_free LC(R) R  &mt_mouseoff_ru LC(T) T                                    &kp Y                  &kp U   &kp I        &kp O        &kp P      &trans
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm LCTRL F      &mt_mouseoff_ru LC(F) G                                    &kp H                  &kp J   &k_morph_ru  &l_morph_ru  &kp SEMI   &kp SQT
-&none  &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V  &mt_mouseoff_ru LG(V) B                                    &kp N                  &kp M   &kp COMMA    &kp DOT      &kp SLASH  &trans
-                             &trans            &trans             &trans            &space_lt 12 0           &mouseoff_sl 4 18  &none       &none  &bspc_morph  &lt 16 RU_CYRILLIC_ER  &trans  &trans       &trans
+&none   &none                 &none             &none              &none              &none                        &none  &none        &none                  &none        &none      &none
+&none   &kp Q                 &kp W             &e_morph_ru        &mt_free LC(R) R   &mt_mouseoff_ru LC(T) T      &kp Y  &kp U        &kp I                  &kp O        &kp P      &trans
+&none   &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm LCTRL F       &mt_mouseoff_ru LC(F) G      &kp H  &kp J        &k_morph_ru            &l_morph_ru  &kp SEMI   &kp SQT
+&none   &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V   &mt_mouseoff_ru LG(V) B      &kp N  &kp M        &kp COMMA              &kp DOT      &kp SLASH  &trans
+&trans  &trans                &trans            &space_lt 12 0     &mouseoff_sl 4 18  &none                        &none  &bspc_morph  &lt 16 RU_CYRILLIC_ER  &trans       &trans     &trans
             >;
 
             display-name = "MFree_ru";
@@ -1338,87 +1334,87 @@
         M1_ru {
             display-name = "M1_ru";
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&none                    &kp_m1_ru RU_CYRILLIC_TSE      &kp_m1_ru RU_CYRILLIC_SOFT_SIGN  &kp_m1_ru RU_CYRILLIC_YA  &kp_m1_ru RU_CYRILLIC_A     &kp_m1_ru RU_CYRILLIC_YU                      &kp_m1_ru RU_CYRILLIC_ZE  &kp_m1_ru RU_CYRILLIC_VE  &kp_m1_ru RU_CYRILLIC_KA  &kp_m1_ru RU_CYRILLIC_DE   &kp_m1_ru RU_CYRILLIC_SHCHA  &trans
-&kp_m1_ru RU_CYRILLIC_E  &kp_m1_ru RU_CYRILLIC_SHORT_I  &kp_m1_ru RU_CYRILLIC_I          &kp_m1_ru RU_CYRILLIC_IE  &kp_m1_ru RU_CYRILLIC_O     &kp_m1_ru RU_BACKSLASH                        &kp_m1_ru RU_CYRILLIC_EL  &kp_m1_ru RU_CYRILLIC_EN  &kp_m1_ru RU_CYRILLIC_TE  &kp_m1_ru RU_CYRILLIC_ES   &kp_m1_ru RU_CYRILLIC_CHE    &kp_m1_ru RU_CYRILLIC_SHA
-&none                    &kp_m1_ru RU_CYRILLIC_EF       &kp_m1_ru RU_CYRILLIC_U          &kp_m1_ru RU_CYRILLIC_HA  &kp_m1_ru RU_CYRILLIC_YERU  &kp_m1_ru RU_DOT                              &kp_m1_ru RU_CYRILLIC_BE  &kp_m1_ru RU_CYRILLIC_EM  &kp_m1_ru RU_CYRILLIC_PE  &kp_m1_ru RU_CYRILLIC_GHE  &kp_m1_ru RU_CYRILLIC_ZHE    &trans
-                                                        &trans                           &trans                    &kp LA(F9)                  &space_nav_to 12 2        &sl 18  &none       &none  &kp BSPC  &move_nav 16 4            &trans                    &trans                    &trans
+&none                    &none                          &none                            &none                     &none                       &none                         &none                     &none                     &none                     &none                      &none                        &none
+&none                    &kp_m1_ru RU_CYRILLIC_TSE      &kp_m1_ru RU_CYRILLIC_SOFT_SIGN  &kp_m1_ru RU_CYRILLIC_YA  &kp_m1_ru RU_CYRILLIC_A     &kp_m1_ru RU_CYRILLIC_YU      &kp_m1_ru RU_CYRILLIC_ZE  &kp_m1_ru RU_CYRILLIC_VE  &kp_m1_ru RU_CYRILLIC_KA  &kp_m1_ru RU_CYRILLIC_DE   &kp_m1_ru RU_CYRILLIC_SHCHA  &trans
+&kp_m1_ru RU_CYRILLIC_E  &kp_m1_ru RU_CYRILLIC_SHORT_I  &kp_m1_ru RU_CYRILLIC_I          &kp_m1_ru RU_CYRILLIC_IE  &kp_m1_ru RU_CYRILLIC_O     &kp_m1_ru RU_BACKSLASH        &kp_m1_ru RU_CYRILLIC_EL  &kp_m1_ru RU_CYRILLIC_EN  &kp_m1_ru RU_CYRILLIC_TE  &kp_m1_ru RU_CYRILLIC_ES   &kp_m1_ru RU_CYRILLIC_CHE    &kp_m1_ru RU_CYRILLIC_SHA
+&none                    &kp_m1_ru RU_CYRILLIC_EF       &kp_m1_ru RU_CYRILLIC_U          &kp_m1_ru RU_CYRILLIC_HA  &kp_m1_ru RU_CYRILLIC_YERU  &kp_m1_ru RU_DOT              &kp_m1_ru RU_CYRILLIC_BE  &kp_m1_ru RU_CYRILLIC_EM  &kp_m1_ru RU_CYRILLIC_PE  &kp_m1_ru RU_CYRILLIC_GHE  &kp_m1_ru RU_CYRILLIC_ZHE    &trans
+&trans                   &trans                         &kp LA(F9)                       &space_nav_to 12 2        &sl 18                      &none                         &none                     &kp BSPC                  &move_nav 16 4            &trans                     &trans                       &trans
             >;
         };
 
         M2_ru {
             display-name = "M2_ru";
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&none                    &kp_m2_ru RU_CYRILLIC_TSE      &kp_m2_ru RU_CYRILLIC_SOFT_SIGN  &kp_m2_ru RU_CYRILLIC_YA  &kp_m2_ru RU_CYRILLIC_A     &kp_m2_ru RU_CYRILLIC_YU                           &kp_m2_ru RU_CYRILLIC_ZE  &kp_m2_ru RU_CYRILLIC_VE  &kp_m2_ru RU_CYRILLIC_KA  &kp_m2_ru RU_CYRILLIC_DE   &kp_m2_ru RU_CYRILLIC_SHCHA  &trans
-&kp_m2_ru RU_CYRILLIC_E  &kp_m2_ru RU_CYRILLIC_SHORT_I  &kp_m2_ru RU_CYRILLIC_I          &kp_m2_ru RU_CYRILLIC_IE  &kp_m2_ru RU_CYRILLIC_O     &kp_m2_ru RU_BACKSLASH                             &kp_m2_ru RU_CYRILLIC_EL  &kp_m2_ru RU_CYRILLIC_EN  &kp_m2_ru RU_CYRILLIC_TE  &kp_m2_ru RU_CYRILLIC_ES   &kp_m2_ru RU_CYRILLIC_CHE    &kp_m2_ru RU_CYRILLIC_SHA
-&none                    &kp_m2_ru RU_CYRILLIC_EF       &kp_m2_ru RU_CYRILLIC_U          &kp_m2_ru RU_CYRILLIC_HA  &kp_m2_ru RU_CYRILLIC_YERU  &kp_m2_ru RU_DOT                                   &kp_m2_ru RU_CYRILLIC_BE  &kp_m2_ru RU_CYRILLIC_EM  &kp_m2_ru RU_CYRILLIC_PE  &kp_m2_ru RU_CYRILLIC_GHE  &kp_m2_ru RU_CYRILLIC_ZHE    &trans
-                                                        &trans                           &trans                    &kp LA(F9)                  &space_nav_to 12 2        &sl 18  &none       &none  &kp_to BSPC 5  &move_nav 16 4            &trans                    &trans                    &trans
+&none                    &none                          &none                            &none                     &none                       &none                         &none                     &none                     &none                     &none                      &none                        &none
+&none                    &kp_m2_ru RU_CYRILLIC_TSE      &kp_m2_ru RU_CYRILLIC_SOFT_SIGN  &kp_m2_ru RU_CYRILLIC_YA  &kp_m2_ru RU_CYRILLIC_A     &kp_m2_ru RU_CYRILLIC_YU      &kp_m2_ru RU_CYRILLIC_ZE  &kp_m2_ru RU_CYRILLIC_VE  &kp_m2_ru RU_CYRILLIC_KA  &kp_m2_ru RU_CYRILLIC_DE   &kp_m2_ru RU_CYRILLIC_SHCHA  &trans
+&kp_m2_ru RU_CYRILLIC_E  &kp_m2_ru RU_CYRILLIC_SHORT_I  &kp_m2_ru RU_CYRILLIC_I          &kp_m2_ru RU_CYRILLIC_IE  &kp_m2_ru RU_CYRILLIC_O     &kp_m2_ru RU_BACKSLASH        &kp_m2_ru RU_CYRILLIC_EL  &kp_m2_ru RU_CYRILLIC_EN  &kp_m2_ru RU_CYRILLIC_TE  &kp_m2_ru RU_CYRILLIC_ES   &kp_m2_ru RU_CYRILLIC_CHE    &kp_m2_ru RU_CYRILLIC_SHA
+&none                    &kp_m2_ru RU_CYRILLIC_EF       &kp_m2_ru RU_CYRILLIC_U          &kp_m2_ru RU_CYRILLIC_HA  &kp_m2_ru RU_CYRILLIC_YERU  &kp_m2_ru RU_DOT              &kp_m2_ru RU_CYRILLIC_BE  &kp_m2_ru RU_CYRILLIC_EM  &kp_m2_ru RU_CYRILLIC_PE  &kp_m2_ru RU_CYRILLIC_GHE  &kp_m2_ru RU_CYRILLIC_ZHE    &trans
+&trans                   &trans                         &kp LA(F9)                       &space_nav_to 12 2        &sl 18                      &none                         &none                     &kp_to BSPC 5             &move_nav 16 4            &trans                     &trans                       &trans
             >;
         };
 
         MSub_ru {
             display-name = "MSub_ru";
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&none              &kp RU_CYRILLIC_TSE      &mt_sub_ru RU_CYRILLIC_SOFT_SIGN RU_CYRILLIC_SOFT_SIGN  &mt_sub_ru RU_CYRILLIC_YA RU_CYRILLIC_YA  &mt_sub_ru RU_CYRILLIC_A RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                           &kp RU_CYRILLIC_ZE  &mt_sub_ru RU_CYRILLIC_VE RU_CYRILLIC_VE  &mt_sub_ru RU_CYRILLIC_KA RU_CYRILLIC_KA  &mt_sub_ru RU_CYRILLIC_DE RU_CYRILLIC_DE    &kp RU_CYRILLIC_SHCHA  &trans
-&kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &mt_sub_ru RU_CYRILLIC_I RU_CYRILLIC_I                  &mt_sub_ru RU_CYRILLIC_IE RU_CYRILLIC_IE  &mt_sub_ru RU_CYRILLIC_O RU_CYRILLIC_O        &kp RU_BACKSLASH                             &kp RU_CYRILLIC_EL  &mt_sub_ru RU_CYRILLIC_EN RU_CYRILLIC_EN  &mt_sub_ru RU_CYRILLIC_TE RU_CYRILLIC_TE  &mt_sub_ru RU_CYRILLIC_ES RU_CYRILLIC_ES    &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
-&none              &kp RU_CYRILLIC_EF       &mt_sub_ru RU_CYRILLIC_U RU_CYRILLIC_U                  &mt_sub_ru RU_CYRILLIC_HA RU_CYRILLIC_HA  &mt_sub_ru RU_CYRILLIC_YERU RU_CYRILLIC_YERU  &kp RU_DOT                                   &kp RU_CYRILLIC_BE  &mt_sub_ru RU_CYRILLIC_EM RU_CYRILLIC_EM  &mt_sub_ru RU_CYRILLIC_PE RU_CYRILLIC_PE  &mt_sub_ru RU_CYRILLIC_GHE RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                                                  &trans                                    &kp LA(F9)                                    &space_nav_to 12 2  &sl 18  &none       &none  &kp_to BSPC 6  &move_nav 16 4      &trans                                    &trans                                    &trans
+&none              &none                    &none                                                   &none                                     &none                                         &none                   &none               &none                                     &none                                     &none                                       &none                  &none
+&none              &kp RU_CYRILLIC_TSE      &mt_sub_ru RU_CYRILLIC_SOFT_SIGN RU_CYRILLIC_SOFT_SIGN  &mt_sub_ru RU_CYRILLIC_YA RU_CYRILLIC_YA  &mt_sub_ru RU_CYRILLIC_A RU_CYRILLIC_A        &kp RU_CYRILLIC_YU      &kp RU_CYRILLIC_ZE  &mt_sub_ru RU_CYRILLIC_VE RU_CYRILLIC_VE  &mt_sub_ru RU_CYRILLIC_KA RU_CYRILLIC_KA  &mt_sub_ru RU_CYRILLIC_DE RU_CYRILLIC_DE    &kp RU_CYRILLIC_SHCHA  &trans
+&kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &mt_sub_ru RU_CYRILLIC_I RU_CYRILLIC_I                  &mt_sub_ru RU_CYRILLIC_IE RU_CYRILLIC_IE  &mt_sub_ru RU_CYRILLIC_O RU_CYRILLIC_O        &kp RU_BACKSLASH        &kp RU_CYRILLIC_EL  &mt_sub_ru RU_CYRILLIC_EN RU_CYRILLIC_EN  &mt_sub_ru RU_CYRILLIC_TE RU_CYRILLIC_TE  &mt_sub_ru RU_CYRILLIC_ES RU_CYRILLIC_ES    &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
+&none              &kp RU_CYRILLIC_EF       &mt_sub_ru RU_CYRILLIC_U RU_CYRILLIC_U                  &mt_sub_ru RU_CYRILLIC_HA RU_CYRILLIC_HA  &mt_sub_ru RU_CYRILLIC_YERU RU_CYRILLIC_YERU  &kp RU_DOT              &kp RU_CYRILLIC_BE  &mt_sub_ru RU_CYRILLIC_EM RU_CYRILLIC_EM  &mt_sub_ru RU_CYRILLIC_PE RU_CYRILLIC_PE  &mt_sub_ru RU_CYRILLIC_GHE RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
+&trans             &trans                   &kp LA(F9)                                              &space_nav_to 12 2                        &sl 18                                        &none                   &none               &kp_to BSPC 6                             &move_nav 16 4                            &trans                                      &trans                 &trans
             >;
         };
 
         MFree_en {
             display-name = "MFree_en";
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&none  &kp Q                 &kp W             &e_morph_en        &mt_free LC(R) R  &mt_mouseoff_en LC(T) T                                    &kp Y                  &kp U   &kp I        &kp O        &kp P      &trans
-&none  &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm LCTRL F      &mt_mouseoff_en LC(F) G                                    &kp H                  &kp J   &k_morph_en  &l_morph_en  &kp SEMI   &kp SQT
-&none  &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V  &mt_mouseoff_en LC(V) B                                    &kp N                  &kp M   &kp COMMA    &kp DOT      &kp SLASH  &trans
-                             &trans            &trans             &trans            &space_lt 13 0           &mouseoff_sl 8 17 &none       &none   &bspc_morph  &lt 15 RU_CYRILLIC_ER  &trans  &trans       &trans
+&none   &none                 &none             &none              &none              &none                        &none  &none        &none                  &none        &none      &none
+&none   &kp Q                 &kp W             &e_morph_en        &mt_free LC(R) R   &mt_mouseoff_en LC(T) T      &kp Y  &kp U        &kp I                  &kp O        &kp P      &trans
+&none   &hrm_slow LEFT_GUI A  &hrm_slow LALT S  &hrm_slow LSHFT D  &hrm LCTRL F       &mt_mouseoff_en LC(F) G      &kp H  &kp J        &k_morph_en            &l_morph_en  &kp SEMI   &kp SQT
+&none   &mt_free LC(Z) Z      &mt_free LC(X) X  &mt_free LC(C) C   &mt_free LC(V) V   &mt_mouseoff_en LC(V) B      &kp N  &kp M        &kp COMMA              &kp DOT      &kp SLASH  &trans
+&trans  &trans                &trans            &space_lt 13 0     &mouseoff_sl 8 17  &none                        &none  &bspc_morph  &lt 15 RU_CYRILLIC_ER  &trans       &trans     &trans
             >;
         };
 
         M1_en {
             display-name = "M1_en";
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&none                    &kp_m1_en RU_CYRILLIC_TSE      &kp_m1_en RU_CYRILLIC_SOFT_SIGN  &kp_m1_en RU_CYRILLIC_YA  &kp_m1_en RU_CYRILLIC_A     &kp_m1_en RU_CYRILLIC_YU                      &kp_m1_en RU_CYRILLIC_ZE  &kp_m1_en RU_CYRILLIC_VE  &kp_m1_en RU_CYRILLIC_KA  &kp_m1_en RU_CYRILLIC_DE   &kp_m1_en RU_CYRILLIC_SHCHA  &trans
-&kp_m1_en RU_CYRILLIC_E  &kp_m1_en RU_CYRILLIC_SHORT_I  &kp_m1_en RU_CYRILLIC_I          &kp_m1_en RU_CYRILLIC_IE  &kp_m1_en RU_CYRILLIC_O     &kp_m1_en RU_BACKSLASH                        &kp_m1_en RU_CYRILLIC_EL  &kp_m1_en RU_CYRILLIC_EN  &kp_m1_en RU_CYRILLIC_TE  &kp_m1_en RU_CYRILLIC_ES   &kp_m1_en RU_CYRILLIC_CHE    &kp_m1_en RU_CYRILLIC_SHA
-&none                    &kp_m1_en RU_CYRILLIC_EF       &kp_m1_en RU_CYRILLIC_U          &kp_m1_en RU_CYRILLIC_HA  &kp_m1_en RU_CYRILLIC_YERU  &kp_m1_en RU_DOT                              &kp_m1_en RU_CYRILLIC_BE  &kp_m1_en RU_CYRILLIC_EM  &kp_m1_en RU_CYRILLIC_PE  &kp_m1_en RU_CYRILLIC_GHE  &kp_m1_en RU_CYRILLIC_ZHE    &trans
-                                                        &trans                           &trans                    &kp LA(F9)                  &space_nav_to 13 0        &sl 17  &none       &none  &kp BSPC  &move_nav 15 8            &trans                    &trans                    &trans
+&none                    &none                          &none                            &none                     &none                       &none                         &none                     &none                     &none                     &none                      &none                        &none
+&none                    &kp_m1_en RU_CYRILLIC_TSE      &kp_m1_en RU_CYRILLIC_SOFT_SIGN  &kp_m1_en RU_CYRILLIC_YA  &kp_m1_en RU_CYRILLIC_A     &kp_m1_en RU_CYRILLIC_YU      &kp_m1_en RU_CYRILLIC_ZE  &kp_m1_en RU_CYRILLIC_VE  &kp_m1_en RU_CYRILLIC_KA  &kp_m1_en RU_CYRILLIC_DE   &kp_m1_en RU_CYRILLIC_SHCHA  &trans
+&kp_m1_en RU_CYRILLIC_E  &kp_m1_en RU_CYRILLIC_SHORT_I  &kp_m1_en RU_CYRILLIC_I          &kp_m1_en RU_CYRILLIC_IE  &kp_m1_en RU_CYRILLIC_O     &kp_m1_en RU_BACKSLASH        &kp_m1_en RU_CYRILLIC_EL  &kp_m1_en RU_CYRILLIC_EN  &kp_m1_en RU_CYRILLIC_TE  &kp_m1_en RU_CYRILLIC_ES   &kp_m1_en RU_CYRILLIC_CHE    &kp_m1_en RU_CYRILLIC_SHA
+&none                    &kp_m1_en RU_CYRILLIC_EF       &kp_m1_en RU_CYRILLIC_U          &kp_m1_en RU_CYRILLIC_HA  &kp_m1_en RU_CYRILLIC_YERU  &kp_m1_en RU_DOT              &kp_m1_en RU_CYRILLIC_BE  &kp_m1_en RU_CYRILLIC_EM  &kp_m1_en RU_CYRILLIC_PE  &kp_m1_en RU_CYRILLIC_GHE  &kp_m1_en RU_CYRILLIC_ZHE    &trans
+&trans                   &trans                         &kp LA(F9)                       &space_nav_to 13 0        &sl 17                      &none                         &none                     &kp BSPC                  &move_nav 15 8            &trans                     &trans                       &trans
             >;
         };
 
         M2_en {
             display-name = "M2_en";
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&none                    &kp_m2_en RU_CYRILLIC_TSE      &kp_m2_en RU_CYRILLIC_SOFT_SIGN  &kp_m2_en RU_CYRILLIC_YA  &kp_m2_en RU_CYRILLIC_A     &kp_m2_en RU_CYRILLIC_YU                                &kp_m2_en RU_CYRILLIC_ZE  &kp_m2_en RU_CYRILLIC_VE  &kp_m2_en RU_CYRILLIC_KA  &kp_m2_en RU_CYRILLIC_DE   &kp_m2_en RU_CYRILLIC_SHCHA  &trans
-&kp_m2_en RU_CYRILLIC_E  &kp_m2_en RU_CYRILLIC_SHORT_I  &kp_m2_en RU_CYRILLIC_I          &kp_m2_en RU_CYRILLIC_IE  &kp_m2_en RU_CYRILLIC_O     &kp_m2_en RU_BACKSLASH                                  &kp_m2_en RU_CYRILLIC_EL  &kp_m2_en RU_CYRILLIC_EN  &kp_m2_en RU_CYRILLIC_TE  &kp_m2_en RU_CYRILLIC_ES   &kp_m2_en RU_CYRILLIC_CHE    &kp_m2_en RU_CYRILLIC_SHA
-&none                    &kp_m2_en RU_CYRILLIC_EF       &kp_m2_en RU_CYRILLIC_U          &kp_m2_en RU_CYRILLIC_HA  &kp_m2_en RU_CYRILLIC_YERU  &kp_m2_en RU_DOT                                        &kp_m2_en RU_CYRILLIC_BE  &kp_m2_en RU_CYRILLIC_EM  &kp_m2_en RU_CYRILLIC_PE  &kp_m2_en RU_CYRILLIC_GHE  &kp_m2_en RU_CYRILLIC_ZHE    &trans
-                                                        &trans                           &trans                    &kp LA(F9)                  &space_nav_to 13 0        &sl 17   &none       &none &kp_to BACKSPACE 9  &move_nav 15 8            &trans                    &trans                    &trans
+&none                    &none                          &none                            &none                     &none                       &none                         &none                     &none                     &none                     &none                      &none                        &none
+&none                    &kp_m2_en RU_CYRILLIC_TSE      &kp_m2_en RU_CYRILLIC_SOFT_SIGN  &kp_m2_en RU_CYRILLIC_YA  &kp_m2_en RU_CYRILLIC_A     &kp_m2_en RU_CYRILLIC_YU      &kp_m2_en RU_CYRILLIC_ZE  &kp_m2_en RU_CYRILLIC_VE  &kp_m2_en RU_CYRILLIC_KA  &kp_m2_en RU_CYRILLIC_DE   &kp_m2_en RU_CYRILLIC_SHCHA  &trans
+&kp_m2_en RU_CYRILLIC_E  &kp_m2_en RU_CYRILLIC_SHORT_I  &kp_m2_en RU_CYRILLIC_I          &kp_m2_en RU_CYRILLIC_IE  &kp_m2_en RU_CYRILLIC_O     &kp_m2_en RU_BACKSLASH        &kp_m2_en RU_CYRILLIC_EL  &kp_m2_en RU_CYRILLIC_EN  &kp_m2_en RU_CYRILLIC_TE  &kp_m2_en RU_CYRILLIC_ES   &kp_m2_en RU_CYRILLIC_CHE    &kp_m2_en RU_CYRILLIC_SHA
+&none                    &kp_m2_en RU_CYRILLIC_EF       &kp_m2_en RU_CYRILLIC_U          &kp_m2_en RU_CYRILLIC_HA  &kp_m2_en RU_CYRILLIC_YERU  &kp_m2_en RU_DOT              &kp_m2_en RU_CYRILLIC_BE  &kp_m2_en RU_CYRILLIC_EM  &kp_m2_en RU_CYRILLIC_PE  &kp_m2_en RU_CYRILLIC_GHE  &kp_m2_en RU_CYRILLIC_ZHE    &trans
+&trans                   &trans                         &kp LA(F9)                       &space_nav_to 13 0        &sl 17                      &none                         &none                     &kp_to BACKSPACE 9        &move_nav 15 8            &trans                     &trans                       &trans
             >;
         };
 
         MSub_en {
             display-name = "MSub_en";
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&none              &kp RU_CYRILLIC_TSE      &mt_sub_en RU_CYRILLIC_SOFT_SIGN RU_CYRILLIC_SOFT_SIGN  &mt_sub_en RU_CYRILLIC_YA RU_CYRILLIC_YA  &mt_sub_en RU_CYRILLIC_A RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                                 &kp RU_CYRILLIC_ZE  &mt_sub_en RU_CYRILLIC_VE RU_CYRILLIC_VE  &mt_sub_en RU_CYRILLIC_KA RU_CYRILLIC_KA  &mt_sub_en RU_CYRILLIC_DE RU_CYRILLIC_DE    &kp RU_CYRILLIC_SHCHA  &trans
-&kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &mt_sub_en RU_CYRILLIC_I RU_CYRILLIC_I                  &mt_sub_en RU_CYRILLIC_IE RU_CYRILLIC_IE  &mt_sub_en RU_CYRILLIC_O RU_CYRILLIC_O        &kp RU_BACKSLASH                                   &kp RU_CYRILLIC_EL  &mt_sub_en RU_CYRILLIC_EN RU_CYRILLIC_EN  &mt_sub_en RU_CYRILLIC_TE RU_CYRILLIC_TE  &mt_sub_en RU_CYRILLIC_ES RU_CYRILLIC_ES    &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
-&none              &kp RU_CYRILLIC_EF       &mt_sub_en RU_CYRILLIC_U RU_CYRILLIC_U                  &mt_sub_en RU_CYRILLIC_HA RU_CYRILLIC_HA  &mt_sub_en RU_CYRILLIC_YERU RU_CYRILLIC_YERU  &kp RU_DOT                                         &kp RU_CYRILLIC_BE  &mt_sub_en RU_CYRILLIC_EM RU_CYRILLIC_EM  &mt_sub_en RU_CYRILLIC_PE RU_CYRILLIC_PE  &mt_sub_en RU_CYRILLIC_GHE RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                                                  &trans                                    &kp LA(F9)                                    &space_nav_to 13 0  &sl 17  &none       &none  &kp_to BACKSPACE 10  &move_nav 15 8      &trans                                    &trans                                    &trans
+&none              &none                    &none                                                   &none                                     &none                                         &none                   &none               &none                                     &none                                     &none                                       &none                  &none
+&none              &kp RU_CYRILLIC_TSE      &mt_sub_en RU_CYRILLIC_SOFT_SIGN RU_CYRILLIC_SOFT_SIGN  &mt_sub_en RU_CYRILLIC_YA RU_CYRILLIC_YA  &mt_sub_en RU_CYRILLIC_A RU_CYRILLIC_A        &kp RU_CYRILLIC_YU      &kp RU_CYRILLIC_ZE  &mt_sub_en RU_CYRILLIC_VE RU_CYRILLIC_VE  &mt_sub_en RU_CYRILLIC_KA RU_CYRILLIC_KA  &mt_sub_en RU_CYRILLIC_DE RU_CYRILLIC_DE    &kp RU_CYRILLIC_SHCHA  &trans
+&kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &mt_sub_en RU_CYRILLIC_I RU_CYRILLIC_I                  &mt_sub_en RU_CYRILLIC_IE RU_CYRILLIC_IE  &mt_sub_en RU_CYRILLIC_O RU_CYRILLIC_O        &kp RU_BACKSLASH        &kp RU_CYRILLIC_EL  &mt_sub_en RU_CYRILLIC_EN RU_CYRILLIC_EN  &mt_sub_en RU_CYRILLIC_TE RU_CYRILLIC_TE  &mt_sub_en RU_CYRILLIC_ES RU_CYRILLIC_ES    &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
+&none              &kp RU_CYRILLIC_EF       &mt_sub_en RU_CYRILLIC_U RU_CYRILLIC_U                  &mt_sub_en RU_CYRILLIC_HA RU_CYRILLIC_HA  &mt_sub_en RU_CYRILLIC_YERU RU_CYRILLIC_YERU  &kp RU_DOT              &kp RU_CYRILLIC_BE  &mt_sub_en RU_CYRILLIC_EM RU_CYRILLIC_EM  &mt_sub_en RU_CYRILLIC_PE RU_CYRILLIC_PE  &mt_sub_en RU_CYRILLIC_GHE RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
+&trans             &trans                   &kp LA(F9)                                              &space_nav_to 13 0                        &sl 17                                        &none                   &none               &kp_to BACKSPACE 10                       &move_nav 15 8                            &trans                                      &trans                 &trans
             >;
         };
 
         Nav_ru {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                    &none               &none     &none          &none        &kp DELETE  &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                &kp K_CONTEXT_MENU  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT   &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                          &kp LC(F8)          &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &trans
-                                        &trans                           &trans                   &trans                    &none               &none  &none       &none  &kp LA(ENTER)  &alt_spc_ru         &trans    &trans         &trans
+&none   &none                           &none                            &none                    &none                     &none                   &none               &none          &none          &none        &none       &none
+&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                &none               &none          &none          &none        &kp DELETE  &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro            &kp K_CONTEXT_MENU  &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT   &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))      &kp LC(F8)          &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &trans
+&trans  &trans                          &trans                           &none                    &none                     &none                   &none               &kp LA(ENTER)  &alt_spc_ru    &trans       &trans      &trans
             >;
 
             display-name = "Nav_ru";
@@ -1427,21 +1423,21 @@
         Nav_en {
             display-name = "Nav_en";
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                                    &none               &none     &none          &none        &kp DELETE  &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                &kp K_CONTEXT_MENU  &kp LEFT  &kp DOWN       &kp UP       &kp RIGHT   &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                          &kp LC(F8)          &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &trans
-                                        &trans                           &trans                   &trans                    &none               &none   &none       &none &kp LA(ENTER)  &alt_spc_en         &trans    &trans         &trans
+&none   &none                           &none                            &none                    &none                     &none                   &none               &none          &none          &none        &none       &none
+&trans  &trans                          &kp LA(LC(GRAVE))                &kp LC(LS(LA(LG(TAB))))  &kp LS(LC(LA(LG(F1))))    &testops                &none               &none          &none          &none        &kp DELETE  &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT                &mod_dtap LCTRL LEFT_GUI  &zeros_macro            &kp K_CONTEXT_MENU  &kp LEFT       &kp DOWN       &kp UP       &kp RIGHT   &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)         &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))      &kp LC(F8)          &kp HOME       &kp PAGE_DOWN  &kp PAGE_UP  &kp END     &trans
+&trans  &trans                          &trans                           &none                    &none                     &none                   &none               &kp LA(ENTER)  &alt_spc_en    &trans       &trans      &trans
             >;
         };
 
         Mods {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans  &kp Q             &kp W             &kp E              &kp R         &kp T                                  &kp Y  &kp U              &kp I              &kp O             &kp P                &trans
-&trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                                  &kp H  &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
-&trans  &kp Z             &kp X             &kp C              &kp V         &kp B                                  &kp N  &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
-                          &trans            &trans             &trans        &space_lt 12 0  &trans  &none       &none  &bspc_morph  &none  &trans             &trans             &trans
+&none   &none             &none             &none              &none         &none      &none  &none              &none              &none             &none                &none
+&trans  &kp Q             &kp W             &kp E              &kp R         &kp T      &kp Y  &kp U              &kp I              &kp O             &kp P                &trans
+&trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G      &kp H  &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
+&trans  &kp Z             &kp X             &kp C              &kp V         &kp B      &kp N  &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
+&trans  &trans            &trans            &space_lt 12 0     &trans        &none      &none  &bspc_morph        &none              &trans            &trans               &trans
             >;
 
             display-name = "Mod";
@@ -1449,11 +1445,11 @@
 
         Num_en {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans  &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                        &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &morph_en_com                   &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL  &kp N4        &kp N5        &kp N6        &morph_en_dot                   &trans  &trans     &none       &none         &trans        &trans
-                   &trans        &trans        &trans        &kp SPACE      &none  &none       &none  &trans  &trans  &trans     &trans      &trans
+&none   &none      &none         &none         &none         &none              &none   &none      &none       &none         &none         &none
+&trans  &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS           &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &morph_en_com      &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL  &kp N4        &kp N5        &kp N6        &morph_en_dot      &trans  &trans     &none       &none         &trans        &trans
+&trans  &trans     &trans        &kp SPACE     &none         &none              &none   &trans     &trans      &trans        &trans        &trans
             >;
 
             display-name = "Num_en";
@@ -1461,11 +1457,11 @@
 
         Num_ru {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans  &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                        &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &morph_ru_com                   &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &morph_ru_dot                   &trans  &trans     &none       &none         &trans        &trans
-                      &trans        &trans        &trans        &kp SPACE      &none    &trans  &trans  &trans     &trans      &trans
+&none   &none         &none         &none         &none         &none              &none   &none      &none       &none         &none         &none
+&trans  &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS           &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &morph_ru_com      &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &morph_ru_dot      &trans  &trans     &none       &none         &trans        &trans
+&trans  &trans        &trans        &kp SPACE     &none         &trans             &trans  &trans     &trans      &trans
             >;
 
             display-name = "Num_ru";
@@ -1473,11 +1469,11 @@
 
         App_en {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans                        &kp LA(LC(LS(P)))  &vm_en LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
-&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                    &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
-&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                       &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                    &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
-                                                 &trans                                  &trans             &trans             &none              &sl 17  &none       &none  &trans  &trans             &trans             &trans                 &trans
+&none                         &none              &none                                   &none              &none              &none                  &none              &none              &none                  &none                &none                      &none
+&trans                        &kp LA(LC(LS(P)))  &vm_en LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))      &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
+&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))      &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
+&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                       &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))      &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
+&trans                        &trans             &trans                                  &none              &sl 17             &none                  &none              &trans             &trans                 &trans               &trans                     &trans
             >;
 
             display-name = "App_en";
@@ -1486,21 +1482,21 @@
         App_ru {
             display-name = "App_ru";
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans                        &kp LA(LC(LS(P)))  &vm_ru LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
-&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                    &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
-&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                       &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                    &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
-                                                 &trans                                  &trans             &trans             &none              &sl 18    &trans  &trans             &trans             &trans                 &trans
+&none                         &none              &none                                   &none              &none              &none                  &none              &none              &none                  &none                &none                      &none
+&trans                        &kp LA(LC(LS(P)))  &vm_ru LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))      &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
+&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))      &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
+&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                       &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))      &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
+&trans                        &trans             &trans                                  &none              &sl 18             &trans                 &trans             &trans             &trans                 &trans
             >;
         };
 
         Sym_en {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans  &trans  &none                 &none        &none                  &trans                         &trans            &kp LEFT_BRACKET  &ru_kp RU_RUBLE   &kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp TILDE    &kp RIGHT_PARENTHESIS  &kp PERCENT                    &ru_kp RU_NUMERO  &kp LEFT_BRACE    &kp CARET         &kp RIGHT_BRACE    &trans  &trans
-&trans  &trans  &none                 &kp PERCENT  &en_code               &none                          &trans            &kp LESS_THAN     &ru_kp RU_NUMERO  &kp GREATER_THAN   &trans  &trans
-                &trans                &trans       &trans                 &trans       &trans &none       &none   &trans  &trans            &trans            &trans            &trans
+&none   &none   &none                 &none        &none                  &none            &none             &none             &none             &none              &none   &none
+&trans  &trans  &none                 &none        &none                  &trans           &trans            &kp LEFT_BRACKET  &ru_kp RU_RUBLE   &kp RIGHT_BRACKET  &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &kp TILDE    &kp RIGHT_PARENTHESIS  &kp PERCENT      &ru_kp RU_NUMERO  &kp LEFT_BRACE    &kp CARET         &kp RIGHT_BRACE    &trans  &trans
+&trans  &trans  &none                 &kp PERCENT  &en_code               &none            &trans            &kp LESS_THAN     &ru_kp RU_NUMERO  &kp GREATER_THAN   &trans  &trans
+&trans  &trans  &trans                &trans       &trans                 &none            &none             &trans            &trans            &trans             &trans  &trans
             >;
 
             display-name = "Sym_en";
@@ -1508,11 +1504,11 @@
 
         Sym_ru {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans  &trans  &none                 &none           &none     &trans                            &trans         &en_kp LEFT_BRACKET  &kp RU_RUBLE   &en_kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp TILDE       &kp RPAR  &kp RU_PERCENT                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp CARET   &en_kp RIGHT_BRACE    &trans  &trans
-&trans  &trans  &none                 &kp RU_PERCENT  &ru_code  &none                             &trans         &en_kp LESS_THAN     &kp RU_NUMERO  &en_kp GREATER_THAN   &trans  &trans
-                &trans                &trans          &trans    &trans          &trans  &none       &none  &trans  &trans         &trans               &trans         &trans
+&none   &none   &none                 &none           &none     &none               &none          &none                &none          &none                 &none   &none
+&trans  &trans  &none                 &none           &none     &trans              &trans         &en_kp LEFT_BRACKET  &kp RU_RUBLE   &en_kp RIGHT_BRACKET  &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &kp TILDE       &kp RPAR  &kp RU_PERCENT      &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp CARET   &en_kp RIGHT_BRACE    &trans  &trans
+&trans  &trans  &none                 &kp RU_PERCENT  &ru_code  &none               &trans         &en_kp LESS_THAN     &kp RU_NUMERO  &en_kp GREATER_THAN   &trans  &trans
+&trans  &trans  &trans                &trans          &trans    &none               &none          &trans               &trans         &trans                &trans  &trans
             >;
 
             display-name = "Sym_ru";
@@ -1520,11 +1516,11 @@
 
         Fn {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans  &trans   &kp F7  &kp F8  &kp F9  &trans                     &trans  &trans     &trans          &trans    &trans        &trans
-&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp F12                    &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LALT  &kp LEFT_GUI  &trans
-&trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans                     &trans  &trans     &trans          &trans    &trans        &trans
-                 &trans  &trans  &trans  &trans   &trans   &none       &none &trans  &trans  &trans     &trans          &trans
+&none   &none    &none   &none   &none   &none        &none   &none      &none           &none     &none         &none
+&trans  &trans   &kp F7  &kp F8  &kp F9  &trans       &trans  &trans     &trans          &trans    &trans        &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp F12      &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LALT  &kp LEFT_GUI  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &trans       &trans  &trans     &trans          &trans    &trans        &trans
+&trans  &trans   &trans  &trans  &trans  &none        &none   &trans     &trans          &trans    &trans        &trans
             >;
 
             display-name = "Fn";
@@ -1532,11 +1528,11 @@
 
         OS_ru {
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans  &trans  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &trans  &kp F24         &trans  &trans  &trans   &trans
-&trans  &trans  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &trans  &kp F23         &trans  &trans  &trans      &trans
-                      &trans          &trans                    &trans                &trans       &none       &none         &trans    &trans  &trans        &trans          &trans  &trans
+&none   &none   &none           &none                     &none                 &none                     &none   &none    &none   &none   &none   &none
+&trans  &trans  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))      &trans  &trans   &trans  &trans  &trans  &trans
+&trans  &trans  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP              &trans  &kp F24  &trans  &trans  &trans  &trans
+&trans  &trans  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN              &trans  &kp F23  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans                    &none                 &none                     &trans  &trans   &trans  &trans  &trans  &trans
             >;
 
             display-name = "OS_ru";
@@ -1545,11 +1541,11 @@
         OS_en {
             display-name = "OS_en";
             bindings = <
-            &none       &none       &none       &none       &none       &none        &none       &none       &none       &none       &none       &none            
-&trans  &trans  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &trans  &kp F24         &trans  &trans  &trans   &trans
-&trans  &trans  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &trans  &kp F23         &trans  &trans  &trans      &trans
-                      &trans          &trans                    &trans                &trans         &none       &none       &trans    &trans  &trans        &trans          &trans  &trans
+&none   &none   &none           &none                     &none                 &none                     &none   &none    &none   &none   &none   &none
+&trans  &trans  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))      &trans  &trans   &trans  &trans  &trans  &trans
+&trans  &trans  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP              &trans  &kp F24  &trans  &trans  &trans  &trans
+&trans  &trans  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN              &trans  &kp F23  &trans  &trans  &trans  &trans
+&trans  &trans  &trans          &trans                    &none                 &none                     &trans  &trans   &trans  &trans  &trans  &trans
             >;
         };
     };
