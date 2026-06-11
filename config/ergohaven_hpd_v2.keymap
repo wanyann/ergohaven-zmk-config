@@ -1285,7 +1285,7 @@
 
         En_CW {
             bindings = <
-&none      &none                      &none                      &none                      &none              &none                   &none      &none                   &none                      &none                &none                  &none
+&kp A      &kp B                      &kp C                      &kp D                      &kp E              &kp F                   &kp G      &kp H                   &kp I                      &kp J                &kp K                  &kp L
 &trans     &none                      &kp LS(Y)                  &kp LS(U)                  &mt LC(R) LS(A)    &mt LC(T) APOS          &kp LS(Q)  &kp LS(G)               &kp LS(N)                  &kp LS(W)            &kp LS(Z)              &trans
 &kp LS(J)  &hrml_slow LEFT_GUI LS(H)  &hrml_slow LEFT_ALT LS(I)  &hrosm_l LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)  &en_com_mt LC(F) 0      &kp LS(M)  &hrml_slow RCTRL LS(D)  &hrosm_r LEFT_SHIFT LS(R)  &hrosm_r RALT LS(S)  &hrml_slow RGUI LS(P)  &kp LS(K)
 &trans     &mt LC(Z) LS(X)            &mt LC(X) K_CANCEL         &mt LC(C) K_CANCEL         &mt LC(V) SQT      &en_dot_mt LG(V) 0      &kp LS(V)  &kp LS(C)               &kp LS(L)                  &kp LS(F)            &mt LC(SLASH) LS(B)    &trans
