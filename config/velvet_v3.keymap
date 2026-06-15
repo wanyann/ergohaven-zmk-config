@@ -48,7 +48,7 @@
         combo_tab {
             bindings = <&long_kp TAB>;
             key-positions = <14 15>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
 
@@ -76,7 +76,7 @@
         combo_osl_sym_en {
             bindings = <&sl 19>;
             key-positions = <21 20>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
             layers = <0 1 19>;
             timeout-ms = <30>;
         };
@@ -91,7 +91,7 @@
         combo_osl_sym_ru {
             bindings = <&sl 20>;
             key-positions = <20 21>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <30>;
             layers = <2 3 20>;
             timeout-ms = <30>;
         };
