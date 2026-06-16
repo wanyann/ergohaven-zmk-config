@@ -1037,6 +1037,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 18 30 31 32 33 42 19 7 8 20 9 21 22 10 34 23>;
+            hold-trigger-on-release;
         };
 
         hrosm_r: hrosm_r {
@@ -1048,6 +1049,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <12 1 13 25 26 27 28 29 17 16 4 5 3 15 2 14>;
+            hold-trigger-on-release;
         };
 
         vm_en: vm_en {
