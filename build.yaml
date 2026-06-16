@@ -12,12 +12,12 @@ include:
   - board: rpi_pico
     shield: phenom_mini_left
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-    keymap: velvet_v3
+    keymap: phenom_mini
     artifact-name: phenom_mini_left
   - board: rpi_pico
     shield: phenom_mini_right
     artifact-name: phenom_mini_right
-    keymap: velvet_v3
+    keymap: phenom_mini
   - board: ergohaven
     shield: velvet_v3_left
   # - board: ergohaven
