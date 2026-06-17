@@ -794,6 +794,7 @@
             #binding-cells = <0>;
             bindings = <&kp T &kp H &kp I &kp S &kp I &kp S &kp U &kp N &kp S &kp A &kp F &kp E>;
             label = "MACRO_UNSAFE_EN";
+            wait-ms = <30>;
         };
 
         macro_unsafe_ru: macro_unsafe_ru {
@@ -801,6 +802,7 @@
             #binding-cells = <0>;
             bindings = <&lg_en &kp T &kp H &kp I &kp S &kp I &kp S &kp U &kp N &kp S &kp A &kp F &kp E &lg_ru>;
             label = "MACRO_UNSAFE_RU";
+            wait-ms = <30>;
         };
     };
 
