@@ -1,5 +1,1 @@
 #include "phenom_mini.dtsi"
-
-&default_transform {
-    col-offset = <6>;
-};
