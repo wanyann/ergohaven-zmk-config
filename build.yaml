@@ -1,15 +1,6 @@
 ---
 include:
   - board: rpi_pico
-    shield: ergohaven_hpd_v2_left
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
-    keymap: ergohaven_hpd_v2
-    artifact-name: ergohaven_hpd_v2_left
-  - board: rpi_pico
-    shield: ergohaven_hpd_v2_right
-    artifact-name: ergohaven_hpd_v2_right
-    keymap: ergohaven_hpd_v2
-  - board: rpi_pico
     shield: phenom_mini_left
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     keymap: velvet_v3
@@ -18,76 +9,37 @@ include:
     shield: phenom_mini_right
     artifact-name: phenom_mini_right
     keymap: velvet_v3
-  - board: ergohaven
-    shield: velvet_v3_left
+  # - board: rpi_pico
+  #   shield: ergohaven_hpd_v2_left
+  #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+  #   keymap: ergohaven_hpd_v2
+  #   artifact-name: ergohaven_hpd_v2_left
+  # - board: rpi_pico
+  #   shield: ergohaven_hpd_v2_right
+  #   artifact-name: ergohaven_hpd_v2_right
+  #   keymap: ergohaven_hpd_v2
+
   # - board: ergohaven
   #   shield: velvet_v3_left
-  #   keymap: velvet_v3_ruen
-  #   snippet: studio-rpc-usb-uart
-  #   artifact-name: velvet_v3_left_ruen-ergohaven-zmk
-  - board: ergohaven
-    shield: velvet_v3_right
-  - board: ergohaven
-    shield: velvet_v3_qube qube dongle_screen
-    artifact-name: velvet_v3_qube-ergohaven-zmk
+
+  # - board: ergohaven
+  #   shield: velvet_v3_right
   # - board: ergohaven
   #   shield: velvet_v3_qube qube dongle_screen
-  #   keymap: velvet_v3_ruen
-  #   snippet: studio-rpc-usb-uart
-  #   artifact-name: velvet_v3_qube_ruen-ergohaven-zmk
-  - board: ergohaven
-    shield: velvet_v3_left_qube
+  #   artifact-name: velvet_v3_qube-ergohaven-zmk
+
+  # - board: ergohaven
+  #   shield: velvet_v3_left_qube
     
-  # - board: ergohaven
-  #   shield: velvet_v3_ui_left
-  # # - board: ergohaven
-  # #   shield: velvet_v3_ui_right
-  # #   keymap: velvet_v3_ui_ruen
-  # #   snippet: studio-rpc-usb-uart
-  # #   artifact-name: velvet_v3_ui_right_ruen-ergohaven-zmk
-  # # - board: ergohaven
-  # #   shield: velvet_v3_ui_right
-  # #   keymap: velvet_v3_ui_ruen
-  # #   snippet: studio-rpc-usb-uart
-  # #   artifact-name: velvet_v3_ui_right_ruen-ergohaven-zmk
-  # - board: ergohaven
-  #   shield: velvet_v3_ui_right
-  #   snippet: studio-rpc-usb-uart
-  # # - board: ergohaven
-  # #   shield: velvet_v3_ui_qube qube dongle_screen
-  # #   snippet: studio-rpc-usb-uart
-  # #   artifact-name: velvet_v3_ui_qube-ergohaven-zmk
-  # # - board: ergohaven
-  # #   shield: velvet_v3_ui_qube qube dongle_screen
-  # #   keymap: velvet_v3_ui_ruen
-  # #   snippet: studio-rpc-usb-uart
-  # - board: ergohaven
-  #   shield: velvet_v3_ui_qube qube dongle_screen
-  #   snippet: studio-rpc-usb-uart
-  #   artifact-name: velvet_v3_ui_qube-ergohaven-zmk
-  # # - board: ergohaven
-  # #   shield: velvet_v3_ui_qube qube dongle_screen
-  # #   keymap: velvet_v3_ui_ruen
-  # #   snippet: studio-rpc-usb-uart
-  # #   artifact-name: velvet_v3_ui_qube_ruen-ergohaven-zmk
-  # - board: ergohaven
-  #   shield: velvet_v3_ui_right_qube
 
-  - board: ergohaven
-    shield: op36_left
-  # - board: ergohaven
-  #   shield: op36_ruen op36_left
-  #   snippet: studio-rpc-usb-uart
-  #   artifact-name: op36_left_ruen-ergohaven-zmk
-  - board: ergohaven
-    shield: op36_right
-  # - board: ergohaven
-  #   shield: op36_qube qube dongle_screen # or prospector_adapter
-  #   snippet: studio-rpc-usb-uart
-  #   artifact-name: op36_qube-ergohaven-zmk
-  # - board: ergohaven
-  #   shield: op36_left_qube
 
+  # - board: ergohaven
+  #   shield: op36_left
+
+  # - board: ergohaven
+  #   shield: op36_right
+
+#####№##
 
     
   # - board: ergohaven
@@ -134,6 +86,60 @@ include:
   # - board: ergohaven
   #   shield: trackball
   #   snippet: studio-rpc-usb-uart
+    # - board: ergohaven
+  #   shield: velvet_v3_left
+  #   keymap: velvet_v3_ruen
+  #   snippet: studio-rpc-usb-uart
+  #   artifact-name: velvet_v3_left_ruen-ergohaven-zmk
+    # - board: ergohaven
+  #   shield: velvet_v3_qube qube dongle_screen
+  #   keymap: velvet_v3_ruen
+  #   snippet: studio-rpc-usb-uart
+  #   artifact-name: velvet_v3_qube_ruen-ergohaven-zmk
+    # - board: ergohaven
+  #   shield: op36_ruen op36_left
+  #   snippet: studio-rpc-usb-uart
+  #   artifact-name: op36_left_ruen-ergohaven-zmk
+    # - board: ergohaven
+  #   shield: op36_qube qube dongle_screen # or prospector_adapter
+  #   snippet: studio-rpc-usb-uart
+  #   artifact-name: op36_qube-ergohaven-zmk
+  # - board: ergohaven
+  #   shield: op36_left_qube
+    # - board: ergohaven
+  #   shield: velvet_v3_ui_left
+  # # - board: ergohaven
+  # #   shield: velvet_v3_ui_right
+  # #   keymap: velvet_v3_ui_ruen
+  # #   snippet: studio-rpc-usb-uart
+  # #   artifact-name: velvet_v3_ui_right_ruen-ergohaven-zmk
+  # # - board: ergohaven
+  # #   shield: velvet_v3_ui_right
+  # #   keymap: velvet_v3_ui_ruen
+  # #   snippet: studio-rpc-usb-uart
+  # #   artifact-name: velvet_v3_ui_right_ruen-ergohaven-zmk
+  # - board: ergohaven
+  #   shield: velvet_v3_ui_right
+  #   snippet: studio-rpc-usb-uart
+  # # - board: ergohaven
+  # #   shield: velvet_v3_ui_qube qube dongle_screen
+  # #   snippet: studio-rpc-usb-uart
+  # #   artifact-name: velvet_v3_ui_qube-ergohaven-zmk
+  # # - board: ergohaven
+  # #   shield: velvet_v3_ui_qube qube dongle_screen
+  # #   keymap: velvet_v3_ui_ruen
+  # #   snippet: studio-rpc-usb-uart
+  # - board: ergohaven
+  #   shield: velvet_v3_ui_qube qube dongle_screen
+  #   snippet: studio-rpc-usb-uart
+  #   artifact-name: velvet_v3_ui_qube-ergohaven-zmk
+  # # - board: ergohaven
+  # #   shield: velvet_v3_ui_qube qube dongle_screen
+  # #   keymap: velvet_v3_ui_ruen
+  # #   snippet: studio-rpc-usb-uart
+  # #   artifact-name: velvet_v3_ui_qube_ruen-ergohaven-zmk
+  # - board: ergohaven
+  #   shield: velvet_v3_ui_right_qube
 
   - board: ergohaven
     shield: settings_reset
