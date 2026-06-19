@@ -77,7 +77,7 @@
             bindings = <&sl 19>;
             key-positions = <21 20>;
             require-prior-idle-ms = <30>;
-            layers = <0 1 19>;
+            layers = <1 2 19>;
             timeout-ms = <30>;
         };
 
@@ -85,14 +85,14 @@
             bindings = <&less_greater_en>;
             require-prior-idle-ms = <30>;
             key-positions = <31 33>;
-            layers = <0 1 19>;
+            layers = <1 2 19>;
         };
 
         combo_osl_sym_ru {
             bindings = <&sl 20>;
             key-positions = <20 21>;
             require-prior-idle-ms = <30>;
-            layers = <2 3 20>;
+            layers = <0 3 20>;
             timeout-ms = <30>;
         };
 
@@ -100,34 +100,34 @@
             bindings = <&less_greater_ru>;
             key-positions = <31 33>;
             require-prior-idle-ms = <30>;
-            layers = <2 3>;
+            layers = <0 3>;
         };
 
         combo_braces_en {
             bindings = <&braces_en>;
             key-positions = <19 21>;
             require-prior-idle-ms = <50>;
-            layers = <0 1 19>;
+            layers = <1 2 19>;
         };
 
         combo_asterisk_ru {
             bindings = <&kp RU_ASTERISK>;
             timeout-ms = <30>;
             key-positions = <7 9 8>;
-            layers = <2 3 20 16>;
+            layers = <0 3 20 16>;
         };
 
         combo_asterisk_en {
             bindings = <&kp ASTERISK>;
             timeout-ms = <30>;
             key-positions = <7 8 9>;
-            layers = <0 1 15 19>;
+            layers = <1 2 15 19>;
         };
 
         combo_capsword_en {
-            bindings = <&to 1>;
+            bindings = <&to 2>;
             key-positions = <14 13>;
-            layers = <0 1>;
+            layers = <1 2>;
         };
 
         combo_osl_fn {
@@ -138,13 +138,13 @@
         combo_osl_os_en {
             bindings = <&sl 23>;
             key-positions = <25 26>;
-            layers = <0 1 15 19 23 8 9 10 11 17>;
+            layers = <1 2 15 19 23 8 9 10 11 17>;
         };
 
         combo_capsword_ru {
             bindings = <&to 3>;
             key-positions = <14 13>;
-            layers = <2 3>;
+            layers = <0 3>;
         };
 
         combo_plus {
@@ -163,14 +163,14 @@
             bindings = <&braces_ru>;
             key-positions = <19 21>;
             timeout-ms = <25>;
-            layers = <2 3 20>;
+            layers = <0 3 20>;
             require-prior-idle-ms = <50>;
         };
 
         combo_brackets_en {
             bindings = <&brackets_en>;
             key-positions = <7 9>;
-            layers = <0 1 19>;
+            layers = <1 2 19>;
             timeout-ms = <30>;
             require-prior-idle-ms = <30>;
         };
@@ -178,7 +178,7 @@
         combo_brackets_ru {
             bindings = <&brackets_ru>;
             key-positions = <7 9>;
-            layers = <2 3 20>;
+            layers = <0 3 20>;
             timeout-ms = <30>;
         };
 
@@ -192,91 +192,91 @@
         combo_ru_at {
             bindings = <&en_kp AT>;
             key-positions = <14 15 16>;
-            layers = <2 3 20>;
+            layers = <0 3 20>;
         };
 
         combo_en_at {
             bindings = <&kp AT>;
             key-positions = <16 15 14>;
-            layers = <0 1 19>;
+            layers = <1 2 19>;
         };
 
         combo_quotes_en {
             bindings = <&quote_morph_en>;
             key-positions = <27 28>;
-            layers = <0 1 15 19>;
+            layers = <1 2 15 19>;
         };
 
         combo_quotes_ru {
             bindings = <&quote_morph_ru>;
             key-positions = <27 28>;
-            layers = <2 3 20 16>;
+            layers = <0 3 20 16>;
         };
 
         combo_slash_ru {
             bindings = <&slash_morph_ru>;
             key-positions = <3 4>;
-            layers = <2 3 16 20>;
+            layers = <0 3 16 20>;
         };
 
         combo_slash_en {
             bindings = <&slash_morph_en>;
             key-positions = <3 4>;
-            layers = <0 1 15 19>;
+            layers = <1 2 15 19>;
         };
 
         combo_arrow_ru {
             bindings = <&arrow_ru>;
             key-positions = <31 32 33>;
-            layers = <2 3 16 20>;
+            layers = <0 3 16 20>;
         };
 
         combo_arrow_en {
             bindings = <&arrow_en>;
             key-positions = <31 33 32>;
-            layers = <0 1 15 19>;
+            layers = <1 2 15 19>;
         };
 
         combo_and_ru {
             bindings = <&en_kp AMPERSAND>;
             key-positions = <2 3 4>;
-            layers = <2 3 16 20>;
+            layers = <0 3 16 20>;
         };
 
         combo_and_en {
             bindings = <&kp AMPERSAND>;
             key-positions = <2 3 4>;
-            layers = <0 1 15 19>;
+            layers = <1 2 15 19>;
         };
 
         combo_dollar_ru {
             bindings = <&en_kp DOLLAR>;
             key-positions = <19 20 21>;
-            layers = <2 3 16 20>;
+            layers = <0 3 16 20>;
         };
 
         combo_dollar_en {
             bindings = <&kp DOLLAR>;
             key-positions = <19 20 21>;
-            layers = <0 1 15 19>;
+            layers = <1 2 15 19>;
         };
 
         combo_hash_ru {
             bindings = <&en_kp HASH>;
             key-positions = <26 27 28>;
-            layers = <2 3 16 20>;
+            layers = <0 3 16 20>;
         };
 
         combo_hash_en {
             bindings = <&kp HASH>;
             key-positions = <26 27 28>;
-            layers = <0 1 15 19>;
+            layers = <1 2 15 19>;
         };
 
         cmb_osl_os_ru {
             bindings = <&sl 22>;
             key-positions = <25 26>;
-            layers = <2 3 16 20 22 4 5 6 7 18>;
+            layers = <0 3 16 20 22 4 5 6 7 18>;
         };
 
         combo_equal {
@@ -294,14 +294,14 @@
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N8)) &free_off &to 2 &overlay_off>;
+            bindings = <&kp LS(LC(N8)) &free_off &to 0 &overlay_off>;
             label = "LAYER_RU";
         };
 
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(LC(N9)) &free_off &to 0 &overlay_off>;
+            bindings = <&kp LS(LC(N9)) &free_off &to 1 &overlay_off>;
             label = "LAYER_EN";
         };
 
@@ -382,7 +382,7 @@
         ru_cw_off: ru_cw_off {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 2>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0>;
             label = "RU_CW_OFF";
             wait-ms = <0>;
         };
@@ -390,7 +390,7 @@
         en_cw_off: en_cw_off {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 0>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 1>;
             label = "EN_CW_OFF";
             wait-ms = <0>;
         };
@@ -489,7 +489,7 @@
         alt_spc_ru: alt_spc_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &free_off &to 2 &overlay_off>;
+            bindings = <&kp LA(SPACE) &free_off &to 0 &overlay_off>;
             label = "ALT_SPC_RU";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -657,7 +657,7 @@
         kp_sub_ru: kp_sub_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "kp_sub_ru";
         };
 
@@ -685,7 +685,7 @@
         kp_sub_en: kp_sub_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&to 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "KP_SUB_EN";
         };
 
@@ -713,7 +713,7 @@
         alt_spc_en: alt_spc_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &free_off &to 0 &overlay_off>;
+            bindings = <&kp LA(SPACE) &free_off &to 1 &overlay_off>;
             label = "ALT_SPC_EN";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -736,14 +736,14 @@
         mouseoff_kp_ru: mouseoff_kp_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&free_off &to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&free_off &to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_RU";
         };
 
         mouseoff_kp_en: mouseoff_kp_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&free_off &to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&free_off &to 1 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_EN";
         };
 
@@ -1329,6 +1329,17 @@
     keymap {
         compatible = "zmk,keymap";
 
+        Ru {
+            bindings = <
+&kp N1             &kp RU_CYRILLIC_TSE                      &soft_sign                         &kp RU_CYRILLIC_YA                  &mt LC(R) RU_CYRILLIC_A     &mt LC(T) RU_CYRILLIC_YU                              &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_VE               &kp RU_CYRILLIC_KA                  &kp RU_CYRILLIC_DE            &kp RU_CYRILLIC_SHCHA            &kp NUMBER_3
+&kp RU_CYRILLIC_E  &hrml_slow LEFT_GUI RU_CYRILLIC_SHORT_I  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrosm_l LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &ru_com_mt LC(F) 0                                    &kp RU_CYRILLIC_EL     &hrml_slow RCTRL RU_CYRILLIC_EN  &hrosm_r LEFT_SHIFT RU_CYRILLIC_TE  &hrosm_r RALT RU_CYRILLIC_ES  &hrml_slow RGUI RU_CYRILLIC_CHE  &kp RU_CYRILLIC_SHA
+&kp NUMBER_2       &mt LC(Z) RU_CYRILLIC_EF                 &mt LC(X) RU_CYRILLIC_U            &mt LC(C) RU_CYRILLIC_HA            &mt LC(V) RU_CYRILLIC_YERU  &ru_dot_mt LG(V) 0                                    &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM               &kp RU_CYRILLIC_PE                  &kp RU_CYRILLIC_GHE           &mt LC(SLASH) RU_CYRILLIC_ZHE    &kp NUMBER_4
+                                                            &kp NUMBER_5                       &kp N6                              &kp RU_N9                   &lt 12 SPACE              &kp EQUAL    &kp BACKSPACE  &lt 16 RU_CYRILLIC_ER  &kp N0                           &kp RU_N7                           &kp RU_N8
+            >;
+
+            display-name = "Russian";
+        };
+
         En {
             bindings = <
 &kp BACKSPACE  &none                  &kp Y                  &kp U                  &mt LC(R) A    &mt LC(T) APOS                             &kp Q     &kp G               &kp N                  &kp W            &kp Z              &none
@@ -1349,17 +1360,6 @@
             >;
 
             display-name = "CapsWord_en";
-        };
-
-        Ru {
-            bindings = <
-&trans             &kp RU_CYRILLIC_TSE                      &soft_sign                         &kp RU_CYRILLIC_YA                  &mt LC(R) RU_CYRILLIC_A     &mt LC(T) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_VE               &kp RU_CYRILLIC_KA                  &kp RU_CYRILLIC_DE            &kp RU_CYRILLIC_SHCHA            &trans
-&kp RU_CYRILLIC_E  &hrml_slow LEFT_GUI RU_CYRILLIC_SHORT_I  &hrml_slow LEFT_ALT RU_CYRILLIC_I  &hrosm_l LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &ru_com_mt LC(F) 0                          &kp RU_CYRILLIC_EL     &hrml_slow RCTRL RU_CYRILLIC_EN  &hrosm_r LEFT_SHIFT RU_CYRILLIC_TE  &hrosm_r RALT RU_CYRILLIC_ES  &hrml_slow RGUI RU_CYRILLIC_CHE  &kp RU_CYRILLIC_SHA
-&trans             &mt LC(Z) RU_CYRILLIC_EF                 &mt LC(X) RU_CYRILLIC_U            &mt LC(C) RU_CYRILLIC_HA            &mt LC(V) RU_CYRILLIC_YERU  &ru_dot_mt LG(V) 0                          &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM               &kp RU_CYRILLIC_PE                  &kp RU_CYRILLIC_GHE           &mt LC(SLASH) RU_CYRILLIC_ZHE    &trans
-                                                            &trans                             &trans                              &ms_over_ru                 &lt 12 SPACE              &sl 18    &trans  &lt 16 RU_CYRILLIC_ER  &ms_free_ru                      &trans                              &trans
-            >;
-
-            display-name = "Russian";
         };
 
         Ru_CW {
@@ -1400,7 +1400,7 @@
 &none                    &kp_m2_ru RU_CYRILLIC_TSE      &kp_m2_ru RU_CYRILLIC_SOFT_SIGN  &kp_m2_ru RU_CYRILLIC_YA  &kp_m2_ru RU_CYRILLIC_A     &kp_m2_ru RU_CYRILLIC_YU                          &kp_m2_ru RU_CYRILLIC_ZE  &kp_m2_ru RU_CYRILLIC_VE  &kp_m2_ru RU_CYRILLIC_KA  &kp_m2_ru RU_CYRILLIC_DE   &kp_m2_ru RU_CYRILLIC_SHCHA  &trans
 &kp_m2_ru RU_CYRILLIC_E  &kp_m2_ru RU_CYRILLIC_SHORT_I  &kp_m2_ru RU_CYRILLIC_I          &kp_m2_ru RU_CYRILLIC_IE  &kp_m2_ru RU_CYRILLIC_O     &kp_m2_ru RU_COMMA                                &kp_m2_ru RU_CYRILLIC_EL  &kp_m2_ru RU_CYRILLIC_EN  &kp_m2_ru RU_CYRILLIC_TE  &kp_m2_ru RU_CYRILLIC_ES   &kp_m2_ru RU_CYRILLIC_CHE    &kp_m2_ru RU_CYRILLIC_SHA
 &none                    &kp_m2_ru RU_CYRILLIC_EF       &kp_m2_ru RU_CYRILLIC_U          &kp_m2_ru RU_CYRILLIC_HA  &kp_m2_ru RU_CYRILLIC_YERU  &kp_m2_ru RU_DOT                                  &kp_m2_ru RU_CYRILLIC_BE  &kp_m2_ru RU_CYRILLIC_EM  &kp_m2_ru RU_CYRILLIC_PE  &kp_m2_ru RU_CYRILLIC_GHE  &kp_m2_ru RU_CYRILLIC_ZHE    &trans
-                                                        &trans                           &trans                    &none                       &space_nav_to 12 2        &none    &kp_to BSPC 5  &move_num 16 4            &trans                    &trans                    &trans
+                                                        &trans                           &trans                    &none                       &space_nav_to 12 0        &none    &kp_to BSPC 5  &move_num 16 4            &trans                    &trans                    &trans
             >;
         };
 
@@ -1410,7 +1410,7 @@
 &none              &kp RU_CYRILLIC_TSE      &mt_sub_ru RU_CYRILLIC_SOFT_SIGN RU_CYRILLIC_SOFT_SIGN  &mt_sub_ru RU_CYRILLIC_YA RU_CYRILLIC_YA  &mt_sub_ru RU_CYRILLIC_A RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                          &kp RU_CYRILLIC_ZE  &mt_sub_ru RU_CYRILLIC_VE RU_CYRILLIC_VE  &mt_sub_ru RU_CYRILLIC_KA RU_CYRILLIC_KA  &mt_sub_ru RU_CYRILLIC_DE RU_CYRILLIC_DE    &kp RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &mt_sub_ru RU_CYRILLIC_I RU_CYRILLIC_I                  &mt_sub_ru RU_CYRILLIC_IE RU_CYRILLIC_IE  &mt_sub_ru RU_CYRILLIC_O RU_CYRILLIC_O        &kp RU_COMMA                                &kp RU_CYRILLIC_EL  &mt_sub_ru RU_CYRILLIC_EN RU_CYRILLIC_EN  &mt_sub_ru RU_CYRILLIC_TE RU_CYRILLIC_TE  &mt_sub_ru RU_CYRILLIC_ES RU_CYRILLIC_ES    &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp RU_CYRILLIC_EF       &mt_sub_ru RU_CYRILLIC_U RU_CYRILLIC_U                  &mt_sub_ru RU_CYRILLIC_HA RU_CYRILLIC_HA  &mt_sub_ru RU_CYRILLIC_YERU RU_CYRILLIC_YERU  &kp RU_DOT                                  &kp RU_CYRILLIC_BE  &mt_sub_ru RU_CYRILLIC_EM RU_CYRILLIC_EM  &mt_sub_ru RU_CYRILLIC_PE RU_CYRILLIC_PE  &mt_sub_ru RU_CYRILLIC_GHE RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                                                  &trans                                    &none                                         &space_nav_to 12 2  &none    &kp_to BSPC 6  &move_num 16 4      &trans                                    &trans                                    &trans
+                                            &trans                                                  &trans                                    &none                                         &space_nav_to 12 0  &none    &kp_to BSPC 6  &move_num 16 4      &trans                                    &trans                                    &trans
             >;
         };
 
@@ -1440,7 +1440,7 @@
 &none                    &kp_m2_en RU_CYRILLIC_TSE      &kp_m2_en RU_CYRILLIC_SOFT_SIGN  &kp_m2_en RU_CYRILLIC_YA  &kp_m2_en RU_CYRILLIC_A     &kp_m2_en RU_CYRILLIC_YU                               &kp_m2_en RU_CYRILLIC_ZE  &kp_m2_en RU_CYRILLIC_VE  &kp_m2_en RU_CYRILLIC_KA  &kp_m2_en RU_CYRILLIC_DE   &kp_m2_en RU_CYRILLIC_SHCHA  &trans
 &kp_m2_en RU_CYRILLIC_E  &kp_m2_en RU_CYRILLIC_SHORT_I  &kp_m2_en RU_CYRILLIC_I          &kp_m2_en RU_CYRILLIC_IE  &kp_m2_en RU_CYRILLIC_O     &kp_m2_en RU_COMMA                                     &kp_m2_en RU_CYRILLIC_EL  &kp_m2_en RU_CYRILLIC_EN  &kp_m2_en RU_CYRILLIC_TE  &kp_m2_en RU_CYRILLIC_ES   &kp_m2_en RU_CYRILLIC_CHE    &kp_m2_en RU_CYRILLIC_SHA
 &none                    &kp_m2_en RU_CYRILLIC_EF       &kp_m2_en RU_CYRILLIC_U          &kp_m2_en RU_CYRILLIC_HA  &kp_m2_en RU_CYRILLIC_YERU  &kp_m2_en RU_DOT                                       &kp_m2_en RU_CYRILLIC_BE  &kp_m2_en RU_CYRILLIC_EM  &kp_m2_en RU_CYRILLIC_PE  &kp_m2_en RU_CYRILLIC_GHE  &kp_m2_en RU_CYRILLIC_ZHE    &trans
-                                                        &trans                           &trans                    &none                       &space_nav_to 13 0        &none    &kp_to BACKSPACE 9  &move_num 15 8            &trans                    &trans                    &trans
+                                                        &trans                           &trans                    &none                       &space_nav_to 13 1        &none    &kp_to BACKSPACE 9  &move_num 15 8            &trans                    &trans                    &trans
             >;
         };
 
@@ -1450,7 +1450,7 @@
 &none              &kp RU_CYRILLIC_TSE      &mt_sub_en RU_CYRILLIC_SOFT_SIGN RU_CYRILLIC_SOFT_SIGN  &mt_sub_en RU_CYRILLIC_YA RU_CYRILLIC_YA  &mt_sub_en RU_CYRILLIC_A RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                                &kp RU_CYRILLIC_ZE  &mt_sub_en RU_CYRILLIC_VE RU_CYRILLIC_VE  &mt_sub_en RU_CYRILLIC_KA RU_CYRILLIC_KA  &mt_sub_en RU_CYRILLIC_DE RU_CYRILLIC_DE    &kp RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &mt_sub_en RU_CYRILLIC_I RU_CYRILLIC_I                  &mt_sub_en RU_CYRILLIC_IE RU_CYRILLIC_IE  &mt_sub_en RU_CYRILLIC_O RU_CYRILLIC_O        &kp RU_COMMA                                      &kp RU_CYRILLIC_EL  &mt_sub_en RU_CYRILLIC_EN RU_CYRILLIC_EN  &mt_sub_en RU_CYRILLIC_TE RU_CYRILLIC_TE  &mt_sub_en RU_CYRILLIC_ES RU_CYRILLIC_ES    &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp RU_CYRILLIC_EF       &mt_sub_en RU_CYRILLIC_U RU_CYRILLIC_U                  &mt_sub_en RU_CYRILLIC_HA RU_CYRILLIC_HA  &mt_sub_en RU_CYRILLIC_YERU RU_CYRILLIC_YERU  &kp RU_DOT                                        &kp RU_CYRILLIC_BE  &mt_sub_en RU_CYRILLIC_EM RU_CYRILLIC_EM  &mt_sub_en RU_CYRILLIC_PE RU_CYRILLIC_PE  &mt_sub_en RU_CYRILLIC_GHE RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                                                  &trans                                    &none                                         &space_nav_to 13 0  &none    &kp_to BACKSPACE 10  &move_num 15 8      &trans                                    &trans                                    &trans
+                                            &trans                                                  &trans                                    &none                                         &space_nav_to 13 1  &none    &kp_to BACKSPACE 10  &move_num 15 8      &trans                                    &trans                                    &trans
             >;
         };
 
@@ -1564,9 +1564,9 @@
 
         OS_ru {
             bindings = <
-&none        &bt_set_ru 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &none
-&trans       &bt_set_ru 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
-&bootloader  &bt_set_ru 0  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans      &bootloader
+&none        &bt_set_ru 0  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &none
+&trans       &bt_set_ru 2  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
+&bootloader  &bt_set_ru 1  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans      &bootloader
                            &trans          &trans                    &trans                &trans                &trans    &trans  &trans        &trans          &trans  &trans
             >;
 
@@ -1576,9 +1576,9 @@
         OS_en {
             display-name = "OS_en";
             bindings = <
-&trans       &bt_set_en 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
-&trans       &bt_set_en 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
-&bootloader  &bt_set_en 0  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans      &bootloader
+&trans       &bt_set_en 0  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
+&trans       &bt_set_en 2  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
+&bootloader  &bt_set_en 1  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23         &trans  &trans  &trans      &bootloader
                            &trans          &trans                    &trans                &trans                &trans    &trans  &trans        &trans          &trans  &trans
             >;
         };
