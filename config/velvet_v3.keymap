@@ -298,7 +298,7 @@
                 <&free_off &kp LS(LC(N8))>,
                 <&macro_wait_time 0>,
                 <&overlay_off>,
-                <&macro_tap_time 0>,
+                <&macro_tap_time 1>,
                 <&to 2>;
 
             label = "LAYER_RU";
