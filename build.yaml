@@ -2,12 +2,11 @@
 include:
   - board: rpi_pico
     shield: phenom_mini_left
-    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y -DKEYMAP_FILE=config/velvet_v3.keymap
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     keymap: velvet_v3
     artifact-name: phenom_mini_left
   - board: rpi_pico
     shield: phenom_mini_right
-    cmake-args: -DKEYMAP_FILE=config/velvet_v3.keymap
     artifact-name: phenom_mini_right
     keymap: velvet_v3
   # - board: rpi_pico
