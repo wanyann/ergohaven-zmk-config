@@ -1,11 +1,11 @@
 ---
 include:
-  - board: rpi_pico
+  - board: sparkfun_pro_micro_rp2040
     shield: phenom_mini_left
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     keymap: velvet_v3
     artifact-name: phenom_mini_left
-  - board: rpi_pico
+  - board: sparkfun_pro_micro_rp2040
     shield: phenom_mini_right
     artifact-name: phenom_mini_right
     keymap: velvet_v3
