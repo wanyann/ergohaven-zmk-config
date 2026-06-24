@@ -76,8 +76,9 @@
         combo_osl_sym_en {
             bindings = <&sl 19>;
             key-positions = <20 15>;
+            require-prior-idle-ms = <50>;
             layers = <0 1 19>;
-            timeout-ms = <50>;
+            timeout-ms = <30>;
         };
 
         combo_lessgreater_en {
@@ -90,8 +91,9 @@
         combo_osl_sym_ru {
             bindings = <&sl 20>;
             key-positions = <20 15>;
+            require-prior-idle-ms = <50>;
             layers = <2 3 20>;
-            timeout-ms = <50>;
+            timeout-ms = <30>;
         };
 
         combo_lessgreater_ru {
