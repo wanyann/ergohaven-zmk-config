@@ -295,24 +295,24 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&free_off &kp LS(LC(N8))>,
-                <&macro_wait_time 0>,
-                <&overlay_off>,
-                <&macro_tap_time 1>,
-                <&to 2>;
+                <&to 2>,
+                <&macro_wait_time 5>,
+                <&macro_tap_time 30>,
+                <&kp LS(LC(N8)) &free_off &overlay_off>;
 
             label = "LAYER_RU";
+            wait-ms = <0>;
+            tap-ms = <1>;
         };
 
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&free_off &kp LS(LC(N9))>,
-                <&macro_wait_time 0>,
-                <&overlay_off>,
+                <&to 0>,
+                <&macro_wait_time 5>,
                 <&macro_tap_time 1>,
-                <&to 0>;
+                <&kp LS(LC(N9)) &free_off &overlay_off>;
 
             label = "LAYER_EN";
         };
