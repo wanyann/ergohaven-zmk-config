@@ -336,8 +336,6 @@
             #binding-cells = <1>;
             bindings = <&kp LS(LC(N9)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N8))>;
             label = "EN_KP";
-            tap-ms = <40>;
-            wait-ms = <15>;
         };
 
         ru_kp: ru_kp {
@@ -345,8 +343,6 @@
             #binding-cells = <1>;
             bindings = <&kp LS(LC(N8)) &macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LS(LC(N9))>;
             label = "RU_KP";
-            tap-ms = <40>;
-            wait-ms = <15>;
         };
 
         free_off: free_off {
