@@ -311,7 +311,7 @@
             bindings =
                 <&to 0>,
                 <&macro_wait_time 5>,
-                <&macro_tap_time 1>,
+                <&macro_tap_time 30>,
                 <&kp LS(LC(N9)) &free_off &overlay_off>;
 
             label = "LAYER_EN";
