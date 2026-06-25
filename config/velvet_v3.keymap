@@ -296,12 +296,10 @@
             #binding-cells = <0>;
             bindings =
                 <&to 2>,
-                <&macro_wait_time 5>,
                 <&macro_tap_time 30>,
                 <&kp LS(LC(N8)) &free_off &overlay_off>;
 
             label = "LAYER_RU";
-            wait-ms = <0>;
             tap-ms = <1>;
         };
 
@@ -310,11 +308,11 @@
             #binding-cells = <0>;
             bindings =
                 <&to 0>,
-                <&macro_wait_time 5>,
                 <&macro_tap_time 30>,
                 <&kp LS(LC(N9)) &free_off &overlay_off>;
 
             label = "LAYER_EN";
+            tap-ms = <1>;
         };
 
         lg_ru: lg_ru {
