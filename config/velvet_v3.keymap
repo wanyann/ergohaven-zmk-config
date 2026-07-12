@@ -1541,10 +1541,10 @@
 
         Sym_en {
             bindings = <
-&trans  &trans  &none                 &none        &none                  &trans                         &trans            &kp LEFT_BRACKET  &ru_kp RU_RUBLE   &kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp TILDE    &kp RIGHT_PARENTHESIS  &kp PERCENT                    &ru_kp RU_NUMERO  &kp LEFT_BRACE    &kp CARET         &kp RIGHT_BRACE    &trans  &trans
-&trans  &trans  &none                 &kp PERCENT  &en_code               &none                          &trans            &kp LESS_THAN     &ru_kp RU_NUMERO  &kp GREATER_THAN   &trans  &trans
-                &trans                &trans       &trans                 &trans       &trans    &trans  &trans            &trans            &trans            &trans
+&trans  &trans  &none                 &kp AMPERSAND  &kp CARET              &trans                         &trans            &kp LEFT_BRACKET  &kp ASTERISK  &kp RIGHT_BRACKET  &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &kp AT         &kp RIGHT_PARENTHESIS  &kp PERCENT                    &ru_kp RU_NUMERO  &kp LEFT_BRACE    &kp DOLLAR    &kp RIGHT_BRACE    &trans  &trans
+&trans  &trans  &kp TILDE             &kp HASH       &en_code               &none                          &trans            &kp LESS_THAN     &arrow_en     &kp GREATER_THAN   &trans  &trans
+                &trans                &trans         &trans                 &trans       &trans    &trans  &trans            &trans            &trans        &trans
             >;
 
             display-name = "Sym_en";
@@ -1552,10 +1552,10 @@
 
         Sym_ru {
             bindings = <
-&trans  &trans  &none                 &none           &none     &trans                            &trans         &en_kp LEFT_BRACKET  &kp RU_RUBLE   &en_kp RIGHT_BRACKET  &trans  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &en_kp TILDE    &kp RPAR  &kp RU_PERCENT                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp CARET   &en_kp RIGHT_BRACE    &trans  &trans
-&trans  &trans  &none                 &kp RU_PERCENT  &ru_code  &none                             &trans         &en_kp LESS_THAN     &kp RU_NUMERO  &en_kp GREATER_THAN   &trans  &trans
-                &trans                &trans          &trans    &trans          &trans    &trans  &trans         &trans               &trans         &trans
+&trans  &trans  &none                 &en_kp AMPERSAND  &en_kp CARET  &trans                            &trans         &en_kp LEFT_BRACKET  &kp ASTRK      &en_kp RIGHT_BRACKET  &trans  &trans
+&trans  &trans  &kp LEFT_PARENTHESIS  &en_kp AT         &kp RPAR      &kp RU_PERCENT                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp DOLLAR  &en_kp RIGHT_BRACE    &trans  &trans
+&trans  &trans  &en_kp TILDE          &en_kp HASH       &ru_code      &none                             &trans         &en_kp LESS_THAN     &arrow_ru      &en_kp GREATER_THAN   &trans  &trans
+                &trans                &trans            &trans        &trans          &trans    &trans  &trans         &trans               &trans         &trans
             >;
 
             display-name = "Sym_ru";
