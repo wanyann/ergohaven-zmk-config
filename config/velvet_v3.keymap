@@ -1341,10 +1341,10 @@
 
         En {
             bindings = <
-&kp BACKSPACE  &kp Q                  &kp W                  &kp K_CANCEL           &mt LC(R) A         &mt LC(T) U                                &kp Z     &kp V               &kp K                  &kp D            &kp K_CANCEL       &none
-&kp K_CANCEL   &hrml_slow LEFT_GUI C  &hrml_slow LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O       &en_com_mt LC(F) 0                         &kp L     &hrml_slow RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow RGUI H  &kp K_CANCEL
-&kp DELETE     &mt LC(Z) F            &mt LC(X) Y            &mt LC(C) X            &mt LC(V) K_CANCEL  &en_dot_mt LG(V) 0                         &kp B     &kp M               &kp P                  &kp G            &mt LC(SLASH) J    &none
-                                      &kp LS(F7)             &kp F7                 &ms_over_en         &lt 13 SPACE        &sl 17    &bspc_morph  &lt 15 R  &ms_free_en         &kp F2                 &kp LS(F2)
+&kp BACKSPACE  &kp Q                  &kp W                  &kp K_CANCEL           &mt LC(R) A             &mt LC(T) U                                &kp Z     &kp V               &kp K                  &kp D            &kp K_CANCEL       &none
+&kp K_CANCEL   &hrml_slow LEFT_GUI C  &hrml_slow LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O           &en_com_mt LC(F) 0                         &kp L     &hrml_slow RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow RGUI H  &kp K_CANCEL
+&kp DELETE     &mt LC(Z) F            &mt LC(X) Y            &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &kp B     &kp M               &kp P                  &kp G            &mt LC(SLASH) J    &none
+                                      &kp LS(F7)             &kp F7                 &ms_over_en             &lt 13 SPACE        &sl 17    &bspc_morph  &lt 15 R  &ms_free_en         &kp F2                 &kp LS(F2)
             >;
 
             display-name = "English";
@@ -1354,7 +1354,7 @@
             bindings = <
 &trans            &kp LS(Q)                  &kp LS(W)                  &kp LS(K_CANCEL)           &mt LC(R) LS(A)         &mt LC(T) LS(U)                           &kp LS(Z)     &kp LS(V)               &kp LS(K)                  &kp LS(D)            &kp LS(K_CANCEL)       &trans
 &kp LS(K_CANCEL)  &hrml_slow LEFT_GUI LS(C)  &hrml_slow LEFT_ALT LS(I)  &hrosm_l LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)       &en_com_mt LC(F) 0                        &kp LS(L)     &hrml_slow RCTRL LS(N)  &hrosm_r LEFT_SHIFT LS(T)  &hrosm_r RALT LS(S)  &hrml_slow RGUI LS(H)  &kp LS(K_CANCEL)
-&trans            &mt LC(Z) LS(F)            &mt LC(X) Y                &mt LC(C) LS(X)            &mt LC(V) LS(K_CANCEL)  &en_dot_mt LG(V) 0                        &kp LS(B)     &kp LS(M)               &kp LS(P)                  &kp LS(G)            &mt LC(SLASH) LS(J)    &trans
+&trans            &mt LC(Z) LS(F)            &mt LC(X) LS(Y)            &mt LC(C) LS(X)            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                        &kp LS(B)     &kp LS(M)               &kp LS(P)                  &kp LS(G)            &mt LC(SLASH) LS(J)    &trans
                                              &trans                     &trans                     &ms_over_en             &en_lt_cw_off 13 SPACE  &sl 17    &trans  &lt 15 LS(R)  &ms_free_en             &trans                     &trans
             >;
 
