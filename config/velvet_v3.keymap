@@ -1520,10 +1520,10 @@
 
         App_en {
             bindings = <
-&trans                        &kp LA(LC(LS(P)))  &vm_en LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
-&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                    &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
-&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                       &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                    &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
-                                                 &trans                                  &trans             &trans             &none              &sl 17    &trans  &trans             &trans             &trans                 &trans
+&trans                        &kp LA(LC(LS(P)))  &vm_en LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                           &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
+&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                           &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
+&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                       &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                           &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
+                                                 &trans                                  &trans             &trans             &none              &sl 17    &kp LA(ENTER)  &alt_spc_en        &trans             &trans                 &trans
             >;
 
             display-name = "App_en";
@@ -1532,10 +1532,10 @@
         App_ru {
             display-name = "App_ru";
             bindings = <
-&trans                        &kp LA(LC(LS(P)))  &vm_ru LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                    &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
-&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                    &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
-&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                       &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                    &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
-                                                 &trans                                  &trans             &trans             &none              &sl 18    &trans  &trans             &trans             &trans                 &trans
+&trans                        &kp LA(LC(LS(P)))  &vm_ru LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                       &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
+&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                       &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
+&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                       &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                       &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
+                                                 &trans                                  &trans             &trans             &none              &sl 18    &kp ENTER  &alt_spc_ru        &trans             &trans                 &trans
             >;
         };
 
