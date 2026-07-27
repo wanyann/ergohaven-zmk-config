@@ -296,9 +296,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&to 2>,
+                <&free_off &to 2>,
                 <&macro_tap_time 30>,
-                <&kp LS(LC(N8)) &free_off>;
+                <&kp LS(LC(N8))>;
 
             label = "LAYER_RU";
             tap-ms = <1>;
@@ -308,9 +308,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&to 0>,
+                <&free_off &to 0>,
                 <&macro_tap_time 30>,
-                <&kp LS(LC(N9)) &free_off>;
+                <&kp LS(LC(N9))>;
 
             label = "LAYER_EN";
             tap-ms = <1>;
