@@ -298,7 +298,7 @@
             bindings =
                 <&to 2>,
                 <&macro_tap_time 30>,
-                <&kp LS(LC(N8)) &free_off>;
+                <&kp LS(LC(N8)) &mouse_off>;
 
             label = "LAYER_RU";
             tap-ms = <1>;
@@ -310,7 +310,7 @@
             bindings =
                 <&to 0>,
                 <&macro_tap_time 30>,
-                <&kp LS(LC(N9)) &free_off>;
+                <&kp LS(LC(N9)) &mouse_off>;
 
             label = "LAYER_EN";
             tap-ms = <1>;
@@ -344,11 +344,11 @@
             label = "RU_KP";
         };
 
-        free_off: free_off {
+        mouse_off: mouse_off {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings = <&kp LC(LS(F9))>;
-            label = "FREE_OFF";
+            label = "MOUSE_OFF";
         };
 
         free: free {
@@ -500,7 +500,7 @@
         alt_spc_ru: alt_spc_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 2 &kp LA(SPACE) &free_off>;
+            bindings = <&to 2 &kp LA(SPACE) &mouse_off>;
             label = "ALT_SPC_RU";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -626,28 +626,28 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&free_off &to 4 &free>;
+            bindings = <&mouse_off &to 4 &free>;
             label = "MACRO_MLESS_FREE";
         };
 
         ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&free_off &to 5 &overlay>;
+            bindings = <&mouse_off &to 5 &overlay>;
             label = "MACRO_MLESS_OVER";
         };
 
         ms_free_en: ms_free_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&free_off &to 8 &free>;
+            bindings = <&mouse_off &to 8 &free>;
             label = "ms_free_en";
         };
 
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&free_off &to 9 &overlay>;
+            bindings = <&mouse_off &to 9 &overlay>;
             label = "ms_over_en";
         };
 
@@ -717,14 +717,14 @@
         free_move_to: free_move_to {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&free_off &macro_param_1to1 &to MACRO_PLACEHOLDER &free>;
+            bindings = <&mouse_off &macro_param_1to1 &to MACRO_PLACEHOLDER &free>;
             label = "FREE_MOVE_TO";
         };
 
         alt_spc_en: alt_spc_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&to 0 &kp LA(SPACE) &free_off &free_off>;
+            bindings = <&to 0 &kp LA(SPACE) &mouse_off &mouse_off>;
             label = "ALT_SPC_EN";
             wait-ms = <0>;
             tap-ms = <40>;
@@ -740,28 +740,28 @@
         freeoff_sl: freeoff_sl {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&free_off &macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
+            bindings = <&mouse_off &macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
             label = "FREEOFF_SL";
         };
 
         mouseoff_kp_ru: mouseoff_kp_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&free_off &to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&mouse_off &to 2 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_RU";
         };
 
         mouseoff_kp_en: mouseoff_kp_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&free_off &to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&mouse_off &to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP_EN";
         };
 
         free_kp: free_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&free_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &free>;
+            bindings = <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &free>;
             label = "FREE_KP";
         };
 
@@ -789,14 +789,14 @@
         overoff_sl: overoff_sl {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
-            bindings = <&free_off &macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
+            bindings = <&mouse_off &macro_param_1to1 &layer_off MACRO_PLACEHOLDER &macro_param_2to1 &sl MACRO_PLACEHOLDER>;
             label = "OVEROFF_SL";
         };
 
         ms_set: ms_set {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&kp SPACE &kp RU_CYRILLIC_EN &kp MINUS &free_off &macro_param_1to1 &to MACRO_PLACEHOLDER &free>;
+            bindings = <&kp SPACE &kp RU_CYRILLIC_EN &kp MINUS &mouse_off &macro_param_1to1 &to MACRO_PLACEHOLDER &free>;
             label = "MS_SET";
         };
 
@@ -827,6 +827,32 @@
             label = "ML_RU";
             wait-ms = <0>;
             tap-ms = <0>;
+        };
+
+        kp_to_over_ru: kp_to_over_ru {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&overlay>,
+                <&macro_tap_time 1>,
+                <&to 5>;
+
+            label = "KP_TO_OVER_RU";
+        };
+
+        kp_to_over_en: kp_to_over_en {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&overlay>,
+                <&macro_tap_time 1>,
+                <&to 9>;
+
+            label = "KP_TO_OVER_EN";
         };
     };
 
