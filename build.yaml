@@ -24,9 +24,9 @@ include:
 
   # - board: ergohaven
   #   shield: velvet_v3_right
-  # - board: ergohaven
-  #   shield: velvet_v3_qube qube dongle_screen
-  #   artifact-name: velvet_v3_qube-ergohaven-zmk
+  - board: ergohaven
+    shield: velvet_v3_qube qube dongle_screen
+    artifact-name: velvet_v3_qube-ergohaven-zmk
 
   # - board: ergohaven
   #   shield: velvet_v3_left_qube
