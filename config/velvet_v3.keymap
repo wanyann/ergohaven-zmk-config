@@ -768,14 +768,14 @@
         drag_sub_ru: drag_sub_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 4>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "DRAG_SUB_RU";
         };
 
         drag_sub_en: drag_sub_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &to 8>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "DRAG_SUB_EN";
         };
 
