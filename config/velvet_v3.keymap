@@ -654,7 +654,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
-                <&to 2>;
+                <&to 4>;
 
             label = "kp_m2_ru";
         };
@@ -683,7 +683,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
-                <&to 0>;
+                <&to 8>;
 
             label = "KP_M2_EN";
         };
