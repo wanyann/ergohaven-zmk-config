@@ -843,14 +843,26 @@
         kp_over_ru: kp_over_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&overlay>,
+                <&macro_tap_time 1>,
+                <&to 5>;
+
             label = "KP_OVER_RU";
         };
 
         kp_over_en: kp_over_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_press>,
+                <&overlay>,
+                <&macro_tap_time 1>,
+                <&to 9>;
+
             label = "KP_OVER_EN";
         };
     };
