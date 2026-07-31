@@ -846,9 +846,7 @@
             bindings =
                 <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_press>,
-                <&overlay>,
-                <&macro_tap_time 1>,
-                <&to 5>;
+                <&to 5 &overlay>;
 
             label = "KP_OVER_RU";
         };
@@ -859,9 +857,7 @@
             bindings =
                 <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_press>,
-                <&overlay>,
-                <&macro_tap_time 1>,
-                <&to 9>;
+                <&to 9 &overlay>;
 
             label = "KP_OVER_EN";
         };
