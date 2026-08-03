@@ -1430,6 +1430,26 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
+
+        w_morph: w_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "W_MORPH";
+            bindings = <&kp W>, <&free_kp W>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        q_morph: q_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "Q_MORPH";
+            bindings = <&kp Q>, <&free_kp Q>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
     };
 
     keymap {
@@ -1481,7 +1501,7 @@
 
         MFree_ru {
             bindings = <
-&none  &kp Q             &kp W             &e_morph_ru       &kp R             &mt_mouseoff_ru LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &q_morph          &w_morph          &e_morph_ru       &kp R             &mt_mouseoff_ru LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
 &none  &kp LEFT_GUI      &kp LALT          &kp LSHFT         &kp LCTRL         &mt_mouseoff_ru LC(F) G                                   &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
 &none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_ru LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans            &trans            &ms_over_ru       &space_lt 15 0           &freeoff_sl 4 19    &bspc_morph  &lt 17 RU_CYRILLIC_ER  &none     &trans       &trans
@@ -1523,7 +1543,7 @@
         MFree_en {
             display-name = "MFree_en";
             bindings = <
-&none  &kp Q             &kp W             &e_morph_en       &kp R             &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &q_morph          &w_morph          &e_morph_en       &kp R             &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
 &none  &kp LEFT_GUI      &kp LALT          &kp LSHFT         &kp LCTRL         &mt_mouseoff_en LC(F) G                                   &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
 &none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_en LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans            &trans            &ms_over_en       &space_lt 14 0           &freeoff_sl 8 18    &bspc_morph  &lt 16 RU_CYRILLIC_ER  &none     &trans       &trans
