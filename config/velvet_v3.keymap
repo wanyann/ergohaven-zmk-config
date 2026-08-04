@@ -1512,7 +1512,7 @@
 &trans             &kp RU_CYRILLIC_TSE                         &soft_sign                            &kp RU_CYRILLIC_YA                  &mt LC(R) RU_CYRILLIC_A       &mt LC(T) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_VE             &kp RU_CYRILLIC_KA                  &kp RU_CYRILLIC_DE            &kp RU_CYRILLIC_SHCHA               &trans
 &kp RU_CYRILLIC_E  &hrml_slow_ru LEFT_GUI RU_CYRILLIC_SHORT_I  &hrml_slow_ru LEFT_ALT RU_CYRILLIC_I  &hrosm_l LEFT_SHIFT RU_CYRILLIC_IE  &hrml_ru LCTRL RU_CYRILLIC_O  &ru_com_mt LC(F) 0                          &kp RU_CYRILLIC_EL     &hrml_ru RCTRL RU_CYRILLIC_EN  &hrosm_r LEFT_SHIFT RU_CYRILLIC_TE  &hrosm_r RALT RU_CYRILLIC_ES  &hrml_slow_ru RGUI RU_CYRILLIC_CHE  &kp RU_CYRILLIC_SHA
 &trans             &mt LC(Z) RU_CYRILLIC_EF                    &mt LC(X) RU_CYRILLIC_U               &mt LC(C) RU_CYRILLIC_HA            &mt LC(V) RU_CYRILLIC_YERU    &ru_dot_mt LG(V) 0                          &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM             &kp RU_CYRILLIC_PE                  &kp RU_CYRILLIC_GHE           &mt LC(SLASH) RU_CYRILLIC_ZHE       &trans
-                                                               &trans                                &trans                              &ms_over_ru                   &lt 17 SPACE              &sl 21    &trans  &lt 19 RU_CYRILLIC_ER  &ms_free_ru                    &trans                              &trans
+                                                               &trans                                &trans                              &ms_over_ru                   &lt 17 SPACE              &sl 21    &trans  &lt 18 RU_CYRILLIC_ER  &ms_free_ru                    &trans                              &trans
             >;
 
             display-name = "Russian";
@@ -1523,7 +1523,7 @@
 &trans                 &kp LS(RU_CYRILLIC_TSE)                         &caps_soft_sign                           &kp LS(RU_CYRILLIC_YA)                  &mt LC(R) LS(RU_CYRILLIC_A)       &mt LC(T) LS(RU_CYRILLIC_YU)                    &kp LS(RU_CYRILLIC_ZE)     &kp LS(RU_CYRILLIC_VE)             &kp LS(RU_CYRILLIC_KA)                  &kp LS(RU_CYRILLIC_DE)            &kp LS(RU_CYRILLIC_SHCHA)               &trans
 &kp LS(RU_CYRILLIC_E)  &hrml_slow_ru LEFT_GUI LS(RU_CYRILLIC_SHORT_I)  &hrml_slow_ru LEFT_ALT LS(RU_CYRILLIC_I)  &hrosm_l LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml_ru LCTRL LS(RU_CYRILLIC_O)  &ru_com_mt LC(F) 0                              &kp LS(RU_CYRILLIC_EL)     &hrml_ru RCTRL LS(RU_CYRILLIC_EN)  &hrosm_r LEFT_SHIFT LS(RU_CYRILLIC_TE)  &hrosm_r RALT LS(RU_CYRILLIC_ES)  &hrml_slow_ru RGUI LS(RU_CYRILLIC_CHE)  &kp LS(RU_CYRILLIC_SHA)
 &trans                 &mt LC(Z) LS(RU_CYRILLIC_EF)                    &mt LC(X) LS(RU_CYRILLIC_U)               &mt LC(C) LS(RU_CYRILLIC_HA)            &mt LC(V) LS(RU_CYRILLIC_YERU)    &ru_dot_mt LG(V) 0                              &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)             &kp LS(RU_CYRILLIC_PE)                  &kp LS(RU_CYRILLIC_GHE)           &mt LC(SLASH) LS(RU_CYRILLIC_ZHE)       &trans
-                                                                       &trans                                    &trans                                  &ms_over_ru                       &ru_lt_cw_off 17 SPACE        &sl 21    &trans  &lt 19 LS(RU_CYRILLIC_ER)  &ms_free_ru                        &trans                                  &trans
+                                                                       &trans                                    &trans                                  &ms_over_ru                       &ru_lt_cw_off 17 SPACE        &sl 21    &trans  &lt 18 LS(RU_CYRILLIC_ER)  &ms_free_ru                        &trans                                  &trans
             >;
 
             display-name = "CapsWord_ru";
@@ -1776,6 +1776,11 @@
         OS {
             if-layers = <2 25>;
             then-layer = <26>;
+        };
+
+        Num_Ru {
+            if-layers = <2 18>;
+            then-layer = <19>;
         };
     };
 };
