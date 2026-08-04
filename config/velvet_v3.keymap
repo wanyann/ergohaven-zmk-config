@@ -1462,26 +1462,6 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
-
-        w_morph: w_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "W_MORPH";
-            bindings = <&kp W>, <&free_kp W>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-
-        q_morph: q_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "Q_MORPH";
-            bindings = <&kp Q>, <&free_kp Q>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
     };
 
     keymap {
@@ -1545,7 +1525,7 @@
         MMods_ru {
             display-name = "MMods_ru";
             bindings = <
-&none  &free_kp Q       &free_kp W   &free_kp E    &free_kp R    &free_kp T                                       &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &free_kp Q       &free_kp W   &e_morph_ru   &free_kp R    &free_kp T                                       &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
 &none  &hrm LEFT_GUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &free_kp F                                       &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
 &none  &kp_free Z       &kp_free X   &free_kp C    &free_kp V    &free_kp B                                       &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                         &trans       &trans        &ms_over_ru   &space_lt 17 0  &freeoff_sl 4 21    &bspc_morph  &lt 19 RU_CYRILLIC_ER  &none     &trans       &trans
@@ -1585,7 +1565,7 @@
         MFree_en {
             display-name = "MFree_en";
             bindings = <
-&none  &q_morph          &w_morph          &e_morph_en       &mt_free LC(R) R  &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &kp Q             &kp W             &kp E             &mt_free LC(R) R  &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
 &none  &mml_en LEFT_GUI  &mml_en LALT      &mml_en LSHFT     &mml_en LCTRL     &mt_mouseoff_en LC(F) G                                   &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
 &none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_en LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans            &trans            &ms_over_en       &space_lt 16 0           &freeoff_sl 9 20    &bspc_morph  &lt 18 RU_CYRILLIC_ER  &none     &trans       &trans
@@ -1595,7 +1575,7 @@
         MMods_en {
             display-name = "MMods_en";
             bindings = <
-&none  &free_kp Q       &free_kp W   &free_kp E    &free_kp R    &free_kp T                                       &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &free_kp Q       &free_kp W   &e_morph_en   &free_kp R    &free_kp T                                       &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
 &none  &hrm LEFT_GUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &free_kp F                                       &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
 &none  &kp_free Z       &kp_free X   &kp_free C    &kp_free V    &kp_free B                                       &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                         &trans       &trans        &ms_over_en   &space_lt 16 0  &freeoff_sl 9 20    &bspc_morph  &lt 18 RU_CYRILLIC_ER  &none     &trans       &trans
