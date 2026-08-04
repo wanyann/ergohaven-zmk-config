@@ -853,6 +853,32 @@
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "KP_OVER_EN";
         };
+
+        mml_ru: mml_ru {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 26>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 26>;
+
+            label = "MML_RU";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
+
+        mml_en: mml_en {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 25>,
+                <&macro_pause_for_release>,
+                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 25>;
+
+            label = "MML_EN";
+            wait-ms = <0>;
+            tap-ms = <0>;
+        };
     };
 
     behaviors {
@@ -1502,7 +1528,7 @@
         MFree_ru {
             bindings = <
 &none  &q_morph          &w_morph          &e_morph_ru       &kp R             &mt_mouseoff_ru LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
-&none  &kp LEFT_GUI      &kp LALT          &kp LSHFT         &kp LCTRL         &mt_mouseoff_ru LC(F) G                                   &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
+&none  &mml_ru LEFT_GUI  &mml_ru LALT      &mml_ru LSHFT     &mml_ru LCTRL     &mt_mouseoff_ru LC(F) G                                   &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
 &none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_ru LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans            &trans            &ms_over_ru       &space_lt 15 0           &freeoff_sl 4 19    &bspc_morph  &lt 17 RU_CYRILLIC_ER  &none     &trans       &trans
             >;
@@ -1544,7 +1570,7 @@
             display-name = "MFree_en";
             bindings = <
 &none  &q_morph          &w_morph          &e_morph_en       &kp R             &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
-&none  &kp LEFT_GUI      &kp LALT          &kp LSHFT         &kp LCTRL         &mt_mouseoff_en LC(F) G                                   &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
+&none  &mml_en LEFT_GUI  &mml_en LALT      &mml_en LSHFT     &mml_en LCTRL     &mt_mouseoff_en LC(F) G                                   &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
 &none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_en LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans            &trans            &ms_over_en       &space_lt 14 0           &freeoff_sl 8 18    &bspc_morph  &lt 16 RU_CYRILLIC_ER  &none     &trans       &trans
             >;
