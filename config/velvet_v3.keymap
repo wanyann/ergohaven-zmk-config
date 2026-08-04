@@ -657,6 +657,7 @@
                 <&to 4>;
 
             label = "kp_m2_ru";
+            tap-ms = <15>;
         };
 
         kp_sub_ru: kp_sub_ru {
@@ -686,6 +687,7 @@
                 <&to 9>;
 
             label = "KP_M2_EN";
+            tap-ms = <15>;
         };
 
         kp_sub_en: kp_sub_en {
@@ -777,6 +779,7 @@
                 <&to 7>;
 
             label = "KP_M1_RU";
+            tap-ms = <15>;
         };
 
         kp_m1_en: kp_m1_en {
@@ -788,6 +791,7 @@
                 <&to 12>;
 
             label = "KP_M1_EN";
+            tap-ms = <15>;
         };
 
         overlay_off: overlay_off {
