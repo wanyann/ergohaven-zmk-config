@@ -1589,7 +1589,7 @@
         MMods_en {
             display-name = "MMods_en";
             bindings = <
-&none  &kp Q             &kp W             &kp E             &kp R             &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &kp_free Q        &kp W             &kp E             &kp R             &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
 &none  &hrm LEFT_GUI A   &hrm LALT S       &hrm LSHFT D      &hrm LCTRL F      &mt_mouseoff_en LC(F) G                                   &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
 &none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_en LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans            &trans            &ms_over_en       &space_lt 16 0           &freeoff_sl 9 20    &bspc_morph  &lt 18 RU_CYRILLIC_ER  &none     &trans       &trans
@@ -1650,19 +1650,19 @@
         Nav_en {
             display-name = "Nav_en";
             bindings = <
-&trans  &trans                          &macro_unsafe_en                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                              &none       &kp PG_UP  &kp UP    &kp PG_DN  &kp DELETE  &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                          &kp K_APP   &kp LEFT   &kp DOWN  &kp RIGHT  &none       &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                    &kp LC(F8)  &kp HOME   &none     &kp END    &none       &trans
-                                        &trans                           &trans               &trans                    &none               &sl 20    &trans  &mo 22      &trans     &trans    &trans
+&trans  &trans                          &macro_unsafe_en                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                              &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                          &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &none       &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                    &kp LC(F8)  &none     &kp PG_DN  &kp PG_UP  &none       &trans
+                                        &trans                           &trans               &trans                    &none               &sl 20    &trans  &mo 22      &trans    &trans     &trans
             >;
         };
 
         Nav_ru {
             bindings = <
-&trans  &trans                          &macro_unsafe_ru                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                              &none       &kp PG_UP  &kp UP    &kp PG_DN  &kp DELETE  &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                          &kp K_APP   &kp LEFT   &kp DOWN  &kp RIGHT  &none       &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                    &kp LC(F8)  &kp HOME   &none     &kp END    &none       &trans
-                                        &trans                           &trans               &trans                    &none               &sl 21    &trans  &mo 23      &trans     &trans    &trans
+&trans  &trans                          &macro_unsafe_ru                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                              &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                          &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &none       &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                    &kp LC(F8)  &none     &kp PG_DN  &kp PG_UP  &none       &trans
+                                        &trans                           &trans               &trans                    &none               &sl 21    &trans  &mo 23      &trans    &trans     &trans
             >;
 
             display-name = "Nav_ru";
