@@ -1672,12 +1672,12 @@
             display-name = "Nav_ru";
         };
 
-        Num_en {
+        Num {
             bindings = <
-&trans  &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                            &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &morph_en_com                       &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL  &kp N4        &kp N5        &kp N6        &morph_en_dot                       &trans  &trans     &none       &none         &trans        &trans
-                   &trans        &trans        &trans        &lt 22 SPACE   &layer_ru    &trans  &trans  &trans     &trans      &trans
+&trans  &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                        &trans  &trans     &trans      &trans        &trans        &trans
+&trans  &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &morph_en_com                   &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &kp EQUAL  &kp N4        &kp N5        &kp N6        &morph_en_dot                   &trans  &trans     &none       &none         &trans        &trans
+                   &trans        &trans        &trans        &lt 22 SPACE   &none    &trans  &trans  &trans     &trans      &trans
             >;
 
             display-name = "Num_en";
@@ -1685,10 +1685,10 @@
 
         Num_ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &morph_ru_com                       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &morph_ru_dot                       &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &lt 23 SPACE   &layer_ru    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &morph_ru_com                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &morph_ru_dot                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &lt 23 SPACE   &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "Num_ru";
@@ -1748,7 +1748,7 @@
             display-name = "Fn";
         };
 
-        OS_en {
+        OS {
             display-name = "OS_en";
             bindings = <
 &trans       &bt_set_en 2  &kp_over_en LA(LC(N1))  &kp_over_en LA(LC(N2))    &kp_over_en LC(LA(NUMBER_3))  &kp_over_en LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
@@ -1778,9 +1778,19 @@
             then-layer = <26>;
         };
 
-        Num_Ru {
+        Num {
             if-layers = <2 18>;
             then-layer = <19>;
+        };
+
+        Mouse_Num {
+            if-layers = <4 18>;
+            then-layer = <19>;
+        };
+
+        Mouse_OS {
+            if-layers = <4 25>;
+            then-layer = <26>;
         };
     };
 };
