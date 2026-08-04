@@ -1527,7 +1527,7 @@
 
         MFree_ru {
             bindings = <
-&none  &q_morph          &w_morph          &e_morph_ru       &kp R             &mt_mouseoff_ru LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &kp Q             &kp W             &kp E             &mt_free LC(R) R  &mt_mouseoff_ru LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
 &none  &mml_ru LEFT_GUI  &mml_ru LALT      &mml_ru LSHFT     &mml_ru LCTRL     &mt_mouseoff_ru LC(F) G                                   &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
 &none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_ru LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans            &trans            &ms_over_ru       &space_lt 17 0           &freeoff_sl 4 21    &bspc_morph  &lt 19 RU_CYRILLIC_ER  &none     &trans       &trans
@@ -1539,8 +1539,8 @@
         MMods_ru {
             display-name = "MMods_ru";
             bindings = <
-&none  &q_morph          &w_morph          &e_morph_ru       &kp R             &mt_mouseoff_ru LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
-&none  &kp LEFT_GUI      &kp LALT          &kp LSHFT         &kp LCTRL         &mt_mouseoff_ru LC(F) G                                   &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
+&none  &q_morph          &w_morph          &e_morph_ru       &mt_free LC(R) R  &mt_mouseoff_ru LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &hrm LEFT_GUI A   &hrm LALT S       &hrm LSHFT D      &hrm LCTRL F      &mt_mouseoff_ru LC(F) G                                   &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
 &none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_ru LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans            &trans            &ms_over_ru       &space_lt 17 0           &freeoff_sl 4 21    &bspc_morph  &lt 19 RU_CYRILLIC_ER  &none     &trans       &trans
             >;
@@ -1579,7 +1579,7 @@
         MFree_en {
             display-name = "MFree_en";
             bindings = <
-&none  &q_morph          &w_morph          &e_morph_en       &kp R             &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &q_morph          &w_morph          &e_morph_en       &mt_free LC(R) R  &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
 &none  &mml_en LEFT_GUI  &mml_en LALT      &mml_en LSHFT     &mml_en LCTRL     &mt_mouseoff_en LC(F) G                                   &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
 &none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_en LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans            &trans            &ms_over_en       &space_lt 16 0           &freeoff_sl 9 20    &bspc_morph  &lt 18 RU_CYRILLIC_ER  &none     &trans       &trans
@@ -1590,7 +1590,7 @@
             display-name = "MMods_en";
             bindings = <
 &none  &q_morph          &w_morph          &e_morph_en       &kp R             &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
-&none  &kp LEFT_GUI      &kp LALT          &kp LSHFT         &kp LCTRL         &mt_mouseoff_en LC(F) G                                   &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
+&none  &hrm LEFT_GUI A   &hrm LALT S       &hrm LSHFT D      &hrm LCTRL F      &mt_mouseoff_en LC(F) G                                   &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
 &none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_en LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans            &trans            &ms_over_en       &space_lt 16 0           &freeoff_sl 9 20    &bspc_morph  &lt 18 RU_CYRILLIC_ER  &none     &trans       &trans
             >;
