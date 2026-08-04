@@ -1463,9 +1463,9 @@
             mods = <(MOD_LCTL)>;
         };
 
-        mhrmS: mhrmS {
+        mhrm: mhrm {
             compatible = "zmk,behavior-hold-tap";
-            label = "MHRMS";
+            label = "MHRM";
             bindings = <&kp>, <&free_kp>;
 
             #binding-cells = <2>;
@@ -1535,10 +1535,10 @@
         MMods_ru {
             display-name = "MMods_ru";
             bindings = <
-&none  &free_kp Q       &free_kp W   &e_morph_ru   &free_kp R    &free_kp T                                       &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
-&none  &hrm LEFT_GUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &free_kp F                                       &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
-&none  &kp_free Z       &kp_free X   &free_kp C    &free_kp V    &free_kp B                                       &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
-                        &trans       &trans        &ms_over_ru   &space_lt 17 0  &freeoff_sl 4 21    &bspc_morph  &lt 19 RU_CYRILLIC_ER  &none     &trans       &trans
+&none  &free_kp Q        &free_kp W    &e_morph_ru    &free_kp R     &free_kp T                                       &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &free_kp F                                       &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
+&none  &kp_free Z        &kp_free X    &free_kp C     &free_kp V     &free_kp B                                       &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
+                         &trans        &trans         &ms_over_ru    &space_lt 17 0  &freeoff_sl 4 21    &bspc_morph  &lt 19 RU_CYRILLIC_ER  &none     &trans       &trans
             >;
         };
 
@@ -1585,10 +1585,10 @@
         MMods_en {
             display-name = "MMods_en";
             bindings = <
-&none  &free_kp Q       &free_kp W   &e_morph_en   &free_kp R    &free_kp T                                       &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
-&none  &hrm LEFT_GUI A  &hrm LALT S  &hrm LSHFT D  &hrm LCTRL F  &free_kp F                                       &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
-&none  &kp_free Z       &kp_free X   &kp_free C    &kp_free V    &kp_free B                                       &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
-                        &trans       &trans        &ms_over_en   &space_lt 16 0  &freeoff_sl 9 20    &bspc_morph  &lt 18 RU_CYRILLIC_ER  &none     &trans       &trans
+&none  &free_kp Q        &free_kp W    &e_morph_en    &free_kp R     &free_kp T                                       &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &free_kp F                                       &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
+&none  &kp_free Z        &kp_free X    &kp_free C     &kp_free V     &kp_free B                                       &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
+                         &trans        &trans         &ms_over_en    &space_lt 16 0  &freeoff_sl 9 20    &bspc_morph  &lt 18 RU_CYRILLIC_ER  &none     &trans       &trans
             >;
         };
 
