@@ -1685,10 +1685,10 @@
 
         Num_ru {
             bindings = <
-&trans  &kp MINUS     &kp NUMBER_7  &kp NUMBER_8  &kp N9        &kp PLUS                            &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &kp NUMBER_0  &kp N1        &kp N2        &kp NUMBER_3  &morph_ru_com                       &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL     &kp N4        &kp N5        &kp N6        &morph_ru_dot                       &trans  &trans     &none       &none         &trans        &trans
-                      &trans        &trans        &trans        &lt 23 SPACE   &layer_ru    &trans  &trans  &trans     &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &morph_ru_com                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &morph_ru_dot                       &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &lt 23 SPACE   &layer_ru    &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "Num_ru";
