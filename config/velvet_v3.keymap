@@ -1462,6 +1462,16 @@
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
+
+        mhrmS: mhrmS {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MHRMS";
+            bindings = <&kp>, <&free_kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "balanced";
+        };
     };
 
     keymap {
@@ -1480,10 +1490,10 @@
 
         En_CW {
             bindings = <
-&trans            &kp LS(Q)                     &kp LS(W)                     &kp LS(U)                  &mt LC(R) LS(A)         &mt LC(T) K_CANCEL                        &kp LS(Z)     &kp LS(V)             &kp LS(K)                  &kp LS(D)            &kp LS(K_CANCEL)          &trans
-&kp LS(K_CANCEL)  &hrml_slow_en LEFT_GUI LS(C)  &hrml_slow_en LEFT_ALT LS(I)  &hrosm_l LEFT_SHIFT LS(E)  &hrml_en LCTRL LS(O)    &en_com_mt LC(F) 0                        &kp LS(L)     &hrml_en RCTRL LS(N)  &hrosm_r LEFT_SHIFT LS(T)  &hrosm_r RALT LS(S)  &hrml_slow_en RGUI LS(H)  &kp LS(K_CANCEL)
-&trans            &mt LC(Z) LS(F)               &mt LC(X) LS(Y)               &mt LC(C) LS(X)            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                        &kp LS(B)     &kp LS(M)             &kp LS(P)                  &kp LS(G)            &mt LC(SLASH) LS(J)       &trans
-                                                &trans                        &trans                     &ms_over_en             &en_lt_cw_off 16 SPACE  &sl 20    &trans  &lt 18 LS(R)  &ms_free_en           &trans                     &trans
+&trans            &kp LS(Q)                       &kp LS(W)                       &kp LS(U)                    &mt (LC(R)) LS(A)       &mt LC(T) K_CANCEL                        &kp LS(Z)       &kp LS(V)               &kp LS(K)                    &kp LS(D)              &kp LS(K_CANCEL)            &trans
+&kp LS(K_CANCEL)  &hrml_slow_en (LEFT_GUI) LS(C)  &hrml_slow_en (LEFT_ALT) LS(I)  &hrosm_l (LEFT_SHIFT) LS(E)  &hrml_en (LCTRL) LS(O)  &en_com_mt LC(F) 0                        &kp LS(L)       &hrml_en (RCTRL) LS(N)  &hrosm_r (LEFT_SHIFT) LS(T)  &hrosm_r (RALT) LS(S)  &hrml_slow_en (RGUI) LS(H)  &kp LS(K_CANCEL)
+&trans            &mt (LC(Z)) LS(F)               &mt (LC(X)) LS(Y)               &mt (LC(C)) LS(X)            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                        &kp LS(B)       &kp LS(M)               &kp LS(P)                    &kp LS(G)              &mt (LC(SLASH)) LS(J)       &trans
+                                                  &trans                          &trans                       &ms_over_en             &en_lt_cw_off 16 SPACE  &sl 20    &trans  &lt (18) LS(R)  &ms_free_en             &trans                       &trans
             >;
 
             display-name = "CapsWord_en";
@@ -1502,10 +1512,10 @@
 
         Ru_CW {
             bindings = <
-&trans                 &kp LS(RU_CYRILLIC_TSE)                         &caps_soft_sign                           &kp LS(RU_CYRILLIC_YA)                  &mt LC(R) LS(RU_CYRILLIC_A)       &mt LC(T) LS(RU_CYRILLIC_YU)                    &kp LS(RU_CYRILLIC_ZE)     &kp LS(RU_CYRILLIC_VE)             &kp LS(RU_CYRILLIC_KA)                  &kp LS(RU_CYRILLIC_DE)            &kp LS(RU_CYRILLIC_SHCHA)               &trans
-&kp LS(RU_CYRILLIC_E)  &hrml_slow_ru LEFT_GUI LS(RU_CYRILLIC_SHORT_I)  &hrml_slow_ru LEFT_ALT LS(RU_CYRILLIC_I)  &hrosm_l LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml_ru LCTRL LS(RU_CYRILLIC_O)  &ru_com_mt LC(F) 0                              &kp LS(RU_CYRILLIC_EL)     &hrml_ru RCTRL LS(RU_CYRILLIC_EN)  &hrosm_r LEFT_SHIFT LS(RU_CYRILLIC_TE)  &hrosm_r RALT LS(RU_CYRILLIC_ES)  &hrml_slow_ru RGUI LS(RU_CYRILLIC_CHE)  &kp LS(RU_CYRILLIC_SHA)
-&trans                 &mt LC(Z) LS(RU_CYRILLIC_EF)                    &mt LC(X) LS(RU_CYRILLIC_U)               &mt LC(C) LS(RU_CYRILLIC_HA)            &mt LC(V) LS(RU_CYRILLIC_YERU)    &ru_dot_mt LG(V) 0                              &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)             &kp LS(RU_CYRILLIC_PE)                  &kp LS(RU_CYRILLIC_GHE)           &mt LC(SLASH) LS(RU_CYRILLIC_ZHE)       &trans
-                                                                       &trans                                    &trans                                  &ms_over_ru                       &ru_lt_cw_off 17 SPACE        &sl 21    &trans  &lt 18 LS(RU_CYRILLIC_ER)  &ms_free_ru                        &trans                                  &trans
+&trans                 &kp LS(RU_CYRILLIC_TSE)                           &caps_soft_sign                             &kp LS(RU_CYRILLIC_YA)                    &mt (LC(R)) LS(RU_CYRILLIC_A)       &mt (LC(T)) LS(RU_CYRILLIC_YU)                    &kp LS(RU_CYRILLIC_ZE)       &kp LS(RU_CYRILLIC_VE)               &kp LS(RU_CYRILLIC_KA)                    &kp LS(RU_CYRILLIC_DE)              &kp LS(RU_CYRILLIC_SHCHA)                 &trans
+&kp LS(RU_CYRILLIC_E)  &hrml_slow_ru (LEFT_GUI) LS(RU_CYRILLIC_SHORT_I)  &hrml_slow_ru (LEFT_ALT) LS(RU_CYRILLIC_I)  &hrosm_l (LEFT_SHIFT) LS(RU_CYRILLIC_IE)  &hrml_ru (LCTRL) LS(RU_CYRILLIC_O)  &ru_com_mt LC(F) 0                                &kp LS(RU_CYRILLIC_EL)       &hrml_ru (RCTRL) LS(RU_CYRILLIC_EN)  &hrosm_r (LEFT_SHIFT) LS(RU_CYRILLIC_TE)  &hrosm_r (RALT) LS(RU_CYRILLIC_ES)  &hrml_slow_ru (RGUI) LS(RU_CYRILLIC_CHE)  &kp LS(RU_CYRILLIC_SHA)
+&trans                 &mt (LC(Z)) LS(RU_CYRILLIC_EF)                    &mt (LC(X)) LS(RU_CYRILLIC_U)               &mt (LC(C)) LS(RU_CYRILLIC_HA)            &mt (LC(V)) LS(RU_CYRILLIC_YERU)    &ru_dot_mt LG(V) 0                                &kp LS(RU_CYRILLIC_BE)       &kp LS(RU_CYRILLIC_EM)               &kp LS(RU_CYRILLIC_PE)                    &kp LS(RU_CYRILLIC_GHE)             &mt (LC(SLASH)) LS(RU_CYRILLIC_ZHE)       &trans
+                                                                         &trans                                      &trans                                    &ms_over_ru                         &ru_lt_cw_off 17 SPACE          &sl 21    &trans  &lt (18) LS(RU_CYRILLIC_ER)  &ms_free_ru                          &trans                                    &trans
             >;
 
             display-name = "CapsWord_ru";
@@ -1593,13 +1603,14 @@
         };
 
         M2_en {
-            display-name = "M2_en";
             bindings = <
 &none              &kp_m2_en RU_CYRILLIC_TSE      &kp_m2_en RU_CYRILLIC_SOFT_SIGN  &kp_m2_en RU_CYRILLIC_YA  &kp_m2_en RU_CYRILLIC_A     &kp_m2_en RU_CYRILLIC_YU                                            &kp_m2_en RU_CYRILLIC_ZE  &kp_m2_en RU_CYRILLIC_VE  &kp_m2_en RU_CYRILLIC_KA  &kp_m2_en RU_CYRILLIC_DE   &kp_m2_en RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp_m2_en RU_CYRILLIC_SHORT_I  &kp_m2_en RU_CYRILLIC_I          &kp_m2_en RU_CYRILLIC_IE  &kp_m2_en RU_CYRILLIC_O     &kp_m2_en RU_COMMA                                                  &kp_m2_en RU_CYRILLIC_EL  &kp_m2_en RU_CYRILLIC_EN  &kp_m2_en RU_CYRILLIC_TE  &kp_m2_en RU_CYRILLIC_ES   &kp_m2_en RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp_m2_en RU_CYRILLIC_EF       &kp_m2_en RU_CYRILLIC_U          &kp_m2_en RU_CYRILLIC_HA  &kp_m2_en RU_CYRILLIC_YERU  &kp_m2_en RU_DOT                                                    &kp_m2_en RU_CYRILLIC_BE  &kp_m2_en RU_CYRILLIC_EM  &kp_m2_en RU_CYRILLIC_PE  &kp_m2_en RU_CYRILLIC_GHE  &kp_m2_en RU_CYRILLIC_ZHE    &trans
                                                   &trans                           &trans                    &none                       &nav_set 16 9             &overoff_sl 12 20    &kp_to BACKSPACE 11  &move_num 18 11           &ms_free_en               &trans                    &trans
             >;
+
+            display-name = "M2_en";
         };
 
         MSub_en {
@@ -1613,42 +1624,43 @@
         };
 
         Mod_en {
+            display-name = "Mod_en";
             bindings = <
 &trans  &kp Q             &kp W             &kp E              &kp R         &kp T                                  &kp Y            &kp U              &kp I              &kp O             &kp P                &trans
 &trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                                  &kp H            &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
 &trans  &kp Z             &kp X             &kp C              &kp V         &kp B                                  &kp N            &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
                           &trans            &trans             &trans        &space_lt 16 0  &trans    &bspc_morph  &lt 18 K_CANCEL  &trans             &trans             &trans
             >;
-
-            display-name = "Mod_en";
         };
 
         Mod_ru {
-            display-name = "Mod_ru";
             bindings = <
 &trans  &kp Q             &kp W             &kp E              &kp R         &kp T                                  &kp Y            &kp U              &kp I              &kp O             &kp P                &trans
 &trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                                  &kp H            &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
 &trans  &kp Z             &kp X             &kp C              &kp V         &kp B                                  &kp N            &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
                           &trans            &trans             &trans        &space_lt 17 0  &trans    &bspc_morph  &lt 19 K_CANCEL  &trans             &trans             &trans
             >;
+
+            display-name = "Mod_ru";
         };
 
         Nav_en {
-            display-name = "Nav_en";
             bindings = <
-&trans  &trans                          &macro_unsafe_en                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                              &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                          &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &none       &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                    &kp LC(F8)  &none     &kp PG_DN  &kp PG_UP  &none       &trans
-                                        &trans                           &trans               &trans                    &none               &sl 20    &trans  &mo 22      &trans    &trans     &trans
+&trans  &trans                            &macro_unsafe_en                   &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))     &testops                              &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
+&trans  &hrm (LEFT_GUI) LC(LEFT_BRACKET)  &hrm (LALT) LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI   &zeros_macro                          &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &none       &trans
+&trans  &mt (LC(Z)) LG(LS(LEFT_BRACKET))  &mt (LC(X)) LG(LS(RIGHT_BRACKET))  &mt (LC(C)) LS(F6)   &mt (LC(V)) LS(LC(LA(V)))  &kp LS(LG(LC(F9)))                    &kp LC(F8)  &none     &kp PG_DN  &kp PG_UP  &none       &trans
+                                          &trans                             &trans               &trans                     &none               &sl 20    &trans  &mo 22      &trans    &trans     &trans
             >;
+
+            display-name = "Nav_en";
         };
 
         Nav_ru {
             bindings = <
-&trans  &trans                          &macro_unsafe_ru                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                              &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                          &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &none       &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                    &kp LC(F8)  &none     &kp PG_DN  &kp PG_UP  &none       &trans
-                                        &trans                           &trans               &trans                    &none               &sl 21    &trans  &mo 23      &trans    &trans     &trans
+&trans  &trans                            &macro_unsafe_ru                   &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))     &testops                              &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
+&trans  &hrm (LEFT_GUI) LC(LEFT_BRACKET)  &hrm (LALT) LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI   &zeros_macro                          &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &none       &trans
+&trans  &mt (LC(Z)) LG(LS(LEFT_BRACKET))  &mt (LC(X)) LG(LS(RIGHT_BRACKET))  &mt (LC(C)) LS(F6)   &mt (LC(V)) LS(LC(LA(V)))  &kp LS(LG(LC(F9)))                    &kp LC(F8)  &none     &kp PG_DN  &kp PG_UP  &none       &trans
+                                          &trans                             &trans               &trans                     &none               &sl 21    &trans  &mo 23      &trans    &trans     &trans
             >;
 
             display-name = "Nav_ru";
@@ -1666,35 +1678,35 @@
         };
 
         Num_ru {
+            display-name = "Num_ru";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &morph_ru_com                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &morph_ru_dot                    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &lt 23 SPACE   &trans    &trans  &trans  &trans  &trans  &trans
             >;
-
-            display-name = "Num_ru";
         };
 
         App_en {
             bindings = <
-&trans                        &kp LA(LC(LS(P)))  &vm_en LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                           &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
-&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                           &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
-&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                       &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                           &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
-                                                 &trans                                  &trans             &trans             &none              &sl 20    &kp LA(ENTER)  &alt_spc_en        &trans             &trans                 &trans
+&trans                        &kp LA(LC(LS(P)))  &vm_en (LS(LA(LC(LG(W))))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                           &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
+&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                         &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                           &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
+&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                         &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                           &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
+                                                 &trans                                    &trans             &trans             &none              &sl 20    &kp LA(ENTER)  &alt_spc_en        &trans             &trans                 &trans
             >;
 
             display-name = "App_en";
         };
 
         App_ru {
-            display-name = "App_ru";
             bindings = <
-&trans                        &kp LA(LC(LS(P)))  &vm_ru LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                           &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
-&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                           &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
-&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                       &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                           &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
-                                                 &trans                                  &trans             &trans             &none              &sl 21    &kp LA(ENTER)  &alt_spc_ru        &trans             &trans                 &trans
+&trans                        &kp LA(LC(LS(P)))  &vm_ru (LS(LA(LC(LG(W))))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                           &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
+&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                         &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                           &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
+&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                         &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                           &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
+                                                 &trans                                    &trans             &trans             &none              &sl 21    &kp LA(ENTER)  &alt_spc_ru        &trans             &trans                 &trans
             >;
+
+            display-name = "App_ru";
         };
 
         Sym_en {
@@ -1720,14 +1732,13 @@
         };
 
         Fn {
+            display-name = "Fn";
             bindings = <
 &trans  &trans   &kp F7  &kp F8  &kp F9  &trans                     &trans  &trans     &trans          &trans    &trans        &trans
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp F12                    &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LALT  &kp LEFT_GUI  &trans
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp F11                    &trans  &trans     &trans          &trans    &trans        &trans
                  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans     &trans          &trans
             >;
-
-            display-name = "Fn";
         };
 
         OS {
@@ -1741,14 +1752,13 @@
         };
 
         OS_ru {
+            display-name = "OS_ru";
             bindings = <
 &trans  &bt_set_ru 2  &kp_over_ru LA(LC(N1))  &kp_over_ru LA(LC(N2))  &kp_over_ru LC(LA(NUMBER_3))  &kp_over_ru LC(LA(NUMBER_4))                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &bt_set_ru 1  &trans                  &trans                  &trans                        &trans                                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &bt_set_ru 0  &trans                  &trans                  &trans                        &trans                                          &trans  &trans  &trans  &trans  &trans  &trans
                       &trans                  &trans                  &trans                        &trans                        &trans    &trans  &trans  &trans  &trans  &trans
             >;
-
-            display-name = "OS_ru";
         };
     };
 
