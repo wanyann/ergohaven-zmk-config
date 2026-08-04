@@ -1589,7 +1589,7 @@
         MMods_en {
             display-name = "MMods_en";
             bindings = <
-&none  &q_morph          &w_morph          &e_morph_en       &kp R             &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &kp Q             &kp W             &kp E             &kp R             &mt_mouseoff_en LC(T) T                                   &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
 &none  &hrm LEFT_GUI A   &hrm LALT S       &hrm LSHFT D      &hrm LCTRL F      &mt_mouseoff_en LC(F) G                                   &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
 &none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_en LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans            &trans            &ms_over_en       &space_lt 16 0           &freeoff_sl 9 20    &bspc_morph  &lt 18 RU_CYRILLIC_ER  &none     &trans       &trans
