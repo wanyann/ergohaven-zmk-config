@@ -1751,19 +1751,19 @@
         OS {
             display-name = "OS_en";
             bindings = <
-&trans       &bt_set_en 2  &kp_over_en LA(LC(N1))  &kp_over_en LA(LC(N2))    &kp_over_en LC(LA(NUMBER_3))  &kp_over_en LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &trans
-&trans       &bt_set_en 1  &kp LC(RIGHT)           &kp LA(LC(N1))            &kp C_VOLUME_UP               &kp C_BRI_UP                                    &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
-&bootloader  &bt_set_en 0  &none                   &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN                  &kp C_BRI_DN                                    &out OUT_USB  &kp F23         &trans  &trans  &trans      &bootloader
-                           &trans                  &trans                    &trans                        &trans                        &trans    &trans  &trans        &trans          &trans  &trans
+&trans       &bt_set_en 2  &kp_over_en LA(LC(N1))  &kp_over_en LA(LC(N2))    &kp_over_en LC(LA(NUMBER_3))  &kp_over_en LC(LA(NUMBER_4))                    &trans        &none    &trans  &trans  &bt BT_CLR  &trans
+&trans       &bt_set_en 1  &kp LC(RIGHT)           &kp LA(LC(N1))            &kp C_VOLUME_UP               &kp C_BRI_UP                                    &out OUT_BLE  &kp F24  &trans  &trans  &soft_off   &trans
+&bootloader  &bt_set_en 0  &none                   &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN                  &kp C_BRI_DN                                    &out OUT_USB  &kp F23  &trans  &trans  &trans      &bootloader
+                           &trans                  &trans                    &trans                        &trans                        &trans    &trans  &trans        &trans   &trans  &trans
             >;
         };
 
         OS_ru {
             bindings = <
-&none        &bt_set_ru 2  &kp_over_ru LA(LC(N1))  &kp_over_ru LA(LC(N2))    &kp_over_ru LC(LA(NUMBER_3))  &kp_over_ru LC(LA(NUMBER_4))                    &trans        &studio_unlock  &trans  &trans  &bt BT_CLR  &none
-&trans       &bt_set_ru 1  &kp LC(RIGHT)           &kp LA(LC(N1))            &kp C_VOLUME_UP               &kp C_BRI_UP                                    &out OUT_BLE  &kp F24         &trans  &trans  &soft_off   &trans
-&bootloader  &bt_set_ru 0  &none                   &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN                  &kp C_BRI_DN                                    &out OUT_USB  &kp F23         &trans  &trans  &trans      &bootloader
-                           &trans                  &trans                    &trans                        &trans                        &trans    &trans  &trans        &trans          &trans  &trans
+&trans  &bt_set_ru 2  &kp_over_ru LA(LC(N1))  &kp_over_ru LA(LC(N2))  &kp_over_ru LC(LA(NUMBER_3))  &kp_over_ru LC(LA(NUMBER_4))                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt_set_ru 1  &trans                  &trans                  &trans                        &trans                                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt_set_ru 0  &trans                  &trans                  &trans                        &trans                                          &trans  &trans  &trans  &trans  &trans  &trans
+                      &trans                  &trans                  &trans                        &trans                        &trans    &trans  &trans  &trans  &trans  &trans
             >;
 
             display-name = "OS_ru";
