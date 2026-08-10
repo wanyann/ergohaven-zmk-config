@@ -1478,7 +1478,7 @@
         mkph: mkph {
             compatible = "zmk,behavior-hold-tap";
             label = "MKPH";
-            bindings = <&mktg>, <&mkp>;
+            bindings = <&free_kp>, <&mktg>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
