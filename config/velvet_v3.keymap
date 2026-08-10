@@ -781,7 +781,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
-                <&to 14>;
+                <&to 11>;
 
             label = "KP_M1_RU";
             tap-ms = <15>;
