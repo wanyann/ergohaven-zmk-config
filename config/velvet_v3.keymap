@@ -1401,7 +1401,7 @@
         nav_set: nav_set {
             compatible = "zmk,behavior-hold-tap";
             label = "NAV_SET";
-            bindings = <&to>, <&ms_set>;
+            bindings = <&mo>, <&ms_set>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1576,10 +1576,10 @@
 
         MFree_ru {
             bindings = <
-&none  &kp Q             &kp W             &mkp LCLK         &mkph LC(R) LCLK  &mt_mouseoff_ru LC(T) T                                    &kp Y                  &mkp LCLK  &kp I        &kp O        &kp P         &trans
-&none  &mml_ru LEFT_GUI  &mml_ru LALT      &mml_ru LSHFT     &mml_ru LCTRL     &mt_mouseoff_ru LC(F) G                                    &kp H                  &kp J      &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
-&none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_ru LG(V) B                                    &kp N                  &m_morph   &com_morph   &dot_morph   &slash_morph  &trans
-                         &trans            &trans            &ms_over_ru       &space_lt 17 0           &freeoff_sl 14 21    &bspc_morph  &lt 19 RU_CYRILLIC_ER  &none      &trans       &trans
+&none  &kp Q             &kp W             &mkp LCLK         &mkph LC(R) LCLK  &mt_mouseoff_ru LC(T) T                                   &kp Y                  &mkp LCLK  &kp I        &kp O        &kp P         &trans
+&none  &mml_ru LEFT_GUI  &mml_ru LALT      &mml_ru LSHFT     &mml_ru LCTRL     &mt_mouseoff_ru LC(F) G                                   &kp H                  &kp J      &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
+&none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_ru LG(V) B                                   &kp N                  &m_morph   &com_morph   &dot_morph   &slash_morph  &trans
+                         &trans            &trans            &ms_over_ru       &space_lt 17 0           &freeoff_sl 8 21    &bspc_morph  &lt 19 RU_CYRILLIC_ER  &none      &trans       &trans
             >;
 
             display-name = "MFree_ru";
@@ -1588,10 +1588,10 @@
         MMods_ru {
             display-name = "MMods_ru";
             bindings = <
-&none  &free_kp Q        &free_kp W    &e_morph_ru    &free_kp R     &free_kp T                                        &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
-&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &free_kp F                                        &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
-&none  &kp_free Z        &kp_free X    &free_kp C     &free_kp V     &free_kp B                                        &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
-                         &trans        &trans         &ms_over_ru    &space_lt 17 0  &freeoff_sl 14 21    &bspc_morph  &lt 19 RU_CYRILLIC_ER  &none     &trans       &trans
+&none  &free_kp Q        &free_kp W    &e_morph_ru    &free_kp R     &free_kp T                                       &kp Y                  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &free_kp F                                       &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
+&none  &kp_free Z        &kp_free X    &free_kp C     &free_kp V     &free_kp B                                       &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
+                         &trans        &trans         &ms_over_ru    &space_lt 17 0  &freeoff_sl 8 21    &bspc_morph  &lt 19 RU_CYRILLIC_ER  &none     &trans       &trans
             >;
         };
 
@@ -1601,7 +1601,7 @@
 &none              &kp_m1_ru RU_CYRILLIC_TSE      &kp_m1_ru RU_CYRILLIC_SOFT_SIGN  &kp_m1_ru RU_CYRILLIC_YA  &kp_m1_ru RU_CYRILLIC_A     &kp RU_CYRILLIC_YU                                            &kp RU_CYRILLIC_ZE        &kp_m1_ru RU_CYRILLIC_VE  &kp_m1_ru RU_CYRILLIC_KA  &kp_m1_ru RU_CYRILLIC_DE   &kp_m1_ru RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp_m1_ru RU_CYRILLIC_SHORT_I  &kp_m1_ru RU_CYRILLIC_I          &kp_m1_ru RU_CYRILLIC_IE  &kp_m1_ru RU_CYRILLIC_O     &kp_m1_ru RU_COMMA                                            &kp_m1_ru RU_CYRILLIC_EL  &kp_m1_ru RU_CYRILLIC_EN  &kp_m1_ru RU_CYRILLIC_TE  &kp_m1_ru RU_CYRILLIC_ES   &kp_m1_ru RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp_m1_ru RU_CYRILLIC_EF       &kp_m1_ru RU_CYRILLIC_U          &kp_m1_ru RU_CYRILLIC_HA  &kp_m1_ru RU_CYRILLIC_YERU  &kp RU_DOT                                                    &kp RU_CYRILLIC_BE        &kp_m1_ru RU_CYRILLIC_EM  &kp_m1_ru RU_CYRILLIC_PE  &kp_m1_ru RU_CYRILLIC_GHE  &kp_m1_ru RU_CYRILLIC_ZHE    &trans
-                                                  &trans                           &trans                    &none                       &nav_set 17 14      &overoff_sl 14 21    &kp_to BACKSPACE 14  &move_num 19 14           &ms_free_ru               &trans                    &trans
+                                                  &trans                           &trans                    &none                       &nav_set 17 8       &overoff_sl 10 21    &kp_to BACKSPACE 10  &move_num 19 10           &ms_free_ru               &trans                    &trans
             >;
         };
 
@@ -1611,7 +1611,7 @@
 &none              &kp_m2_ru RU_CYRILLIC_TSE      &kp_m2_ru RU_CYRILLIC_SOFT_SIGN  &kp_m2_ru RU_CYRILLIC_YA  &kp_m2_ru RU_CYRILLIC_A     &kp RU_CYRILLIC_YU                                       &kp RU_CYRILLIC_ZE        &kp_m2_ru RU_CYRILLIC_VE  &kp_m2_ru RU_CYRILLIC_KA  &kp_m2_ru RU_CYRILLIC_DE   &kp_m2_ru RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp_m2_ru RU_CYRILLIC_SHORT_I  &kp_m2_ru RU_CYRILLIC_I          &kp_m2_ru RU_CYRILLIC_IE  &kp_m2_ru RU_CYRILLIC_O     &kp_m2_ru RU_COMMA                                       &kp_m2_ru RU_CYRILLIC_EL  &kp_m2_ru RU_CYRILLIC_EN  &kp_m2_ru RU_CYRILLIC_TE  &kp_m2_ru RU_CYRILLIC_ES   &kp_m2_ru RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp_m2_ru RU_CYRILLIC_EF       &kp_m2_ru RU_CYRILLIC_U          &kp_m2_ru RU_CYRILLIC_HA  &kp_m2_ru RU_CYRILLIC_YERU  &kp RU_DOT                                               &kp RU_CYRILLIC_BE        &kp_m2_ru RU_CYRILLIC_EM  &kp_m2_ru RU_CYRILLIC_PE  &kp_m2_ru RU_CYRILLIC_GHE  &kp_m2_ru RU_CYRILLIC_ZHE    &trans
-                                                  &trans                           &trans                    &none                       &nav_set 17 14      &overoff_sl 14 21    &kp_to BSPC 14  &move_num 19 14           &ms_free_ru               &trans                    &trans
+                                                  &trans                           &trans                    &none                       &nav_set 17 8       &overoff_sl 10 21    &kp_to BSPC 10  &move_num 19 10           &ms_free_ru               &trans                    &trans
             >;
         };
 
@@ -1621,7 +1621,7 @@
 &none              &kp RU_CYRILLIC_TSE      &mt_sub_ru RU_CYRILLIC_SOFT_SIGN RU_CYRILLIC_SOFT_SIGN  &mt_sub_ru RU_CYRILLIC_YA RU_CYRILLIC_YA  &mt_sub_ru RU_CYRILLIC_A RU_CYRILLIC_A        &kp RU_CYRILLIC_YU                           &kp RU_CYRILLIC_ZE  &mt_sub_ru RU_CYRILLIC_VE RU_CYRILLIC_VE  &mt_sub_ru RU_CYRILLIC_KA RU_CYRILLIC_KA  &mt_sub_ru RU_CYRILLIC_DE RU_CYRILLIC_DE    &kp RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &mt_sub_ru RU_CYRILLIC_I RU_CYRILLIC_I                  &mt_sub_ru RU_CYRILLIC_IE RU_CYRILLIC_IE  &mt_sub_ru RU_CYRILLIC_O RU_CYRILLIC_O        &kp RU_COMMA                                 &kp RU_CYRILLIC_EL  &mt_sub_ru RU_CYRILLIC_EN RU_CYRILLIC_EN  &mt_sub_ru RU_CYRILLIC_TE RU_CYRILLIC_TE  &mt_sub_ru RU_CYRILLIC_ES RU_CYRILLIC_ES    &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp RU_CYRILLIC_EF       &mt_sub_ru RU_CYRILLIC_U RU_CYRILLIC_U                  &mt_sub_ru RU_CYRILLIC_HA RU_CYRILLIC_HA  &mt_sub_ru RU_CYRILLIC_YERU RU_CYRILLIC_YERU  &kp RU_DOT                                   &kp RU_CYRILLIC_BE  &mt_sub_ru RU_CYRILLIC_EM RU_CYRILLIC_EM  &mt_sub_ru RU_CYRILLIC_PE RU_CYRILLIC_PE  &mt_sub_ru RU_CYRILLIC_GHE RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                            &trans                                                  &trans                                    &none                                         &space_nav_to 17 2  &none    &kp_to BSPC 14  &move_num 19 14     &trans                                    &trans                                    &trans
+                                            &trans                                                  &trans                                    &none                                         &space_nav_to 17 2  &none    &kp_to BSPC 12  &move_num 19 7      &trans                                    &trans                                    &trans
             >;
         };
 
