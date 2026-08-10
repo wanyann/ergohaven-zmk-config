@@ -1473,6 +1473,16 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
         };
+
+        mkph: mkph {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MKPH";
+            bindings = <&mkp>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
     };
 
     keymap {
@@ -1525,10 +1535,10 @@
         MFree_en {
             display-name = "MFree_en";
             bindings = <
-&none  &kp Q             &kp W             &mkp MB1          &mt_free LC(R) R  &mt_mouseoff_en LC(T) T                                   &kp Y                  &mkp MB1  &kp I        &kp O        &kp P         &trans
-&none  &mml_en LEFT_GUI  &mml_en LALT      &mml_en LSHFT     &mml_en LCTRL     &mt_mouseoff_en LC(F) G                                   &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
-&none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_en LG(V) B                                   &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
-                         &trans            &trans            &ms_over_en       &space_lt 16 0           &freeoff_sl 4 20    &bspc_morph  &lt 18 RU_CYRILLIC_ER  &none     &trans       &trans
+&none  &kp Q             &kp W             &mkph MB2 MB1     &mt_free LC(R) R  &mt_mouseoff_en LC(T) T                                   &kp Y                  &mkph MB2 MB1  &kp I        &kp O        &kp P         &trans
+&none  &mml_en LEFT_GUI  &mml_en LALT      &mml_en LSHFT     &mml_en LCTRL     &mt_mouseoff_en LC(F) G                                   &kp H                  &kp J          &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
+&none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_en LG(V) B                                   &kp N                  &m_morph       &com_morph   &dot_morph   &slash_morph  &trans
+                         &trans            &trans            &ms_over_en       &space_lt 16 0           &freeoff_sl 4 20    &bspc_morph  &lt 18 RU_CYRILLIC_ER  &none          &trans       &trans
             >;
         };
 
@@ -1565,10 +1575,10 @@
 
         MFree_ru {
             bindings = <
-&none  &kp Q             &kp W             &mkp MB1          &mt_free LC(R) R  &mt_mouseoff_ru LC(T) T                                    &kp Y                  &mkp MB1  &kp I        &kp O        &kp P         &trans
-&none  &mml_ru LEFT_GUI  &mml_ru LALT      &mml_ru LSHFT     &mml_ru LCTRL     &mt_mouseoff_ru LC(F) G                                    &kp H                  &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
-&none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_ru LG(V) B                                    &kp N                  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
-                         &trans            &trans            &ms_over_ru       &space_lt 17 0           &freeoff_sl 14 21    &bspc_morph  &lt 19 RU_CYRILLIC_ER  &none     &trans       &trans
+&none  &kp Q             &kp W             &mkph MB2 MB1     &mt_free LC(R) R  &mt_mouseoff_ru LC(T) T                                    &kp Y                  &mkph MB2 MB1  &kp I        &kp O        &kp P         &trans
+&none  &mml_ru LEFT_GUI  &mml_ru LALT      &mml_ru LSHFT     &mml_ru LCTRL     &mt_mouseoff_ru LC(F) G                                    &kp H                  &kp J          &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
+&none  &mt_free LC(Z) Z  &mt_free LC(X) X  &mt_free LC(C) C  &mt_free LC(V) V  &mt_mouseoff_ru LG(V) B                                    &kp N                  &m_morph       &com_morph   &dot_morph   &slash_morph  &trans
+                         &trans            &trans            &ms_over_ru       &space_lt 17 0           &freeoff_sl 14 21    &bspc_morph  &lt 19 RU_CYRILLIC_ER  &none          &trans       &trans
             >;
 
             display-name = "MFree_ru";
