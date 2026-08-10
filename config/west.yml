@@ -2,10 +2,16 @@ manifest:
   remotes:
     - name: ergohaven
       url-base: https://github.com/wanyann
+    - name: badjeff
+      url-base: https://github.com/badjeff
   projects:
     - name: ergohaven-zmk
       remote: ergohaven
       revision: main
       import: config/west.yml
+    - name: zmk-behavior-mouse-key-toggle
+      remote: badjeff
+      revision: main
+
   self:
     path: config
