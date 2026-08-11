@@ -1614,7 +1614,7 @@
 &none              &kp_m2_ru RU_CYRILLIC_TSE      &kp_m2_ru RU_CYRILLIC_SOFT_SIGN  &kp_m2_ru RU_CYRILLIC_YA  &kp_m2_ru RU_CYRILLIC_A     &kp RU_CYRILLIC_YU                                       &kp RU_CYRILLIC_ZE        &kp_m2_ru RU_CYRILLIC_VE  &kp_m2_ru RU_CYRILLIC_KA  &kp_m2_ru RU_CYRILLIC_DE   &kp_m2_ru RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp_m2_ru RU_CYRILLIC_SHORT_I  &kp_m2_ru RU_CYRILLIC_I          &kp_m2_ru RU_CYRILLIC_IE  &kp_m2_ru RU_CYRILLIC_O     &kp_m2_ru RU_COMMA                                       &kp_m2_ru RU_CYRILLIC_EL  &kp_m2_ru RU_CYRILLIC_EN  &kp_m2_ru RU_CYRILLIC_TE  &kp_m2_ru RU_CYRILLIC_ES   &kp_m2_ru RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &none              &kp_m2_ru RU_CYRILLIC_EF       &kp_m2_ru RU_CYRILLIC_U          &kp_m2_ru RU_CYRILLIC_HA  &kp_m2_ru RU_CYRILLIC_YERU  &kp RU_DOT                                               &kp RU_CYRILLIC_BE        &kp_m2_ru RU_CYRILLIC_EM  &kp_m2_ru RU_CYRILLIC_PE  &kp_m2_ru RU_CYRILLIC_GHE  &kp_m2_ru RU_CYRILLIC_ZHE    &trans
-                                                  &trans                           &trans                    &none                       &nav_set 17 8       &overoff_sl 10 21    &kp_to BSPC 10  &move_num 19 10           &ms_free_ru               &trans                    &trans
+                                                  &trans                           &trans                    &none                       &nav_set 17 8       &overoff_sl 11 21    &kp_to BSPC 10  &move_num 19 10           &ms_free_ru               &trans                    &trans
             >;
         };
 
@@ -1661,10 +1661,10 @@
 
         Nav_en {
             bindings = <
-&trans  &trans                          &macro_unsafe_en                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                              &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                          &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &kp END     &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                    &kp LC(F8)  &kp HOME  &kp PG_DN  &kp PG_UP  &none       &trans
-                                        &trans                           &trans               &trans                    &none               &sl 20    &trans  &mo 22      &trans    &trans     &trans
+&trans  &trans                          &macro_unsafe_en                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                             &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                         &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &kp END     &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                   &kp LC(F8)  &kp HOME  &kp PG_DN  &kp PG_UP  &none       &trans
+                                        &trans                           &trans               &trans                    &none               &none    &trans  &mo 22      &trans    &trans     &trans
             >;
 
             display-name = "Nav_en";
@@ -1672,10 +1672,10 @@
 
         Nav_ru {
             bindings = <
-&trans  &trans                          &macro_unsafe_ru                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                              &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                          &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &kp END     &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                    &kp LC(F8)  &kp HOME  &kp PG_DN  &kp PG_UP  &none       &trans
-                                        &trans                           &trans               &trans                    &none               &sl 21    &trans  &mo 23      &trans    &trans     &trans
+&trans  &trans                          &macro_unsafe_ru                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                             &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                         &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &kp END     &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                   &kp LC(F8)  &kp HOME  &kp PG_DN  &kp PG_UP  &none       &trans
+                                        &trans                           &trans               &trans                    &none               &none    &trans  &mo 23      &trans    &trans     &trans
             >;
 
             display-name = "Nav_ru";
@@ -1798,6 +1798,26 @@
         Mouse_OS {
             if-layers = <14 25>;
             then-layer = <26>;
+        };
+
+        App {
+            if-layers = <2 20>;
+            then-layer = <21>;
+        };
+
+        MFree_App {
+            if-layers = <8 20>;
+            then-layer = <21>;
+        };
+
+        MOver1_App {
+            if-layers = <10 20>;
+            then-layer = <21>;
+        };
+
+        MOver2_App {
+            if-layers = <11 20>;
+            then-layer = <21>;
         };
     };
 };
