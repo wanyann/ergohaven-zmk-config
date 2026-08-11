@@ -1849,5 +1849,15 @@
             if-layers = <16 7>;
             then-layer = <17>;
         };
+
+        MOver1_OS {
+            if-layers = <25 10>;
+            then-layer = <26>;
+        };
+
+        MOver2_OS {
+            if-layers = <25 11>;
+            then-layer = <26>;
+        };
     };
 };
