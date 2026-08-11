@@ -1704,10 +1704,10 @@
 
         App {
             bindings = <
-&trans                        &kp LA(LC(LS(P)))  &vm_en LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                           &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
-&kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                           &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
-&trans                        &kp LS(LC(LA(Z)))  &kp LS(LA(LC(X)))                       &kp LS(LA(LC(C)))  &kp LS(LC(LG(V)))  &kp LS(LA(LC(B)))                           &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
-                                                 &trans                                  &trans             &trans             &none              &sl 20    &kp LA(ENTER)  &alt_spc_en        &trans             &trans                 &trans
+&trans                        &kp LA(LC(LS(P)))                    &vm_en LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &mt LS(LA(LC(LG(E)))) LA(LS(LC(E)))  &mt LS(LA(LC(LG(R)))) LS(LA(LC(R)))  &kp LS(LA(LC(T)))                                             &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
+&kp LS(LA(LC(LEFT_BRACKET)))  &mt LS(LA(LC(LG(A)))) LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &mt LS(LA(LC(LG(D)))) LC(LA(LS(D)))  &kp LS(LA(LC(F)))                    &mt LS(LA(LC(LG(G)))) LA(LS(LC(G)))                           &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
+&trans                        &kp LS(LC(LA(Z)))                    &mt LS(LA(LC(LG(X)))) LA(LS(LC(X)))     &kp LS(LA(LC(C)))                    &kp LS(LC(LG(V)))                    &kp LS(LA(LC(B)))                                             &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
+                                                                   &trans                                  &trans                               &trans                               &none                                &sl 20    &kp LA(ENTER)  &alt_spc_en        &trans             &trans                 &trans
             >;
 
             display-name = "App_en";
