@@ -1638,7 +1638,7 @@
             >;
         };
 
-        Mod_en {
+        Mod {
             display-name = "Mod_en";
             bindings = <
 &trans  &kp Q             &kp W             &kp E              &kp R         &kp T                                  &kp Y            &kp U              &kp I              &kp O             &kp P                &trans
@@ -1659,7 +1659,7 @@
             display-name = "Mod_ru";
         };
 
-        Nav_en {
+        Nav {
             bindings = <
 &trans  &trans                          &macro_unsafe_en                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                             &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
 &trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                         &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &kp END     &trans
@@ -1702,7 +1702,7 @@
             >;
         };
 
-        App_en {
+        App {
             bindings = <
 &trans                        &kp LA(LC(LS(P)))  &vm_en LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &kp LS(LA(LC(E)))  &kp LS(LA(LC(R)))  &kp LS(LA(LC(T)))                           &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
 &kp LS(LA(LC(LEFT_BRACKET)))  &kp LS(LA(LC(A)))  &kp LS(LA(LC(S)))                       &kp LS(LA(LC(D)))  &kp LS(LA(LC(F)))  &kp LS(LA(LC(G)))                           &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
@@ -1724,7 +1724,7 @@
             display-name = "App_ru";
         };
 
-        Sym_en {
+        Sym {
             bindings = <
 &trans  &trans  &none                 &kp AMPERSAND  &kp CARET              &trans                         &trans            &kp LEFT_BRACKET  &kp ASTERISK  &kp RIGHT_BRACKET  &trans  &trans
 &trans  &trans  &kp LEFT_PARENTHESIS  &kp AT         &kp RIGHT_PARENTHESIS  &kp PERCENT                    &ru_kp RU_NUMERO  &kp LEFT_BRACE    &kp DOLLAR    &kp RIGHT_BRACE    &trans  &trans
@@ -1790,13 +1790,13 @@
             then-layer = <19>;
         };
 
-        Mouse_Num {
-            if-layers = <14 18>;
+        MFree_Num {
+            if-layers = <18 8>;
             then-layer = <19>;
         };
 
-        Mouse_OS {
-            if-layers = <14 25>;
+        MFree_OS {
+            if-layers = <25 8>;
             then-layer = <26>;
         };
 
@@ -1818,6 +1818,11 @@
         MOver2_App {
             if-layers = <11 20>;
             then-layer = <21>;
+        };
+
+        MOver1_Num {
+            if-layers = <10 18>;
+            then-layer = <19>;
         };
     };
 };
