@@ -1824,5 +1824,30 @@
             if-layers = <10 18>;
             then-layer = <19>;
         };
+
+        MOver2_Num {
+            if-layers = <18 11>;
+            then-layer = <19>;
+        };
+
+        Nav {
+            if-layers = <2 16>;
+            then-layer = <17>;
+        };
+
+        MFree_Nav {
+            if-layers = <16 8>;
+            then-layer = <17>;
+        };
+
+        MOver1_Nav {
+            if-layers = <16 10>;
+            then-layer = <17>;
+        };
+
+        MOver2_ru {
+            if-layers = <16 7>;
+            then-layer = <17>;
+        };
     };
 };
