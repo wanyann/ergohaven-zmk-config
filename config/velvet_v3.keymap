@@ -1549,10 +1549,10 @@
         MMods_en {
             display-name = "MMods_en";
             bindings = <
-&none  &free_kp Q        &free_kp W    &e_morph_en    &free_kp R     &free_kp T                                       &free_kp Y             &kp U     &kp I        &kp O        &kp P         &trans
-&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &free_kp F                                       &kp H                  &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
-&none  &kp_free Z        &kp_free X    &kp_free C     &kp_free V     &kp_free B                                       &free_kp N             &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
-                         &trans        &trans         &ms_over_en    &space_lt 16 0  &freeoff_sl 4 20    &bspc_morph  &lt 18 RU_CYRILLIC_ER  &none     &trans       &trans
+&none  &free_kp Q        &free_kp W    &e_morph_en    &free_kp R     &free_kp T                    &free_kp Y  &kp U     &kp I        &kp O        &kp P         &trans
+&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &free_kp F                    &kp H       &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
+&none  &kp_free Z        &kp_free X    &kp_free C     &kp_free V     &kp_free B                    &free_kp N  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
+                         &trans        &trans         &trans         &trans      &trans    &trans  &trans      &trans    &trans       &trans
             >;
         };
 
