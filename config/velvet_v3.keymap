@@ -2024,5 +2024,10 @@
             if-layers = <27 13>;
             then-layer = <28>;
         };
+
+        Mouse_ru {
+            if-layers = <5 2>;
+            then-layer = <10>;
+        };
     };
 };
