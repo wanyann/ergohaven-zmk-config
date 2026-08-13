@@ -2088,13 +2088,9 @@
     track-remainders;          // Track fractional movements
 };
 
-&msc_input_listener {
-    input-processors = <&zip_xy_scaler 4 1>;
-}
-
 &mmv_input_listener {
     input-processors = <&pointer_accel>;
-}
+};
 
 &msc_input_listener {
     faster {
