@@ -2051,6 +2051,7 @@
         };
     };
 };
+
 &msc_input_listener {
     faster {
         layers = <30>;
@@ -2060,7 +2061,7 @@
         layers = <29>;
         input-processors = <&zip_xy_scaler 1 2>;
     };
-}
+};
 
 &mmv_input_listener {
     faster {
@@ -2071,4 +2072,4 @@
         layers = <29>;
         input-processors = <&zip_xy_scaler 1 2>;
     };
-}
+};
