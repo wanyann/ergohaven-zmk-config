@@ -1,6 +1,8 @@
 manifest:
   remotes:
     - name: ergohaven
+      url-base: https://github.com/ergohaven
+    - name: wanyann
       url-base: https://github.com/wanyann
     - name: oleksandrmaslov
       url-base: https://github.com/oleksandrmaslov  
@@ -8,14 +10,14 @@ manifest:
       url-base: https://github.com/amgskobo
   projects:
     - name: ergohaven-zmk
-      remote: ergohaven
+      remote: wanyann
       revision: main
       import: config/west.yml
     - name: zmk-pointing-acceleration
       remote: oleksandrmaslov
       revision: main
     - name: zmk-input-inertia
-      remote: amgskobo
+      remote: ergohaven
       revision: main
   self:
     path: config
