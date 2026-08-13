@@ -894,18 +894,18 @@
             tap-ms = <0>;
         };
 
-        moff_mkp_ru: moff_mkp_ru {
+        moff_kp_ru: moff_kp_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&layer_off 10 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MOFF_MKP_RU";
+            label = "MOFF_KP_RU";
         };
 
-        moff_mkp_en: moff_mkp_en {
+        moff_kp_en: moff_kp_en {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&layer_off 5 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MOFF_MKP_EN";
+            label = "MOFF_KP_EN";
         };
     };
 
@@ -1506,7 +1506,7 @@
         mkpoff_hold_ru: mkpoff_hold_ru {
             compatible = "zmk,behavior-hold-tap";
             label = "MKPOFF_HOLD_RU";
-            bindings = <&kp>, <&moff_mkp_ru>;
+            bindings = <&moff_kp_ru>, <&mkp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1516,11 +1516,91 @@
         mkpoff_hold_en: mkpoff_hold_en {
             compatible = "zmk,behavior-hold-tap";
             label = "MKPOFF_HOLD_EN";
-            bindings = <&kp>, <&moff_mkp_en>;
+            bindings = <&moff_kp_en>, <&mkp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+        };
+
+        moff_mt_en: moff_mt_en {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOFF_MT_EN";
+            bindings = <&moff_kp_en>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        moff_mt_ru: moff_mt_ru {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOFF_MT_RU";
+            bindings = <&moff_kp_ru>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+        };
+
+        mb1_morph_ru: mb1_morph_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MB1_MORPH_RU";
+            bindings = <&mkp LCLK>, <&moff_kp_ru E>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        mb1_morph_en: mb1_morph_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MB1_MORPH_EN";
+            bindings = <&mkp LCLK>, <&moff_kp_ru E>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        k_mmorph_en: k_mmorph_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "K_MMORPH_EN";
+            bindings = <&mmv MOVE_DOWN>, <&moff_kp_en K>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        k_mmorph_ru: k_mmorph_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "K_MMORPH_RU";
+            bindings = <&mmv MOVE_DOWN>, <&moff_kp_ru K>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        l_mmorph_en: l_mmorph_en {
+            compatible = "zmk,behavior-mod-morph";
+            label = "L_MMORPH_EN";
+            bindings = <&mmv MOVE_DOWN>, <&moff_kp_en L>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
+        };
+
+        l_mmorph_ru: l_mmorph_ru {
+            compatible = "zmk,behavior-mod-morph";
+            label = "L_MMORPH_RU";
+            bindings = <&mmv MOVE_DOWN>, <&moff_kp_ru L>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
     };
 
@@ -1583,10 +1663,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans  &trans  &mkp LCLK  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans     &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans        &mb1_morph_en   &mkp_hold LC(R) RCLK  &mkpoff_hold_en LC(T) MCLK                    &trans  &mkp LCLK       &mmv MOVE_UP  &trans        &trans  &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL             &mkpoff_hold_en LC(F) MCLK                    &trans  &mmv MOVE_LEFT  &k_mmorph_en  &l_mmorph_en  &trans  &trans
+&trans  &trans        &trans        &trans          &trans                &moff_mt_en LG(V) B                           &trans  &trans          &trans        &trans        &trans  &trans
+                      &trans        &trans          &trans                &trans                      &trans    &trans  &trans  &trans          &trans        &trans
             >;
         };
 
