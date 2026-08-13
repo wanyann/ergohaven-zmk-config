@@ -2072,8 +2072,18 @@
     };
 };
 
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    min-factor = <900>;        // 0.9x minimum
+    max-factor = <2000>;       // 2.0x maximum
+    speed-threshold = <1500>;  // Start accelerating later
+    speed-max = <5000>;         // 6000 counts/sec for max accel
+    acceleration-exponent = <1>; // Linear acceleration
+    track-remainders;          // Track fractional movements
+};
+
 &mmv {
-    acceleration-exponent = <1>;
+    input-processors = <&pointer_accel>;
 };
 
 &msc {
