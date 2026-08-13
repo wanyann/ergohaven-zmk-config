@@ -2072,6 +2072,14 @@
     };
 };
 
+&mmv {
+    acceleration-exponent = <1>;
+};
+
+&msc {
+    acceleration-exponent = <0>;
+};
+
 &msc_input_listener {
     faster {
         layers = <30>;
