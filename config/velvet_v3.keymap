@@ -14,7 +14,7 @@
 
 #include <behaviors/input_gestures_accel.dtsi>
 
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 35
 
 &mt { flavor = "tap-preferred"; };
 
