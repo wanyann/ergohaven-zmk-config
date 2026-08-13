@@ -1605,7 +1605,7 @@
         mright_morph_en: mright_morph_en {
             compatible = "zmk,behavior-mod-morph";
             label = "MRIGHT_MORPH_EN";
-            bindings = <&mmv MOVE_DOWN>, <&moff_kp_en L>;
+            bindings = <&mmv MOVE_RIGHT>, <&moff_kp_en L>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -1615,7 +1615,7 @@
         mright_morph_ru: mright_morph_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "MRIGHT_MORPH_RU";
-            bindings = <&mmv MOVE_DOWN>, <&moff_kp_ru L>;
+            bindings = <&mmv MOVE_RIGHT>, <&moff_kp_ru L>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
