@@ -1746,10 +1746,10 @@
 
         Mouse_ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &mkpoff_hold_ru LC(T) MCLK                    &trans  &trans  &trans           &trans            &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &mkpoff_hold_ru LC(F) MCLK                    &trans  &trans  &mdown_morph_ru  &mright_morph_ru  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &moff_mt_ru LG(V) B                           &trans  &trans  &trans           &trans            &trans  &trans
+                &trans  &trans  &trans  &trans                      &trans    &trans  &trans  &trans  &trans           &trans
             >;
         };
 
