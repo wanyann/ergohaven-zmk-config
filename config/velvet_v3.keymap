@@ -2088,6 +2088,7 @@
 
 &msc {
     acceleration-exponent = <0>;
+    input-processors = <&zip_xy_scaler 4 1>;
 };
 
 &msc_input_listener {
