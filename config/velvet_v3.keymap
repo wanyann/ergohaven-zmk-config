@@ -2050,4 +2050,26 @@
             then-layer = <10>;
         };
     };
+
+    &msc_input_listener {
+            faster {
+                layers = <30>;
+                input-processors = <&zip_xy_scaler 3 2>;
+            };
+            slower {
+                layers = <29>;
+                input-processors = <&zip_xy_scaler 1 2>;
+            };
+    }
+
+    &mmv_input_listener {
+            faster {
+                layers = <30>;
+                input-processors = <&zip_xy_scaler 3 2>;
+            };
+            slower {
+                layers = <29>;
+                input-processors = <&zip_xy_scaler 1 2>;
+            };
+    }
 };
