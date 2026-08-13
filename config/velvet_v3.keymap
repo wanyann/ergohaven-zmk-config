@@ -907,6 +907,20 @@
             bindings = <&layer_off 5 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOFF_KP_EN";
         };
+
+        cmd_scroll: cmd_scroll {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI &macro_param_1to1 &msc MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &msc MACRO_PLACEHOLDER &kp LEFT_GUI>;
+
+            label = "CMD_SCROLL";
+            wait-ms = <0>;
+        };
     };
 
     behaviors {
@@ -1563,9 +1577,9 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        k_mmorph_en: k_mmorph_en {
+        mdown_morph_en: mdown_morph_en {
             compatible = "zmk,behavior-mod-morph";
-            label = "K_MMORPH_EN";
+            label = "MDOWN_MORPH_EN";
             bindings = <&mmv MOVE_DOWN>, <&moff_kp_en K>;
 
             #binding-cells = <0>;
@@ -1573,9 +1587,9 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        k_mmorph_ru: k_mmorph_ru {
+        mdown_morph_ru: mdown_morph_ru {
             compatible = "zmk,behavior-mod-morph";
-            label = "K_MMORPH_RU";
+            label = "MDOWN_MORPH_RU";
             bindings = <&mmv MOVE_DOWN>, <&moff_kp_ru K>;
 
             #binding-cells = <0>;
@@ -1583,9 +1597,9 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        l_mmorph_en: l_mmorph_en {
+        mright_morph_en: mright_morph_en {
             compatible = "zmk,behavior-mod-morph";
-            label = "L_MMORPH_EN";
+            label = "MRIGHT_MORPH_EN";
             bindings = <&mmv MOVE_DOWN>, <&moff_kp_en L>;
 
             #binding-cells = <0>;
@@ -1593,14 +1607,32 @@
             keep-mods = <(MOD_LCTL)>;
         };
 
-        l_mmorph_ru: l_mmorph_ru {
+        mright_morph_ru: mright_morph_ru {
             compatible = "zmk,behavior-mod-morph";
-            label = "L_MMORPH_RU";
+            label = "MRIGHT_MORPH_RU";
             bindings = <&mmv MOVE_DOWN>, <&moff_kp_ru L>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
             keep-mods = <(MOD_LCTL)>;
+        };
+
+        scdown_morph: scdown_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCDOWN_MORPH";
+            bindings = <&msc SCRL_DOWN>, <&cmd_scroll SCRL_DOWN>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+        };
+
+        scup_morph: scup_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SCUP_MORPH";
+            bindings = <&msc SCRL_UP>, <&cmd_scroll SCRL_UP>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
         };
     };
 
@@ -1663,10 +1695,10 @@
 
         Mouse {
             bindings = <
-&trans  &trans        &trans        &mb1_morph_en   &mkp_hold LC(R) RCLK  &mkpoff_hold_en LC(T) MCLK                    &trans  &mkp LCLK       &mmv MOVE_UP  &trans        &trans  &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL             &mkpoff_hold_en LC(F) MCLK                    &trans  &mmv MOVE_LEFT  &k_mmorph_en  &l_mmorph_en  &trans  &trans
-&trans  &trans        &trans        &trans          &trans                &moff_mt_en LG(V) B                           &trans  &trans          &trans        &trans        &trans  &trans
-                      &trans        &trans          &trans                &trans                      &trans    &trans  &trans  &trans          &trans        &trans
+&trans  &trans        &trans        &mb1_morph_en   &mkp_hold LC(R) RCLK  &mkpoff_hold_en LC(T) MCLK                    &trans  &mkp LCLK       &mmv MOVE_UP     &trans            &trans           &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL             &mkpoff_hold_en LC(F) MCLK                    &trans  &mmv MOVE_LEFT  &mdown_morph_en  &mright_morph_en  &trans           &trans
+&trans  &trans        &trans        &trans          &trans                &moff_mt_en LG(V) B                           &trans  &msc SCRL_LEFT  &scdown_morph    &scup_morph       &msc SCRL_RIGHT  &trans
+                      &trans        &trans          &trans                &trans                      &trans    &trans  &trans  &trans          &trans           &trans
             >;
         };
 
