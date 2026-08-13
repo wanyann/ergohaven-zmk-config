@@ -634,15 +634,13 @@
             wait-ms = <0>;
         };
 
-        ms_over_ru: macro_mless_over {
+        ms_over_ru: ms_over_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&mouse_off &overlay>,
-                <&macro_tap_time 1>,
-                <&layer_on 7>;
+            bindings = <&overlay>, <&macro_tap_time 1>, <&layer_on 7>;
 
-            label = "MACRO_MLESS_OVER";
+            label = "MS_OVER_RU";
+            wait-ms = <0>;
         };
 
         ms_free_en: ms_free_en {
@@ -657,12 +655,10 @@
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&mouse_off &overlay>,
-                <&macro_tap_time 1>,
-                <&layer_on 7>;
+            bindings = <&overlay>, <&macro_tap_time 1>, <&layer_on 7>;
 
             label = "ms_over_en";
+            wait-ms = <0>;
         };
 
         kp_m2_ru: kp_m2_ru {
