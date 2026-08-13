@@ -2,10 +2,15 @@ manifest:
   remotes:
     - name: ergohaven
       url-base: https://github.com/wanyann
+    - name: oleksandrmaslov
+      url-base: https://github.com/oleksandrmaslov  
   projects:
     - name: ergohaven-zmk
       remote: ergohaven
       revision: main
       import: config/west.yml
+    - name: zmk-pointing-acceleration
+      remote: oleksandrmaslov
+      revision: main
   self:
     path: config
