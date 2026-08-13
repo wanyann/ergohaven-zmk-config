@@ -625,9 +625,10 @@
         ms_free_ru: macro_mless_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &free>, <&macro_tap_time 1>, <&to 9>;
+            bindings = <&mouse_off>, <&macro_tap_time 1>, <&layer_on 5>;
 
             label = "MACRO_MLESS_FREE";
+            wait-ms = <0>;
         };
 
         ms_over_ru: macro_mless_over {
@@ -641,9 +642,10 @@
         ms_free_en: ms_free_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &free>, <&macro_tap_time 1>, <&to 4>;
+            bindings = <&mouse_off>, <&macro_tap_time 1>, <&layer_on 5>;
 
             label = "ms_free_en";
+            wait-ms = <0>;
         };
 
         ms_over_en: ms_over_en {
