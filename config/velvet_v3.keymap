@@ -637,7 +637,10 @@
         ms_over_ru: macro_mless_over {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &overlay>, <&macro_tap_time 1>, <&to 12>;
+            bindings =
+                <&mouse_off &overlay>,
+                <&macro_tap_time 1>,
+                <&layer_on 7>;
 
             label = "MACRO_MLESS_OVER";
         };
@@ -654,7 +657,10 @@
         ms_over_en: ms_over_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&mouse_off &overlay>, <&macro_tap_time 1>, <&to 7>;
+            bindings =
+                <&mouse_off &overlay>,
+                <&macro_tap_time 1>,
+                <&layer_on 7>;
 
             label = "ms_over_en";
         };
@@ -665,7 +671,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
-                <&to 9>;
+                <&layer_off 8 &layer_on 5>;
 
             label = "kp_m2_ru";
             tap-ms = <15>;
@@ -696,7 +702,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
-                <&to 4>;
+                <&layer_off 8 &layer_on 5>;
 
             label = "KP_M2_EN";
             tap-ms = <15>;
@@ -789,7 +795,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
-                <&to 13>;
+                <&layer_off 7 &layer_on 8>;
 
             label = "KP_M1_RU";
             tap-ms = <15>;
@@ -802,7 +808,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
-                <&to 8>;
+                <&layer_off 7 &layer_on 8>;
 
             label = "KP_M1_EN";
             tap-ms = <15>;
