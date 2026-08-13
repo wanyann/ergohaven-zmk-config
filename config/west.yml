@@ -17,7 +17,7 @@ manifest:
       remote: oleksandrmaslov
       revision: main
     - name: zmk-input-inertia
-      remote: ergohaven
+      remote: wanyann
       revision: main
   self:
     path: config
