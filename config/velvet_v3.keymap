@@ -12,8 +12,9 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
-
 #include <behaviors/input_gestures_accel.dtsi>
+
+#define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 
 &mt { flavor = "tap-preferred"; };
 
