@@ -2112,7 +2112,7 @@
 
     // --- Mouse Movement Settings ---
 
-    move-decay-factor-int = <70>;       // Decay rate (0-100)
+    move-decay-factor-int = <80>;       // Decay rate (0-100)
     move-report-interval-ms = <30>;     // Report interval (ms)
     move-threshold-start = <1>;        // Start threshold (pix/report)
     move-threshold-stop = <1>;          // Stop threshold (pix/report)
@@ -2123,7 +2123,7 @@
 &msc_input_listener {
     faster {
         layers = <30>;
-        input-processors = <&zip_xy_scaler 3 2>;
+        input-processors = <&zip_xy_scaler 2 1>;
     };
 
     slower {
@@ -2135,7 +2135,7 @@
 &mmv_input_listener {
     faster {
         layers = <30>;
-        input-processors = <&zip_xy_scaler 3 2>;
+        input-processors = <&zip_xy_scaler 2 1>;
     };
 
     slower {
