@@ -959,7 +959,7 @@
                 <&macro_param_1to1 &mmv MACRO_PLACEHOLDER>;
 
             label = "MMVL";
-            wait-ms = <50>;
+            wait-ms = <100>;
         };
     };
 
