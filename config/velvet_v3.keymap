@@ -13,7 +13,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 35
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 200
 
 &mt { flavor = "tap-preferred"; };
 
@@ -2134,12 +2134,12 @@
 
 &msc {
     acceleration-exponent = <0>;
-    time-to-max-speed-ms = <100>;
+    time-to-max-speed-ms = <50>;
 };
 
 &mmv {
     acceleration-exponent = <0>;
-    time-to-max-speed-ms = <100>;
+    time-to-max-speed-ms = <50>;
 };
 
 &mmv_input_listener { input-processors = <&zip_inertia>; };
