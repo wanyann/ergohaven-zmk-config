@@ -925,10 +925,10 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&kp LEFT_GUI &macro_param_1to1 &msc MACRO_PLACEHOLDER>,
+                <&kp LEFT_GUI &macro_param_1to1 &mscl MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_param_1to1 &msc MACRO_PLACEHOLDER &kp LEFT_GUI>;
+                <&macro_param_1to1 &mscl MACRO_PLACEHOLDER &kp LEFT_GUI>;
 
             label = "CMD_SCROLL";
             wait-ms = <0>;
@@ -959,6 +959,20 @@
                 <&macro_param_1to1 &mmv MACRO_PLACEHOLDER>;
 
             label = "MMVL";
+            wait-ms = <100>;
+        };
+
+        mscl: mscl {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &msc MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &msc MACRO_PLACEHOLDER>;
+
+            label = "MSCL";
             wait-ms = <100>;
         };
     };
@@ -1658,7 +1672,7 @@
         scup_morph: scup_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "SCUP_MORPH";
-            bindings = <&msc SCRL_UP>, <&cmd_scroll SCRL_UP>;
+            bindings = <&mscl SCRL_UP>, <&cmd_scroll SCRL_UP>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -2116,16 +2130,6 @@
     move-report-interval-ms = <30>;     // Report interval (ms)
     move-threshold-start = <1>;        // Start threshold (pix/report)
     move-threshold-stop = <1>;          // Stop threshold (pix/report)
-};
-
-&msc {
-    acceleration-exponent = <0>;
-    time-to-max-speed-ms = <0>;
-};
-
-&mmv {
-    acceleration-exponent = <0>;
-    time-to-max-speed-ms = <0>;
 };
 
 &mmv_input_listener { input-processors = <&zip_inertia>; };
