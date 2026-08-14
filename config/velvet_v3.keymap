@@ -959,7 +959,7 @@
                 <&macro_param_1to1 &mmv MACRO_PLACEHOLDER>;
 
             label = "MMVL";
-            wait-ms = <100>;
+            wait-ms = <150>;
         };
 
         mscl: mscl {
@@ -973,7 +973,7 @@
                 <&macro_param_1to1 &msc MACRO_PLACEHOLDER>;
 
             label = "MSCL";
-            wait-ms = <100>;
+            wait-ms = <150>;
         };
     };
 
