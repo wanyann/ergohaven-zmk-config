@@ -2096,8 +2096,8 @@
 
     // --- Mouse Movement Settings ---
     move-decay-factor-int = <90>;       // Decay rate (0-100)
-    move-report-interval-ms = <35>;     // Report interval (ms)
-    move-threshold-start = <15>;        // Start threshold (pix/report)
+    move-report-interval-ms = <4>;     // Report interval (ms)
+    move-threshold-start = <5>;        // Start threshold (pix/report)
     move-threshold-stop = <1>;          // Stop threshold (pix/report)
 };
 
