@@ -16,6 +16,7 @@
 #include <zmk-input-inertia/input/processor/input_inertia.dtsi>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 35
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 600
 
 &mt { flavor = "tap-preferred"; };
 
@@ -2081,7 +2082,7 @@
 
 &pointer_accel {
     input-type = <INPUT_EV_REL>;
-    min-factor = <800>;        // 0.9x minimum
+    min-factor = <1000>;        // 0.9x minimum
     max-factor = <1600>;       // 2.0x maximum
     speed-threshold = <1500>;  // Start accelerating later
     speed-max = <5000>;         // 6000 counts/sec for max accel
