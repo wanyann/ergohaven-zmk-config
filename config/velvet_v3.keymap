@@ -13,7 +13,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 225
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 200
 
 &mt { flavor = "tap-preferred"; };
 
@@ -959,7 +959,7 @@
                 <&macro_param_1to1 &mmv MACRO_PLACEHOLDER>;
 
             label = "MMVL";
-            wait-ms = <100>;
+            wait-ms = <150>;
         };
 
         mscl: mscl {
