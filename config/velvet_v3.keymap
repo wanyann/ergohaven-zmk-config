@@ -16,7 +16,7 @@
 #include <zmk-input-inertia/input/processor/input_inertia.dtsi>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 35
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 900
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500
 
 &mt { flavor = "tap-preferred"; };
 
