@@ -2111,7 +2111,7 @@
 };
 
 &mmv_input_listener {
-    input-processors = <&pointer_accel &zip_inertia>; 
+    input-processors = <&zip_inertia>; 
 };
 
 &msc_input_listener {
