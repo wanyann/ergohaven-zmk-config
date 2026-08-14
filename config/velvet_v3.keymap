@@ -959,7 +959,7 @@
                 <&macro_param_1to1 &mmv MACRO_PLACEHOLDER>;
 
             label = "MMVL";
-            wait-ms = <300>;
+            wait-ms = <150>;
         };
 
         mscl: mscl {
@@ -973,7 +973,7 @@
                 <&macro_param_1to1 &msc MACRO_PLACEHOLDER>;
 
             label = "MSCL";
-            wait-ms = <300>;
+            wait-ms = <150>;
         };
     };
 
@@ -1663,7 +1663,7 @@
         scdown_morph: scdown_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "SCDOWN_MORPH";
-            bindings = <&msc SCRL_DOWN>, <&cmd_scroll SCRL_DOWN>;
+            bindings = <&mscl SCRL_DOWN>, <&cmd_scroll SCRL_DOWN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
