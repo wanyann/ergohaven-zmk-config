@@ -2093,11 +2093,11 @@
 &zip_inertia {
     // Initiation delay (Wait time after input stops before starting inertia)
     // Recommended: AT LEAST 2x your sensor's polling interval (e.g., 30ms for 15ms sensor).
-    trigger-ms = <10>;
+    trigger-ms = <3>;
 
     // --- Mouse Movement Settings ---
-    move-decay-factor-int = <82>;       // Decay rate (0-100)
-    move-report-interval-ms = <20>;     // Report interval (ms)
+    move-decay-factor-int = <90>;       // Decay rate (0-100)
+    move-report-interval-ms = <35>;     // Report interval (ms)
     move-threshold-start = <2>;        // Start threshold (pix/report)
     move-threshold-stop = <1>;          // Stop threshold (pix/report)
 };
