@@ -2159,11 +2159,11 @@
 &mmv_input_listener {
     faster {
         layers = <30>;
-        input-processors = <&zip_xy_scaler 3 1>;
+        input-processors = <&zip_xy_scaler 3 1>, <&zip_inertia>;
     };
 
     slower {
         layers = <29>;
-        input-processors = <&zip_xy_scaler 1 2>;
+        input-processors = <&zip_xy_scaler 1 2>, <&zip_inertia>;
     };
 };
