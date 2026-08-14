@@ -2106,6 +2106,10 @@
     acceleration-exponent = <0>; 
 };
 
+&msc {
+    acceleration-exponent = <0>; 
+};
+
 &mmv_input_listener {
     input-processors = <&pointer_accel &zip_inertia>; 
 };
