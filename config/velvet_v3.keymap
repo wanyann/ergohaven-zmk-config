@@ -1,19 +1,16 @@
 #include "keys_ru.h"
-
 #include <dt-bindings/zmk/behaviors.h>
-#include <dt-bindings/zmk/bt.h>
-#include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/input_transform.h>
-
-#include <behaviors.dtsi>
 #include <behaviors/mouse_key_toggle.dtsi>
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors/input_gestures_accel.dtsi>
-
 #include <zmk-input-inertia/input/processor/input_inertia.dtsi>
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
+#include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 35
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 600
@@ -936,6 +933,20 @@
             label = "CMD_SCROLL";
             wait-ms = <0>;
         };
+
+        mkpl: mkpl {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &mkp MACRO_PLACEHOLDER>;
+
+            label = "MKPL";
+            wait-ms = <50>;
+        };
     };
 
     behaviors {
@@ -1572,20 +1583,10 @@
             flavor = "tap-preferred";
         };
 
-        mb1_morph_ru: mb1_morph_ru {
+        mb1_morph: mb1_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "MB1_MORPH_RU";
-            bindings = <&mkp LCLK>, <&moff_kp_ru E>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-
-        mb1_morph_en: mb1_morph_en {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MB1_MORPH_EN";
-            bindings = <&mkp LCLK>, <&moff_kp_ru E>;
+            label = "MB1_MORPH";
+            bindings = <&mkpl LCLK>, <&moff_kp_ru E>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -1710,7 +1711,7 @@
 
         Mouse {
             bindings = <
-&trans  &mo 29        &mo 30        &mb1_morph_en   &mkp_hold LC(R) RCLK  &mkpoff_hold_en LC(T) MCLK                    &trans  &mkp LCLK       &mmv MOVE_UP     &trans            &trans           &trans
+&trans  &mo 29        &mo 30        &mb1_morph      &mkp_hold LC(R) RCLK  &mkpoff_hold_en LC(T) MCLK                    &trans  &mkp LCLK       &mmv MOVE_UP     &trans            &trans           &trans
 &trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL             &mkpoff_hold_en LC(F) MCLK                    &trans  &mmv MOVE_LEFT  &mdown_morph_en  &mright_morph_en  &trans           &trans
 &trans  &trans        &trans        &trans          &trans                &moff_mt_en LG(V) B                           &trans  &msc SCRL_LEFT  &scdown_morph    &scup_morph       &msc SCRL_RIGHT  &trans
                       &trans        &trans          &ms_over_en           &space_lt 18 0              &trans    &trans  &trans  &none           &trans           &trans
@@ -2093,26 +2094,18 @@
 &zip_inertia {
     // Initiation delay (Wait time after input stops before starting inertia)
     // Recommended: AT LEAST 2x your sensor's polling interval (e.g., 30ms for 15ms sensor).
+
     trigger-ms = <3>;
 
     // --- Mouse Movement Settings ---
+
     move-decay-factor-int = <70>;       // Decay rate (0-100)
     move-report-interval-ms = <30>;     // Report interval (ms)
     move-threshold-start = <1>;        // Start threshold (pix/report)
     move-threshold-stop = <1>;          // Stop threshold (pix/report)
 };
 
-&mmv {
-    acceleration-exponent = <0>; 
-};
-
-&msc {
-    acceleration-exponent = <0>; 
-};
-
-&mmv_input_listener {
-    input-processors = <&zip_inertia>; 
-};
+&mmv_input_listener { input-processors = <&zip_inertia>; };
 
 &msc_input_listener {
     faster {
