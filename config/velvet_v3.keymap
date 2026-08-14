@@ -2118,6 +2118,14 @@
     move-threshold-stop = <1>;          // Stop threshold (pix/report)
 };
 
+&msc {
+    acceleration-exponent = <0>;
+};
+
+&mmv {
+    acceleration-exponent = <0>;
+};
+
 &mmv_input_listener { input-processors = <&zip_inertia>; };
 
 &msc_input_listener {
