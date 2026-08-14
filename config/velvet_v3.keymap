@@ -959,7 +959,7 @@
                 <&macro_param_1to1 &mmv MACRO_PLACEHOLDER>;
 
             label = "MMVL";
-            wait-ms = <150>;
+            wait-ms = <100>;
         };
 
         mscl: mscl {
@@ -973,7 +973,7 @@
                 <&macro_param_1to1 &msc MACRO_PLACEHOLDER>;
 
             label = "MSCL";
-            wait-ms = <150>;
+            wait-ms = <100>;
         };
     };
 
@@ -1623,7 +1623,7 @@
         mdown_morph_en: mdown_morph_en {
             compatible = "zmk,behavior-mod-morph";
             label = "MDOWN_MORPH_EN";
-            bindings = <&mmv MOVE_DOWN>, <&moff_kp_en K>;
+            bindings = <&mmvl MOVE_DOWN>, <&moff_kp_en K>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -1633,7 +1633,7 @@
         mdown_morph_ru: mdown_morph_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "MDOWN_MORPH_RU";
-            bindings = <&mmv MOVE_DOWN>, <&moff_kp_ru K>;
+            bindings = <&mmvl MOVE_DOWN>, <&moff_kp_ru K>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -1653,7 +1653,7 @@
         mright_morph_ru: mright_morph_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "MRIGHT_MORPH_RU";
-            bindings = <&mmv MOVE_RIGHT>, <&moff_kp_ru L>;
+            bindings = <&mmvl MOVE_RIGHT>, <&moff_kp_ru L>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -1738,9 +1738,9 @@
 
         Mouse {
             bindings = <
-&trans  &mo 29        &mo 30        &mb1_morph      &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &trans  &mkp LCLK        &mmvl MOVE_UP    &trans            &trans           &trans
-&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL             &mkpoff_hold LC(F) MCLK                    &trans  &mmvl MOVE_LEFT  &mdown_morph_en  &mright_morph_en  &trans           &trans
-&trans  &trans        &trans        &trans          &trans                &moff_mt_en LG(V) B                        &trans  &msc SCRL_LEFT   &scdown_morph    &scup_morph       &msc SCRL_RIGHT  &trans
+&trans  &mo 29        &mo 30        &mb1_morph      &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &trans  &mkp LCLK        &mmvl MOVE_UP    &trans            &trans            &trans
+&trans  &kp LEFT_GUI  &kp LEFT_ALT  &kp LEFT_SHIFT  &kp LCTRL             &mkpoff_hold LC(F) MCLK                    &trans  &mmvl MOVE_LEFT  &mdown_morph_en  &mright_morph_en  &trans            &trans
+&trans  &trans        &trans        &trans          &trans                &moff_mt_en LG(V) B                        &trans  &mscl SCRL_LEFT  &scdown_morph    &scup_morph       &mscl SCRL_RIGHT  &trans
                       &trans        &trans          &ms_over_en           &space_lt 18 0           &trans    &trans  &trans  &none            &trans           &trans
             >;
         };
