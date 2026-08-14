@@ -2120,10 +2120,12 @@
 
 &msc {
     acceleration-exponent = <0>;
+    time-to-max-speed-ms = <0>;
 };
 
 &mmv {
     acceleration-exponent = <0>;
+    time-to-max-speed-ms = <0>;
 };
 
 &mmv_input_listener { input-processors = <&zip_inertia>; };
