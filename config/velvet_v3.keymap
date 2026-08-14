@@ -2083,7 +2083,7 @@
 &pointer_accel {
     input-type = <INPUT_EV_REL>;
     min-factor = <1000>;        // 0.9x minimum
-    max-factor = <1500>;       // 2.0x maximum
+    max-factor = <1200>;       // 2.0x maximum
     speed-threshold = <1500>;  // Start accelerating later
     speed-max = <5000>;         // 6000 counts/sec for max accel
     acceleration-exponent = <1>; // Linear acceleration
@@ -2103,7 +2103,7 @@
 };
 
 &mmv_input_listener {
-    input-processors = <&pointer_accel &zip_inertia>;
+    input-processors = <&zip_inertia>; 
 };
 
 &msc_input_listener {
