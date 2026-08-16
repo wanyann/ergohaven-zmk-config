@@ -2177,6 +2177,6 @@
 
     slower {
         layers = <29>;
-        input-processors = <&zip_xy_scaler 1 2>, <&zip_inertia>;
+        input-processors = <&zip_xy_scaler 1 3>, <&zip_inertia>;
     };
 };
