@@ -1131,54 +1131,27 @@
             flavor = "balanced";
         };
 
-        l_morph_ru: l_morph_ru {
+        l_morph: l_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "L_MORPH_RU";
-            bindings = <&kp L>, <&mouseoff_kp_ru LC(L)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        l_morph_en: l_morph_en {
-            compatible = "zmk,behavior-mod-morph";
-            label = "L_MORPH_EN";
+            label = "L_MORPH";
             bindings = <&kp L>, <&mouseoff_kp_en LC(L)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
 
-        e_morph_ru: e_morph_ru {
+        e_morph: e_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "E_MORPH_RU";
-            bindings = <&kp E>, <&mouseoff_kp_ru LC(E)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        e_morph_en: e_morph_en {
-            compatible = "zmk,behavior-mod-morph";
-            label = "E_MORPH_EN";
+            label = "E_MORPH";
             bindings = <&kp E>, <&mouseoff_kp_en LC(E)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
         };
 
-        k_morph_ru: k_morph_ru {
+        k_morph: k_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "K_MORPH_RU";
-            bindings = <&kp K>, <&mouseoff_kp_ru LC(K)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        k_morph_en: k_morph_en {
-            compatible = "zmk,behavior-mod-morph";
-            label = "K_MORPH_EN";
+            label = "K_MORPH";
             bindings = <&kp K>, <&mouseoff_kp_en LC(K)>;
 
             #binding-cells = <0>;
@@ -1516,10 +1489,10 @@
         MouseMods {
             display-name = "MMods_en";
             bindings = <
-&none  &free_kp Q        &free_kp W    &e_morph_en    &free_kp R     &free_kp T                    &free_kp Y  &kp U     &kp I        &kp O        &kp P         &trans
-&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &free_kp F                    &kp H       &kp J     &k_morph_en  &l_morph_en  &kp SEMI      &kp SQT
-&none  &kp_free Z        &kp_free X    &kp_free C     &kp_free V     &kp_free B                    &free_kp N  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
-                         &trans        &trans         &trans         &trans      &trans    &trans  &trans      &trans    &trans       &trans
+&none  &free_kp Q        &free_kp W    &e_morph       &free_kp R     &free_kp T                    &free_kp Y  &kp U     &kp I       &kp O       &kp P         &trans
+&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &free_kp F                    &kp H       &kp J     &k_morph    &l_morph    &kp SEMI      &kp SQT
+&none  &kp_free Z        &kp_free X    &kp_free C     &kp_free V     &kp_free B                    &free_kp N  &m_morph  &com_morph  &dot_morph  &slash_morph  &trans
+                         &trans        &trans         &trans         &trans      &trans    &trans  &trans      &trans    &trans      &trans
             >;
         };
 
@@ -1529,7 +1502,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                         &trans        &trans         &trans         &trans      &trans    &trans  &trans      &trans    &trans       &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
