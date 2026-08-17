@@ -1584,7 +1584,7 @@
         mb1_morph: mb1_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "MB1_MORPH";
-            bindings = <&mkpl LCLK>, <&moff_kp_ru LC(E)>;
+            bindings = <&mkpl LCLK>, <&moff_kp LC(E)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
