@@ -672,7 +672,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
-                <&layer_off 8 &layer_on 4>;
+                <&layer_off 9 &layer_on 4>;
 
             label = "KP_M2";
             tap-ms = <15>;
@@ -754,7 +754,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
-                <&layer_off 7 &layer_on 8>;
+                <&layer_off 7 &layer_on 9>;
 
             label = "KP_M1";
             tap-ms = <15>;
@@ -829,9 +829,9 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 9>,
+                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 10>,
                 <&macro_pause_for_release>,
-                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 9>;
+                <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 10>;
 
             label = "MML_RU";
             wait-ms = <0>;
@@ -1606,12 +1606,22 @@
             >;
         };
 
+        M1_ru {
+            display-name = "M1_ru";
+            bindings = <
+&none                 &kp_m1 RU_CYRILLIC_TSE      &kp_m1 RU_CYRILLIC_SOFT_SIGN  &kp_m1 RU_CYRILLIC_YA  &kp_m1 RU_CYRILLIC_A     &kp_m1 RU_CYRILLIC_YU                    &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
+&kp_m1 RU_CYRILLIC_E  &kp_m1 RU_CYRILLIC_SHORT_I  &kp_m1 RU_CYRILLIC_I          &kp_m1 RU_CYRILLIC_IE  &kp_m1 RU_CYRILLIC_O     &kp_m1 LS(N6)                            &kp RU_CYRILLIC_EL  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
+&none                 &kp_m1 RU_CYRILLIC_EF       &kp_m1 RU_CYRILLIC_U          &kp_m1 RU_CYRILLIC_HA  &kp_m1 RU_CYRILLIC_YERU  &kp_m1 LS(RU_N7)                         &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_PE  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
+                                                  &trans                        &trans                 &trans                   &trans                 &trans    &trans  &trans              &trans              &trans              &trans
+            >;
+        };
+
         M2_en {
             bindings = <
 &none              &kp RU_CYRILLIC_TSE      &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_YA  &kp RU_CYRILLIC_A     &kp RU_CYRILLIC_YU                                          &kp_m2 RU_CYRILLIC_ZE  &kp_m2 RU_CYRILLIC_VE  &kp_m2 RU_CYRILLIC_KA  &kp_m2 RU_CYRILLIC_DE   &kp_m2 RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_I          &kp RU_CYRILLIC_IE  &kp RU_CYRILLIC_O     &kp LS(N6)                                                  &kp_m2 RU_CYRILLIC_EL  &kp_m2 RU_CYRILLIC_EN  &kp_m2 RU_CYRILLIC_TE  &kp_m2 RU_CYRILLIC_ES   &kp_m2 RU_CYRILLIC_CHE    &kp_m2 RU_CYRILLIC_SHA
 &none              &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_YERU  &kp LS(RU_N7)                                               &kp_m2 RU_CYRILLIC_BE  &kp_m2 RU_CYRILLIC_EM  &kp_m2 RU_CYRILLIC_PE  &kp_m2 RU_CYRILLIC_GHE  &kp_m2 RU_CYRILLIC_ZHE    &trans
-                                            &trans                     &trans              &none                 &nav_set 14 4       &overoff_sl 8 18    &kp_to BACKSPACE 7  &move_num 16 7         &trans                 &trans                 &trans
+                                            &trans                     &trans              &none                 &nav_set 14 4       &overoff_sl 9 18    &kp_to BACKSPACE 7  &move_num 16 7         &trans                 &trans                 &trans
             >;
 
             display-name = "M2_en";
@@ -1624,16 +1634,6 @@
 &none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &free_kp F                    &kp H       &kp J     &k_morph_ru  &l_morph_ru  &kp SEMI      &kp SQT
 &none  &kp_free Z        &kp_free X    &free_kp C     &free_kp V     &free_kp B                    &free_kp N  &m_morph  &com_morph   &dot_morph   &slash_morph  &trans
                          &trans        &trans         &trans         &trans      &trans    &trans  &trans      &trans    &trans       &trans
-            >;
-        };
-
-        M1_ru {
-            display-name = "M1_ru";
-            bindings = <
-&none                 &kp_m1 RU_CYRILLIC_TSE      &kp_m1 RU_CYRILLIC_SOFT_SIGN  &kp_m1 RU_CYRILLIC_YA  &kp_m1 RU_CYRILLIC_A     &kp_m1 RU_CYRILLIC_YU                    &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
-&kp_m1 RU_CYRILLIC_E  &kp_m1 RU_CYRILLIC_SHORT_I  &kp_m1 RU_CYRILLIC_I          &kp_m1 RU_CYRILLIC_IE  &kp_m1 RU_CYRILLIC_O     &kp_m1 LS(N6)                            &kp RU_CYRILLIC_EL  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
-&none                 &kp_m1 RU_CYRILLIC_EF       &kp_m1 RU_CYRILLIC_U          &kp_m1 RU_CYRILLIC_HA  &kp_m1 RU_CYRILLIC_YERU  &kp_m1 LS(RU_N7)                         &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_PE  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                                  &trans                        &trans                 &trans                   &trans                 &trans    &trans  &trans              &trans              &trans              &trans
             >;
         };
 
@@ -1838,7 +1838,7 @@
         };
 
         MOver1_App {
-            if-layers = <10 18>;
+            if-layers = <8 18>;
             then-layer = <19>;
         };
 
@@ -1848,7 +1848,7 @@
         };
 
         MOver1_Num {
-            if-layers = <10 16>;
+            if-layers = <8 16>;
             then-layer = <17>;
         };
 
@@ -1868,17 +1868,17 @@
         };
 
         MOver1_Nav {
-            if-layers = <14 10>;
-            then-layer = <15>;
-        };
-
-        MOver2_ru {
             if-layers = <14 8>;
             then-layer = <15>;
         };
 
+        MOver2_ru {
+            if-layers = <14 9>;
+            then-layer = <15>;
+        };
+
         MOver1_OS {
-            if-layers = <23 10>;
+            if-layers = <23 8>;
             then-layer = <24>;
         };
 
@@ -1894,11 +1894,11 @@
 
         M1_ru {
             if-layers = <7 2>;
-            then-layer = <10>;
+            then-layer = <8>;
         };
 
         M2_ru {
-            if-layers = <8 2>;
+            if-layers = <9 2>;
             then-layer = <11>;
         };
     };
