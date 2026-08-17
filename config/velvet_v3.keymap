@@ -1194,16 +1194,6 @@
             flavor = "tap-preferred";
         };
 
-        space_nav_to: space_nav_to {
-            compatible = "zmk,behavior-hold-tap";
-            label = "SPACE_NAV_TO";
-            bindings = <&mo>, <&space_to>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "balanced";
-        };
-
         move_num: move_num {
             compatible = "zmk,behavior-hold-tap";
             label = "MOVE_NUM";
@@ -1212,36 +1202,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-        };
-
-        mt_mouseoff_ru: mt_mouseoff_ru {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_MOUSEOFF_RU";
-            bindings = <&mouseoff_kp_ru>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        mt_mouseoff_en: mt_mouseoff_en {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_MOUSEOFF_EN";
-            bindings = <&mouseoff_kp_en>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        mt_free: mt_free {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_FREE";
-            bindings = <&free_kp>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
         };
 
         l_morph_ru: l_morph_ru {
@@ -1332,26 +1292,6 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-        };
-
-        mt_sub_ru: mt_sub_ru {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_SUB_RU";
-            bindings = <&kp_m1_ru>, <&kp_sub_ru>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
-        mt_sub_en: mt_sub_en {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MT_SUB_EN";
-            bindings = <&kp_m1>, <&kp_sub_en>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
         };
 
         morph_en_dot: morph_en_dot {
