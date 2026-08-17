@@ -143,10 +143,9 @@
             key-positions = <26 28>;
         };
 
-        combo_osl_os_en {
+        combo_osl_os {
             bindings = <&sl 27>;
             key-positions = <25 26>;
-            layers = <0 1 20 24 27 4 7 8 16 22 18>;
         };
 
         combo_capsword_ru {
@@ -279,12 +278,6 @@
             bindings = <&kp HASH>;
             key-positions = <26 27 28>;
             layers = <0 1 20 24>;
-        };
-
-        cmb_osl_os_ru {
-            bindings = <&sl 27>;
-            key-positions = <25 26>;
-            layers = <2 3 21 25 28 16 16 16 15 23 19>;
         };
 
         combo_equal {
