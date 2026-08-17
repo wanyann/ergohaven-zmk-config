@@ -802,13 +802,6 @@
             wait-ms = <0>;
             tap-ms = <1>;
         };
-
-        test_123: test_123 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&none &kp T>;
-            label = "TEST_123";
-        };
     };
 
     behaviors {
@@ -1366,8 +1359,6 @@
 &kp DELETE     &mt LC(Z) F               &mt LC(X) Y               &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &kp B     &kp M             &kp P                  &kp G            &mt LC(SLASH) J       &none
                                          &kp LS(F7)                &kp F7                 &ms_over                &lt 14 SPACE        &sl 18    &bspc_morph  &lt 16 R  &ms_free          &kp F2                 &kp LS(F2)
             >;
-
-            display-name = "English";
         };
 
         En_CW {
@@ -1377,8 +1368,6 @@
 &trans            &mt LC(Z) LS(F)               &mt LC(X) LS(Y)               &mt LC(C) LS(X)            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                        &kp LS(B)     &kp LS(M)             &kp LS(P)                  &kp LS(G)            &mt LC(SLASH) LS(J)       &trans
                                                 &trans                        &trans                     &trans                  &en_lt_cw_off 14 SPACE  &sl 18    &trans  &lt 16 LS(R)  &trans                &trans                     &trans
             >;
-
-            display-name = "CapsWord_en";
         };
 
         Ru {
@@ -1388,8 +1377,6 @@
 &trans             &mt LC(Z) RU_CYRILLIC_EF                    &mt LC(X) RU_CYRILLIC_U               &mt LC(C) RU_CYRILLIC_HA            &mt LC(V) RU_CYRILLIC_YERU    &ru_dot_mt LG(V) 0                          &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM             &kp RU_CYRILLIC_PE                  &kp RU_CYRILLIC_GHE           &mt LC(SLASH) RU_CYRILLIC_ZHE       &trans
                                                                &trans                                &trans                              &ms_over                      &lt 14 SPACE              &sl 18    &trans  &lt 16 RU_CYRILLIC_ER  &ms_free                       &trans                              &trans
             >;
-
-            display-name = "Russian";
         };
 
         Ru_CW {
@@ -1399,8 +1386,6 @@
 &trans                 &mt LC(Z) LS(RU_CYRILLIC_EF)                    &mt LC(X) LS(RU_CYRILLIC_U)               &mt LC(C) LS(RU_CYRILLIC_HA)            &mt LC(V) LS(RU_CYRILLIC_YERU)    &ru_dot_mt LG(V) 0                              &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)             &kp LS(RU_CYRILLIC_PE)                  &kp LS(RU_CYRILLIC_GHE)           &mt LC(SLASH) LS(RU_CYRILLIC_ZHE)       &trans
                                                                        &trans                                    &trans                                  &trans                            &ru_lt_cw_off 14 SPACE        &trans    &trans  &lt 16 LS(RU_CYRILLIC_ER)  &trans                             &trans                                  &trans
             >;
-
-            display-name = "CapsWord_ru";
         };
 
         Mouse {
@@ -1422,7 +1407,6 @@
         };
 
         MouseMods {
-            display-name = "MMods_en";
             bindings = <
 &none  &free_kp Q        &free_kp W    &e_morph       &free_kp R     &free_kp T                    &free_kp Y  &kp U     &kp I       &kp O       &kp P         &trans
 &none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &free_kp F                    &kp H       &kp J     &k_morph    &l_morph    &kp SEMI      &kp SQT
@@ -1432,7 +1416,6 @@
         };
 
         MMods_ru {
-            display-name = "MMods_ru";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -1442,7 +1425,6 @@
         };
 
         M1 {
-            display-name = "M1_en";
             bindings = <
 &none                 &kp_m1 RU_CYRILLIC_TSE      &kp_m1 RU_CYRILLIC_SOFT_SIGN  &kp_m1 RU_CYRILLIC_YA  &kp_m1 RU_CYRILLIC_A     &kp_m1 RU_CYRILLIC_YU                                     &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
 &kp_m1 RU_CYRILLIC_E  &kp_m1 RU_CYRILLIC_SHORT_I  &kp_m1 RU_CYRILLIC_I          &kp_m1 RU_CYRILLIC_IE  &kp_m1 RU_CYRILLIC_O     &kp_m1 LS(N6)                                             &kp RU_CYRILLIC_EL  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
@@ -1452,7 +1434,6 @@
         };
 
         M1_ru {
-            display-name = "M1_ru";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -1468,12 +1449,9 @@
 &none              &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_YERU  &kp LS(RU_N7)                                                &kp_m2 RU_CYRILLIC_BE  &kp_m2 RU_CYRILLIC_EM  &kp_m2 RU_CYRILLIC_PE  &kp_m2 RU_CYRILLIC_GHE  &kp_m2 RU_CYRILLIC_ZHE    &trans
                                             &trans                     &trans              &none                 &nav_set 14 4       &overoff_sl 10 18    &kp_to BACKSPACE 8  &move_num 16 8         &trans                 &trans                 &trans
             >;
-
-            display-name = "M2_en";
         };
 
         M2_ru {
-            display-name = "M2_ru";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -1483,7 +1461,6 @@
         };
 
         Mod {
-            display-name = "Mod_en";
             bindings = <
 &trans  &kp Q             &kp W             &kp E              &kp R         &kp T                                  &kp Y            &kp U              &kp I              &kp O             &kp P                &trans
 &trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                                  &kp H            &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
@@ -1499,8 +1476,6 @@
 &trans  &kp Z             &kp X             &kp C              &kp V         &kp B                                  &kp N            &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
                           &trans            &trans             &trans        &space_lt 15 0  &trans    &bspc_morph  &lt 17 K_CANCEL  &trans             &trans             &trans
             >;
-
-            display-name = "Mod_ru";
         };
 
         Nav {
@@ -1510,8 +1485,6 @@
 &trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                   &kp LC(F8)  &kp HOME  &kp PG_DN  &kp PG_UP  &none       &trans
                                         &trans                           &trans               &trans                    &none               &none    &trans  &mo 20      &trans    &trans     &trans
             >;
-
-            display-name = "Nav_en";
         };
 
         Nav_ru {
@@ -1521,8 +1494,6 @@
 &trans  &trans  &trans            &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans            &trans  &trans  &trans  &trans    &trans  &mo 21  &trans  &trans  &trans
             >;
-
-            display-name = "Nav_ru";
         };
 
         Num {
@@ -1532,12 +1503,9 @@
 &trans  &kp EQUAL  &kp N4        &kp N5        &kp N6        &morph_en_dot                   &trans  &trans     &none       &none         &trans        &trans
                    &trans        &trans        &trans        &lt 20 SPACE   &none    &trans  &trans  &trans     &trans      &trans
             >;
-
-            display-name = "Num_en";
         };
 
         Num_ru {
-            display-name = "Num_ru";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &morph_ru_com                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -1553,8 +1521,6 @@
 &trans                        &mt LS(LC(LA(LG(Z)))) LC(LA(LS(Z)))  &mt LS(LA(LC(LG(X)))) LA(LS(LC(X)))     &kp LS(LA(LC(C)))                    &kp LS(LC(LG(V)))                    &mt LS(LA(LC(LG(B)))) LS(LA(LC(B)))                           &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
                                                                    &trans                                  &trans                               &trans                               &none                                &sl 18    &kp LA(ENTER)  &alt_spc_en        &trans             &trans                 &trans
             >;
-
-            display-name = "App_en";
         };
 
         App_ru {
@@ -1564,8 +1530,6 @@
 &trans  &trans  &trans                                  &trans  &trans  &trans                    &trans       &trans  &trans  &trans  &trans  &trans
                 &trans                                  &trans  &trans  &trans  &trans    &trans  &alt_spc_ru  &trans  &trans  &trans
             >;
-
-            display-name = "App_ru";
         };
 
         Sym {
@@ -1575,8 +1539,6 @@
 &trans  &trans  &kp TILDE             &kp HASH       &en_code               &none                          &trans            &kp LESS_THAN     &arrow_en     &kp GREATER_THAN   &trans  &trans
                 &trans                &trans         &trans                 &trans       &trans    &trans  &trans            &trans            &trans        &trans
             >;
-
-            display-name = "Sym_en";
         };
 
         Sym_ru {
@@ -1586,12 +1548,9 @@
 &trans  &trans  &en_kp TILDE          &en_kp HASH       &ru_code      &none                             &trans         &en_kp LESS_THAN     &arrow_ru      &en_kp GREATER_THAN   &trans  &trans
                 &trans                &trans            &trans        &trans          &trans    &trans  &trans         &trans               &trans         &trans
             >;
-
-            display-name = "Sym_ru";
         };
 
         Fn {
-            display-name = "Fn";
             bindings = <
 &trans  &trans   &kp F7  &kp F8  &kp F9  &trans                     &trans  &trans     &trans          &trans    &trans        &trans
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp F12                    &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LALT  &kp LEFT_GUI  &trans
@@ -1601,7 +1560,6 @@
         };
 
         OS {
-            display-name = "OS_en";
             bindings = <
 &trans       &bt_set_en 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &none    &trans  &trans  &bt BT_CLR  &trans
 &trans       &bt_set_en 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24  &trans  &trans  &soft_off   &trans
@@ -1611,7 +1569,6 @@
         };
 
         OS_ru {
-            display-name = "OS_ru";
             bindings = <
 &trans  &bt_set_ru 2  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &bt_set_ru 1  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
