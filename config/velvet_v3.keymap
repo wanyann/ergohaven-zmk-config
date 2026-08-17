@@ -13,7 +13,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 25
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 150
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 125
 
 &mt { flavor = "tap-preferred"; };
 
