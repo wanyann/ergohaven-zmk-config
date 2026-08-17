@@ -1407,9 +1407,9 @@
 
         MouseMods {
             bindings = <
-&none  &free_kp Q        &free_kp W    &e_morph       &free_kp R     &free_kp T                    &free_kp Y  &kp U     &kp I       &kp O       &kp P         &trans
-&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &free_kp F                    &kp H       &kp J     &k_morph    &l_morph    &kp SEMI      &kp SQT
-&none  &kp_free Z        &kp_free X    &kp_free C     &kp_free V     &kp_free B                    &free_kp N  &m_morph  &com_morph  &dot_morph  &slash_morph  &trans
+&none  &kp Q             &kp W         &e_morph       &kp R          &kp T                     &kp Y   &trans  &trans  &trans  &kp P   &trans
+&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &kp H   &trans  &trans  &trans  &trans  &kp SQT
+&none  &kp Z             &kp X         &kp C          &kp V          &kp B                     &kp N   &trans  &trans  &trans  &trans  &trans
                          &trans        &trans         &trans         &trans      &trans    &trans  &trans      &trans    &trans      &trans
             >;
         };
