@@ -1899,12 +1899,12 @@
             then-layer = <17>;
         };
 
-        MFree_Num {
+        Mouse_Num {
             if-layers = <16 8>;
             then-layer = <17>;
         };
 
-        MFree_OS {
+        Mouse_OS {
             if-layers = <23 8>;
             then-layer = <24>;
         };
@@ -1914,7 +1914,7 @@
             then-layer = <19>;
         };
 
-        MFree_App {
+        Mouse_App {
             if-layers = <8 18>;
             then-layer = <19>;
         };
@@ -1944,7 +1944,7 @@
             then-layer = <15>;
         };
 
-        MFree_Nav {
+        Mouse_Nav {
             if-layers = <14 8>;
             then-layer = <15>;
         };
@@ -1971,11 +1971,6 @@
 
         Mouse_ru {
             if-layers = <4 2>;
-            then-layer = <8>;
-        };
-
-        MFree_ru {
-            if-layers = <2 4>;
             then-layer = <8>;
         };
 
