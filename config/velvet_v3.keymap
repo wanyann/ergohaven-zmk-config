@@ -1578,9 +1578,9 @@
             flavor = "tap-preferred";
         };
 
-        moff_mt_en: moff_mt_en {
+        moff_mt: moff_mt {
             compatible = "zmk,behavior-hold-tap";
-            label = "MOFF_MT_EN";
+            label = "MOFF_MT";
             bindings = <&moff_kp_en>, <&kp>;
 
             #binding-cells = <2>;
@@ -1686,8 +1686,8 @@
         Mouse {
             bindings = <
 &trans  &mo 29        &mo 30                  &mb1_morph                &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &trans  &mkp LCLK        &mmvl MOVE_UP  &trans       &trans            &trans
-&trans  &kp LEFT_GUI  &mod_layer LEFT_ALT 29  &mod_layer LEFT_SHIFT 30  &kp LCTRL             &moff_mt_en LC(F) COMMA                    &trans  &mmvl MOVE_LEFT  &mdown_morph   &none        &trans            &trans
-&trans  &trans        &trans                  &trans                    &trans                &moff_mt_en LG(V) B                        &trans  &mscl SCRL_LEFT  &scdown_morph  &scup_morph  &mscl SCRL_RIGHT  &trans
+&trans  &kp LEFT_GUI  &mod_layer LEFT_ALT 29  &mod_layer LEFT_SHIFT 30  &kp LCTRL             &moff_mt LC(F) COMMA                       &trans  &mmvl MOVE_LEFT  &mdown_morph   &none        &trans            &trans
+&trans  &trans        &trans                  &trans                    &trans                &moff_mt LG(V) B                           &trans  &mscl SCRL_LEFT  &scdown_morph  &scup_morph  &mscl SCRL_RIGHT  &trans
                       &trans                  &trans                    &trans                &space_lt 18 0           &trans    &trans  &trans  &trans           &trans         &trans
             >;
         };
