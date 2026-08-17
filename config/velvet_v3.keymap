@@ -1269,15 +1269,6 @@
             flavor = "balanced";
         };
 
-        sticky_drag: sticky_drag {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_DRAG";
-            bindings = <&kp>;
-            #binding-cells = <1>;
-            release-after-ms = <10000>;
-            ignore-modifiers;
-        };
-
         mt_mouseoff_ru: mt_mouseoff_ru {
             compatible = "zmk,behavior-hold-tap";
             label = "MT_MOUSEOFF_RU";
@@ -1577,16 +1568,6 @@
             flavor = "tap-preferred";
         };
 
-        mkpoff_hold_ru: mkpoff_hold_ru {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MKPOFF_HOLD_RU";
-            bindings = <&moff_kp_ru>, <&mkp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
         mkpoff_hold: mkpoff_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "MKPOFF_HOLD";
@@ -1607,16 +1588,6 @@
             flavor = "tap-preferred";
         };
 
-        moff_mt_ru: moff_mt_ru {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MOFF_MT_RU";
-            bindings = <&moff_kp_ru>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
-        };
-
         mb1_morph: mb1_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "MB1_MORPH";
@@ -1626,40 +1597,10 @@
             mods = <(MOD_LCTL)>;
         };
 
-        mdown_morph_en: mdown_morph_en {
+        mdown_morph: mdown_morph {
             compatible = "zmk,behavior-mod-morph";
-            label = "MDOWN_MORPH_EN";
+            label = "MDOWN_MORPH";
             bindings = <&mmvl MOVE_DOWN>, <&moff_kp_en K>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-
-        mdown_morph_ru: mdown_morph_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MDOWN_MORPH_RU";
-            bindings = <&mmvl MOVE_DOWN>, <&moff_kp_ru K>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-
-        mright_morph_en: mright_morph_en {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRIGHT_MORPH_EN";
-            bindings = <&mmv MOVE_RIGHT>, <&moff_kp_en L>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-            keep-mods = <(MOD_LCTL)>;
-        };
-
-        mright_morph_ru: mright_morph_ru {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MRIGHT_MORPH_RU";
-            bindings = <&mmvl MOVE_RIGHT>, <&moff_kp_ru L>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -1744,10 +1685,10 @@
 
         Mouse {
             bindings = <
-&trans  &mo 29        &mo 30                  &mb1_morph                &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &trans  &mkp LCLK        &mmvl MOVE_UP    &trans            &trans            &trans
-&trans  &kp LEFT_GUI  &mod_layer LEFT_ALT 29  &mod_layer LEFT_SHIFT 30  &kp LCTRL             &moff_mt_en LC(F) COMMA                    &trans  &mmvl MOVE_LEFT  &mdown_morph_en  &mright_morph_en  &trans            &trans
-&trans  &trans        &trans                  &trans                    &trans                &moff_mt_en LG(V) B                        &trans  &mscl SCRL_LEFT  &scdown_morph    &scup_morph       &mscl SCRL_RIGHT  &trans
-                      &trans                  &trans                    &trans                &space_lt 18 0           &trans    &trans  &trans  &trans           &trans           &trans
+&trans  &mo 29        &mo 30                  &mb1_morph                &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &trans  &mkp LCLK        &mmvl MOVE_UP  &trans       &trans            &trans
+&trans  &kp LEFT_GUI  &mod_layer LEFT_ALT 29  &mod_layer LEFT_SHIFT 30  &kp LCTRL             &moff_mt_en LC(F) COMMA                    &trans  &mmvl MOVE_LEFT  &mdown_morph   &none        &trans            &trans
+&trans  &trans        &trans                  &trans                    &trans                &moff_mt_en LG(V) B                        &trans  &mscl SCRL_LEFT  &scdown_morph  &scup_morph  &mscl SCRL_RIGHT  &trans
+                      &trans                  &trans                    &trans                &space_lt 18 0           &trans    &trans  &trans  &trans           &trans         &trans
             >;
         };
 
@@ -1795,10 +1736,10 @@
 
         Mouse_ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &mkpoff_hold_ru LC(T) MCLK                    &trans  &trans  &trans           &trans            &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &moff_mt_ru LC(F) RU_COMMA                    &trans  &trans  &mdown_morph_ru  &mright_morph_ru  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &moff_mt_ru LG(V) B                           &trans  &trans  &trans           &trans            &trans  &trans
-                &trans  &trans  &trans  &trans                      &trans    &trans  &trans  &trans  &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
