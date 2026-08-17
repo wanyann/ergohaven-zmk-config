@@ -674,13 +674,6 @@
             wait-ms = <0>;
         };
 
-        overlay_off: overlay_off {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LC(LS(F8))>;
-            label = "OVERLAY_OFF";
-        };
-
         overoff_sl: overoff_sl {
             compatible = "zmk,behavior-macro-two-param";
             #binding-cells = <2>;
