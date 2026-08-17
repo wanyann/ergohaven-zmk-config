@@ -1765,6 +1765,11 @@
             if-layers = <12 2>;
             then-layer = <13>;
         };
+
+        MouseMods {
+            if-layers = <6 2>;
+            then-layer = <7>;
+        };
     };
 };
 
