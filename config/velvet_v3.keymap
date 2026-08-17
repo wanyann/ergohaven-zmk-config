@@ -647,11 +647,11 @@
             label = "KP_FREE";
         };
 
-        mouseoff_kp_en: mouseoff_kp_en {
+        mouseoff_kp: mouseoff_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&mouse_off &layer_off 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MOUSEOFF_KP_EN";
+            label = "MOUSEOFF_KP";
         };
 
         free_kp: free_kp {
@@ -1120,7 +1120,7 @@
         l_morph: l_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "L_MORPH";
-            bindings = <&kp L>, <&mouseoff_kp_en LC(L)>;
+            bindings = <&kp L>, <&mouseoff_kp LC(L)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -1129,7 +1129,7 @@
         e_morph: e_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "E_MORPH";
-            bindings = <&kp E>, <&mouseoff_kp_en LC(E)>;
+            bindings = <&kp E>, <&mouseoff_kp LC(E)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -1138,7 +1138,7 @@
         k_morph: k_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "K_MORPH";
-            bindings = <&kp K>, <&mouseoff_kp_en LC(K)>;
+            bindings = <&kp K>, <&mouseoff_kp LC(K)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -1654,20 +1654,20 @@
         OS {
             display-name = "OS_en";
             bindings = <
-&trans       &bt_set_en 2  &kp_over_en LA(LC(N1))  &kp_over_en LA(LC(N2))    &kp_over_en LC(LA(NUMBER_3))  &kp_over_en LC(LA(NUMBER_4))                    &trans        &none    &trans  &trans  &bt BT_CLR  &trans
-&trans       &bt_set_en 1  &kp LC(RIGHT)           &kp LA(LC(N1))            &kp C_VOLUME_UP               &kp C_BRI_UP                                    &out OUT_BLE  &kp F24  &trans  &trans  &soft_off   &trans
-&bootloader  &bt_set_en 0  &none                   &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN                  &kp C_BRI_DN                                    &out OUT_USB  &kp F23  &trans  &trans  &trans      &bootloader
-                           &trans                  &trans                    &trans                        &trans                        &trans    &trans  &trans        &trans   &trans  &trans
+&trans       &bt_set_en 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &none    &trans  &trans  &bt BT_CLR  &trans
+&trans       &bt_set_en 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24  &trans  &trans  &soft_off   &trans
+&bootloader  &bt_set_en 0  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23  &trans  &trans  &trans      &bootloader
+                           &trans          &trans                    &trans                &trans                &trans    &trans  &trans        &trans   &trans  &trans
             >;
         };
 
         OS_ru {
             display-name = "OS_ru";
             bindings = <
-&trans  &bt_set_ru 2  &kp_over_ru LA(LC(N1))  &kp_over_ru LA(LC(N2))  &kp_over_ru LC(LA(NUMBER_3))  &kp_over_ru LC(LA(NUMBER_4))                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &bt_set_ru 1  &trans                  &trans                  &trans                        &trans                                          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &bt_set_ru 0  &trans                  &trans                  &trans                        &trans                                          &trans  &trans  &trans  &trans  &trans  &trans
-                      &trans                  &trans                  &trans                        &trans                        &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &bt_set_ru 2  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt_set_ru 1  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt_set_ru 0  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                      &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
