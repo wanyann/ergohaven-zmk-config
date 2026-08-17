@@ -899,18 +899,11 @@
             tap-ms = <0>;
         };
 
-        moff_kp_ru: moff_kp_ru {
+        moff_kp: moff_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings = <&layer_off 5 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MOFF_KP_RU";
-        };
-
-        moff_kp_en: moff_kp_en {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&layer_off 5 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MOFF_KP_EN";
+            label = "MOFF_KP";
         };
 
         cmd_scroll: cmd_scroll {
@@ -1571,7 +1564,7 @@
         mkpoff_hold: mkpoff_hold {
             compatible = "zmk,behavior-hold-tap";
             label = "MKPOFF_HOLD";
-            bindings = <&moff_kp_en>, <&mkp>;
+            bindings = <&moff_kp>, <&mkp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1581,7 +1574,7 @@
         moff_mt: moff_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "MOFF_MT";
-            bindings = <&moff_kp_en>, <&kp>;
+            bindings = <&moff_kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1600,7 +1593,7 @@
         mdown_morph: mdown_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "MDOWN_MORPH";
-            bindings = <&mmvl MOVE_DOWN>, <&moff_kp_en K>;
+            bindings = <&mmvl MOVE_DOWN>, <&moff_kp K>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -1623,6 +1616,16 @@
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
+        };
+
+        mright_morph: mright_morph {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MRIGHT_MORPH";
+            bindings = <&mmvl MOVE_RIGHT>, <&moff_kp L>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL)>;
+            keep-mods = <(MOD_LCTL)>;
         };
     };
 
@@ -1685,9 +1688,9 @@
 
         Mouse {
             bindings = <
-&trans  &mo 29        &mo 30                  &mb1_morph                &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &trans  &mkp LCLK        &mmvl MOVE_UP  &trans       &trans            &trans
-&trans  &kp LEFT_GUI  &mod_layer LEFT_ALT 29  &mod_layer LEFT_SHIFT 30  &kp LCTRL             &moff_mt LC(F) COMMA                       &trans  &mmvl MOVE_LEFT  &mdown_morph   &none        &trans            &trans
-&trans  &trans        &trans                  &trans                    &trans                &moff_mt LG(V) B                           &trans  &mscl SCRL_LEFT  &scdown_morph  &scup_morph  &mscl SCRL_RIGHT  &trans
+&trans  &mo 29        &mo 30                  &mb1_morph                &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &trans  &mkp LCLK        &mmvl MOVE_UP  &trans         &trans            &trans
+&trans  &kp LEFT_GUI  &mod_layer LEFT_ALT 29  &mod_layer LEFT_SHIFT 30  &kp LCTRL             &moff_mt LC(F) COMMA                       &trans  &mmvl MOVE_LEFT  &mdown_morph   &mright_morph  &trans            &trans
+&trans  &trans        &trans                  &trans                    &trans                &moff_mt LG(V) B                           &trans  &mscl SCRL_LEFT  &scdown_morph  &scup_morph    &mscl SCRL_RIGHT  &trans
                       &trans                  &trans                    &trans                &space_lt 18 0           &trans    &trans  &trans  &trans           &trans         &trans
             >;
         };
