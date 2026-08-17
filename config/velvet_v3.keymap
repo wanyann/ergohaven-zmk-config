@@ -405,7 +405,7 @@
             label = "ZEROS_MACRO";
         };
 
-        ml_en: ml_en {
+        ml: ml {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -413,7 +413,7 @@
                 <&macro_pause_for_release>,
                 <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 12>;
 
-            label = "ML_EN";
+            label = "ML";
             wait-ms = <0>;
             tap-ms = <0>;
         };
@@ -717,7 +717,7 @@
             tap-ms = <0>;
         };
 
-        mml_en: mml_en {
+        mml: mml {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
@@ -725,7 +725,7 @@
                 <&macro_pause_for_release>,
                 <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 6>;
 
-            label = "MML_EN";
+            label = "MML";
             wait-ms = <0>;
             tap-ms = <0>;
         };
@@ -887,7 +887,7 @@
         hrml_en: hrml_en {
             compatible = "zmk,behavior-hold-tap";
             label = "HRML_EN";
-            bindings = <&ml_en>, <&kp>;
+            bindings = <&ml>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -905,7 +905,7 @@
         hrml_slow_en: hrml_slow_en {
             compatible = "zmk,behavior-hold-tap";
             label = "HRML_SLOW_EN";
-            bindings = <&ml_en>, <&kp>;
+            bindings = <&ml>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
