@@ -1409,7 +1409,7 @@
             bindings = <
 &none  &kp Q             &kp W         &e_morph       &kp R          &kp T                     &kp Y   &trans  &trans  &trans  &kp P   &trans
 &none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &kp H   &trans  &trans  &trans  &trans  &kp SQT
-&none  &kp Z             &kp X         &kp C          &kp V          &kp B                     &kp N   &trans  &trans  &trans  &trans  &trans
+&none  &kp Z             &kp X         &kp C          &kp V          &kp B                     &kp N   &trans  &trans  &trans  &kp SLASH  &trans
                          &trans        &trans         &trans         &trans      &trans    &trans  &trans      &trans    &trans      &trans
             >;
         };
@@ -1481,7 +1481,7 @@
             bindings = <
 &trans  &trans                          &macro_unsafe_en                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                             &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
 &trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                         &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &kp END     &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                   &kp LC(F8)  &kp HOME  &kp PG_DN  &kp PG_UP  &none       &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                   &kp LC(F8)  &kp HOME  &kp PG_DN  &kp PG_UP  &kp LC(SLASH)     &trans
                                         &trans                           &trans               &trans                    &none               &none    &trans  &mo 20      &trans    &trans     &trans
             >;
         };
