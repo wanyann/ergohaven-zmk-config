@@ -70,7 +70,7 @@
         };
 
         combo_esc {
-            bindings = <&esc_over_off>;
+            bindings = <&long_kp ESC>;
             key-positions = <26 27>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
@@ -564,7 +564,7 @@
         bt_set_ru: bt_set_ru {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_off 24 &lg_ru &lg_ru>;
+            bindings = <&macro_param_1to1 &bt_set MACRO_PLACEHOLDER &layer_off 23 &lg_ru &lg_ru>;
             label = "BT_SET_RU";
             wait-ms = <45>;
             tap-ms = <40>;
@@ -659,15 +659,8 @@
         mouseoff_kp: mouseoff_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&mouse_off &layer_off 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings = <&layer_off 4 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "MOUSEOFF_KP";
-        };
-
-        free_kp: free_kp {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&mouse_off &macro_param_1to1 &kp MACRO_PLACEHOLDER &free>;
-            label = "FREE_KP";
         };
 
         kp_m1: kp_m1 {
@@ -1109,28 +1102,10 @@
             flavor = "balanced";
         };
 
-        l_morph: l_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "L_MORPH";
-            bindings = <&kp L>, <&mouseoff_kp LC(L)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
         e_morph: e_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "E_MORPH";
-            bindings = <&kp E>, <&mouseoff_kp LC(E)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        k_morph: k_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "K_MORPH";
-            bindings = <&kp K>, <&mouseoff_kp LC(K)>;
+            bindings = <&kp E>, <&moff_kp LC(E)>;
 
             #binding-cells = <0>;
             mods = <(MOD_LCTL)>;
@@ -1254,46 +1229,10 @@
             flavor = "balanced";
         };
 
-        m_morph: m_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "M_MORPH";
-            bindings = <&kp M>, <&kp LG(M)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        com_morph: com_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "COM_MORPH";
-            bindings = <&kp COMMA>, <&kp LG(COMMA)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        dot_morph: dot_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "DOT_MORPH";
-            bindings = <&kp DOT>, <&kp LG(DOT)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
-        slash_morph: slash_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "SLASH_MORPH";
-            bindings = <&kp SLASH>, <&kp LG(SLASH)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
-        };
-
         mhrm: mhrm {
             compatible = "zmk,behavior-hold-tap";
             label = "MHRM";
-            bindings = <&kp>, <&free_kp>;
+            bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1328,15 +1267,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-        };
-
-        mb1_morph: mb1_morph {
-            compatible = "zmk,behavior-mod-morph";
-            label = "MB1_MORPH";
-            bindings = <&mkpl LCLK>, <&moff_kp LC(E)>;
-
-            #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
         };
 
         mdown_morph: mdown_morph {
@@ -1437,7 +1367,7 @@
 
         Mouse {
             bindings = <
-&trans  &mo 25         &mo 26         &mb1_morph      &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK        &mmvl MOVE_UP  &none          &none           &trans
+&trans  &mo 25         &mo 26         &mkp LCLK       &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK        &mmvl MOVE_UP  &none          &none           &trans
 &trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &mmvl MOVE_LEFT  &mdown_morph   &mright_morph  &none           &none
 &trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) B                           &none   &scleft_morph    &scdown_morph  &scup_morph    &scright_morph  &trans
                        &trans         &trans          &trans                &space_lt 14 0           &trans    &trans  &trans  &trans           &trans         &trans
