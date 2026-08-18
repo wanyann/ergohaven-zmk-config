@@ -1724,12 +1724,12 @@
 &msc_input_listener {
     faster {
         layers = <26>;
-        input-processors = <&zip_xy_scaler 4 1>;
+        input-processors = <&zip_scroll_scaler 4 1>;
     };
 
     slower {
         layers = <25>;
-        input-processors = <&zip_xy_scaler 1 3>;
+        input-processors = <&zip_scroll_scaler 1 3>;
     };
 };
 
