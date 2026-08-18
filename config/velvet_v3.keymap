@@ -1350,7 +1350,7 @@
         scleft_morph: scleft_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "SCLEFT_MORPH";
-            bindings = <&mscl SCRL_LEFT>, <&cmd_scroll SCRL_DOWN>;
+            bindings = <&mscl SCRL_LEFT>, <&cmd_scroll SCRL_LEFT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1359,7 +1359,7 @@
         scright_morph: scright_morph {
             compatible = "zmk,behavior-mod-morph";
             label = "SCRIGHT_MORPH";
-            bindings = <&mscl SCRL_RIGHT>, <&cmd_scroll SCRL_DOWN>;
+            bindings = <&mscl SCRL_RIGHT>, <&cmd_scroll SCRL_RIGHT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
