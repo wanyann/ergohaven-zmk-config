@@ -691,9 +691,15 @@
         };
 
         ms_set: ms_set {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&kp SPACE &kp RU_CYRILLIC_EN &kp MINUS &mouse_off &macro_param_1to1 &to MACRO_PLACEHOLDER &free>;
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&kp SPACE &kp RU_CYRILLIC_EN &kp MINUS>,
+                <&macro_wait_time 0>,
+                <&mouse_off>,
+                <&macro_tap_time 1>,
+                <&layer_off 8 &layer_off 10 &layer_on 4>;
+
             label = "MS_SET";
         };
 
