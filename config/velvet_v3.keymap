@@ -1325,7 +1325,7 @@
             bindings = <&mscl SCRL_DOWN>, <&cmd_scroll SCRL_DOWN>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LSFT)>;
         };
 
         scup_morph: scup_morph {
@@ -1334,7 +1334,7 @@
             bindings = <&mscl SCRL_UP>, <&cmd_scroll SCRL_UP>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LCTL)>;
+            mods = <(MOD_LSFT)>;
         };
 
         mright_morph: mright_morph {
@@ -1389,10 +1389,10 @@
 
         Mouse {
             bindings = <
-&trans  &mo 25         &mo 26         &mb1_morph       &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none  &mkp LCLK        &mmvl MOVE_UP  &none         &none            &trans
-&trans  &mml LEFT_GUI  &mml LEFT_ALT  &mml LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none  &mmvl MOVE_LEFT  &mdown_morph   &mright_morph  &none            &none
-&trans  &trans         &trans         &trans           &trans                &moff_mt LG(V) B                           &none  &mscl SCRL_LEFT  &scdown_morph  &scup_morph    &mscl SCRL_RIGHT  &trans
-                       &trans         &trans           &trans                &space_lt 14 0           &trans    &trans  &trans  &trans           &trans         &trans
+&trans  &mo 25         &mo 26         &mb1_morph      &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK        &mmvl MOVE_UP  &none          &none             &trans
+&trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &mmvl MOVE_LEFT  &mdown_morph   &mright_morph  &none             &none
+&trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) B                           &none   &mscl SCRL_LEFT  &scdown_morph  &scup_morph    &mscl SCRL_RIGHT  &trans
+                       &trans         &trans          &trans                &space_lt 14 0           &trans    &trans  &trans  &trans           &trans         &trans
             >;
         };
 
@@ -1407,10 +1407,10 @@
 
         MouseMods {
             bindings = <
-&none  &kp Q             &kp W         &e_morph       &kp R          &kp T                     &kp Y   &trans  &trans  &trans  &kp P   &trans
-&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &kp H   &trans  &trans  &trans  &trans  &kp SQT
+&none  &kp Q             &kp W         &e_morph       &kp R          &kp T                     &kp Y   &trans  &trans  &trans  &kp P      &trans
+&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &kp H   &trans  &trans  &trans  &trans     &kp SQT
 &none  &kp Z             &kp X         &kp C          &kp V          &kp B                     &kp N   &trans  &trans  &trans  &kp SLASH  &trans
-                         &trans        &trans         &trans         &trans      &trans    &trans  &trans      &trans    &trans      &trans
+                         &trans        &trans         &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -1479,9 +1479,9 @@
 
         Nav {
             bindings = <
-&trans  &trans                          &macro_unsafe_en                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                             &none       &kp HOME  &kp UP     &kp END    &kp DELETE  &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                         &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &kp END     &trans
-&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                   &kp LC(F8)  &kp HOME  &kp PG_DN  &kp PG_UP  &kp LC(SLASH)     &trans
+&trans  &trans                          &macro_unsafe_en                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                             &none       &kp HOME  &kp UP     &kp END    &kp DELETE     &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                         &kp K_APP   &kp LEFT  &kp DOWN   &kp RIGHT  &kp END        &trans
+&trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                   &kp LC(F8)  &kp HOME  &kp PG_DN  &kp PG_UP  &kp LC(SLASH)  &trans
                                         &trans                           &trans               &trans                    &none               &none    &trans  &mo 20      &trans    &trans     &trans
             >;
         };
