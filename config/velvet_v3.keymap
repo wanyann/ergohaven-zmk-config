@@ -1758,7 +1758,7 @@
 &msc_input_listener {
     faster {
         layers = <26>;
-        input-processors = <&zip_scroll_scaler 4 1>;
+        input-processors = <&zip_scroll_scaler 2 1>;
     };
 
     slower {
