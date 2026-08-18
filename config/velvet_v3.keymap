@@ -687,9 +687,9 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&kp SPACE &kp RU_CYRILLIC_EN &kp MINUS>,
+                <&kp SPACE &kp RU_CYRILLIC_EF>,
                 <&macro_wait_time 0>,
-                <&mouse_off>,
+                <&kp RU_CYRILLIC_ZE>,
                 <&macro_tap_time 1>,
                 <&layer_off 8 &layer_off 10 &layer_on 4>;
 
