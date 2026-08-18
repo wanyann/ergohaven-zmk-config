@@ -1407,10 +1407,10 @@
 
         MouseMods {
             bindings = <
-&none  &kp Q             &kp W         &e_morph       &kp R          &kp T                     &kp Y   &trans  &trans  &trans  &kp P   &trans
-&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &kp H   &trans  &trans  &trans  &trans  &kp SQT
-&none  &kp Z             &kp X         &kp C          &kp V          &kp B                     &kp N   &trans  &trans  &trans  &trans  &trans
-                         &trans        &trans         &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&none  &kp Q             &kp W         &e_morph       &kp R          &kp T                     &kp Y   &trans  &trans     &trans   &kp P      &trans
+&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &kp H   &trans  &trans     &trans   &trans     &kp SQT
+&none  &kp Z             &kp X         &kp C          &kp V          &kp B                     &kp N   &kp M   &kp COMMA  &kp DOT  &kp SLASH  &trans
+                         &trans        &trans         &trans         &trans  &trans    &trans  &trans  &trans  &trans     &trans
             >;
         };
 
