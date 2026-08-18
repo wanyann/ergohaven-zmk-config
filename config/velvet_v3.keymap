@@ -786,7 +786,7 @@
                 <&macro_param_1to1 &msc MACRO_PLACEHOLDER>;
 
             label = "MSCL";
-            wait-ms = <100>;
+            wait-ms = <75>;
         };
 
         mod_layer: mod_layer {
