@@ -845,16 +845,17 @@
             #binding-cells = <1>;
             bindings =
                 <&macro_press>,
-                <&kp LCTRL &macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
                 <&macro_wait_time 0>,
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp LCTRL>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
                 <&macro_tap_time 1>,
                 <&layer_off 4>;
 
             label = "LKP_MOFF";
-            wait-ms = <50>;
+            wait-ms = <100>;
         };
     };
 
@@ -1427,9 +1428,9 @@
         MouseCmd {
             bindings = <
 &trans  &lkp_moff Q  &lkp_moff W  &lkp_moff E  &lkp_moff R  &lkp_moff T                    &lkp_moff Y  &lkp_moff U  &lkp_moff I      &lkp_moff O    &lkp_moff P     &trans
-&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &lkp_moff H  &none            &kp LSHFT            &kp LALT           &kp LEFT_GUI        &trans
+&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &lkp_moff H  &none        &kp LSHFT        &kp LALT       &kp LEFT_GUI    &trans
 &trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &lkp_moff N  &lkp_moff M  &lkp_moff COMMA  &lkp_moff DOT  &lkp_moff FSLH  &trans
-                         &trans           &trans           &trans           &trans           &trans    &trans  &trans           &trans           &trans               &trans
+                     &trans       &trans       &trans       &trans       &trans    &trans  &trans       &trans       &trans           &trans
             >;
         };
 
