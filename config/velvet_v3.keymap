@@ -1518,7 +1518,7 @@
 &trans  &trans  &macro_unsafe_ru  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans            &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans            &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans            &trans  &trans  &trans  &trans    &trans  &mo 17  &trans  &trans  &trans
+                &trans            &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -1536,7 +1536,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &morph_ru_com                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &morph_ru_dot                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &lt 17 SPACE   &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans         &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -1706,6 +1706,11 @@
         Nav {
             if-layers = <2 10>;
             then-layer = <11>;
+        };
+
+        Sym {
+            if-layers = <2 16>;
+            then-layer = <17>;
         };
     };
 };
