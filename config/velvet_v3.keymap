@@ -857,17 +857,14 @@
         };
 
         left_ctrl: sm_left {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings =
-                <&sk RIGHT_CONTROL>,
                 <&macro_press>,
-                <&mo 7 &mmvl MOVE_LEFT>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &mmvl MOVE_LEFT>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mmvl MOVE_LEFT &mo 7>,
-                <&macro_tap>,
-                <&kp K_CANCEL>;
+                <&mmvl MOVE_LEFT &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
 
             label = "SM_LEFT";
             wait-ms = <0>;
@@ -875,17 +872,14 @@
         };
 
         down_shift: sm_down {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings =
-                <&sk RIGHT_SHIFT>,
                 <&macro_press>,
-                <&mo 7 &mdown_morph>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &mdown_morph>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mdown_morph &mo 7>,
-                <&macro_tap>,
-                <&kp K_CANCEL>;
+                <&mdown_morph &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
 
             label = "SM_DOWN";
             wait-ms = <0>;
@@ -893,17 +887,14 @@
         };
 
         right_alt: right_alt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             bindings =
-                <&sk LALT>,
                 <&macro_press>,
-                <&mo 7 &mright_morph>,
+                <&macro_param_1to1 &mo MACRO_PLACEHOLDER &mright_morph>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&mright_morph &mo 7>,
-                <&macro_tap>,
-                <&kp K_CANCEL>;
+                <&mright_morph &macro_param_1to1 &mo MACRO_PLACEHOLDER>;
 
             label = "RIGHT_ALT";
             wait-ms = <0>;
@@ -1461,9 +1452,9 @@
 
         Mouse {
             bindings = <
-&trans  &mo 26         &mo 27         &click          &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK      &mmvl MOVE_UP  &none        &none                &trans
-&trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &left_ctrl     &mdown_morph   &right_alt   &mouse_mod LEFT_GUI  &none
-&trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) B                           &none   &scleft_morph  &scdown_morph  &scup_morph  &scright_morph       &trans
+&trans  &mo 26         &mo 27         &click          &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK      &mmvl MOVE_UP  &none         &none                &trans
+&trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &left_ctrl 7   &down_shift 7  &right_alt 7  &mouse_mod LEFT_GUI  &none
+&trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) B                           &none   &scleft_morph  &scdown_morph  &scup_morph   &scright_morph       &trans
                        &trans         &trans          &trans                &space_lt 15 0           &trans    &trans  &trans  &trans         &trans         &trans
             >;
         };
@@ -1488,10 +1479,10 @@
 
         MouseCmd {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans       &trans  &trans  &trans
-&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &trans  &down_shift  &trans  &trans  &trans
-&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans       &trans  &trans  &trans
-                     &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans       &trans
+&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans  &trans  &trans  &trans
+                     &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
