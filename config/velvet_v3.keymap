@@ -1524,9 +1524,9 @@
 
         MouseCmd {
             bindings = <
-&trans  &trans           &trans           &trans           &lkp_moff LC(R)  &lkp_moff LC(T)                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &lkp_moff LC(A)  &lkp_moff LC(S)  &lkp_moff LC(D)  &lkp_moff LC(F)  &lkp_moff LC(G)                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &lkp_moff LC(Z)  &lkp_moff LC(X)  &lkp_moff LC(C)  &lkp_moff LC(V)  &lkp_moff LC(B)                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans           &trans           &trans           &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans  &trans  &trans  &trans
                          &trans           &trans           &trans           &trans           &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
