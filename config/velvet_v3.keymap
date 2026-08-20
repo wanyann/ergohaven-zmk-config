@@ -1713,9 +1713,9 @@
 
         MouseMEH {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &none   &none   &none   &trans  &trans
-&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff RC(RS(LA(R)))  &lkp_moff RC(RS(LA(T)))                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lkp_moff RC(RS(LA(A)))  &lkp_moff RC(RS(LA(S)))  &lkp_moff RC(RS(LA(D)))  &lkp_moff RC(RS(LA(F)))  &lkp_moff RC(RS(LA(G)))                    &trans  &none   &none   &none   &trans  &trans
+&trans  &lkp_moff RC(RS(LA(Z)))  &lkp_moff RC(RS(LA(X)))  &lkp_moff RC(RS(LA(C)))  &lkp_moff RC(RS(LA(V)))  &lkp_moff RC(RS(LA(B)))                    &trans  &trans  &trans  &trans  &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
