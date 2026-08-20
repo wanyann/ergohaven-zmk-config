@@ -1668,7 +1668,7 @@
 
         MouseShift {
             bindings = <
-&trans  &trans           &trans           &mkp LCLK           &lkp_moff RS(R)  &lkp_moff RS(T)                    &trans  &trans         &trans  &trans         &trans  &trans
+&trans  &trans           &trans           &mkp LCLK        &lkp_moff RS(R)  &lkp_moff RS(T)                    &trans  &trans         &trans  &trans         &trans  &trans
 &trans  &lkp_moff RS(A)  &lkp_moff RS(S)  &lkp_moff RS(D)  &lkp_moff RS(F)  &lkp_moff RS(G)                    &trans  &left_ctrl 30  &none   &right_alt 32  &trans  &trans
 &trans  &lkp_moff RS(Z)  &lkp_moff RS(X)  &lkp_moff RS(C)  &lkp_moff RS(V)  &lkp_moff RS(B)                    &trans  &trans         &trans  &trans         &trans  &trans
                          &trans           &trans           &trans           &trans           &trans    &trans  &trans  &trans         &trans  &trans
@@ -1677,7 +1677,7 @@
 
         MouseAlt {
             bindings = <
-&trans  &trans           &trans           &mkp LCLK           &lkp_moff LA(R)  &lkp_moff LA(T)                    &trans  &trans         &trans          &trans  &trans  &trans
+&trans  &trans           &trans           &mkp LCLK        &lkp_moff LA(R)  &lkp_moff LA(T)                    &trans  &trans         &trans          &trans  &trans  &trans
 &trans  &lkp_moff LA(A)  &lkp_moff LA(S)  &lkp_moff LA(D)  &lkp_moff LA(F)  &lkp_moff LA(G)                    &trans  &left_ctrl 31  &down_shift 32  &none   &trans  &trans
 &trans  &lkp_moff LA(Z)  &lkp_moff LA(X)  &lkp_moff LA(C)  &lkp_moff LA(V)  &lkp_moff LA(B)                    &trans  &trans         &trans          &trans  &trans  &trans
                          &trans           &trans           &trans           &trans           &trans    &trans  &trans  &trans         &trans          &trans
@@ -1686,7 +1686,7 @@
 
         MouseCtrlShift {
             bindings = <
-&trans  &trans               &trans               &mkp LCLK               &lkp_moff LC(RS(R))  &lkp_moff LC(RS(T))                    &trans  &trans  &trans  &trans         &trans  &trans
+&trans  &trans               &trans               &mkp LCLK            &lkp_moff LC(RS(R))  &lkp_moff LC(RS(T))                    &trans  &trans  &trans  &trans         &trans  &trans
 &trans  &lkp_moff LC(RS(A))  &lkp_moff LC(RS(S))  &lkp_moff LC(RS(D))  &lkp_moff LC(RS(F))  &lkp_moff LC(RS(G))                    &trans  &none   &none   &right_alt 33  &trans  &trans
 &trans  &lkp_moff LC(RS(Z))  &lkp_moff LC(RS(X))  &lkp_moff LC(RS(C))  &lkp_moff LC(RS(V))  &lkp_moff LC(RS(B))                    &trans  &trans  &trans  &trans         &trans  &trans
                              &trans               &trans               &trans               &trans               &trans    &trans  &trans  &trans  &trans  &trans
@@ -1695,7 +1695,7 @@
 
         MouseCtrlAlt {
             bindings = <
-&trans  &trans               &trans               &mkp LCLK               &lkp_moff LC(LA(R))  &lkp_moff LC(LA(T))                    &trans  &trans  &trans          &trans  &trans  &trans
+&trans  &trans               &trans               &mkp LCLK            &lkp_moff LC(LA(R))  &lkp_moff LC(LA(T))                    &trans  &trans  &trans          &trans  &trans  &trans
 &trans  &lkp_moff LC(LA(A))  &lkp_moff LC(LA(S))  &lkp_moff LC(LA(D))  &lkp_moff LC(LA(F))  &lkp_moff LC(LA(G))                    &trans  &none   &down_shift 33  &none   &trans  &trans
 &trans  &lkp_moff LC(LA(Z))  &lkp_moff LC(LA(X))  &lkp_moff LC(LA(C))  &lkp_moff LC(LA(V))  &lkp_moff LC(LA(B))                    &trans  &trans  &trans          &trans  &trans  &trans
                              &trans               &trans               &trans               &trans               &trans    &trans  &trans  &trans  &trans          &trans
@@ -1704,7 +1704,7 @@
 
         MouseShiftAlt {
             bindings = <
-&trans  &trans               &trans               &mkp LCLK               &lkp_moff RS(LA(R))  &lkp_moff RS(LA(T))                    &trans  &trans         &trans  &trans  &trans  &trans
+&trans  &trans               &trans               &mkp LCLK            &lkp_moff RS(LA(R))  &lkp_moff RS(LA(T))                    &trans  &trans         &trans  &trans  &trans  &trans
 &trans  &lkp_moff RS(LA(A))  &lkp_moff RS(LA(S))  &lkp_moff RS(LA(D))  &lkp_moff RS(LA(F))  &lkp_moff RS(LA(G))                    &trans  &left_ctrl 33  &none   &none   &trans  &trans
 &trans  &lkp_moff RS(LA(Z))  &lkp_moff RS(LA(X))  &lkp_moff RS(LA(C))  &lkp_moff RS(LA(V))  &lkp_moff RS(LA(B))                    &trans  &trans         &trans  &trans  &trans  &trans
                              &trans               &trans               &trans               &trans               &trans    &trans  &trans  &trans         &trans  &trans
@@ -1713,7 +1713,7 @@
 
         MouseMEH {
             bindings = <
-&trans  &trans                   &trans                   &mkp LCLK                   &lkp_moff LC(RS(LA(R)))  &lkp_moff LC(RS(LA(T)))                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                   &trans                   &mkp LCLK                &lkp_moff LC(RS(LA(R)))  &lkp_moff LC(RS(LA(T)))                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &lkp_moff LC(RS(LA(A)))  &lkp_moff LC(RS(LA(S)))  &lkp_moff LC(RS(LA(D)))  &lkp_moff LC(RS(LA(F)))  &lkp_moff LC(RS(LA(G)))                    &trans  &none   &none   &none   &trans  &trans
 &trans  &lkp_moff LC(RS(LA(Z)))  &lkp_moff LC(RS(LA(X)))  &lkp_moff LC(RS(LA(C)))  &lkp_moff LC(RS(LA(V)))  &lkp_moff LC(RS(LA(B)))                    &trans  &trans  &trans  &trans  &trans  &trans
                                  &trans                   &trans                   &trans                   &trans                   &trans    &trans  &trans  &trans  &trans  &trans
@@ -1747,21 +1747,6 @@
         Mouse {
             if-layers = <4 2>;
             then-layer = <5>;
-        };
-
-        M1 {
-            if-layers = <8 2>;
-            then-layer = <9>;
-        };
-
-        M2 {
-            if-layers = <10 2>;
-            then-layer = <11>;
-        };
-
-        Mod {
-            if-layers = <12 2>;
-            then-layer = <13>;
         };
 
         MouseMods {
