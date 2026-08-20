@@ -1453,7 +1453,7 @@
         Mouse {
             bindings = <
 &trans  &mo 25         &mo 26         &click          &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK      &mmvl MOVE_UP   &none          &none                &trans
-&trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &left_ctrl 27  &down_shift 27  &right_alt 27  &mouse_mod LEFT_GUI  &none
+&trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &left_ctrl 27  &down_shift 28  &right_alt 29  &mouse_mod LEFT_GUI  &none
 &trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) B                           &none   &scleft_morph  &scdown_morph   &scup_morph    &scright_morph       &trans
                        &trans         &trans          &trans                &space_lt 14 0           &trans    &trans  &trans  &trans         &trans          &trans
             >;
@@ -1657,10 +1657,64 @@
             >;
         };
 
-        MouseCmd {
+        MouseCtrl {
+            bindings = <
+&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans          &trans         &trans  &trans
+&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &none   &down_shift 30  &right_alt 31  &trans  &trans
+&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans          &trans         &trans  &trans
+                     &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans          &trans
+            >;
+        };
+
+        MouseShift {
+            bindings = <
+&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans         &trans  &trans         &trans  &trans
+&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &left_ctrl 30  &none   &right_alt 32  &trans  &trans
+&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans         &trans  &trans         &trans  &trans
+                     &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans         &trans  &trans
+            >;
+        };
+
+        MouseAlt {
+            bindings = <
+&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans         &trans          &trans  &trans  &trans
+&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &left_ctrl 31  &down_shift 32  &none   &trans  &trans
+&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans         &trans          &trans  &trans  &trans
+                     &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans         &trans          &trans
+            >;
+        };
+
+        MouseCtrlShift {
+            bindings = <
+&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans  &trans         &trans  &trans
+&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &none   &none   &right_alt 33  &trans  &trans
+&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans  &trans         &trans  &trans
+                     &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        MouseCtrlAlt {
+            bindings = <
+&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans          &trans  &trans  &trans
+&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &none   &down_shift 33  &none   &trans  &trans
+&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans          &trans  &trans  &trans
+                     &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans          &trans
+            >;
+        };
+
+        MouseShiftAlt {
+            bindings = <
+&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans         &trans  &trans  &trans  &trans
+&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &left_ctrl 33  &none   &none   &trans  &trans
+&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans         &trans  &trans  &trans  &trans
+                     &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans         &trans  &trans
+            >;
+        };
+
+        MouseMEH {
             bindings = <
 &trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &none   &none   &none   &trans  &trans
 &trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans  &trans  &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans  &trans
             >;
