@@ -1462,7 +1462,7 @@
         Mouse {
             bindings = <
 &trans  &mo 26         &mo 27         &click          &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK      &mmvl MOVE_UP  &none        &none                &trans
-&trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &left_ctrl     &down_shift    &right_alt   &mouse_mod LEFT_GUI  &none
+&trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &left_ctrl     &mdown_morph   &right_alt   &mouse_mod LEFT_GUI  &none
 &trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) B                           &none   &scleft_morph  &scdown_morph  &scup_morph  &scright_morph       &trans
                        &trans         &trans          &trans                &space_lt 15 0           &trans    &trans  &trans  &trans         &trans         &trans
             >;
@@ -1488,10 +1488,10 @@
 
         MouseCmd {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans  &trans  &trans  &trans
-                     &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans       &trans  &trans  &trans
+&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &trans  &down_shift  &trans  &trans  &trans
+&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans       &trans  &trans  &trans
+                     &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans       &trans
             >;
         };
 
