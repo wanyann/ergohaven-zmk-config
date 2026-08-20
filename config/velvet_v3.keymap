@@ -14,8 +14,6 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 125
 
-#define RCT(code) APPLY_MODS(MOD_RCTL, code)
-
 &mt { flavor = "tap-preferred"; };
 
 &lt {
@@ -1661,9 +1659,9 @@
 
         MouseCtrl {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff RCT(R)  &lkp_moff RCT(T)                    &trans  &trans  &trans          &trans         &trans  &trans
-&trans  &lkp_moff RCT(A)  &lkp_moff RCT(S)  &lkp_moff RCT(D)  &lkp_moff RCT(F)  &lkp_moff RCT(G)                    &trans  &none   &down_shift 30  &right_alt 31  &trans  &trans
-&trans  &lkp_moff RCT(Z)  &lkp_moff RCT(X)  &lkp_moff RCT(C)  &lkp_moff RCT(V)  &lkp_moff RCT(B)                    &trans  &trans  &trans          &trans         &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff RC(R)  &lkp_moff RC(T)                    &trans  &trans  &trans          &trans         &trans  &trans
+&trans  &lkp_moff RC(A)  &lkp_moff RC(S)  &lkp_moff RC(D)  &lkp_moff RC(F)  &lkp_moff RC(G)                    &trans  &none   &down_shift 30  &right_alt 31  &trans  &trans
+&trans  &lkp_moff RC(Z)  &lkp_moff RC(X)  &lkp_moff RC(C)  &lkp_moff RC(V)  &lkp_moff RC(B)                    &trans  &trans  &trans          &trans         &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans          &trans
             >;
         };
@@ -1688,18 +1686,18 @@
 
         MouseCtrlShift {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff RCT(RS(R))  &lkp_moff RCT(RS(T))                    &trans  &trans  &trans  &trans         &trans  &trans
-&trans  &lkp_moff RCT(RS(A))  &lkp_moff RCT(RS(S))  &lkp_moff RCT(RS(D))  &lkp_moff RCT(RS(F))  &lkp_moff RCT(RS(G))                    &trans  &none   &none   &right_alt 33  &trans  &trans
-&trans  &lkp_moff RCT(RS(Z))  &lkp_moff RCT(RS(X))  &lkp_moff RCT(RS(C))  &lkp_moff RCT(RS(V))  &lkp_moff RCT(RS(B))                    &trans  &trans  &trans  &trans         &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff RC(RS(R))  &lkp_moff RC(RS(T))                    &trans  &trans  &trans  &trans         &trans  &trans
+&trans  &lkp_moff RC(RS(A))  &lkp_moff RC(RS(S))  &lkp_moff RC(RS(D))  &lkp_moff RC(RS(F))  &lkp_moff RC(RS(G))                    &trans  &none   &none   &right_alt 33  &trans  &trans
+&trans  &lkp_moff RC(RS(Z))  &lkp_moff RC(RS(X))  &lkp_moff RC(RS(C))  &lkp_moff RC(RS(V))  &lkp_moff RC(RS(B))                    &trans  &trans  &trans  &trans         &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         MouseCtrlAlt {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff RCT(LA(R))  &lkp_moff RCT(LA(T))                    &trans  &trans  &trans          &trans  &trans  &trans
-&trans  &lkp_moff RCT(LA(A))  &lkp_moff RCT(LA(S))  &lkp_moff RCT(LA(D))  &lkp_moff RCT(LA(F))  &lkp_moff RCT(LA(G))                    &trans  &none   &down_shift 33  &none   &trans  &trans
-&trans  &lkp_moff RCT(LA(Z))  &lkp_moff RCT(LA(X))  &lkp_moff RCT(LA(C))  &lkp_moff RCT(LA(V))  &lkp_moff RCT(LA(B))                    &trans  &trans  &trans          &trans  &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff RC(LA(R))  &lkp_moff RC(LA(T))                    &trans  &trans  &trans          &trans  &trans  &trans
+&trans  &lkp_moff RC(LA(A))  &lkp_moff RC(LA(S))  &lkp_moff RC(LA(D))  &lkp_moff RC(LA(F))  &lkp_moff RC(LA(G))                    &trans  &none   &down_shift 33  &none   &trans  &trans
+&trans  &lkp_moff RC(LA(Z))  &lkp_moff RC(LA(X))  &lkp_moff RC(LA(C))  &lkp_moff RC(LA(V))  &lkp_moff RC(LA(B))                    &trans  &trans  &trans          &trans  &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans          &trans
             >;
         };
@@ -1715,9 +1713,9 @@
 
         MouseMEH {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff RCT(RS(LA(R)))  &lkp_moff RCT(RS(LA(T)))                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &lkp_moff RCT(RS(LA(A)))  &lkp_moff RCT(RS(LA(S)))  &lkp_moff RCT(RS(LA(D)))  &lkp_moff RCT(RS(LA(F)))  &lkp_moff RCT(RS(LA(G)))                    &trans  &none   &none   &none   &trans  &trans
-&trans  &lkp_moff RCT(RS(LA(Z)))  &lkp_moff RCT(RS(LA(X)))  &lkp_moff RCT(RS(LA(C)))  &lkp_moff RCT(RS(LA(V)))  &lkp_moff RCT(RS(LA(B)))                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff RC(RS(LA(R)))  &lkp_moff RC(RS(LA(T)))                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lkp_moff RC(RS(LA(A)))  &lkp_moff RC(RS(LA(S)))  &lkp_moff RC(RS(LA(D)))  &lkp_moff RC(RS(LA(F)))  &lkp_moff RC(RS(LA(G)))                    &trans  &none   &none   &none   &trans  &trans
+&trans  &lkp_moff RC(RS(LA(Z)))  &lkp_moff RC(RS(LA(X)))  &lkp_moff RC(RS(LA(C)))  &lkp_moff RC(RS(LA(V)))  &lkp_moff RC(RS(LA(B)))                    &trans  &trans  &trans  &trans  &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
