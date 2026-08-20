@@ -1427,9 +1427,9 @@
 
         MouseCmd {
             bindings = <
-&trans  &lkp_moff Q  &lkp_moff W  &lkp_moff E  &lkp_moff R  &lkp_moff T                    &lkp_moff Y  &lkp_moff U  &lkp_moff I      &lkp_moff O    &lkp_moff P     &trans
-&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &lkp_moff H  &none        &kp LSHFT        &kp LALT       &kp LEFT_GUI    &trans
-&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &lkp_moff N  &lkp_moff M  &lkp_moff COMMA  &lkp_moff DOT  &lkp_moff FSLH  &trans
+&trans  &lkp_moff LC(Q)  &lkp_moff LC(W)  &lkp_moff LC(E)  &lkp_moff LC(R)  &lkp_moff LC(T)                    &lkp_moff LC(Y)  &lkp_moff LC(U)  &lkp_moff LC(I)      &lkp_moff LC(O)    &lkp_moff LC(P)     &trans
+&trans  &lkp_moff LC(A)  &lkp_moff LC(S)  &lkp_moff LC(D)  &lkp_moff LC(F)  &lkp_moff LC(G)                    &lkp_moff LC(H)  &none        &kp LSHFT        &kp LALT       &kp LEFT_GUI    &trans
+&trans  &lkp_moff LC(Z)  &lkp_moff LC(X)  &lkp_moff LC(C)  &lkp_moff LC(V)  &lkp_moff LC(B)                    &lkp_moff LC(N)  &lkp_moff LC(M)  &lkp_moff LC(COMMA)  &lkp_moff LC(DOT)  &lkp_moff LC(FSLH)  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans       &trans       &trans           &trans
             >;
         };
