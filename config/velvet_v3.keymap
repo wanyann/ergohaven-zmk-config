@@ -948,7 +948,7 @@
                 <&macro_release>,
                 <&mright_morph &mo 6>,
                 <&macro_tap>,
-                <&kp K_CANCEL &layer_off 4>;
+                <&kp K_CANCEL>;
 
             label = "SM_RIGHT";
             wait-ms = <0>;
