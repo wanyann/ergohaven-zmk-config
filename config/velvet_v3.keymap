@@ -1659,9 +1659,9 @@
 
         MouseCtrl {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff RC(R)  &lkp_moff RC(T)                    &trans  &trans  &trans          &trans         &trans  &trans
-&trans  &lkp_moff RC(A)  &lkp_moff RC(S)  &lkp_moff RC(D)  &lkp_moff RC(F)  &lkp_moff RC(G)                    &trans  &none   &down_shift 30  &right_alt 31  &trans  &trans
-&trans  &lkp_moff RC(Z)  &lkp_moff RC(X)  &lkp_moff RC(C)  &lkp_moff RC(V)  &lkp_moff RC(B)                    &trans  &trans  &trans          &trans         &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff LC(R)  &lkp_moff LC(T)                    &trans  &trans  &trans          &trans         &trans  &trans
+&trans  &lkp_moff LC(A)  &lkp_moff LC(S)  &lkp_moff LC(D)  &lkp_moff LC(F)  &lkp_moff LC(G)                    &trans  &none   &down_shift 30  &right_alt 31  &trans  &trans
+&trans  &lkp_moff LC(Z)  &lkp_moff LC(X)  &lkp_moff LC(C)  &lkp_moff LC(V)  &lkp_moff LC(B)                    &trans  &trans  &trans          &trans         &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans          &trans
             >;
         };
@@ -1686,18 +1686,18 @@
 
         MouseCtrlShift {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff RC(RS(R))  &lkp_moff RC(RS(T))                    &trans  &trans  &trans  &trans         &trans  &trans
-&trans  &lkp_moff RC(RS(A))  &lkp_moff RC(RS(S))  &lkp_moff RC(RS(D))  &lkp_moff RC(RS(F))  &lkp_moff RC(RS(G))                    &trans  &none   &none   &right_alt 33  &trans  &trans
-&trans  &lkp_moff RC(RS(Z))  &lkp_moff RC(RS(X))  &lkp_moff RC(RS(C))  &lkp_moff RC(RS(V))  &lkp_moff RC(RS(B))                    &trans  &trans  &trans  &trans         &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff LC(RS(R))  &lkp_moff LC(RS(T))                    &trans  &trans  &trans  &trans         &trans  &trans
+&trans  &lkp_moff LC(RS(A))  &lkp_moff LC(RS(S))  &lkp_moff LC(RS(D))  &lkp_moff LC(RS(F))  &lkp_moff LC(RS(G))                    &trans  &none   &none   &right_alt 33  &trans  &trans
+&trans  &lkp_moff LC(RS(Z))  &lkp_moff LC(RS(X))  &lkp_moff LC(RS(C))  &lkp_moff LC(RS(V))  &lkp_moff LC(RS(B))                    &trans  &trans  &trans  &trans         &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         MouseCtrlAlt {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff RC(LA(R))  &lkp_moff RC(LA(T))                    &trans  &trans  &trans          &trans  &trans  &trans
-&trans  &lkp_moff RC(LA(A))  &lkp_moff RC(LA(S))  &lkp_moff RC(LA(D))  &lkp_moff RC(LA(F))  &lkp_moff RC(LA(G))                    &trans  &none   &down_shift 33  &none   &trans  &trans
-&trans  &lkp_moff RC(LA(Z))  &lkp_moff RC(LA(X))  &lkp_moff RC(LA(C))  &lkp_moff RC(LA(V))  &lkp_moff RC(LA(B))                    &trans  &trans  &trans          &trans  &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff LC(LA(R))  &lkp_moff LC(LA(T))                    &trans  &trans  &trans          &trans  &trans  &trans
+&trans  &lkp_moff LC(LA(A))  &lkp_moff LC(LA(S))  &lkp_moff LC(LA(D))  &lkp_moff LC(LA(F))  &lkp_moff LC(LA(G))                    &trans  &none   &down_shift 33  &none   &trans  &trans
+&trans  &lkp_moff LC(LA(Z))  &lkp_moff LC(LA(X))  &lkp_moff LC(LA(C))  &lkp_moff LC(LA(V))  &lkp_moff LC(LA(B))                    &trans  &trans  &trans          &trans  &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans          &trans
             >;
         };
@@ -1713,9 +1713,9 @@
 
         MouseMEH {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff RC(RS(LA(R)))  &lkp_moff RC(RS(LA(T)))                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &lkp_moff RC(RS(LA(A)))  &lkp_moff RC(RS(LA(S)))  &lkp_moff RC(RS(LA(D)))  &lkp_moff RC(RS(LA(F)))  &lkp_moff RC(RS(LA(G)))                    &trans  &none   &none   &none   &trans  &trans
-&trans  &lkp_moff RC(RS(LA(Z)))  &lkp_moff RC(RS(LA(X)))  &lkp_moff RC(RS(LA(C)))  &lkp_moff RC(RS(LA(V)))  &lkp_moff RC(RS(LA(B)))                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff LC(RS(LA(R)))  &lkp_moff LC(RS(LA(T)))                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &lkp_moff LC(RS(LA(A)))  &lkp_moff LC(RS(LA(S)))  &lkp_moff LC(RS(LA(D)))  &lkp_moff LC(RS(LA(F)))  &lkp_moff LC(RS(LA(G)))                    &trans  &none   &none   &none   &trans  &trans
+&trans  &lkp_moff LC(RS(LA(Z)))  &lkp_moff LC(RS(LA(X)))  &lkp_moff LC(RS(LA(C)))  &lkp_moff LC(RS(LA(V)))  &lkp_moff LC(RS(LA(B)))                    &trans  &trans  &trans  &trans  &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
