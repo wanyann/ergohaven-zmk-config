@@ -1409,6 +1409,15 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        click: click {
+            compatible = "zmk,behavior-mod-morph";
+            label = "CLICK";
+            bindings = <&mkp LCLK>, <&mkp LCLK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
     };
 
     keymap {
@@ -1452,7 +1461,7 @@
 
         Mouse {
             bindings = <
-&trans  &mo 26         &mo 27         &mkp LCLK       &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK      &mmvl MOVE_UP  &none        &none                &trans
+&trans  &mo 26         &mo 27         &click          &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK      &mmvl MOVE_UP  &none        &none                &trans
 &trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &left_ctrl     &down_shift    &right_alt   &mouse_mod LEFT_GUI  &none
 &trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) B                           &none   &scleft_morph  &scdown_morph  &scup_morph  &scright_morph       &trans
                        &trans         &trans          &trans                &space_lt 15 0           &trans    &trans  &trans  &trans         &trans         &trans
