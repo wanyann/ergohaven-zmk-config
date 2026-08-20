@@ -1659,9 +1659,9 @@
 
         MouseCtrl {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans          &trans         &trans  &trans
-&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &none   &down_shift 30  &right_alt 31  &trans  &trans
-&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans          &trans         &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff RC(R)  &lkp_moff RC(T)                    &trans  &trans  &trans          &trans         &trans  &trans
+&trans  &lkp_moff RC(A)  &lkp_moff RC(S)  &lkp_moff RC(D)  &lkp_moff RC(F)  &lkp_moff RC(G)                    &trans  &none   &down_shift 30  &right_alt 31  &trans  &trans
+&trans  &lkp_moff RC(Z)  &lkp_moff RC(X)  &lkp_moff RC(C)  &lkp_moff RC(V)  &lkp_moff RC(B)                    &trans  &trans  &trans          &trans         &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans          &trans
             >;
         };
