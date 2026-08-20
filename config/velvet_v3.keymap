@@ -1728,24 +1728,24 @@
 
 &msc_input_listener {
     faster {
-        layers = <26>;
+        layers = <22>;
         input-processors = <&zip_scroll_scaler 2 1>;
     };
 
     slower {
-        layers = <25>;
+        layers = <21>;
         input-processors = <&zip_scroll_scaler 1 3>;
     };
 };
 
 &mmv_input_listener {
     faster {
-        layers = <26>;
+        layers = <22>;
         input-processors = <&zip_xy_scaler 4 1>, <&zip_inertia>;
     };
 
     slower {
-        layers = <25>;
+        layers = <21>;
         input-processors = <&zip_xy_scaler 1 3>, <&zip_inertia>;
     };
 };
