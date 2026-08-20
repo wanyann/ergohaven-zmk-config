@@ -856,7 +856,7 @@
             label = "MOUSE_MOD";
         };
 
-        sm_left: sm_left {
+        left_ctrl: sm_left {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -874,7 +874,7 @@
             tap-ms = <1>;
         };
 
-        sm_down: sm_down {
+        down_shift: sm_down {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -892,7 +892,7 @@
             tap-ms = <1>;
         };
 
-        sm_right: sm_right {
+        right_alt: right_alt {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
@@ -905,7 +905,7 @@
                 <&macro_tap>,
                 <&kp K_CANCEL>;
 
-            label = "SM_RIGHT";
+            label = "RIGHT_ALT";
             wait-ms = <0>;
             tap-ms = <1>;
         };
@@ -1453,7 +1453,7 @@
         Mouse {
             bindings = <
 &trans  &mo 26         &mo 27         &mkp LCLK       &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK      &mmvl MOVE_UP  &none        &none                &trans
-&trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &sm_left       &sm_down       &sm_right    &mouse_mod LEFT_GUI  &none
+&trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &left_ctrl     &down_shift    &right_alt   &mouse_mod LEFT_GUI  &none
 &trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) B                           &none   &scleft_morph  &scdown_morph  &scup_morph  &scright_morph       &trans
                        &trans         &trans          &trans                &space_lt 15 0           &trans    &trans  &trans  &trans         &trans         &trans
             >;
