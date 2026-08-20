@@ -1677,9 +1677,9 @@
 
         MouseAlt {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans         &trans          &trans  &trans  &trans
-&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &left_ctrl 31  &down_shift 32  &none   &trans  &trans
-&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans         &trans          &trans  &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff LA(R)  &lkp_moff LA(T)                    &trans  &trans         &trans          &trans  &trans  &trans
+&trans  &lkp_moff LA(A)  &lkp_moff LA(S)  &lkp_moff LA(D)  &lkp_moff LA(F)  &lkp_moff LA(G)                    &trans  &left_ctrl 31  &down_shift 32  &none   &trans  &trans
+&trans  &lkp_moff LA(Z)  &lkp_moff LA(X)  &lkp_moff LA(C)  &lkp_moff LA(V)  &lkp_moff LA(B)                    &trans  &trans         &trans          &trans  &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans         &trans          &trans
             >;
         };
