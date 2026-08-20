@@ -848,14 +848,13 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_pause_for_release>,
                 <&macro_release>,
-                <&macro_param_1to1>,
                 <&macro_wait_time 0>,
-                <&kp MACRO_PLACEHOLDER>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
                 <&layer_off 4>;
 
             label = "LKP_MOFF";
-            wait-ms = <50>;
+            wait-ms = <75>;
         };
     };
 
@@ -1428,9 +1427,9 @@
         MouseCmd {
             bindings = <
 &trans  &lkp_moff LC(Q)  &lkp_moff LC(W)  &lkp_moff LC(E)  &lkp_moff LC(R)  &lkp_moff LC(T)                    &lkp_moff LC(Y)  &lkp_moff LC(U)  &lkp_moff LC(I)      &lkp_moff LC(O)    &lkp_moff LC(P)     &trans
-&trans  &lkp_moff LC(A)  &lkp_moff LC(S)  &lkp_moff LC(D)  &lkp_moff LC(F)  &lkp_moff LC(G)                    &lkp_moff LC(H)  &none           &kp LSHFT           &kp LALT          &kp LEFT_GUI       &trans
+&trans  &lkp_moff LC(A)  &lkp_moff LC(S)  &lkp_moff LC(D)  &lkp_moff LC(F)  &lkp_moff LC(G)                    &lkp_moff LC(H)  &none            &kp LSHFT            &kp LALT           &kp LEFT_GUI        &trans
 &trans  &lkp_moff LC(Z)  &lkp_moff LC(X)  &lkp_moff LC(C)  &lkp_moff LC(V)  &lkp_moff LC(B)                    &lkp_moff LC(N)  &lkp_moff LC(M)  &lkp_moff LC(COMMA)  &lkp_moff LC(DOT)  &lkp_moff LC(FSLH)  &trans
-                        &trans          &trans          &trans          &trans          &trans    &trans  &trans          &trans          &trans              &trans
+                         &trans           &trans           &trans           &trans           &trans    &trans  &trans           &trans           &trans               &trans
             >;
         };
 
