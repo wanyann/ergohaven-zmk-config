@@ -1668,9 +1668,9 @@
 
         MouseShift {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans         &trans  &trans         &trans  &trans
-&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &left_ctrl 30  &none   &right_alt 32  &trans  &trans
-&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans         &trans  &trans         &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff RS(R)  &lkp_moff RS(T)                    &trans  &trans         &trans  &trans         &trans  &trans
+&trans  &lkp_moff RS(A)  &lkp_moff RS(S)  &lkp_moff RS(D)  &lkp_moff RS(F)  &lkp_moff RS(G)                    &trans  &left_ctrl 30  &none   &right_alt 32  &trans  &trans
+&trans  &lkp_moff RS(Z)  &lkp_moff RS(X)  &lkp_moff RS(C)  &lkp_moff RS(V)  &lkp_moff RS(B)                    &trans  &trans         &trans  &trans         &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans         &trans  &trans
             >;
         };
