@@ -1452,7 +1452,7 @@
 
         Mouse {
             bindings = <
-&trans  &mo 21         &mo 22         &click          &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK      &mmvl MOVE_UP   &none          &none                &trans
+&trans  &mo 21         &mo 22         &mkp LCLK       &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK      &mmvl MOVE_UP   &none          &none                &trans
 &trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &left_ctrl 23  &down_shift 24  &right_alt 25  &mouse_mod LEFT_GUI  &none
 &trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) B                           &none   &scleft_morph  &scdown_morph   &scup_morph    &scright_morph       &trans
                        &trans         &trans          &trans                &space_lt 10 0           &trans    &trans  &trans  &trans         &trans          &trans
