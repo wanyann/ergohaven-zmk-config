@@ -1623,10 +1623,10 @@
 
         OS {
             bindings = <
-&trans       &bt_set_en 2  &kp LA(LC(N1))  &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &none    &trans  &trans  &bt BT_CLR  &trans
-&trans       &bt_set_en 1  &kp LC(RIGHT)   &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24  &trans  &trans  &soft_off   &trans
-&bootloader  &bt_set_en 0  &none           &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23  &trans  &trans  &trans      &bootloader
-                           &trans          &trans                    &trans                &trans                &trans    &trans  &trans        &trans   &trans  &trans
+&trans       &bt_set_en 2  &kp LA(LC(N1))    &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &none    &trans  &trans  &bt BT_CLR  &trans
+&trans       &bt_set_en 1  &kp C_PLAY_PAUSE  &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24  &trans  &trans  &soft_off   &trans
+&bootloader  &bt_set_en 0  &none             &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23  &trans  &trans  &trans      &bootloader
+                           &trans            &trans                    &trans                &trans                &trans    &trans  &trans        &trans   &trans  &trans
             >;
         };
 
