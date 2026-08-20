@@ -1748,11 +1748,6 @@
             if-layers = <4 2>;
             then-layer = <5>;
         };
-
-        MouseMods {
-            if-layers = <6 2>;
-            then-layer = <7>;
-        };
     };
 };
 
