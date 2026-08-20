@@ -5,10 +5,10 @@ include:
     cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
     keymap: velvet_v3
     artifact-name: phenom_mini_left
-  - board: rpi_pico
-    shield: phenom_mini_right
-    artifact-name: phenom_mini_right
-    keymap: velvet_v3
+  # - board: rpi_pico
+  #   shield: phenom_mini_right
+  #   artifact-name: phenom_mini_right
+  #   keymap: velvet_v3
   # - board: rpi_pico
   #   shield: ergohaven_hpd_v2_left
   #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
@@ -24,9 +24,9 @@ include:
 
   # - board: ergohaven
   #   shield: velvet_v3_right
-  - board: ergohaven
-    shield: velvet_v3_qube qube dongle_screen
-    artifact-name: velvet_v3_qube-ergohaven-zmk
+  # - board: ergohaven
+  #   shield: velvet_v3_qube qube dongle_screen
+  #   artifact-name: velvet_v3_qube-ergohaven-zmk
 
   # - board: ergohaven
   #   shield: velvet_v3_left_qube
