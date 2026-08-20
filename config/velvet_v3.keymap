@@ -1686,18 +1686,18 @@
 
         MouseCtrlShift {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans  &trans         &trans  &trans
-&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &none   &none   &right_alt 33  &trans  &trans
-&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans  &trans         &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff RC(RS(R))  &lkp_moff RC(RS(T))                    &trans  &trans  &trans  &trans         &trans  &trans
+&trans  &lkp_moff RC(RS(A))  &lkp_moff RC(RS(S))  &lkp_moff RC(RS(D))  &lkp_moff RC(RS(F))  &lkp_moff RC(RS(G))                    &trans  &none   &none   &right_alt 33  &trans  &trans
+&trans  &lkp_moff RC(RS(Z))  &lkp_moff RC(RS(X))  &lkp_moff RC(RS(C))  &lkp_moff RC(RS(V))  &lkp_moff RC(RS(B))                    &trans  &trans  &trans  &trans         &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         MouseCtrlAlt {
             bindings = <
-&trans  &trans       &trans       &trans       &lkp_moff R  &lkp_moff T                    &trans  &trans  &trans          &trans  &trans  &trans
-&trans  &lkp_moff A  &lkp_moff S  &lkp_moff D  &lkp_moff F  &lkp_moff G                    &trans  &none   &down_shift 33  &none   &trans  &trans
-&trans  &lkp_moff Z  &lkp_moff X  &lkp_moff C  &lkp_moff V  &lkp_moff B                    &trans  &trans  &trans          &trans  &trans  &trans
+&trans  &trans       &trans       &trans       &lkp_moff RC(LA(R))  &lkp_moff RC(LA(T))                    &trans  &trans  &trans          &trans  &trans  &trans
+&trans  &lkp_moff RC(LA(A))  &lkp_moff RC(LA(S))  &lkp_moff RC(LA(D))  &lkp_moff RC(LA(F))  &lkp_moff RC(LA(G))                    &trans  &none   &down_shift 33  &none   &trans  &trans
+&trans  &lkp_moff RC(LA(Z))  &lkp_moff RC(LA(X))  &lkp_moff RC(LA(C))  &lkp_moff RC(LA(V))  &lkp_moff RC(LA(B))                    &trans  &trans  &trans          &trans  &trans  &trans
                      &trans       &trans       &trans       &trans       &trans    &trans  &trans  &trans  &trans          &trans
             >;
         };
