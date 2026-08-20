@@ -1409,10 +1409,10 @@
 
         MouseCmd {
             bindings = <
-&trans  &long_kp LC(Q)  &long_kp LC(W)   &long_kp LC(E)   &long_kp LC(R)   &long_kp LC(T)                        &long_kp LC(Y)   &long_kp LC(U)   &long_kp LC(I)      &long_kp LC(O)    &long_kp LC(P)     &trans
-&trans  &long_kp LC(A)  &long_kp LC(S)   &long_kp LC(D)   &long_kp LC(F)   &long_kp LC(G)                        &long_kp LC(H)   &none   &long_kp LC(K)      &long_kp LC(L)    &long_kp LC(SEMI)  &trans
-&trans  &long_kp LC(Z)  &long_kp LC(X)   &long_kp LC(C)   &long_kp LC(V)   &long_kp LC(B)                    &long_kp LC(N)   &long_kp LC(M)   &long_kp LC(COMMA)  &long_kp LC(DOT)  &long_kp LC(FSLH)  &trans
-               &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans     &trans
+&trans  &long_kp LC(Q)  &long_kp LC(W)  &long_kp LC(E)  &long_kp LC(R)  &long_kp LC(T)                    &long_kp LC(Y)  &long_kp LC(U)  &long_kp LC(I)      &long_kp LC(O)    &long_kp LC(P)     &trans
+&trans  &long_kp LC(A)  &long_kp LC(S)  &long_kp LC(D)  &long_kp LC(F)  &long_kp LC(G)                    &long_kp LC(H)  &none           &kp LSHFT           &kp LALT          &kp LEFT_GUI       &trans
+&trans  &long_kp LC(Z)  &long_kp LC(X)  &long_kp LC(C)  &long_kp LC(V)  &long_kp LC(B)                    &long_kp LC(N)  &long_kp LC(M)  &long_kp LC(COMMA)  &long_kp LC(DOT)  &long_kp LC(FSLH)  &trans
+                        &trans          &trans          &trans          &trans          &trans    &trans  &trans          &trans          &trans              &trans
             >;
         };
 
