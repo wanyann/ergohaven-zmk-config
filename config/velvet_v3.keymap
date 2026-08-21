@@ -274,7 +274,7 @@
         combo_dollar_en {
             bindings = <&kp DOLLAR>;
             key-positions = <19 20 21>;
-            layers = <0 1 12 16>;
+            layers = <0 1 12 16 4>;
         };
 
         combo_hash_ru {
@@ -286,7 +286,7 @@
         combo_hash_en {
             bindings = <&kp HASH>;
             key-positions = <26 27 28>;
-            layers = <0 1 12 16>;
+            layers = <0 1 12 16 4>;
         };
 
         combo_equal {
