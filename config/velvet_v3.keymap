@@ -131,14 +131,14 @@
             bindings = <&kp RU_ASTERISK>;
             timeout-ms = <30>;
             key-positions = <7 9 8>;
-            layers = <2 3 18 14>;
+            layers = <2 3 18 14 5>;
         };
 
         combo_asterisk_en {
             bindings = <&kp ASTERISK>;
             timeout-ms = <30>;
             key-positions = <7 8 9>;
-            layers = <0 1 13 17>;
+            layers = <0 1 13 17 4>;
         };
 
         combo_capsword_en {
@@ -179,14 +179,14 @@
             bindings = <&braces_ru>;
             key-positions = <19 21>;
             timeout-ms = <25>;
-            layers = <2 3 18>;
+            layers = <2 3 18 5>;
             require-prior-idle-ms = <50>;
         };
 
         combo_brackets_en {
             bindings = <&brackets_en>;
             key-positions = <7 9>;
-            layers = <0 1 17>;
+            layers = <0 1 17 4>;
             timeout-ms = <30>;
             require-prior-idle-ms = <30>;
         };
@@ -194,7 +194,7 @@
         combo_brackets_ru {
             bindings = <&brackets_ru>;
             key-positions = <7 9>;
-            layers = <2 3 18>;
+            layers = <2 3 18 5>;
             timeout-ms = <30>;
         };
 
@@ -208,67 +208,67 @@
         combo_ru_at {
             bindings = <&en_kp AT>;
             key-positions = <14 15 16>;
-            layers = <2 3 18>;
+            layers = <2 3 18 5>;
         };
 
         combo_en_at {
             bindings = <&kp AT>;
             key-positions = <16 15 14>;
-            layers = <0 1 17>;
+            layers = <0 1 17 4>;
         };
 
         combo_quotes_en {
             bindings = <&quote_morph_en>;
             key-positions = <27 28>;
-            layers = <0 1 13 17>;
+            layers = <0 1 13 17 4>;
         };
 
         combo_quotes_ru {
             bindings = <&quote_morph_ru>;
             key-positions = <27 28>;
-            layers = <2 3 18 14>;
+            layers = <2 3 18 14 5>;
         };
 
         combo_slash_ru {
             bindings = <&slash_morph_ru>;
             key-positions = <3 4>;
-            layers = <2 3 14 18>;
+            layers = <2 3 14 18 5>;
         };
 
         combo_slash_en {
             bindings = <&slash_morph_en>;
             key-positions = <3 4>;
-            layers = <0 1 13 17>;
+            layers = <0 1 13 17 4>;
         };
 
         combo_arrow_ru {
             bindings = <&arrow_ru>;
             key-positions = <31 32 33>;
-            layers = <2 3 14 18>;
+            layers = <2 3 14 18 5>;
         };
 
         combo_arrow_en {
             bindings = <&arrow_en>;
             key-positions = <31 33 32>;
-            layers = <0 1 13 17>;
+            layers = <0 1 13 17 4>;
         };
 
         combo_and_ru {
             bindings = <&en_kp AMPERSAND>;
             key-positions = <2 3 4>;
-            layers = <2 3 14 18>;
+            layers = <2 3 14 18 5>;
         };
 
         combo_and_en {
             bindings = <&kp AMPERSAND>;
             key-positions = <2 3 4>;
-            layers = <0 1 13 17>;
+            layers = <0 1 13 17 4>;
         };
 
         combo_dollar_ru {
             bindings = <&en_kp DOLLAR>;
             key-positions = <19 20 21>;
-            layers = <2 3 14 18>;
+            layers = <2 3 14 18 5>;
         };
 
         combo_dollar_en {
@@ -280,7 +280,7 @@
         combo_hash_ru {
             bindings = <&en_kp HASH>;
             key-positions = <26 27 28>;
-            layers = <2 3 14 18>;
+            layers = <2 3 14 18 5>;
         };
 
         combo_hash_en {
