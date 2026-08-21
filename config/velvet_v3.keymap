@@ -617,12 +617,12 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap_time 1>,
-                <&layer_on 4 &layer_off 8>;
+                <&layer_on 4 &layer_off 8>,
+                <&macro_tap_time 15>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "KP_M2";
-            tap-ms = <15>;
+            tap-ms = <1>;
             wait-ms = <0>;
         };
 
@@ -664,12 +664,12 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
-                <&macro_tap_time 1>,
-                <&layer_on 8 &layer_off 7>;
+                <&layer_on 8 &layer_off 7>,
+                <&macro_tap_time 15>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "KP_M1";
-            tap-ms = <15>;
+            tap-ms = <1>;
             wait-ms = <0>;
         };
 
