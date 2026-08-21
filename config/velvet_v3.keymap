@@ -622,7 +622,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
-                <&layer_off 7 &layer_on 4>;
+                <&layer_on 4 &layer_off 7>;
 
             label = "KP_M2";
             tap-ms = <15>;
@@ -635,7 +635,7 @@
             bindings =
                 <&kp TAB>,
                 <&macro_tap_time 1>,
-                <&layer_off 7 &layer_on 6>;
+                <&layer_on 6 &layer_off 7>;
 
             label = "MOUSE_BACK";
         };
@@ -669,7 +669,7 @@
             bindings =
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
                 <&macro_tap_time 1>,
-                <&layer_off 6 &layer_on 7>;
+                <&layer_on 7 &layer_off 6>;
 
             label = "KP_M1";
             tap-ms = <15>;
@@ -691,7 +691,7 @@
                 <&macro_wait_time 0>,
                 <&kp RU_CYRILLIC_ZE>,
                 <&macro_tap_time 1>,
-                <&layer_off 6 &layer_off 7 &layer_on 4>;
+                <&layer_on 4 &layer_off 6 &layer_off 7>;
 
             label = "MS_SET";
         };
@@ -820,7 +820,7 @@
         switch_mon: switch_mon {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &layer_off 7 &layer_on 6>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &layer_on 6 &layer_off 7>;
             label = "SWITCH_MON";
             wait-ms = <0>;
         };
