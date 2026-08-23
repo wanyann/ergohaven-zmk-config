@@ -1344,7 +1344,7 @@
         moff_mt: moff_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "MOFF_MT";
-            bindings = <&moff_kp>, <&kp>;
+            bindings = <&moff_kp>, <&moff_kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
