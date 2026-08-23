@@ -1415,6 +1415,13 @@
             #binding-cells = <0>;
             mods = <(MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
         };
+
+        shift_td: shift_td {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHIFT_TD";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp LC(LS(F))>;
+        };
     };
 
     keymap {
@@ -1522,7 +1529,7 @@
         Nav {
             bindings = <
 &trans  &trans                          &macro_unsafe_en                 &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                             &none       &kp LA(LS(S))  &kp UP     &kp END    &kp DELETE  &trans
-&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHFT            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                         &kp K_APP   &kp LEFT       &kp DOWN   &kp RIGHT  &kp END     &trans
+&trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &shift_td            &mod_dtap LCTRL LEFT_GUI  &zeros_macro                         &kp K_APP   &kp LEFT       &kp DOWN   &kp RIGHT  &kp END     &trans
 &trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                   &kp LC(F8)  &kp HOME       &kp PG_DN  &kp PG_UP  &trans      &trans
                                         &trans                           &trans               &trans                    &mo 11              &none    &trans  &mo 13      &trans         &trans     &trans
             >;
