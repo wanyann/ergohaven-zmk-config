@@ -1459,18 +1459,18 @@
         Mouse {
             bindings = <
 &trans  &mo 22         &mo 23         &mkp LCLK       &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK      &mmvl MOVE_UP   &none          &none                &trans
-&trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &mkpoff_hold LC(F) RCLK                    &none   &left_ctrl 24  &down_shift 25  &right_alt 26  &mouse_mod LEFT_GUI  &none
-&trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) B                           &none   &scleft_morph  &scdown_morph   &scup_morph    &scright_morph       &trans
+&trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &moff_mt LC(F) COMMA                       &none   &left_ctrl 24  &down_shift 25  &right_alt 26  &mouse_mod LEFT_GUI  &none
+&trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) DOT                         &none   &scleft_morph  &scdown_morph   &scup_morph    &scright_morph       &trans
                        &trans         &trans          &trans                &space_lt 11 0           &trans    &trans  &trans  &trans         &trans          &trans
             >;
         };
 
         Mouse_ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &moff_mt LC(F) RU_COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &moff_mt LG(V) RU_DOT                      &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans                   &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
