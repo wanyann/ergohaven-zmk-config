@@ -515,7 +515,7 @@
                 <&macro_param_1to1 &kp MACRO_PLACEHOLDER>;
 
             label = "LONG_KP";
-            wait-ms = <50>;
+            wait-ms = <75>;
         };
 
         bt_set: bt_set {
