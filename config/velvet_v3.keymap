@@ -59,7 +59,6 @@
             bindings = <&long_kp ENTER>;
             key-positions = <3 2>;
             require-prior-idle-ms = <30>;
-            timeout-ms = <30>;
         };
 
         combo_tab {
@@ -73,20 +72,17 @@
             bindings = <&long_kp ESC>;
             key-positions = <26 27>;
             require-prior-idle-ms = <30>;
-            timeout-ms = <30>;
         };
 
         combo_ru {
             bindings = <&layer_ru>;
             key-positions = <15 16>;
-            timeout-ms = <30>;
             require-prior-idle-ms = <30>;
         };
 
         combo_en {
             bindings = <&layer_en>;
             key-positions = <19 20>;
-            timeout-ms = <30>;
             require-prior-idle-ms = <30>;
         };
 
@@ -100,7 +96,7 @@
 
         combo_lessgreater_en {
             bindings = <&less_greater_en>;
-            require-prior-idle-ms = <30>;
+            require-prior-idle-ms = <20>;
             key-positions = <31 33>;
             layers = <0 1 17>;
         };
@@ -123,20 +119,18 @@
         combo_braces_en {
             bindings = <&braces_en>;
             key-positions = <19 21>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <20>;
             layers = <0 1 17>;
         };
 
         combo_asterisk_ru {
             bindings = <&kp RU_ASTERISK>;
-            timeout-ms = <30>;
             key-positions = <7 9 8>;
             layers = <2 3 18 14 5>;
         };
 
         combo_asterisk_en {
             bindings = <&kp ASTERISK>;
-            timeout-ms = <30>;
             key-positions = <7 8 9>;
             layers = <0 1 13 17 4>;
         };
@@ -171,16 +165,14 @@
         parentheses {
             bindings = <&parentheses>;
             key-positions = <14 16>;
-            timeout-ms = <30>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <20>;
         };
 
         combo_braces_ru {
             bindings = <&braces_ru>;
             key-positions = <19 21>;
-            timeout-ms = <25>;
             layers = <2 3 18 5>;
-            require-prior-idle-ms = <50>;
+            require-prior-idle-ms = <20>;
         };
 
         combo_brackets_en {
@@ -195,14 +187,12 @@
             bindings = <&brackets_ru>;
             key-positions = <7 9>;
             layers = <2 3 18 5>;
-            timeout-ms = <30>;
         };
 
         combo_minus {
             bindings = <&kp MINUS>;
             key-positions = <31 32>;
-            require-prior-idle-ms = <30>;
-            timeout-ms = <30>;
+            require-prior-idle-ms = <20>;
         };
 
         combo_ru_at {
