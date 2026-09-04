@@ -22,6 +22,5 @@ manifest:
     - name: zmk-sm-td
       remote: wanyann
       revision: main
-
   self:
     path: config
