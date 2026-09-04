@@ -19,5 +19,9 @@ manifest:
     - name: zmk-input-inertia
       remote: wanyann
       revision: main
+    - name: zmk-sm-td
+      remote: wanyann
+      revision: main
+
   self:
     path: config
