@@ -1430,7 +1430,7 @@
         En_CW {
             bindings = <
 &trans            &kp LS(Q)                     &kp LS(W)                     &kp LS(U)                  &mt LC(R) LS(A)         &mt LC(T) K_CANCEL                        &kp LS(Z)     &kp LS(V)          &kp LS(K)                  &kp LS(D)            &kp LS(K_CANCEL)          &trans
-&kp LS(K_CANCEL)  &hrml_slow_en LEFT_GUI LS(C)  &hrml_slow_en LEFT_ALT LS(I)  &sm_td_mt LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)       &en_com_mt LC(F) 0                        &kp LS(L)     &hrml RCTRL LS(N)  &sm_td_mt LEFT_SHIFT LS(T)  &hrosm_r RALT LS(S)  &hrml_slow_en RGUI LS(H)  &kp LS(K_CANCEL)
+&kp LS(K_CANCEL)  &hrml_slow_en LEFT_GUI LS(C)  &hrml_slow_en LEFT_ALT LS(I)  &hrosm_r LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)       &en_com_mt LC(F) 0                        &kp LS(L)     &hrml RCTRL LS(N)  &hrosm_r LEFT_SHIFT LS(T)  &hrosm_r RALT LS(S)  &hrml_slow_en RGUI LS(H)  &kp LS(K_CANCEL)
 &trans            &mt LC(Z) LS(F)               &mt LC(X) LS(Y)               &mt LC(C) LS(X)            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                        &kp LS(B)     &kp LS(M)          &kp LS(P)                  &kp LS(G)            &mt LC(SLASH) LS(J)       &trans
                                                 &trans                        &trans                     &trans                  &en_lt_cw_off 11 SPACE  &sl 15    &trans  &lt 13 LS(R)  &trans             &trans                     &trans
             >;
@@ -1439,7 +1439,7 @@
         Ru {
             bindings = <
 &trans             &kp RU_CYRILLIC_TSE                         &soft_sign                            &kp RU_CYRILLIC_YA                  &mt LC(R) RU_CYRILLIC_A     &mt LC(T) RU_CYRILLIC_YU                    &kp RU_CYRILLIC_ZE     &kp RU_CYRILLIC_VE          &kp RU_CYRILLIC_KA                  &kp RU_CYRILLIC_DE            &kp RU_CYRILLIC_SHCHA               &trans
-&kp RU_CYRILLIC_E  &hrml_slow_en LEFT_GUI RU_CYRILLIC_SHORT_I  &hrml_slow_en LEFT_ALT RU_CYRILLIC_I  &hrosm_l LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &ru_com_mt LC(F) 0                          &kp RU_CYRILLIC_EL     &hrml RCTRL RU_CYRILLIC_EN  &hrosm_r LEFT_SHIFT RU_CYRILLIC_TE  &hrosm_r RALT RU_CYRILLIC_ES  &hrml_slow_en RGUI RU_CYRILLIC_CHE  &kp RU_CYRILLIC_SHA
+&kp RU_CYRILLIC_E  &hrml_slow_en LEFT_GUI RU_CYRILLIC_SHORT_I  &hrml_slow_en LEFT_ALT RU_CYRILLIC_I  &sm_td_mt LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &ru_com_mt LC(F) 0                          &kp RU_CYRILLIC_EL     &hrml RCTRL RU_CYRILLIC_EN  &sm_td_mt LEFT_SHIFT RU_CYRILLIC_TE  &hrosm_r RALT RU_CYRILLIC_ES  &hrml_slow_en RGUI RU_CYRILLIC_CHE  &kp RU_CYRILLIC_SHA
 &trans             &mt LC(Z) RU_CYRILLIC_EF                    &mt LC(X) RU_CYRILLIC_U               &mt LC(C) RU_CYRILLIC_HA            &mt LC(V) RU_CYRILLIC_YERU  &ru_dot_mt LG(V) 0                          &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM          &kp RU_CYRILLIC_PE                  &kp RU_CYRILLIC_GHE           &mt LC(SLASH) RU_CYRILLIC_ZHE       &trans
                                                                &trans                                &trans                              &ms_over                    &lt 11 SPACE              &sl 15    &trans  &lt 13 RU_CYRILLIC_ER  &ms_free                    &trans                              &trans
             >;
