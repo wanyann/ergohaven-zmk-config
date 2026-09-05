@@ -11,8 +11,6 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
-#include <behaviors/sm_td.dtsi>
-
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 20
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 125
 
@@ -1421,7 +1419,7 @@
         En {
             bindings = <
 &kp BACKSPACE  &kp Q                     &kp W                     &kp U                  &mt LC(R) A             &mt LC(T) K_CANCEL                         &kp Z     &kp V          &kp K                  &kp D            &kp K_CANCEL          &none
-&kp K_CANCEL   &hrml_slow_en LEFT_GUI C  &hrml_slow_en LEFT_ALT I  &sm_td_mt LEFT_SHIFT E  &hrml LCTRL O           &en_com_mt LC(F) 0                         &kp L     &hrml RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow_en RGUI H  &kp K_CANCEL
+&kp K_CANCEL   &hrml_slow_en LEFT_GUI C  &hrml_slow_en LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O           &en_com_mt LC(F) 0                         &kp L     &hrml RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow_en RGUI H  &kp K_CANCEL
 &kp DELETE     &mt LC(Z) F               &mt LC(X) Y               &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &kp B     &kp M          &kp P                  &kp G            &mt LC(SLASH) J       &none
                                          &kp LS(F7)                &kp F7                 &ms_over                &lt 11 SPACE        &sl 15    &bspc_morph  &lt 13 R  &ms_free       &kp F2                 &kp LS(F2)
             >;
