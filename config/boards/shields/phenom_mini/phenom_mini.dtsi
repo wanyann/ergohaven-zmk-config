@@ -53,6 +53,21 @@
     };
 };
 
+/* USB CDC ACM virtual serial port, used as the logging console when
+ * CONFIG_ZMK_USB_LOGGING=y (mirrors the zmk-usb-logging snippet). */
+&zephyr_udc0 {
+    cdc_acm_uart0: cdc_acm_uart0 {
+        compatible = "zephyr,cdc-acm-uart";
+    };
+};
+
+/ {
+    chosen {
+        zephyr,console = &cdc_acm_uart0;
+        zephyr,shell-uart = &cdc_acm_uart0;
+    };
+};
+
 &uart0 {
     status = "okay";
     current-speed = <115200>;
