@@ -54,7 +54,9 @@
 };
 
 /* USB CDC ACM virtual serial port, used as the logging console when
- * CONFIG_ZMK_USB_LOGGING=y (mirrors the zmk-usb-logging snippet). */
+ * CONFIG_ZMK_USB_LOGGING=y (mirrors the zmk-usb-logging snippet).
+ * The TX ring buffer is sized by CONFIG_USB_CDC_ACM_RINGBUF_SIZE
+ * (set in phenom_mini.conf), not by this node's tx-fifo-size property. */
 &zephyr_udc0 {
     cdc_acm_uart0: cdc_acm_uart0 {
         compatible = "zephyr,cdc-acm-uart";
