@@ -65,6 +65,7 @@
             bindings = <&long_kp TAB>;
             key-positions = <14 15>;
             require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_esc {
@@ -77,12 +78,14 @@
             bindings = <&layer_ru>;
             key-positions = <15 16>;
             require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_en {
             bindings = <&layer_en>;
             key-positions = <19 20>;
             require-prior-idle-ms = <30>;
+            timeout-ms = <30>;
         };
 
         combo_osl_sym_en {
@@ -120,6 +123,7 @@
             key-positions = <19 21>;
             require-prior-idle-ms = <20>;
             layers = <0 1 17>;
+            timeout-ms = <30>;
         };
 
         combo_asterisk_ru {
@@ -165,6 +169,7 @@
             bindings = <&parentheses>;
             key-positions = <14 16>;
             require-prior-idle-ms = <20>;
+            timeout-ms = <30>;
         };
 
         combo_braces_ru {
@@ -172,6 +177,7 @@
             key-positions = <19 21>;
             layers = <2 3 18 5>;
             require-prior-idle-ms = <20>;
+            timeout-ms = <30>;
         };
 
         combo_brackets_en {
@@ -192,18 +198,6 @@
             bindings = <&kp MINUS>;
             key-positions = <31 32>;
             require-prior-idle-ms = <20>;
-        };
-
-        combo_ru_at {
-            bindings = <&en_kp AT>;
-            key-positions = <14 15 16>;
-            layers = <2 3 18 5>;
-        };
-
-        combo_en_at {
-            bindings = <&kp AT>;
-            key-positions = <16 15 14>;
-            layers = <0 1 17 4>;
         };
 
         combo_quotes_en {
@@ -251,18 +245,6 @@
         combo_and_en {
             bindings = <&kp AMPERSAND>;
             key-positions = <2 3 4>;
-            layers = <0 1 13 17 4>;
-        };
-
-        combo_dollar_ru {
-            bindings = <&en_kp DOLLAR>;
-            key-positions = <19 20 21>;
-            layers = <2 3 14 18 5>;
-        };
-
-        combo_dollar_en {
-            bindings = <&kp DOLLAR>;
-            key-positions = <19 20 21>;
             layers = <0 1 13 17 4>;
         };
 
