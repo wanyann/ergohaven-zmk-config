@@ -957,7 +957,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            grace-period-ms = <50>;
             hold-trigger-key-positions = <1 2 3 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29 30 31 32 33 34 42 39 41>;
         };
 
@@ -1112,7 +1111,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            grace-period-ms = <50>;
+            grace-period-ms = <30>;
             hold-trigger-key-positions = <6 18 30 31 32 33 42 19 7 8 20 9 21 22 10 34 23 41>;
         };
 
@@ -1124,7 +1123,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            grace-period-ms = <50>;
+            grace-period-ms = <30>;
             hold-trigger-key-positions = <12 1 13 25 26 27 28 29 17 16 4 5 3 15 2 14>;
         };
 
