@@ -547,7 +547,7 @@
                 <&kp K_CANCEL>;
 
             label = "ONE_SHOT";
-            tap-ms = <10>;
+            tap-ms = <1>;
         };
 
         bt_set_ru: bt_set_ru {
