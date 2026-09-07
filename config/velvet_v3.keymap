@@ -1205,41 +1205,37 @@
         morph_en_dot: morph_en_dot {
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_EN_DOT";
-            bindings = <&en_cw_off DOT>, <&en_cw_off N1>;
+            bindings = <&en_cw_off DOT>, <&en_cw_off EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
 
         morph_en_com: morph_en_com {
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_EN_COM";
-            bindings = <&en_cw_off COMMA>, <&en_cw_off SLASH>;
+            bindings = <&en_cw_off COMMA>, <&en_cw_off QUESTION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
 
         morph_ru_dot: morph_ru_dot {
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_RU_DOT";
-            bindings = <&ru_cw_off RU_DOT>, <&ru_cw_off N1>;
+            bindings = <&ru_cw_off RU_DOT>, <&ru_cw_off RU_EXCL>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
 
         morph_ru_com: morph_ru_com {
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_RU_COM";
-            bindings = <&ru_cw_off RU_COMMA>, <&ru_cw_off RU_N7>;
+            bindings = <&ru_cw_off RU_COMMA>, <&ru_cw_off RU_QUESTION>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
-            keep-mods = <(MOD_LSFT)>;
         };
 
         morph_quotes_ru: morph_quotes_ru {
