@@ -348,7 +348,7 @@
         en_code: en_code_block {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW>;
+            bindings = <&kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp LC(LEFT_ARROW) &kp LEFT>;
             label = "EN_CODE_BLOCK";
             tap-ms = <50>;
         };
@@ -356,7 +356,7 @@
         ru_code: ru_code {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&lg_en &kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp UP_ARROW &lg_ru>;
+            bindings = <&lg_en &kp GRAVE &kp GRAVE &kp GRAVE &kp RETURN &kp RET &kp GRAVE &kp GRAVE &kp GRAVE &kp LC(LEFT) &kp LEFT &lg_ru>;
             label = "RU_CODE";
             tap-ms = <50>;
             wait-ms = <10>;
