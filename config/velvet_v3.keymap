@@ -1402,7 +1402,7 @@
             bindings = <
 &kp BACKSPACE  &kp Q                     &kp W                     &kp U                  &mt LC(R) A             &mt LC(T) K_CANCEL                         &kp Z     &kp V          &kp K                  &kp D            &kp K_CANCEL          &none
 &kp K_CANCEL   &hrml_slow_en LEFT_GUI C  &hrml_slow_en LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O           &en_com_mt LC(F) 0                         &kp L     &hrml RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow_en RGUI H  &kp K_CANCEL
-&kp DELETE     &mt LC(Z) F               &mt LC(X) Y               &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &kp B     &kp M          &kp P                  &kp G            &mt LC(SLASH) J       &none
+&layer_ru      &mt LC(Z) F               &mt LC(X) Y               &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &kp B     &kp M          &kp P                  &kp G            &mt LC(SLASH) J       &layer_en
                                          &kp LS(F7)                &kp F7                 &ms_over                &lt 11 SPACE        &sl 15    &bspc_morph  &lt 13 R  &ms_free       &kp F2                 &kp LS(F2)
             >;
         };
@@ -1454,10 +1454,10 @@
 
         MouseMods {
             bindings = <
-&none  &kp Q             &kp W         &e_morph       &kp R          &kp T                     &kp Y   &trans  &trans  &kp O   &kp P      &trans
-&none  &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &kp H   &trans  &trans  &trans  &trans     &kp SQT
-&none  &kp Z             &kp X         &kp C          &kp V          &kp B                     &kp N   &kp M   &trans  &trans  &kp SLASH  &trans
-                         &trans        &trans         &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&none   &kp Q             &kp W         &e_morph       &kp R          &kp T                     &kp Y   &trans  &trans  &kp O   &kp P      &trans
+&none   &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &kp H   &trans  &trans  &trans  &trans     &kp SQT
+&trans  &kp Z             &kp X         &kp C          &kp V          &kp B                     &kp N   &kp M   &trans  &trans  &kp SLASH  &trans
+                          &trans        &trans         &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -1465,7 +1465,7 @@
             bindings = <
 &none                 &kp_m1 RU_CYRILLIC_TSE      &kp_m1 RU_CYRILLIC_SOFT_SIGN  &kp_m1 RU_CYRILLIC_YA  &kp_m1 RU_CYRILLIC_A     &kp_m1 RU_CYRILLIC_YU                                        &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
 &kp_m1 RU_CYRILLIC_E  &kp_m1 RU_CYRILLIC_SHORT_I  &kp_m1 RU_CYRILLIC_I          &kp_m1 RU_CYRILLIC_IE  &kp_m1 RU_CYRILLIC_O     &kp_m1 LS(N6)                                                &kp RU_CYRILLIC_EL  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
-&none                 &kp_m1 RU_CYRILLIC_EF       &kp_m1 RU_CYRILLIC_U          &kp_m1 RU_CYRILLIC_HA  &kp_m1 RU_CYRILLIC_YERU  &kp_m1 LS(RU_N7)                                             &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_PE  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
+&trans                &kp_m1 RU_CYRILLIC_EF       &kp_m1 RU_CYRILLIC_U          &kp_m1 RU_CYRILLIC_HA  &kp_m1 RU_CYRILLIC_YERU  &kp_m1 LS(RU_N7)                                             &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_PE  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
                                                   &trans                        &trans                 &trans                   &nav_set 11 4          &overoff_sl 7 15    &switch_mon BSPC  &back_num 13 8      &over_ms_free       &trans              &trans
             >;
         };
@@ -1474,7 +1474,7 @@
             bindings = <
 &none              &kp RU_CYRILLIC_TSE      &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_YA  &kp RU_CYRILLIC_A     &kp RU_CYRILLIC_YU                                             &kp_m2 RU_CYRILLIC_ZE  &kp_m2 RU_CYRILLIC_VE  &kp_m2 RU_CYRILLIC_KA  &kp_m2 RU_CYRILLIC_DE   &kp_m2 RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_I          &kp RU_CYRILLIC_IE  &kp RU_CYRILLIC_O     &kp LS(N6)                                                     &kp_m2 RU_CYRILLIC_EL  &kp_m2 RU_CYRILLIC_EN  &kp_m2 RU_CYRILLIC_TE  &kp_m2 RU_CYRILLIC_ES   &kp_m2 RU_CYRILLIC_CHE    &kp_m2 RU_CYRILLIC_SHA
-&none              &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_YERU  &kp LS(RU_N7)                                                  &kp_m2 RU_CYRILLIC_BE  &kp_m2 RU_CYRILLIC_EM  &kp_m2 RU_CYRILLIC_PE  &kp_m2 RU_CYRILLIC_GHE  &kp_m2 RU_CYRILLIC_ZHE    &trans
+&trans             &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_YERU  &kp LS(RU_N7)                                                  &kp_m2 RU_CYRILLIC_BE  &kp_m2 RU_CYRILLIC_EM  &kp_m2 RU_CYRILLIC_PE  &kp_m2 RU_CYRILLIC_GHE  &kp_m2 RU_CYRILLIC_ZHE    &trans
                                             &trans                     &trans              &none                 &nav_set 11 4       &overoff_sl 8 15    &switch_mon BACKSPACE  &back_num 13 8         &over_ms_free          &trans                 &trans
             >;
         };
@@ -1580,10 +1580,10 @@
 
         OS {
             bindings = <
-&trans       &bt_set_en 2  &kp LA(LC(N1))    &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &none    &trans  &trans  &bt BT_CLR  &trans
-&trans       &bt_set_en 1  &kp C_PLAY_PAUSE  &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24  &trans  &trans  &soft_off   &trans
-&bootloader  &bt_set_en 0  &none             &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23  &trans  &trans  &trans      &bootloader
-                           &trans            &trans                    &trans                &trans                &trans    &trans  &trans        &trans   &trans  &trans
+&trans  &bt_set_en 2  &kp LA(LC(N1))    &kp LA(LC(N2))            &kp LC(LA(NUMBER_3))  &kp LC(LA(NUMBER_4))                    &trans        &none    &trans  &trans  &bt BT_CLR  &trans
+&trans  &bt_set_en 1  &kp C_PLAY_PAUSE  &kp LA(LC(N1))            &kp C_VOLUME_UP       &kp C_BRI_UP                            &out OUT_BLE  &kp F24  &trans  &trans  &soft_off   &trans
+&trans  &bt_set_en 0  &none             &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN          &kp C_BRI_DN                            &out OUT_USB  &kp F23  &trans  &trans  &trans      &trans
+                      &trans            &bootloader               &trans                &trans                &trans    &trans  &trans        &trans   &trans  &trans
             >;
         };
 
