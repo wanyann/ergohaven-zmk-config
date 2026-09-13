@@ -76,14 +76,14 @@
 
         combo_ru {
             bindings = <&layer_ru>;
-            key-positions = <15 16>;
+            key-positions = <>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
 
         combo_en {
             bindings = <&layer_en>;
-            key-positions = <19 20>;
+            key-positions = <>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
