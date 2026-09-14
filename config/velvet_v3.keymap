@@ -276,22 +276,28 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&mouse_off &kp LS(LC(N8))>,
-                <&macro_tap_time 1>,
-                <&to 2>;
+                <&to 2>,
+                <&macro_tap_time 30>,
+                <&macro_wait_time 15>,
+                <&mouse_off &kp LS(LC(N8))>;
 
             label = "LAYER_RU";
+            tap-ms = <1>;
+            wait-ms = <0>;
         };
 
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
-                <&mouse_off &kp LS(LC(N9))>,
-                <&macro_tap_time 1>,
-                <&to 0>;
+                <&to 0>,
+                <&macro_tap_time 30>,
+                <&macro_wait_time 15>,
+                <&mouse_off &kp LS(LC(N9))>;
 
             label = "LAYER_EN";
+            tap-ms = <1>;
+            wait-ms = <0>;
         };
 
         lg_ru: lg_ru {
