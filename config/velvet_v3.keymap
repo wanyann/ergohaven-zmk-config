@@ -1425,7 +1425,7 @@
 &kp BACKSPACE  &kp Q                     &kp W                &kp U                  &mt LC(R) A             &mt LC(T) K_CANCEL                         &kp Z     &kp V          &kp K                  &kp D            &kp K_CANCEL          &none
 &kp K_CANCEL   &hrml_slow_en LEFT_GUI C  &hrosm_l LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O           &en_com_mt LC(F) 0                         &kp L     &hrml RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow_en RGUI H  &kp K_CANCEL
 &none          &mt LC(Z) F               &mt LC(X) Y          &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &kp B     &kp M          &kp P                  &kp G            &mt LC(SLASH) J       &none
-                                         &kp LS(F7)           &kp F7                 &layer_en               &lt 12 SPACE        &sl 16    &bspc_morph  &lt 14 R  &layer_ru      &kp F2                 &kp LS(F2)
+                                         &kp LS(F7)           &kp F7                 &layer_ru               &lt 12 SPACE        &sl 16    &bspc_morph  &lt 14 R  &layer_en      &kp F2                 &kp LS(F2)
             >;
         };
 
