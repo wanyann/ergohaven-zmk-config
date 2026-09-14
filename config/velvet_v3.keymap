@@ -562,10 +562,13 @@
         ms_free: ms_free {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&layer_on 5 &layer_off 8 &layer_off 9>;
+            bindings =
+                <&mouse_off>,
+                <&macro_tap_time 1>,
+                <&layer_on 5 &layer_off 8 &layer_off 9>;
+
             label = "MS_FREE";
             wait-ms = <0>;
-            tap-ms = <1>;
         };
 
         ms_over: ms_over {
