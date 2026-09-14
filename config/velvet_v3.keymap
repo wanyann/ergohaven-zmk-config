@@ -1242,7 +1242,7 @@
             bindings = <&kp RU_DQT>, <&en_kp GRAVE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RALT|MOD_LALT)>;
         };
 
         morph_quotes_en: morph_quotes_en {
@@ -1251,7 +1251,7 @@
             bindings = <&kp DQT>, <&kp GRAVE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RALT|MOD_LALT)>;
         };
 
         morph_pipe_ru: morph_pipe_ru {
