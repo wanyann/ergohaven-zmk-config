@@ -1402,7 +1402,7 @@
             bindings = <
 &kp BACKSPACE  &kp Q                     &kp W                     &kp U                  &mt LC(R) A             &mt LC(T) K_CANCEL                         &kp Z     &kp V          &kp K                  &kp D            &kp K_CANCEL          &none
 &kp K_CANCEL   &hrml_slow_en LEFT_GUI C  &hrml_slow_en LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O           &en_com_mt LC(F) 0                         &kp L     &hrml RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow_en RGUI H  &kp K_CANCEL
-&layer_ru      &mt LC(Z) F               &mt LC(X) Y               &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &kp B     &kp M          &kp P                  &kp G            &mt LC(SLASH) J       &layer_en
+&none          &mt LC(Z) F               &mt LC(X) Y               &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &kp B     &kp M          &kp P                  &kp G            &mt LC(SLASH) J       &none
                                          &kp LS(F7)                &kp F7                 &ms_over                &lt 12 SPACE        &sl 16    &bspc_morph  &lt 14 R  &ms_free       &kp F2                 &kp LS(F2)
             >;
         };
@@ -1589,10 +1589,10 @@
 
         OS {
             bindings = <
-&trans  &bt_set_en 2  &kp_free LA(LC(N1))  &kp_free LA(LC(N2))       &kp_free LC(LA(NUMBER_3))  &kp_free LC(LA(NUMBER_4))                    &trans        &none    &trans  &trans  &bt BT_CLR  &trans
-&trans  &bt_set_en 1  &kp C_PLAY_PAUSE     &kp LA(LC(N1))            &kp C_VOLUME_UP            &kp C_BRI_UP                                 &out OUT_BLE  &kp F24  &trans  &trans  &soft_off   &trans
-&trans  &bt_set_en 0  &none                &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN               &kp C_BRI_DN                                 &out OUT_USB  &kp F23  &trans  &trans  &trans      &trans
-                      &trans               &bootloader               &trans                     &trans                     &trans    &trans  &trans        &trans   &trans  &trans
+&trans       &bt_set_en 2  &kp_free LA(LC(N1))  &kp_free LA(LC(N2))       &kp_free LC(LA(NUMBER_3))  &kp_free LC(LA(NUMBER_4))                    &trans        &none    &trans  &trans  &bt BT_CLR  &trans
+&trans       &bt_set_en 1  &kp C_PLAY_PAUSE     &kp LA(LC(N1))            &kp C_VOLUME_UP            &kp C_BRI_UP                                 &out OUT_BLE  &kp F24  &trans  &trans  &soft_off   &trans
+&bootloader  &bt_set_en 0  &none                &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN               &kp C_BRI_DN                                 &out OUT_USB  &kp F23  &trans  &trans  &trans      &trans
+                           &trans               &bootloader               &trans                     &trans                     &trans    &trans  &trans        &trans   &trans  &trans
             >;
         };
 
