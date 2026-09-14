@@ -160,9 +160,9 @@
             layers = <2 3>;
         };
 
-        combo_plus {
-            bindings = <&kp PLUS>;
-            key-positions = <>;
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <8 9>;
         };
 
         parentheses {
@@ -1526,10 +1526,10 @@
 
         Num {
             bindings = <
-&trans  &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &long_kp PLUS                   &trans  &trans     &trans      &trans        &trans        &trans
-&trans  &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &morph_en_com                   &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &kp EQUAL  &kp N4        &kp N5        &kp N6        &morph_en_dot                   &trans  &trans     &none       &none         &trans        &trans
-                   &trans        &trans        &trans        &lt 12 SPACE   &none    &trans  &mo 14  &trans     &trans      &trans
+&trans     &kp MINUS  &kp NUMBER_7  &kp NUMBER_8  &kp N9        &long_kp PLUS                      &trans  &trans     &trans      &trans        &trans        &trans
+&kp MINUS  &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &morph_en_com                      &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans     &kp EQUAL  &kp N4        &kp N5        &kp N6        &morph_en_dot                      &trans  &trans     &none       &none         &trans        &trans
+                      &trans        &trans        &kp MINUS     &lt 12 SPACE   &kp PLUS    &trans  &mo 14  &trans     &trans      &trans
             >;
         };
 
