@@ -278,7 +278,7 @@
             bindings =
                 <&to 2>,
                 <&macro_tap_time 30>,
-                <&kp LS(LC(N8)) &mouse_off>;
+                <&mouse_off &kp LS(LC(N8))>;
 
             label = "LAYER_RU";
             tap-ms = <1>;
@@ -290,7 +290,7 @@
             bindings =
                 <&to 0>,
                 <&macro_tap_time 30>,
-                <&kp LS(LC(N9)) &mouse_off>;
+                <&mouse_off &kp LS(LC(N9))>;
 
             label = "LAYER_EN";
             tap-ms = <1>;
