@@ -1449,10 +1449,10 @@
 
         AutoMouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &mo 24    &mo 23    &mkp MB1   &mkp_hold LC(R) MB2  &mkp_hold LC(T) MB3                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL            &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans    &trans     &trans               &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
+                  &trans    &trans     &trans               &mkp MB1             &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
