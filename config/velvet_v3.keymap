@@ -275,11 +275,7 @@
         layer_ru: layer_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&to 2>,
-                <&macro_tap_time 30>,
-                <&macro_wait_time 15>,
-                <&mouse_off &kp LS(LC(N8))>;
+            bindings = <&to 2>, <&macro_tap_time 30>, <&kp LS(LC(N8))>;
 
             label = "LAYER_RU";
             tap-ms = <1>;
@@ -289,11 +285,7 @@
         layer_en: layer_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings =
-                <&to 0>,
-                <&macro_tap_time 30>,
-                <&macro_wait_time 15>,
-                <&mouse_off &kp LS(LC(N9))>;
+            bindings = <&to 0>, <&macro_tap_time 30>, <&kp LS(LC(N9))>;
 
             label = "LAYER_EN";
             tap-ms = <1>;
@@ -900,6 +892,32 @@
             wait-ms = <0>;
             tap-ms = <1>;
         };
+
+        overoff_ru: overoff_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&mouse_off>,
+                <&macro_tap_time 1>,
+                <&to 2>,
+                <&macro_tap_time 30>,
+                <&kp LS(LC(N8))>;
+
+            label = "OVEROFF_RU";
+        };
+
+        overoff_en: overoff_en {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&mouse_off>,
+                <&macro_tap_time 1>,
+                <&to 0>,
+                <&macro_tap_time 30>,
+                <&kp LS(LC(N9))>;
+
+            label = "OVEROFF_EN";
+        };
     };
 
     behaviors {
@@ -1498,7 +1516,7 @@
 &none                 &kp_m1 RU_CYRILLIC_TSE      &kp_m1 RU_CYRILLIC_SOFT_SIGN  &kp_m1 RU_CYRILLIC_YA  &kp_m1 RU_CYRILLIC_A     &kp_m1 RU_CYRILLIC_YU                                        &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
 &kp_m1 RU_CYRILLIC_E  &kp_m1 RU_CYRILLIC_SHORT_I  &kp_m1 RU_CYRILLIC_I          &kp_m1 RU_CYRILLIC_IE  &kp_m1 RU_CYRILLIC_O     &kp_m1 LS(N6)                                                &kp RU_CYRILLIC_EL  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &trans                &kp_m1 RU_CYRILLIC_EF       &kp_m1 RU_CYRILLIC_U          &kp_m1 RU_CYRILLIC_HA  &kp_m1 RU_CYRILLIC_YERU  &kp_m1 LS(RU_N7)                                             &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_PE  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
-                                                  &trans                        &trans                 &trans                   &nav_set 12 4          &overoff_sl 9 16    &switch_mon BSPC  &back_num 14 8      &trans              &trans              &trans
+                                                  &trans                        &trans                 &overoff_ru              &nav_set 12 4          &overoff_sl 9 16    &switch_mon BSPC  &back_num 14 8      &overoff_en         &trans              &trans
             >;
         };
 
@@ -1507,7 +1525,7 @@
 &none              &kp RU_CYRILLIC_TSE      &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_YA  &kp RU_CYRILLIC_A     &kp RU_CYRILLIC_YU                                              &kp_m2 RU_CYRILLIC_ZE  &kp_m2 RU_CYRILLIC_VE  &kp_m2 RU_CYRILLIC_KA  &kp_m2 RU_CYRILLIC_DE   &kp_m2 RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_I          &kp RU_CYRILLIC_IE  &kp RU_CYRILLIC_O     &kp LS(N6)                                                      &kp_m2 RU_CYRILLIC_EL  &kp_m2 RU_CYRILLIC_EN  &kp_m2 RU_CYRILLIC_TE  &kp_m2 RU_CYRILLIC_ES   &kp_m2 RU_CYRILLIC_CHE    &kp_m2 RU_CYRILLIC_SHA
 &trans             &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_YERU  &kp LS(RU_N7)                                                   &kp_m2 RU_CYRILLIC_BE  &kp_m2 RU_CYRILLIC_EM  &kp_m2 RU_CYRILLIC_PE  &kp_m2 RU_CYRILLIC_GHE  &kp_m2 RU_CYRILLIC_ZHE    &trans
-                                            &trans                     &trans              &trans                &nav_set 12 4       &overoff_sl 10 16    &switch_mon BACKSPACE  &back_num 14 8         &trans                 &trans                 &trans
+                                            &trans                     &trans              &overoff_ru           &nav_set 12 4       &overoff_sl 10 16    &switch_mon BACKSPACE  &back_num 14 8         &overoff_en            &trans                 &trans
             >;
         };
 
