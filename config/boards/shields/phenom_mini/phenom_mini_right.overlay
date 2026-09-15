@@ -3,3 +3,11 @@
 &default_transform {
     row-offset = <5>;
 };
+
+&trackball {
+    status = "okay";
+};
+
+&trackball_split {
+    status = "okay";
+};

@@ -1,0 +1,67 @@
+description: |
+  Bit-banged 3-wire SPI polling driver for the PMW3610 mouse sensor on
+  RP2040. Mirrors the proven QMK firmware wiring on the phenom right
+  half: SCLK=GP10, SDIO=GP11, CS=GP9, no motion/int pin, polled on a
+  period timer (no interrupt).
+
+compatible: "ergohaven,pmw3610-gpio"
+
+include: [base.yaml]
+
+properties:
+  sclk-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      GPIO wired to the PMW3610 SCLK pin.
+
+  sdio-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      GPIO wired to the PMW3610 SDIO pin (bi-directional data).
+
+  cs-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      GPIO wired to the PMW3610 CS (chip select) pin, active low.
+
+  cpi:
+    type: int
+    default: 600
+    description: |
+      Sensor resolution in counts per inch (200-3200, step 200).
+
+  evt-type:
+    type: int
+    required: true
+    description: |
+      Input event type for the reported movement (e.g. INPUT_EV_REL).
+
+  x-input-code:
+    type: int
+    required: true
+    description: |
+      Input event code for the X axis (e.g. INPUT_REL_X).
+
+  y-input-code:
+    type: int
+    required: true
+    description: |
+      Input event code for the Y axis (e.g. INPUT_REL_Y).
+
+  swap-xy:
+    type: boolean
+    description: |
+      Swap the X and Y axis.
+
+  invert-x:
+    type: boolean
+    description: |
+      Invert the X axis.
+
+  invert-y:
+    type: boolean
+    description: |
+      Invert the Y axis.

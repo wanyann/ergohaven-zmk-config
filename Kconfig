@@ -1,0 +1,22 @@
+# AutoMouse layer LED color indicator for phenom_mini
+#
+# SPDX-License-Identifier: MIT
+
+config ZMK_LAYER_COLOR_INDICATOR
+	bool "AutoMouse layer LED color indicator"
+	depends on ZMK_RGB_UNDERGLOW
+	default n
+
+config EH_PMW3610_GPIO
+	bool "Bit-banged polling PMW3610 sensor driver"
+	depends on INPUT && DT_HAS_ERGOHAVEN_PMW3610_GPIO_ENABLED
+	default y
+	help
+	  Polling 3-wire bit-banged SPI driver for the PMW3610 mouse sensor,
+	  matching the QMK wiring on the phenom right half (no interrupt pin).
+
+config EH_PMW3610_POLL_INTERVAL_MS
+	int "PMW3610 polling interval (ms)"
+	default 10
+	range 8 1000
+	depends on EH_PMW3610_GPIO

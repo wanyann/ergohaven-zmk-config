@@ -1,1 +1,22 @@
 #include "phenom_mini.dtsi"
+
+// Левая половина = центральная (USB). Энкодер, светодиодная лента
+// и листенер трекбола, который принимает события от proxy-устройства
+// zmk,input-split (реальный сенсор на правой половине).
+&encoder {
+    status = "okay";
+};
+
+
+
+&trackball_listener {
+    status = "okay";
+    device = <&trackball_split>;
+};
+
+// Прокси-устройство входящих событий указателя. Должно быть enabled и на
+// центральной половине, иначе CONFIG_ZMK_INPUT_SPLIT не включится и события
+// INPUT_EVENT от периферии будут проигнорированы в split/central.c.
+&trackball_split {
+    status = "okay";
+};

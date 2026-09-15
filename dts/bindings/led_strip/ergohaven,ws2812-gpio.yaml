@@ -1,0 +1,35 @@
+description: |
+  Minimal bit-banged WS2812 LED strip driver for RP2040 (used on the
+  phenom_mini layer indicator LED wired to a plain GPIO).
+
+compatible: "ergohaven,ws2812-gpio"
+
+include: [base.yaml]
+
+properties:
+  in-gpios:
+    type: phandle-array
+    required: true
+    description: |
+      GPIO phandle and specifier for the pin connected to the LED's
+      input. Exactly one pin should be given.
+
+  chain-length:
+    type: int
+    required: true
+    default: 1
+    description: |
+      The number of devices in the daisy-chain.
+
+  color-mapping:
+    type: array
+    required: true
+    description: |
+      Channel to color mapping (e.g. GRB below).
+
+  reset-delay:
+    type: int
+    default: 8
+    description: |
+      Minimum delay in microseconds to hold the data line low to latch
+      the frame. The driver also applies a fixed reset pulse.

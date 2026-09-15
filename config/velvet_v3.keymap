@@ -1427,6 +1427,13 @@
         };
     };
 
+    zip_auto_mouse: zip_auto_mouse {
+        compatible = "zmk,input-processor-temp-layer";
+        #input-processor-cells = <2>;
+        require-prior-idle-ms = <500>;
+        excluded-positions = <>;
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -1817,4 +1824,8 @@
         layers = <23>;
         input-processors = <&zip_xy_scaler 1 3>, <&zip_inertia>;
     };
+};
+
+&trackball_listener {
+    input-processors = <&zip_auto_mouse 4 500>;
 };
