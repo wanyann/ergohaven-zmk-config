@@ -202,13 +202,13 @@
         combo_quotes_en {
             bindings = <&quote_morph_en>;
             key-positions = <7 8>;
-            layers = <0 1 14 18 5>;
+            layers = <0 1 14 18 5 10>;
         };
 
         combo_quotes_ru {
             bindings = <&quote_morph_ru>;
             key-positions = <7 8>;
-            layers = <2 3 19 15 6>;
+            layers = <2 3 19 15 6 11>;
         };
 
         combo_slash_ru {
