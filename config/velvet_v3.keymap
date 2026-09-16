@@ -1452,6 +1452,7 @@
 &kp K_CANCEL   &hrml_slow LEFT_GUI C  &hrml LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O           &en_com_mt LC(F) 0                         &kp L     &hrml RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow RGUI H  &kp K_CANCEL
 &none          &mt LC(Z) F            &mt LC(X) Y       &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &kp B     &kp M          &kp P                  &kp G            &mt LC(SLASH) J    &none
                                       &kp LS(F7)        &kp F7                 &layer_ru               &lt 12 SPACE        &sl 16    &bspc_morph  &lt 14 R  &layer_en      &kp F2                 &kp LS(F2)
+                        &kp C_PLAY_PAUSE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -1463,6 +1464,7 @@
 &kp LS(K_CANCEL)  &hrml_slow LEFT_GUI LS(C)  &hrml LEFT_ALT LS(I)  &hrosm_l LEFT_SHIFT LS(E)  &hrml LCTRL LS(O)       &en_com_mt LC(F) 0                        &kp LS(L)     &hrml RCTRL LS(N)  &hrosm_r LEFT_SHIFT LS(T)  &hrosm_r RALT LS(S)  &hrml_slow RGUI LS(H)  &kp LS(K_CANCEL)
 &trans            &mt LC(Z) LS(F)            &mt LC(X) LS(Y)       &mt LC(C) LS(X)            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                        &kp LS(B)     &kp LS(M)          &kp LS(P)                  &kp LS(G)            &mt LC(SLASH) LS(J)    &trans
                                              &trans                &trans                     &trans                  &en_lt_cw_off 12 SPACE  &sl 16    &trans  &lt 14 LS(R)  &trans             &trans                     &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1472,6 +1474,7 @@
 &kp RU_CYRILLIC_E  &hrml_slow LEFT_GUI RU_CYRILLIC_SHORT_I  &hrml LEFT_ALT RU_CYRILLIC_I  &hrosm_l LEFT_SHIFT RU_CYRILLIC_IE  &hrml LCTRL RU_CYRILLIC_O   &ru_com_mt LC(F) 0                          &kp RU_CYRILLIC_EL     &hrml RCTRL RU_CYRILLIC_EN  &hrosm_r LEFT_SHIFT RU_CYRILLIC_TE  &hrosm_r RALT RU_CYRILLIC_ES  &hrml_slow RGUI RU_CYRILLIC_CHE  &kp RU_CYRILLIC_SHA
 &trans             &mt LC(Z) RU_CYRILLIC_EF                 &mt LC(X) RU_CYRILLIC_U       &mt LC(C) RU_CYRILLIC_HA            &mt LC(V) RU_CYRILLIC_YERU  &ru_dot_mt LG(V) 0                          &kp RU_CYRILLIC_BE     &kp RU_CYRILLIC_EM          &kp RU_CYRILLIC_PE                  &kp RU_CYRILLIC_GHE           &mt LC(SLASH) RU_CYRILLIC_ZHE    &trans
                                                             &trans                        &trans                              &trans                      &lt 12 SPACE              &sl 16    &trans  &lt 14 RU_CYRILLIC_ER  &trans                      &trans                              &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1481,6 +1484,7 @@
 &kp LS(RU_CYRILLIC_E)  &hrml_slow LEFT_GUI LS(RU_CYRILLIC_SHORT_I)  &hrml LEFT_ALT LS(RU_CYRILLIC_I)  &hrosm_l LEFT_SHIFT LS(RU_CYRILLIC_IE)  &hrml LCTRL LS(RU_CYRILLIC_O)   &ru_com_mt LC(F) 0                              &kp LS(RU_CYRILLIC_EL)     &hrml RCTRL LS(RU_CYRILLIC_EN)  &hrosm_r LEFT_SHIFT LS(RU_CYRILLIC_TE)  &hrosm_r RALT LS(RU_CYRILLIC_ES)  &hrml_slow RGUI LS(RU_CYRILLIC_CHE)  &kp LS(RU_CYRILLIC_SHA)
 &trans                 &mt LC(Z) LS(RU_CYRILLIC_EF)                 &mt LC(X) LS(RU_CYRILLIC_U)       &mt LC(C) LS(RU_CYRILLIC_HA)            &mt LC(V) LS(RU_CYRILLIC_YERU)  &ru_dot_mt LG(V) 0                              &kp LS(RU_CYRILLIC_BE)     &kp LS(RU_CYRILLIC_EM)          &kp LS(RU_CYRILLIC_PE)                  &kp LS(RU_CYRILLIC_GHE)           &mt LC(SLASH) LS(RU_CYRILLIC_ZHE)    &trans
                                                                     &trans                            &trans                                  &trans                          &ru_lt_cw_off 12 SPACE        &trans    &trans  &lt 14 LS(RU_CYRILLIC_ER)  &trans                          &trans                                  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1490,6 +1494,7 @@
 &trans  &mml LGUI  &mml LALT  &kp LSHFT  &mml LCTRL           &moff_mt LC(F) COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans     &trans     &trans     &trans               &moff_mt LG(V) DOT                      &trans  &trans  &trans  &trans  &trans  &trans
                    &trans     &trans     &trans               &ms_space 12 0        &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1499,6 +1504,7 @@
 &trans  &trans  &trans  &trans  &trans  &moff_mt LG(F) RU_COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &moff_mt LG(V) RU_DOT                      &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans                   &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1508,6 +1514,7 @@
 &trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &moff_mt LC(F) COMMA                       &none   &left_ctrl 25  &down_shift 26  &right_alt 27  &mouse_mod LEFT_GUI  &none
 &trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) DOT                         &none   &scleft_morph  &scdown_morph   &scup_morph    &scright_morph       &trans
                        &trans         &trans          &trans                &ms_space 12 0           &trans    &trans  &trans  &trans         &trans          &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1517,6 +1524,7 @@
 &trans  &trans  &trans  &trans  &trans  &moff_mt LC(F) RU_COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &moff_mt LG(V) RU_DOT                      &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans                   &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1526,6 +1534,7 @@
 &none   &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
 &trans  &kp Z             &kp X         &kp C          &kp V          &kp B                     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
                           &trans        &trans         &trans         &trans  &trans    &trans  &trans  &trans  &trans     &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1535,6 +1544,7 @@
 &kp_m1 RU_CYRILLIC_E  &kp_m1 RU_CYRILLIC_SHORT_I  &kp_m1 RU_CYRILLIC_I          &kp_m1 RU_CYRILLIC_IE  &kp_m1 RU_CYRILLIC_O     &kp_m1 LS(N6)                                                &kp RU_CYRILLIC_EL  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &trans                &kp_m1 RU_CYRILLIC_EF       &kp_m1 RU_CYRILLIC_U          &kp_m1 RU_CYRILLIC_HA  &kp_m1 RU_CYRILLIC_YERU  &kp_m1 LS(RU_N7)                                             &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_PE  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
                                                   &trans                        &trans                 &overoff_ru              &nav_set 12 4          &overoff_sl 9 16    &switch_mon BSPC  &back_num 14 8      &overoff_en         &trans              &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1544,6 +1554,7 @@
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_I          &kp RU_CYRILLIC_IE  &kp RU_CYRILLIC_O     &kp LS(N6)                                                      &kp_m2 RU_CYRILLIC_EL  &kp_m2 RU_CYRILLIC_EN  &kp_m2 RU_CYRILLIC_TE  &kp_m2 RU_CYRILLIC_ES   &kp_m2 RU_CYRILLIC_CHE    &kp_m2 RU_CYRILLIC_SHA
 &trans             &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_YERU  &kp LS(RU_N7)                                                   &kp_m2 RU_CYRILLIC_BE  &kp_m2 RU_CYRILLIC_EM  &kp_m2 RU_CYRILLIC_PE  &kp_m2 RU_CYRILLIC_GHE  &kp_m2 RU_CYRILLIC_ZHE    &trans
                                             &trans                     &trans              &overoff_ru           &nav_set 12 4       &overoff_sl 10 16    &switch_mon BACKSPACE  &back_num 14 8         &overoff_en            &trans                 &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1553,6 +1564,7 @@
 &trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                                  &kp H            &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
 &trans  &kp Z             &kp X             &kp C              &kp V         &kp B                                  &kp N            &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
                           &trans            &trans             &trans        &space_lt 12 0  &trans    &bspc_morph  &lt 14 K_CANCEL  &trans             &trans             &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1562,6 +1574,7 @@
 &trans  &hrm LEFT_GUI LC(LEFT_BRACKET)  &hrm LALT LC(RIGHT_BRACKET)      &kp LSHIFT           &mod_dtap LCTRL LEFT_GUI  &zeros_macro                         &kp K_APP   &kp LEFT       &kp DOWN   &kp RIGHT  &kp END     &trans
 &trans  &mt LC(Z) LG(LS(LEFT_BRACKET))  &mt LC(X) LG(LS(RIGHT_BRACKET))  &mt LC(C) LS(F6)     &mt LC(V) LS(LC(LA(V)))   &kp LS(LG(LC(F9)))                   &kp LC(F8)  &kp HOME       &kp PG_DN  &kp PG_UP  &trans      &trans
                                         &trans                           &trans               &trans                    &mo 12              &none    &trans  &mo 14      &trans         &trans     &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1571,6 +1584,7 @@
 &trans  &trans  &trans            &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans            &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans            &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1580,6 +1594,7 @@
 &none   &kp N0     &kp N1        &kp N2        &kp NUMBER_3  &morph_en_com                       &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
 &trans  &kp UNDER  &kp N4        &kp N5        &kp N6        &morph_en_dot                       &trans  &trans     &none       &none         &trans        &trans
                    &trans        &trans        &kp MINUS     &lt 12 SPACE    &kp PLUS    &trans  &mo 14  &trans     &trans      &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1589,6 +1604,7 @@
 &trans  &trans  &trans  &trans  &trans  &morph_ru_com                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &morph_ru_dot                    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans         &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1598,6 +1614,7 @@
 &kp LS(LA(LC(LEFT_BRACKET)))  &mt LS(LA(LC(LG(A)))) LS(LA(LC(A)))  &mt LS(LA(LC(LG(S)))) LS(LA(LC(S)))     &mt LS(LA(LC(LG(D)))) LC(LA(LS(D)))  &kp LS(LA(LC(F)))                    &mt LS(LA(LC(LG(G)))) LA(LS(LC(G)))                           &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
 &trans                        &mt LS(LC(LA(LG(Z)))) LC(LA(LS(Z)))  &mt LS(LA(LC(LG(X)))) LA(LS(LC(X)))     &kp LS(LA(LC(C)))                    &kp LS(LC(LG(V)))                    &mt LS(LA(LC(LG(B)))) LS(LA(LC(B)))                           &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
                                                                    &trans                                  &trans                               &trans                               &none                                &sl 16    &kp LA(ENTER)  &alt_spc_en        &trans             &trans                 &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1607,6 +1624,7 @@
 &trans  &trans  &trans                                  &trans  &trans  &trans                    &trans       &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans                                  &trans  &trans  &trans                    &trans       &trans  &trans  &trans  &trans  &trans
                 &trans                                  &trans  &trans  &trans  &trans    &trans  &alt_spc_ru  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1616,6 +1634,7 @@
 &trans  &trans  &kp LEFT_PARENTHESIS  &kp AT         &kp RIGHT_PARENTHESIS  &kp PERCENT                    &ru_kp RU_NUMERO  &kp LEFT_BRACE    &kp DOLLAR    &kp RIGHT_BRACE    &trans  &trans
 &trans  &trans  &kp TILDE             &kp HASH       &en_code               &none                          &trans            &kp LESS_THAN     &arrow_en     &kp GREATER_THAN   &trans  &trans
                 &trans                &trans         &trans                 &trans       &trans    &trans  &trans            &trans            &trans        &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1625,6 +1644,7 @@
 &trans  &trans  &kp LEFT_PARENTHESIS  &en_kp AT         &kp RPAR      &kp RU_PERCENT                    &kp RU_NUMERO  &en_kp LEFT_BRACE    &en_kp DOLLAR  &en_kp RIGHT_BRACE    &trans  &trans
 &trans  &trans  &en_kp TILDE          &en_kp HASH       &ru_code      &none                             &trans         &en_kp LESS_THAN     &arrow_ru      &en_kp GREATER_THAN   &trans  &trans
                 &trans                &trans            &trans        &trans          &trans    &trans  &trans         &trans               &trans         &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1634,6 +1654,7 @@
 &trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp F12                    &trans  &kp LCTRL  &kp LEFT_SHIFT  &kp LALT  &kp LEFT_GUI  &trans
 &trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp F11                    &trans  &trans     &trans          &trans    &trans        &trans
                  &trans  &trans  &trans  &trans   &trans    &trans  &trans  &trans     &trans          &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1643,6 +1664,7 @@
 &trans       &bt_set_en 1  &kp C_PLAY_PAUSE     &kp LA(LC(N1))            &kp C_VOLUME_UP            &kp C_BRI_UP                                 &out OUT_BLE  &kp F24  &trans  &trans  &soft_off   &trans
 &bootloader  &bt_set_en 0  &none                &kp LC(LS(LEFT_BRACKET))  &kp C_VOL_DN               &kp C_BRI_DN                                 &out OUT_USB  &kp F23  &trans  &trans  &trans      &bootloader
                            &trans               &bootloader               &trans                     &trans                     &trans    &trans  &trans        &trans   &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1652,6 +1674,7 @@
 &trans  &bt_set_ru 1  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &bt_set_ru 0  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
                       &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1661,6 +1684,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1670,6 +1694,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1679,6 +1704,7 @@
 &trans  &lkp_moff LC(A)  &lkp_moff LC(S)  &lkp_moff LC(D)  &lkp_moff LC(F)  &lkp_moff LC(G)                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &lkp_moff LC(Z)  &lkp_moff LC(X)  &lkp_moff LC(C)  &lkp_moff LC(V)  &lkp_moff LC(B)                    &trans  &trans  &trans  &trans  &trans  &trans
                          &trans           &trans           &trans           &trans           &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1688,6 +1714,7 @@
 &trans  &lkp_moff RS(A)  &lkp_moff RS(S)  &lkp_moff RS(D)  &lkp_moff RS(F)  &lkp_moff RS(G)                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &lkp_moff RS(Z)  &lkp_moff RS(X)  &lkp_moff RS(C)  &lkp_moff RS(V)  &lkp_moff RS(B)                    &trans  &trans  &trans  &trans  &trans  &trans
                          &trans           &trans           &trans           &trans           &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1697,6 +1724,7 @@
 &trans  &lkp_moff LA(A)  &lkp_moff LA(S)  &lkp_moff LA(D)  &lkp_moff LA(F)  &lkp_moff LA(G)                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &lkp_moff LA(Z)  &lkp_moff LA(X)  &lkp_moff LA(C)  &lkp_moff LA(V)  &lkp_moff LA(B)                    &trans  &trans  &trans  &trans  &trans  &trans
                          &trans           &trans           &trans           &trans           &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1706,6 +1734,7 @@
 &trans  &lkp_moff LC(RS(A))  &lkp_moff LC(RS(S))  &lkp_moff LC(RS(D))  &lkp_moff LC(RS(F))  &lkp_moff LC(RS(G))                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &lkp_moff LC(RS(Z))  &lkp_moff LC(RS(X))  &lkp_moff LC(RS(C))  &lkp_moff LC(RS(V))  &lkp_moff LC(RS(B))                    &trans  &trans  &trans  &trans  &trans  &trans
                              &trans               &trans               &trans               &trans               &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1715,6 +1744,7 @@
 &trans  &lkp_moff LC(LA(A))  &lkp_moff LC(LA(S))  &lkp_moff LC(LA(D))  &lkp_moff LC(LA(F))  &lkp_moff LC(LA(G))                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &lkp_moff LC(LA(Z))  &lkp_moff LC(LA(X))  &lkp_moff LC(LA(C))  &lkp_moff LC(LA(V))  &lkp_moff LC(LA(B))                    &trans  &trans  &trans  &trans  &trans  &trans
                              &trans               &trans               &trans               &trans               &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1724,6 +1754,7 @@
 &trans  &lkp_moff RS(LA(A))  &lkp_moff RS(LA(S))  &lkp_moff RS(LA(D))  &lkp_moff RS(LA(F))  &lkp_moff RS(LA(G))                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &lkp_moff RS(LA(Z))  &lkp_moff RS(LA(X))  &lkp_moff RS(LA(C))  &lkp_moff RS(LA(V))  &lkp_moff RS(LA(B))                    &trans  &trans  &trans  &trans  &trans  &trans
                              &trans               &trans               &trans               &trans               &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
 
@@ -1733,6 +1764,7 @@
 &trans  &lkp_moff LC(RS(LA(A)))  &lkp_moff LC(RS(LA(S)))  &lkp_moff LC(RS(LA(D)))  &lkp_moff LC(RS(LA(F)))  &lkp_moff LC(RS(LA(G)))                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &lkp_moff LC(RS(LA(Z)))  &lkp_moff LC(RS(LA(X)))  &lkp_moff LC(RS(LA(C)))  &lkp_moff LC(RS(LA(V)))  &lkp_moff LC(RS(LA(B)))                    &trans  &trans  &trans  &trans  &trans  &trans
                                  &trans                   &trans                   &trans                   &trans                   &trans    &trans  &trans  &trans  &trans  &trans
+                        &kp C_PLAY_PAUSE
             >;
         };
     };
@@ -1843,7 +1875,6 @@
     scroller {
         layers = <12>;
         input-processors =
-            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_scaler 1 32>,
             <&zip_xy_to_scroll_mapper>;
     };
