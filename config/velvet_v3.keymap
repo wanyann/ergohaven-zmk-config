@@ -1520,9 +1520,9 @@
 
         MouseMods {
             bindings = <
-&none   &kp Q             &kp W         &e_morph       &kp R          &kp T                     &kp Y   &trans  &trans  &kp O   &kp P      &trans
-&none   &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &kp H   &trans  &trans  &trans  &trans     &kp SQT
-&trans  &kp Z             &kp X         &kp C          &kp V          &kp B                     &kp N   &kp M   &trans  &trans  &kp SLASH  &trans
+&none   &kp Q             &kp W         &mkp LCLK      &kp R          &kp T                     &trans  &trans  &trans  &trans  &trans  &trans
+&none   &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Z             &kp X         &kp C          &kp V          &kp B                     &trans  &trans  &trans  &trans  &trans  &trans
                           &trans        &trans         &trans         &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
