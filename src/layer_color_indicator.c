@@ -64,9 +64,9 @@ static int layer_color_indicator_listener(const zmk_event_t *eh) {
     if (ev->layer == AUTOMOUSE_LAYER) {
         printk("[LCI] layer4 state=%d\n", ev->state);
         if (ev->state) {
-            set_underglow_color(120, 100, 1); // AutoMouse active: green
+            set_underglow_color(120, 100, 10); // AutoMouse active: green
         } else {
-            set_underglow_color(0, 0, 1); // AutoMouse released: white
+            set_underglow_color(0, 0, 10); // AutoMouse released: white
         }
     }
 
@@ -81,6 +81,6 @@ ZMK_SUBSCRIPTION(layer_color_indicator, zmk_layer_state_changed);
 SYS_INIT(layer_color_indicator_init, APPLICATION, CONFIG_APPLICATION_INIT_PRIORITY);
 
 static int layer_color_indicator_init(void) {
-    set_underglow_color(0, 0, 1); // Start white at matching reduced brightness
+    set_underglow_color(0, 0, 10); // Start white at matching reduced brightness
     return 0;
 }

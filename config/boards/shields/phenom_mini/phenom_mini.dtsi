@@ -66,14 +66,9 @@
         triggers-per-rotation = <8>;
     };
 
-    // Лента на каждой половине: DIN = GP25
-    led_strip: led_strip {
-        compatible = "ergohaven,ws2812-gpio";
-        status = "disabled";
-        in-gpios = <&gpio0 25 GPIO_ACTIVE_HIGH>;
-        chain-length = <1>;
-        color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-    };
+    /* led_strip определён ниже через &pio0 (PIO SPI + worldsemi,ws2812-spi),
+     * DIN = GP25. label и chosen живут в одном parse-юните с overlay-ами,
+     * поэтому led_strip не выносится в отдельный boards/rpi_pico.overlay. */
 
     // Листенер трекбола живёт только на центральной (левой) половине,
     // принимает события от proxy-устройства zmk,input-split.
@@ -131,6 +126,49 @@
     chosen {
         zephyr,console = &cdc_acm_uart0;
         zephyr,shell-uart = &cdc_acm_uart0;
+    };
+};
+
+&pinctrl {
+    pio0_spi0_default: pio0_spi0_default {
+        group1 {
+            /* MOSI (LED DIN) = GP25, CLK = GP20 (свободный на обеих половинах) */
+            pinmux = <PIO0_P25>, <PIO0_P20>;
+        };
+        group2 {
+            /* MISO: переиспользуем DIN — OK для WS2812 (master-only, ответ не читается) */
+            pinmux = <PIO0_P25>;
+            input-enable;
+        };
+    };
+};
+
+&pio0 {
+    status = "okay";
+
+    pio0_spi0: pio0_spi0 {
+        pinctrl-0 = <&pio0_spi0_default>;
+        pinctrl-names = "default";
+        compatible = "raspberrypi,pico-spi-pio";
+        status = "okay";
+        #address-cells = <1>;
+        #size-cells = <0>;
+        clocks = <&system_clk>;
+        clk-gpios = <&gpio0 20 GPIO_ACTIVE_HIGH>;
+        mosi-gpios = <&gpio0 25 GPIO_ACTIVE_HIGH>;
+        miso-gpios = <&gpio0 25 GPIO_ACTIVE_HIGH>; /* reuse DI — OK per ZMK docs */
+
+        led_strip: ws2812@0 {
+            compatible = "worldsemi,ws2812-spi";
+            reg = <0>;
+            spi-max-frequency = <4000000>;
+            spi-one-frame = <0x70>;
+            spi-zero-frame = <0x40>;
+            chain-length = <1>;
+            color-mapping = <LED_COLOR_ID_GREEN
+                             LED_COLOR_ID_RED
+                             LED_COLOR_ID_BLUE>;
+        };
     };
 };
 

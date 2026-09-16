@@ -8,6 +8,10 @@
     status = "okay";
 };
 
+&led_strip {
+    status = "okay";
+};
+
 &trackball_split {
     status = "okay";
 };

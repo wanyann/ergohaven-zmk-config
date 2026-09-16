@@ -7,7 +7,9 @@
     status = "okay";
 };
 
-
+&led_strip {
+    status = "okay";
+};
 
 &trackball_listener {
     status = "okay";
