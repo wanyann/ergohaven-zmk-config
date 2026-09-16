@@ -1425,6 +1425,17 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp LC(LS(F))>;
         };
+
+        ms_space: ms_space {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MS_SPACE";
+            bindings = <&mo>, <&space_morph>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            flavor = "balanced";
+            hold-while-undecided;
+        };
     };
 
     zip_auto_mouse: zip_auto_mouse {
