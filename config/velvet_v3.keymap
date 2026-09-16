@@ -1478,7 +1478,7 @@
 &trans  &mo 24    &mo 23    &mkp MB1   &mkp_hold LC(R) MB2  &mkp_hold LC(T) MB3                     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL            &moff_mt LC(F) COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans    &trans    &trans     &trans               &moff_mt LG(V) DOT                      &trans  &trans  &trans  &trans  &trans  &trans
-                  &trans    &trans     &trans               &mkp MB1              &trans    &trans  &trans  &trans  &trans  &trans
+                  &trans    &trans     &trans               &space_lt 12 0        &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -1487,7 +1487,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &moff_mt LG(F) RU_COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &moff_mt LG(V) RU_DOT                      &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &mkp MB1                 &trans    &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans                   &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -1826,6 +1826,4 @@
     };
 };
 
-&trackball_listener {
-    input-processors = <&zip_auto_mouse 4 500>;
-};
+&trackball_listener { input-processors = <&zip_auto_mouse 4 500>; };
