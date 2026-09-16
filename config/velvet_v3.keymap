@@ -1507,7 +1507,7 @@
 &trans  &mo 24         &mo 23         &mkp LCLK       &mkp_hold LC(R) RCLK  &mkpoff_hold LC(T) MCLK                    &none   &mkp LCLK      &mmvl MOVE_UP   &none          &none                &trans
 &trans  &mml LEFT_GUI  &mml LEFT_ALT  &kp LEFT_SHIFT  &mml LCTRL            &moff_mt LC(F) COMMA                       &none   &left_ctrl 25  &down_shift 26  &right_alt 27  &mouse_mod LEFT_GUI  &none
 &trans  &trans         &trans         &trans          &trans                &moff_mt LG(V) DOT                         &none   &scleft_morph  &scdown_morph   &scup_morph    &scright_morph       &trans
-                       &trans         &trans          &trans                &space_lt 12 0           &trans    &trans  &trans  &trans         &trans          &trans
+                       &trans         &trans          &trans                &ms_space 12 0           &trans    &trans  &trans  &trans         &trans          &trans
             >;
         };
 
