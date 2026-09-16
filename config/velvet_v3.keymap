@@ -1837,4 +1837,24 @@
     };
 };
 
-&trackball_listener { input-processors = <&zip_auto_mouse 4 500>; };
+&trackball_listener { 
+    input-processors = <&zip_auto_mouse 4 500>, <&zip_inertia>; 
+
+    scroller {
+        layers = <12>;
+        input-processors =
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_xy_scaler 1 32>,
+            <&zip_xy_to_scroll_mapper>;
+    };
+
+    faster {
+        layers = <24>;
+        input-processors = <&zip_xy_scaler 4 1>, <&zip_inertia>;
+    };
+
+    slower {
+        layers = <23>;
+        input-processors = <&zip_xy_scaler 1 3>, <&zip_inertia>;
+    };
+};
