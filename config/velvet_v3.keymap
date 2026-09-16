@@ -1486,10 +1486,10 @@
 
         AutoMouse {
             bindings = <
-&trans  &mo 24    &mo 23    &mkp MB1   &mkp_hold LC(R) MB2  &mkp_hold LC(T) MB3                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LGUI  &kp LALT  &kp LSHFT  &kp LCTRL            &moff_mt LC(F) COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans    &trans     &trans               &moff_mt LG(V) DOT                      &trans  &trans  &trans  &trans  &trans  &trans
-                  &trans    &trans     &trans               &space_lt 12 0        &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &mo 24     &mo 23     &mkp MB1   &mkp_hold LC(R) MB2  &mkp_hold LC(T) MB3                     &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
+&trans  &mml LGUI  &mml LALT  &kp LSHFT  &mml LCTRL           &moff_mt LC(F) COMMA                    &kp H   &kp J   &kp K      &kp L    &kp SEMI  &trans
+&trans  &trans     &trans     &trans     &trans               &moff_mt LG(V) DOT                      &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
+                   &trans     &trans     &trans               &space_lt 12 0        &trans    &trans  &trans  &trans  &trans     &trans
             >;
         };
 
@@ -1837,8 +1837,8 @@
     };
 };
 
-&trackball_listener { 
-    input-processors = <&zip_auto_mouse 4 30000>, <&zip_inertia>; 
+&trackball_listener {
+    input-processors = <&zip_auto_mouse 4 30000>, <&zip_inertia>;
 
     scroller {
         layers = <12>;
