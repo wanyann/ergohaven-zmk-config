@@ -561,7 +561,7 @@
             bindings =
                 <&mouse_off>,
                 <&macro_tap_time 1>,
-                <&layer_on 6 &layer_off 9 &layer_off 10>;
+                <&layer_on 6 &layer_off 9 &layer_off 10 &layer_off 4>;
 
             label = "MS_FREE";
             wait-ms = <0>;
@@ -573,7 +573,7 @@
             bindings =
                 <&overlay>,
                 <&macro_tap_time 1>,
-                <&layer_on 9 &layer_off 6>;
+                <&layer_on 9 &layer_off 6 &layer_off 4>;
 
             label = "MS_OVER";
             wait-ms = <0>;
@@ -624,13 +624,6 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &layer_on 6>;
             label = "KP_FREE";
-        };
-
-        mouseoff_kp: mouseoff_kp {
-            compatible = "zmk,behavior-macro-one-param";
-            #binding-cells = <1>;
-            bindings = <&layer_off 6 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
-            label = "MOUSEOFF_KP";
         };
 
         kp_m1: kp_m1 {
@@ -698,8 +691,13 @@
         moff_kp: moff_kp {
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
-            bindings = <&layer_off 6 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
+            bindings =
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap_time 1>,
+                <&layer_off 4 &layer_off 6>;
+
             label = "MOFF_KP";
+            wait-ms = <0>;
         };
 
         cmd_scroll: cmd_scroll {
