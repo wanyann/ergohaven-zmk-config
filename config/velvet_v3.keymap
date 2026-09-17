@@ -238,13 +238,13 @@
         combo_cmd_click {
             bindings = <&mod_click LEFT_CONTROL>;
             key-positions = <2 3 4>;
-            layers = <6 7>;
+            layers = <4 5>;
         };
 
         combo_opt_shft_click {
             bindings = <&mod_click LS(LEFT_ALT)>;
             key-positions = <26 27 28>;
-            layers = <6 7>;
+            layers = <4 5>;
         };
 
         combo_ms_over {
@@ -256,7 +256,7 @@
         combo_cmd_shft_click {
             bindings = <&mod_click LS(LEFT_CONTROL)>;
             key-positions = <14 15 16>;
-            layers = <6 7>;
+            layers = <4 5>;
         };
     };
 
