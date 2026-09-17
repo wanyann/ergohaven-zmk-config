@@ -469,8 +469,7 @@
         alt_spc_ru: alt_spc_ru {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &mouse_off>, <&macro_tap_time 1>, <&to 2>;
-
+            bindings = <&kp LA(SPACE) &layer_en>;
             label = "ALT_SPC_RU";
             wait-ms = <0>;
         };
@@ -638,10 +637,8 @@
         alt_spc_en: alt_spc_en {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LA(SPACE) &mouse_off>, <&macro_tap_time 1>, <&to 0>;
-
+            bindings = <&kp LA(SPACE) &layer_en>;
             label = "ALT_SPC_EN";
-            wait-ms = <0>;
         };
 
         kp_free: kp_free {
