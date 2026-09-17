@@ -1554,7 +1554,7 @@
 
         MouseMods {
             bindings = <
-&none   &kp Q             &kp W         &mkp LCLK      &kp R          &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
+&none   &kp Q             &kp W         &e_morph       &kp R          &kp T                     &kp Y   &kp U   &kp I      &kp O    &kp P     &trans
 &none   &mhrm LEFT_GUI A  &mhrm LALT S  &mhrm LSHFT D  &mhrm LCTRL F  &kp F                     &kp H   &kp J   &kp K      &kp L    &kp SEMI  &kp APOS
 &trans  &kp Z             &kp X         &kp C          &kp V          &kp B                     &kp N   &kp M   &kp COMMA  &kp DOT  &kp FSLH  &trans
                           &trans        &trans         &trans         &trans  &trans    &trans  &trans  &trans  &trans     &trans
