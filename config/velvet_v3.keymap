@@ -1328,7 +1328,7 @@
             bindings = <&kp RU_SLASH>, <&en_kp PIPE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RALT|MOD_LALT)>;
         };
 
         morph_pipe_en: morph_pipe_en {
@@ -1337,7 +1337,7 @@
             bindings = <&kp SLASH>, <&kp PIPE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT)>;
+            mods = <(MOD_RALT|MOD_LALT)>;
         };
 
         nav_set: nav_set {
