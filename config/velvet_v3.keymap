@@ -1826,6 +1826,11 @@
             if-layers = <25 26 27>;
             then-layer = <31>;
         };
+
+        AutoMouse {
+            if-layers = <2 4>;
+            then-layer = <5>;
+        };
     };
 };
 
