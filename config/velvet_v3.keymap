@@ -1525,7 +1525,7 @@
         AutoMouse_ru {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &moff_mt LG(F) RU_COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &moff_mt LC(F) RU_COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &moff_mt LG(V) RU_DOT                      &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans                   &trans    &trans  &trans  &trans  &trans  &trans
             >;
