@@ -247,10 +247,10 @@
             layers = <4 5>;
         };
 
-        combo_ms_over {
-            bindings = <&ms_over>;
+        combo_shft_click {
+            bindings = <&mod_click LEFT_SHIFT>;
             key-positions = <27 28>;
-            layers = <0 1 2 3 4 6 7 8 9 11 12 13 14 15 16 17 18 19 20 21 22>;
+            layers = <4 5>;
         };
 
         combo_cmd_shft_click {
