@@ -26,6 +26,10 @@
 
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 
+#include <zmk/activity.h>
+#include <zmk/event_manager.h>
+#include <zmk/events/activity_state_changed.h>
+
 LOG_MODULE_REGISTER(pmw3610_gpio, CONFIG_ZMK_LOG_LEVEL);
 
 #define PMW3610_PRODUCT_ID 0x3E
@@ -68,6 +72,8 @@ struct pmw3610_gpio_config {
 	struct gpio_dt_spec sdio;
 	struct gpio_dt_spec cs;
 	uint16_t cpi;
+	uint32_t run_downshift_ms;
+	uint32_t rest1_downshift_ms;
 	bool swap_xy;
 	bool invert_x;
 	bool invert_y;
@@ -182,6 +188,14 @@ static void pmw3610_set_downshift(const struct pmw3610_gpio_config *cfg, uint8_t
 	pmw3610_write(cfg, reg_addr, value);
 }
 
+static void pmw3610_set_performance(const struct device *dev, bool force_awake) {
+	const struct pmw3610_gpio_config *cfg = dev->config;
+
+	uint8_t value = pmw3610_read(cfg, PMW3610_REG_PERFORMANCE);
+	value = (value & 0x0F) | (force_awake ? 0xF0 : 0x00);
+	pmw3610_write(cfg, PMW3610_REG_PERFORMANCE, value);
+}
+
 static void pmw3610_report_data(const struct device *dev) {
 	const struct pmw3610_gpio_config *cfg = dev->config;
 	uint8_t buf[PMW3610_BURST_SIZE];
@@ -265,10 +279,10 @@ static int pmw3610_init(const struct device *dev) {
 	pmw3610_read(cfg, PMW3610_REG_DELTA_XY_H);
 
 	pmw3610_set_cpi(cfg, cfg->cpi);
-	pmw3610_write(cfg, PMW3610_REG_PERFORMANCE, PMW3610_PERFORMANCE_VALUE);
+	pmw3610_set_performance(dev, true);
 	/* Match QMK downshift times (scale per register). */
-	pmw3610_set_downshift(cfg, PMW3610_REG_RUN_DOWNSHIFT, 128, 32);
-	pmw3610_set_downshift(cfg, PMW3610_REG_REST1_DOWNSHIFT, 9600, 640);
+	pmw3610_set_downshift(cfg, PMW3610_REG_RUN_DOWNSHIFT, cfg->run_downshift_ms, 32);
+	pmw3610_set_downshift(cfg, PMW3610_REG_REST1_DOWNSHIFT, cfg->rest1_downshift_ms, 640);
 
 	data->dev = dev;
 	k_work_init_delayable(&data->poll_work, pmw3610_poll_work);
@@ -284,6 +298,8 @@ static int pmw3610_init(const struct device *dev) {
 		.sdio = GPIO_DT_SPEC_INST_GET(n, sdio_gpios),                                        \
 		.cs = GPIO_DT_SPEC_INST_GET(n, cs_gpios),                                            \
 		.cpi = DT_INST_PROP_OR(n, cpi, 600),                                                    \
+		.run_downshift_ms = DT_INST_PROP_OR(n, run_downshift_ms, 128),                          \
+		.rest1_downshift_ms = DT_INST_PROP_OR(n, rest1_downshift_ms, 9600),                     \
 		.swap_xy = DT_INST_PROP_OR(n, swap_xy, false),                                         \
 		.invert_x = DT_INST_PROP_OR(n, invert_x, false),                                       \
 		.invert_y = DT_INST_PROP_OR(n, invert_y, false),                                       \
@@ -296,3 +312,27 @@ static int pmw3610_init(const struct device *dev) {
 			 &pmw3610_gpio_cfg_##n, POST_KERNEL, CONFIG_INPUT_INIT_PRIORITY, NULL);
 
 DT_INST_FOREACH_STATUS_OKAY(PMW3610_GPIO_INST)
+
+#define GET_PMW3610_DEV(node_id) DEVICE_DT_GET(node_id),
+
+static const struct device *pmw3610_devs[] = {
+	DT_FOREACH_STATUS_OKAY(ergohaven_pmw3610_gpio, GET_PMW3610_DEV)
+};
+
+static int pmw3610_on_activity(const zmk_event_t *eh) {
+	struct zmk_activity_state_changed *state_ev = as_zmk_activity_state_changed(eh);
+
+	if (state_ev == NULL) {
+		return ZMK_EV_EVENT_HANDLED;
+	}
+
+	bool force_awake = state_ev->state == ZMK_ACTIVITY_ACTIVE;
+	for (size_t i = 0; i < ARRAY_SIZE(pmw3610_devs); i++) {
+		pmw3610_set_performance(pmw3610_devs[i], force_awake);
+	}
+
+	return ZMK_EV_EVENT_HANDLED;
+}
+
+ZMK_LISTENER(pmw3610_activity, pmw3610_on_activity);
+ZMK_SUBSCRIPTION(pmw3610_activity, zmk_activity_state_changed);

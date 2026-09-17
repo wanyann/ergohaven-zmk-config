@@ -33,6 +33,23 @@ properties:
     description: |
       Sensor resolution in counts per inch (200-3200, step 200).
 
+  run-downshift-ms:
+    type: int
+    default: 128
+    description: |
+      Time of sensor inactivity (ms) before downshifting from Run to
+      Rest1. Register value = time / 32 ms (8 * fixed 4ms pos-rate), same
+      scaling as QMK set_downshift_time(PMW3610_REG_RUN_DOWNSHIFT, ...).
+
+  rest1-downshift-ms:
+    type: int
+    default: 9600
+    description: |
+      Time of sensor inactivity (ms) before downshifting from Rest1 to
+      Rest2. Register value = time / (16 * Rest1_sample_period, 40 ms),
+      same scaling as QMK set_downshift_time(PMW3610_REG_REST1_DOWNSHIFT,
+      ...).
+
   evt-type:
     type: int
     required: true
