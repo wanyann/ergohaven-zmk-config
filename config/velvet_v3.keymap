@@ -255,7 +255,7 @@
 
         combo_cmd_shft_click {
             bindings = <&mod_click LS(LEFT_CONTROL)>;
-            key-positions = <14 15 16>;
+            key-positions = <2 3 4>;
             layers = <4 5>;
         };
     };
