@@ -1516,8 +1516,8 @@
         AutoMouse {
             bindings = <
 &trans  &mo 24     &mo 23     &mkp MB1   &mkp_hold LC(R) MB2  &mkp_hold LC(T) MB3                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mml LGUI  &mml LALT  &kp LSHFT  &mml LCTRL           &moff_mt LC(F) COMMA                    &mo 12  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans     &trans               &moff_mt LG(V) DOT                      &mo 12  &trans  &trans  &trans  &trans  &trans
+&trans  &mml LGUI  &mml LALT  &kp LSHFT  &mml LCTRL           &moff_mt LC(F) COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans               &moff_mt LG(V) DOT                      &trans  &trans  &trans  &trans  &trans  &trans
                    &trans     &trans     &trans               &ms_space 12 0        &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
