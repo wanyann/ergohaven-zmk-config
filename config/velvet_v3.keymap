@@ -1505,6 +1505,17 @@
             flavor = "tap-preferred";
             hold-while-undecided;
         };
+
+        msoft: msoft {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MSOFT";
+            bindings = <&mo>, <&soft_sign>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <180>;
+            hold-while-undecided;
+            flavor = "tap-preferred";
+        };
     };
 
     zip_auto_mouse: zip_auto_mouse {
@@ -1566,10 +1577,10 @@
 
         AutoMouse_ru {
             bindings = <
-&trans  &mlt 24 RU_CYRILLIC_TSE         &mlt 23 RU_CYRILLIC_SOFT_SIGN  &trans                     &trans                     &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &mmlt LGUI RU_CYRILLIC_SHORT_I  &mmlt LALT RU_CYRILLIC_I       &mmt LSHFT RU_CYRILLIC_IE  &mmlt LCTRL RU_CYRILLIC_O  &moff_mt LC(F) RU_COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                          &trans                         &trans                     &trans                     &moff_mt LG(V) RU_DOT                      &trans  &trans  &trans  &trans  &trans  &trans
-                                        &trans                         &trans                     &trans                     &trans                   &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &mlt 24 RU_CYRILLIC_TSE         &msoft 23 0               &trans                     &trans                     &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mmlt LGUI RU_CYRILLIC_SHORT_I  &mmlt LALT RU_CYRILLIC_I  &mmt LSHFT RU_CYRILLIC_IE  &mmlt LCTRL RU_CYRILLIC_O  &moff_mt LC(F) RU_COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                          &trans                    &trans                     &trans                     &moff_mt LG(V) RU_DOT                      &trans  &trans  &trans  &trans  &trans  &trans
+                                        &trans                    &trans                     &trans                     &trans                   &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
