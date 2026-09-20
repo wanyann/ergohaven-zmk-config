@@ -1495,9 +1495,9 @@
             hold-trigger-key-positions = <18 6 6 7 8 9 10 18 19 20 21 22 23 30 31 32 33 34 42 41 39>;
         };
 
-        mlt: mlt {
+        mlayer: mlayer {
             compatible = "zmk,behavior-hold-tap";
-            label = "MLT";
+            label = "MLAYER";
             bindings = <&mo>, <&moff_kp>;
 
             #binding-cells = <2>;
@@ -1568,7 +1568,7 @@
 
         AutoMouse {
             bindings = <
-&trans  &mlt 24 Q     &mlt 23 W     &mkp MB1      &mkp_hold LC(R) MB2  &mkp_hold LC(T) MB3                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mlayer 24 Q  &mlayer 23 W  &mkp MB1      &mkp_hold LC(R) MB2  &mkp_hold LC(T) MB3                     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &mmlt LGUI C  &mmlt LALT I  &mmt LSHFT E  &mmlt LCTRL O        &moff_mt LC(F) COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans        &trans        &trans        &trans               &moff_mt LG(V) DOT                      &trans  &trans  &trans  &trans  &trans  &trans
                       &trans        &trans        &trans               &ms_space 12 0        &trans    &trans  &trans  &trans  &trans  &trans
@@ -1577,7 +1577,7 @@
 
         AutoMouse_ru {
             bindings = <
-&trans  &mlt 24 RU_CYRILLIC_TSE         &msoft 23 0               &trans                     &trans                     &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &mlayer 24 RU_CYRILLIC_TSE      &msoft 23 0               &trans                     &trans                     &trans                                     &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &mmlt LGUI RU_CYRILLIC_SHORT_I  &mmlt LALT RU_CYRILLIC_I  &mmt LSHFT RU_CYRILLIC_IE  &mmlt LCTRL RU_CYRILLIC_O  &moff_mt LC(F) RU_COMMA                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans                          &trans                    &trans                     &trans                     &moff_mt LG(V) RU_DOT                      &trans  &trans  &trans  &trans  &trans  &trans
                                         &trans                    &trans                     &trans                     &trans                   &trans    &trans  &trans  &trans  &trans  &trans
