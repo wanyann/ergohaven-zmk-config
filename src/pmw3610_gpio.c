@@ -85,6 +85,13 @@ struct pmw3610_gpio_config {
 struct pmw3610_gpio_data {
 	const struct device *dev;
 	struct k_work_delayable poll_work;
+	int32_t acc_x;
+	int32_t acc_y;
+	int64_t last_motion_ms;
+	bool burst_confirmed;
+	int64_t drain_until;
+	int64_t drain_cap;
+	uint8_t quiet_run;
 };
 
 static inline void spi_delay(uint32_t us) {
@@ -196,11 +203,68 @@ static void pmw3610_set_performance(const struct device *dev, bool force_awake) 
 	pmw3610_write(cfg, PMW3610_REG_PERFORMANCE, value);
 }
 
+static void pmw3610_report_delta(const struct device *dev, int16_t x, int16_t y) {
+	const struct pmw3610_gpio_config *cfg = dev->config;
+
+	if (x != 0) {
+		input_report(dev, cfg->evt_type, cfg->x_code, x, y == 0, K_NO_WAIT);
+	}
+	if (y != 0) {
+		input_report(dev, cfg->evt_type, cfg->y_code, y, true, K_NO_WAIT);
+	}
+}
+
 static void pmw3610_report_data(const struct device *dev) {
 	const struct pmw3610_gpio_config *cfg = dev->config;
+	struct pmw3610_gpio_data *data = dev->data;
 	uint8_t buf[PMW3610_BURST_SIZE];
+	int64_t now = k_uptime_get();
 
 	pmw3610_read_burst(cfg, buf, sizeof(buf));
+
+#if defined(CONFIG_EH_PMW3610_STARTUP_DEBUG)
+	/* Bounded boot-window trace: raw burst bytes + decoded deltas, printed
+	 * for every poll (including frames the motion gate rejects) so a
+	 * boot-time garbage burst can be identified.  Diagnostics only. */
+	{
+		static uint32_t dbg_poll;
+
+		if (dbg_poll < CONFIG_EH_PMW3610_STARTUP_DEBUG_POLLS) {
+			int16_t dx = TOINT16(
+				(buf[PMW3610_X_L_POS] + ((buf[PMW3610_XY_H_POS] & 0xF0) << 4)), 12);
+			int16_t dy = TOINT16(
+				(buf[PMW3610_Y_L_POS] + ((buf[PMW3610_XY_H_POS] & 0x0F) << 8)), 12);
+			printk("PMW t=%d m=%02x b=%02x %02x %02x x=%d y=%d\n", (int)now, buf[0],
+			       buf[1], buf[2], buf[3], dx, dy);
+		}
+		dbg_poll++;
+	}
+#endif
+
+	/* Boot drain: the PMW3610 emits a deterministic power-up transient of
+	 * large deltas with the motion bit set (~80 ms after polling starts),
+	 * which the motion gate below cannot reject.  Suppress reports for at
+	 * least CONFIG_EH_PMW3610_STARTUP_DRAIN_MS, then until
+	 * CONFIG_EH_PMW3610_STARTUP_QUIET_POLLS consecutive quiet polls, with
+	 * CONFIG_EH_PMW3610_STARTUP_MAX_MS as a hard cap.  Reads continue so the
+	 * sensor drains itself. */
+	if (now < data->drain_cap &&
+	    (now < data->drain_until ||
+	     data->quiet_run < CONFIG_EH_PMW3610_STARTUP_QUIET_POLLS)) {
+		data->quiet_run = (buf[0] & 0x80) ? 0 : (uint8_t)(data->quiet_run + 1);
+		data->acc_x = 0;
+		data->acc_y = 0;
+		data->burst_confirmed = false;
+		return;
+	}
+
+	/* Match QMK: only report deltas when the motion flag is set (bit 7 of
+	 * the MOTION register, first byte of the burst).  This drops spurious
+	 * single-count deltas (e.g. rest->run wake frames, keystroke vibration)
+	 * that the sensor does not flag as real motion. */
+	if ((buf[0] & 0x80) == 0) {
+		return;
+	}
 
 	int16_t x = TOINT16((buf[PMW3610_X_L_POS] + ((buf[PMW3610_XY_H_POS] & 0xF0) << 4)), 12);
 	int16_t y = TOINT16((buf[PMW3610_Y_L_POS] + ((buf[PMW3610_XY_H_POS] & 0x0F) << 8)), 12);
@@ -217,15 +281,42 @@ static void pmw3610_report_data(const struct device *dev) {
 		y = -y;
 	}
 
+	/* Report-window filter (variant B, adapted from badjeff/zmk-pmw3610-driver):
+	 * the first frame of a motion burst is held until the next poll confirms
+	 * real motion; once confirmed, deltas stream out every poll (100 Hz at
+	 * 10 ms polling).  If motion stops before CONFIG_EH_PMW3610_REPORT_WINDOW_MS
+	 * elapses, the held accumulation is purged, so isolated single-count
+	 * frames (keystroke vibration, rest->run wake frames) never reach the
+	 * cursor. */
 	if (x == 0 && y == 0) {
+		if (now - data->last_motion_ms >= CONFIG_EH_PMW3610_REPORT_WINDOW_MS) {
+			data->acc_x = 0;
+			data->acc_y = 0;
+			data->burst_confirmed = false;
+		}
 		return;
 	}
 
-	if (x != 0) {
-		input_report(dev, cfg->evt_type, cfg->x_code, x, y == 0, K_NO_WAIT);
+	if (now - data->last_motion_ms >= CONFIG_EH_PMW3610_REPORT_WINDOW_MS) {
+		/* New motion burst after a quiet gap: drop stale accumulation. */
+		data->acc_x = 0;
+		data->acc_y = 0;
+		data->burst_confirmed = false;
 	}
-	if (y != 0) {
-		input_report(dev, cfg->evt_type, cfg->y_code, y, true, K_NO_WAIT);
+	data->last_motion_ms = now;
+	data->acc_x += x;
+	data->acc_y += y;
+
+	if (!data->burst_confirmed) {
+		/* First frame of a burst: hold until the next poll confirms motion. */
+		data->burst_confirmed = true;
+		return;
+	}
+
+	if (data->acc_x != 0 || data->acc_y != 0) {
+		pmw3610_report_delta(dev, data->acc_x, data->acc_y);
+		data->acc_x = 0;
+		data->acc_y = 0;
 	}
 }
 
@@ -285,10 +376,17 @@ static int pmw3610_init(const struct device *dev) {
 	pmw3610_set_downshift(cfg, PMW3610_REG_REST1_DOWNSHIFT, cfg->rest1_downshift_ms, 640);
 
 	data->dev = dev;
+	data->drain_until = k_uptime_get() + CONFIG_EH_PMW3610_STARTUP_DRAIN_MS;
+	data->drain_cap = k_uptime_get() + CONFIG_EH_PMW3610_STARTUP_MAX_MS;
+	data->quiet_run = 0;
 	k_work_init_delayable(&data->poll_work, pmw3610_poll_work);
 	k_work_schedule(&data->poll_work, K_MSEC(CONFIG_EH_PMW3610_POLL_INTERVAL_MS));
 
 	LOG_INF("PMW3610 initialized (cpi=%u)", cfg->cpi);
+#if defined(CONFIG_EH_PMW3610_STARTUP_DEBUG)
+	printk("PMW init done t=%d poll=%dms trace=%d\n", (int)k_uptime_get(),
+	       CONFIG_EH_PMW3610_POLL_INTERVAL_MS, CONFIG_EH_PMW3610_STARTUP_DEBUG_POLLS);
+#endif
 	return 0;
 }
 

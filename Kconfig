@@ -20,3 +20,66 @@ config EH_PMW3610_POLL_INTERVAL_MS
 	default 10
 	range 8 1000
 	depends on EH_PMW3610_GPIO
+
+config EH_PMW3610_REPORT_WINDOW_MS
+	int "PMW3610 motion confirm window (ms)"
+	default 20
+	range 10 1000
+	depends on EH_PMW3610_GPIO
+	help
+	  The first frame of a motion burst is held until the next poll confirms
+	  real motion; once confirmed, deltas stream out every poll.  If motion
+	  stops before this window elapses the held accumulation is purged, so
+	  isolated single-count frames (keystroke vibration, rest->run wake
+	  frames) are dropped.  Larger values tolerate longer quiet gaps before
+	  dropping unconfirmed motion.
+
+config EH_PMW3610_STARTUP_DRAIN_MS
+	int "PMW3610 boot drain floor (ms)"
+	default 150
+	range 50 2000
+	depends on EH_PMW3610_GPIO
+	help
+	  Suppress delta reports for at least this long after driver init so the
+	  deterministic PMW3610 power-up transient (motion bit set, large decaying
+	  deltas) never reaches the cursor.  The observed transient ends ~80 ms
+	  after polling starts, so the default leaves ~2x margin.  Must be
+	  <= EH_PMW3610_STARTUP_MAX_MS.
+
+config EH_PMW3610_STARTUP_QUIET_POLLS
+	int "PMW3610 consecutive quiet polls to end boot drain"
+	default 3
+	range 1 100
+	depends on EH_PMW3610_GPIO
+	help
+	  After the drain floor elapses, keep suppressing reports until this many
+	  consecutive polls report no motion (bit 7 of the burst status byte
+	  clear).  Protects against a longer-than-usual power-up transient.
+
+config EH_PMW3610_STARTUP_MAX_MS
+	int "PMW3610 boot drain hard cap (ms)"
+	default 300
+	range 100 5000
+	depends on EH_PMW3610_GPIO
+	help
+	  Upper bound on boot drain, even if the sensor keeps flagging motion.
+	  Should be >= EH_PMW3610_STARTUP_DRAIN_MS.
+
+config EH_PMW3610_STARTUP_DEBUG
+	bool "PMW3610 boot-window printk trace (diagnostics)"
+	default n
+	depends on EH_PMW3610_GPIO
+	help
+	  Emit a bounded printk trace (raw burst bytes + decoded deltas) for the
+	  first polls after boot.  Used to diagnose the boot-time cursor jump:
+	  shows whether the first bursts are garbage and whether they pass the
+	  motion-bit gate.  Leave disabled in normal builds.
+
+config EH_PMW3610_STARTUP_DEBUG_POLLS
+	int "PMW3610 boot trace length (polls)"
+	default 40
+	range 1 600
+	depends on EH_PMW3610_STARTUP_DEBUG
+	help
+	  How many polls (10 ms each at the default interval) to print.  40 polls
+	  = 400 ms.  Keep small: the deferred log buffer is 8 KB.
