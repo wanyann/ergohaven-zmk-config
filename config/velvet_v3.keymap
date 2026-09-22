@@ -953,6 +953,19 @@
             bindings = <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &mkp LCLK &macro_param_1to1 &key_off MACRO_PLACEHOLDER>;
             label = "MOD_CLICK";
         };
+
+        mkpmod: mkpmod {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&mkp LCLK &mml LCTRL>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mml LCTRL &mkp LCLK>;
+
+            label = "MKPMOD";
+        };
     };
 
     behaviors {
