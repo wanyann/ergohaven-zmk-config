@@ -1,0 +1,30 @@
+#include "velvet_v3.keymap"
+
+/* CPI experiment wrapper: sensor CPI 3200 with trackball scalers lowered
+ * to 2/3 of the proportional baseline (user decision: reduce effective
+ * speed of the fine 3200 CPI) - effective speeds become base 400,
+ * faster 1600, slower 133.33, scroller 12.5.  mmv/msc listeners
+ * (keyboard-mouse path) are untouched - they do not depend on trackball CPI. */
+
+&trackball {
+    cpi = <3200>;
+};
+
+&trackball_listener {
+    input-processors = <&zip_auto_mouse 4 30000>, <&zip_xy_scaler 1 8>;
+
+    scroller {
+        input-processors =
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_xy_scaler 1 256>,
+            <&zip_xy_to_scroll_mapper>;
+    };
+
+    faster {
+        input-processors = <&zip_xy_scaler 1 2>;
+    };
+
+    slower {
+        input-processors = <&zip_xy_scaler 1 24>;
+    };
+};

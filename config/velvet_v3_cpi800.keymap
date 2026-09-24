@@ -1,0 +1,29 @@
+#include "velvet_v3.keymap"
+
+/* CPI experiment wrapper: sensor CPI 800 with proportionally scaled
+ * trackball scalers so every layer keeps its effective speed
+ * (base 600, faster 2400, slower 200, scroller 18.75).  mmv/msc listeners
+ * (keyboard-mouse path) are untouched - they do not depend on trackball CPI. */
+
+&trackball {
+    cpi = <800>;
+};
+
+&trackball_listener {
+    input-processors = <&zip_auto_mouse 4 30000>, <&zip_xy_scaler 3 4>;
+
+    scroller {
+        input-processors =
+            <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
+            <&zip_xy_scaler 3 128>,
+            <&zip_xy_to_scroll_mapper>;
+    };
+
+    faster {
+        input-processors = <&zip_xy_scaler 3 1>;
+    };
+
+    slower {
+        input-processors = <&zip_xy_scaler 1 4>;
+    };
+};

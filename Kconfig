@@ -17,13 +17,13 @@ config EH_PMW3610_GPIO
 
 config EH_PMW3610_POLL_INTERVAL_MS
 	int "PMW3610 polling interval (ms)"
-	default 10
-	range 8 1000
+	default 5
+	range 1 1000
 	depends on EH_PMW3610_GPIO
 
 config EH_PMW3610_REPORT_WINDOW_MS
 	int "PMW3610 motion confirm window (ms)"
-	default 20
+	default 50
 	range 10 1000
 	depends on EH_PMW3610_GPIO
 	help
@@ -32,7 +32,12 @@ config EH_PMW3610_REPORT_WINDOW_MS
 	  stops before this window elapses the held accumulation is purged, so
 	  isolated single-count frames (keystroke vibration, rest->run wake
 	  frames) are dropped.  Larger values tolerate longer quiet gaps before
-	  dropping unconfirmed motion.
+	  dropping unconfirmed motion and keep the F-segment direction across
+	  the pauses of slow rolls (avoids re-establishment flip-flops).
+	  Default 50: tuned to the cadence of short trackball strokes (median
+	  pause between strokes ~24 ms), so a direction change is re-established
+	  after pauses >= 50 ms instead of smearing small opposite strokes into
+	  the stale direction (see УРОК 9).
 
 config EH_PMW3610_STARTUP_DRAIN_MS
 	int "PMW3610 boot drain floor (ms)"
@@ -81,5 +86,403 @@ config EH_PMW3610_STARTUP_DEBUG_POLLS
 	range 1 600
 	depends on EH_PMW3610_STARTUP_DEBUG
 	help
-	  How many polls (10 ms each at the default interval) to print.  40 polls
-	  = 400 ms.  Keep small: the deferred log buffer is 8 KB.
+	  How many polls (5 ms each at the default interval) to print.  40 polls
+	  = 200 ms.  Keep small: the deferred log buffer is 8 KB.
+
+config EH_PMW3610_MOTION_TRACE
+	bool "PMW3610 motion-gated raw trace (diagnostics)"
+	default n
+	depends on EH_PMW3610_GPIO
+	help
+	  Emit a printk trace of every poll that has the motion bit set (the
+	  only frames able to reach the cursor), with raw and cursor-space
+	  deltas plus SQUAL/shutter, so an intermittent tracking-loss jerk can
+	  be captured and analysed offline.  Also emits PMW-START/PMW-STOP edge
+	  markers and PMW-ACT activity-state changes.  Diagnostics only; leave
+	  disabled in normal builds.
+
+config EH_PMW3610_MOTION_TRACE_MAX
+	int "PMW3610 motion trace line cap"
+	default 8000
+	range 100 100000
+	depends on EH_PMW3610_MOTION_TRACE
+	help
+	  Stop printing motion frames after this many lines (edge markers keep
+	  printing).  8000 lines is roughly 1.5-3 minutes of active rolling.
+	  Bounds the USB log volume so the deferred log buffer does not drop
+	  lines.
+
+config EH_PMW3610_FSEGMENT
+	bool "PMW3610 direction-consistency segment filter (F-segment)"
+	default n
+	depends on EH_PMW3610_GPIO
+	help
+	  Drop short runs (>= EH_PMW3610_FSEG_DROP frames) of deltas that oppose
+	  the established direction of the current motion burst on its dominant
+	  axis.  Kills the intermittent "tracking-loss jerk" (cursor briefly
+	  moving opposite to the roll) without touching steady-state motion:
+	  reporting stays at 200 Hz and no latency is added.  Runs longer than
+	  EH_PMW3610_FSEG_REVERSE frames are treated as a genuine reversal and
+	  adopted as the new direction.  Diagnostics: with the motion trace
+	  enabled, dropped frames are marked PMW-DROP.
+
+config EH_PMW3610_FSEG_DROP
+	int "PMW3610 F-segment drop threshold (frames)"
+	default 1
+	range 1 8
+	depends on EH_PMW3610_FSEGMENT
+	help
+	  An opposing run of at least this many frames is dropped.  With the
+	  default of 1 the first opposing frame is dropped too, so a short
+	  wrong-direction jerk is suppressed entirely instead of leaking its
+	  first frame to the cursor.  The magnitude gate (EH_PMW3610_FSEG_REFMAG)
+	  keeps large real-motion frames from being dropped.
+
+config EH_PMW3610_FSEG_REVERSE
+	int "PMW3610 F-segment genuine-reversal threshold (frames)"
+	default 12
+	range 4 20
+	depends on EH_PMW3610_FSEGMENT
+	help
+	  An opposing run longer than this is treated as a genuine direction
+	  reversal: the new direction is adopted and frames are kept again.
+	  Default 12 = 60 ms at the 5 ms polling rate, matching the physical
+	  ball-recoil time constant; a shorter threshold flips direction
+	  mid-recoil and synthesizes the resumed roll the wrong way.
+
+config EH_PMW3610_FSEG_REFMAG
+	int "PMW3610 F-segment opposing-frame magnitude limit"
+	default 5
+	range 1 16
+	depends on EH_PMW3610_FSEGMENT
+	help
+	  An opposing frame is only considered for dropping if both |x| and |y|
+	  are at or below this limit.  Larger opposing frames are real motion
+	  (e.g. a diagonal roll whose cross-axis component flips sign, or a
+	  dominant-axis switch mid-gesture): the opposing-run counter is reset
+	  and the frame is passed through untouched.  Without this gate the
+	  filter eats large chunks of genuine movement during arcs and
+	  direction changes.  Default 5 (v0.0.15): at 1200 CPI the counts are
+	  doubled vs 600 CPI, so 5 counts = the old 2.5 px grain.  The physical
+	  ball-recoil micro-bounces on slow line-by-line rolls reach 3-5 counts
+	  and pass the old 2-count gate as "real motion", making the cursor
+	  choke (dips down then rebounds up).  Masking opposing frames up to 5
+	  counts suppresses those rebounds (log "движения по строкам": 60 ->
+	  15 px of rebound) while genuine reversals and arcs (large frames)
+	  still pass; verified on the vertical/diagonal reference logs
+	  (perp 13.99/21.42 % -> 13.35/21.17 %, no stutter).
+
+config EH_PMW3610_FSEG_SYNTH
+	bool "PMW3610 F-segment synthetic motion fill"
+	default n
+	depends on EH_PMW3610_FSEGMENT
+	help
+	  Instead of dropping an opposing frame (a 10 ms cursor stall per
+	  frame, perceptible as hesitation on clustered glitches), emit a
+	  synthetic delta that continues the established direction at the
+	  recent velocity (average of the last in-direction frames).  The
+	  cursor keeps moving through the glitch instead of freezing; no
+	  latency is added and the delta goes through the normal report
+	  window like any other frame.  Diagnostics: with the motion trace
+	  enabled, substituted frames are marked PMW-SYN.
+
+config EH_PMW3610_FSEG_SYNTH_MAX
+	int "PMW3610 F-segment synthetic fill cap (frames)"
+	default 12
+	range 1 20
+	depends on EH_PMW3610_FSEG_SYNTH
+	help
+	  Fill opposing frames with synthetic continuation up to this many
+	  frames of the opposing run; beyond it (and still short of
+	  EH_PMW3610_FSEG_REVERSE) the frame is dropped, i.e. the cursor
+	  pauses.  Default 12 equals the default REVERSE threshold, so the
+	          cursor never pauses before a genuine reversal is adopted.  Lower
+	          values bound how long a slow genuine reversal is pushed the wrong
+	          way before pausing.
+
+config EH_PMW3610_FSEG_SYNTH_MAXCONSEC
+	int "PMW3610 F-segment consecutive synthetic cap (frames)"
+	default 8
+	range 1 20
+	depends on EH_PMW3610_FSEG_SYNTH
+	help
+	  Adopt the observed opposing direction after this many consecutive
+	  synthetic (rewritten) reports since the last honest in-direction
+	  frame.  A sustained slow opposing run is a real direction change,
+	  not a recoil, so the filter stops rewriting and passes the truth
+	  through (flips f_dir, resets the run).  The counter is not reset by
+	  >EH_PMW3610_FSEG_REFMAG opposing frames, so slow runs with the odd
+	  3px frame still trip it.  Default 8 (~48 ms at 200 Hz) is above the
+	  physical ball recoil (~6 frames), so recoils stay masked while slow
+	  direction changes are followed within ~50 ms.
+
+config EH_PMW3610_FSEG_SYNTH_MIN_MAG
+	int "PMW3610 F-segment synthesize minimum ring magnitude"
+	default 3
+	range 1 8
+	depends on EH_PMW3610_FSEG_SYNTH
+	help
+	  Do not synthesize an opposing frame while the ring magnitude estimate
+	  (average of the last in-direction frames) is below this value: a small
+	  ring means the gesture has effectively stopped and the small opposing
+	  frames are real slow movement (aiming at a small target), not recoil.
+	  Synthesizing them continues the stale established direction and the
+	  cursor drifts the wrong way (lag log 18-06-45: slow aim at a small
+	  element, ball moved right/down while the cursor went left).  The frame
+	  is passed through as-is (trace marker PMW-PASSMIN).  Recoil masking is
+	  unaffected: after a fast roll the ring is large, so opposing frames
+	  are still rewritten.  Default 3.
+
+config EH_PMW3610_FSEG_FAST_MAG
+	int "PMW3610 F-segment fast-roll frame magnitude (counts)"
+	default 6
+	range 2 20
+	depends on EH_PMW3610_FSEG_SYNTH
+	help
+	  A frame whose dominant-axis magnitude is at least this counts as
+	  evidence of a fast roll.  Each such frame records its timestamp;
+	  the PASSMIN gate then only fires when the last fast roll is older
+	  than EH_PMW3610_FSEG_FAST_WIN_MS.  After a fast roll the ring
+	  estimate legitimately drops to tiny values while the ball is
+	  decelerating and recoiling, so the small opposing frames are the
+	  roll tail (stale-direction leak), not slow aiming: they must stay
+	  masked.  6 aligns with EH_PMW3610_FSEG_REFMAG=5 (frames the filter
+	  already treats as real motion).  Default 6.
+
+config EH_PMW3610_FSEG_FAST_WIN_MS
+	int "PMW3610 F-segment fast-roll recency window (ms)"
+	default 100
+	range 40 400
+	depends on EH_PMW3610_FSEG_SYNTH
+	help
+	  Only frames with no fast roll (EH_PMW3610_FSEG_FAST_MAG) within
+	  this many milliseconds are eligible for the PASSMIN pass-through.
+	  If a fast roll was seen recently, the small ring magnitude is a
+	  deceleration tail (ball recoil after a forceful roll) and the
+	  opposing frames are rewritten by the normal synthesis path instead
+	  of passed raw.  Lag dumps 19-01-23/19-00-44/19-00-32 showed 99-100%
+	  of PASSMIN frames landing inside this window after a fast roll
+	  (the "lag constantly" regression of v0.0.20); 100 ms cuts those to
+	  ~6-17 frames per log while a genuine slow aim with no recent roll
+	  (lag log 18-06-45, ~900 ms after the last fast roll) keeps all its
+	  PASSMIN frames.  Default 100.
+
+config EH_PMW3610_FSEG_PASSMIN_CONFIRM
+	bool "PMW3610 F-segment PASSMIN direction-confirmation gate"
+	default y
+	depends on EH_PMW3610_FSEG_SYNTH
+	help
+	  The PASSMIN pass-through (small ring magnitude, no recent fast roll)
+	  is only allowed when the opposing frame is not an isolated mid-roll
+	  micro-bounce: either the opposing run is sustained (EH_PMW3610_FSEG_REVERSE
+	  counter >= 3) or the recent raw motion on the dominant axis does NOT
+	  confirm the established direction (window sum * f_dir <= 0).  When the
+	  window still confirms the roll, the opposing frame is a sensor micro-
+	  bounce (ball lurch) in the middle of continuous rolling and is rewritten
+	  by the normal synthesis path instead of passed raw.  Lag dumps
+	  22-42-22/22-42-46/22-44-13 ("cursor dips against the roll during slow
+	  diagonal movement") showed every wrong-direction event is a raw frame
+	  that itself opposes the rolling direction; the window discriminates
+	  those from genuine slow aiming (lag log 18-06-45, where the window
+	  opposes the stale direction and PASSMIN keeps firing).  Default y.
+
+config EH_PMW3610_FSEG_PASSMIN_WIN_MS
+	int "PMW3610 F-segment PASSMIN confirmation window (ms)"
+	default 100
+	range 40 400
+	depends on EH_PMW3610_FSEG_PASSMIN_CONFIRM
+	help
+	  Raw-motion window length used by the PASSMIN direction-confirmation
+	  gate: the sum of the dominant-axis components of the frames seen in
+	  the last EH_PMW3610_FSEG_PASSMIN_WIN_MS.  If that sum has the same
+	  sign as the established direction, the roll is still ongoing and an
+	  opposing frame is treated as a micro-bounce (masked); if it opposes
+	  f_dir (or is zero), the frame is real slow movement and passes raw.
+	  100 ms matches EH_PMW3610_FSEG_FAST_WIN_MS and covers a full
+	  micro-bounce burst (~20-30 ms) plus margin.  Default 100.
+
+config EH_PMW3610_FSEG_REVOTE
+	bool "PMW3610 F-segment strong re-vote"
+	default y
+	depends on EH_PMW3610_FSEGMENT
+	help
+	  Re-adopt the burst direction from two consecutive strong frames
+	  (dominant-axis component >= EH_PMW3610_FSEG_REVOTE_MAG).  Fixes the
+	  wrong-direction echo produced by the synthesis path at direction
+	  transitions: a strong opposing frame passes the magnitude gate and
+	  resets the opposing-run counter but never updates f_dir, so the
+	  deceleration tail of a genuine reversal is synthesized in the stale
+	  direction.
+
+config EH_PMW3610_FSEG_REVOTE_MAG
+	int "PMW3610 F-segment re-vote magnitude (px)"
+	default 10
+	range 1 16
+	depends on EH_PMW3610_FSEG_REVOTE
+	help
+	  Minimum dominant-axis component for a frame to cast a re-vote.
+	  Default 10 is above the opposing-frame magnitude gate
+	  (EH_PMW3610_FSEG_REFMAG, default 5), so slow-roll micro-bounces
+	  cannot re-flip the direction while genuine strong reversals still
+	  re-adopt quickly.  With the sensor at 1200 CPI (v0.0.13) counts are
+	  doubled vs 600 CPI, so 10 counts = the old 5 px threshold; the
+	  keymap zip_xy_scaler 1/2 restores the cursor speed.
+
+config EH_PMW3610_VECT
+	bool "PMW3610 vector-projection stabilization (V-segment)"
+	default n
+	depends on EH_PMW3610_FSEGMENT
+	help
+	  Project in-direction frames onto the running motion vector and snap
+	  small perpendicular components (<= EH_PMW3610_VECT_QGATE counts) onto
+	  it.  The F-segment only gates the dominant axis, so the cross-axis
+	  component of every in-direction frame (and the whole ZERO-V frame)
+	  passes through untouched: that is the lateral jitter / random-side
+	  cursor drift seen at 17-27% of the path in the raw logs.  The motion
+	  vector is a 2D sliding-window sum of accepted frames over
+	  EH_PMW3610_VECT_WIN_MS, so a diagonal roll stays diagonal (measured
+	  net-angle error <= 2.6 deg on the diagonal reference log).  Frames
+	  whose perpendicular exceeds the gate (real maneuvers / direction
+	  changes) pass through untouched; opposing frames are still handled by
+	  the ordinary F-segment path.  Diagnostics: projected frames are not
+	  traced individually (they are the vast majority); the filter is
+	  verified by the lateral-drift metric on reference logs.
+
+config EH_PMW3610_VECT_WIN_MS
+	int "PMW3610 vector estimation window (ms)"
+	default 600
+	range 100 2000
+	depends on EH_PMW3610_VECT
+	help
+	  Sliding window over which the motion vector is estimated (sum of
+	  accepted frames from the last N ms).  Longer = steadier estimate but
+	  slower to follow an arc; shorter = quicker but noisier.  600 ms was
+	  measured best on both the vertical and diagonal reference logs.
+
+config EH_PMW3610_VECT_QGATE
+	int "PMW3610 vector perpendicular gate (counts)"
+	default 4
+	range 0 8
+	depends on EH_PMW3610_VECT
+	help
+	  A perpendicular component at or below this many counts is snapped
+	  onto the motion vector (straightened); larger perpendiculars pass
+	  through as genuine motion.  At 1200 CPI (v0.0.13) 4 counts = the old
+	  2 px grain.  Raised 2->4 in v0.0.16: cross-axis frames of 3-4 counts
+	  (hand micro-jolts during a diagonal roll) were rejected by the old
+	  gate and passed through raw as IN, showing up as visible jumps
+	  across the diagonal line; the wider gate halves those (107->56 on
+	  the diagonal reference log) while real maneuvers still pass.
+
+config EH_PMW3610_VECT_SYNN
+	bool "PMW3610 synthesize opposing frames along the motion vector"
+	default y
+	depends on EH_PMW3610_VECT
+	depends on EH_PMW3610_FSEG_SYNTH
+	help
+	  When the F-segment fills an opposing frame with a synthetic
+	  continuation, emit it along the running motion vector (with a
+	  fractional carry) instead of as a pure dominant-axis step.  A
+	  diagonal roll whose opposing frames are filled as axial steps
+	  produces an axial "wall" (several consecutive frames stuck on one
+	  axis); vector-direction steps keep the diagonal.  Falls back to the
+	  plain axis step when the vector is too short to define a direction.
+
+config EH_PMW3610_ALT_MODE
+	bool "PMW3610 ALT mode: faithful badjeff/zmk-pmw3610-driver algorithm"
+	default n
+	depends on EH_PMW3610_GPIO
+	help
+	  Replace the whole report pipeline (F-segment, V-segment, report-window
+	  gate, boot drain, motion gate, software swap/invert) with a faithful
+	  port of the badjeff/zmk-pmw3610-driver (v0.3) algorithm: raw burst ->
+	  decode -> smart algorithm -> accumulate -> report every
+	  EH_PMW3610_ALT_REPORT_INTERVAL_MS.  Used to A/B the stock driver
+	  behaviour against the ergohaven filters on the same hardware.
+
+if EH_PMW3610_ALT_MODE
+
+config EH_PMW3610_ALT_REPORT_INTERVAL_MS
+	int "PMW3610 ALT report interval (ms)"
+	default 12
+	range 0 1000
+	depends on EH_PMW3610_ALT_MODE
+	help
+	  Mirror of CONFIG_PMW3610_REPORT_INTERVAL_MIN: accumulated deltas are
+	  reported at most every this many ms.  0 reports every sample (the
+	  interval logic is compiled out entirely, as in the stock driver).
+
+config EH_PMW3610_ALT_SMART
+	bool "PMW3610 ALT smart surface-coverage algorithm"
+	default y
+	depends on EH_PMW3610_ALT_MODE
+	help
+	  Mirror of CONFIG_PMW3610_SMART_ALGORITHM: toggle register 0x32 from
+	  the shutter reading so tracking extends across a wider range of
+	  surfaces (granite, tiles).
+
+config EH_PMW3610_ALT_FORCE_AWAKE
+	bool "PMW3610 ALT force-awake (activity-gated performance register)"
+	default y
+	depends on EH_PMW3610_ALT_MODE
+	help
+	  Equivalent of the badjeff DT property force-awake: the performance
+	  register is toggled by the ZMK activity state (0xF0 while active, the
+	  low nibble / normal run rate while idle).  Disable to make
+	  set_performance a no-op, exactly like a badjeff node without the
+	  force-awake property.
+
+config EH_PMW3610_ALT_FORCE_AWAKE_4MS_MODE
+	bool "PMW3610 ALT force-awake 4ms run rate"
+	default n
+	depends on EH_PMW3610_ALT_FORCE_AWAKE
+	help
+	  Equivalent of the badjeff DT property force-awake-4ms-mode: while
+	  force-awake is enabled and ZMK is active, the performance register is
+	  written 0xFD (all run rates forced to 4 ms) instead of 0xF0 (current
+	  low nibble / normal 8 ms run rate); idle writes 0x0D.
+
+config EH_PMW3610_ALT_RUN_DOWNSHIFT_MS
+	int "PMW3610 ALT RUN downshift time (ms)"
+	default 128
+	range 32 8160
+	depends on EH_PMW3610_ALT_MODE
+	help
+	  Mirror of CONFIG_PMW3610_RUN_DOWNSHIFT_TIME_MS.
+
+config EH_PMW3610_ALT_REST1_DOWNSHIFT_MS
+	int "PMW3610 ALT REST1 downshift time (ms)"
+	default 5000
+	depends on EH_PMW3610_ALT_MODE
+	help
+	  Mirror of CONFIG_PMW3610_REST1_DOWNSHIFT_TIME_MS.
+
+config EH_PMW3610_ALT_REST2_DOWNSHIFT_MS
+	int "PMW3610 ALT REST2 downshift time (ms)"
+	default 17000
+	depends on EH_PMW3610_ALT_MODE
+	help
+	  Mirror of CONFIG_PMW3610_REST2_DOWNSHIFT_TIME_MS.
+
+config EH_PMW3610_ALT_REST1_SAMPLE_MS
+	int "PMW3610 ALT REST1 sample time (ms)"
+	default 40
+	depends on EH_PMW3610_ALT_MODE
+	help
+	  Mirror of CONFIG_PMW3610_REST1_SAMPLE_TIME_MS.
+
+config EH_PMW3610_ALT_REST2_SAMPLE_MS
+	int "PMW3610 ALT REST2 sample time (ms)"
+	default 100
+	depends on EH_PMW3610_ALT_MODE
+	help
+	  Mirror of CONFIG_PMW3610_REST2_SAMPLE_TIME_MS.
+
+config EH_PMW3610_ALT_REST3_SAMPLE_MS
+	int "PMW3610 ALT REST3 sample time (ms)"
+	default 500
+	depends on EH_PMW3610_ALT_MODE
+	help
+	  Mirror of CONFIG_PMW3610_REST3_SAMPLE_TIME_MS.
+
+endif # EH_PMW3610_ALT_MODE
