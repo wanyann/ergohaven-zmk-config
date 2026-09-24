@@ -1531,10 +1531,10 @@
 
         En {
             bindings = <
-&kp TAB       &kp Q                  &kp W                &kp U                  &mt LC(R) A             &mt LC(T) K_CANCEL                         &kp Z     &kp V          &kp K                  &kp D            &kp K_CANCEL       &none
-&kp K_CANCEL  &hrml_slow LEFT_GUI C  &hrosm_l LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O           &en_com_mt LC(F) 0                         &kp L     &hrml RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow RGUI H  &kp K_CANCEL
-&none         &mt LC(Z) F            &mt LC(X) Y          &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &kp B     &kp M          &kp P                  &kp G            &mt LC(SLASH) J    &none
-                                     &kp LS(F7)           &kp F7                 &layer_ru               &lt 12 SPACE        &sl 16    &bspc_morph  &lt 14 R  &layer_en      &kp F2                 &kp LS(F2)
+&kp ESC       &kp Q                  &kp W                &kp U                  &mt LC(R) A             &mt LC(T) K_CANCEL                             &kp Z     &kp V          &kp K                  &kp D            &kp K_CANCEL       &bspc_morph
+&kp K_CANCEL  &hrml_slow LEFT_GUI C  &hrosm_l LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O           &en_com_mt LC(F) 0                             &kp L     &hrml RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow RGUI H  &kp K_CANCEL
+&kp TAB       &mt LC(Z) F            &mt LC(X) Y          &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                             &kp B     &kp M          &kp P                  &kp G            &mt LC(SLASH) J    &kp ENTER
+                                     &kp LS(F7)           &kp F7                 &layer_ru               &lt 12 SPACE        &sl 16    &one_shot LSHFT  &lt 14 R  &layer_en      &kp F2                 &kp LS(F2)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -1614,7 +1614,7 @@
 
         M1 {
             bindings = <
-&none                 &kp_m1 RU_CYRILLIC_TSE      &kp_m1 RU_CYRILLIC_SOFT_SIGN  &kp_m1 RU_CYRILLIC_YA  &kp_m1 RU_CYRILLIC_A     &kp_m1 RU_CYRILLIC_YU                                        &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
+&trans                &kp_m1 RU_CYRILLIC_TSE      &kp_m1 RU_CYRILLIC_SOFT_SIGN  &kp_m1 RU_CYRILLIC_YA  &kp_m1 RU_CYRILLIC_A     &kp_m1 RU_CYRILLIC_YU                                        &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_KA  &kp RU_CYRILLIC_DE   &kp RU_CYRILLIC_SHCHA  &trans
 &kp_m1 RU_CYRILLIC_E  &kp_m1 RU_CYRILLIC_SHORT_I  &kp_m1 RU_CYRILLIC_I          &kp_m1 RU_CYRILLIC_IE  &kp_m1 RU_CYRILLIC_O     &kp_m1 LS(N6)                                                &kp RU_CYRILLIC_EL  &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_TE  &kp RU_CYRILLIC_ES   &kp RU_CYRILLIC_CHE    &kp RU_CYRILLIC_SHA
 &trans                &kp_m1 RU_CYRILLIC_EF       &kp_m1 RU_CYRILLIC_U          &kp_m1 RU_CYRILLIC_HA  &kp_m1 RU_CYRILLIC_YERU  &kp_m1 LS(RU_N7)                                             &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_PE  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_ZHE    &trans
                                                   &trans                        &trans                 &overoff_ru              &nav_set 12 4          &overoff_sl 9 16    &switch_mon BSPC  &back_num 14 8      &overoff_en         &trans              &trans
@@ -1623,7 +1623,7 @@
 
         M2 {
             bindings = <
-&none              &kp RU_CYRILLIC_TSE      &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_YA  &kp RU_CYRILLIC_A     &kp RU_CYRILLIC_YU                                              &kp_m2 RU_CYRILLIC_ZE  &kp_m2 RU_CYRILLIC_VE  &kp_m2 RU_CYRILLIC_KA  &kp_m2 RU_CYRILLIC_DE   &kp_m2 RU_CYRILLIC_SHCHA  &trans
+&trans             &kp RU_CYRILLIC_TSE      &kp RU_CYRILLIC_SOFT_SIGN  &kp RU_CYRILLIC_YA  &kp RU_CYRILLIC_A     &kp RU_CYRILLIC_YU                                              &kp_m2 RU_CYRILLIC_ZE  &kp_m2 RU_CYRILLIC_VE  &kp_m2 RU_CYRILLIC_KA  &kp_m2 RU_CYRILLIC_DE   &kp_m2 RU_CYRILLIC_SHCHA  &trans
 &kp RU_CYRILLIC_E  &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_I          &kp RU_CYRILLIC_IE  &kp RU_CYRILLIC_O     &kp LS(N6)                                                      &kp_m2 RU_CYRILLIC_EL  &kp_m2 RU_CYRILLIC_EN  &kp_m2 RU_CYRILLIC_TE  &kp_m2 RU_CYRILLIC_ES   &kp_m2 RU_CYRILLIC_CHE    &kp_m2 RU_CYRILLIC_SHA
 &trans             &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_U          &kp RU_CYRILLIC_HA  &kp RU_CYRILLIC_YERU  &kp LS(RU_N7)                                                   &kp_m2 RU_CYRILLIC_BE  &kp_m2 RU_CYRILLIC_EM  &kp_m2 RU_CYRILLIC_PE  &kp_m2 RU_CYRILLIC_GHE  &kp_m2 RU_CYRILLIC_ZHE    &trans
                                             &trans                     &trans              &overoff_ru           &nav_set 12 4       &overoff_sl 10 16    &switch_mon BACKSPACE  &back_num 14 8         &overoff_en            &trans                 &trans
