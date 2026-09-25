@@ -73,7 +73,7 @@
 
         combo_esc {
             bindings = <&kp_overoff ESC>;
-            key-positions = <>;
+            key-positions = <38 39 40>;
             require-prior-idle-ms = <30>;
         };
 
