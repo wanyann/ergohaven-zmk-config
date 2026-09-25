@@ -73,7 +73,7 @@
 
         combo_esc {
             bindings = <&kp_overoff ESC>;
-            key-positions = <38 39 40>;
+            key-positions = <>;
             require-prior-idle-ms = <30>;
         };
 
@@ -1567,7 +1567,7 @@
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
         require-prior-idle-ms = <500>;
-        excluded-positions = <2 3 4 5 14 15 16 26 27 28>;
+        excluded-positions = <2 3 4 5 14 15 16 26 27 28 40>;
     };
 
     keymap {
