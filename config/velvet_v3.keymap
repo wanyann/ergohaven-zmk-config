@@ -1926,7 +1926,7 @@
 };
 
 &trackball_listener {
-    input-processors = <&zip_auto_mouse 4 30000>, <&zip_xy_scaler 1 2>;
+    input-processors = <&zip_auto_mouse 4 30000>, <&zip_xy_scaler 2 5>;
 
     scroller {
         layers = <12>;
