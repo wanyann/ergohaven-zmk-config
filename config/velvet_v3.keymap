@@ -66,7 +66,7 @@
 
         combo_tab {
             bindings = <&long_kp TAB>;
-            key-positions = <14 15>;
+            key-positions = <>;
             require-prior-idle-ms = <30>;
             timeout-ms = <30>;
         };
