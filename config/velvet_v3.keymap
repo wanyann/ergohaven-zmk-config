@@ -60,7 +60,7 @@
 
         combo_enter {
             bindings = <&long_kp ENTER>;
-            key-positions = <3 2>;
+            key-positions = <>;
             require-prior-idle-ms = <30>;
         };
 
@@ -252,7 +252,7 @@
 
         combo_shft_click {
             bindings = <&mod_click LEFT_SHIFT>;
-            key-positions = <28 27>;
+            key-positions = <2 3>;
             layers = <4 5>;
         };
 
