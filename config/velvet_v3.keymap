@@ -54,7 +54,7 @@
 
         combo_ctrl_ent {
             bindings = <&long_kp LC(ENTER)>;
-            key-positions = <2 4>;
+            key-positions = <>;
             require-prior-idle-ms = <30>;
         };
 
