@@ -1565,7 +1565,7 @@
         compatible = "zmk,input-processor-temp-layer";
         #input-processor-cells = <2>;
         require-prior-idle-ms = <500>;
-        excluded-positions = <2 3 4 5 14 15 16 26 27 28 39 40 41>;
+        excluded-positions = <2 3 4 5 14 15 16 26 27 28 39>;
     };
 
     keymap {
