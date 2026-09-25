@@ -1,5 +1,6 @@
 .DS_Store
 tools/
+logs/
 AGENTS.md
 config/boards/shields/phenom_mini/phenom_mini_right.conf
 config/boards/shields/phenom_mini/phenom_mini_left.conf

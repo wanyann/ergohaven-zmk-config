@@ -7,12 +7,22 @@ include:
     artifact-name: phenom_mini_left
   - board: rpi_pico
     shield: phenom_mini_right
-    artifact-name: phenom_mini_right
+    artifact-name: phenom_mini_right_83hz
     keymap: velvet_v3
     cmake-args: >-
       -DCONFIG_EH_PMW3610_ALT_MODE=y
       -DCONFIG_ZMK_USB_LOGGING=n
       -DCONFIG_EH_PMW3610_ALT_FORCE_AWAKE_4MS_MODE=y
+      -DCONFIG_EH_PMW3610_ALT_REPORT_INTERVAL_MS=12
+  - board: rpi_pico
+    shield: phenom_mini_right
+    artifact-name: phenom_mini_right_200hz
+    keymap: velvet_v3
+    cmake-args: >-
+      -DCONFIG_EH_PMW3610_ALT_MODE=y
+      -DCONFIG_ZMK_USB_LOGGING=n
+      -DCONFIG_EH_PMW3610_ALT_FORCE_AWAKE_4MS_MODE=y
+      -DCONFIG_EH_PMW3610_ALT_REPORT_INTERVAL_MS=0
   - board: rpi_pico
     shield: phenom_mini_right
     artifact-name: phenom_mini_right_fseg_v024
