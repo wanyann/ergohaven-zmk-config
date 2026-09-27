@@ -1821,46 +1821,6 @@
     };
 };
 
-&zip_inertia {
-    // Initiation delay (Wait time after input stops before starting inertia)
-    // Recommended: AT LEAST 2x your sensor's polling interval (e.g., 30ms for 15ms sensor).
-
-    trigger-ms = <3>;
-
-    // --- Mouse Movement Settings ---
-
-    move-decay-factor-int = <80>;       // Decay rate (0-100)
-    move-report-interval-ms = <25>;     // Report interval (ms)
-    move-threshold-start = <1>;        // Start threshold (pix/report)
-    move-threshold-stop = <1>;          // Stop threshold (pix/report)
-};
-
-&mmv_input_listener { input-processors = <&zip_inertia>; };
-
-&msc_input_listener {
-    faster {
-        layers = <24>;
-        input-processors = <&zip_scroll_scaler 2 1>;
-    };
-
-    slower {
-        layers = <23>;
-        input-processors = <&zip_scroll_scaler 1 3>;
-    };
-};
-
-&mmv_input_listener {
-    faster {
-        layers = <24>;
-        input-processors = <&zip_xy_scaler 4 1>, <&zip_inertia>;
-    };
-
-    slower {
-        layers = <23>;
-        input-processors = <&zip_xy_scaler 1 3>, <&zip_inertia>;
-    };
-};
-
 &trackball_listener {
     input-processors = <&zip_auto_mouse 4 30000>, <&zip_xy_scaler 2 5>;
 
@@ -1873,12 +1833,12 @@
     };
 
     faster {
-        layers = <24>;
+        layers = <21>;
         input-processors = <&zip_xy_scaler 2 1>;
     };
 
     slower {
-        layers = <23>;
+        layers = <20>;
         input-processors = <&zip_xy_scaler 1 6>;
     };
 };
