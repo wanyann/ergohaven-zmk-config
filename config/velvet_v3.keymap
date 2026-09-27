@@ -1439,7 +1439,7 @@
             label = "CLICK_LAYER";
             bindings = <&mo>;
             #binding-cells = <1>;
-            release-after-ms = <500>;
+            release-after-ms = <1000>;
             quick-release;
         };
     };
