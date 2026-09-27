@@ -1434,17 +1434,6 @@
             hold-while-undecided;
         };
 
-        msoft: msoft {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MSOFT";
-            bindings = <&mo>, <&soft_sign>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            hold-while-undecided;
-            flavor = "tap-preferred";
-        };
-
         click_layer: click_layer {
             compatible = "zmk,behavior-sticky-key";
             label = "CLICK_LAYER";
@@ -1514,10 +1503,10 @@
 
         AutoMouse_ru {
             bindings = <
-&trans  &mlayer 21 RU_CYRILLIC_TSE  &msoft 20 0  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                      &trans       &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                      &trans       &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans       &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &mlayer 21 RU_CYRILLIC_TSE  &mlayer 20 RU_CYRILLIC_SOFT_SIGN  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                      &trans                            &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                      &trans                            &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans                            &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
