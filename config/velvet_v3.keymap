@@ -131,7 +131,7 @@
 
         combo_asterisk_ru {
             bindings = <&kp RU_ASTERISK>;
-            key-positions = <7 8 9>;
+            key-positions = <>;
             layers = <2 3 16 12 5>;
         };
 
@@ -199,7 +199,7 @@
 
         combo_equal {
             bindings = <&kp EQUAL>;
-            key-positions = <8 9>;
+            key-positions = <>;
         };
 
         combo_quotes_en {
