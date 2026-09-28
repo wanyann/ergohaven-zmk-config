@@ -1733,7 +1733,7 @@
     input-processors = <&zip_auto_mouse 4 30000>, <&zip_xy_scaler 2 5>;
 
     scroller {
-        layers = <9>;
+        layers = <10>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_scaler 1 64>,
@@ -1741,12 +1741,12 @@
     };
 
     faster {
-        layers = <21>;
+        layers = <22>;
         input-processors = <&zip_xy_scaler 2 1>;
     };
 
     slower {
-        layers = <20>;
+        layers = <21>;
         input-processors = <&zip_xy_scaler 1 6>;
     };
 };
