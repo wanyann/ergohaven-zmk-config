@@ -553,6 +553,7 @@
 
             label = "ONE_SHOT";
             tap-ms = <1>;
+            wait-ms = <0>;
         };
 
         bt_set_ru: bt_set_ru {
