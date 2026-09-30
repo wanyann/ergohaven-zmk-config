@@ -238,28 +238,34 @@
             layers = <0 1 12 16 4>;
         };
 
-        combo_cmd_click {
+        combo_mclick {
             bindings = <&mkp MB3>;
             key-positions = <3 4>;
             layers = <4 5 23>;
         };
 
-        combo_opt_shft_click {
-            bindings = <&mod_click LS(LEFT_ALT)>;
-            key-positions = <4 3 2>;
+        combo_lclick {
+            bindings = <&mkp MB1>;
+            key-positions = <14 15>;
+            layers = <4 5 23>;
+        };
+
+        combo_rclick {
+            bindings = <&mkp MB2>;
+            key-positions = <16 15>;
             layers = <4 5 23>;
         };
 
         combo_shft_click {
-            bindings = <&mkp MB2>;
-            key-positions = <2 3>;
-            layers = <4 5 23>;
+            bindings = <&mod_click LEFT_SHIFT>;
+            key-positions = <26 27>;
+            layers = <4 5>;
         };
 
-        combo_cmd_shft_click {
-            bindings = <&mod_click LS(LEFT_CONTROL)>;
-            key-positions = <>;
-            layers = <4 5>;
+        combo_cmd_click {
+            bindings = <&mod_click LCTRL>;
+            key-positions = <3 2>;
+            layers = <4 5 23>;
         };
     };
 
@@ -1528,19 +1534,19 @@
 
         AutoMouse {
             bindings = <
-&trans  &mlayer 21 Q  &click  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-                      &trans  &trans  &trans  &ms_space 10 0  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &ms_space 10 0  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         AutoMouse_ru {
             bindings = <
-&trans  &mlayer 21 RU_CYRILLIC_TSE  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                      &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                      &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
