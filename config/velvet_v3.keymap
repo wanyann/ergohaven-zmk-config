@@ -1528,19 +1528,19 @@
 
         AutoMouse {
             bindings = <
-&trans  &mlayer 22 Q  &mlayer 21 W  &click  &mkp_hold LC(R) MB2  &mkp_hold LC(T) MB3                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans  &trans               &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans        &trans        &trans  &trans               &trans                                 &trans  &trans  &trans  &trans  &trans  &trans
-                      &trans        &trans  &trans               &ms_space 10 0       &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &mlayer 21 Q  &click  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans        &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+                      &trans  &trans  &trans  &ms_space 10 0  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         AutoMouse_ru {
             bindings = <
-&trans  &mlayer 22 RU_CYRILLIC_TSE  &mlayer 21 RU_CYRILLIC_SOFT_SIGN  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                      &trans                            &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                      &trans                            &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans                            &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &mlayer 21 RU_CYRILLIC_TSE  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                      &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                      &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                                    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -1699,7 +1699,7 @@
 
         Click {
             bindings = <
-&trans  &trans  &trans  &click  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &click  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
