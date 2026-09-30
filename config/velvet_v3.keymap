@@ -1453,6 +1453,16 @@
             tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
+
+        bspc_lt: bspc_lt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BSPC_LT";
+            bindings = <&mo>, <&bspc_morph>;
+
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <300>;
+        };
     };
 
     zip_auto_mouse: zip_auto_mouse {
@@ -1467,10 +1477,10 @@
 
         En {
             bindings = <
-&none         &kp Q                  &kp W             &kp U                  &mt LC(R) A             &mt LC(T) K_CANCEL                         &kp Z     &kp V          &kp K                  &kp D            &kp K_CANCEL       &none
-&kp K_CANCEL  &hrml_slow LEFT_GUI C  &hrml LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O           &en_com_mt LC(F) 0                         &kp L     &hrml RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow RGUI H  &kp K_CANCEL
-&none         &mt LC(Z) F            &mt LC(X) Y       &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &kp B     &kp M          &kp P                  &kp G            &mt LC(SLASH) J    &none
-                                     &kp LS(F7)        &kp F7                 &layer_ru               &lt 10 SPACE        &sl 14    &bspc_morph  &lt 12 R  &layer_en      &kp F2                 &kp LS(F2)
+&none         &kp Q                  &kp W             &kp U                  &mt LC(R) A             &mt LC(T) K_CANCEL                              &kp Z     &kp V          &kp K                  &kp D            &kp K_CANCEL       &none
+&kp K_CANCEL  &hrml_slow LEFT_GUI C  &hrml LEFT_ALT I  &hrosm_l LEFT_SHIFT E  &hrml LCTRL O           &en_com_mt LC(F) 0                              &kp L     &hrml RCTRL N  &hrosm_r LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow RGUI H  &kp K_CANCEL
+&none         &mt LC(Z) F            &mt LC(X) Y       &mt LC(C) X            &mt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                              &kp B     &kp M          &kp P                  &kp G            &mt LC(SLASH) J    &none
+                                     &kp LS(F7)        &kp F7                 &layer_ru               &lt 10 SPACE        &sl 14    &one_shot LSHIFT  &lt 12 R  &layer_en      &kp F2                 &kp LS(F2)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -1541,10 +1551,10 @@
 
         Mod {
             bindings = <
-&trans  &kp Q             &kp W             &moff_kp E         &kp R         &kp T                                  &kp Y            &kp U              &kp I              &kp O             &kp P                &trans
-&trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                                  &kp H            &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
-&trans  &kp Z             &kp X             &kp C              &mt LC(V) V   &kp B                                  &kp N            &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
-                          &trans            &trans             &trans        &space_lt 10 0  &trans    &bspc_morph  &lt 12 K_CANCEL  &trans             &trans             &trans
+&trans  &kp Q             &kp W             &moff_kp E         &kp R         &kp T                                      &kp Y          &kp U              &kp I              &kp O             &kp P                &trans
+&trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                                      &kp H          &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
+&trans  &kp Z             &kp X             &kp C              &mt LC(V) V   &kp B                                      &kp N          &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
+                          &trans            &trans             &trans        &space_lt 10 0  &trans    &one_shot LSHFT  &bspc_lt 12 0  &trans             &trans             &trans
             >;
         };
 
@@ -1559,10 +1569,10 @@
 
         Nav {
             bindings = <
-&trans  &trans                      &macro_unsafe_en             &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                             &none       &kp LA(LS(S))  &kp UP     &kp END    &kp DELETE  &trans
-&trans  &hrm LEFT_GUI ESC           &hrm LALT ENTER              &kp LSHIFT           &mod_dtap LCTRL LEFT_GUI  &layer_on 1                          &kp K_APP   &kp LEFT       &kp DOWN   &kp RIGHT  &kp END     &trans
-&trans  &mt LC(Z) LC(LEFT_BRACKET)  &mt LC(X) LC(RIGHT_BRACKET)  &mt LC(C) LS(F6)     &mt LC(V) TAB             &kp LS(LG(LC(F9)))                   &kp LC(F8)  &kp HOME       &kp PG_DN  &kp PG_UP  &trans      &trans
-                                    &trans                       &trans               &trans                    &mo 10              &none    &trans  &mo 12      &trans         &trans     &trans
+&trans  &trans                      &macro_unsafe_en             &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                             &none          &kp LA(LS(S))  &kp UP     &kp END    &kp DELETE  &trans
+&trans  &hrm LEFT_GUI ESC           &hrm LALT ENTER              &kp LSHIFT           &mod_dtap LCTRL LEFT_GUI  &layer_on 1                          &kp K_APP      &kp LEFT       &kp DOWN   &kp RIGHT  &kp END     &trans
+&trans  &mt LC(Z) LC(LEFT_BRACKET)  &mt LC(X) LC(RIGHT_BRACKET)  &mt LC(C) LS(F6)     &mt LC(V) TAB             &kp LS(LG(LC(F9)))                   &kp LC(F8)     &kp HOME       &kp PG_DN  &kp PG_UP  &trans      &trans
+                                    &trans                       &trans               &trans                    &mo 10              &none    &trans  &bspc_lt 12 0  &trans         &trans     &trans
             >;
         };
 
