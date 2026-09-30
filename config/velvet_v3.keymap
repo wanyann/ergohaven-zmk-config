@@ -239,26 +239,26 @@
         };
 
         combo_cmd_click {
-            bindings = <&mod_click LEFT_CONTROL>;
+            bindings = <&mkp MB3>;
             key-positions = <3 4>;
             layers = <4 5>;
         };
 
         combo_opt_shft_click {
             bindings = <&mod_click LS(LEFT_ALT)>;
-            key-positions = <26 27 28>;
+            key-positions = <4 3 2>;
             layers = <4 5>;
         };
 
         combo_shft_click {
-            bindings = <&mod_click LEFT_SHIFT>;
+            bindings = <&mkp MB2>;
             key-positions = <2 3>;
             layers = <4 5>;
         };
 
         combo_cmd_shft_click {
             bindings = <&mod_click LS(LEFT_CONTROL)>;
-            key-positions = <2 3 4>;
+            key-positions = <>;
             layers = <4 5>;
         };
     };
