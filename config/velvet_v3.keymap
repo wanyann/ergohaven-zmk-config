@@ -1573,10 +1573,10 @@
 
         Mod {
             bindings = <
-&trans  &kp Q             &kp W             &moff_kp E         &kp R         &kp T                                 &kp Y          &kp U              &kp I              &kp O             &kp P                &trans
-&trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                                 &kp H          &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
-&trans  &kp Z             &kp X             &kp C              &mt LC(V) V   &kp B                                 &kp N          &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
-                          &trans            &trans             &trans        &space_lt 10 0  &trans    &osm LSHFT  &bspc_lt 12 0  &trans             &trans             &trans
+&trans  &kp Q             &kp W             &moff_kp E         &kp R         &kp T                            &kp Y          &kp U              &kp I              &kp O             &kp P                &trans
+&trans  &hrm_slow LGUI A  &hrm_slow LALT S  &hrm LEFT_SHIFT D  &hrm LCTRL F  &kp G                            &kp H          &hrm_slow RCTRL J  &hrm LEFT_SHIFT K  &hrm_slow RALT L  &hrm_slow RGUI SEMI  &trans
+&trans  &kp Z             &kp X             &kp C              &mt LC(V) V   &kp B                            &kp N          &kp M              &kp COMMA          &kp DOT           &kp SLASH            &trans
+                          &trans            &trans             &none         &space_lt 10 0  &trans    &none  &bspc_lt 12 0  &none              &trans             &trans
             >;
         };
 
