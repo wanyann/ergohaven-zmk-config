@@ -217,13 +217,13 @@
         };
 
         combo_slash_ru {
-            bindings = <&kp RU_SLASH>;
+            bindings = <&slash_morph_ru>;
             key-positions = <7 8>;
             layers = <2 3 13 17 5 9 11 15 20>;
         };
 
         combo_slash_en {
-            bindings = <&kp SLASH>;
+            bindings = <&slash_morph_en>;
             key-positions = <7 8>;
             layers = <0 1 12 16 4 8 10 14 19>;
         };
