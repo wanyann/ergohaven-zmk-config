@@ -391,7 +391,7 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&layer_off 4 &macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 8>,
+                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_on 8 &layer_off 4>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1 &key_off MACRO_PLACEHOLDER &layer_off 8>;
 
@@ -732,14 +732,12 @@
             compatible = "zmk,behavior-macro-one-param";
             #binding-cells = <1>;
             bindings =
-                <&layer_off 4>,
-                <&macro_wait_time 40>,
-                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER>,
+                <&macro_param_1to1 &key_on MACRO_PLACEHOLDER &layer_off 4>,
                 <&macro_pause_for_release>,
                 <&macro_param_1to1 &key_off MACRO_PLACEHOLDER>;
 
             label = "MOFF_KP";
-            wait-ms = <0>;
+            wait-ms = <10>;
             tap-ms = <1>;
         };
 
