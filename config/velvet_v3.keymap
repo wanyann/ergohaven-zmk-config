@@ -18,14 +18,14 @@
     flavor = "tap-preferred";
     bindings = <&moff_kp>, <&moff_kp>;
 
-    tapping-term-ms = <250>;
+    tapping-term-ms = <200>;
 };
 
 &lt {
     flavor = "balanced";
     bindings = <&mo>, <&long_kp>;
 
-    tapping-term-ms = <250>;
+    tapping-term-ms = <200>;
 };
 
 &sl {
@@ -1026,7 +1026,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
 
@@ -1037,7 +1037,7 @@
 
             #binding-cells = <2>;
             flavor = "tap-preferred";
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         ru_lt_cw_off: ru_lt_cw_off {
@@ -1046,7 +1046,7 @@
             bindings = <&mo>, <&ru_cw_off>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
 
@@ -1056,7 +1056,7 @@
             bindings = <&mo>, <&en_cw_off>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
 
@@ -1088,7 +1088,7 @@
             bindings = <&ml>, <&moff_kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <1 2 3 5 6 7 8 9 10 12 13 14 15 16 17 18 19 20 21 22 23 25 26 27 28 29 30 31 32 33 34 42 39 41>;
         };
@@ -1106,7 +1106,7 @@
             bindings = <&ml>, <&moff_kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -1161,7 +1161,7 @@
             bindings = <&kp>, <&ru_dot_excl>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -1171,7 +1171,7 @@
             bindings = <&kp>, <&ru_com_ques>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -1181,7 +1181,7 @@
             bindings = <&kp>, <&en_com_ques>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
 
@@ -1191,7 +1191,7 @@
             bindings = <&kp>, <&en_dot_excl>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
 
@@ -1222,7 +1222,7 @@
             bindings = <&mo>, <&space_morph>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
 
@@ -1232,7 +1232,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "hold-preferred";
         };
 
@@ -1242,7 +1242,7 @@
             bindings = <&moff_kp>, <&moff_kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 18 30 31 32 33 42 19 7 8 20 9 21 22 10 34 23 41>;
         };
@@ -1253,7 +1253,7 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <12 1 13 25 26 27 28 29 17 16 4 5 3 15 2 14>;
         };
@@ -1264,7 +1264,7 @@
             bindings = <&vm_lang_en>, <&vm_lang_en>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -1274,7 +1274,7 @@
             bindings = <&vm_lang_ru>, <&vm_lang_ru>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -1284,7 +1284,7 @@
             bindings = <&mo>, <&mouse_back>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
 
@@ -1402,7 +1402,7 @@
             bindings = <&mo>, <&ms_set>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
         };
 
@@ -1432,7 +1432,7 @@
             bindings = <&mo>, <&space_morph>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "balanced";
             hold-while-undecided;
         };
@@ -1452,7 +1452,7 @@
             bindings = <&zeros_macro>, <&kp>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -1463,7 +1463,7 @@
 
             #binding-cells = <2>;
             flavor = "balanced";
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
         };
 
         soft: soft {
@@ -1472,7 +1472,7 @@
             bindings = <&soft_sign>, <&soft_sign>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
 
@@ -1482,7 +1482,7 @@
             bindings = <&caps_soft_sign>, <&caps_soft_sign>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <250>;
+            tapping-term-ms = <200>;
             flavor = "tap-preferred";
         };
     };
