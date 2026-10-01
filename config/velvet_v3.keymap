@@ -1592,10 +1592,10 @@
 
         Nav {
             bindings = <
-&trans  &trans                      &macro_unsafe_en             &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                             &none          &kp LA(LS(S))  &kp UP     &kp END    &kp DELETE  &trans
-&trans  &hrm LEFT_GUI ESC           &hrm LALT ENTER              &kp LSHIFT           &mod_dtap LCTRL LEFT_GUI  &layer_on 1                          &kp K_APP      &kp LEFT       &kp DOWN   &kp RIGHT  &kp END     &trans
-&trans  &mt LC(Z) LC(LEFT_BRACKET)  &mt LC(X) LC(RIGHT_BRACKET)  &mt LC(C) LS(F6)     &mt LC(V) TAB             &kp LS(LG(LC(F9)))                   &kp LC(F8)     &kp HOME       &kp PG_DN  &kp PG_UP  &trans      &trans
-                                    &trans                       &trans               &trans                    &mo 10              &none    &trans  &bspc_lt 12 0  &trans         &trans     &trans
+&trans  &trans                      &macro_unsafe_en             &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                            &none          &kp LA(LS(S))  &kp UP     &kp END    &kp DELETE  &trans
+&trans  &hrm LEFT_GUI ESC           &hrm LALT ENTER              &kp LSHIFT           &mod_dtap LCTRL LEFT_GUI  &layer_on 1                         &kp K_APP      &kp LEFT       &kp DOWN   &kp RIGHT  &kp END     &trans
+&trans  &mt LC(Z) LC(LEFT_BRACKET)  &mt LC(X) LC(RIGHT_BRACKET)  &mt LC(C) LS(F6)     &mt LC(V) TAB             &kp LS(LG(LC(F9)))                  &kp LC(F8)     &kp HOME       &kp PG_DN  &kp PG_UP  &trans      &trans
+                                    &trans                       &trans               &trans                    &mo 10              &none    &none  &bspc_lt 12 0  &none          &trans     &trans
             >;
         };
 
