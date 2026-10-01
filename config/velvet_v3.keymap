@@ -17,6 +17,8 @@
 &mt {
     flavor = "tap-preferred";
     bindings = <&moff_kp>, <&moff_kp>;
+
+    tapping-term-ms = <250>;
 };
 
 &lt {
@@ -1044,7 +1046,7 @@
             bindings = <&mo>, <&ru_cw_off>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <300>;
             flavor = "balanced";
         };
 
@@ -1054,7 +1056,7 @@
             bindings = <&mo>, <&en_cw_off>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <180>;
+            tapping-term-ms = <300>;
             flavor = "balanced";
         };
 
@@ -1159,7 +1161,7 @@
             bindings = <&kp>, <&ru_dot_excl>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
 
@@ -1282,7 +1284,7 @@
             bindings = <&mo>, <&mouse_back>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "balanced";
         };
 
@@ -1400,18 +1402,8 @@
             bindings = <&mo>, <&ms_set>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "balanced";
-        };
-
-        mkp_hold: mkp_hold {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MKP_HOLD";
-            bindings = <&lkp_moff>, <&mkp_moff>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
         };
 
         mdown_morph: mdown_morph {
@@ -1442,17 +1434,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <180>;
             flavor = "balanced";
-            hold-while-undecided;
-        };
-
-        mlayer: mlayer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MLAYER";
-            bindings = <&mo>, <&moff_kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <180>;
-            flavor = "tap-preferred";
             hold-while-undecided;
         };
 
@@ -1491,7 +1472,7 @@
             bindings = <&soft_sign>, <&soft_sign>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
 
@@ -1501,7 +1482,7 @@
             bindings = <&caps_soft_sign>, <&caps_soft_sign>;
 
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <250>;
             flavor = "tap-preferred";
         };
     };
