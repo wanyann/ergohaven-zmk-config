@@ -1294,19 +1294,19 @@
         slash_morph_ru: slash_morph_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASH_MORPH_RU";
-            bindings = <&morph_pipe_ru>, <&kp RU_BACKSLASH>;
+            bindings = <&morph_pipe_ru>, <&en_kp PIPE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
 
         slash_morph_en: slash_morph_en {
             compatible = "zmk,behavior-mod-morph";
             label = "SLASH_MORPH_EN";
-            bindings = <&morph_pipe_en>, <&kp BACKSLASH>;
+            bindings = <&morph_pipe_en>, <&kp PIPE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LALT|MOD_RALT)>;
         };
 
         quote_morph_ru: quote_morph_ru {
@@ -1315,7 +1315,7 @@
             bindings = <&morph_quotes_ru>, <&en_kp SINGLE_QUOTE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         quote_morph_en: quote_morph_en {
@@ -1324,7 +1324,7 @@
             bindings = <&morph_quotes_en>, <&kp SINGLE_QUOTE>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LSFT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         morph_en_dot: morph_en_dot {
@@ -1384,19 +1384,19 @@
         morph_pipe_ru: morph_pipe_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_PIPE_RU";
-            bindings = <&kp RU_SLASH>, <&en_kp PIPE>;
+            bindings = <&kp RU_SLASH>, <&kp RU_BSLH>;
 
             #binding-cells = <0>;
-            mods = <(MOD_LALT|MOD_RALT)>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
         morph_pipe_en: morph_pipe_en {
             compatible = "zmk,behavior-mod-morph";
             label = "MORPH_PIPE_EN";
-            bindings = <&kp SLASH>, <&kp PIPE>;
+            bindings = <&kp SLASH>, <&kp BSLH>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RALT|MOD_LALT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         nav_set: nav_set {
