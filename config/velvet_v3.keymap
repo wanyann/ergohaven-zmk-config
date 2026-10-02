@@ -250,7 +250,7 @@
             bindings = <&mkp MB1>;
             key-positions = <14 15>;
             layers = <4 5 23>;
-            timeout-ms = <100>;
+            timeout-ms = <150>;
         };
 
         combo_rclick {
