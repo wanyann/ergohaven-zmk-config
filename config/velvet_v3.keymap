@@ -16,7 +16,7 @@
 
 &mt {
     flavor = "tap-preferred";
-    bindings = <&moff_kp>, <&moff_kp>;
+    bindings = <&moff_tap>, <&moff_kp>;
 
     tapping-term-ms = <200>;
 };
