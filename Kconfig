@@ -452,13 +452,10 @@ config EH_PMW3610_ALT_RUN_DOWNSHIFT_MS
 
 config EH_PMW3610_ALT_REST1_DOWNSHIFT_MS
 	int "PMW3610 ALT REST1 downshift time (ms)"
-	default 300000
+	default 5000
 	depends on EH_PMW3610_ALT_MODE
 	help
 	  Mirror of CONFIG_PMW3610_REST1_DOWNSHIFT_TIME_MS.
-	  Actual programmed time = value / 640 * 640 ms (register is
-	  value / (16 * REST1_SAMPLE_MS)): 300000 -> reg 468 -> ~5 min in
-	  REST1 before downshifting to REST2.
 
 config EH_PMW3610_ALT_REST2_DOWNSHIFT_MS
 	int "PMW3610 ALT REST2 downshift time (ms)"
