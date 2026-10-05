@@ -242,7 +242,7 @@
 
         combo_mclick {
             bindings = <&mkp MB3>;
-            key-positions = <27 26>;
+            key-positions = <2 3>;
             layers = <4 5 14 15 23>;
             timeout-ms = <100>;
         };
@@ -250,7 +250,7 @@
 
         combo_mclick_x {
             bindings = <&mkp MB3>;
-            key-positions = <27 28>;
+            key-positions = <14 15 16>;
             layers = <4 5 14 15 23>;
             timeout-ms = <100>;
         };
@@ -271,21 +271,21 @@
 
         combo_shft_click {
             bindings = <&mod_click LEFT_SHIFT>;
-            key-positions = <3 2>;
+            key-positions = <26 27>;
             layers = <4 5 14 15>;
             timeout-ms = <100>;
         };
 
         combo_cmd_click {
             bindings = <&mod_click LCTRL>;
-            key-positions = <3 4>;
+            key-positions = <27 28>;
             layers = <4 5 14 15 23>;
             timeout-ms = <100>;
         };
 
         combo_cmd_shift_click {
             bindings = <&mod_click LS(LCTRL)>;
-            key-positions = <3 4 2>;
+            key-positions = <26 27 28>;
             layers = <4 5 14 15 23>;
             timeout-ms = <100>;
         };
