@@ -276,6 +276,13 @@
             timeout-ms = <100>;
         };
 
+        combo_alt_click {
+            bindings = <&mod_click LEFT_ALT>;
+            key-positions = <3 4>;
+            layers = <4 5 14 15>;
+            timeout-ms = <100>;
+        };
+
         combo_cmd_click {
             bindings = <&mod_click LCTRL>;
             key-positions = <27 28>;
