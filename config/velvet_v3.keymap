@@ -247,14 +247,6 @@
             timeout-ms = <100>;
         };
 
-
-        combo_mclick_x {
-            bindings = <&mkp MB3>;
-            key-positions = <14 15 16>;
-            layers = <4 5 14 15 23>;
-            timeout-ms = <100>;
-        };
-
         combo_lclick {
             bindings = <&mkp MB1>;
             key-positions = <14 15>;
