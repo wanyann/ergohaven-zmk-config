@@ -1724,7 +1724,7 @@
 &trans                        &kp LA(LC(LS(P)))                    &vm_en LS(LA(LC(LG(W)))) LS(LA(LC(W)))  &mt LS(LA(LC(LG(E)))) LA(LS(LC(E)))  &mt LG(R) LS(LA(LC(R)))  &mt LC(T) LS(LA(LC(T)))                           &kp LS(LA(LC(Y)))  &kp LS(LA(LC(U)))  &kp LS(LA(LC(I)))      &kp LS(LA(LC(O)))    &kp LS(LA(LC(P)))          &trans
 &kp LS(LA(LC(LEFT_BRACKET)))  &mt LS(LA(LC(LG(A)))) LS(LA(LC(A)))  &mt LS(LA(LC(LG(S)))) LS(LA(LC(S)))     &mt LS(LA(LC(LG(D)))) LC(LA(LS(D)))  &kp LS(LA(LC(F)))        &mt LC(F) LA(LS(LC(G)))                           &kp LS(LA(LC(H)))  &kp LS(LA(LC(J)))  &kp LS(LA(LC(K)))      &kp LS(LA(LC(L)))    &kp LS(LA(LC(SEMICOLON)))  &kp LS(LA(LC(RIGHT_BRACKET)))
 &trans                        &mt LC(Z) LC(LA(LS(Z)))              &mt LC(X) LA(LS(LC(X)))                 &mt LC(C) LS(LA(LC(C)))              &mt LC(V) LS(LC(LG(V)))  &mt LG(V) LS(LA(LC(B)))                           &kp LS(LA(LC(N)))  &kp LS(LC(LA(M)))  &kp LS(LA(LC(COMMA)))  &kp LS(LA(LC(DOT)))  &kp LS(LC(LA(SLASH)))      &trans
-                                                                   &trans                                  &trans                               &trans                   &none                    &sl 14    &kp LA(ENTER)  &alt_spc_en        &trans             &trans                 &trans
+                                                                   &trans                                  &trans                               &trans                   &trans                   &sl 14    &kp LA(ENTER)  &alt_spc_en        &trans             &trans                 &trans
             >;
         };
 
