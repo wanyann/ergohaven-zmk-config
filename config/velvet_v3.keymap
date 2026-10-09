@@ -1058,6 +1058,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
+            hold-while-undecided;
         };
 
         hrm_slow: hrm_slow {
@@ -1066,8 +1067,9 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
+            hold-while-undecided;
         };
 
         ru_lt_cw_off: ru_lt_cw_off {
