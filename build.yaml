@@ -126,8 +126,8 @@ include:
   # - board: ergohaven
   #   shield: imperial44_left_qube
 
-  # - board: ergohaven
-  #   shield: trackball
+  - board: ergohaven
+    shield: trackball
   #   snippet: studio-rpc-usb-uart
     # - board: ergohaven
   #   shield: velvet_v3_left
