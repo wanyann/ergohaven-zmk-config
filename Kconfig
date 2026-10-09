@@ -488,4 +488,62 @@ config EH_PMW3610_ALT_REST3_SAMPLE_MS
 	help
 	  Mirror of CONFIG_PMW3610_REST3_SAMPLE_TIME_MS.
 
+config EH_PMW3610_ALT_MOTION_TRACE
+	bool "PMW3610 ALT motion trace (nonzero frames only)"
+	default n
+	depends on EH_PMW3610_ALT_MODE
+	help
+	  Print a line for every decoded nonzero frame in ALT mode:
+	  "PMW-A t=<ms> fa=<0/1> m=<motion> x=<dx> y=<dy>".  Zero frames are
+	  silent, so during typing without touching the ball the log stays
+	  empty unless the sensor itself emits motion.  Requires
+	  CONFIG_ZMK_USB_LOGGING=y to reach the USB console.
+
+config EH_PMW3610_ALT_BOOT_DRAIN_MS
+	int "PMW3610 ALT boot drain (ms)"
+	default 300
+	depends on EH_PMW3610_ALT_MODE
+	range 0 1000
+	help
+	  Frames within this many ms after init are discarded.  The PMW3610
+	  emits a decaying large burst on power-up (measured: -166/-219
+	  counts in the first two frames) which otherwise teleports the
+	  cursor.  0 disables the drain.
+
+config EH_PMW3610_ALT_RESUME_DRAIN_MS
+	int "PMW3610 ALT resume drain (ms)"
+	default 100
+	depends on EH_PMW3610_ALT_MODE
+	range 0 1000
+	help
+	  Frames within this many ms after the activity state returns to
+	  active (fa 0->1, i.e. leaving REST) are discarded.  Measured
+	  spurious burst at resume: -4/+8 and -1/+15 counts.  0 disables.
+
+config EH_PMW3610_ALT_GATE_ENABLE
+	bool "PMW3610 ALT isolated small-frame gate"
+	default n
+	depends on EH_PMW3610_ALT_MODE
+	help
+	  Drop frames whose |x|+|y| is at most ALT_GATE_MAX_SUM when no
+	  motion was seen for at least ALT_GATE_WINDOW_MS.  Isolated
+	  single-count frames are the periodic 1px phantom seen while
+	  typing without touching the ball.  Sustained slow drags keep
+	  passing because their frames follow each other closely.
+
+config EH_PMW3610_ALT_GATE_MAX_SUM
+	int "PMW3610 ALT gate max |x|+|y| (counts)"
+	default 1
+	depends on EH_PMW3610_ALT_GATE_ENABLE
+	range 0 20
+
+config EH_PMW3610_ALT_GATE_WINDOW_MS
+	int "PMW3610 ALT gate quiet window (ms)"
+	default 128
+	depends on EH_PMW3610_ALT_GATE_ENABLE
+	range 1 1000
+	help
+	  A frame is treated as isolated when no nonzero frame occurred in
+	  this window before it.  0 is not allowed (use the gate disable).
+
 endif # EH_PMW3610_ALT_MODE

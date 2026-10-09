@@ -171,6 +171,11 @@ struct pmw3610_gpio_data {
 	int64_t alt_last_smp_ms;
 	int64_t alt_last_rpt_ms;
 	bool alt_smart_flag;
+	/* Phantom-suppression state: boot/resume drain deadlines and the
+	 * timestamp of the last nonzero frame (isolated-frame gate). */
+	int64_t alt_boot_ts_ms;
+	int64_t alt_resume_ts_ms;
+	int64_t alt_last_motion_ms;
 #endif
 };
 
@@ -904,6 +909,50 @@ static void pmw3610_report_data(const struct device *dev) {
 	int16_t x = TOINT16((buf[PMW3610_X_L_POS] + ((buf[PMW3610_XY_H_POS] & 0xF0) << 4)), 12);
 	int16_t y = TOINT16((buf[PMW3610_Y_L_POS] + ((buf[PMW3610_XY_H_POS] & 0x0F) << 8)), 12);
 
+	/* Phantom suppression runs before the smart algorithm and before the
+	 * accumulator so discarded frames never reach the cursor and never
+	 * pollute alt_dx/alt_dy.  alt_last_motion_ms must still hold the
+	 * previous nonzero frame while the gate is evaluated, so the
+	 * timestamp update happens AFTER the check; it is updated
+	 * unconditionally (even for dropped frames) so a dropped frame does
+	 * not leave a stale marker that would classify a later genuine
+	 * small frame as isolated. */
+	int64_t t_now = k_uptime_get();
+	bool drop = false;
+#if CONFIG_EH_PMW3610_ALT_BOOT_DRAIN_MS > 0
+	if (t_now - data->alt_boot_ts_ms < CONFIG_EH_PMW3610_ALT_BOOT_DRAIN_MS) {
+		drop = true;
+	}
+#endif
+#if CONFIG_EH_PMW3610_ALT_RESUME_DRAIN_MS > 0
+	if (data->alt_resume_ts_ms != 0 &&
+	    t_now - data->alt_resume_ts_ms < CONFIG_EH_PMW3610_ALT_RESUME_DRAIN_MS) {
+		drop = true;
+	}
+#endif
+#if defined(CONFIG_EH_PMW3610_ALT_GATE_ENABLE)
+	if (!drop && (int32_t)((x < 0 ? -x : x) + (y < 0 ? -y : y)) <=
+			       CONFIG_EH_PMW3610_ALT_GATE_MAX_SUM &&
+	    t_now - data->alt_last_motion_ms >= CONFIG_EH_PMW3610_ALT_GATE_WINDOW_MS) {
+		drop = true;
+	}
+#endif
+	if (x != 0 || y != 0) {
+		data->alt_last_motion_ms = t_now;
+	}
+
+#if defined(CONFIG_EH_PMW3610_ALT_MOTION_TRACE)
+	if (x != 0 || y != 0) {
+		printk("PMW-A t=%u fa=%d m=%u x=%d y=%d D=%d\n",
+		       (unsigned int)t_now, data->fa_active ? 1 : 0,
+		       buf[0], (int)x, (int)y, drop ? 1 : 0);
+	}
+#endif
+
+	if (drop) {
+		return;
+	}
+
 #if defined(CONFIG_EH_PMW3610_ALT_SMART)
 	/* Smart surface-coverage algorithm (datasheet): toggle register 0x32
 	 * based on the shutter reading so tracking keeps working on a wider
@@ -1208,6 +1257,13 @@ static int pmw3610_init(const struct device *dev) {
 	data->drain_until = k_uptime_get() + CONFIG_EH_PMW3610_STARTUP_DRAIN_MS;
 	data->drain_cap = k_uptime_get() + CONFIG_EH_PMW3610_STARTUP_MAX_MS;
 	data->quiet_run = 0;
+#if defined(CONFIG_EH_PMW3610_ALT_MODE)
+	/* Mark the boot and the last motion.  alt_resume_ts_ms stays 0 until
+	 * the first fa 0->1 transition so it cannot fake a resume drain. */
+	data->alt_boot_ts_ms = k_uptime_get();
+	data->alt_resume_ts_ms = 0;
+	data->alt_last_motion_ms = data->alt_boot_ts_ms;
+#endif
 	k_work_init_delayable(&data->poll_work, pmw3610_poll_work);
 	k_work_schedule(&data->poll_work, K_MSEC(CONFIG_EH_PMW3610_POLL_INTERVAL_MS));
 
@@ -1258,6 +1314,14 @@ static int pmw3610_on_activity(const zmk_event_t *eh) {
 		struct pmw3610_gpio_data *data = pmw3610_devs[i]->data;
 
 		data->fa_active = force_awake;
+#if defined(CONFIG_EH_PMW3610_ALT_MODE)
+		if (force_awake) {
+			/* Leaving REST: the sensor emits a short spurious burst
+			 * right after the PERFORMANCE write.  Start the resume
+			 * drain window here. */
+			data->alt_resume_ts_ms = k_uptime_get();
+		}
+#endif
 #if defined(CONFIG_EH_PMW3610_MOTION_TRACE)
 		printk("PMW-ACT t=%d state=%d fa=%d\n", (int)k_uptime_get(), state_ev->state,
 		       force_awake ? 1 : 0);
