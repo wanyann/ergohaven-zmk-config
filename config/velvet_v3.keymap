@@ -1631,10 +1631,10 @@
 
         AutoMouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &ms_space 10 0  &trans    &mkp MB1  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &ms_space 10 0  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
 
