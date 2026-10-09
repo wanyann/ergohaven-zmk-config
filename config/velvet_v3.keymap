@@ -281,6 +281,11 @@
             layers = <4 5 14 15 23>;
             timeout-ms = <50>;
         };
+
+        test {
+            bindings = <&none>;
+            key-positions = <41 28>;
+        };
     };
 
     macros {
@@ -1631,10 +1636,10 @@
 
         AutoMouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                            &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &ms_space 10 0  &trans    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &ms_space 10 0  &trans    &mkp MB1  &trans  &trans  &trans  &trans
             >;
         };
 
