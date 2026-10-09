@@ -242,14 +242,14 @@
 
         combo_mclick {
             bindings = <&mkp MB3>;
-            key-positions = <2 3>;
+            key-positions = <14 15>;
             layers = <4 5 14 15 23>;
             timeout-ms = <50>;
         };
 
         combo_lclick {
             bindings = <&click>;
-            key-positions = <14 15>;
+            key-positions = <>;
             layers = <4 5 14 15 23>;
             timeout-ms = <50>;
         };
