@@ -1591,6 +1591,17 @@
             hold-while-undecided;
             hold-while-undecided-linger;
         };
+
+        mlt: mlt {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MLT";
+            bindings = <&mo>, <&moff_tap>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            flavor = "tap-preferred";
+            hold-while-undecided;
+        };
     };
 
     zip_auto_mouse: zip_auto_mouse {
@@ -1643,19 +1654,19 @@
 
         AutoMouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                            &trans    &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                            &lt 10 L  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                            &lt 10 B  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &ms_space 10 0  &trans    &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &mlt 10 L  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                            &mlt 10 B  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &ms_space 10 0  &trans    &trans  &trans     &trans  &trans  &trans
             >;
         };
 
         AutoMouse_ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans                 &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &lt 10 RU_CYRILLIC_EL  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &lt 10 RU_CYRILLIC_BE  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans                 &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &mlt 10 RU_CYRILLIC_EL  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &mlt 10 RU_CYRILLIC_BE  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans                  &trans  &trans  &trans
             >;
         };
 
