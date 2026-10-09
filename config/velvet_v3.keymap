@@ -1654,19 +1654,19 @@
 
         AutoMouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                            &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                            &mlt 10 L  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                            &mlt 10 B  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &ms_space 10 0  &trans    &trans  &trans     &trans  &trans  &trans
+&trans  &trans            &trans            &trans              &trans         &trans                            &trans     &trans  &trans  &trans  &trans  &trans
+&trans  &hrms LEFT_GUI C  &hrms LEFT_ALT I  &hrms LEFT_SHIFT E  &hrms LCTRL O  &trans                            &mlt 10 L  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans            &trans              &trans         &trans                            &mlt 10 B  &trans  &trans  &trans  &trans  &trans
+                          &trans            &trans              &trans         &ms_space 10 0  &trans    &trans  &trans     &trans  &trans  &trans
             >;
         };
 
         AutoMouse_ru {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                    &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &mlt 10 RU_CYRILLIC_EL  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &mlt 10 RU_CYRILLIC_BE  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans    &trans  &trans                  &trans  &trans  &trans
+&trans  &trans                              &trans                        &trans                           &trans                     &trans                    &trans                  &trans  &trans  &trans  &trans  &trans
+&trans  &hrms LEFT_GUI RU_CYRILLIC_SHORT_I  &hrms LEFT_ALT RU_CYRILLIC_I  &hrms LEFT_SHIFT RU_CYRILLIC_IE  &hrms LCTRL RU_CYRILLIC_O  &trans                    &mlt 10 RU_CYRILLIC_EL  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                              &trans                        &trans                           &trans                     &trans                    &mlt 10 RU_CYRILLIC_BE  &trans  &trans  &trans  &trans  &trans
+                                            &trans                        &trans                           &trans                     &trans  &trans    &trans  &trans                  &trans  &trans  &trans
             >;
         };
 
