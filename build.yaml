@@ -137,8 +137,8 @@ include:
   # - board: ergohaven
   #   shield: imperial44_left_qube
 
-  # - board: ergohaven
-  #   shield: trackball
+  - board: ergohaven
+    shield: trackball
   #   snippet: studio-rpc-usb-uart
   #   cmake-args: -DCONFIG_ZMK_STUDIO=y
 
