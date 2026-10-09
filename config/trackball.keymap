@@ -47,13 +47,13 @@
 
         base_combo {
             bindings = <&adj_td>;
-            key-positions = <0 1>;
+            key-positions = <>;
             layers = <0 1 2>;
         };
 
         adj_combo {
             bindings = <&to 0>;
-            key-positions = <0 1>;
+            key-positions = <>;
             layers = <3>;
         };
     };
