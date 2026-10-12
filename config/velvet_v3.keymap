@@ -1059,6 +1059,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-while-undecided;
+            require-prior-idle-ms = <75>;
         };
 
         hrm_slow: hrm_slow {
@@ -1070,6 +1071,7 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             hold-while-undecided;
+            require-prior-idle-ms = <75>;
         };
 
         ru_lt_cw_off: ru_lt_cw_off {
@@ -1139,6 +1141,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
+            require-prior-idle-ms = <75>;
         };
 
         soft_sign: soft_sign {
@@ -1287,6 +1290,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <17 29>;
+            require-prior-idle-ms = <75>;
         };
 
         vm_en: vm_en {
@@ -1547,6 +1551,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <1 4 5 13 14 15 16 25 26 27 28 29 2 3 17 20 21 22>;
+            require-prior-idle-ms = <75>;
         };
 
         lt_right: lt_right {
@@ -1558,6 +1563,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <5 2 3 4 14 15 16 26 27 28 13 25 38 39 40>;
+            require-prior-idle-ms = <75>;
         };
 
         hrml_alt: hrml_alt {
@@ -1580,6 +1586,7 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 42 14 13 3 2 1 39 15>;
+            require-prior-idle-ms = <75>;
         };
 
         hrms: hrms {
@@ -1593,6 +1600,7 @@
             hold-while-undecided;
             hold-while-undecided-linger;
             hold-trigger-key-positions = <13 14 15 16 3 2 1 19 6 7 9 10 18 19 20 21 22 30 31 32 33 34 8 39 42>;
+            require-prior-idle-ms = <75>;
         };
 
         mlt: mlt {
