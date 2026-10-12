@@ -1563,7 +1563,6 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <5 2 3 4 14 15 16 26 27 28 13 25 38 39 40>;
-            require-prior-idle-ms = <75>;
         };
 
         hrml_alt: hrml_alt {
