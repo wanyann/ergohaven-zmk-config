@@ -1147,7 +1147,9 @@
         soft_sign: soft_sign {
             compatible = "zmk,behavior-mod-morph";
             label = "SOFT_SIGN";
-            bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
+            bindings =
+                <&moff_kp RU_CYRILLIC_SOFT_SIGN>,
+                <&moff_kp RU_CYRILLIC_HARD_SIGN>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
