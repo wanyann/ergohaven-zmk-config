@@ -16,7 +16,7 @@
 
 &mt {
     flavor = "tap-preferred";
-    bindings = <&moff_tap>, <&moff_kp>;
+    bindings = <&moff_tap>, <&moff_tap>;
 
     tapping-term-ms = <200>;
 };
@@ -1136,7 +1136,7 @@
         hrml_slow: hrml_slow {
             compatible = "zmk,behavior-hold-tap";
             label = "HRML_SLOW";
-            bindings = <&ml>, <&moff_kp>;
+            bindings = <&ml>, <&moff_tap>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1214,7 +1214,7 @@
         en_com_mt: en_com_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "EN_COM_MT";
-            bindings = <&kp>, <&en_com_ques>;
+            bindings = <&moff_tap>, <&en_com_ques>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1286,7 +1286,7 @@
         hrosm_r: hrosm_r {
             compatible = "zmk,behavior-hold-tap";
             label = "HROSM_R";
-            bindings = <&kp>, <&kp>;
+            bindings = <&kp>, <&moff_tap>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1526,7 +1526,7 @@
         mmt: mmt {
             compatible = "zmk,behavior-hold-tap";
             label = "MMT";
-            bindings = <&tap>, <&moff_kp>;
+            bindings = <&tap>, <&moff_tap>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1536,7 +1536,7 @@
         hrml_left: hrml_left {
             compatible = "zmk,behavior-hold-tap";
             label = "HRML_LEFT";
-            bindings = <&ml>, <&moff_kp>;
+            bindings = <&ml>, <&moff_tap>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1570,7 +1570,7 @@
         hrml_alt: hrml_alt {
             compatible = "zmk,behavior-hold-tap";
             label = "HRML_ALT";
-            bindings = <&ml>, <&moff_kp>;
+            bindings = <&ml>, <&moff_tap>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1581,7 +1581,7 @@
         hrml_ctrl: hrml_ctrl {
             compatible = "zmk,behavior-hold-tap";
             label = "HRML_CTRL";
-            bindings = <&ml>, <&moff_kp>;
+            bindings = <&ml>, <&moff_tap>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
