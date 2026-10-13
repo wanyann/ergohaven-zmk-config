@@ -1650,7 +1650,7 @@
 &none         &mt Q Q                &mt W W               &mt U U                  &mmt LC(R) A             &mt LC(T) K_CANCEL                         &mt Z Z         &mt V V              &mt K K                  &mt D D          &kp K_CANCEL       &none
 &kp K_CANCEL  &hrml_slow LEFT_GUI C  &hrml_alt LEFT_ALT I  &hrml_slow LEFT_SHIFT E  &hrml_ctrl LCTRL O       &en_com_mt LC(F) 0                         &mt L L         &hrml_right RCTRL N  &hrml_slow LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow RGUI H  &kp K_CANCEL
 &none         &mmt LC(Z) F           &mmt LC(X) Y          &mmt LC(C) X             &mmt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &mt B B         &mt M M              &mt P P                  &mt G G          &mt LC(SLASH) J    &none
-                                     &kp LS(F7)            &kp F7                   &lg 0 0                  &lt 10 SPACE        &sl 14    &osm LSHIFT  &lt_right 12 R  &bspc_morph          &kp F2                   &kp LS(F2)
+                                     &kp LS(F7)            &kp F7                   &lg                      &lt 10 SPACE        &sl 14    &osm LSHIFT  &lt_right 12 R  &bspc_morph          &kp F2                   &kp LS(F2)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
