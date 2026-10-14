@@ -1059,7 +1059,6 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-while-undecided;
-            
         };
 
         hrm_slow: hrm_slow {
@@ -1071,7 +1070,6 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             hold-while-undecided;
-            
         };
 
         ru_lt_cw_off: ru_lt_cw_off {
@@ -1141,7 +1139,6 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "tap-preferred";
-            
         };
 
         soft_sign: soft_sign {
@@ -1292,7 +1289,6 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <17 29>;
-            
         };
 
         vm_en: vm_en {
@@ -1553,7 +1549,6 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <1 4 5 13 14 15 16 25 26 27 28 29 2 3 17 20 21 22>;
-            
         };
 
         lt_right: lt_right {
@@ -1587,7 +1582,6 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-trigger-key-positions = <6 7 8 9 10 18 19 20 21 22 30 31 32 33 34 42 14 13 3 2 1 39 15 43>;
-            
         };
 
         hrms: hrms {
@@ -1601,7 +1595,6 @@
             hold-while-undecided;
             hold-while-undecided-linger;
             hold-trigger-key-positions = <13 14 15 16 3 2 1 19 6 7 9 10 18 19 20 21 22 30 31 32 33 34 8 39 42 43>;
-            
         };
 
         mlt: mlt {
@@ -1686,8 +1679,8 @@
         AutoMouse {
             bindings = <
 &trans  &trans            &trans            &trans              &trans         &trans                            &trans     &trans  &trans  &trans  &trans  &trans
-&trans  &hrms LEFT_GUI C  &hrms LEFT_ALT I  &hrms LEFT_SHIFT E  &hrms LCTRL O  &trans                            &mlt 10 L  &trans  &trans  &trans  &trans  &trans
-&trans  &trans            &trans            &trans              &trans         &trans                            &mlt 10 B  &trans  &trans  &trans  &trans  &trans
+&trans  &hrms LEFT_GUI C  &hrms LEFT_ALT I  &hrms LEFT_SHIFT E  &hrms LCTRL O  &trans                            &mlt 24 L  &trans  &trans  &trans  &trans  &trans
+&trans  &trans            &trans            &trans              &trans         &trans                            &mlt 24 B  &trans  &trans  &trans  &trans  &trans
                           &trans            &trans              &trans         &ms_space 10 0  &trans    &trans  &trans     &trans  &trans  &trans
             >;
         };
@@ -1695,8 +1688,8 @@
         AutoMouse_ru {
             bindings = <
 &trans  &trans                              &trans                        &trans                           &trans                     &trans                    &trans                  &trans  &trans  &trans  &trans  &trans
-&trans  &hrms LEFT_GUI RU_CYRILLIC_SHORT_I  &hrms LEFT_ALT RU_CYRILLIC_I  &hrms LEFT_SHIFT RU_CYRILLIC_IE  &hrms LCTRL RU_CYRILLIC_O  &trans                    &mlt 10 RU_CYRILLIC_EL  &trans  &trans  &trans  &trans  &trans
-&trans  &trans                              &trans                        &trans                           &trans                     &trans                    &mlt 10 RU_CYRILLIC_BE  &trans  &trans  &trans  &trans  &trans
+&trans  &hrms LEFT_GUI RU_CYRILLIC_SHORT_I  &hrms LEFT_ALT RU_CYRILLIC_I  &hrms LEFT_SHIFT RU_CYRILLIC_IE  &hrms LCTRL RU_CYRILLIC_O  &trans                    &mlt 24 RU_CYRILLIC_EL  &trans  &trans  &trans  &trans  &trans
+&trans  &trans                              &trans                        &trans                           &trans                     &trans                    &mlt 24 RU_CYRILLIC_BE  &trans  &trans  &trans  &trans  &trans
                                             &trans                        &trans                           &trans                     &trans  &trans    &trans  &trans                  &trans  &trans  &trans
             >;
         };
@@ -1857,6 +1850,15 @@
         Click {
             bindings = <
 &trans  &trans  &click  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
+
+        Scroll {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
