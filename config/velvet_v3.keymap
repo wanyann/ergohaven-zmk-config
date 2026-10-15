@@ -1914,7 +1914,7 @@
     input-processors = <&zip_auto_mouse 4 30000>, <&zip_xy_scaler 2 5>;
 
     scroller {
-        layers = <10>;
+        layers = <10 26>;
         input-processors =
             <&zip_xy_transform INPUT_TRANSFORM_Y_INVERT>,
             <&zip_xy_scaler 1 64>,
