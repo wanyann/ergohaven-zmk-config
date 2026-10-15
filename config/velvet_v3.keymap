@@ -1059,7 +1059,6 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-while-undecided;
-            hold-while-undecided-linger;
         };
 
         hrm_slow: hrm_slow {
@@ -1594,7 +1593,6 @@
             tapping-term-ms = <200>;
             flavor = "balanced";
             hold-while-undecided;
-            hold-while-undecided-linger;
             hold-trigger-key-positions = <13 14 15 16 3 2 1 19 6 7 9 10 18 19 20 21 22 30 31 32 33 34 8 39 42 43>;
         };
 
@@ -1734,7 +1732,7 @@
         Nav {
             bindings = <
 &trans  &trans                       &macro_unsafe_en              &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                                  &none       &kp LA(LS(S))  &kp UP     &kp LC(LA(F8))  &kp DELETE  &trans
-&trans  &hrm LEFT_GUI ESC            &hrm LALT ENTER               &kp LSHIFT           &mod_dtap LCTRL LEFT_GUI  &layer_on 1                               &kp K_APP   &kp LEFT       &kp DOWN   &kp RIGHT       &kp END     &trans
+&trans  &kp ESC                      &kp ENTER                     &kp LSHIFT           &mod_dtap LCTRL LEFT_GUI  &layer_on 1                               &kp K_APP   &kp LEFT       &kp DOWN   &kp RIGHT       &kp END     &trans
 &trans  &mmt LC(Z) LC(LEFT_BRACKET)  &mmt LC(X) LC(RIGHT_BRACKET)  &mmt LC(C) LS(F6)    &mmt LC(V) TAB            &mt LG(V) LS(LC(LG(F9)))                  &kp LC(F8)  &kp HOME       &kp PG_DN  &kp PG_UP       &trans      &trans
                                      &trans                        &trans               &trans                    &mo 10                    &none    &none  &mo 12      &trans         &trans     &trans
             >;
