@@ -1749,10 +1749,10 @@
 
         Num {
             bindings = <
-&trans  &kp MINUS         &kp NUMBER_7         &kp NUMBER_8         &kp N9         &long_kp EQUAL                      &trans  &trans     &trans      &trans        &trans        &trans
-&none   &zero 0 N0        &kp N1               &kp N2               &kp NUMBER_3   &trans                              &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &mmt LC(Z) UNDER  &mmt LC(X) NUMBER_4  &mmt LC(C) NUMBER_5  &mmt LC(V) N6  &trans                              &trans  &trans     &none       &none         &trans        &trans
-                          &trans               &trans               &kp MINUS      &lt 10 SPACE    &kp PLUS    &trans  &mo 12  &trans     &trans      &trans
+&trans  &kp MINUS      &mt F7 N7        &mt F8 N8        &mt F9 N9      &mt F10 EQUAL                          &trans  &trans     &trans      &trans        &trans        &trans
+&none   &zero 0 N0     &mt F1 N1        &mt F2 NUMBER_2  &mt F3 N3      &trans                                 &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &mt F10 UNDER  &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 N6      &trans                                 &trans  &trans     &none       &none         &trans        &trans
+                       &trans           &trans           &mt F11 MINUS  &lt 10 SPACE   &mt F12 PLUS    &trans  &mo 12  &trans     &trans      &trans
             >;
         };
 
