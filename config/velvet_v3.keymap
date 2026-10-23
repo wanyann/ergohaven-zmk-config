@@ -1731,7 +1731,7 @@
         Nav {
             bindings = <
 &trans  &trans                      &macro_unsafe_en             &kp LC(LS(LA(TAB)))  &kp LS(LC(LA(LG(F1))))    &testops                                        &none       &kp LA(LS(S))  &kp UP     &kp LC(LA(F8))  &kp DELETE  &trans
-&trans  &kp ESC                     &kp ENTER                    &kp LSHIFT           &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                    &kp K_APP   &kp LEFT       &kp DOWN   &kp RIGHT       &kp END     &trans
+&trans  &kp ESC                     &kp ENTER                    &kp LSHIFT           &mod_dtap LCTRL LEFT_GUI  &kp LC(LS(C))                                   &kp K_APP   &kp LEFT       &kp DOWN   &kp RIGHT       &kp END     &trans
 &trans  &mt LC(Z) LC(LEFT_BRACKET)  &mt LC(X) LC(RIGHT_BRACKET)  &mt LC(C) LS(LC(C))  &mt LC(V) TAB             &mt LG(V) LS(LC(LG(F9)))                        &kp LC(F8)  &kp HOME       &kp PG_DN  &kp PG_UP       &trans      &trans
                                     &trans                       &trans               &trans                    &mo 10                    &none    &layer_on 1  &mo 12      &trans         &trans     &trans
             >;
