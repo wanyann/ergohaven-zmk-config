@@ -1861,6 +1861,15 @@
                 &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans
             >;
         };
+
+        Nav_ms {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &mkp RCLK                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans
+            >;
+        };
     };
 
     conditional_layers {
@@ -1904,6 +1913,16 @@
         Mod {
             if-layers = <2 8>;
             then-layer = <9>;
+        };
+
+        Nav_ms {
+            if-layers = <4 10>;
+            then-layer = <25>;
+        };
+
+        Nav_ms_ru {
+            if-layers = <5 10>;
+            then-layer = <25>;
         };
     };
 };
