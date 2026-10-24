@@ -64,7 +64,7 @@
     sensors {
         compatible = "zmk,keymap-sensors";
         sensors = <&encoder>;
-        triggers-per-rotation = <18>;
+        triggers-per-rotation = <12>;
     };
 
     /* led_strip определён ниже через &pio0 (PIO SPI + worldsemi,ws2812-spi),
