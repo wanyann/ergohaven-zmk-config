@@ -1680,10 +1680,10 @@
 
         AutoMouse {
             bindings = <
-&trans  &trans            &trans            &trans              &trans         &trans                            &trans     &trans  &trans     &trans     &trans  &trans
-&trans  &hrms LEFT_GUI C  &hrms LEFT_ALT I  &hrms LEFT_SHIFT E  &hrms LCTRL O  &trans                            &mlt 24 L  &trans  &trans     &trans     &trans  &trans
-&trans  &trans            &trans            &trans              &trans         &trans                            &mlt 24 B  &trans  &trans     &trans     &trans  &trans
-                          &trans            &trans              &trans         &ms_space 10 0  &trans    &trans  &trans     &trans  &mkp RCLK  &mkp MCLK
+&trans  &trans            &trans            &trans              &trans         &trans                            &trans     &trans  &trans    &trans     &trans  &trans
+&trans  &hrms LEFT_GUI C  &hrms LEFT_ALT I  &hrms LEFT_SHIFT E  &hrms LCTRL O  &trans                            &mlt 24 L  &trans  &trans    &trans     &trans  &trans
+&trans  &trans            &trans            &trans              &trans         &trans                            &mlt 24 B  &trans  &trans    &trans     &trans  &trans
+                          &trans            &trans              &trans         &ms_space 10 0  &trans    &trans  &trans     &trans  &mkp MB2  &mkp MCLK
             >;
         };
 
