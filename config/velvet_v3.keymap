@@ -281,6 +281,11 @@
             layers = <4 5 14 15 23>;
             timeout-ms = <50>;
         };
+
+        test {
+            bindings = <&none>;
+            key-positions = <44>;
+        };
     };
 
     macros {
