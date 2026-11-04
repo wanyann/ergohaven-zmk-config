@@ -1550,7 +1550,7 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
             flavor = "balanced";
-            hold-trigger-key-positions = <7 8 31 32>;
+            hold-trigger-key-positions = <28>;
         };
 
         hrml_right: hrml_right {
@@ -1652,7 +1652,7 @@
         En {
             bindings = <
 &none         &mt Q Q                &mt W W           &mt U U                  &mmt LC(R) A             &mt LC(T) K_CANCEL                         &mt Z Z         &mt V V        &mt K K                  &mt D D          &kp K_CANCEL       &none
-&kp K_CANCEL  &hrml_slow LEFT_GUI C  &hrml LEFT_ALT I  &hrml_slow LEFT_SHIFT E  &hrml LCTRL O            &en_com_mt LC(F) 0                         &mt L L         &hrml RCTRL N  &hrml_slow LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow RGUI H  &kp K_CANCEL
+&kp K_CANCEL  &hrml_slow LEFT_GUI C  &hrml LEFT_ALT I  &hrml_left LEFT_SHIFT E  &hrml LCTRL O            &en_com_mt LC(F) 0                         &mt L L         &hrml RCTRL N  &hrml_slow LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow RGUI H  &kp K_CANCEL
 &none         &mmt LC(Z) F           &mmt LC(X) Y      &mmt LC(C) X             &mmt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                         &mt B B         &mt M M        &mt P P                  &mt G G          &mt LC(SLASH) J    &none
                                      &kp LS(F7)        &kp F7                   &lg 0 0                  &lt 10 SPACE        &sl 14    &osm LSHIFT  &lt_right 12 R  &bspc_morph    &kp F2                   &kp LS(F2)
             >;
