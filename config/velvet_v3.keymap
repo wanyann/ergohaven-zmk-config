@@ -1941,6 +1941,6 @@
 
     slower {
         layers = <8 21>;
-        input-processors = <&zip_xy_scaler 1 6>;
+        input-processors = <&zip_xy_scaler 1 4>;
     };
 };
