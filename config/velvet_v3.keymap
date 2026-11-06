@@ -301,7 +301,7 @@
         };
 
         combo_bslash_en {
-            bindings = <&kp SINGLE_QUOTE>;
+            bindings = <&kp BACKSLASH>;
             key-positions = <8 9>;
             layers = <0 1 12 16 4 8 10 14 19>;
         };
@@ -337,7 +337,7 @@
         };
 
         combo_semi_ru {
-            bindings = <&kp SEMI>;
+            bindings = <&kp RU_SEMI>;
             key-positions = <14 15 16>;
             layers = <2 3 13 17 5 9 11 15 20>;
         };
