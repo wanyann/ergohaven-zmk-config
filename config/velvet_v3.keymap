@@ -1801,10 +1801,10 @@
 
         Nav {
             bindings = <
-&trans  &trans                        &macro_unsafe_en               &kp LC(LS(LA(TAB)))    &kp LS(LC(LA(LG(F1))))    &testops                                          &none       &kp LA(LS(S))  &kp UP     &kp LC(LA(F8))  &kp DELETE  &trans
-&trans  &kp ESC                       &kp ENTER                      &kp LSHIFT             &mod_dtap LCTRL LEFT_GUI  &kp K_APP                                         &kp K_APP   &kp LEFT       &kp DOWN   &kp RIGHT       &kp END     &trans
-&trans  &mt (LC(Z)) LC(LEFT_BRACKET)  &mt (LC(X)) LC(RIGHT_BRACKET)  &mt (LC(C)) LS(LC(C))  &mt LC(V) TAB             &mt (LG(V)) LS(LC(LG(F9)))                        &kp LC(F8)  &kp HOME       &kp PG_DN  &kp PG_UP       &trans      &trans
-                                      &trans                         &trans                 &trans                    &mo 10                      &none    &layer_on 1  &mo 12      &trans         &trans     &trans
+&trans    &trans                        &macro_unsafe_en               &kp LC(LS(LA(TAB)))    &kp LS(LC(LA(LG(F1))))    &testops                                          &none             &kp LA(LS(S))  &kp UP     &kp LC(LA(F8))  &kp DELETE  &trans
+&kp CAPS  &kp ESC                       &kp ENTER                      &kp LSHIFT             &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                      &mlt 24 K_APP     &kp LEFT       &kp DOWN   &kp RIGHT       &kp END     &trans
+&trans    &mt (LC(Z)) LC(LEFT_BRACKET)  &mt (LC(X)) LC(RIGHT_BRACKET)  &mt (LC(C)) LS(LC(C))  &mt LC(V) TAB             &mt (LG(V)) LS(LC(LG(F9)))                        &mlt (24) LC(F8)  &kp HOME       &kp PG_DN  &kp PG_UP       &trans      &trans
+                                        &trans                         &trans                 &trans                    &mo 10                      &none    &layer_on 1  &mo 12            &trans         &trans     &trans
             >;
         };
 
@@ -1819,10 +1819,10 @@
 
         Num {
             bindings = <
-&trans  &kp MINUS      &mt F7 N7        &mt F8 N8        &mt F9 N9      &mt F10 EQUAL                          &trans  &trans     &trans      &trans        &trans        &trans
-&none   &zero 0 N0     &mt F1 N1        &mt F2 NUMBER_2  &mt F3 N3      &trans                                 &trans  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
-&trans  &mt F10 UNDER  &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 N6      &trans                                 &trans  &trans     &none       &none         &trans        &trans
-                       &trans           &trans           &mt F11 MINUS  &lt 10 SPACE   &mt F12 PLUS    &trans  &mo 12  &trans     &trans      &trans
+&trans  &kp MINUS      &mt F7 N7        &mt F8 N8        &mt F9 N9      &mt F10 EQUAL                           &trans    &trans     &trans      &trans        &trans        &trans
+&none   &zero 0 N0     &mt F1 N1        &mt F2 NUMBER_2  &mt F3 N3      &trans                                  &kp PLUS  &kp LCTRL  &kp LSHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans
+&trans  &mt F10 UNDER  &mt F4 NUMBER_4  &mt F5 NUMBER_5  &mt F6 N6      &trans                                  &trans    &kp UNDER  &none       &none         &trans        &trans
+                       &trans           &trans           &mt F11 MINUS  &lt 10 SPACE   &mt F12 EQUAL    &trans  &mo 12    &trans     &trans      &trans
             >;
         };
 
