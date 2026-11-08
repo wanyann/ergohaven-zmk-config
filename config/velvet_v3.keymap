@@ -230,13 +230,13 @@
 
         combo_arrow_ru {
             bindings = <&arrow_ru>;
-            key-positions = <31 32 33>;
+            key-positions = <>;
             layers = <2 3 13 17 5 9 11 15 20>;
         };
 
         combo_arrow_en {
             bindings = <&arrow_en>;
-            key-positions = <31 33 32>;
+            key-positions = <>;
             layers = <0 1 12 16 4 8 10 14 19>;
         };
 
