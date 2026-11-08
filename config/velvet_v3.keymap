@@ -230,13 +230,13 @@
 
         combo_arrow_ru {
             bindings = <&arrow_ru>;
-            key-positions = <>;
+            key-positions = <31 32 33>;
             layers = <2 3 13 17 5 9 11 15 20>;
         };
 
         combo_arrow_en {
             bindings = <&arrow_en>;
-            key-positions = <>;
+            key-positions = <31 33 32>;
             layers = <0 1 12 16 4 8 10 14 19>;
         };
 
@@ -282,76 +282,9 @@
             timeout-ms = <50>;
         };
 
-        combo_grave_en {
-            bindings = <&kp GRAVE>;
-            key-positions = <31 32 33>;
-            layers = <0 1 12 16 4 8 10 14 19>;
-        };
-
-        combo_pipe_en {
-            bindings = <&kp PIPE>;
-            key-positions = <7 8 9>;
-            layers = <0 1 12 16 4 8 10 14 19>;
-        };
-
-        combo_squote_en {
-            bindings = <&kp SINGLE_QUOTE>;
-            key-positions = <32 33>;
-            layers = <0 1 12 16 4 8 10 14 19>;
-        };
-
-        combo_bslash_en {
-            bindings = <&kp BACKSLASH>;
-            key-positions = <8 9>;
-            layers = <0 1 12 16 4 8 10 14 19>;
-        };
-
-        combo_bslash_ru {
-            bindings = <&kp RU_BACKSLASH>;
-            key-positions = <8 9>;
-            layers = <2 3 13 17 5 9 11 15 20>;
-        };
-
-        combo_pipe_ru {
-            bindings = <&en_kp PIPE>;
-            key-positions = <8 9 7>;
-            layers = <2 3 13 17 5 9 11 15 20>;
-        };
-
-        combo_squote_ru {
-            bindings = <&en_kp SINGLE_QUOTE>;
-            key-positions = <32 33>;
-            layers = <2 3 13 17 5 9 11 15 20>;
-        };
-
-        combo_grave_ru {
-            bindings = <&en_kp GRAVE>;
-            key-positions = <32 33 31>;
-            layers = <2 3 13 17 5 9 11 15 20>;
-        };
-
-        combo_colon_ru {
-            bindings = <&kp RU_COLON>;
-            key-positions = <26 27 28>;
-            layers = <2 3 13 17 5 9 11 15 20>;
-        };
-
-        combo_semi_ru {
-            bindings = <&kp RU_SEMI>;
-            key-positions = <14 15 16>;
-            layers = <2 3 13 17 5 9 11 15 20>;
-        };
-
-        combo_colon_en {
-            bindings = <&kp COLON>;
-            key-positions = <26 28 27>;
-            layers = <0 1 12 16 4 8 10 14 19>;
-        };
-
-        combo_semi_en {
-            bindings = <&kp SEMI>;
-            key-positions = <14 15 16>;
-            layers = <0 1 12 16 4 8 10 14 19>;
+        test {
+            bindings = <&none>;
+            key-positions = <44>;
         };
     };
 
@@ -1263,7 +1196,7 @@
         ru_dot_mt: ru_dot_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "RU_DOT_MT";
-            bindings = <&moff_tap>, <&morph_ru_dot>;
+            bindings = <&moff_tap>, <&ru_dot_excl>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1273,7 +1206,7 @@
         ru_com_mt: ru_com_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "RU_COM_MT";
-            bindings = <&moff_tap>, <&morph_ru_com>;
+            bindings = <&moff_tap>, <&ru_com_ques>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1283,7 +1216,7 @@
         en_com_mt: en_com_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "EN_COM_MT";
-            bindings = <&moff_tap>, <&morph_en_com>;
+            bindings = <&moff_tap>, <&en_com_ques>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1293,7 +1226,7 @@
         en_dot_mt: en_dot_mt {
             compatible = "zmk,behavior-hold-tap";
             label = "EN_DOT_MT";
-            bindings = <&moff_tap>, <&morph_en_dot>;
+            bindings = <&moff_tap>, <&en_dot_excl>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
@@ -1413,7 +1346,7 @@
         quote_morph_ru: quote_morph_ru {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTE_MORPH_RU";
-            bindings = <&kp RU_DOUBLE_QUOTES>, <&en_kp SINGLE_QUOTE>;
+            bindings = <&morph_quotes_ru>, <&en_kp SINGLE_QUOTE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1422,7 +1355,7 @@
         quote_morph_en: quote_morph_en {
             compatible = "zmk,behavior-mod-morph";
             label = "QUOTE_MORPH_EN";
-            bindings = <&kp DOUBLE_QUOTES>, <&kp SINGLE_QUOTE>;
+            bindings = <&morph_quotes_en>, <&kp SINGLE_QUOTE>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
@@ -1801,10 +1734,10 @@
 
         Nav {
             bindings = <
-&trans    &trans                        &macro_unsafe_en               &kp LC(LS(LA(TAB)))    &kp LS(LC(LA(LG(F1))))    &testops                                          &none             &kp LA(LS(S))  &kp UP     &kp LC(LA(F8))  &kp DELETE  &trans
-&kp CAPS  &kp ESC                       &kp ENTER                      &kp LSHIFT             &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                      &mlt 24 K_APP     &kp LEFT       &kp DOWN   &kp RIGHT       &kp END     &trans
-&trans    &mt (LC(Z)) LC(LEFT_BRACKET)  &mt (LC(X)) LC(RIGHT_BRACKET)  &mt (LC(C)) LS(LC(C))  &mt LC(V) TAB             &mt (LG(V)) LS(LC(LG(F9)))                        &mlt (24) LC(F8)  &kp HOME       &kp PG_DN  &kp PG_UP       &trans      &trans
-                                        &trans                         &trans                 &trans                    &mo 10                      &none    &layer_on 1  &mo 12            &trans         &trans     &trans
+&trans        &trans                        &macro_unsafe_en               &kp LC(LS(LA(TAB)))    &kp LS(LC(LA(LG(F1))))    &testops                                          &none       &kp LA(LS(S))  &kp UP     &kp LC(LA(F8))  &kp DELETE  &trans
+&kp CAPSLOCK  &kp ESC                       &kp ENTER                      &kp LSHIFT             &mod_dtap LCTRL LEFT_GUI  &zeros_macro                                      &kp K_APP   &kp LEFT       &kp DOWN   &kp RIGHT       &kp END     &trans
+&trans        &mt (LC(Z)) LC(LEFT_BRACKET)  &mt (LC(X)) LC(RIGHT_BRACKET)  &mt (LC(C)) LS(LC(C))  &mt LC(V) TAB             &mt (LG(V)) LS(LC(LG(F9)))                        &kp LC(F8)  &kp HOME       &kp PG_DN  &kp PG_UP       &trans      &trans
+                                            &trans                         &trans                 &trans                    &mo 10                      &none    &layer_on 1  &mo 12      &trans         &trans     &trans
             >;
         };
 
