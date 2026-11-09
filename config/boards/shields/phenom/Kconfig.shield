@@ -1,0 +1,5 @@
+config SHIELD_PHENOM_LEFT
+    def_bool $(shields_list_contains,phenom_left)
+
+config SHIELD_PHENOM_RIGHT
+    def_bool $(shields_list_contains,phenom_right)

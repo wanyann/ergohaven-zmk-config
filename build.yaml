@@ -52,6 +52,29 @@ include:
       -DCONFIG_ZMK_USB_LOGGING=n
       -DCONFIG_ZMK_LOGGING_MINIMAL=y
       -DCONFIG_LOG_DEFAULT_LEVEL=1
+  - board: rpi_pico
+    shield: phenom_left
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y
+    keymap: phenom
+    artifact-name: phenom_left
+  - board: rpi_pico
+    shield: phenom_right
+    artifact-name: phenom_right_83hz
+    keymap: phenom
+    cmake-args: >-
+      -DCONFIG_EH_PMW3610_ALT_MODE=y
+      -DCONFIG_ZMK_USB_LOGGING=n
+      -DCONFIG_EH_PMW3610_ALT_FORCE_AWAKE_4MS_MODE=y
+      -DCONFIG_EH_PMW3610_ALT_REPORT_INTERVAL_MS=12
+  - board: rpi_pico
+    shield: phenom_right
+    artifact-name: phenom_right_200hz
+    keymap: phenom
+    cmake-args: >-
+      -DCONFIG_EH_PMW3610_ALT_MODE=y
+      -DCONFIG_ZMK_USB_LOGGING=n
+      -DCONFIG_EH_PMW3610_ALT_FORCE_AWAKE_4MS_MODE=y
+      -DCONFIG_EH_PMW3610_ALT_REPORT_INTERVAL_MS=0
   # - board: rpi_pico
   #   shield: ergohaven_hpd_v2_left
   #   cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=y

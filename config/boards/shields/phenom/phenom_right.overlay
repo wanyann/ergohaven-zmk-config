@@ -1,0 +1,17 @@
+#include "phenom.dtsi"
+
+&default_transform {
+    row-offset = <5>;
+};
+
+&trackball {
+    status = "okay";
+};
+
+&led_strip {
+    status = "okay";
+};
+
+&trackball_split {
+    status = "okay";
+};

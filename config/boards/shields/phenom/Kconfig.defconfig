@@ -1,0 +1,13 @@
+if SHIELD_PHENOM_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "Phenom"
+
+endif
+
+if SHIELD_PHENOM_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "Phenom"
+
+endif
