@@ -1719,7 +1719,7 @@
 
         En {
             bindings = <
-&mt N1 F1     &mt N2 F2              &mt N3 F3         &mt N4 F4                &mt N5 F5                &mt N6 F6                                            &mt N7 F7       &mt N8 F8      &mt N9 F9                &mt N0 F10       &mt MINUS F11      &mt EQUAL F12
+&mt F1 N1       &mt F2 N2       &mt F3 N3       &mt F4 N4       &mt F5 N5       &mt F6 N6       &mt F7 N7       &mt F8 N8       &mt F9 N9       &mt F10 N0      &mt F11 MINUS   &mt F12 EQUAL
 &none         &mt Q Q                &mt W W           &mt U U                  &mmt LC(R) A             &mt LC(T) K_CANCEL                                   &mt Z Z         &mt V V        &mt K K                  &mt D D          &kp K_CANCEL       &none
 &kp K_CANCEL  &hrml_slow LEFT_GUI C  &hrml LEFT_ALT I  &hrml_left LEFT_SHIFT E  &hrml LCTRL O            &en_com_mt LC(F) 0                                   &mt L L         &hrml RCTRL N  &hrml_slow LEFT_SHIFT T  &hrosm_r RALT S  &hrml_slow RGUI H  &kp K_CANCEL
 &none         &mmt LC(Z) F           &mmt LC(X) Y      &mmt LC(C) X             &mmt LC(V) SINGLE_QUOTE  &en_dot_mt LG(V) 0                                   &mt B B         &mt M M        &mt P P                  &mt G G          &mt LC(SLASH) J    &none
