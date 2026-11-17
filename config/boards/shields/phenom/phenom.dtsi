@@ -110,7 +110,7 @@
         sclk-gpios = <&gpio0 10 GPIO_ACTIVE_HIGH>;
         sdio-gpios = <&gpio0 11 GPIO_ACTIVE_HIGH>;
         cs-gpios = <&gpio0 9 GPIO_ACTIVE_LOW>;
-        cpi = <1200>;
+        cpi = <800>;
         swap-xy;
         invert-x;
         invert-y;
